@@ -1,3 +1,37 @@
 /*
  * Estilos de tu proyecto
  */
+/* Se utiliza un selector universal para 
+remover cualquier estilo anterior de los elementos  */
+* {
+	border: none;
+	font-family: 'Roboto', sans-serif;
+	margin: 0px;
+	padding: 0px;
+ }
+
+.container {
+    width: 100%;
+    height: 65px;
+    /*background-color: #ffc107; */
+    color: #333333; 
+    font-size: 16px;
+    text-align: center;
+    vertical-align: middle;
+    padding-left: 24px;
+    padding-right: 24px;
+    line-height: 1.71429;
+    outline: 1px solid red;
+    
+ }
+ 
+    .container img {
+    width: 200px;
+    height: 65px;
+    margin-left: 37%;
+    float: left;
+    align-self: center;
+     }
+ 
+
+
