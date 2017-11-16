@@ -9,28 +9,28 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1213,
                 'hse': 854
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1286,
                 'hse': 918
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1629,
                 'hse': 670
               }
             },
             {
               'number': 4,
-              'scores': {
+              'score': {
                 'tech': 1140,
                 'hse': 1017
               }
@@ -44,28 +44,28 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1114,
                 'hse': 894
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1724,
                 'hse': 984
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1034,
                 'hse': 632
               }
             },
             {
               'number': 4,
-              'scores': {
+              'score': {
                 'tech': 1575,
                 'hse': 927
               }
@@ -79,28 +79,28 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 913,
                 'hse': 884
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1021,
                 'hse': 887
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1153,
                 'hse': 945
               }
             },
             {
               'number': 4,
-              'scores': {
+              'score': {
                 'tech': 1701,
                 'hse': 950
               }
@@ -114,28 +114,28 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1740,
                 'hse': 672
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1784,
                 'hse': 1194
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1516,
                 'hse': 649
               }
             },
             {
               'number': 4,
-              'scores': {
+              'score': {
                 'tech': 1316,
                 'hse': 1072
               }
@@ -149,28 +149,28 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1004,
                 'hse': 631
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1102,
                 'hse': 1050
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1138,
                 'hse': 969
               }
             },
             {
               'number': 4,
-              'scores': {
+              'score': {
                 'tech': 1638,
                 'hse': 871
               }
@@ -184,28 +184,28 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 976,
                 'hse': 979
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1404,
                 'hse': 678
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1427,
                 'hse': 825
               }
             },
             {
               'number': 4,
-              'scores': {
+              'score': {
                 'tech': 1604,
                 'hse': 1198
               }
@@ -219,28 +219,28 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1371,
                 'hse': 712
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 936,
                 'hse': 1142
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1227,
                 'hse': 800
               }
             },
             {
               'number': 4,
-              'scores': {
+              'score': {
                 'tech': 1791,
                 'hse': 1030
               }
@@ -254,28 +254,28 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1649,
                 'hse': 1094
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1590,
                 'hse': 1036
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1438,
                 'hse': 1015
               }
             },
             {
               'number': 4,
-              'scores': {
+              'score': {
                 'tech': 1105,
                 'hse': 819
               }
@@ -289,28 +289,28 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1280,
                 'hse': 743
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 928,
                 'hse': 851
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1431,
                 'hse': 894
               }
             },
             {
               'number': 4,
-              'scores': {
+              'score': {
                 'tech': 948,
                 'hse': 983
               }
@@ -324,28 +324,28 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1448,
                 'hse': 875
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1296,
                 'hse': 786
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 966,
                 'hse': 708
               }
             },
             {
               'number': 4,
-              'scores': {
+              'score': {
                 'tech': 1439,
                 'hse': 1198
               }
@@ -359,28 +359,28 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1599,
                 'hse': 1000
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1225,
                 'hse': 834
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1657,
                 'hse': 873
               }
             },
             {
               'number': 4,
-              'scores': {
+              'score': {
                 'tech': 1420,
                 'hse': 965
               }
@@ -394,28 +394,28 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1556,
                 'hse': 766
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1730,
                 'hse': 658
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1199,
                 'hse': 715
               }
             },
             {
               'number': 4,
-              'scores': {
+              'score': {
                 'tech': 935,
                 'hse': 687
               }
@@ -429,28 +429,28 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1385,
                 'hse': 1098
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1643,
                 'hse': 909
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1766,
                 'hse': 653
               }
             },
             {
               'number': 4,
-              'scores': {
+              'score': {
                 'tech': 1611,
                 'hse': 1104
               }
@@ -464,28 +464,28 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1767,
                 'hse': 972
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1130,
                 'hse': 1003
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1566,
                 'hse': 742
               }
             },
             {
               'number': 4,
-              'scores': {
+              'score': {
                 'tech': 1020,
                 'hse': 1153
               }
@@ -499,33 +499,95 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1729,
                 'hse': 1028
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1724,
                 'hse': 1043
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1537,
                 'hse': 1051
               }
             },
             {
               'number': 4,
-              'scores': {
+              'score': {
                 'tech': 1679,
                 'hse': 1119
               }
             }
           ]
+        }
+      ],
+      'ratings': [
+        {
+          'sprint': 1,
+          'nps': {
+            'promoters': 70,
+            'passive': 15,
+            'detractors': 15
+          },
+          'student': {
+            'no-cumple': 14,
+            'cumple': 80,
+            'supera': 6
+          },
+          'teacher': 3.6,
+          'jedi': 3.6
+        },
+        {
+          'sprint': 2,
+          'nps': {
+            'promoters': 74,
+            'passive': 16,
+            'detractors': 10
+          },
+          'student': {
+            'no-cumple': 8,
+            'cumple': 82,
+            'supera': 10
+          },
+          'teacher': 3.8,
+          'jedi': 3.4
+        },
+        {
+          'sprint': 3,
+          'nps': {
+            'promoters': 78,
+            'passive': 13,
+            'detractors': 9
+          },
+          'student': {
+            'no-cumple': 17,
+            'cumple': 63,
+            'supera': 20
+          },
+          'teacher': 3.8,
+          'jedi': 4.3
+        },
+        {
+          'sprint': 4,
+          'nps': {
+            'promoters': 78,
+            'passive': 15,
+            'detractors': 7
+          },
+          'student': {
+            'no-cumple': 10,
+            'cumple': 70,
+            'supera': 20
+          },
+          'teacher': 3.2,
+          'jedi': 4.8
         }
       ]
     },
@@ -538,21 +600,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1146,
                 'hse': 1057
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1745,
                 'hse': 1059
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1424,
                 'hse': 745
               }
@@ -566,21 +628,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1443,
                 'hse': 643
               },
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1769,
                 'hse': 612
               },
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1049,
                 'hse': 922
               },
@@ -594,21 +656,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1695,
                 'hse': 1020
               },
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1769,
                 'hse': 1036
               },
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1185,
                 'hse': 903
               },
@@ -622,21 +684,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1087,
                 'hse': 1141
               },
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1066,
                 'hse': 878
               },
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1049,
                 'hse': 933
               }
@@ -650,21 +712,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1125,
                 'hse': 1187
               },
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1466,
                 'hse': 1067
               },
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1701,
                 'hse': 679
               },
@@ -678,21 +740,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1094,
                 'hse': 725
               },
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1044,
                 'hse': 1139
               },
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1412,
                 'hse': 713
               },
@@ -706,21 +768,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1343,
                 'hse': 1129
               },
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1348,
                 'hse': 958
               },
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1068,
                 'hse': 640
               },
@@ -734,21 +796,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1683,
                 'hse': 1185
               },
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1621,
                 'hse': 1053
               },
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 930,
                 'hse': 951
               },
@@ -762,21 +824,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1797,
                 'hse': 655
               },
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1396,
                 'hse': 772
               },
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1427,
                 'hse': 673
               },
@@ -790,21 +852,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1244,
                 'hse': 690
               },
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1748,
                 'hse': 717
               },
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1622,
                 'hse': 1047
               },
@@ -818,21 +880,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1630,
                 'hse': 949
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1065,
                 'hse': 774
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1125,
                 'hse': 945
               }
@@ -846,21 +908,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1562,
                 'hse': 979
               },
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 994,
                 'hse': 901
               },
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1363,
                 'hse': 774
               },
@@ -874,21 +936,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1109,
                 'hse': 1096
               },
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1731,
                 'hse': 640
               },
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1557,
                 'hse': 926
               },
@@ -902,21 +964,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1264,
                 'hse': 880
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1641,
                 'hse': 660
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1179,
                 'hse': 1080
               }
@@ -930,26 +992,73 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 994,
                 'hse': 994
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1795,
                 'hse': 842
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1799,
                 'hse': 1173
               }
             }
           ]
+        }
+      ],
+      'ratings': [
+        {
+          'sprint': 1,
+          'nps': {
+            'promoters': 97,
+            'passive': 3,
+            'detractors': 0
+          },
+          'student': {
+            'no-cumple': 0,
+            'cumple': 80,
+            'supera': 20
+          },
+          'teacher': 4.7,
+          'jedi': 4.9
+        },
+        {
+          'sprint': 2,
+          'nps': {
+            'promoters': 81,
+            'passive': 17,
+            'detractors': 2
+          },
+          'student': {
+            'no-cumple': 14,
+            'cumple': 83,
+            'supera': 3
+          },
+          'teacher': 4.4,
+          'jedi': 4.3
+        },
+        {
+          'sprint': 3,
+          'nps': {
+            'promoters': 87,
+            'passive': 15,
+            'detractors': 8
+          },
+          'student': {
+            'no-cumple': 9,
+            'cumple': 72,
+            'supera': 19
+          },
+          'teacher': 3.4,
+          'jedi': 4.1
         }
       ]
     }
@@ -958,77 +1067,27 @@ var data = {
     '2017-1': {
       'students': [
         {
-          'name': 'Yesenia Escárcega',
-          'photo': 'https://cdn3.iconfinder.com/data/icons/rcons-user-action/32/girl-512.png',
-          'score': {
-            'tech': 98.8,
-            'soft': 93.7
-          },
-          'active': false,
-          'sprints': [
-            {
-              'number': '1',
-              'score': {
-                'tech': 1800,
-                'hse': 300
-              }
-            }
-          ]
-        },
-        {
-          'name': 'Ofelia Matías',
-          'photo': 'https://cdn3.iconfinder.com/data/icons/rcons-user-action/32/girl-512.png',
-          'score': {
-            'tech': 98.8,
-            'soft': 93.7
-          },
-          'active': true,
-          'sprints': [
-            {
-              'number': '1',
-              'score': {
-                'tech': 1500,
-                'hse': 600
-              }
-            },
-            {
-              'number': '2',
-              'score': {
-                'tech': 1200,
-                'hse': 1000
-              }
-            },
-            {
-              'number': '3',
-              'score': {
-                'tech': 1100,
-                'hse': 1200
-              }
-            }
-          ]
-        },
-        {
           'name': 'Jada Curgenuer',
           'photo': 'http://dummyimage.com/133x195.png/cc0000/ffffff',
           'active': false,
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1483,
                 'hse': 1154
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1335,
                 'hse': 1009
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1069,
                 'hse': 749
               }
@@ -1042,21 +1101,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1702,
                 'hse': 1155
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1436,
                 'hse': 1048
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1002,
                 'hse': 1148
               }
@@ -1070,21 +1129,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1660,
                 'hse': 1165
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1704,
                 'hse': 1059
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1674,
                 'hse': 1194
               }
@@ -1098,21 +1157,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1720,
                 'hse': 755
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1795,
                 'hse': 683
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1203,
                 'hse': 1171
               }
@@ -1126,21 +1185,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1529,
                 'hse': 779
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1285,
                 'hse': 730
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1508,
                 'hse': 741
               }
@@ -1154,21 +1213,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 980,
                 'hse': 933
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1352,
                 'hse': 781
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1751,
                 'hse': 874
               }
@@ -1182,21 +1241,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1472,
                 'hse': 1068
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1726,
                 'hse': 849
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1337,
                 'hse': 661
               }
@@ -1210,21 +1269,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 930,
                 'hse': 1148
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1799,
                 'hse': 865
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1265,
                 'hse': 726
               }
@@ -1238,21 +1297,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 934,
                 'hse': 1100
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1226,
                 'hse': 633
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1554,
                 'hse': 944
               }
@@ -1266,21 +1325,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1475,
                 'hse': 672
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1387,
                 'hse': 1186
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 912,
                 'hse': 656
               }
@@ -1294,21 +1353,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1532,
                 'hse': 662
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1424,
                 'hse': 631
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 975,
                 'hse': 687
               }
@@ -1322,21 +1381,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1628,
                 'hse': 939
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1282,
                 'hse': 727
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1722,
                 'hse': 1138
               }
@@ -1350,21 +1409,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1301,
                 'hse': 660
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1347,
                 'hse': 784
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1480,
                 'hse': 969
               }
@@ -1378,21 +1437,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1255,
                 'hse': 1116
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1056,
                 'hse': 648
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 982,
                 'hse': 919
               }
@@ -1406,21 +1465,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 973,
                 'hse': 678
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1411,
                 'hse': 1192
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1749,
                 'hse': 689
               }
@@ -1434,21 +1493,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 970,
                 'hse': 702
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1331,
                 'hse': 986
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 950,
                 'hse': 1129
               }
@@ -1462,21 +1521,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1601,
                 'hse': 912
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1586,
                 'hse': 830
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1489,
                 'hse': 1161
               }
@@ -1490,21 +1549,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1136,
                 'hse': 1025
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1119,
                 'hse': 976
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1526,
                 'hse': 676
               }
@@ -1518,21 +1577,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1250,
                 'hse': 985
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1106,
                 'hse': 1065
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1635,
                 'hse': 648
               }
@@ -1546,21 +1605,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1756,
                 'hse': 672
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1556,
                 'hse': 919
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1471,
                 'hse': 1096
               }
@@ -1574,21 +1633,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1149,
                 'hse': 876
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1745,
                 'hse': 781
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1383,
                 'hse': 699
               }
@@ -1602,21 +1661,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1240,
                 'hse': 682
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1395,
                 'hse': 980
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1604,
                 'hse': 868
               }
@@ -1630,21 +1689,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1551,
                 'hse': 619
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1694,
                 'hse': 959
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 989,
                 'hse': 976
               }
@@ -1658,21 +1717,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1286,
                 'hse': 662
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1592,
                 'hse': 891
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 969,
                 'hse': 886
               }
@@ -1684,47 +1743,47 @@ var data = {
         {
           'sprint': 1,
           'nps': {
-            'promoters': 80,
-            'passive': 10,
-            'detractors': 10
+            'promoters': 90,
+            'passive': 7,
+            'detractors': 3
           },
           'student': {
-            '0': 10,
-            '1': 80,
-            '2': 10
+            'no-cumple': 3,
+            'cumple': 80,
+            'supera': 17
           },
-          'teacher': 4.5,
-          'jedi': 4
+          'teacher': 3.7,
+          'jedi': 4.1
         },
         {
           'sprint': 2,
           'nps': {
-            'promoters': 90,
-            'passive': 10,
-            'detractors': 0
+            'promoters': 72,
+            'passive': 18,
+            'detractors': 10
           },
           'student': {
-            '0': 0,
-            '1': 80,
-            '2': 20
+            'no-cumple': 14,
+            'cumple': 80,
+            'supera': 6
           },
-          'teacher': 4,
-          'jedi': 4.5
+          'teacher': 3.6,
+          'jedi': 3.7
         },
         {
           'sprint': 3,
           'nps': {
-            'promoters': 75,
-            'passive': 15,
-            'detractors': 10
+            'promoters': 84,
+            'passive': 16,
+            'detractors': 0
           },
           'student': {
-            '0': 5,
-            '1': 60,
-            '2': 45
+            'no-cumple': 13,
+            'cumple': 69,
+            'supera': 18
           },
-          'teacher': 5,
-          'jedi': 4.8
+          'teacher': 4.1,
+          'jedi': 3.8
         }
       ]
     },
@@ -1749,14 +1808,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1006,
                 'hse': 730
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1015,
                 'hse': 1145
               }
@@ -1770,14 +1829,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1326,
                 'hse': 839
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1503,
                 'hse': 1007
               }
@@ -1803,14 +1862,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1218,
                 'hse': 756
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1261,
                 'hse': 849
               }
@@ -1836,14 +1895,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1035,
                 'hse': 622
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1067,
                 'hse': 1097
               }
@@ -1863,14 +1922,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1401,
                 'hse': 754
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1501,
                 'hse': 871
               }
@@ -1896,14 +1955,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1206,
                 'hse': 849
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1378,
                 'hse': 942
               }
@@ -1953,14 +2012,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 952,
                 'hse': 878
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1465,
                 'hse': 637
               }
@@ -1974,14 +2033,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1197,
                 'hse': 1122
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1579,
                 'hse': 1083
               }
@@ -1995,14 +2054,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1378,
                 'hse': 698
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1561,
                 'hse': 1031
               }
@@ -2016,14 +2075,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1575,
                 'hse': 1194
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1529,
                 'hse': 856
               }
@@ -2037,14 +2096,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1246,
                 'hse': 841
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1619,
                 'hse': 957
               }
@@ -2064,14 +2123,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1050,
                 'hse': 764
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1561,
                 'hse': 624
               }
@@ -2091,14 +2150,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1078,
                 'hse': 736
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1076,
                 'hse': 1069
               }
@@ -2124,14 +2183,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1782,
                 'hse': 1113
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 996,
                 'hse': 932
               }
@@ -2145,14 +2204,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1213,
                 'hse': 875
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 901,
                 'hse': 747
               }
@@ -2166,14 +2225,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 968,
                 'hse': 879
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1137,
                 'hse': 718
               }
@@ -2193,14 +2252,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1533,
                 'hse': 932
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1349,
                 'hse': 904
               }
@@ -2214,14 +2273,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1274,
                 'hse': 824
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1064,
                 'hse': 698
               }
@@ -2241,14 +2300,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1297,
                 'hse': 805
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1534,
                 'hse': 605
               }
@@ -2268,14 +2327,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1122,
                 'hse': 870
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1427,
                 'hse': 763
               }
@@ -2301,14 +2360,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 942,
                 'hse': 770
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1542,
                 'hse': 801
               }
@@ -2321,6 +2380,38 @@ var data = {
           'active': false,
           'sprints': []
         }
+      ],
+      'ratings': [
+        {
+          'sprint': 1,
+          'nps': {
+            'promoters': 87,
+            'passive': 8,
+            'detractors': 5
+          },
+          'student': {
+            'no-cumple': 9,
+            'cumple': 82,
+            'supera': 9
+          },
+          'teacher': 4.4,
+          'jedi': 4.7
+        },
+        {
+          'sprint': 2,
+          'nps': {
+            'promoters': 97,
+            'passive': 3,
+            'detractors': 0
+          },
+          'student': {
+            'no-cumple': 6,
+            'cumple': 75,
+            'supera': 19
+          },
+          'teacher': 4.1,
+          'jedi': 4.2
+        }
       ]
     }
   },
@@ -2328,45 +2419,20 @@ var data = {
     '2016-2': {
       'students': [
         {
-          'name': 'Diana Navarro',
-          'photo': 'https://cdn3.iconfinder.com/data/icons/rcons-user-action/32/girl-512.png',
-          'score': {
-            'tech': 95.6,
-            'soft': 94.8
-          },
-          'active': true,
-          'sprints': [
-            {
-              'number': '1',
-              'score': {
-                'tech': 1000,
-                'hse': 1000
-              }
-            },
-            {
-              'number': '2',
-              'score': {
-                'tech': 800,
-                'hse': 900
-              }
-            }
-          ]
-        },
-        {
           'name': 'Shalna Peddersen',
           'photo': 'http://dummyimage.com/194x213.png/dddddd/000000',
           'active': true,
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1127,
                 'hse': 615
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1611,
                 'hse': 1157
               }
@@ -2404,14 +2470,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 908,
                 'hse': 1068
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1782,
                 'hse': 1174
               }
@@ -2425,14 +2491,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1599,
                 'hse': 1194
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1611,
                 'hse': 1104
               }
@@ -2446,14 +2512,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 915,
                 'hse': 862
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1235,
                 'hse': 1132
               }
@@ -2473,14 +2539,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1349,
                 'hse': 1126
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1043,
                 'hse': 1054
               }
@@ -2494,14 +2560,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1728,
                 'hse': 980
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1526,
                 'hse': 1028
               }
@@ -2533,14 +2599,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1084,
                 'hse': 755
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 982,
                 'hse': 604
               }
@@ -2554,14 +2620,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1237,
                 'hse': 838
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1514,
                 'hse': 739
               }
@@ -2587,14 +2653,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 970,
                 'hse': 925
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1117,
                 'hse': 936
               }
@@ -2626,14 +2692,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1482,
                 'hse': 610
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1758,
                 'hse': 1061
               }
@@ -2647,14 +2713,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1670,
                 'hse': 1038
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1425,
                 'hse': 776
               }
@@ -2668,14 +2734,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1776,
                 'hse': 1075
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1034,
                 'hse': 953
               }
@@ -2701,14 +2767,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 903,
                 'hse': 801
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1123,
                 'hse': 600
               }
@@ -2722,14 +2788,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1213,
                 'hse': 1068
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1560,
                 'hse': 1180
               }
@@ -2755,14 +2821,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1740,
                 'hse': 708
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1406,
                 'hse': 846
               }
@@ -2782,14 +2848,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1766,
                 'hse': 652
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1377,
                 'hse': 790
               }
@@ -2807,32 +2873,32 @@ var data = {
         {
           'sprint': 1,
           'nps': {
-            'promoters': 70,
-            'passive': 10,
-            'detractors': 20
+            'promoters': 88,
+            'passive': 6,
+            'detractors': 6
           },
           'student': {
-            '0': 10,
-            '1': 80,
-            '2': 10
+            'no-cumple': 15,
+            'cumple': 80,
+            'supera': 5
           },
-          'teacher': 4.5,
-          'jedi': 4
+          'teacher': 4.0,
+          'jedi': 4.6
         },
         {
           'sprint': 2,
           'nps': {
-            'promoters': 85,
-            'passive': 10,
-            'detractors': 5
+            'promoters': 84,
+            'passive': 8,
+            'detractors': 8
           },
           'student': {
-            '0': 10,
-            '1': 80,
-            '2': 10
+            'no-cumple': 16,
+            'cumple': 67,
+            'supera': 17
           },
-          'teacher': 4.5,
-          'jedi': 4
+          'teacher': 4.2,
+          'jedi': 4.8
         }
       ]
     },
@@ -2845,28 +2911,28 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1175,
                 'hse': 623
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1316,
                 'hse': 1056
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1719,
                 'hse': 819
               }
             },
             {
               'number': 4,
-              'scores': {
+              'score': {
                 'tech': 1667,
                 'hse': 810
               }
@@ -2886,28 +2952,28 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1288,
                 'hse': 735
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1101,
                 'hse': 915
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1676,
                 'hse': 866
               }
             },
             {
               'number': 4,
-              'scores': {
+              'score': {
                 'tech': 1535,
                 'hse': 1066
               }
@@ -2927,28 +2993,28 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1712,
                 'hse': 683
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 966,
                 'hse': 990
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1198,
                 'hse': 1041
               }
             },
             {
               'number': 4,
-              'scores': {
+              'score': {
                 'tech': 1408,
                 'hse': 693
               }
@@ -2962,28 +3028,28 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1157,
                 'hse': 1007
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1686,
                 'hse': 875
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1215,
                 'hse': 988
               }
             },
             {
               'number': 4,
-              'scores': {
+              'score': {
                 'tech': 1022,
                 'hse': 978
               }
@@ -2997,28 +3063,28 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1139,
                 'hse': 714
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 968,
                 'hse': 1060
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1008,
                 'hse': 919
               }
             },
             {
               'number': 4,
-              'scores': {
+              'score': {
                 'tech': 1497,
                 'hse': 703
               }
@@ -3032,28 +3098,28 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1290,
                 'hse': 1117
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1223,
                 'hse': 1181
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1735,
                 'hse': 1031
               }
             },
             {
               'number': 4,
-              'scores': {
+              'score': {
                 'tech': 984,
                 'hse': 1038
               }
@@ -3067,28 +3133,28 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1076,
                 'hse': 995
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1695,
                 'hse': 682
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 906,
                 'hse': 706
               }
             },
             {
               'number': 4,
-              'scores': {
+              'score': {
                 'tech': 1179,
                 'hse': 1173
               }
@@ -3102,28 +3168,28 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1403,
                 'hse': 662
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 943,
                 'hse': 948
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1191,
                 'hse': 721
               }
             },
             {
               'number': 4,
-              'scores': {
+              'score': {
                 'tech': 1243,
                 'hse': 618
               }
@@ -3137,28 +3203,28 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1480,
                 'hse': 1000
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1297,
                 'hse': 1185
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1678,
                 'hse': 825
               }
             },
             {
               'number': 4,
-              'scores': {
+              'score': {
                 'tech': 1226,
                 'hse': 1014
               }
@@ -3172,28 +3238,28 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 997,
                 'hse': 631
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1034,
                 'hse': 712
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1370,
                 'hse': 711
               }
             },
             {
               'number': 4,
-              'scores': {
+              'score': {
                 'tech': 1607,
                 'hse': 911
               }
@@ -3207,28 +3273,28 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1648,
                 'hse': 959
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1351,
                 'hse': 1059
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1103,
                 'hse': 945
               }
             },
             {
               'number': 4,
-              'scores': {
+              'score': {
                 'tech': 1274,
                 'hse': 814
               }
@@ -3254,28 +3320,28 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1713,
                 'hse': 918
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1023,
                 'hse': 949
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1160,
                 'hse': 1021
               }
             },
             {
               'number': 4,
-              'scores': {
+              'score': {
                 'tech': 1788,
                 'hse': 1170
               }
@@ -3287,6 +3353,68 @@ var data = {
           'photo': 'http://dummyimage.com/116x203.png/ff4444/ffffff',
           'active': false,
           'sprints': []
+        }
+      ],
+      'ratings': [
+        {
+          'sprint': 1,
+          'nps': {
+            'promoters': 74,
+            'passive': 16,
+            'detractors': 10
+          },
+          'student': {
+            'no-cumple': 13,
+            'cumple': 78,
+            'supera': 9
+          },
+          'teacher': 4.0,
+          'jedi': 4.6
+        },
+        {
+          'sprint': 2,
+          'nps': {
+            'promoters': 78,
+            'passive': 14,
+            'detractors': 8
+          },
+          'student': {
+            'no-cumple': 13,
+            'cumple': 81,
+            'supera': 6
+          },
+          'teacher': 3.7,
+          'jedi': 3.5
+        },
+        {
+          'sprint': 3,
+          'nps': {
+            'promoters': 79,
+            'passive': 15,
+            'detractors': 6
+          },
+          'student': {
+            'no-cumple': 9,
+            'cumple': 83,
+            'supera': 8
+          },
+          'teacher': 4.0,
+          'jedi': 4.3
+        },
+        {
+          'sprint': 4,
+          'nps': {
+            'promoters': 70,
+            'passive': 25,
+            'detractors': 5
+          },
+          'student': {
+            'no-cumple': 20,
+            'cumple': 70,
+            'supera': 10
+          },
+          'teacher': 3.5,
+          'jedi': 4.2
         }
       ]
     },
@@ -3305,14 +3433,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1131,
                 'hse': 651
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1750,
                 'hse': 989
               }
@@ -3338,14 +3466,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1359,
                 'hse': 963
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1398,
                 'hse': 618
               }
@@ -3359,14 +3487,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1282,
                 'hse': 1014
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1627,
                 'hse': 919
               }
@@ -3392,14 +3520,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1692,
                 'hse': 927
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1214,
                 'hse': 779
               }
@@ -3413,14 +3541,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1080,
                 'hse': 650
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1241,
                 'hse': 712
               }
@@ -3452,19 +3580,51 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1663,
                 'hse': 975
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1622,
                 'hse': 754
               }
             }
           ]
+        }
+      ],
+      'ratings': [
+        {
+          'sprint': 1,
+          'nps': {
+            'promoters': 94,
+            'passive': 6,
+            'detractors': 0
+          },
+          'student': {
+            'no-cumple': 15,
+            'cumple': 70,
+            'supera': 15
+          },
+          'teacher': 4.8,
+          'jedi': 4.3
+        },
+        {
+          'sprint': 2,
+          'nps': {
+            'promoters': 71,
+            'passive': 13,
+            'detractors': 16
+          },
+          'student': {
+            'no-cumple': 6,
+            'cumple': 90,
+            'supera': 4
+          },
+          'teacher': 3.2,
+          'jedi': 4.7
         }
       ]
     }
@@ -3509,28 +3669,28 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1548,
                 'hse': 659
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1466,
                 'hse': 805
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1059,
                 'hse': 1134
               }
             },
             {
               'number': 4,
-              'scores': {
+              'score': {
                 'tech': 1581,
                 'hse': 758
               }
@@ -3550,28 +3710,28 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1104,
                 'hse': 1092
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1342,
                 'hse': 637
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1233,
                 'hse': 1034
               }
             },
             {
               'number': 4,
-              'scores': {
+              'score': {
                 'tech': 1051,
                 'hse': 967
               }
@@ -3597,33 +3757,95 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 919,
                 'hse': 833
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1774,
                 'hse': 663
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1116,
                 'hse': 825
               }
             },
             {
               'number': 4,
-              'scores': {
+              'score': {
                 'tech': 962,
                 'hse': 823
               }
             }
           ]
+        }
+      ],
+      'ratings': [
+        {
+          'sprint': 1,
+          'nps': {
+            'promoters': 81,
+            'passive': 10,
+            'detractors': 9
+          },
+          'student': {
+            'no-cumple': 0,
+            'cumple': 90,
+            'supera': 10
+          },
+          'teacher': 4.4,
+          'jedi': 4.5
+        },
+        {
+          'sprint': 2,
+          'nps': {
+            'promoters': 97,
+            'passive': 3,
+            'detractors': 0
+          },
+          'student': {
+            'no-cumple': 17,
+            'cumple': 80,
+            'supera': 3
+          },
+          'teacher': 4.5,
+          'jedi': 4.0
+        },
+        {
+          'sprint': 3,
+          'nps': {
+            'promoters': 77,
+            'passive': 12,
+            'detractors': 1
+          },
+          'student': {
+            'no-cumple': 8,
+            'cumple': 80,
+            'supera': 2
+          },
+          'teacher': 3.7,
+          'jedi': 4.2
+        },
+        {
+          'sprint': 4,
+          'nps': {
+            'promoters': 87,
+            'passive': 8,
+            'detractors': 5
+          },
+          'student': {
+            'no-cumple': 15,
+            'cumple': 50,
+            'supera': 35
+          },
+          'teacher': 3.7,
+          'jedi': 4.5
         }
       ]
     },
@@ -3642,21 +3864,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1555,
                 'hse': 992
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1207,
                 'hse': 723
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1482,
                 'hse': 931
               }
@@ -3670,21 +3892,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1207,
                 'hse': 819
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1353,
                 'hse': 926
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1761,
                 'hse': 711
               }
@@ -3698,21 +3920,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1114,
                 'hse': 1054
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 945,
                 'hse': 957
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1345,
                 'hse': 943
               }
@@ -3726,21 +3948,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1750,
                 'hse': 794
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1263,
                 'hse': 810
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1498,
                 'hse': 1090
               }
@@ -3760,21 +3982,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1143,
                 'hse': 863
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1381,
                 'hse': 994
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1759,
                 'hse': 884
               }
@@ -3800,21 +4022,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1612,
                 'hse': 1081
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1286,
                 'hse': 755
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1570,
                 'hse': 1182
               }
@@ -3828,21 +4050,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1565,
                 'hse': 818
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 928,
                 'hse': 1113
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1620,
                 'hse': 633
               }
@@ -3856,21 +4078,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1398,
                 'hse': 675
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 975,
                 'hse': 690
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1104,
                 'hse': 694
               }
@@ -3896,21 +4118,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1208,
                 'hse': 794
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 905,
                 'hse': 1128
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1364,
                 'hse': 839
               }
@@ -3924,21 +4146,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1254,
                 'hse': 858
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1522,
                 'hse': 967
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1248,
                 'hse': 685
               }
@@ -3964,21 +4186,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1228,
                 'hse': 837
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1323,
                 'hse': 602
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1245,
                 'hse': 1167
               }
@@ -3992,21 +4214,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1553,
                 'hse': 626
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1288,
                 'hse': 1082
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1505,
                 'hse': 779
               }
@@ -4020,21 +4242,21 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1039,
                 'hse': 851
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1783,
                 'hse': 1083
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1517,
                 'hse': 1051
               }
@@ -4054,26 +4276,73 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1510,
                 'hse': 1046
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1269,
                 'hse': 1134
               }
             },
             {
               'number': 3,
-              'scores': {
+              'score': {
                 'tech': 1368,
                 'hse': 638
               }
             }
           ]
+        }
+      ],
+      'ratings': [
+        {
+          'sprint': 1,
+          'nps': {
+            'promoters': 87,
+            'passive': 13,
+            'detractors': 0
+          },
+          'student': {
+            'no-cumple': 15,
+            'cumple': 80,
+            'supera': 5
+          },
+          'teacher': 4.2,
+          'jedi': 4.6
+        },
+        {
+          'sprint': 2,
+          'nps': {
+            'promoters': 94,
+            'passive': 5,
+            'detractors': 1
+          },
+          'student': {
+            'no-cumple': 19,
+            'cumple': 42,
+            'supera': 39
+          },
+          'teacher': 4.6,
+          'jedi': 4.4
+        },
+        {
+          'sprint': 3,
+          'nps': {
+            'promoters': 94,
+            'passive': 4,
+            'detractors': 2
+          },
+          'student': {
+            'no-cumple': 11,
+            'cumple': 73,
+            'supera': 16
+          },
+          'teacher': 4.6,
+          'jedi': 4.1
         }
       ]
     },
@@ -4086,14 +4355,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1759,
                 'hse': 1006
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1143,
                 'hse': 764
               }
@@ -4125,14 +4394,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 905,
                 'hse': 622
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1689,
                 'hse': 1153
               }
@@ -4146,14 +4415,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1293,
                 'hse': 1015
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1701,
                 'hse': 1004
               }
@@ -4167,14 +4436,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1130,
                 'hse': 914
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1400,
                 'hse': 648
               }
@@ -4188,14 +4457,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1203,
                 'hse': 742
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1113,
                 'hse': 1068
               }
@@ -4215,14 +4484,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1157,
                 'hse': 1146
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1030,
                 'hse': 939
               }
@@ -4248,14 +4517,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1578,
                 'hse': 779
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 995,
                 'hse': 823
               }
@@ -4281,14 +4550,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1617,
                 'hse': 894
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1409,
                 'hse': 884
               }
@@ -4302,14 +4571,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1695,
                 'hse': 915
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1204,
                 'hse': 1099
               }
@@ -4323,14 +4592,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1533,
                 'hse': 789
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 987,
                 'hse': 671
               }
@@ -4350,14 +4619,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1519,
                 'hse': 689
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1640,
                 'hse': 1036
               }
@@ -4377,14 +4646,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 993,
                 'hse': 1081
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1790,
                 'hse': 927
               }
@@ -4398,14 +4667,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1048,
                 'hse': 930
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1525,
                 'hse': 1154
               }
@@ -4419,14 +4688,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1299,
                 'hse': 966
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1569,
                 'hse': 1029
               }
@@ -4446,14 +4715,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1347,
                 'hse': 936
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1436,
                 'hse': 631
               }
@@ -4492,14 +4761,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1219,
                 'hse': 766
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1158,
                 'hse': 1088
               }
@@ -4531,14 +4800,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1052,
                 'hse': 771
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1227,
                 'hse': 1093
               }
@@ -4552,14 +4821,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1665,
                 'hse': 927
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1602,
                 'hse': 924
               }
@@ -4585,14 +4854,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1561,
                 'hse': 823
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1160,
                 'hse': 676
               }
@@ -4642,14 +4911,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1579,
                 'hse': 1123
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1346,
                 'hse': 1032
               }
@@ -4675,14 +4944,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1791,
                 'hse': 711
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1483,
                 'hse': 1197
               }
@@ -4702,14 +4971,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1146,
                 'hse': 937
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 910,
                 'hse': 800
               }
@@ -4723,14 +4992,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 961,
                 'hse': 714
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1502,
                 'hse': 649
               }
@@ -4757,14 +5026,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1721,
                 'hse': 907
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1768,
                 'hse': 836
               }
@@ -4778,14 +5047,14 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1240,
                 'hse': 652
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1591,
                 'hse': 834
               }
@@ -4811,19 +5080,51 @@ var data = {
           'sprints': [
             {
               'number': 1,
-              'scores': {
+              'score': {
                 'tech': 1498,
                 'hse': 972
               }
             },
             {
               'number': 2,
-              'scores': {
+              'score': {
                 'tech': 1790,
                 'hse': 859
               }
             }
           ]
+        }
+      ],
+      'ratings': [
+        {
+          'sprint': 1,
+          'nps': {
+            'promoters': 80,
+            'passive': 16,
+            'detractors': 4
+          },
+          'student': {
+            'no-cumple': 3,
+            'cumple': 90,
+            'supera': 7
+          },
+          'teacher': 4.0,
+          'jedi': 4.8
+        },
+        {
+          'sprint': 2,
+          'nps': {
+            'promoters': 93,
+            'passive': 2,
+            'detractors': 5
+          },
+          'student': {
+            'no-cumple': 2,
+            'cumple': 65,
+            'supera': 33
+          },
+          'teacher': 3.9,
+          'jedi': 4.3
         }
       ]
     }
