@@ -3,12 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
     <!--Parte del logo y iconos-->
     <header>
       <nav>
+<<<<<<< HEAD
         <img src="assets/images/logo-laboratoria.PNG" alt="">
+=======
+        <img src="assets/images/logo-laboratoria.svg" alt="laboratoria logo" width="50px">
+>>>>>>> Actualización Dashboard
         <ul>
           <li><i class="fa fa-user" aria-hidden="true"></i></li>
           <li><i class="fa fa-home" aria-hidden="true"></i></li>
@@ -16,6 +22,7 @@
           <li><i class="fa fa-bars" aria-hidden="true"></i></li>
         </ul>
       </nav>
+<<<<<<< HEAD
 
       <div class="menu">
         <select name="generaciones" id="lab">
@@ -35,10 +42,36 @@
     <section>
       
     </section>
+=======
+>>>>>>> Actualización Dashboard
 
-		<!-- Base de datos -->
-		<script src="./js/data.js"></script>
-		<!-- Aquí va tus archivos JS -->
+      <div class="menu">
+        <select name="generaciones" id="lab" onChange="generation(this);">
+
+          <option value="1">Santiago de Chile 2017-I</option>
+          <option value="2">Santiago de Chile 2017-II</option>
+          <option value="3">Santiago de Chile 2016-II</option>
+          <option value="4">Arequipa 2017-I</option>
+          <option value="5">Arequipa 2016-II</option>
+          <option value="6">Ciudad de México 2017-I</option>
+          <option value="7">Ciudad de México 2017-II</option>
+          <option value="8">Lima 2017-I</option>
+          <option value="9">Lima 2016-II</option>
+          
+        </select>
+      </div>
+    </header>
+    <main>
+      <h1 id="title">Santiago de Chile 2017-I</h1>
+      
+    </main>
+    <section>
+      
+    </section>
+
+    <!-- Base de datos -->
+    <script src="./js/data.js"></script>
+    <!-- Aquí va tus archivos JS -->
     <script src="./js/app.js"></script>
   </body>
 </html>

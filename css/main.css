@@ -6,6 +6,13 @@
  * Estilos de tu proyecto
  */
 
+<<<<<<< HEAD
+=======
+ body {
+ 	font-family: roboto,sans-serif;
+ }
+
+>>>>>>> Actualización Dashboard
  /*Menú Principal*/
 header{
 	width: 100%;
@@ -52,6 +59,20 @@ select{
 	width: 200px;
 	height: 25px;
 	border-radius: 6px;
+<<<<<<< HEAD
 	font-family: 'Dancing Script', cursive;
 	font-size: 15px;
 }
+=======
+	font-family: roboto, sans-serif;
+	font-size: 15px;
+}
+
+/*Título sedes y generaciones*/
+#title {
+
+	text-align: center;
+	font-size: 2rem;
+
+}
+>>>>>>> Actualización Dashboard
