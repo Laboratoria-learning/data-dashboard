@@ -1,3 +1,57 @@
 /*
  * Estilos de tu proyecto
  */
+
+/*
+ * Estilos de tu proyecto
+ */
+
+ /*Menú Principal*/
+header{
+	width: 100%;
+	position: relative;
+}
+
+nav{
+	margin-bottom: 25px;
+	height: 75px;
+}
+
+nav img{
+ 	width: 200px;	
+	height: 60px;
+	margin-left: 500px;
+	margin-top: 10px;
+}
+
+/*Iconos del menu*/
+ul{
+	color: #AAB7B8;
+	font-size: 25px;
+	margin-bottom: 50px;
+	margin-right: 30px;
+	list-style: none;
+	float: right;
+}
+
+li{
+	display: inline-block;
+	margin-left: 15px;
+}
+
+/*Menú de sedes y generaciones*/
+.menu{
+	background-color: #EAECEE  ;
+	height: 40px;
+}
+
+select{
+	margin-left: 30px;
+	margin-top: 8px;
+	border: none;
+	width: 200px;
+	height: 25px;
+	border-radius: 6px;
+	font-family: 'Dancing Script', cursive;
+	font-size: 15px;
+}
