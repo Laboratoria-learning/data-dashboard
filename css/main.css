@@ -9,6 +9,9 @@ remover cualquier estilo anterior de los elementos  */
 	margin: 0px;
 	padding: 0px;
  }
+ header{
+    
+ }
 
 .container {
     width: 100%;
@@ -21,17 +24,91 @@ remover cualquier estilo anterior de los elementos  */
     padding-left: 24px;
     padding-right: 24px;
     line-height: 1.71429;
-    outline: 1px solid red;
+    outline: 1px solid #EBEBEB;
+    background-color: #FFF;
+
+
     
  }
  
-    .container img {
+.container img {
     width: 200px;
     height: 65px;
     margin-left: 37%;
     float: left;
     align-self: center;
-     }
- 
+}
+
+input{
+    width: 162px;
+    height: 22px;
+    background-color: #FFF;
+    border-radius: 6px;
+    border: 1px solid #EBEBEB;
+    margin-right: 0px;
+    margin-left: 285px;
+    margin-top: 20px;
+}
+
+.content{
+    text-align: center;
+}
+
+.content img{
+    display: inline-block;
+    margin: 40px;
+} 
+
+.container .fa{
+    color: #EBEBEB;
+}
+/*inicio del Footer*/
+footer.foot{
+    background-color: #333333;
+    width:100%;
+    height:300px;
+    
+
+}
+/*Iconos*/
+.redes-sociales{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}    
+.redes-sociales .icons h3{
+   color: #F7B617;
+   margin-top: 40px;
+   text-transform: uppercase;
 
 
+}
+.redes-sociales a{
+    float: left;
+   
+}
+.icons{
+    display: inline-block;
+    margin:30px;
+}
+
+.redes-sociales a i{
+    font-size: 40px;
+    color: #FFF;
+    padding-top: 15px;
+    margin-left: 30px;
+
+}
+
+/*.redes-sociales a:hover{
+    
+}
+*/
+.redes-sociales a i:hover{
+    color: #F7B617 ;
+}
+.copyright{
+    margin-top: 76px;
+    color: #FFF;
+    font-size: 11px;
+
+}
