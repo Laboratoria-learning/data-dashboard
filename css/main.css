@@ -69,13 +69,13 @@ select{
 	font-size: 1rem;
 }
 
-#focus{
+/*#focus{
 text-decoration:none;
 color:black;
 background-color: #F6A733;
 padding: 10px;
 
-}
+}*/
 
 a:link, a:visited
 {
@@ -99,7 +99,8 @@ text-decoration:none;
 color:white;
 }
 
-.hide {
+
+.esconder {
 	display:none;
 }
 
@@ -260,4 +261,47 @@ color:white;
 	width:250px;
 	padding-top: 2%;
 	margin-left: 15%;
+}
+
+SECCION ESTUDIANTES
+
+#student{
+	margin-left: 60%;
+}
+
+#title2 {
+	text-align: left;
+	font-size: 0.8rem;
+	font-weight: bolder;
+	margin-left: 15%;
+	padding-bottom: 15px; 
+	border-bottom: 1px solid gray;
+	width: 20%;
+
+
+}
+
+
+
+#lab2 {
+	margin-left: 195px;
+	margin-bottom: 20px;
+
+}
+
+#tech {
+	display: inline-block;
+
+}
+
+#student img{
+margin-left: 220px;
+
+}
+
+/*PROFESORES*/
+
+.fa-picture-o {
+	font-size: 20rem;
+	margin-left: 150px;
 }

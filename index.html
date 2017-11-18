@@ -38,9 +38,9 @@
 
   <!--Navegación Local-->
       <ul id="navLocal">
-      	<li><a id="focus" class="esconder">General</a>  </li>
-      	<li><a id="Estudiantes" class="esconder">Estudiantes</a></li>
-      	<li><a id="Profesores" class="esconder">Profesores</a></li>
+      	<li id="list1"><a id="focus">General</a>  </li>
+      	<li id="list2"><a id="students" >Estudiantes</a></li>
+      	<li id="list3"><a id="teachers" >Profesores</a></li>
       </ul>
       </div>
 
@@ -48,9 +48,12 @@
 
  <!--Cuerpo central-->
     <main>
-      <h1 id="title">Santiago de Chile 2017-I</h1>
+   
+    
+    <section class="firstSection" id="firstSection">
+         <h1 id="title">Santiago de Chile 2017-I</h1>
       <p id="subtitle"> Estudiantes Presentes:X</p>
-    <section class="firstGraph" id="firstSection">
+
       <div class="graphTop">
         <p> Porcentaje de deserción de estudiantes.</p>
          <img src="assets/images/1EstudiantesPresentesyDesertores.jpg" alt="Estudiantes Presentes y  Desertores Laboratoria">
@@ -81,14 +84,35 @@
     </section> 
       
 
-      <section id="secondSection">
+      <section id="secondSection" class="esconder">
+         <h1 id="title">Estudiantes</h1>
+
+          <select name="estudiantes" id="lab2"  onChange="students(this);">
+          <option value="">Nombre y Apellido</option>
+          <option value="">Nombre y Apellido2</option>
+          </select>
+
+       <div id="student" >
+            <img src="http://dummyimage.com/162x148.png/ff4444/ffffff" alt="">
+       <h3 id="title2">Nombre y Apellido</h3>
+        <h3 id="title2">Score Tech:</h3>
+        <h3 id="title2">Score HSE:</h3>
+       </div> 
+
+       <img id="tech" src="assets/images/7notasTech-alumna.jpg" alt="notas tech alumnas laboratoria"></img>  
+    
         
       </section>
 
-      <section id="thirstSection">
+      <section id="thirstSection" class="esconder">
+
+        <h1 id="title">Profesores</h1>
+        <i class="fa fa-picture-o" aria-hidden="true"></i>
         
       </section>
       
+     
+
     </main>
    
 
