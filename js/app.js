@@ -6,8 +6,6 @@
 //console.log(data);
 
 function generation(sel){
-
-         
 		 var text= sel.options[sel.selectedIndex].text;
 		 document.getElementById("title").innerHTML = text;
     }
