@@ -55,10 +55,167 @@ select{
 }
 
 
+
+/*Menú local*/
+
+#navLocal {
+	margin: -30px 430px;
+	width:350px;
+	outline: red; 
+}
+#navLocal li {
+	display: inline-block;
+	font-size: 1rem;
+}
+
+#focus{
+text-decoration:none;
+color:black;
+background-color: #F6A733;
+padding: 10px;
+
+}
+
+a:link, a:visited
+{
+text-decoration:none;
+color:gray;
+}
+
+a:hover
+{
+text-decoration:none;
+color:black;
+background-color: #F6A733;
+padding: 10px;
+
+
+}
+
+a:active
+{
+text-decoration:none;
+color:white;
+}
+
+
 /*Título sedes y generaciones*/
 #title {
 	text-align: center;
 	font-size: 2rem;
+	font-weight: bolder;
+}
+
+
+#subtitle{
+	text-align: center;
+	font-size: 1.3rem;
+	font-weight: normal;
+	padding-bottom: -10%;
+	color:#FEB433;
+}
+
+/*Gráficos primera sección*/
+
+.firstGraph{
+ 	width: 100%;
 
 }
 
+/*Tipografia para gráficos*/
+.graphTop p, .graphTop2 p, .graphTop3 p, .graphTop4 p, .graphTop5 p, .graphTop6 p{
+    font-size: 0.8rem;
+} 
+
+.graphTop p{
+	
+	width: 37%;
+	text-align: left;
+	margin-left: 2%;
+
+}
+
+.graphTop img{
+	width: 30%;
+	float: left;
+}
+
+.graphTop2{
+	float: left;
+	width: 30%;
+	padding-left: 12%;
+	padding-bottom: -100px;
+
+}
+
+.graphTop2 p{
+	width: 67%;
+	text-align: left;
+}
+.graphTop2 img{
+	width:250px;
+	padding-top: 2%;
+}
+
+.graphTop3{
+	float: left;
+	width: 20%;
+	padding-bottom: -100px;
+
+}
+
+.graphTop3 p{
+	width: 90%;
+	text-align: left;
+}
+
+.graphTop3 img{
+	width:250px;
+	padding-top: 2%;
+}
+
+.graphTop4{
+	margin-top:30%; 
+	width: 45%;
+	padding-bottom: -100px;
+	margin-left: 2%;
+
+
+}
+
+.graphTop4 p{
+	width: 60%;
+	text-align: left;
+}
+
+.graphTop4 img{
+	width:350px;
+	padding-top: 2%;
+}
+
+.graphTop5 {
+	float: left;
+	width: 30%;
+	padding-bottom: -100px;
+
+}
+
+.graphTop5 i{
+	color:#FEB433;
+}
+.graphTop5 p{
+	float: right;
+	padding-left: 5%;
+	width: 60%;
+	text-align: left;
+}
+
+.graphTop5 img{
+	width:350px;
+	padding-top: 2%;
+}
+
+.graphTop6 img{
+	width:250px;
+	padding-top: 2%;
+}
