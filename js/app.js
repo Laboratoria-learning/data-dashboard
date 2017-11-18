@@ -10,3 +10,5 @@ function generation(sel){
 		 document.getElementById("title").innerHTML = text;
     }
 
+    
+

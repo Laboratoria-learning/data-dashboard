@@ -4,6 +4,7 @@
 
  body {
  	font-family: roboto,sans-serif;
+ 	box-sizing: border-box;
  }
 
 
@@ -98,6 +99,9 @@ text-decoration:none;
 color:white;
 }
 
+.hide {
+	display:none;
+}
 
 /*Título sedes y generaciones*/
 #title {
@@ -141,7 +145,7 @@ color:white;
 }
 
 .graphTop2{
-	float: left;
+	display: inline-block;
 	width: 30%;
 	padding-left: 12%;
 	padding-bottom: -100px;
@@ -158,7 +162,7 @@ color:white;
 }
 
 .graphTop3{
-	float: left;
+	display: inline-block;
 	width: 20%;
 	padding-bottom: -100px;
 
@@ -175,10 +179,11 @@ color:white;
 }
 
 .graphTop4{
-	margin-top:30%; 
-	width: 45%;
-	padding-bottom: -100px;
+	display: inline-block;
+	width: 35%;
 	margin-left: 2%;
+	outline: red;
+
 
 
 }
@@ -186,6 +191,7 @@ color:white;
 .graphTop4 p{
 	width: 60%;
 	text-align: left;
+	margin-left: 20px;
 }
 
 .graphTop4 img{
@@ -193,20 +199,35 @@ color:white;
 	padding-top: 2%;
 }
 
-.graphTop5 {
+.graphTop4 i{
+	color:#FEB433;
 	float: left;
+	font-size: 40px;
+	margin-left: 15%;
+	margin-top: 2%;
+}
+
+.graphTop4 p{
+	margin-left: 28%;
+}
+.graphTop5 {
+	display: inline-block;
 	width: 30%;
-	padding-bottom: -100px;
 
 }
 
 .graphTop5 i{
-	color:#FEB433;
+	color:#FC4733;
+	float: left;
+	font-size: 40px;
+	margin-left: 15%;
+	margin-top: 2%;
 }
+
 .graphTop5 p{
 	float: right;
-	padding-left: 5%;
-	width: 60%;
+	margin-left: 1%;
+	width: 70%;
 	text-align: left;
 }
 
@@ -215,7 +236,28 @@ color:white;
 	padding-top: 2%;
 }
 
+
+.graphTop6 {
+	display: inline-block;
+	width: 30%;
+
+}
+.graphTop6 i{
+	color:#FEB433;
+	float: left;
+	font-size: 40px;
+	margin-left: 15%;
+	margin-top: 2%;
+}
+
+.graphTop6 p{
+	display: inline-block;
+	width: 60%;
+	margin-left: 5%;
+
+}
 .graphTop6 img{
 	width:250px;
 	padding-top: 2%;
+	margin-left: 15%;
 }
