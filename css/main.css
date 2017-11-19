@@ -301,7 +301,120 @@ margin-left: 220px;
 
 /*PROFESORES*/
 
-.fa-picture-o {
-	font-size: 20rem;
-	margin-left: 150px;
+#valentina{
+	width: 280px;
+	height: 280px;
+	margin-left: 300px;
+	margin-top: 20px;
+	border: 2.5px solid #FEB433;
+}
+
+#thirstSection h3{
+	font-size: 1rem;
+	margin-left: 48%;
+	font-family: roboto, sans-serif;
+	line-height: 50px;
+}
+
+#title3{
+	margin-top: -250px;
+}
+
+#thirstSection img {
+	border: 2.5px solid #FEB433;
+}
+
+#josetomas{
+	width: 200px;	
+	height: 200px;
+	float: left;
+	margin-top: 150px;
+	margin-left: 100px;
+}
+
+
+#title4, #title5{
+	position: relative;
+	top: 370px;
+	right: 620px;
+	font-weight: 700;
+}
+
+#ale{
+	width: 200px;	
+	height: 200px;
+	float: left; 
+	margin-top: 150px;
+	margin-left: 250px;
+}
+
+#title6, #title7{
+	position: relative;
+	top: 302px;
+	right: 190px;
+	font-weight: 700;
+}
+
+#nadia{
+	width: 200px;	
+	height: 200px;
+	float: left; 
+	margin-top: -200px;
+	margin-left: 1000px;
+}
+
+#title8, #title9{
+	position: relative;
+	bottom: 330px;
+	right: -80%;
+	font-weight: 700;
+	width: 100px;
+}
+
+#rocio{
+	width: 200px;	
+	height: 200px;
+	float: left; 
+	margin-top: 150px;
+	margin-left: 100px;
+}
+
+#title10, #title11{
+	position: relative;
+	top: -30px;
+	left: 150px;
+	font-weight: 700;
+	width: 120px;
+}
+
+#dani{
+	width: 200px;	
+	height: 200px;
+	float: left; 
+	margin-top: 150px;
+	margin-left: 250px;
+}
+
+#title12, #title13{
+	position: relative;
+	top: -100px;
+	left: 600px;
+	font-weight: 700;
+	width: 120px;
+}
+
+#dulce{
+	width: 200px;	
+	height: 200px;
+	float: left; 
+	margin-top: 150px;
+	margin-left: 250px;
+}
+
+#title14, #title15{
+	position: relative;
+	top: -170px;
+	left: 1070px;
+	font-weight: 700;
+	width: 120px;
 }
