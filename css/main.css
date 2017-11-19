@@ -19,20 +19,27 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+	height: 120px;
+}
+/*Icono de Barras/Menu*/
+.fa-bars {
+	margin-top: 20px;
+	margin-left: 20px;
+	font-size: 30px;
+	color: #333333;
 }
 
-/*Ícono menú hamburguesa*/
-.fa-bars {
-    margin-top: 35px;
-    margin-left: 50px;
-    color: #333333;
-    float: left;
+/*Hover del icono de barras*/
+.fa-bars:hover {
+	color: #777777;
+	cursor: pointer;
+	transition: all .3s ease-out;
 }
 
 /*Logo del Menú Fijo*/
 .navbar-logo {
 	height: 30px;
-    margin-left: 32%;
+    margin-left: 40%;
     margin-top: 33px;
     background-repeat: no-repeat;
     background-image: url(../assets/images/logo.png);
@@ -78,17 +85,125 @@ body {
 	color: #333333;
 }
 
+
+
+/*menu*/
+#menu li{
+	display: inline-block;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 0.9;
+	color: #333333;
+    margin-left: 110px;
+    list-style: none;
+    padding: 10px;
+    margin-top: 3px;
+}
+/*Menu hover*/
+#menu li:hover {
+	background-color: #ffc107;
+	cursor: pointer;
+	transition: all .3s ease-out;
+	color: #777777;
+}
+
+/*pestañas del menu*/
+#tabs {
+	text-decoration: none;
+}
+/*Menu*/
+#list-menu {
+	margin-left: 70px;
+	margin-top: 5px;
+}
+
+#container {
+	display: inline-block;
+	margin-top: 130px;
+}
+
 /*Cargo del Usuario*/
-.navbar-job {
+.job {
 	font-size: 12px;
     font-weight: 500;
 	color: #939292;
+	margin-left: 1150px;
+    display: block;
+    margin-top: -18px;
+    position: absolute;
+    cursor: pointer;
+}
+/*Menú bajo el cargo*/
+.job-menu{
+	list-style: none;
+
+}
+/*Hover del menu bajo el cargo del usuario*/
+.job-menu:hover {
+	color: #595656;
+	cursor: pointer;
 }
 
-/*Ícono Flecha*/
-.fa-chevron-down {
-	margin-top: 20px;
-	margin-right: 50px;
+/*Esconde Items bajo el cargo*/
+.hide {
+	display: none;
+}
+
+/*muestra items bajo el cargo*/
+.show {
+	display: block;
+}
+/*Menu "de hamburguesa"*/
+#seats-menu {
+	position: absolute;
+	width: 170px;
+	height: 600%;
+	background-color: #ffc107;
+	display: inline-block;
+	margin-top: -67px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+	opacity: 0.8;
+}
+
+/*Sedes*/
+#seats {
+	font-weight: bold;
+	line-height: 0.9;
 	color: #333333;
-	float: right;
+	cursor: pointer;
+	line-height: 1.9;
+	margin-top: 25px;
+	text-align: center;
+}
+
+/*generaciones*/
+#generations {
+	font-weight: bold;
+	line-height: 1.5;
+	color: #333333;	
+	cursor: pointer;
+
+}
+
+/*Links del menu "de hamburguesa"*/
+#generations a  {
+	text-decoration: none;
+	color: #333333;
+	display: block;
+	text-align: center;
+}
+
+/*hover del menu de hamburguesa*/
+#generations a:hover{
+	color: #595656;
+	cursor: pointer;
+	background-color: #FCCE3E;
+}
+
+.enabled-menu {
+	display: block;
+}
+
+.disabled-menu {
+	display: none;
 }
