@@ -14,6 +14,7 @@ var contenedor3 = document.getElementById("thirstSection");
 var fondoLista = document.getElementById("list1");
 var fondoLista2 = document.getElementById("list2");
 var fondoLista3 = document.getElementById("list3");
+var selectorGeneracion = document.getElementById("lab")
 
 
 function generation(sel){
@@ -32,6 +33,7 @@ link1.addEventListener("click", function(){
 	contenedor2.classList.add("esconder");
 	contenedor3.classList.add("esconder");
 	fondoLista.classList.add("a:hover");
+	selectorGeneracion.classList.remove("esconder");
 })
 
 link2.addEventListener("click", function(){
@@ -39,6 +41,7 @@ link2.addEventListener("click", function(){
 	contenedor1.classList.add("esconder");
 	contenedor2.classList.remove("esconder");
 	contenedor3.classList.add("esconder");
+	selectorGeneracion.classList.add("esconder");
 })
     
 link3.addEventListener("click", function(){
@@ -46,6 +49,7 @@ link3.addEventListener("click", function(){
 	contenedor1.classList.add("esconder");
 	contenedor2.classList.add("esconder");
 	contenedor3.classList.remove("esconder");
+	selectorGeneracion.classList.add("esconder");
 })
 
 
