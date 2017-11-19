@@ -19,13 +19,25 @@ function Arequipa() {
 function generacionI() {
 	var container= document.getElementById('container');
 	var parrafo=document.createElement('p');
+	var parrafo2=document.createElement('p');
+	var parrafo3=document.createElement('p');
 	var activas= '';
 		for (var i=0; i < data.CDMX['2017-1'].students.length; i++){
 		if (data.CDMX['2017-1'].students[i].active ===true){
 			activas++;
 		}
 }	var totalEstudiantes= data.CDMX['2017-1'].students.length;
+	var estudiantesActivas= document.createTextNode('Alumnas presentes en CDMX generación 2017-1: ' + activas);
+	var totalStudents= document.createTextNode('Total de Alumnas Inscritas en CDMX generación 2017-1: ' + totalEstudiantes);
+	var decersion= document.createTextNode('Desertoras ' + (totalEstudiantes - activas));
+	parrafo.appendChild(totalStudents);
+	parrafo2.appendChild(estudiantesActivas);
+	parrafo3.appendChild(decersion);
+	container.appendChild(parrafo);
+	container.appendChild(parrafo2);
+	container.appendChild(parrafo3);
 
+// Calculando las notas por sptrint
 	var supera= [];
 	for (var i=0; i < data.CDMX['2017-1'].ratings.length; i++){
 		supera.push(data.CDMX['2017-1'].ratings[i].student.supera);
@@ -51,13 +63,44 @@ function generacionI() {
 		var dosn=parseInt((((nocumple[1])*24/100).toFixed()));
 		var tresn=parseInt((((nocumple[2])*24/100).toFixed()));
 
+// Calculando el NPS
+
+var promoters= [];
+	for (var i=0; i < data.CDMX['2017-1'].ratings.length; i++){
+		promoters.push(data.CDMX['2017-1'].ratings[i].nps.promoters);
+		}
+
+		var promo1=parseInt(promoters[0]);
+		var promo2=parseInt(promoters[1]);
+		var promo3=parseInt(promoters[2]);
+
+	var passive= [];
+	for (var i=0; i < data.CDMX['2017-1'].ratings.length; i++){
+		passive.push(data.CDMX['2017-1'].ratings[i].nps.passive);
+		}
+		var pass1=parseInt(passive[0]);
+		var pass2=parseInt(passive[1]);
+		var pass3=parseInt(passive[2]);
+
+	var detractors= [];
+	for (var i=0; i < data.CDMX['2017-1'].ratings.length; i++){
+		detractors.push(data.CDMX['2017-1'].ratings[i].nps.detractors);
+		}
+		var detra1=parseInt(detractors[0]);
+		var detra2=parseInt(detractors[1]);
+		var detra3=parseInt(detractors[2]);
+
+
  	google.charts.load('current', {callback: drawCharts, packages: ['bar', 'corechart', 'table', 'line']
 });
 
 function drawCharts() {
   sprintChart();
   desertionChart();
-
+  jedis();
+  nps1();
+  nps2();
+  nps3();
 }
 
        function sprintChart(){
@@ -87,8 +130,8 @@ function drawCharts() {
 	function desertionChart(){
 		var datas = google.visualization.arrayToDataTable([
           ['Alumnas', 'Estudian'],
-          ['Activas', 9],
-          ['Inactivas', 15],
+          ['Activas', activas],
+          ['Inactivas', (totalEstudiantes - activas)],
         ]);
 
 
@@ -101,27 +144,32 @@ function drawCharts() {
         chart.draw(datas, options);
 
 	}
-	function jedis(){
-	
-		var jediScore= [];
-			for (var i = 0; i < data.CDMX['2017-1'].ratings.length; i++) {
-				jediScore.push(parseInt(data.CDMX['2017-1'].ratings[i].jedi))
-			}
-		var jediUno=parseInt(jediScore[0]);
-		var jediDos=parseInt(jediScore[1]);
-		var jediTres=parseInt(jediScore[2]);
 
+//Notas de Jedi y de Profes
+	var jediScore= [];
 	var profScore=[];
-	
-	       var data = google.visualization.arrayToDataTable([
+	for (var i=0; i < data.CDMX['2017-1'].ratings.length; i++){
+		jediScore.push(data.CDMX['2017-1'].ratings[i].jedi);
+		profScore.push(data.CDMX['2017-1'].ratings[i].teacher);
+		}
+
+		var jediUno=jediScore[0];
+		var jediDos=jediScore[1];
+		var jediTres=jediScore[2];
+		var profUno=profScore[0];
+		var profDos=profScore[1];
+		var profTres=profScore[2];
+
+	function jedis(){
+		       var data = google.visualization.arrayToDataTable([
           ['Sprint', 'JediMaster', 'Profes'],
-          ['1',  jediUno,      400],
-          ['2',  jediDos,      460],
-          ['3',  jediTres,       1120],
+          ['1',  jediUno, profUno],
+          ['2',  jediDos, profDos],
+          ['3',  jediTres, profTres],
         ]);
 
         var options = {
-          title: 'Company Performance',
+          title: 'Performance de Profesores y Jedis',
           curveType: 'function',
           legend: { position: 'bottom' }
         };
@@ -131,14 +179,86 @@ function drawCharts() {
         chart.draw(data, options);
 }
 
-	var estudiantesActivas= document.createTextNode('Alumnas presentes en CDMX generación 2017-1: ' + activas);
-	var totalEstudiantes= data.CDMX['2017-1'].students.length;
-	var decersion= document.createTextNode('Desertoras ' + (totalEstudiantes - activas));
-	parrafo.appendChild(decersion);
-	parrafo.appendChild(estudiantesActivas);
-	container.appendChild(parrafo);
+// Nps
+
+       function npsChart(){
+        var data = google.visualization.arrayToDataTable([
+          ['Sprint', 'Detractores', 'Pasivos', 'Promotores'],
+          ['1', detra1, pass1, promo1],
+          ['2', detra2, pass2, promo2],
+          ['3', detra3, pass3, promo3],
+          ]);
+
+        var options = {
+          chart: {
+            title: 'NPS',
+            subtitle: 'Recomendación de Laboratoria',
+          },
+          bars: 'vertical',
+          vAxis: {format: 'decimal'},
+          height: 400,
+          colors: ['#1b9e77', '#d95f02', '#7570b3']
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('chart_div2'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+}
+
+	function nps1(){
+		var datas = google.visualization.arrayToDataTable([
+          ['NPS', 'Estudiantes'],
+          ['Promotoras', promo1],
+          ['Pasivas', pass1],
+          ['Detractoras', detra1],
+        ]);
 
 
+        var options = {
+          title: 'Estudiantes activas e inactivas'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('nps'));
+
+        chart.draw(datas, options);
+
+	}
+	function nps2(){
+		var datas = google.visualization.arrayToDataTable([
+          ['NPS', 'Estudiantes'],
+          ['Promotoras', promo2],
+          ['Pasivas', pass2],
+          ['Detractoras', detra2],
+        ]);
+
+
+        var options = {
+          title: 'Estudiantes activas e inactivas'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('nps2'));
+
+        chart.draw(datas, options);
+
+	}
+function nps3(){
+		var datas = google.visualization.arrayToDataTable([
+          ['NPS', 'Estudiantes'],
+          ['Promotoras', promo3],
+          ['Pasivas', pass3],
+          ['Detractoras', detra3],
+        ]);
+
+
+        var options = {
+          title: 'Estudiantes activas e inactivas'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('nps3'));
+
+        chart.draw(datas, options);
+
+	}
 
 
 };
