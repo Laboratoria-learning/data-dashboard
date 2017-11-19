@@ -22,10 +22,7 @@ function generation(sel){
 		 document.getElementById("title").innerHTML = text;
     }
 
-function students(sel){
-		 var text= sel.options[sel.selectedIndex].text;
-		 document.getElementById("title2").innerHTML = text;
-    }
+
 
 link1.addEventListener("click", function(){
 
@@ -52,4 +49,18 @@ link3.addEventListener("click", function(){
 	selectorGeneracion.classList.add("esconder");
 })
 
+function students(sel){
+		 var text= sel.options[sel.selectedIndex].text;
+		 document.getElementById("nombre").innerHTML = text;
+    }
+
+/*var container = document.getElementById('generacion');
+console.log(container);*/
+
+
+
+for (var i = 0; i < data.SCL['2016-2'].students.length; i++) {
+	console.log(data.SCL['2016-2'].students[i].active);
+	// container.innerHTML += '<p> data.SCL['2016-2'].students[i].name + </p>';
+}
 
