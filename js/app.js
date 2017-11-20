@@ -71,7 +71,9 @@ SCL2016.addEventListener("click", function(){
 
 
 
+
 //Agregando nombres a select opcion SCL 2017-1
+
 
 SCL20171.addEventListener("click", function(){
 		selectStudent.childNodes.forEach((child)=>{selectStudent.removeChild(child);});
@@ -94,6 +96,13 @@ SCL20172.addEventListener("click", function(){
 
 	}
 })
+
+function students() {
+    var x = document.getElementById("lab2").value;
+    document.getElementById("nombreEstudiante").innerHTML = "Nombre y Apellido: " + x;
+}
+
+
 
 //Obteniendo nombre de select opcion
 
