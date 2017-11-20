@@ -68,6 +68,7 @@ SCL2016.addEventListener("click", function(){
 	}
 })
 
+
 SCL20171.addEventListener("click", function(){
 		selectStudent.childNodes.forEach((child)=>{selectStudent.removeChild(child);});
 		for (var i = 0; i < data.SCL['2017-1'].students.length; i++) {
@@ -90,37 +91,10 @@ SCL20172.addEventListener("click", function(){
 	}
 })
 
-
-
-/*if (radio1.checked == true){
-	for (var i = 0; i < data.SCL['2016-2'].students.length; i++) {
- //    console.log(data.SCL['2016-2'].students[i].name);
- //    container.innerHTML += '<p>La estudiante número ' + [i+1] + ' es: ' + data.SCL['2016-2'].students[i].name + '</p>';
-	// }
+function students() {
+    var x = document.getElementById("lab2").value;
+    document.getElementById("nombreEstudiante").innerHTML = "Nombre y Apellido: " + x;
 }
-
-} else if (radio2.checked == true){
-for (var i = 0; i < data.SCL['2017-1'].students.length; i++) {
-	console.log(data.SCL['2017-1'].students[i].active);
-	// container.innerHTML += '<p> data.SCL['2016-2'].students[i].name + </p>';
- 
- }
-}else{
-for (var i = 0; i < data.SCL['2017-2'].students.length; i++) {
-	console.log(data.SCL['2017-2'].students[i].active);
-	// container.innerHTML += '<p> data.SCL['2016-2'].students[i].name + </p>';
- }
-}
-*/
-
-
-/*function students(sel){
-		 var text= sel.options[sel.selectedIndex].text;
-		 document.getElementById("nombre").innerHTML = text;
-    }*/
-
-/*var container = document.getElementById('generacion');
-console.log(container);*/
 
 
 
