@@ -14,6 +14,7 @@ var contenedor3 = document.getElementById("thirstSection");
 var fondoLista = document.getElementById("list1");
 var fondoLista2 = document.getElementById("list2");
 var fondoLista3 = document.getElementById("list3");
+var selectorGeneracion = document.getElementById("lab")
 
 
 function generation(sel){
@@ -21,10 +22,7 @@ function generation(sel){
 		 document.getElementById("title").innerHTML = text;
     }
 
-function students(sel){
-		 var text= sel.options[sel.selectedIndex].text;
-		 document.getElementById("title2").innerHTML = text;
-    }
+
 
 link1.addEventListener("click", function(){
 
@@ -32,6 +30,7 @@ link1.addEventListener("click", function(){
 	contenedor2.classList.add("esconder");
 	contenedor3.classList.add("esconder");
 	fondoLista.classList.add("a:hover");
+	selectorGeneracion.classList.remove("esconder");
 })
 
 link2.addEventListener("click", function(){
@@ -39,6 +38,7 @@ link2.addEventListener("click", function(){
 	contenedor1.classList.add("esconder");
 	contenedor2.classList.remove("esconder");
 	contenedor3.classList.add("esconder");
+	selectorGeneracion.classList.add("esconder");
 })
     
 link3.addEventListener("click", function(){
@@ -46,6 +46,21 @@ link3.addEventListener("click", function(){
 	contenedor1.classList.add("esconder");
 	contenedor2.classList.add("esconder");
 	contenedor3.classList.remove("esconder");
+	selectorGeneracion.classList.add("esconder");
 })
 
+function students(sel){
+		 var text= sel.options[sel.selectedIndex].text;
+		 document.getElementById("nombre").innerHTML = text;
+    }
+
+/*var container = document.getElementById('generacion');
+console.log(container);*/
+
+
+
+for (var i = 0; i < data.SCL['2016-2'].students.length; i++) {
+	console.log(data.SCL['2016-2'].students[i].active);
+	// container.innerHTML += '<p> data.SCL['2016-2'].students[i].name + </p>';
+}
 
