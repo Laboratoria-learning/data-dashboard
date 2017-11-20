@@ -1,7 +1,3 @@
-/*
- * Funcionalidad de tu producto
- */
-
 // Puedes hacer uso de la base de datos a través de la variable `data`
 console.log(data);
 
@@ -32,21 +28,46 @@ function generacionI() {
 	var parrafo=document.createElement('p');
 	var parrafo2=document.createElement('p');
 	var parrafo3=document.createElement('p');
+	var parrafo4=document.createElement('p');
+	var parrafo5=document.createElement('p');
+	var parrafo6=document.createElement('p');
+	var contenedor= document.getElementsByClassName('imagenes')[0];
+		contenedor.style.display = '';
+
+	var contenedor2= document.getElementsByClassName('imagenes2')[0];
+		contenedor2.style.display = '';
+
+	var contenedor3= document.getElementsByClassName('imagenes3')[0];
+		contenedor3.style.display = '';
+
 	var activas= '';
 	for (var i=0; i < data.CDMX['2017-1'].students.length; i++){
 		if (data.CDMX['2017-1'].students[i].active ===true){
 			activas++;
 		}
 	}	var totalEstudiantes= data.CDMX['2017-1'].students.length;
-	var estudiantesActivas= document.createTextNode('Alumnas presentes en CDMX generación 2017-1: ' + activas);
-	var totalStudents= document.createTextNode('Total de Alumnas Inscritas en CDMX generación 2017-1: ' + totalEstudiantes);
-	var decersion= document.createTextNode('Desertoras ' + (totalEstudiantes - activas));
+	var estudiantesActivas= document.createTextNode(totalEstudiantes);
+	var totalStudents= document.createTextNode('Inscritas');
+	var desert= document.createTextNode(totalEstudiantes-activas);
+	var desertoras= document.createTextNode('Inactivas');
+	var active= document.createTextNode(activas);
+	var activadas= document.createTextNode('Activas');
+
 	parrafo.appendChild(totalStudents);
 	parrafo2.appendChild(estudiantesActivas);
-	parrafo3.appendChild(decersion);
-	container.appendChild(parrafo);
-	container.appendChild(parrafo2);
-	container.appendChild(parrafo3);
+	contenedor.appendChild(parrafo);
+	contenedor.appendChild(parrafo2);
+	parrafo3.appendChild(desertoras);
+	parrafo4.appendChild(desert);
+	contenedor2.appendChild(parrafo3);
+	contenedor2.appendChild(parrafo4);
+	parrafo5.appendChild(activadas);
+	parrafo6.appendChild(active);
+	contenedor3.appendChild(parrafo5);
+	contenedor3.appendChild(parrafo6);
+
+	
+	
 
 // Calculando las notas por sptrint
 var supera= [];
@@ -130,7 +151,8 @@ function sprintChart(){
 		},
 		bars: 'vertical',
 		vAxis: {format: 'decimal'},
-		height: 400,
+		height: 350,
+		width: 350,
 		colors: ['#1b9e77', '#d95f02', '#7570b3']
 	};
 
@@ -148,7 +170,9 @@ function desertionChart(){
 
 
 	var options = {
-		title: 'Estudiantes activas e inactivas'
+		title: 'Estudiantes activas e inactivas',
+		height: 350,
+		width: 350,
 	};
 
 	var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -183,6 +207,8 @@ function jedis(){
 	var options = {
 		title: 'Performance de Profesores y Jedis',
 		curveType: 'function',
+		height: 350,
+		width: 350,
 		legend: { position: 'bottom' }
 	};
 
@@ -193,29 +219,31 @@ function jedis(){
 //Notas de HSE y Tech
 var hseScore=[];
 for (i=0; i<data.CDMX['2017-1'].students.length; i++){ 
-   	for (h=0; h<data.CDMX['2017-1'].students[i].sprints.length;h++){  
-       	hseScore.push(data.CDMX['2017-1'].students[i].sprints[h].score.tech);
-}}
+	for (h=0; h<data.CDMX['2017-1'].students[i].sprints.length;h++){  
+		hseScore.push(data.CDMX['2017-1'].students[i].sprints[h].score.tech);
+	}}
 
 
-function jedis(){
-	var data = google.visualization.arrayToDataTable([
-		['Sprint', 'JediMaster', 'Profes'],
-		['1',  jediUno, profUno],
-		['2',  jediDos, profDos],
-		['3',  jediTres, profTres],
-		]);
+	function jedis(){
+		var data = google.visualization.arrayToDataTable([
+			['Sprint', 'JediMaster', 'Profes'],
+			['1',  jediUno, profUno],
+			['2',  jediDos, profDos],
+			['3',  jediTres, profTres],
+			]);
 
-	var options = {
-		title: 'Performance de Profesores y Jedis',
-		curveType: 'function',
-		legend: { position: 'bottom' }
-	};
+		var options = {
+			title: 'Performance de Profesores y Jedis',
+			curveType: 'function',
+			height: 350,
+		width: 350,
+			legend: { position: 'bottom' }
+		};
 
-	var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+		var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
 
-	chart.draw(data, options);
-}
+		chart.draw(data, options);
+	}
 
 // Satisfaccion Laboratoria
 var satis1= parseInt(unos+unoc);
@@ -255,6 +283,8 @@ function techChart() {
 	var options = {
 		title: 'Satisfacción de estudiantes por Sprint',
 		curveType: 'function',
+		height: 350,
+		width: 350,
 		legend: { position: 'bottom' },
 		pointsVisible: true,
 	};
@@ -263,7 +293,6 @@ function techChart() {
 
 	chart.draw(data, options);
 }
-
 
 
 // Nps
@@ -277,6 +306,8 @@ function nps1(){
 
 
 	var options = {
+		height: 350,
+		width: 350,
 		title: 'Estudiantes activas e inactivas'
 	};
 
@@ -295,7 +326,9 @@ function nps2(){
 
 
 	var options = {
-		title: 'Estudiantes activas e inactivas'
+		title: 'Estudiantes activas e inactivas',
+		height: 350,
+		width: 350,
 	};
 
 	var chart = new google.visualization.PieChart(document.getElementById('nps2'));
@@ -314,7 +347,9 @@ function nps3(){
 
 
 	var options = {
-		title: 'Estudiantes activas e inactivas'
+		title: 'Estudiantes activas e inactivas',
+		height: 350,
+		width: 350,
 	};
 
 	var chart = new google.visualization.PieChart(document.getElementById('nps3'));
@@ -323,6 +358,8 @@ function nps3(){
 
 }
 
+var menu = document.getElementsByClassName("Mexico")[0];
+	menu.style.display = 'none';
 
 };
 
