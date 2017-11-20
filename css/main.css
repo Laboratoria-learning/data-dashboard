@@ -310,35 +310,25 @@ nav img{
 
 #piechart{
 	display: inline-block;
-    margin: 15px;
+    margin: 30px;
 
 }
 #chart_div{
 	display: inline-block;
-    margin: 15px;
+    margin: 30px;
+}
+
+#donut_single{
+	display: inline-block;
+    margin: 30px;
 }
 #curve_chart{
 	display: inline-block;
-    margin: 15px;
+    margin: 30px;
 }
-#chart_div2{
-	display: inline-block;
-    margin: 15px;
-}
-#nps{
-	display: inline-block;
-    margin: 15px;
-}
-#nps2{
-	display: inline-block;
-    margin: 15px;
-}
-#nps3{
-	display: inline-block;
-    margin: 15px;
-}
+
 #curve_chart2{
 	display: inline-block;
-    margin: 15px;
+    margin: 30px;
 }
 

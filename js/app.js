@@ -119,7 +119,6 @@ var dosn=parseInt((((nocumple[1])*24/100).toFixed()));
 var tresn=parseInt((((nocumple[2])*24/100).toFixed()));
 
 
-
 // Calculando el NPS
 
 var promoters= [];
@@ -167,8 +166,8 @@ var satisAcumulada= (((satis1+satis2+satis3)/3).toFixed());
 var sati1= parseInt(unos+unoc);
 var sati2= parseInt(doss+dosc);
 var sati3= parseInt(tress+tresc);
-var satiAcumulada= ((((sati1+sati2+sati3)/3)*100/totalEstudiantes).toFixed());
-console.log(satiAcumulada);
+var satiAcumulada= parseInt(((((sati1+sati2+sati3)/3)*100/totalEstudiantes).toFixed()));
+
 
 
 google.charts.load('current', {callback: drawCharts, packages: ['bar', 'corechart', 'table', 'line']
@@ -177,24 +176,33 @@ google.charts.load('current', {callback: drawCharts, packages: ['bar', 'corechar
 function drawCharts() {
 	sprintChart();
 	jedis();
+	satisChart();
+	scoreChart(); 
 }
+var techScore1= data.CDMX['2017-1'].students.filter((student)=>{return ((student.sprints[0].score.tech) > 1260)}).length;
+var techScore2= data.CDMX['2017-1'].students.filter((student)=>{return ((student.sprints[1].score.tech) > 1260)}).length;
+var techScore3= data.CDMX['2017-1'].students.filter((student)=>{return ((student.sprints[2].score.tech) > 1260)}).length;
+
+var hseScore1= data.CDMX['2017-1'].students.filter((student)=>{return ((student.sprints[0].score.hse) > 840)}).length;
+var hseScore2= data.CDMX['2017-1'].students.filter((student)=>{return ((student.sprints[1].score.hse) > 840)}).length;
+var hseScore3= data.CDMX['2017-1'].students.filter((student)=>{return ((student.sprints[2].score.hse) > 840)}).length;
 
 function sprintChart(){
 	var data1 = google.visualization.arrayToDataTable([
-		['Sprint', 'No Cumple', 'Cumple', 'Supera'],
-		['S1', unon, unoc, unos],
-		['S2', dosn, dosc, doss],
-		['S3', tresn, tresc, tress],
+		['Sprint', 'Tech Score', 'HSE Score'],
+		['S1', techScore1, hseScore1],
+		['S2', techScore2, hseScore2],
+		['S3', techScore3, hseScore3],
 		]);
 
 	var options = {
 		chart: {
 			title: 'Promedio de Notas por Sprint',
 				},
-		bars: 'vertical',
-		vAxis: {format: 'decimal'},
+		seriesType: 'bars',
+			vAxis: {format: 'decimal'},
 		height: 350,
-		width: 380,
+		width: 420,
 		colors: ['#1b9e77', '#d95f02', '#7570b3']
 	};
 
@@ -202,7 +210,35 @@ function sprintChart(){
 
 	chart1.draw(data1, google.charts.Bar.convertOptions(options));
 }
+var tech1= ((techScore1*100)/totalEstudiantes);
+var tech2= ((techScore2*100)/totalEstudiantes);
+var tech3= ((techScore3*100)/totalEstudiantes);
 
+var hse1= ((hseScore1*100)/totalEstudiantes);
+var hse2= ((hseScore2*100)/totalEstudiantes);
+var hse3= ((hseScore3*100)/totalEstudiantes);
+
+//Notas TECH y HSE
+function scoreChart(){
+	var data = google.visualization.arrayToDataTable([
+		['Sprint', 'Tech', 'HSE'],
+		['S1',  tech1, hse1],
+		['S2',  tech2, hse2],
+		['S3',  tech3, hse3],
+		]);
+
+	var options = {
+		title: 'Promedio HSE y Tech Score',
+		curveType: 'function',
+		height: 350,
+		width: 420,
+		legend: { position: 'bottom' }
+	};
+
+	var chart = new google.visualization.LineChart(document.getElementById('curve_chart2'));
+
+	chart.draw(data, options);
+}
 
 //Notas de Jedi y de Profes
 var jediScore= [];
@@ -219,6 +255,7 @@ var profUno=profScore[0];
 var profDos=profScore[1];
 var profTres=profScore[2];
 
+
 function jedis(){
 	var data = google.visualization.arrayToDataTable([
 		['Sprint', 'JediMaster', 'Profes'],
@@ -231,7 +268,7 @@ function jedis(){
 		title: 'Puntaje Profesores y Jedis',
 		curveType: 'function',
 		height: 350,
-		width: 380,
+		width: 420,
 		legend: { position: 'bottom' }
 	};
 
@@ -240,54 +277,29 @@ function jedis(){
 	chart.draw(data, options);
 }
 
-	function jedis(){
-		var data = google.visualization.arrayToDataTable([
-			['Sprint', 'JediMaster', 'Profes'],
-			['1',  jediUno, profUno],
-			['2',  jediDos, profDos],
-			['3',  jediTres, profTres],
-			]);
+//Satisfacción
+      function satisChart() {
 
-		var options = {
-			title: 'Performance de Profesores y Jedis',
-			curveType: 'function',
-			height: 350,
-		width: 350,
-			legend: { position: 'bottom' }
-		};
+        var data = google.visualization.arrayToDataTable([
+          ['Satisfacción', 'Porcentaje'],
+          ['Satisfechas', satiAcumulada],
+          ['Insatisfechas', (100-satiAcumulada)],
+        ]);
 
-		var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+        var options = {
+          pieHole: 0.5,
+          			height: 350,
+		width: 420,
+		title: 'Satisfacción de Estudiantes',
+          pieSliceTextStyle: {
+            color: 'black',
+          },
+          legend: { position: 'top' }
+        };
 
-		chart.draw(data, options);
-	}
-
-
-
-// Supera meta Tech por sprint
-
-function techChart() {
-	var data = google.visualization.arrayToDataTable([
-		['Sprint', 'Promedio de Notas Técnicas'],
-		['1',  satis1],
-		['2',  satis2],
-		['3',  satis3],
-		]);
-
-	var options = {
-		title: 'Satisfacción de estudiantes por Sprint',
-		curveType: 'function',
-		height: 350,
-		width: 380,
-		legend: { position: 'bottom' },
-		pointsVisible: true,
-	};
-
-	var chart = new google.visualization.LineChart(document.getElementById('curve_chart2'));
-
-	chart.draw(data, options);
-}
-
-
+        var chart = new google.visualization.PieChart(document.getElementById('donut_single'));
+        chart.draw(data, options);
+      }
 var menu = document.getElementsByClassName("Mexico")[0];
 	menu.style.display = 'none';
 
