@@ -65,7 +65,7 @@ function generacionI() {
 	var desertoras= document.createTextNode('Inactivas');
 	var active= document.createTextNode((((activas*100)/totalEstudiantes).toFixed()) +'%');
 	var activadas= document.createTextNode('Activas');
-	var todass= document.createTextNode('Alumnas que alcanzan todas las metas: ' + todas );
+	var todass= document.createTextNode('Cumple: ' + todas );
 	var todas= document.createTextNode((((todas*100)/totalEstudiantes).toFixed()) +'%');
 
 
@@ -118,20 +118,7 @@ var unon=parseInt((((nocumple[0])*24/100).toFixed()));
 var dosn=parseInt((((nocumple[1])*24/100).toFixed()));
 var tresn=parseInt((((nocumple[2])*24/100).toFixed()));
 
-// Satisfaccion Laboratoria
-var satis1= parseInt(unos+unoc);
-var satis2= parseInt(doss+dosc);
-var satis3= parseInt(tress+tresc);
-var satisAcumulada= ((((satis1+satis2+satis3)/3)*100/totalEstudiantes).toFixed());
 
-	var satis= document.createTextNode('Satisfaccion de estudiantes');
-	var satiss= document.createTextNode(satisAcumulada + ' %');
-console.log(satiss);
-	parrafo9.appendChild(satis);
-	parrafo10.appendChild(satiss);
-	contenedor5.appendChild(parrafo9);
-	contenedor5.appendChild(parrafo10);
-	superior.appendChild(contenedor5);
 
 // Calculando el NPS
 
@@ -160,6 +147,29 @@ var detra1=parseInt(detractors[0]);
 var detra2=parseInt(detractors[1]);
 var detra3=parseInt(detractors[2]);
 
+//NPS
+var satis1= parseInt(promo1-detra1);
+var satis2= parseInt(promo2-detra2);
+var satis3= parseInt(promo2-detra3);
+var satisAcumulada= (((satis1+satis2+satis3)/3).toFixed());
+
+	var satis= document.createTextNode('NPS');
+	var satiss= document.createTextNode(satisAcumulada + ' %');
+
+	parrafo9.appendChild(satis);
+	parrafo10.appendChild(satiss);
+	contenedor5.appendChild(parrafo9);
+	contenedor5.appendChild(parrafo10);
+	superior.appendChild(contenedor5);
+
+// Satisfaccion
+
+var sati1= parseInt(unos+unoc);
+var sati2= parseInt(doss+dosc);
+var sati3= parseInt(tress+tresc);
+var satiAcumulada= ((((sati1+sati2+sati3)/3)*100/totalEstudiantes).toFixed());
+console.log(satiAcumulada);
+
 
 google.charts.load('current', {callback: drawCharts, packages: ['bar', 'corechart', 'table', 'line']
 });
@@ -167,9 +177,6 @@ google.charts.load('current', {callback: drawCharts, packages: ['bar', 'corechar
 function drawCharts() {
 	sprintChart();
 	jedis();
-	nps1();
-	nps2();
-	nps3();
 }
 
 function sprintChart(){
@@ -280,68 +287,6 @@ function techChart() {
 	chart.draw(data, options);
 }
 
-// Nps
-function nps1(){
-	var datas = google.visualization.arrayToDataTable([
-		['NPS', 'Estudiantes'],
-		['Promotoras', promo1],
-		['Pasivas', pass1],
-		['Detractoras', detra1],
-		]);
-
-
-	var options = {
-		height: 350,
-		width: 380,
-		title: 'Estudiantes activas e inactivas'
-	};
-
-	var chart = new google.visualization.PieChart(document.getElementById('nps'));
-
-	chart.draw(datas, options);
-
-}
-function nps2(){
-	var datas = google.visualization.arrayToDataTable([
-		['NPS', 'Estudiantes'],
-		['Promotoras', promo2],
-		['Pasivas', pass2],
-		['Detractoras', detra2],
-		]);
-
-
-	var options = {
-		title: 'Estudiantes activas e inactivas',
-		height: 350,
-		width: 380,
-	};
-
-	var chart = new google.visualization.PieChart(document.getElementById('nps2'));
-
-	chart.draw(datas, options);
-
-}
-
-function nps3(){
-	var datas = google.visualization.arrayToDataTable([
-		['NPS', 'Estudiantes'],
-		['Promotoras', promo3],
-		['Pasivas', pass3],
-		['Detractoras', detra3],
-		]);
-
-
-	var options = {
-		title: 'Estudiantes activas e inactivas',
-		height: 350,
-		width: 380,
-	};
-
-	var chart = new google.visualization.PieChart(document.getElementById('nps3'));
-
-	chart.draw(datas, options);
-
-}
 
 var menu = document.getElementsByClassName("Mexico")[0];
 	menu.style.display = 'none';
