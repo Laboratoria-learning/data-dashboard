@@ -51,6 +51,11 @@ input{
 	margin-top: 20px;
 }
 
+.superior{
+text-align: center;
+    padding: 20px;
+    background-color: grey;
+}
 .imagenes{
     width: 300px;
     /* outline: 1px solid red; */
@@ -58,7 +63,7 @@ input{
     background-color: #FAA818;
     border-radius: 15px;
     font-size: 22px;
-    float: left;
+   display: inline-block;
 
 }
 .imagenes img{
@@ -80,7 +85,7 @@ input{
     background-color: #FAA818;
     border-radius: 15px;
     font-size: 22px;
-        float: left;
+        display: inline-block;
             margin-left: 30px;
 
 }
@@ -105,7 +110,7 @@ input{
     background-color: #FAA818;
     border-radius: 15px;
     font-size: 22px;
-        float: left;
+    display: inline-block;
             margin-left: 30px;
 
 }
@@ -123,7 +128,8 @@ input{
 }
 .graficoss{
 	text-align: center;
-	clear: both;
+
+
 }
 .content{
 	text-align: center;
@@ -249,31 +255,40 @@ nav img{
 
 .graficos{
 	text-align: center;
+	background-color: #F7F7F7;
 }
 
 #piechart{
-    display: inline-block;
-    outline: 1px solid red;
+	display: inline-block;
+    margin: 15px;
+
 }
 #chart_div{
 	display: inline-block;
-	outline: 1px solid red;
+    margin: 15px;
 }
 #curve_chart{
 	display: inline-block;
+    margin: 15px;
 }
 #chart_div2{
 	display: inline-block;
+    margin: 15px;
 }
 #nps{
 	display: inline-block;
+    margin: 15px;
 }
 #nps2{
 	display: inline-block;
+    margin: 15px;
 }
 #nps3{
 	display: inline-block;
+    margin: 15px;
 }
 #curve_chart2{
 	display: inline-block;
+    margin: 15px;
 }
+

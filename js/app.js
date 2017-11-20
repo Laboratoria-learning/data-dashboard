@@ -32,13 +32,15 @@ function generacionI() {
 	var parrafo5=document.createElement('p');
 	var parrafo6=document.createElement('p');
 	var contenedor= document.getElementsByClassName('imagenes')[0];
-		contenedor.style.display = '';
+	
 
 	var contenedor2= document.getElementsByClassName('imagenes2')[0];
-		contenedor2.style.display = '';
+
 
 	var contenedor3= document.getElementsByClassName('imagenes3')[0];
-		contenedor3.style.display = '';
+
+	var superior= document.getElementsByClassName('superior')[0];
+		superior.style.display = '';
 
 	var activas= '';
 	for (var i=0; i < data.CDMX['2017-1'].students.length; i++){
@@ -65,9 +67,9 @@ function generacionI() {
 	parrafo6.appendChild(active);
 	contenedor3.appendChild(parrafo5);
 	contenedor3.appendChild(parrafo6);
-
-	
-	
+	superior.appendChild(contenedor);
+	superior.appendChild(contenedor2);
+	superior.appendChild(contenedor3);
 
 // Calculando las notas por sptrint
 var supera= [];
@@ -127,8 +129,8 @@ google.charts.load('current', {callback: drawCharts, packages: ['bar', 'corechar
 });
 
 function drawCharts() {
-	sprintChart();
 	desertionChart();
+	sprintChart();
 	jedis();
 	nps1();
 	nps2();
@@ -139,20 +141,19 @@ function drawCharts() {
 function sprintChart(){
 	var data1 = google.visualization.arrayToDataTable([
 		['Sprint', 'No Cumple', 'Cumple', 'Supera'],
-		['1', unon, unoc, unos],
-		['2', dosn, dosc, doss],
-		['3', tresn, tresc, tress],
+		['S1', unon, unoc, unos],
+		['S2', dosn, dosc, doss],
+		['S3', tresn, tresc, tress],
 		]);
 
 	var options = {
 		chart: {
-			title: 'Promedio',
-			subtitle: 'Promedio de notas por Sprint',
-		},
+			title: 'Promedio de Notas por Sprint',
+				},
 		bars: 'vertical',
 		vAxis: {format: 'decimal'},
 		height: 350,
-		width: 350,
+		width: 380,
 		colors: ['#1b9e77', '#d95f02', '#7570b3']
 	};
 
@@ -170,9 +171,9 @@ function desertionChart(){
 
 
 	var options = {
-		title: 'Estudiantes activas e inactivas',
+		title: 'Total de Estudiantes',
 		height: 350,
-		width: 350,
+		width: 380,
 	};
 
 	var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -199,16 +200,16 @@ var profTres=profScore[2];
 function jedis(){
 	var data = google.visualization.arrayToDataTable([
 		['Sprint', 'JediMaster', 'Profes'],
-		['1',  jediUno, profUno],
-		['2',  jediDos, profDos],
-		['3',  jediTres, profTres],
+		['S1',  jediUno, profUno],
+		['S2',  jediDos, profDos],
+		['S3',  jediTres, profTres],
 		]);
 
 	var options = {
-		title: 'Performance de Profesores y Jedis',
+		title: 'Puntaje Profesores y Jedis',
 		curveType: 'function',
 		height: 350,
-		width: 350,
+		width: 380,
 		legend: { position: 'bottom' }
 	};
 
@@ -217,6 +218,7 @@ function jedis(){
 	chart.draw(data, options);
 }
 //Notas de HSE y Tech
+/*
 var hseScore=[];
 for (i=0; i<data.CDMX['2017-1'].students.length; i++){ 
 	for (h=0; h<data.CDMX['2017-1'].students[i].sprints.length;h++){  
@@ -244,6 +246,7 @@ for (i=0; i<data.CDMX['2017-1'].students.length; i++){
 
 		chart.draw(data, options);
 	}
+*/
 
 // Satisfaccion Laboratoria
 var satis1= parseInt(unos+unoc);
@@ -263,7 +266,9 @@ function satisChart() {
 		curveType: 'function',
 		legend: { position: 'bottom' },
 		pointsVisible: true,
-	};
+		height: 350,
+		width: 380,
+			};
 
 	var chart = new google.visualization.LineChart(document.getElementById('curve_chart2'));
 
@@ -284,7 +289,7 @@ function techChart() {
 		title: 'Satisfacción de estudiantes por Sprint',
 		curveType: 'function',
 		height: 350,
-		width: 350,
+		width: 380,
 		legend: { position: 'bottom' },
 		pointsVisible: true,
 	};
@@ -293,7 +298,6 @@ function techChart() {
 
 	chart.draw(data, options);
 }
-
 
 // Nps
 function nps1(){
@@ -307,7 +311,7 @@ function nps1(){
 
 	var options = {
 		height: 350,
-		width: 350,
+		width: 380,
 		title: 'Estudiantes activas e inactivas'
 	};
 
@@ -328,7 +332,7 @@ function nps2(){
 	var options = {
 		title: 'Estudiantes activas e inactivas',
 		height: 350,
-		width: 350,
+		width: 380,
 	};
 
 	var chart = new google.visualization.PieChart(document.getElementById('nps2'));
@@ -349,7 +353,7 @@ function nps3(){
 	var options = {
 		title: 'Estudiantes activas e inactivas',
 		height: 350,
-		width: 350,
+		width: 380,
 	};
 
 	var chart = new google.visualization.PieChart(document.getElementById('nps3'));
