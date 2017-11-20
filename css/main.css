@@ -1,3 +1,89 @@
-/*
- * Estilos de tu proyecto
- */
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+
+    font-family: 'Dosis', sans-serif;
+}
+
+#laboratoria img {
+	position: relative;
+	width:20%;
+	left: 500px;
+	
+}
+.menuDesplazable{
+	position: absolute;
+	left:200px;
+    border: none;
+}
+.menuDesplazable select{
+	border: none;
+
+}
+.menuDesplazable #pick-sede{
+	border-color: #FFFFFF;
+	font-size:30px; 
+	font-family: 'Dosis', sans-serif;
+
+}
+
+.menuDesplazable #pick-sede option{
+	border-color: #FFFFFF;
+	font-size:20px; 
+	font-family: 'Dosis', sans-serif;
+
+}
+.menu{
+
+	overflow:hidden; 
+	text-decoration: none;
+	display:block;
+	width: 100%;
+	background:#74746F;
+}	
+.menu  li  {
+	float: left;
+	font-size:20px;
+	color:#FFFFFF;
+	padding: 5px;
+	list-style:none;
+	margin-right: 30px;
+}
+
+.menu li:hover{
+	background-color: #F5FE6B;
+	color: black;
+}
+
+#container {
+	position: absolute;
+	top:200px;
+	padding: 10px;
+
+}
+
+#enrollment {
+
+	float: left;
+	background-color: #FEFDBE;
+	margin:20px;
+	width:350px; 
+}
+
+
+	#achievement{
+	float: left;
+	background-color: #F9EF4D;
+	margin:20px; 
+	width: 350px;
+}
+#nps{
+	float: left;
+	background-color:#D8FF85;
+	margin:20px; 
+	width: 350px;
+}
