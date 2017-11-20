@@ -60,6 +60,7 @@ function happy(generation){
 		var cumple = generation.ratings[i].student.cumple;
 		var total = beats + cumple;
 		average = average + total;
+		console.log(total);
 	}
 	average = average / generation.ratings.length;
 	return Math.round(average * 100)/100;
@@ -75,6 +76,7 @@ function teacherScore(generation){
 	var score = 0;
 	for(var i = 0 ; i < generation.ratings.length ; i++){
 		score = score + generation.ratings[i].teacher;
+		console.log(generation.ratings[i].teacher)
 	}
 	score = score/generation.ratings.length;
 	return Math.round(score * 100)/100;
@@ -89,6 +91,7 @@ function jediScore(generation){
 	var score = 0;
 	for (var i = 0 ; i < generation.ratings.length ; i++){
 		score = score + generation.ratings[i].jedi;
+		console.log(generation.ratings[i].jedi);
 	}
 	score = score/generation.ratings.length;
 	return Math.round(score * 100)/100;
@@ -159,11 +162,10 @@ var npsSCL2016 = data.SCL["2016-2"];
 npsSCL2016 = nps(npsSCL2016);
 console.log("el nps promedio es " + npsSCL2016);
 
-// Función para ver cuántas superan el 70% tech en el sprint 1
-
-function beatsTech(generation){
+// Función para filtrar a las alumnas activas
+function activeStudents(generation){
 	var newArray = [];
-	// Creando array con las estudiantes activas
+	// Creando array para traspasar solo a las activas
 	for (var i = 0 ; i < generation.students.length ; i++){
 		if (generation.students[i].active == true){
 			newArray.push(generation.students[i]); 
@@ -178,6 +180,8 @@ function beatsTech(generation){
 var beatsTechSCL20162 = data.SCL["2016-2"];
 beatsTechSCL20162 = beatsTech(beatsTechSCL20162);
 console.log(beatsTechSCL20162);
+
+
 
 
 
@@ -577,3 +581,38 @@ Funciones:
 - nps
 
 */
+
+function changeColor(id, num){
+	if (num < 50){
+		id.style.color = "red";
+	}
+	if (num > 50){
+		id.style.color = "green";
+	}
+}
+
+function event(id, generation){
+	id.addEventListener("click", function(){
+		document.getElementById("enrollment-num").innerHTML = enrollment(generation);
+		var total = enrollment(generation);
+		var actives = active(generation);
+		var drops = drop(total, actives);
+		document.getElementById("drop-per").innerHTML = dropPercentage(total, drops) + "%";
+		document.getElementById("achievement-num").innertHTML = "en proceso";
+		document.getElementById("nps-per").innerHTML = nps(generation) + "%";
+		changeColor(document.getElementById("nps-per"), nps(generation));
+		document.getElementById("promoters").innerHTML = promotersGlobal(generation) + "%";
+		document.getElementById("passive").innerHTML = passiveGlobal(generation) + "%";
+		document.getElementById("detractors").innertHTML = detractorsGlobal(generation) + "%";
+		document.getElementById("satisfaction-per").innerHTML = happy(generation) + "%";
+		document.getElementById("teacher-rating").innerHTML = teacherScore(generation);
+		document.getElementById("jedi-rating").innerHTML = jediScore(generation);
+	});
+}
+
+var cosa = document.getElementById("cosa");
+event(cosa, santiagoIII);
+
+
+var selectElement = document.getElementById("pick-sede");
+var selectOption = "hola";
