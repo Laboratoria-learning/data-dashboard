@@ -120,7 +120,9 @@ function students() {
     document.getElementById("nombreEstudiante").innerHTML = "Nombre y Apellido: " + x;
    	
    	var estudiante = data.SCL["2016-2"].students.find((student)=>{return student.name == x});
-   	var y = estudiante.sprints[0].tech;	 
- 	document.getElementById("notasTech").innerHTML = "Notas Tech: " + y;
+   	var actividad = data.SCL["2016-2"].students.find((student)=>{return student.active == y});
+   	console.log(actividad)
+   /*	var y = estudiante.sprints[0].tech;	 
+ 	document.getElementById("notasTech").innerHTML = "Notas Tech: " + y;*/
 
 }
