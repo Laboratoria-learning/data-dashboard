@@ -296,9 +296,15 @@ color:white;
 
 /*SEGUNDA SECCION ESTUDIANTES*/
 
-#generacion {
+#generation {
 	font-size: 0.8rem;
 	margin-left: 5%;
+}
+
+#butonGeneration {
+margin-left: 140px;
+margin-top:10px;
+
 }
 
 #student{

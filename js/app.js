@@ -45,19 +45,65 @@ link3.addEventListener("click", function(){
 
 //Variables para los button radio en estudiantes
 
-var radio1 = document.getElementById('SCL2016-2');
-var radio2 = document.getElementById('SCL2017-1');
-var radio3 = document.getElementById('SCL2017-2');
+var SCL2016 = document.getElementById("SCL2016-2");
+var SCL20171 = document.getElementById("SCL2017-1");
+var SCL20172 = document.getElementById("SCL2017-2");
+var selectStudent = document.getElementById("lab2");
+var optionStudent = document.getElementById("nameStudent")
+var nombre = document.getElementById("nombreEstudiante");
+var notasTech = document.getElementById("notasTech");
+var notasHSE = document.getElementById("notasHSE");
 
-if (radio1.checked == true){
+
+ //Hecho en clases
+
+SCL2016.addEventListener("click", function(){
+		selectStudent.childNodes.forEach((child)=>{selectStudent.removeChild(child);});
+		for (var i = 0; i < data.SCL['2016-2'].students.length; i++) {
+ 		//console.log(data.SCL['2016-2'].students[i].name);
+ 		var newOption = document.createElement("option");
+ 		newOption.innerHTML += data.SCL['2016-2'].students[i].name;
+ 		selectStudent.appendChild(newOption);
+
+	}
+})
+
+SCL20171.addEventListener("click", function(){
+		selectStudent.childNodes.forEach((child)=>{selectStudent.removeChild(child);});
+		for (var i = 0; i < data.SCL['2017-1'].students.length; i++) {
+ 		//console.log(data.SCL['2016-2'].students[i].name);
+ 		var newOption = document.createElement("option");
+ 		newOption.innerHTML += data.SCL['2017-1'].students[i].name;
+ 		selectStudent.appendChild(newOption);
+
+	}
+})
+
+SCL20172.addEventListener("click", function(){
+		selectStudent.childNodes.forEach((child)=>{selectStudent.removeChild(child);});
+		for (var i = 0; i < data.SCL['2017-2'].students.length; i++) {
+ 		//console.log(data.SCL['2016-2'].students[i].name);
+ 		var newOption = document.createElement("option");
+ 		newOption.innerHTML += data.SCL['2017-2'].students[i].name;
+ 		selectStudent.appendChild(newOption);
+
+	}
+})
+
+
+
+/*if (radio1.checked == true){
 	for (var i = 0; i < data.SCL['2016-2'].students.length; i++) {
-	console.log(data.SCL['2016-2'].students[i].active);
-	// container.innerHTML += '<p> data.SCL['2016-2'].students[i].name + </p>';
- }
+ //    console.log(data.SCL['2016-2'].students[i].name);
+ //    container.innerHTML += '<p>La estudiante número ' + [i+1] + ' es: ' + data.SCL['2016-2'].students[i].name + '</p>';
+	// }
+}
+
 } else if (radio2.checked == true){
 for (var i = 0; i < data.SCL['2017-1'].students.length; i++) {
 	console.log(data.SCL['2017-1'].students[i].active);
 	// container.innerHTML += '<p> data.SCL['2016-2'].students[i].name + </p>';
+ 
  }
 }else{
 for (var i = 0; i < data.SCL['2017-2'].students.length; i++) {
@@ -65,7 +111,7 @@ for (var i = 0; i < data.SCL['2017-2'].students.length; i++) {
 	// container.innerHTML += '<p> data.SCL['2016-2'].students[i].name + </p>';
  }
 }
-
+*/
 
 
 /*function students(sel){

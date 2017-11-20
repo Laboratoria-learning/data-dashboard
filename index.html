@@ -98,17 +98,29 @@
       <section id="secondSection" class="esconder">
          <h1 id="title">Estudiantes Santiago de Chile</h1>
         
-        <div id="generacion">
-          <input type="radio" id="SCL2016-2" value="1" /> SCL 2016-2
-          <input type="radio" id="SCL2017-1" value="2" /> SCL 2017-1
-          <input type="radio" id="SCL2017-2" value="3" /> SCL 2017-2
-        </div>
+
+
+        <form>
+    
+       <div id="generation">
+        <input type="radio" id="SCL2016-2" name="contact" value="email">
+        <label for="contactChoice1">SCL 2016-2</label>
+
+        <input type="radio" id="SCL2017-1" name="contact" value="phone">
+        <label for="contactChoice2">SCL 2017-1</label>
+
+        <input type="radio" id="SCL2017-2" name="contact" value="mail">
+        <label for="contactChoice3">SCL 2017-2</label>
+          </div>
+       
+      </form>
+
+
        
        <div id="student" >
 
-          <select name="estudiantes" id="lab2"  onChange="students(this);">
-          <option value="">Nombre y Apellido</option>
-          <option value="">Nombre y Apellido2</option>
+          <select name="estudiantes" id="lab2" >
+          <option value="" id="nameStudent">Nombre Estudiante</option>
           </select>
       <div id="container">
         
@@ -116,9 +128,9 @@
 
       <img src="http://dummyimage.com/162x148.png/ff4444/ffffff" alt="">
              
-       <h3 class="title2" id="nombre">Nombre y Apellido:</h3>
+       <h3 class="title2" id="nombreEstudiante">Nombre y Apellido:</h3>
         <h3 class="title2" id="notasTech">Score Tech:</h3>
-        <h3 class="title2" id="notasHSE">>Score HSE:</h3>
+        <h3 class="title2" id="notasHSE">Score HSE:</h3>
         </div>
       
 
