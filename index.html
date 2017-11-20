@@ -96,13 +96,14 @@
     <!-- SEGUNDA SECCION ESTUDIANTES -->
 
       <section id="secondSection" class="esconder">
-         <h1 id="title">Estudiantes Santiago de Chile</h1>
+         <h1 id="title"><i id="femaleStudent" class="fa fa-user-circle-o" aria-hidden="true"></i> <span>Alumnas</span> Santiago de Chile</h1>
         
 
 
         <form>
     
        <div id="generation">
+        <p>Generaciones</p>
         <input type="radio" id="SCL2016-2" name="contact" value="email">
         <label for="contactChoice1">SCL 2016-2</label>
 
@@ -118,10 +119,9 @@
 
        
        <div id="student" >
-
+        
 
           <select name="estudiantes" id="lab2" onChange="students()" >
-          
           <option value="" id="nameStudent">Nombre Estudiante</option>
           </select>
       
@@ -130,17 +130,19 @@
              
 
        <p class="title2" id="nombreEstudiante" ></p>
-       <p class="title2" id="activeOrInactive" ></p>
-        <h3 class="title2" id="notasTech"></h3>
-        <h3 class="title2" id="notasHSE"></h3>
+       <p class="title2" id="activeOrInactive" >Activo: true</p>
+        <p class="title2" id="notasTech">Promedio notas Tech:</p>
+        <p class="title2" id="notasHSE">Promedio notas HSE:</p>
         </div>
       
 
        <div id="tech">
+        <i class="fa fa-laptop" aria-hidden="true"></i>
         <h3><input type="radio" name="tech" value="" checked> Promedio Notas Tech</h3>
          <img  src="assets/images/7notasTech-alumna.jpg" alt="notas tech alumnas laboratoria"></img>  
           </div>
         <div id="HSE">
+          <i class="fa fa-comments" aria-hidden="true"></i>
           <h3><input type="radio" name="hse" value="" > Promedio Notas HSE</h3>
          <img  src="assets/images/6notasHSE-alumna.jpg" alt="notas hse alumnas laboratoria"></img>  
        
@@ -154,7 +156,7 @@
 
       <section id="thirstSection" class="esconder">
 
-        <h1 id="title">Profesores</h1>
+        <h1 id="title"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Profesores</h1>
         <img id="valentina" src="assets/images/fotosProfes/Valentina.jpg" alt="">
         <h3 id="title3">Nombre: VALENTINA</h3>
         <h3>Apellido: SMITH</h3>

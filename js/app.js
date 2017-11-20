@@ -49,8 +49,7 @@ var SCL2016 = document.getElementById("SCL2016-2");
 var SCL20171 = document.getElementById("SCL2017-1");
 var SCL20172 = document.getElementById("SCL2017-2");
 var selectStudent = document.getElementById("lab2");
-var optionStudent = document.getElementById("nameStudent")
-var nombre = document.getElementById("nombreEstudiante");
+var status = document.getElementById("activeOrInactive")
 var notasTech = document.getElementById("notasTech");
 var notasHSE = document.getElementById("notasHSE");
 
@@ -65,11 +64,11 @@ SCL2016.addEventListener("click", function(){
  		var newOption = document.createElement("option");
  		newOption.innerHTML += data.SCL['2016-2'].students[i].name;
  		selectStudent.appendChild(newOption);
-
+ 		var newOption = document.createElement("option");
+ 		newOption.innerHTML += data.SCL['2016-2'].students[i].photo;
+ 
 	}
 })
-
-
 
 
 //Agregando nombres a select opcion SCL 2017-1
@@ -104,25 +103,3 @@ function students() {
 
 
 
-//Obteniendo nombre de select opcion
-
-/* 
- optionStudent.addEventListener("onchange",function(){
- 		var textStudent= sel.options[sel.selectedIndex].text;
-		 document.getElementById("nombreEstudiante").innerHTML = textStudent; 
-
- })
-*/
-
-
-function students() {
-    var x = document.getElementById("lab2").value;
-    document.getElementById("nombreEstudiante").innerHTML = "Nombre y Apellido: " + x;
-   	
-   	var estudiante = data.SCL["2016-2"].students.find((student)=>{return student.name == x});
-   	var actividad = data.SCL["2016-2"].students.find((student)=>{return student.active == y});
-   	console.log(actividad)
-   /*	var y = estudiante.sprints[0].tech;	 
- 	document.getElementById("notasTech").innerHTML = "Notas Tech: " + y;*/
-
-}

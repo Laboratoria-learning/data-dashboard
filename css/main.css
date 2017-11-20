@@ -301,6 +301,12 @@ color:white;
 	margin-left: 5%;
 }
 
+#generation p {
+	margin-left: 8%;
+	text-transform: uppercase;
+	color:gray;
+}
+
 #butonGeneration {
 margin-left: 140px;
 margin-top:10px;
@@ -310,13 +316,18 @@ margin-top:10px;
 #student{
 	margin-left: 5%;
 	display: block;
-	width: 250px;
+	width: 300px;
 }
 
 #student select{
 	display: block;
 		margin-left: 2%;
 		margin-bottom: 10%;
+
+}
+
+#femaleStudent {
+	font-size: 2rem;
 
 }
 .title2 {
@@ -345,11 +356,22 @@ margin-top:10px;
 	
 }
 
+
+
 #tech {
 	display: inline-block;
 	width: 250px;
+	padding-top: -100px;
 	margin-left: 10%;
 
+}
+
+#tech i{
+	color:#FEB433;
+	float: left;
+	font-size: 40px;
+	margin-left: 15%;
+	margin-top: 2%;
 }
 
 #tech h3, #HSE h3 {
@@ -365,6 +387,13 @@ margin-top:10px;
 
 }
 
+#HSE i{
+	color:#FC4733;
+	float: left;
+	font-size: 40px;
+	margin-left: 15%;
+	margin-top: 2%;
+}
 
 #student img{
 margin-left: 60px;
