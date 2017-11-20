@@ -1344,9 +1344,7 @@ function generacionLIM2(){
 
 	var contenedor= document.getElementsByClassName('imagenes')[0];
 	
-
 	var contenedor2= document.getElementsByClassName('imagenes2')[0];
-
 
 	var contenedor3= document.getElementsByClassName('imagenes3')[0];
 
@@ -1357,7 +1355,7 @@ function generacionLIM2(){
 	var superior= document.getElementsByClassName('superior')[0];
 		superior.style.display = '';
 
-					//var todas= (data.LIM['2017-1'].students.filter((student)=>{return ((student.sprints[0].score.hse) && (student.sprints[1].score.hse) && (student.sprints[2].score.hse) > 840) && ((student.sprints[0].score.tech) && (student.sprints[1].score.tech) && (student.sprints[2].score.tech) > 1260)})).length;
+	var todas= (data.LIM['2017-1'].students.filter((student)=>{return ((student.sprints[0].score.hse) && (student.sprints[1].score.hse) && (student.sprints[2].score.hse) > 840) && ((student.sprints[0].score.tech) && (student.sprints[1].score.tech) && (student.sprints[2].score.tech) > 1260)})).length;
 
 	var activas= '';
 	for (var i=0; i < data.LIM['2017-1'].students.length; i++){
