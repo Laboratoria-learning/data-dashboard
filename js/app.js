@@ -45,7 +45,7 @@ console.log("la cantida de deserción es " + dropSCL20162);
 // Deserción en porcentaje %
 function dropPercentage(total, drop){
 	var result = 100 * drop / total;
-	return Math.round(result);
+	return Math.round(result * 100)/100;
 }
 // ejemplo
 var dropPercentage20162 = dropPercentage(enrollmentSCL20162, dropSCL20162);
@@ -62,7 +62,7 @@ function happy(generation){
 		average = average + total;
 	}
 	average = average / generation.ratings.length;
-	return Math.round(average);
+	return Math.round(average * 100)/100;
 }
 //ejemplo
 var happySCL20162 = data.SCL["2016-2"];
@@ -77,7 +77,7 @@ function teacherScore(generation){
 		score = score + generation.ratings[i].teacher;
 	}
 	score = score/generation.ratings.length;
-	return score;
+	return Math.round(score * 100)/100;
 }
 //ejemplo
 var teacherScoreSCL20162 = data.SCL['2016-2'];
@@ -91,26 +91,70 @@ function jediScore(generation){
 		score = score + generation.ratings[i].jedi;
 	}
 	score = score/generation.ratings.length;
-	return score;
+	return Math.round(score * 100)/100;
 }
 //ejemplo 
 var jediScoreSCL20162 = data.SCL['2016-2'];
 jediScoreSCL20162 = jediScore(jediScoreSCL20162);
 console.log("el promedio de la calificación de jedis es " + jediScoreSCL20162);
 
+// Función promoters % global
+function promotersGlobal(generation){
+	var result = 0;
+	for (var i = 0 ; i < generation.ratings.length ; i++){
+		var promoters = generation.ratings[i].nps.promoters;
+		result = result + promoters; 
+	}
+	return Math.round((result/generation.ratings.length)*100)/100;
+}
+//ejemplo 
+var promotersGlobalSCL2016 = data.SCL["2016-2"];
+promotersGlobalSCL2016 = promotersGlobal(promotersGlobalSCL2016);
+console.log("el porcentaje promedio de promoters es " + promotersGlobalSCL2016);
+
+// Función passive % global
+function passiveGlobal(generation){
+	var result = 0;
+	for (var i = 0 ; i < generation.ratings.length ; i++){
+		var passive = generation.ratings[i].nps.passive;
+		result = result + passive; 
+	}
+	return Math.round((result/generation.ratings.length)*100)/100;
+}
+//ejemplo 
+var passiveGlobalSCL2016 = data.SCL["2016-2"];
+passiveGlobalSCL2016 = passiveGlobal(passiveGlobalSCL2016);
+console.log("el porcentaje promedio de passive es " + passiveGlobalSCL2016);
+
+// Función detractors % global 
+function detractorsGlobal(generation){
+	var result = 0;
+	for (var i = 0 ; i < generation.ratings.length ; i++){
+		var detractors = generation.ratings[i].nps.detractors;
+		result = result + detractors; 
+	}
+	return Math.round((result/generation.ratings.length)*100)/100;
+}
+//ejemplo 
+var detractorsGlobalSCL2016 = data.SCL["2016-2"];
+detractorsGlobalSCL2016 = detractorsGlobal(detractorsGlobalSCL2016);
+console.log("el porcentaje promedio de detractors es " + detractorsGlobalSCL2016);
+
 // función de nps
 function nps(generation){
 	var result = 0;
+	var totalPromoters = 0;
+	var totalPassive = 0;
+	var totalDetractors = 0;
 	for (var i = 0 ; i < generation.ratings.length ; i++){
 		var promoters = generation.ratings[i].nps.promoters;
 		var detractors = generation.ratings[i].nps.detractors;
 		var nps = promoters - detractors;
 		result = result + nps;
 	}
-	return Math.round(result / generation.ratings.length);
+	return Math.round((result / generation.ratings.length)*100)/100;
 }
 // ejemplo
-
 var npsSCL2016 = data.SCL["2016-2"];
 npsSCL2016 = nps(npsSCL2016);
 console.log("el nps promedio es " + npsSCL2016);
@@ -194,6 +238,15 @@ console.log("el promedio de la calificación de jedis es " + jediScoreAQP2016_2)
 var npsAQP2016_2 = nps(arequipaI);
 console.log("el nps promedio es " + npsAQP2016_2);
 
+var promotersGlobalAQP2016_2 = promotersGlobal(arequipaI);
+console.log("el porcentaje promedio de promoters es " + promotersGlobalAQP2016_2);
+
+var passiveGlobalAQP2016_2 = passiveGlobal(arequipaI);
+console.log("el porcentaje promedio de passives es " + passiveGlobalAQP2016_2);
+
+var detractorsGlobalAQP2016_2 = detractorsGlobal(arequipaI);
+console.log("el porcentaje promedio de detractors es " + detractorsGlobalAQP2016_2);
+
 
 
 console.log("AREQUIPA II");
@@ -223,6 +276,16 @@ console.log("el promedio de la calificación de jedis es " + jediScoreAQP2017_1)
 var npsAQP2017_1 = nps(arequipaII);
 console.log("el nps promedio es " + npsAQP2017_1);
 
+var promotersGlobalAQP2017_1 = promotersGlobal(arequipaII);
+console.log("el porcentaje promedio de promoters es " + promotersGlobalAQP2017_1);
+
+var passiveGlobalAQP2017_1 = passiveGlobal(arequipaII);
+console.log("el porcentaje promedio de passives es " + passiveGlobalAQP2017_1);
+
+var detractorsGlobalAQP2017_1 = detractorsGlobal(arequipaII);
+console.log("el porcentaje promedio de detractors es " + detractorsGlobalAQP2017_1);
+
+
 
 console.log("MÉXICO I");
 var mexicoI = data.CDMX["2017-1"];
@@ -250,6 +313,15 @@ console.log("el promedio de la calificación de jedis es " + jediScoreCDMX2017_1
 
 var npsCDMX2017_1 = nps(mexicoI);
 console.log("el nps promedio es " + npsCDMX2017_1);
+
+var promotersGlobalMX2017_1 = promotersGlobal(mexicoI);
+console.log("el porcentaje promedio de promoters es " + promotersGlobalMX2017_1);
+
+var passiveGlobalMX2017_1 = passiveGlobal(mexicoI);
+console.log("el porcentaje promedio de passives es " + passiveGlobalMX2017_1);
+
+var detractorsGlobalMX2017_1 = detractorsGlobal(mexicoI);
+console.log("el porcentaje promedio de detractors es " + detractorsGlobalMX2017_1);
 
 
 console.log("MÉXICO II");
@@ -279,6 +351,14 @@ console.log("el promedio de la calificación de jedis es " + jediScoreCDMX2017_2
 var npsCDMX2017_2 = nps(mexicoII);
 console.log("el nps promedio es " + npsCDMX2017_2);
 
+var promotersGlobalMX2017_2 = promotersGlobal(mexicoII);
+console.log("el porcentaje promedio de promoters es " + promotersGlobalMX2017_2);
+
+var passiveGlobalMX2017_2 = passiveGlobal(mexicoII);
+console.log("el porcentaje promedio de passives es " + passiveGlobalMX2017_2);
+
+var detractorsGlobalMX2017_2 = detractorsGlobal(mexicoII);
+console.log("el porcentaje promedio de detractors es " + detractorsGlobalMX2017_2);
 
 console.log("LIMA I");
 var limaI = data.LIM["2016-2"];
@@ -306,6 +386,16 @@ console.log("el promedio de la calificación de jedis es " + jediScoreLIM2016_2)
 
 var npsLIM2016_2 = nps(limaI);
 console.log("el nps promedio es " + npsLIM2016_2);
+
+var promotersGlobalLIM2016_2 = promotersGlobal(limaI);
+console.log("el porcentaje promedio de promoters es " + promotersGlobalLIM2016_2);
+
+var passiveGlobalLIM2016_2 = passiveGlobal(limaI);
+console.log("el porcentaje promedio de passives es " + passiveGlobalLIM2016_2);
+
+var detractorsGlobalLIM2016_2 = detractorsGlobal(limaI);
+console.log("el porcentaje promedio de detractors es " + detractorsGlobalLIM2016_2);
+
 
 
 console.log("LIMA II");
@@ -335,6 +425,16 @@ console.log("el promedio de la calificación de jedis es " + jediScoreLIM2017_1)
 var npsLIM2017_1 = nps(limaII);
 console.log("el nps promedio es " + npsLIM2017_1);
 
+var promotersGlobalLIM2017_1 = promotersGlobal(limaII);
+console.log("el porcentaje promedio de promoters es " + promotersGlobalLIM2017_1);
+
+var passiveGlobalLIM2017_1 = passiveGlobal(limaII);
+console.log("el porcentaje promedio de passives es " + passiveGlobalLIM2017_1);
+
+var detractorsGlobalLIM2017_1 = detractorsGlobal(limaII);
+console.log("el porcentaje promedio de detractors es " + detractorsGlobalLIM2017_1);
+
+
 
 console.log("LIMA III");
 var limaIII = data.LIM["2017-2"];
@@ -362,6 +462,15 @@ console.log("el promedio de la calificación de jedis es " + jediScoreLIM2017_2)
 
 var npsLIM2017_2 = nps(limaIII);
 console.log("el nps promedio es " + npsLIM2017_2);
+
+var promotersGlobalLIM2017_2 = promotersGlobal(limaIII);
+console.log("el porcentaje promedio de promoters es " + promotersGlobalLIM2017_2);
+
+var passiveGlobalLIM2017_2 = passiveGlobal(limaIII);
+console.log("el porcentaje promedio de passives es " + passiveGlobalLIM2017_2);
+
+var detractorsGlobalLIM2017_2 = detractorsGlobal(limaIII);
+console.log("el porcentaje promedio de detractors es " + detractorsGlobalLIM2017_2);
 
 
 console.log("SANTIAGO II");
@@ -391,6 +500,15 @@ console.log("el promedio de la calificación de jedis es " + jediScoreSCL2017_1)
 var npsSCL2017_1 = nps(santiagoII);
 console.log("el nps promedio es " + npsSCL2017_1);
 
+var promotersGlobalSCL2017_1 = promotersGlobal(santiagoII);
+console.log("el porcentaje promedio de promoters es " + promotersGlobalSCL2017_1);
+
+var passiveGlobalSCL2017_1 = passiveGlobal(santiagoII);
+console.log("el porcentaje promedio de passives es " + passiveGlobalSCL2017_1);
+
+var detractorsGlobalSCL2017_1 = detractorsGlobal(santiagoII);
+console.log("el porcentaje promedio de detractors es " + detractorsGlobalSCL2017_1);
+
 
 console.log("SANTIAGO III");
 var santiagoIII = data.SCL["2017-2"];
@@ -418,6 +536,17 @@ console.log("el promedio de la calificación de jedis es " + jediScoreSCL2017_2)
 
 var npsSCL2017_2 = nps(santiagoIII);
 console.log("el nps promedio es " + npsSCL2017_2);
+
+var promotersGlobalSCL2017_2 = promotersGlobal(santiagoIII);
+console.log("el porcentaje promedio de promoters es " + promotersGlobalSCL2017_2);
+
+var passiveGlobalSCL2017_2 = passiveGlobal(santiagoIII);
+console.log("el porcentaje promedio de passives es " + passiveGlobalSCL2017_2);
+
+var detractorsGlobalSCL2017_2 = detractorsGlobal(santiagoIII);
+console.log("el porcentaje promedio de detractors es " + detractorsGlobalSCL2017_2);
+
+
 
 
 /*
