@@ -69,13 +69,14 @@ select{
 	font-size: 1rem;
 }
 
-/*#focus{
+.focus{
 text-decoration:none;
 color:black;
 background-color: #F6A733;
 padding: 10px;
 
-}*/
+}
+
 
 a:link, a:visited
 {
@@ -102,6 +103,11 @@ color:white;
 
 .esconder {
 	display:none;
+}
+
+
+.mostrar {
+	display:block;
 }
 
 
@@ -265,6 +271,28 @@ color:white;
 	padding-top: 2%;
 	margin-left: 15%;
 }
+
+/*Botton para exportar datos de overview o general*/
+#exportar{
+	
+	margin-left: 30%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	background-color: #FEB433;
+	width: 35%;
+	font-size: 0.8rem;
+	padding: 1%;
+	border-radius: 3px;
+}
+
+#exportar button {
+	display: block;
+	margin-left: 45%;
+	padding: 1%;
+	border:none;
+	margin-top: 1%;
+}
+
 
 /*SEGUNDA SECCION ESTUDIANTES*/
 

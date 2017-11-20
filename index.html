@@ -81,17 +81,29 @@
          <p>Estudiantes satisfechas con la experiencia de Laboratoria.</p>
          <img src="assets/images/2SuperacionPromedio.jpg" alt="Superacion Promedio 70% Laboratoria">
        </div>
+
+        <div id="exportar">
+
+          <input type="radio" id="jpg" value="1" /> Exportar a JPG
+          <input type="radio" id="pdf" value="2" /> Exportar a PDF
+          <input type="radio" id="hipervinculo" value="3" /> Exportar como hipervínculo
+          <button type="button" onclick="alert('Exportando los datos')">Exportar</button>
+        </div>
+
+
     </section> 
       
     <!-- SEGUNDA SECCION ESTUDIANTES -->
 
       <section id="secondSection" class="esconder">
          <h1 id="title">Estudiantes Santiago de Chile</h1>
+        
         <div id="generacion">
-          <input type="radio" name="id" value="1" /> SCL 2016-2
-        <input type="radio" name="id" value="2" /> SCL 2017-1
-        <input type="radio" name="id" value="3" /> SCL 2017-2
+          <input type="radio" id="SCL2016-2" value="1" /> SCL 2016-2
+          <input type="radio" id="SCL2017-1" value="2" /> SCL 2017-1
+          <input type="radio" id="SCL2017-2" value="3" /> SCL 2017-2
         </div>
+       
        <div id="student" >
 
           <select name="estudiantes" id="lab2"  onChange="students(this);">
@@ -105,8 +117,8 @@
       <img src="http://dummyimage.com/162x148.png/ff4444/ffffff" alt="">
              
        <h3 class="title2" id="nombre">Nombre y Apellido:</h3>
-        <h3 class="title2">Score Tech:</h3>
-        <h3 class="title2">Score HSE:</h3>
+        <h3 class="title2" id="notasTech">Score Tech:</h3>
+        <h3 class="title2" id="notasHSE">>Score HSE:</h3>
         </div>
       
 
