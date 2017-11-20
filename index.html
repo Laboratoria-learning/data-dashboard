@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Dashboard</title>
+<head>
+  <meta charset="utf-8">
+  <title>Data Dashboard</title>
 
-    <!-- Icono de laboratoria -->
+  <!-- Icono de laboratoria -->
 
   <link rel="shortcut icon" type="image/png" href="assets/images/8s4KKcDQ_400x400.png">
 
@@ -20,82 +20,112 @@
 
   <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 
-  </head>
-  <body>
+</head>
+<body>
 
   <!-- Sección header -->
-    <header>
-  
+  <header>
+
     <div class="container">
       <img src="assets/images/logo-laboratoria.svg" alt="Logo Laboratoria">
-   
-        
-        <i class="fa fa-bars" aria-hidden="true"></i>
-    
+
+
+      <i class="fa fa-bars" aria-hidden="true"></i>
+
       <input type="search" placeholder="Búsqueda">
       <!-- icono del buscador -->
       <i class="fa fa-search" aria-hidden="true"></i>
-    
+
       
     </div>
-     
-    </header>
 
-    <!-- Mapa Laboratoria -->
-    <main class="content">
-      <img src="assets/images/mapapng__medium__medium.png" alt="Mapa" usemap="#planetmap"></main>
+  </header>
 
-<map name="planetmap" >
-  <area shape="circle" coords="200,306,30" onclick="Mexico()">
+  <!-- Mapa Laboratoria -->
+  <main class="content">
+    <img src="assets/images/mapapng__medium__medium.png" alt="Mapa" usemap="#planetmap"></main>
 
-  <area shape="circle" coords="290,385,15"" onclick="Lima()">
+    <map name="planetmap" >
+      <area shape="circle" coords="200,306,30" onclick="Mexico()">
 
-  <area shape="circle" coords="290,410,15"" onclick="Arequipa()">
+      <area shape="circle" coords="290,385,15"" onclick="Lima()">
 
-  <area shape="circle" coords="290,510,20"" onclick="Santiago()">
-</map>
+      <area shape="circle" coords="290,410,15"" onclick="Arequipa()">
 
+      <area shape="circle" coords="290,510,20"" onclick="Santiago()">
+    </map>
 
+    <!-- Menu por ciudad -->
     <nav style="display: none;" class="Mexico">
-    <ul>
-      <li><a href="https://lms.laboratoria.la/" target="_blank">Generaciones</a></li>
-      <li><a href="#" onclick="generacionI()">2017-1</a></li>
-      <li><a href="#" onclick="generacionII()">2017-2</a></li>
-    </ul>
-  </nav>
+      <img src="assets/images/México DF.png" alt="">
+      <ul>
+        <li><a href="https://lms.laboratoria.la/" target="_blank">Generaciones</a></li>
+        <li><a href="#" onclick="generacionI()">2017-1</a></li>
+        <li><a href="#" onclick="generacionII()">2017-2</a></li>
+      </ul>
+    </nav>
+
+    <nav style="display: none;" class="Arequipa">
+      <img src="assets/images/Arequipa.png" alt="">
+      <ul>
+        <li><a href="https://lms.laboratoria.la/" target="_blank">Generaciones</a></li>
+        <li><a href="#" onclick="generacionI()">2017-1</a></li>
+        <li><a href="#" onclick="generacionII()">2017-2</a></li>
+      </ul>
+    </nav>
+    <nav style="display: none;" class="Lima">
+      <img src="assets/images/Lima.png" alt="">
+      <ul>
+        <li><a href="https://lms.laboratoria.la/" target="_blank">Generaciones</a></li>
+        <li><a href="#" onclick="generacionI()">2017-1</a></li>
+        <li><a href="#" onclick="generacionII()">2017-2</a></li>
+      </ul>
+    </nav>
+
+    <nav style="display: none;" class="Santiago">
+      <img src="assets/images/santiago.png" alt="">
+      <ul>
+        <li><a href="https://lms.laboratoria.la/" target="_blank">Generaciones</a></li>
+        <li><a href="#" onclick="generacionI()">2017-1</a></li>
+        <li><a href="#" onclick="generacionII()">2017-2</a></li>
+      </ul>
+    </nav>
+
 
     
-  <div id="container"></div>
+    <div id="container"></div>
 
-  <!-- Grafico -->  
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<div id="piechart" style="width: 900px; height: 500px;"></div>
-       <div id="chart_div"></div>
-              <div id="curve_chart" style="width: 900px; height: 500px"></div>
-              <div id="chart_div2"></div>
-<div id="nps" style="width: 900px; height: 500px;"></div>
-<div id="nps2" style="width: 900px; height: 500px;"></div>
-<div id="nps3" style="width: 900px; height: 500px;"></div>
-
+    <!-- Grafico -->  
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <div class="graficos">
+    <div id="piechart"></div>
+    <div id="chart_div"></div>
+    <div id="curve_chart"></div>
+    <div id="chart_div2"></div>
+    <div id="nps"></div>
+    <div id="nps2"></div>
+    <div id="nps3"></div>
+    <div id="curve_chart2"></div>
+    </div>
   </body>
 
 
   <footer class="foot">
     <div class="redes-sociales">
-            <!-- Iconos -->    
-             <div class="icons"> 
-              <h3>Redes Sociales</h3>
-              <a href="" id="border1"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="" id="border2"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                <a href="" id="border3"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="" id="border4"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a  href="" id="border5"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-            </div>
-            <div class="copyright">Copyright © Your Website 2017</div>
-   </div>
+      <!-- Iconos -->    
+      <div class="icons"> 
+        <h3>Redes Sociales</h3>
+        <a href="" id="border1"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="" id="border2"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+        <a href="" id="border3"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a href="" id="border4"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a  href="" id="border5"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+      </div>
+      <div class="copyright">Copyright © Your Website 2017</div>
+    </div>
   </footer>
   <!-- Base de datos -->
-    <script src="./js/data.js"></script>
-    <!-- Aquí va tus archivos JS -->
-    <script src="./js/app.js"></script>
-</html>
+  <script src="./js/data.js"></script>
+  <!-- Aquí va tus archivos JS -->
+  <script src="./js/app.js"></script>
+  </html>

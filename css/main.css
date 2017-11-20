@@ -8,90 +8,89 @@ remover cualquier estilo anterior de los elementos  */
 	font-family: 'Roboto', sans-serif;
 	margin: 0px;
 	padding: 0px;
- }
+}
 
 .container {
-    width: 100%;
-    height: 65px;
-    /*background-color: #ffc107; */
-    color: #333333; 
-    font-size: 16px;
-    text-align: center;
-    vertical-align: middle;
-    padding-left: 24px;
-    padding-right: 24px;
-    line-height: 1.71429;
-    outline: 1px solid #EBEBEB;
+	width: 100%;
+	height: 65px;
+	/*background-color: #ffc107; */
+	color: #333333; 
+	font-size: 16px;
+	text-align: center;
+	vertical-align: middle;
+	padding-left: 24px;
+	padding-right: 24px;
+	line-height: 1.71429;
+	outline: 1px solid #EBEBEB;
 
-    
- }
- 
+
+}
+
 .container img {
-    width: 200px;
-    height: 65px;
-    margin-left: 37%;
-    float: left;
-    align-self: center;
+	width: 200px;
+	height: 65px;
+	margin-left: 37%;
+	float: left;
+	align-self: center;
 }
 
 input{
-    width: 162px;
-    height: 22px;
-    background-color: #FFF;
-    border-radius: 6px;
-    border: 1px solid #EBEBEB;
-    margin-right: 0px;
-    margin-left: 285px;
-    margin-top: 20px;
+	width: 162px;
+	height: 22px;
+	background-color: #FFF;
+	border-radius: 6px;
+	border: 1px solid #EBEBEB;
+	margin-right: 0px;
+	margin-left: 285px;
+	margin-top: 20px;
 }
 
 .content{
-    text-align: center;
+	text-align: center;
 }
 
 .content img{
-    display: inline-block;
-    margin: 40px;
-    outline: 1px solid red;
+	display: inline-block;
+	margin: 40px;
+	outline: 1px solid red;
 } 
 
 .container .fa{
-    color: #EBEBEB;
+	color: #EBEBEB;
 }
 /*inicio del Footer*/
 footer.foot{
-    background-color: #333333;
-    width:100%;
-    height:300px;
-    
-
+	background-color: #333333;
+	width:100%;
+	height:300px;
+	position: absolute;
 }
 /*Iconos*/
 .redes-sociales{
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
 }    
 .redes-sociales .icons h3{
-   color: #F7B617;
-   margin-top: 40px;
-   text-transform: uppercase;
+	color: #F7B617;
+	margin-top: 40px;
+	text-transform: uppercase;
 
 
 }
 .redes-sociales a{
-    float: left;
-   
+	float: left;
+
 }
 .icons{
-    display: inline-block;
-    margin:30px;
+	display: inline-block;
+	margin:30px;
 }
 
 .redes-sociales a i{
-    font-size: 40px;
-    color: #FFF;
-    padding-top: 15px;
-    margin-left: 30px;
+	font-size: 40px;
+	color: #FFF;
+	padding-top: 15px;
+	margin-left: 30px;
 
 }
 
@@ -100,12 +99,12 @@ footer.foot{
 }
 */
 .redes-sociales a i:hover{
-    color: #F7B617 ;
+	color: #F7B617 ;
 }
 .copyright{
-    margin-top: 76px;
-    color: #FFF;
-    font-size: 11px;
+	margin-top: 76px;
+	color: #FFF;
+	font-size: 11px;
 
 }
 
@@ -113,9 +112,9 @@ footer.foot{
 
 nav{
 	width: 200px;
-    position: relative;
-    left: 280px;
-    bottom: 365px;
+	position: absolute;
+	left: 292px;
+	bottom: 100px;
 }
 ul{
 	list-style: none;
@@ -155,4 +154,44 @@ ul li:first-child a:hover {
 ul li:first-child a:active {
 	color:#FFF;
 	
+}
+
+nav img{
+	width: 120px;
+	height: 120px;
+	position: absolute;
+	left: 198px;
+	top: 13px;
+}
+
+.graficos{
+	text-align: center;
+
+}
+
+#piechart{
+	display: inline-block;
+	outline: 1px solid green;
+}
+#chart_div{
+	display: inline-block;
+	outline: 1px solid red;
+}
+#curve_chart{
+	display: inline-block;
+}
+#chart_div2{
+	display: inline-block;
+}
+#nps{
+	display: inline-block;
+}
+#nps2{
+	display: inline-block;
+}
+#nps3{
+	display: inline-block;
+}
+#curve_chart2{
+	display: inline-block;
 }
