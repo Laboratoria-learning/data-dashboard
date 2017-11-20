@@ -1,3 +1,4 @@
+<!-- Pestaña que contiene las imagenes -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -8,7 +9,7 @@
     <!-- Enlazando Tipografía Roboto -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <!-- Enlazando Font Awesome -->
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/fontello.css">
     <!-- Enlazando CSS -->
     <link rel="stylesheet" href="css/main.css">
@@ -18,10 +19,8 @@
     <header>
       <!-- Barra Fija -->
       <nav class="navbar">
-        <a href="#">
-            <i class="fa fa-bars" aria-hidden="true"></i>
-        </a>
         <div class="navbar-logo"></div>
+        <!-- Usuario -->
         <div class="navbar-user-elements">
           <div class="navbar-user"></div>
           <div class="navbar-user-info">
@@ -29,17 +28,55 @@
           </div>
         </div>
         <ul>
-          <li class="navbar-job">Training Manager
+          <!-- Cargo del Usuario -->
+          <li class="job">Training Manager
             <span class="icon-down-open"></span>            
-            <ul class="hide-item">
-              <li id="job-menu">Edit Profile</li>
-              <li id="job-menu">Add Student</li>
-              <li id="job-menu">Remove Student</li>
-              <li id="job-menu">Add Sprint</li>
+            <ul class="hide itemList">
+              <!-- Menú desplegable -->
+              <li class="job-menu">Edit Profile</li>
+              <li class="job-menu">Add Student</li>
+              <li class="job-menu">Remove Student</li>
+              <li class="job-menu">Add Sprint</li>
             </ul>
           </li>
         </ul>   
-
+        <!-- Menu Sedes -->
+      <div id="seats-menu" class="seats-container">
+        <ul>
+          <li>      
+            <a id="bars-menu" href="#">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li><a href=""><span class="fa fa-line-chart"></span>AREQUIPA</a>
+            <ul>
+              <li><a href="">2016-2</a></li>
+              <li><a href="">2017-1</a></li>
+            </ul>
+          </li>
+          <li><a href=""><span class="fa fa-line-chart"></span>CIUDAD DE MEXICO</a>
+            <ul>
+              <li><a href="">2017-1</a></li>
+              <li><a href="">2017-2</a></li>
+            </ul>
+          </li>
+          <li><a href=""><span class="fa fa-line-chart"></span>LIMA</a>
+            <ul>
+              <li><a href="">2016-2</a></li>
+              <li><a href="">2017-1</a></li>
+              <li><a href="">2017-2</a></li>
+            </ul>
+          </li>
+          <li><a href=""><span class="fa fa-line-chart"></span>SANTIAGO DE CHILE</a>
+            <ul>
+              <li><a href="">2016-2</a></li>
+              <li><a href="">2017-1</a></li>
+              <li><a href="">2017-2</a></li>             
+            </ul>
+          </li>
+        </ul>    
+      </div>
+        <!-- Menu Tabs -->
         <div id="menu">
           <ul id="list-menu">
             <a id="tabs" href="#">
