@@ -57,10 +57,11 @@ var notasHSE = document.getElementById("notasHSE");
 
  //Hecho en clases
 
+ //Agregando nombres a select opcion SCL 2016-2
+
 SCL2016.addEventListener("click", function(){
 		selectStudent.childNodes.forEach((child)=>{selectStudent.removeChild(child);});
 		for (var i = 0; i < data.SCL['2016-2'].students.length; i++) {
- 		//console.log(data.SCL['2016-2'].students[i].name);
  		var newOption = document.createElement("option");
  		newOption.innerHTML += data.SCL['2016-2'].students[i].name;
  		selectStudent.appendChild(newOption);
@@ -69,10 +70,14 @@ SCL2016.addEventListener("click", function(){
 })
 
 
+
+
+//Agregando nombres a select opcion SCL 2017-1
+
+
 SCL20171.addEventListener("click", function(){
 		selectStudent.childNodes.forEach((child)=>{selectStudent.removeChild(child);});
 		for (var i = 0; i < data.SCL['2017-1'].students.length; i++) {
- 		//console.log(data.SCL['2016-2'].students[i].name);
  		var newOption = document.createElement("option");
  		newOption.innerHTML += data.SCL['2017-1'].students[i].name;
  		selectStudent.appendChild(newOption);
@@ -80,10 +85,11 @@ SCL20171.addEventListener("click", function(){
 	}
 })
 
+//Agregando nombres a select opcion SCL 2017-2
+
 SCL20172.addEventListener("click", function(){
 		selectStudent.childNodes.forEach((child)=>{selectStudent.removeChild(child);});
 		for (var i = 0; i < data.SCL['2017-2'].students.length; i++) {
- 		//console.log(data.SCL['2016-2'].students[i].name);
  		var newOption = document.createElement("option");
  		newOption.innerHTML += data.SCL['2017-2'].students[i].name;
  		selectStudent.appendChild(newOption);
@@ -98,3 +104,23 @@ function students() {
 
 
 
+//Obteniendo nombre de select opcion
+
+/* 
+ optionStudent.addEventListener("onchange",function(){
+ 		var textStudent= sel.options[sel.selectedIndex].text;
+		 document.getElementById("nombreEstudiante").innerHTML = textStudent; 
+
+ })
+*/
+
+
+function students() {
+    var x = document.getElementById("lab2").value;
+    document.getElementById("nombreEstudiante").innerHTML = "Nombre y Apellido: " + x;
+   	
+   	var estudiante = data.SCL["2016-2"].students.find((student)=>{return student.name == x});
+   	var y = estudiante.sprints[0].tech;	 
+ 	document.getElementById("notasTech").innerHTML = "Notas Tech: " + y;
+
+}
