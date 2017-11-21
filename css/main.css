@@ -29,7 +29,6 @@ nav {
 
 
 /* Titulo del menu desplegable*/
-
 #acces {
 	display:inline-block;
 	border-bottom: 1px solid  #2B2B2B;
@@ -257,7 +256,7 @@ big {
 
 }
 
-/*Tres ultimas cajas*/r
+/*Tres ultimas cajas*/
 #satisfaction, #teacher, #jedi {
 	display: inline-block;
 	width: 350px;
