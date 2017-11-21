@@ -1,3 +1,632 @@
 /*
  * Estilos de tu proyecto
  */
+
+ body {
+ 	font-family: roboto,sans-serif;
+ 	box-sizing: border-box;
+ }
+
+
+ /*Menú Principal*/
+header{
+	width: 100%;
+	
+}
+
+nav{
+	margin-bottom: 1%;
+	height: 10%;
+}
+
+#logo{
+margin-left:35rem;
+
+}
+
+/*Iconos del menu*/
+ul{
+	color: #AAB7B8;
+	font-size: 1.5rem;
+	margin-bottom: 50px;
+	margin-right: 30px;
+	list-style: none;
+	float: right;
+}
+
+li{
+	display: inline-block;
+	margin-left: 15px;
+}
+
+/*Menú de sedes y generaciones*/
+.menu{
+	background-color: #EAECEE  ;
+	height: 40px;
+}
+
+select{
+	margin-left: 30px;
+	margin-top: 8px;
+	border: none;
+	width: 200px;
+	height: 25px;
+	border-radius: 6px;
+	font-size: 15px;
+}
+
+
+
+/*Menú local*/
+
+#navLocal {
+	margin: -30px 430px;
+	width:350px;
+	outline: red; 
+}
+#navLocal li {
+	display: inline-block;
+	font-size: 1rem;
+}
+
+.focus{
+text-decoration:none;
+color:black;
+background-color: #F6A733;
+padding: 10px;
+
+}
+
+
+a:link, a:visited
+{
+text-decoration:none;
+color:gray;
+}
+
+a:hover
+{
+text-decoration:none;
+color:black;
+background-color: #F6A733;
+padding: 10px;
+
+
+}
+
+a:active
+{
+text-decoration:none;
+color:white;
+}
+
+
+.esconder {
+	display:none;
+}
+
+
+.mostrar {
+	display:block;
+}
+
+
+/*Título sedes y generaciones*/
+
+/*PRIMERA SECCION GENERAL O OVERVIEW*/
+#title {
+	text-align: center;
+	font-size: 2rem;
+	font-weight: bolder;
+}
+
+
+#subtitle{
+	text-align: center;
+	font-size: 1.3rem;
+	font-weight: normal;
+	padding-bottom: -10%;
+	color:#FEB433;
+}
+
+/*Gráficos primera sección*/
+
+.firstGraph{
+ 	width: 100%;
+
+}
+
+/*Tipografia para gráficos*/
+.graphTop p, .graphTop2 p, .graphTop3 p, .graphTop4 p, .graphTop5 p, .graphTop6 p{
+    font-size: 0.8rem;
+} 
+
+.graphTop p{
+	
+	width: 37%;
+	text-align: left;
+	margin-left: 2%;
+
+}
+
+.graphTop img{
+	width: 30%;
+	float: left;
+}
+
+.graphTop2{
+	display: inline-block;
+	width: 30%;
+	padding-left: 12%;
+	padding-bottom: -100px;
+
+}
+
+.graphTop2 p{
+	width: 67%;
+	text-align: left;
+}
+.graphTop2 img{
+	width:250px;
+	padding-top: 2%;
+}
+
+.graphTop3{
+	display: inline-block;
+	width: 20%;
+	padding-bottom: -100px;
+
+}
+
+.graphTop3 p{
+	width: 90%;
+	text-align: left;
+}
+
+.graphTop3 img{
+	width:250px;
+	padding-top: 2%;
+}
+
+.graphTop4{
+	display: inline-block;
+	width: 35%;
+	margin-left: 2%;
+	outline: red;
+
+
+
+}
+
+.graphTop4 p{
+	width: 60%;
+	text-align: left;
+	margin-left: 20px;
+}
+
+.graphTop4 img{
+	width:350px;
+	padding-top: 2%;
+}
+
+.graphTop4 i{
+	color:#FEB433;
+	float: left;
+	font-size: 40px;
+	margin-left: 15%;
+	margin-top: 2%;
+}
+
+.graphTop4 p{
+	margin-left: 28%;
+}
+.graphTop5 {
+	display: inline-block;
+	width: 30%;
+
+}
+
+.graphTop5 i{
+	color:#FC4733;
+	float: left;
+	font-size: 40px;
+	margin-left: 15%;
+	margin-top: 2%;
+}
+
+.graphTop5 p{
+	float: right;
+	margin-left: 1%;
+	width: 70%;
+	text-align: left;
+}
+
+.graphTop5 img{
+	width:350px;
+	padding-top: 2%;
+}
+
+
+.graphTop6 {
+	display: inline-block;
+	width: 30%;
+
+}
+.graphTop6 i{
+	color:#FEB433;
+	float: left;
+	font-size: 40px;
+	margin-left: 15%;
+	margin-top: 2%;
+}
+
+.graphTop6 p{
+	display: inline-block;
+	width: 60%;
+	margin-left: 5%;
+
+}
+.graphTop6 img{
+	width:250px;
+	padding-top: 2%;
+	margin-left: 15%;
+}
+
+/*Botton para exportar datos de overview o general*/
+#exportar{
+	
+	margin-left: 30%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	background-color: #FEB433;
+	width: 35%;
+	font-size: 0.8rem;
+	padding: 1%;
+	border-radius: 3px;
+}
+
+#exportar button {
+	display: block;
+	margin-left: 45%;
+	padding: 1%;
+	border:none;
+	margin-top: 1%;
+}
+
+
+/*SEGUNDA SECCION ESTUDIANTES*/
+
+#generation {
+	font-size: 0.8rem;
+	margin-left: 5%;
+}
+
+#generation p {
+	margin-left: 8%;
+	text-transform: uppercase;
+	color:gray;
+}
+
+#butonGeneration {
+margin-left: 140px;
+margin-top:10px;
+
+}
+
+#student{
+	margin-left: 5%;
+	display: block;
+	width: 300px;
+}
+
+#student select{
+	display: block;
+		margin-left: 2%;
+		margin-bottom: 10%;
+
+}
+
+#femaleStudent {
+	font-size: 2rem;
+
+}
+.title2 {
+	text-align: left;
+	font-size: 0.8rem;
+	font-weight: bolder;
+	padding-bottom: 15px; 
+	border-bottom: 1px solid gray;
+	width: 80%;
+	margin-left: 15%;
+	display: block;
+	
+}
+
+
+
+#lab2 {
+	margin-left: 50px;
+	margin-top: 20px;
+	width: 250px;
+
+}
+
+#student {
+	display: inline-block
+	
+}
+
+
+
+#tech {
+	display: inline-block;
+	width: 250px;
+	padding-top: -100px;
+	margin-left: 10%;
+
+}
+
+#tech i{
+	color:#FEB433;
+	float: left;
+	font-size: 40px;
+	margin-left: 15%;
+	margin-top: 2%;
+}
+
+#tech h3, #HSE h3 {
+	margin-left: 30%;
+	width: 100%;
+}
+
+
+#HSE {
+	display: inline-block;
+	width: 250px;
+	margin-left: 10%;
+
+}
+
+#HSE i{
+	color:#FC4733;
+	float: left;
+	font-size: 40px;
+	margin-left: 15%;
+	margin-top: 2%;
+}
+
+#student img{
+margin-left: 60px;
+
+}
+
+/*TERCERA SECCION PROFESORES*/
+
+
+#valentina{
+	width: 280px;
+	height: 280px;
+	margin-left: 300px;
+	margin-top: 20px;
+	border: 2.5px solid #FEB433;
+}
+
+#thirstSection h3{
+	font-size: 1rem;
+	margin-left: 48%;
+	font-family: roboto, sans-serif;
+	line-height: 50px;
+}
+
+#title3{
+	margin-top: -250px;
+}
+
+#thirstSection img {
+	border: 2.5px solid #FEB433;
+}
+
+#josetomas{
+	width: 200px;	
+	height: 200px;
+	float: left;
+	margin-top: 150px;
+	margin-left: 100px;
+}
+
+
+#title4, #title5{
+	position: relative;
+	top: 370px;
+	right: 620px;
+	font-weight: 700;
+}
+
+#ale{
+	width: 200px;	
+	height: 200px;
+	float: left; 
+	margin-top: 150px;
+	margin-left: 250px;
+}
+
+#title6, #title7{
+	position: relative;
+	top: 302px;
+	right: 190px;
+	font-weight: 700;
+}
+
+#nadia{
+	width: 200px;	
+	height: 200px;
+	float: left; 
+	margin-top: -200px;
+	margin-left: 1000px;
+}
+
+#title8, #title9{
+	position: relative;
+	bottom: 330px;
+	right: -80%;
+	font-weight: 700;
+	width: 100px;
+}
+
+#rocio{
+	width: 200px;	
+	height: 200px;
+	float: left; 
+	margin-top: 150px;
+	margin-left: 100px;
+}
+
+#title10, #title11{
+	position: relative;
+	top: -30px;
+	left: 150px;
+	font-weight: 700;
+	width: 120px;
+}
+
+#dani{
+	width: 200px;	
+	height: 200px;
+	float: left; 
+	margin-top: 150px;
+	margin-left: 250px;
+}
+
+#title12, #title13{
+	position: relative;
+	top: -100px;
+	left: 600px;
+	font-weight: 700;
+	width: 120px;
+}
+
+#dulce{
+	width: 200px;	
+	height: 200px;
+	float: left; 
+	margin-top: 150px;
+	margin-left: 250px;
+}
+
+#valentina{
+	width: 280px;
+	height: 280px;
+	margin-left: 300px;
+	margin-top: 20px;
+	border: 2.5px solid #FEB433;
+}
+
+#thirstSection h3{
+	font-size: 1rem;
+	margin-left: 48%;
+	font-family: roboto, sans-serif;
+	line-height: 50px;
+}
+
+#title3{
+	margin-top: -250px;
+}
+
+#thirstSection img {
+	border: 2.5px solid #FEB433;
+}
+
+#josetomas{
+	width: 200px;	
+	height: 200px;
+	float: left;
+	margin-top: 150px;
+	margin-left: 100px;
+}
+
+
+#title4, #title5{
+	position: relative;
+	top: 370px;
+	right: 620px;
+	font-weight: 700;
+}
+
+#ale{
+	width: 200px;	
+	height: 200px;
+	float: left; 
+	margin-top: 150px;
+	margin-left: 250px;
+}
+
+#title6, #title7{
+	position: relative;
+	top: 302px;
+	right: 190px;
+	font-weight: 700;
+}
+
+#nadia{
+	width: 200px;	
+	height: 200px;
+	float: left; 
+	margin-top: -200px;
+	margin-left: 1000px;
+}
+
+#title8, #title9{
+	position: relative;
+	bottom: 330px;
+	right: -80%;
+	font-weight: 700;
+	width: 100px;
+}
+
+#rocio{
+	width: 200px;	
+	height: 200px;
+	float: left; 
+	margin-top: 150px;
+	margin-left: 100px;
+}
+
+#title10, #title11{
+	position: relative;
+	top: -30px;
+	left: 150px;
+	font-weight: 700;
+	width: 120px;
+}
+
+#dani{
+	width: 200px;	
+	height: 200px;
+	float: left; 
+	margin-top: 150px;
+	margin-left: 250px;
+}
+
+#title12, #title13{
+	position: relative;
+	top: -100px;
+	left: 600px;
+	font-weight: 700;
+	width: 120px;
+}
+
+#dulce{
+	width: 200px;	
+	height: 200px;
+	float: left; 
+	margin-top: 150px;
+	margin-left: 250px;
+}
+
+#title14, #title15{
+	position: relative;
+	top: -170px;
+	left: 1070px;
+	font-weight: 700;
+	width: 120px;
+}
