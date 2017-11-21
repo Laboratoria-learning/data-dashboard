@@ -1,0 +1,105 @@
+<!-- Pestaña que contiene las imagenes -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    <!-- Enlazando Tipografía Roboto -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <!-- Enlazando Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/fontello.css">
+    <!-- Enlazando CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <title>Data Dashboard</title>
+  </head>
+  <body>
+    <header>
+      <!-- Barra Fija -->
+      <nav class="navbar">
+        <div class="navbar-logo"></div>
+        <!-- Usuario -->
+        <div class="navbar-user-elements">
+          <div class="navbar-user"></div>
+          <div class="navbar-user-info">
+            <p class="navbar-name">Valentina Smith</p>
+          </div>
+        </div>
+        <ul>
+          <!-- Cargo del Usuario -->
+          <li class="job">Training Manager
+            <span class="icon-down-open"></span>            
+            <ul class="hide itemList">
+              <!-- Menú desplegable -->
+              <li class="job-menu">Edit Profile</li>
+              <li class="job-menu">Add Student</li>
+              <li class="job-menu">Remove Student</li>
+              <li class="job-menu">Add Sprint</li>
+            </ul>
+          </li>
+        </ul>   
+        <!-- Menu Tabs -->
+        <div id="menu">
+          <ul id="list-menu">
+            <a id="tabs" href="index.html">
+              <li>OVERVIEW</li>
+            </a>
+            <a id="tabs" href="index2.html">
+              <li>STUDENTS</li>
+            </a>
+            <a id="tabs" href="#">
+              <li>TEACHERS</li>
+            </a>
+          </ul>
+        </div>
+      </nav>
+
+    </header>
+    <main>
+          <section id="seats-container">
+        <div id="seats">
+        <!-- Menu Sedes -->
+          <div class="item">
+            <input type="checkbox" id="check1">
+            <label for="check1">AREQUIPA</label>
+            <ul>
+              <li><a href="">2016-2</a></li>
+              <li><a href="">2017-1</a></li>
+            </ul>
+          </div>
+          <div class="item">
+            <input type="checkbox" id="check2">
+            <label for="check2">CIUDAD DE MEXICO</label>
+            <ul>
+              <li><a href="">2017-1</a></li>
+              <li><a href="">2017-2</a></li>  
+            </ul>
+          </div>
+          <div class="item">
+            <input type="checkbox" id="check3">
+            <label for="check3">LIMA</label>
+              <ul>
+                <li><a href="">2016-2</a></li>
+                <li><a href="">2017-1</a></li>
+                <li><a href="">2017-2</a></li> 
+              </ul>
+          </div>
+          <div class="item">
+            <input type="checkbox" id="check4">
+            <label for="check4">SANTIAGO DE CHILE</label>
+              <ul>
+                <li><a href="">2016-2</a></li>
+                <li><a href="">2017-1</a></li>
+                <li><a href="">2017-2</a></li> 
+              </ul>
+          </div>
+        </div>
+      </section> 
+    <!-- Base de datos -->
+    <script src="./js/data.js"></script>
+    <!-- Aquí va tus archivos JS -->
+    <script src="js/app.js"></script>
+  </body>
+</html>

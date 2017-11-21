@@ -86,17 +86,23 @@ body {
 }
 
 /*Menú Overview*/
+#menu {
+    margin-left: 150px;
+}
+
+
+/*Menú Overview*/
 #menu li{
 	display: inline;
 	font-size: 15px;
 	font-weight: bold;
 	line-height: 0.9;
 	color: #333333;
-    margin-left: 110px;
+	margin-left: 60px;
     list-style: none;
     margin-top: -290px;
-    position: absolute;
 }
+
 /*Menú Overview hover*/
 #menu li:hover {
 	background-color: #ffc107;
@@ -109,13 +115,11 @@ body {
 /*Pestañas del Menú Overview*/
 #tabs {
 	text-decoration: none;
-	margin: 70px
 }
 
 /*Menu*/
 #list-menu {
-	margin-left: 70px;
-	margin-top: 5px;
+    margin-top: 44px;
 }
 
 /*Cargo del Usuario*/
@@ -150,70 +154,82 @@ body {
 	display: block;
 }
 
-/*Menú desplegable*/
-#seats-menu ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	margin-top: 75px;
+/*Etiqueta del menú vertical*/
+.item label {
 	display: inline-block;
-}
-
-/*Estilos de lista del menú desplegable*/
-#seats-menu ul li {
-	padding: 12px;
-	position: relative;
+	padding: 20px;
+	background-color: #FED045;
+	font-size: 20px;
+	cursor: pointer;
+	color: #333333;
+	border-bottom: solid 2px #F8ED6B;
 	width: 210px;
-	background-color: 
-	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
-	background-color: #ffc107;
-	display: block;
-	border-top: 1px solid #E0AA04;
-	-webkit-transition: all 0.4s;
-	-o-transition: all 0.4s;
-	transition: all 0.4s;
-}
-
-/*Hover del Menú Desplegable*/
-#seats-menu ul li:hover {
-	background-color: #E0AA04;
-	cursor: pointer;
-}
-
-/*Borde del Menú Desplegable*/
-#seats-menu > ul > li {
-	border-right: 3px solid #D09E05;
-}
-
-/*Transición y visibilidad del Menú*/
-#seats-menu ul ul {
-	transition: all 0.3s;
-	opacity: 0;
-	position: absolute;
-	border-left: 3px solid #D09E05;
-	visibility: hidden;
-	left: 100%;
-	top: -180%;
-}
-
-/*Hover del Menú*/
-#seats-menu ul li:hover > ul {
-	opacity: 1;
-	visibility: visible;
-	cursor: pointer;
-}
-
-/*Estilos de los "a"*/
-#seats-menu ul li a {
-	color: #333333;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 15px;
 	font-weight: bold;
-	line-height: 0.8;
-	color: #333333;
-	float: right;
+	font-size: 16px;
+	text-align: left;
 }
+/*Hover de la etiqueta del menú vertical*/
+.item label:hover {
+	background-color: #F9C425;
+}
+
+/*Estilos de la lista del menú vertical*/
+.item ul {
+	width: 210px;
+	list-style: none;
+	overflow: hidden;
+	max-height: 0;
+	transition: all .4s linear;
+}
+/**/
+.item ul li a {
+	width: 100%;
+	height: 35px;
+	padding: 10px;
+	display: inline-block;
+	text-decoration: none;
+	background-color: #FED045;
+	color #333;
+	border-bottom: solid 2px #F8ED6B;
+	font-weight: bold;
+	text-align: center;
+
+}
+
+.item input {
+	display: none;
+
+}
+
+.item ul li a:hover {
+	background-color: #FDDD7D;
+	
+}
+
+.item input:checked ~ ul {
+	height: auto;
+	max-height: 400px;
+	transform: all;
+}
+
+.item a {
+	text-decoration: none;
+	color: #333;
+}
+
+.item input {
+	width: 400px;
+	height: auto;
+	margin: 100px auto;
+}
+
+#seats-container{
+	margin-top: 40px;
+    min-height: 1423px;
+    background-color: #FED045;
+    float: left;
+}
+
 
 /*Estilo del ícono de gráficos*/
 span {
@@ -222,6 +238,13 @@ span {
 
 main {
 	padding-top: 100px;
+}
+
+/*Contenedor Título*/
+.title-container {
+	width: 100%;
+	margin-top: 38px;
+	margin-left: 210px;
 }
 
 /*Título País*/
@@ -248,16 +271,19 @@ main {
 /*Características de los Div genéricos*/
 .container {
 	background-color: #ededed;
+	min-width: 26%;
 	border-radius: 4px;
+	float: left;
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
 }
 
 /*Div Inscripción*/
 .enrollment {
     max-width: 26%;
-    height: 248px;
+    height: 338px;
     padding: 20px;
-    margin: 10px 20px;
+    margin: 10px 0px;
+    margin-left: 20px;
 }
 
 /*Título Inscripción*/
@@ -305,16 +331,211 @@ main {
 	float: right;
 }
 
-/*Color rojo*/
+/*Color de tipografía rojo*/
 .red {
 	color: Crimson;
 }
 
 /*Div contenedor de Pocentajes por Sprint*/
 .achievement {
-	max-width: 26%;
-    height: 248px;
+	min-width: 29%;
+	height: 338px;
     padding: 20px;
     margin: 10px 20px;
 }
+
+/*Color de tipografía*/
+.green {
+	color: Chartreuse;
 }
+
+/*Promote Container*/
+.promote {
+	min-width: 22%;
+    height: 338px;
+    padding: 20px;
+    margin: 10px 0px;
+}
+
+/*Texto alineado a la izquierda*/
+.alignleft {
+	text-align: left;
+	padding-bottom: 8px;
+}
+
+
+/*Gráfico Inscripción*/
+.enrollment-graph {
+	background-image: url(../assets/images/bar-graph.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 294px;
+    height: 226px;
+    margin-top: 89px;
+}
+
+/*Gráfico Achievement*/
+.achievement-graph {
+	background-image: url(../assets/images/graph.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 333px;
+    height: 226px;
+    margin-top: 89px;
+}
+
+/*Gráfico Promote*/
+.promote-graph {
+	background-image: url(../assets/images/graph.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 252px;
+    height: 226px;
+	margin-top: 114px;
+}
+
+/*Contenedor de la especialización*/
+#students-specialization {
+	margin-top: 70px;
+    margin-left: 25px;
+    display: inline-block;
+    line-height: 25px;
+    font-weight: bold;
+    color: #817E7E;
+    width: 170px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+    background-color: #ededed;
+    cursor: pointer;
+}
+
+/*Título de la especialización*/
+#specialization-p {
+	font-size: 20px;
+	color: #5B5A5A;
+	display: inline-block;
+}
+
+/*Barra de búsqueda*/
+#search-bar {
+	width: 750px;
+    height: 35px;
+    background-color: #ededed;
+    margin-left: 230px;
+    display: inline-block;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);	
+}
+
+/*Icono search*/
+.fa-search {
+	color: #8D8A8A;
+}
+
+/*Div contenedor de la barra de búsqueda*/
+#students-search {
+    margin-top: -102px;
+    margin-left: 230px;
+    position: static;
+}
+
+/*Div contenedor de las imagenes e información
+de las estudiantes*/
+#students-data {
+	width: 750px;
+	height: 200px;
+	background-color: #ededed;
+    margin-left: 250px;
+    display: inline-block;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+    position: static;
+    margin-top: 30px;
+}
+
+/*imagen de la estudiante*/
+.student-image {
+	height: 150px;
+	width: 150px;
+	margin-top: 20px;
+	margin-left: 20px;
+	border-radius: 100%;
+}
+
+/*Margen del nombre y de la especialidad
+de la estudiante*/
+#student-name ul{
+	margin-left: 30px;
+}
+
+/*contenedor de la especialización y del nombre
+de la estudiante*/
+#student-name-specialization {
+	margin-left: 30px;
+	margin-top: 30px;
+	position: absolute;
+	display: inline-block;
+	color: #8D8A8A;
+}
+
+/*cursos*/
+#courses li{
+	display: inline-block;
+	margin-top: 20px;
+	font-size: 13px;
+}
+
+/*Puntajes técnicos*/
+div #tech {
+	color: #8D8A8A;
+	margin-left: 250px;
+	margin-top: 30px;
+	display: inline-block;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+    position: absolute;
+}
+
+h3{
+	text-align: center;
+}
+
+/*Puntaje HSE*/
+div #life {
+	color: #8D8A8A;
+	margin-left: 350px;
+	margin-top: 30px;
+	display: inline-block;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+    position: absolute;
+}
+
+/*Nivel de inglés*/
+div #english {
+	color: #8D8A8A;
+	margin-left: 450px;
+	margin-top: 30px;
+	display: inline-block;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+    position: absolute;
+}
+
+/*Contenedor Tech*/
+.tech {
+ 	margin-left: 20px;
+ 	margin-top: 17px;
+ 	min-width: 1040px;
+ 	padding: 20px;
+}
+
+/*Gráficos Tech*/
+.tech-graph {
+	background-image: url(../assets/images/rectangular-graphic.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+    width: 824px;
+    height: 300px;
+    margin-top: 89px;
+}
+
+/*margin*/
+.marg {
+	margin-right: 20px;
+}
+

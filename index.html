@@ -39,46 +39,10 @@
             </ul>
           </li>
         </ul>   
-        <!-- Menu Sedes -->
-      <div id="seats-menu" class="seats-container">
-        <ul>
-          <li>      
-            <a id="bars-menu" href="#">
-                <i class="fa fa-bars" aria-hidden="true"></i>
-            </a>
-          </li>
-          <li><a href=""><span class="fa fa-line-chart"></span>AREQUIPA</a>
-            <ul>
-              <li><a href="">2016-2</a></li>
-              <li><a href="">2017-1</a></li>
-            </ul>
-          </li>
-          <li><a href=""><span class="fa fa-line-chart"></span>CIUDAD DE MEXICO</a>
-            <ul>
-              <li><a href="">2017-1</a></li>
-              <li><a href="">2017-2</a></li>
-            </ul>
-          </li>
-          <li><a href=""><span class="fa fa-line-chart"></span>LIMA</a>
-            <ul>
-              <li><a href="">2016-2</a></li>
-              <li><a href="">2017-1</a></li>
-              <li><a href="">2017-2</a></li>
-            </ul>
-          </li>
-          <li><a href=""><span class="fa fa-line-chart"></span>SANTIAGO DE CHILE</a>
-            <ul>
-              <li><a href="">2016-2</a></li>
-              <li><a href="">2017-1</a></li>
-              <li><a href="">2017-2</a></li>             
-            </ul>
-          </li>
-        </ul>    
-      </div>
         <!-- Menu Tabs -->
         <div id="menu">
           <ul id="list-menu">
-            <a id="tabs" href="#">
+            <a id="tabs" href="index.html">
               <li>OVERVIEW</li>
             </a>
             <a id="tabs" href="index2.html">
@@ -90,29 +54,112 @@
           </ul>
         </div>
       </nav>
-    </header>
 
+    </header>
     <main>
-      <!-- Título -->
-      <h1 class="title">Sede</h1>
-      <h2 class="subtitle">Generacíon</h2>
+          <section id="seats-container">
+        <div id="seats">
+        <!-- Menu Sedes -->
+          <div class="item">
+            <input type="checkbox" id="check1">
+            <label for="check1">AREQUIPA</label>
+            <ul>
+              <li><a id="aqp2016-2" href="javascript:void(0)">2016-2</a></li>
+              <li><a id="aqp2017-1" href="javascript:void(0)">2017-1</a></li>
+            </ul>
+          </div>
+          <div class="item">
+            <input type="checkbox" id="check2">
+            <label for="check2">CIUDAD DE MEXICO</label>
+            <ul>
+              <li><a id="mexico2017-1" href="javascript:void(0)">2017-1</a></li>
+              <li><a id="mexico2017-2" href="javascript:void(0)">2017-2</a></li>  
+            </ul>
+          </div>
+          <div class="item">
+            <input type="checkbox" id="check3">
+            <label for="check3">LIMA</label>
+              <ul>
+                <li><a id="lima2016-2" href="javascript:void(0)">2016-2</a></li>
+                <li><a id="lima2017-1" href="javascript:void(0)">2017-1</a></li>
+                <li><a id="lima2017-2" href="javascript:void(0)">2017-2</a></li> 
+              </ul>
+          </div>
+          <div class="item">
+            <input type="checkbox" id="check4">
+            <label for="check4">SANTIAGO DE CHILE</label>
+              <ul>
+                <li><a id="santiago2016-2" href="javascript:void(0)">2016-2</a></li>
+                <li><a id="santiago2017-1" href="javascript:void(0)">2017-1</a></li>
+                <li><a id="santiago2017-2" href="javascript:void(0)">2017-2</a></li> 
+              </ul>
+          </div>
+        </div>
+      </section> 
+     <!-- Título -->
+      <div class="title-container">
+        <h1 class="title">Arequipa</h1>
+        <h2 class="subtitle">2016-2</h2>
+      </div> 
       <!-- Inscripción -->
       <div class="enrollment container">
         <h1 class="enrollment-title">Enrollment</h1>
         <div class="enrollment-info izq">
-          <!-- <p class="total-enrollment">120</p> -->
+          <p class="total-enrollment"></p>
           <p class="text-enrollment"># Students currently enrolled</p>
         </div>
         <div class="enrollment-info der">
-         <!--  <p class="total-enrollment red">20%</p> -->
+        <p class="total-enrollment red"></p>
           <p class="text-enrollment">% Dropout</p>
         </div>
         <div class="enrollment-graph"></div>
-        <div id="chart_div"></div>
       </div>
       <!-- Porcentaje por Sprint -->
       <div class="achievement container">
-      <h1 class="enrollment-title">Achievement</h1>
+        <h1 class="enrollment-title">Achievement</h1>
+        <div class="enrollment-info izq">
+          <p class="total-enrollment">105</p><p class="text-enrollment"># students that meet the target</p>
+        </div>
+        <div class="enrollment-info der">
+         <p class="total-enrollment green">78%</p>
+         <p class="text-enrollment">% of total (135)</p>
+        </div>
+       <div class="achievement-graph"></div>
+       </div>
+      <!-- Promote Score -->
+      <div class="promote container">
+        <h1 class="enrollment-title">Net Promoter Score</h1>
+        <div class="enrollment-info izq">
+          <p class="total-enrollment green">78%</p><p class="text-enrollment">% acumulate NPS</p>
+        </div>
+        <div class="enrollment-info der">
+         <p class="text-enrollment alignleft">60% Promoters</p>
+         <p class="text-enrollment alignleft">30% Passive</p>
+         <p class="text-enrollment alignleft">10% Detractors</p>
+       </div>
+       <div class="promote-graph"></div>
+      </div>
+      <!-- Tech Skills -->
+      <div class="tech container">
+        <h1 class="enrollment-title">Tech Skills</h1>
+        <div class="enrollment-info izq marg">
+          <p class="total-enrollment">62</p><p class="text-enrollment"># students that meet the target</p>
+        </div>
+        <div class="enrollment-info izq">
+         <p class="total-enrollment green">78%</p><p class="text-enrollment">% of total (135)</p>
+       </div>
+       <div class="tech-graph"></div>
+      </div>
+       <!-- Life Skills -->
+      <div class="tech container">
+        <h1 class="enrollment-title">Life Skills</h1>
+        <div class="enrollment-info izq marg">
+          <p class="total-enrollment">80</p><p class="text-enrollment"># overall class average</p>
+        </div>
+        <div class="enrollment-info izq">
+         <p class="total-enrollment green">62</p><p class="text-enrollment"># of students meet the target</p>
+       </div>
+       <div class="tech-graph"></div>
       </div>
     </main>
 		<!-- Base de datos -->
