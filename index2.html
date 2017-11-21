@@ -1,0 +1,151 @@
+<!-- Pestaña que contiene las imagenes -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    <!-- Enlazando Tipografía Roboto -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <!-- Enlazando Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/fontello.css">
+    <!-- Enlazando CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <title>Data Dashboard</title>
+  </head>
+  <body>
+    <header>
+      <!-- Barra Fija -->
+      <nav class="navbar">
+        <div class="navbar-logo"></div>
+        <!-- Usuario -->
+        <div class="navbar-user-elements">
+          <div class="navbar-user"></div>
+          <div class="navbar-user-info">
+            <p class="navbar-name">Valentina Smith</p>
+          </div>
+        </div>
+        <ul>
+          <!-- Cargo del Usuario -->
+          <li class="job">Training Manager
+            <span class="icon-down-open"></span>            
+            <ul class="hide itemList">
+              <!-- Menú desplegable -->
+              <li class="job-menu">Edit Profile</li>
+              <li class="job-menu">Add Student</li>
+              <li class="job-menu">Remove Student</li>
+              <li class="job-menu">Add Sprint</li>
+            </ul>
+          </li>
+        </ul>   
+        <!-- Menu Tabs -->
+        <div id="menu">
+          <ul id="list-menu">
+            <a id="tabs" href="index.html">
+              <li>OVERVIEW</li>
+            </a>
+            <a id="tabs" href="index2.html">
+              <li>STUDENTS</li>
+            </a>
+            <a id="tabs" href="#">
+              <li>TEACHERS</li>
+            </a>
+          </ul>
+        </div>
+      </nav>
+
+    </header>
+    <main>
+          <section id="seats-container">
+        <div id="seats">
+        <!-- Menu Sedes -->
+          <div class="item">
+            <input type="checkbox" id="check1">
+            <label for="check1">AREQUIPA</label>
+            <ul>
+              <li><a href="">2016-2</a></li>
+              <li><a href="">2017-1</a></li>
+            </ul>
+          </div>
+          <div class="item">
+            <input type="checkbox" id="check2">
+            <label for="check2">CIUDAD DE MEXICO</label>
+            <ul>
+              <li><a href="">2017-1</a></li>
+              <li><a href="">2017-2</a></li>  
+            </ul>
+          </div>
+          <div class="item">
+            <input type="checkbox" id="check3">
+            <label for="check3">LIMA</label>
+              <ul>
+                <li><a href="">2016-2</a></li>
+                <li><a href="">2017-1</a></li>
+                <li><a href="">2017-2</a></li> 
+              </ul>
+          </div>
+          <div class="item">
+            <input type="checkbox" id="check4">
+            <label for="check4">SANTIAGO DE CHILE</label>
+              <ul>
+                <li><a href="">2016-2</a></li>
+                <li><a href="">2017-1</a></li>
+                <li><a href="">2017-2</a></li> 
+              </ul>
+          </div>
+        </div>
+      </section> 
+      <div id="students-specialization">
+        <div id="specialization">
+          <p id="specialization-p">SPECIALIZATION</p>
+        </div>
+        <div id="items">
+          <input type="checkbox" id="check-specialization"> 
+          <label for="check-specialization">Javascript</label>
+        </div>
+        <div id="items">
+          <input type="checkbox" id="check-specialization2">
+          <label for="check-specialization2">UX Design</label>
+        </div>
+        <div id="items">
+          <input type="checkbox" id="check-specialization3">
+          <label for="check-specialization3">Front-End Designer</label>
+        </div>
+        </div>
+        <div id="students-search">
+          <input type="text" id="search-bar">
+              <span class="fa fa-search"></span>
+        </div>
+        <div id="students-data">
+          <img class="student-image" src="http://dummyimage.com/150x150.png/dddddd/000000">
+          <div id="student-name-specialization">  
+            <h3 id="student-name">ROANA MENEGO</h3>
+            <h5 id="student-specialization">front-end developer</h5>
+            <ul id="courses">
+              <li>JAVASCRIPT</li>
+              <li>APIs</li>
+              <li>JQUERY</li>
+            </ul>
+          </div>
+          <div id="tech">
+              <h3 id="tech-percent">70%</h3>
+              <h5 id="tech-skills">TECH SKILLS</h5>              
+          </div>
+          <div id="life">
+              <h3 id="life-percent">70%</h3>
+              <h5 id="tech-skills">LIFE SKILLS</h5>
+          </div>
+          <div id="english">
+              <h3 id="english-level">LEVEL</h3>
+              <h5 id="english-skills">ENGLISH SKILLS</h5>
+          </div>
+
+        
+    <!-- Base de datos -->
+    <script src="./js/data.js"></script>
+    <!-- Aquí va tus archivos JS -->
+    <script src="js/app.js"></script>
+  </body>
+</html>

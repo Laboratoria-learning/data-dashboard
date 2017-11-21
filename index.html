@@ -2,13 +2,170 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    <!-- Enlazando Tipografía Roboto -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <!-- Enlazando Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/fontello.css">
+    <!-- Enlazando CSS -->
+    <link rel="stylesheet" href="css/main.css">
     <title>Data Dashboard</title>
   </head>
   <body>
+    <header>
+      <!-- Barra Fija -->
+      <nav class="navbar">
+        <div class="navbar-logo"></div>
+        <!-- Usuario -->
+        <div class="navbar-user-elements">
+          <div class="navbar-user"></div>
+          <div class="navbar-user-info">
+            <p class="navbar-name">Valentina Smith</p>
+          </div>
+        </div>
+        <ul>
+          <!-- Cargo del Usuario -->
+          <li class="job">Training Manager
+            <span class="icon-down-open"></span>            
+            <ul class="hide itemList">
+              <!-- Menú desplegable -->
+              <li class="job-menu">Edit Profile</li>
+              <li class="job-menu">Add Student</li>
+              <li class="job-menu">Remove Student</li>
+              <li class="job-menu">Add Sprint</li>
+            </ul>
+          </li>
+        </ul>   
+        <!-- Menu Tabs -->
+        <div id="menu">
+          <ul id="list-menu">
+            <a id="tabs" href="index.html">
+              <li>OVERVIEW</li>
+            </a>
+            <a id="tabs" href="index2.html">
+              <li>STUDENTS</li>
+            </a>
+            <a id="tabs" href="#">
+              <li>TEACHERS</li>
+            </a>
+          </ul>
+        </div>
+      </nav>
 
+    </header>
+    <main>
+          <section id="seats-container">
+        <div id="seats">
+        <!-- Menu Sedes -->
+          <div class="item">
+            <input type="checkbox" id="check1">
+            <label for="check1">AREQUIPA</label>
+            <ul>
+              <li><a id="aqp2016-2" href="javascript:void(0)">2016-2</a></li>
+              <li><a id="aqp2017-1" href="javascript:void(0)">2017-1</a></li>
+            </ul>
+          </div>
+          <div class="item">
+            <input type="checkbox" id="check2">
+            <label for="check2">CIUDAD DE MEXICO</label>
+            <ul>
+              <li><a id="mexico2017-1" href="javascript:void(0)">2017-1</a></li>
+              <li><a id="mexico2017-2" href="javascript:void(0)">2017-2</a></li>  
+            </ul>
+          </div>
+          <div class="item">
+            <input type="checkbox" id="check3">
+            <label for="check3">LIMA</label>
+              <ul>
+                <li><a id="lima2016-2" href="javascript:void(0)">2016-2</a></li>
+                <li><a id="lima2017-1" href="javascript:void(0)">2017-1</a></li>
+                <li><a id="lima2017-2" href="javascript:void(0)">2017-2</a></li> 
+              </ul>
+          </div>
+          <div class="item">
+            <input type="checkbox" id="check4">
+            <label for="check4">SANTIAGO DE CHILE</label>
+              <ul>
+                <li><a id="santiago2016-2" href="javascript:void(0)">2016-2</a></li>
+                <li><a id="santiago2017-1" href="javascript:void(0)">2017-1</a></li>
+                <li><a id="santiago2017-2" href="javascript:void(0)">2017-2</a></li> 
+              </ul>
+          </div>
+        </div>
+      </section> 
+     <!-- Título -->
+      <div class="title-container">
+        <h1 class="title">Arequipa</h1>
+        <h2 class="subtitle">2016-2</h2>
+      </div> 
+      <!-- Inscripción -->
+      <div class="enrollment container">
+        <h1 class="enrollment-title">Enrollment</h1>
+        <div class="enrollment-info izq">
+          <p class="total-enrollment"></p>
+          <p class="text-enrollment"># Students currently enrolled</p>
+        </div>
+        <div class="enrollment-info der">
+        <p class="total-enrollment red"></p>
+          <p class="text-enrollment">% Dropout</p>
+        </div>
+        <div class="enrollment-graph"></div>
+      </div>
+      <!-- Porcentaje por Sprint -->
+      <div class="achievement container">
+        <h1 class="enrollment-title">Achievement</h1>
+        <div class="enrollment-info izq">
+          <p class="total-enrollment">105</p><p class="text-enrollment"># students that meet the target</p>
+        </div>
+        <div class="enrollment-info der">
+         <p class="total-enrollment green">78%</p>
+         <p class="text-enrollment">% of total (135)</p>
+        </div>
+       <div class="achievement-graph"></div>
+       </div>
+      <!-- Promote Score -->
+      <div class="promote container">
+        <h1 class="enrollment-title">Net Promoter Score</h1>
+        <div class="enrollment-info izq">
+          <p class="total-enrollment green">78%</p><p class="text-enrollment">% acumulate NPS</p>
+        </div>
+        <div class="enrollment-info der">
+         <p class="text-enrollment alignleft">60% Promoters</p>
+         <p class="text-enrollment alignleft">30% Passive</p>
+         <p class="text-enrollment alignleft">10% Detractors</p>
+       </div>
+       <div class="promote-graph"></div>
+      </div>
+      <!-- Tech Skills -->
+      <div class="tech container">
+        <h1 class="enrollment-title">Tech Skills</h1>
+        <div class="enrollment-info izq marg">
+          <p class="total-enrollment">62</p><p class="text-enrollment"># students that meet the target</p>
+        </div>
+        <div class="enrollment-info izq">
+         <p class="total-enrollment green">78%</p><p class="text-enrollment">% of total (135)</p>
+       </div>
+       <div class="tech-graph"></div>
+      </div>
+       <!-- Life Skills -->
+      <div class="tech container">
+        <h1 class="enrollment-title">Life Skills</h1>
+        <div class="enrollment-info izq marg">
+          <p class="total-enrollment">80</p><p class="text-enrollment"># overall class average</p>
+        </div>
+        <div class="enrollment-info izq">
+         <p class="total-enrollment green">62</p><p class="text-enrollment"># of students meet the target</p>
+       </div>
+       <div class="tech-graph"></div>
+      </div>
+    </main>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
-    <script src="./js/app.js"></script>
+    <script src="js/app.js"></script>
+    <!-- Enlazando Gráficos -->
   </body>
 </html>

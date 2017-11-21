@@ -1,3 +1,541 @@
-/*
- * Estilos de tu proyecto
- */
+/*Resetenado/Normalizando Documento*/
+* {
+	box-sizing: border-box;
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+
+/*Contenedor Menú Fijo*/
+.navbar {
+	width: 100%;
+	min-height: 80px;
+	position: fixed;
+	background-color: #FFF;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+	height: 140px;
+}
+/*Icono de Barras/Menu*/
+.fa-bars {
+	margin-top: 10px;
+	font-size: 30px;
+	color: #333333;
+}
+
+/*Hover del icono de barras*/
+.fa-bars:hover {
+	color: #777777;
+	cursor: pointer;
+	transition: all .3s ease-out;
+}
+
+/*Logo del Menú Fijo*/
+.navbar-logo {
+	height: 30px;
+    margin-left: 40%;
+    margin-top: 33px;
+    background-repeat: no-repeat;
+    background-image: url(../assets/images/logo.png);
+    background-size: 100%;
+    width: 190px;
+    display: inline-block;
+}
+
+/*Contenedor imagen usuario, nombre, cargo e ícono flecha*/
+.navbar-user-elements {
+	margin-right: auto;
+	margin-left: auto;
+	display: inline-block;
+	padding: 18px;
+    float: right;
+}
+
+/*Contendor nombre y cargo*/
+.navbar-user-info {
+	margin-right: auto;
+	margin-left: auto;
+	padding: 16px;
+    display: inline-block;
+}
+
+/*Imagen Usuario*/
+.navbar-user {
+	height: 40px;
+	margin-top: 8px;
+    background-repeat: no-repeat;
+    background-image: url(../assets/images/user.png);
+    background-size: 100%;
+    width: 40px;
+	float: left;
+}
+
+/*Nombre Usuario*/
+.navbar-name {
+	font-size: 15px;
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 0.9;
+	color: #333333;
+}
+
+/*Menú Overview*/
+#menu {
+    margin-left: 150px;
+}
+
+
+/*Menú Overview*/
+#menu li{
+	display: inline;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 0.9;
+	color: #333333;
+	margin-left: 60px;
+    list-style: none;
+    margin-top: -290px;
+}
+
+/*Menú Overview hover*/
+#menu li:hover {
+	background-color: #ffc107;
+	cursor: pointer;
+	transition: all .3s ease-out;
+	color: #777777;
+	padding: 10px;
+}
+
+/*Pestañas del Menú Overview*/
+#tabs {
+	text-decoration: none;
+}
+
+/*Menu*/
+#list-menu {
+    margin-top: 44px;
+}
+
+/*Cargo del Usuario*/
+.job {
+	font-size: 12px;
+    font-weight: 500;
+	color: #939292;
+	margin-left: 1150px;
+    display: block;
+    margin-top: -18px;
+    position: absolute;
+    cursor: pointer;
+}
+/*Menú bajo el cargo del usuario*/
+.job-menu{
+	list-style: none;
+
+}
+/*Hover del menu bajo el cargo del usuario*/
+.job-menu:hover {
+	color: #595656;
+	cursor: pointer;
+}
+
+/*Esconde Items bajo el cargo*/
+.hide {
+	display: none;
+}
+
+/*Muestra items bajo el cargo*/
+.show {
+	display: block;
+}
+
+/*Etiqueta del menú vertical*/
+.item label {
+	display: inline-block;
+	padding: 20px;
+	background-color: #FED045;
+	font-size: 20px;
+	cursor: pointer;
+	color: #333333;
+	border-bottom: solid 2px #F8ED6B;
+	width: 210px;
+	font-weight: bold;
+	font-size: 16px;
+	text-align: left;
+}
+/*Hover de la etiqueta del menú vertical*/
+.item label:hover {
+	background-color: #F9C425;
+}
+
+/*Estilos de la lista del menú vertical*/
+.item ul {
+	width: 210px;
+	list-style: none;
+	overflow: hidden;
+	max-height: 0;
+	transition: all .4s linear;
+}
+/**/
+.item ul li a {
+	width: 100%;
+	height: 35px;
+	padding: 10px;
+	display: inline-block;
+	text-decoration: none;
+	background-color: #FED045;
+	color #333;
+	border-bottom: solid 2px #F8ED6B;
+	font-weight: bold;
+	text-align: center;
+
+}
+
+.item input {
+	display: none;
+
+}
+
+.item ul li a:hover {
+	background-color: #FDDD7D;
+	
+}
+
+.item input:checked ~ ul {
+	height: auto;
+	max-height: 400px;
+	transform: all;
+}
+
+.item a {
+	text-decoration: none;
+	color: #333;
+}
+
+.item input {
+	width: 400px;
+	height: auto;
+	margin: 100px auto;
+}
+
+#seats-container{
+	margin-top: 40px;
+    min-height: 1423px;
+    background-color: #FED045;
+    float: left;
+}
+
+
+/*Estilo del ícono de gráficos*/
+span {
+	margin-right: 10px;
+}
+
+main {
+	padding-top: 100px;
+}
+
+/*Contenedor Título*/
+.title-container {
+	width: 100%;
+	margin-top: 38px;
+	margin-left: 210px;
+}
+
+/*Título País*/
+.title {
+	color: #333333;
+	font-size: 23px;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+	display: inline-block;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+/*Título Generación*/
+.subtitle {
+	color: #ffc107;
+	font-size: 23px;
+	font-weight: 500;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+	display: inline-block;
+}
+
+/*Características de los Div genéricos*/
+.container {
+	background-color: #ededed;
+	min-width: 26%;
+	border-radius: 4px;
+	float: left;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*Div Inscripción*/
+.enrollment {
+    max-width: 26%;
+    height: 338px;
+    padding: 20px;
+    margin: 10px 0px;
+    margin-left: 20px;
+}
+
+/*Título Inscripción*/
+.enrollment-title {
+	color: #333333;
+	font-size: 20px;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+}
+
+/*Div info inscritas*/
+.enrollment-info {
+	background-color: #FFF;
+	border-radius: 4px;
+    min-height: 73px;
+    padding: 9px
+}
+
+/*Número Total*/
+.total-enrollment {
+	text-align: center;
+    font-weight: bold;
+    color: #ffc107;
+    font-size: 23px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+/*Texto debajo de los números*/	
+.text-enrollment {
+	font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #727272;
+    text-align: center;
+}
+
+/*FLotar Izquierda*/
+.izq {
+	float: left;
+}
+
+/*Flotar Derecha*/
+.der {
+	float: right;
+}
+
+/*Color de tipografía rojo*/
+.red {
+	color: Crimson;
+}
+
+/*Div contenedor de Pocentajes por Sprint*/
+.achievement {
+	min-width: 29%;
+	height: 338px;
+    padding: 20px;
+    margin: 10px 20px;
+}
+
+/*Color de tipografía*/
+.green {
+	color: Chartreuse;
+}
+
+/*Promote Container*/
+.promote {
+	min-width: 22%;
+    height: 338px;
+    padding: 20px;
+    margin: 10px 0px;
+}
+
+/*Texto alineado a la izquierda*/
+.alignleft {
+	text-align: left;
+	padding-bottom: 8px;
+}
+
+
+/*Gráfico Inscripción*/
+.enrollment-graph {
+	background-image: url(../assets/images/bar-graph.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 294px;
+    height: 226px;
+    margin-top: 89px;
+}
+
+/*Gráfico Achievement*/
+.achievement-graph {
+	background-image: url(../assets/images/graph.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 333px;
+    height: 226px;
+    margin-top: 89px;
+}
+
+/*Gráfico Promote*/
+.promote-graph {
+	background-image: url(../assets/images/graph.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 252px;
+    height: 226px;
+	margin-top: 114px;
+}
+
+/*Contenedor de la especialización*/
+#students-specialization {
+	margin-top: 70px;
+    margin-left: 25px;
+    display: inline-block;
+    line-height: 25px;
+    font-weight: bold;
+    color: #817E7E;
+    width: 170px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+    background-color: #ededed;
+    cursor: pointer;
+}
+
+/*Título de la especialización*/
+#specialization-p {
+	font-size: 20px;
+	color: #5B5A5A;
+	display: inline-block;
+}
+
+/*Barra de búsqueda*/
+#search-bar {
+	width: 750px;
+    height: 35px;
+    background-color: #ededed;
+    margin-left: 230px;
+    display: inline-block;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);	
+}
+
+/*Icono search*/
+.fa-search {
+	color: #8D8A8A;
+}
+
+/*Div contenedor de la barra de búsqueda*/
+#students-search {
+    margin-top: -102px;
+    margin-left: 230px;
+    position: static;
+}
+
+/*Div contenedor de las imagenes e información
+de las estudiantes*/
+#students-data {
+	width: 750px;
+	height: 200px;
+	background-color: #ededed;
+    margin-left: 250px;
+    display: inline-block;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+    position: static;
+    margin-top: 30px;
+}
+
+/*imagen de la estudiante*/
+.student-image {
+	height: 150px;
+	width: 150px;
+	margin-top: 20px;
+	margin-left: 20px;
+	border-radius: 100%;
+}
+
+/*Margen del nombre y de la especialidad
+de la estudiante*/
+#student-name ul{
+	margin-left: 30px;
+}
+
+/*contenedor de la especialización y del nombre
+de la estudiante*/
+#student-name-specialization {
+	margin-left: 30px;
+	margin-top: 30px;
+	position: absolute;
+	display: inline-block;
+	color: #8D8A8A;
+}
+
+/*cursos*/
+#courses li{
+	display: inline-block;
+	margin-top: 20px;
+	font-size: 13px;
+}
+
+/*Puntajes técnicos*/
+div #tech {
+	color: #8D8A8A;
+	margin-left: 250px;
+	margin-top: 30px;
+	display: inline-block;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+    position: absolute;
+}
+
+h3{
+	text-align: center;
+}
+
+/*Puntaje HSE*/
+div #life {
+	color: #8D8A8A;
+	margin-left: 350px;
+	margin-top: 30px;
+	display: inline-block;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+    position: absolute;
+}
+
+/*Nivel de inglés*/
+div #english {
+	color: #8D8A8A;
+	margin-left: 450px;
+	margin-top: 30px;
+	display: inline-block;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+    position: absolute;
+}
+
+/*Contenedor Tech*/
+.tech {
+ 	margin-left: 20px;
+ 	margin-top: 17px;
+ 	min-width: 1040px;
+ 	padding: 20px;
+}
+
+/*Gráficos Tech*/
+.tech-graph {
+	background-image: url(../assets/images/rectangular-graphic.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+    width: 824px;
+    height: 300px;
+    margin-top: 89px;
+}
+
+/*margin*/
+.marg {
+	margin-right: 20px;
+}
+
