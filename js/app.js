@@ -36,17 +36,15 @@ function generacionI() {
 	var parrafo9=document.createElement('p');
 	var parrafo10=document.createElement('p');
 
-	var contenedor= document.getElementsByClassName('imagenes')[0];
+	var contenedor= document.getElementById('uno');
 	
+	var contenedor2= document.getElementById('dos');
 
-	var contenedor2= document.getElementsByClassName('imagenes2')[0];
+	var contenedor3= document.getElementById('tres');
 
+	var contenedor4= document.getElementById('cuatro');
 
-	var contenedor3= document.getElementsByClassName('imagenes3')[0];
-
-	var contenedor4= document.getElementsByClassName('imagenes4')[0]
-
-	var contenedor5=document.getElementsByClassName('imagenes5')[0]
+	var contenedor5=document.getElementById('cinco');
 
 	var superior= document.getElementsByClassName('superior')[0];
 		superior.style.display = '';
@@ -318,18 +316,15 @@ function generacion2(){
 	var parrafo9=document.createElement('p');
 	var parrafo10=document.createElement('p');
 
-	var contenedor= document.getElementsByClassName('imagenes')[0];
+	var contenedor= document.getElementById('uno');
 	
+	var contenedor2= document.getElementById('dos');
 
-	var contenedor2= document.getElementsByClassName('imagenes2')[0];
+	var contenedor3= document.getElementById('tres');
 
+	var contenedor4= document.getElementById('cuatro');
 
-	var contenedor3= document.getElementsByClassName('imagenes3')[0];
-
-	var contenedor4= document.getElementsByClassName('imagenes4')[0]
-
-	var contenedor5=document.getElementsByClassName('imagenes5')[0]
-
+	var contenedor5=document.getElementById('cinco');
 	var superior= document.getElementsByClassName('superior')[0];
 		superior.style.display = '';
 
@@ -537,18 +532,15 @@ function generacionARQ2(){
 	var parrafo9=document.createElement('p');
 	var parrafo10=document.createElement('p');
 
-	var contenedor= document.getElementsByClassName('imagenes')[0];
+	var contenedor= document.getElementById('uno');
 	
+	var contenedor2= document.getElementById('dos');
 
-	var contenedor2= document.getElementsByClassName('imagenes2')[0];
+	var contenedor3= document.getElementById('tres');
 
+	var contenedor4= document.getElementById('cuatro');
 
-	var contenedor3= document.getElementsByClassName('imagenes3')[0];
-
-	var contenedor4= document.getElementsByClassName('imagenes4')[0]
-
-	var contenedor5=document.getElementsByClassName('imagenes5')[0]
-
+	var contenedor5=document.getElementById('cinco');
 	var superior= document.getElementsByClassName('superior')[0];
 		superior.style.display = '';
 
@@ -818,18 +810,15 @@ function generacionARQ(){
 	var parrafo9=document.createElement('p');
 	var parrafo10=document.createElement('p');
 
-	var contenedor= document.getElementsByClassName('imagenes')[0];
+	var contenedor= document.getElementById('uno');
 	
+	var contenedor2= document.getElementById('dos');
 
-	var contenedor2= document.getElementsByClassName('imagenes2')[0];
+	var contenedor3= document.getElementById('tres');
 
+	var contenedor4= document.getElementById('cuatro');
 
-	var contenedor3= document.getElementsByClassName('imagenes3')[0];
-
-	var contenedor4= document.getElementsByClassName('imagenes4')[0]
-
-	var contenedor5=document.getElementsByClassName('imagenes5')[0]
-
+	var contenedor5=document.getElementById('cinco');
 	var superior= document.getElementsByClassName('superior')[0];
 		superior.style.display = '';
 
@@ -1122,18 +1111,15 @@ function generacionLIM(){
 	var parrafo9=document.createElement('p');
 	var parrafo10=document.createElement('p');
 
-	var contenedor= document.getElementsByClassName('imagenes')[0];
+	var contenedor= document.getElementById('uno');
 	
+	var contenedor2= document.getElementById('dos');
 
-	var contenedor2= document.getElementsByClassName('imagenes2')[0];
+	var contenedor3= document.getElementById('tres');
 
+	var contenedor4= document.getElementById('cuatro');
 
-	var contenedor3= document.getElementsByClassName('imagenes3')[0];
-
-	var contenedor4= document.getElementsByClassName('imagenes4')[0]
-
-	var contenedor5=document.getElementsByClassName('imagenes5')[0]
-
+	var contenedor5=document.getElementById('cinco');
 	var superior= document.getElementsByClassName('superior')[0];
 		superior.style.display = '';
 
@@ -1341,16 +1327,16 @@ function generacionLIM2(){
 	var parrafo8=document.createElement('p');
 	var parrafo9=document.createElement('p');
 	var parrafo10=document.createElement('p');
-
-	var contenedor= document.getElementsByClassName('imagenes')[0];
 	
-	var contenedor2= document.getElementsByClassName('imagenes2')[0];
+	var contenedor= document.getElementById('uno');
+	
+	var contenedor2= document.getElementById('dos');
 
-	var contenedor3= document.getElementsByClassName('imagenes3')[0];
+	var contenedor3= document.getElementById('tres');
 
-	var contenedor4= document.getElementsByClassName('imagenes4')[0]
+	var contenedor4= document.getElementById('cuatro');
 
-	var contenedor5=document.getElementsByClassName('imagenes5')[0]
+	var contenedor5=document.getElementById('cinco');
 
 	var superior= document.getElementsByClassName('superior')[0];
 		superior.style.display = '';
@@ -1643,18 +1629,15 @@ function generacionLIM3(){
 	var parrafo9=document.createElement('p');
 	var parrafo10=document.createElement('p');
 
-	var contenedor= document.getElementsByClassName('imagenes')[0];
+	var contenedor= document.getElementById('uno');
 	
+	var contenedor2= document.getElementById('dos');
 
-	var contenedor2= document.getElementsByClassName('imagenes2')[0];
+	var contenedor3= document.getElementById('tres');
 
+	var contenedor4= document.getElementById('cuatro');
 
-	var contenedor3= document.getElementsByClassName('imagenes3')[0];
-
-	var contenedor4= document.getElementsByClassName('imagenes4')[0]
-
-	var contenedor5=document.getElementsByClassName('imagenes5')[0]
-
+	var contenedor5=document.getElementById('cinco');
 	var superior= document.getElementsByClassName('superior')[0];
 		superior.style.display = '';
 
@@ -1864,18 +1847,15 @@ function generacionSCL(){
 	var parrafo9=document.createElement('p');
 	var parrafo10=document.createElement('p');
 
-	var contenedor= document.getElementsByClassName('imagenes')[0];
+	var contenedor= document.getElementById('uno');
 	
+	var contenedor2= document.getElementById('dos');
 
-	var contenedor2= document.getElementsByClassName('imagenes2')[0];
+	var contenedor3= document.getElementById('tres');
 
+	var contenedor4= document.getElementById('cuatro');
 
-	var contenedor3= document.getElementsByClassName('imagenes3')[0];
-
-	var contenedor4= document.getElementsByClassName('imagenes4')[0]
-
-	var contenedor5=document.getElementsByClassName('imagenes5')[0]
-
+	var contenedor5=document.getElementById('cinco');
 	var superior= document.getElementsByClassName('superior')[0];
 		superior.style.display = '';
 
@@ -2099,18 +2079,15 @@ function generacionSCL2(){
 	var parrafo9=document.createElement('p');
 	var parrafo10=document.createElement('p');
 
-	var contenedor= document.getElementsByClassName('imagenes')[0];
+	var contenedor= document.getElementById('uno');
 	
+	var contenedor2= document.getElementById('dos');
 
-	var contenedor2= document.getElementsByClassName('imagenes2')[0];
+	var contenedor3= document.getElementById('tres');
 
+	var contenedor4= document.getElementById('cuatro');
 
-	var contenedor3= document.getElementsByClassName('imagenes3')[0];
-
-	var contenedor4= document.getElementsByClassName('imagenes4')[0]
-
-	var contenedor5=document.getElementsByClassName('imagenes5')[0]
-
+	var contenedor5=document.getElementById('cinco');
 	var superior= document.getElementsByClassName('superior')[0];
 		superior.style.display = '';
 
@@ -2332,18 +2309,15 @@ function generacionSCL3(){
 	var parrafo9=document.createElement('p');
 	var parrafo10=document.createElement('p');
 
-	var contenedor= document.getElementsByClassName('imagenes')[0];
+	var contenedor= document.getElementById('uno');
 	
+	var contenedor2= document.getElementById('dos');
 
-	var contenedor2= document.getElementsByClassName('imagenes2')[0];
+	var contenedor3= document.getElementById('tres');
 
+	var contenedor4= document.getElementById('cuatro');
 
-	var contenedor3= document.getElementsByClassName('imagenes3')[0];
-
-	var contenedor4= document.getElementsByClassName('imagenes4')[0]
-
-	var contenedor5=document.getElementsByClassName('imagenes5')[0]
-
+	var contenedor5=document.getElementById('cinco');
 	var superior= document.getElementsByClassName('superior')[0];
 		superior.style.display = '';
 

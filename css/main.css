@@ -33,13 +33,16 @@ remover cualquier estilo anterior de los elementos  */
 }
 
 .container img {
-	width: 200px;
-	height: 65px;
-	margin-left: 37%;
-	float: left;
-	align-self: center;
+width: 200px;
+    height: 65px;
+    margin-left: 30%;
+    float: left;
+    align-self: center;
 }
-
+.traducir{
+    float: left;
+    padding: 20px;
+}
 input{
 	width: 162px;
 	height: 22px;
@@ -57,120 +60,26 @@ text-align: center;
     background-color: grey;
 }
 .imagenes{
-        width: 220px;
-    /* outline: 1px solid red; */
+    width: 220px;
     height: 90px;
     background-color: #FAA818;
     border-radius: 15px;
-    font-size: 22px;
+   font-size: 22px;
    display: inline-block;
+   margin-left: 15px;
 
 }
-.imagenes img{
-	width: 50px;
-    height: 50px;
+.imagenes i{
+    width: 65px;
+    height: 65px;
+    font-size: 50px;
     float: left;
-    padding: 10px;
-    margin: 10px;
+    align-self: center;
+    padding: 12px;
+    padding-top: 13px;
 }
 
 .imagenes p{
-	text-align: center;
-    padding: 10px;
-}
-.imagenes2{
-        width: 220px;
-    /* outline: 1px solid red; */
-    height: 90px;
-    background-color: #FAA818;
-    border-radius: 15px;
-    font-size: 22px;
-        display: inline-block;
-            margin-left: 30px;
-
-}
-.imagenes2 img{
-	width: 50px;
-    height: 50px;
-    float: left;
-    padding: 10px;
-    margin: 10px;
-}
-
-.imagenes2 p{
-	text-align: center;
-    padding: 10px;
-}
-
-
-.imagenes3{
-      width: 220px;
-    /* outline: 1px solid red; */
-    height: 90px;
-    background-color: #FAA818;
-    border-radius: 15px;
-    font-size: 22px;
-    display: inline-block;
-            margin-left: 30px;
-
-}
-.imagenes3 img{
-	width: 50px;
-    height: 50px;
-    float: left;
-    padding: 10px;
-    margin: 10px;
-}
-
-.imagenes3 p{
-	text-align: center;
-    padding: 10px;
-}
-
-.imagenes4{
-    width: 220px;
-    /* outline: 1px solid red; */
-    height: 90px;
-    background-color: #FAA818;
-    border-radius: 15px;
-    font-size: 22px;
-    display: inline-block;
-    margin-left: 30px;
-
-}
-.imagenes4 img{
-	width: 50px;
-    height: 50px;
-    float: left;
-    padding: 10px;
-    margin: 10px;
-}
-
-.imagenes4 p{
-	text-align: center;
-    padding: 10px;
-}
-
-.imagenes5{
-        width: 220px;
-    /* outline: 1px solid red; */
-    height: 90px;
-    background-color: #FAA818;
-    border-radius: 15px;
-    font-size: 22px;
-    display: inline-block;
-            margin-left: 30px;
-
-}
-.imagenes5 img{
-	width: 50px;
-    height: 50px;
-    float: left;
-    padding: 10px;
-    margin: 10px;
-}
-
-.imagenes5 p{
 	text-align: center;
     padding: 10px;
 }
@@ -194,7 +103,7 @@ text-align: center;
 	color: #EBEBEB;
 }
 /*inicio del Footer*/
-footer.foot{
+footer{
 	background-color: #333333;
 	width:100%;
 	height:300px;
@@ -203,17 +112,15 @@ footer.foot{
 /*Iconos*/
 .redes-sociales{
 	text-align: center;
-	font-family: 'Roboto', sans-serif;
 }    
 .redes-sociales .icons h3{
 	color: #F7B617;
-	margin-top: 40px;
+	padding: 30px;
 	text-transform: uppercase;
-
-
 }
 .redes-sociales a{
 	float: left;
+    width: 100px;
 
 }
 .icons{
@@ -222,39 +129,71 @@ footer.foot{
 }
 
 .redes-sociales a i{
-	font-size: 40px;
-	color: #FFF;
-	padding-top: 15px;
-	margin-left: 30px;
-
+    font-size: 40px;
+    color: #FFF;
+    padding: 20px;
 }
 
-/*.redes-sociales a:hover{
-    
-}
-*/
 .redes-sociales a i:hover{
 	color: #F7B617 ;
 }
 .copyright{
-	margin-top: 76px;
-	color: #FFF;
-	font-size: 11px;
-
+    color: #FFF;
+    font-size: 15px;
 }
 
 /* Menu */
 
-nav{
+nav {
 	width: 150px;
 	text-align: center;
 }
-
 .Mexico{
-position: absolute;
+	position: absolute;
     left: 360px;
-    bottom: 40px;
+    top: 268px;
 }
+.Mexico img{
+    width: 100px;
+    height: 100px;
+    margin-left: 148px;
+    margin-bottom: -115px;
+}
+
+.Arequipa{
+    position: absolute;
+    left: 395px;
+    top: 400px;
+}
+.Arequipa img{
+    width: 150px;
+    height: 100px;
+    margin-left: 149px;
+    margin-bottom: -121px;
+}
+.Lima{
+	position: absolute;
+    left: 834px;
+    top: 372px;
+}
+.Lima img{
+width: 150px;
+    height: 100px;
+    margin-left: -302px;
+    margin-bottom: -105px;
+}
+.Santiago{
+    position: absolute;
+    left: 855px;
+    top: 483px;
+}
+.Santiago img{
+    width: 150px;
+    height: 100px;
+    margin-left: -298px;
+    margin-bottom: -121px;
+}
+
 ul{
 	list-style: none;
 	margin: 0;
@@ -269,7 +208,6 @@ a{
 	display: block;
 	text-decoration: none;
 	color: #000;
-	padding-left: 10px
 }
 a:hover{
 	background: #e0e0d1;
@@ -295,12 +233,7 @@ ul li:first-child a:active {
 	
 }
 
-nav img{
-    width: 100px;
-    height: 100px;
-    margin-left: 148px;
-    margin-bottom: -115px;
-}
+
 
 .graficos{
 	text-align: center;
