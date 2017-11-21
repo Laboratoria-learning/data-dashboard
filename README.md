@@ -36,5 +36,25 @@ El **main.css** está elaborado de manera que cada parte del documento disponga 
 
 Los enlaces y menú están trabajados, en general, con una transición simple de colores.
 
+
+###Javascript
+Para realizar la funcionalidad del documento primero comenzamos declarando variables globales, estas permiten que puedan ser reutilizadas durante todo el código. 
+
+Para explicar un poco más en detalle, existe un evento de click que permite desplegar el menú bajo el cargo del usuario que se encuentra visualizando el dashboard (también se utilizó la función window.onload para recargar la página), este menú le permite al usuario editar partes del documento, como su perfil y además eliminar alumnas. 
+
+En la sección del javascript "Asignando valores a las variables según la generación elegida" nos permite seleccionar cada sede y cada generación y por medio de eventos de click los datos mostrados en pantalla van cambiando de acuerdo a esto, esto quiere decir que cambia los datos del gráfico (porcentaje) y además los títulos.
+
+La función `sumAllStudents` corresponde a un contador que nos va sumando la cantidad de estudiantes, itera mediante un for y el if nos da la condición. 
+
+`var paragraphReplace` reemplaza los datos de un párrafo creado con DOM
+
+Más abajo describimos las variables y la función que muestra el porcentaje de deserción, las estudiantes inactivas y las que pasan el 70% de los sprints. 
+
+Y para finalizar se describe una función que llama a todas las funciones. 
+
+
+
+
+
 *Documento realizado en una pantalla de **1366x768** aproximadamente (de resolución total).*
 
