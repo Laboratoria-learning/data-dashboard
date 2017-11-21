@@ -541,3 +541,4 @@ changeTitle(SCL2017_2, pickCity, "Santiago de Chile 2017 - II");
 
 // Que Santiago de Chile 2017-II esté por default 
 event(window, santiagoIII, santiagoIII.ratings.length, "load");
+

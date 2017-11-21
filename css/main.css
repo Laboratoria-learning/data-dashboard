@@ -20,10 +20,15 @@ header img {
 	vertical-align: middle;
 }
 
+
+/* Barra de Navegacion*/
 nav {
 	padding: 10px 30px 0 30px;
 	background-color: #FFC107;
 }
+
+
+/* Titulo del menu desplegable*/
 
 #acces {
 	display:inline-block;
@@ -49,6 +54,8 @@ nav {
 	size: 18px;
 }
 
+
+/*Sub-menu*/
 nav ul {
 	list-style: none;
 	margin: 15px 0 0 40px;
@@ -79,7 +86,7 @@ nav li:hover {
  	display: inline-block;
 }
 
-
+/*Menu desplegable*/
 #invisible {
 	display: inline-block;
 	position: absolute;
@@ -123,12 +130,16 @@ select:focus {
 	outline: none;
 }
 
+
+/*Contenedor de Cajas*/
 #container {
 	padding: 20px 60px;
 	background-color: #F7F7F7;
 	height: 100%;
 }
 
+
+/*Primeras tres cajas para posicionar graficos*/
 #enrollment, #achievement, #nps {
 	float: left;
 	width: 350px;
@@ -140,6 +151,7 @@ select:focus {
 	text-align: center;
 }
 
+/*Cajas Anchas*/
 #tech, #hse {
 	width: 100%;
 	height: 400px;
@@ -161,7 +173,7 @@ select {
 	padding: 3px;
 }
 
-
+/*Cajas pequeñas contenedores de datos*/
 .data-cont {
 	float: left;
 	width: 150px;
@@ -174,6 +186,8 @@ select {
 	background-color: #F7F7F7;
 }
 
+
+/*Titulos*/
 h3 {
 	text-transform: uppercase;
 	margin: 5px;
@@ -188,11 +202,14 @@ h3 {
 	font-size: 20px;
 }
 
+/*Datos Dinamicos*/
 .data-cont span {
 	font-size: 18px;
 	font-weight: bold;
 }
 
+
+/*Definicion de datos*/
 .data-cont p {
 	margin: 2px;
 	text-transform: uppercase;
@@ -225,6 +242,7 @@ h3 {
 	margin-right: 90px;
 }
 
+/*Imagenes (Graficos)*/
 .graf {
 	width: 300px;
 	margin-top: 30px;
@@ -239,6 +257,7 @@ big {
 
 }
 
+/*Tres ultimas cajas*/r
 #satisfaction, #teacher, #jedi {
 	display: inline-block;
 	width: 350px;
@@ -249,3 +268,5 @@ big {
 	margin: 20px 20px;
 	text-align: center;
 }
+
+
