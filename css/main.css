@@ -66,24 +66,45 @@ body{
 
 }
 
-#enrollment {
+ #enrollment {
 
 	float: left;
-	background-color: #FEFDBE;
+	background-color:#fff;
 	margin:20px;
-	width:350px; 
+	width:400px; 
 }
 
+  #enrollment img{
+
+	
+	top:300px;
+	left:50px;
+	width: 110%;
+}
+   #enrollment  span{
+   	left: 100px;
+
+   }
 
 	#achievement{
 	float: left;
 	background-color: #F9EF4D;
-	margin:20px; 
+	margin:30px; 
 	width: 350px;
 }
-#nps{
+
+    #achievement img{
+    
+    width:140%;
+    top:1px;
+    left:2px; 
+
+
+    }
+
+    #nps{
 	float: left;
 	background-color:#D8FF85;
 	margin:20px; 
-	width: 350px;
+	width: 400px;
 }

@@ -11,7 +11,7 @@ console.log(container);
 	return total;
 }
 // ejemplo
-var enrollmentSCL20162 = data.SCL["2016-2","2017-1","2017-2"];
+var enrollmentSCL20162 = data.SCL["2016-2"];
 enrollmentSCL20162 = enrollment(enrollmentSCL20162);
 console.log("la cantidad de inscritas es " + enrollmentSCL20162);
 
@@ -27,11 +27,9 @@ function active(generation){
 	return active;
 }
 // ejemplo 
-var activeSCL20162 = data.SCL["2016-2","2017-1","2017-2"];
+var activeSCL20162 = data.SCL["2016-2"];
 activeSCL20162 = active(activeSCL20162);
 console.log("la cantidad de activas es " + activeSCL20162);
-
-
 
 
 // Función para la deserción en cantidad
@@ -165,7 +163,7 @@ npsSCL2016 = nps(npsSCL2016);
 console.log("el nps promedio es " + npsSCL2016);
 
 // Función para filtrar a las alumnas activas
-function activeStudents(generation){
+function activeArray(generation){
 	var newArray = [];
 	// Creando array para traspasar solo a las activas
 	for (var i = 0 ; i < generation.students.length ; i++){
@@ -179,14 +177,52 @@ function activeStudents(generation){
 	return newArray;
 }
 // ejemplo
-var beatsTechSCL20162 = data.SCL["2016-2"];
-beatsTechSCL20162 = beatsTech(beatsTechSCL20162);
-console.log(beatsTechSCL20162);
+var activeArraySCL20162 = data.SCL["2016-2"];
+activeArraySCL20162 = activeArray(activeArraySCL20162);
+console.log(activeArraySCL20162);
 
 
 
+// Función  para cuántas estudiantes cumplen la meta tech en determinado sprint
+function beatsTechPerSprint(generation, sprint) {
+    var total = 0;
+    for (var i = 0; i < activeArray(generation).length; i++) { //recorriendo alumnas
+        if (activeArray(generation)[i].sprints[sprint - 1].score.tech >= 1260) {
+            total = total + 1;
+        }
+    }
+    return total;
+}
 
+/* Función que calcula el promedio de estudiantes que cumplieron la meta tech durante
+todos los sprints */
+function averageBeatsTech(generation, totalSprints) {
+    var total = 0;
+    for (var i = 1; i <= totalSprints; i++) { // recorre los sprints
+        total = total + beatsTechPerSprint(generation, i);
+        console.log(i) // sprint
+        console.log(beatsTechPerSprint(generation, i)) // ¿cuántas superan la meta?
+    }
+    return Math.round((total / totalSprints)*100)/100;
+}
+//ejemplo
+var averageBeatsTechSCL20162 = data.SCL["2016-2"];
+var sprints = activeArraySCL20162[0].sprints.length;
+averageBeatsTechSCL20162 = averageBeatsTech(averageBeatsTechSCL20162, sprints);
+console.log(averageBeatsTechSCL20162);
 
+// Función para guardar los datos de "supera la meta" de cada sprint
+function averageBeatsTechPerSprint(generation, totalSprints) {
+	var newArray = [];
+    for (var i = 1; i <= totalSprints; i++) { // recorre los sprints
+        newArray.push(beatsTechPerSprint(generation, i));
+    }
+    return newArray;
+} 
+
+// ejemplo
+var cosita = averageBeatsTechPerSprint(data.SCL["2016-2"], sprints);
+console.log(cosita);
 
 
 // ----------------------------------------------------------------
@@ -584,7 +620,7 @@ Funciones:
 
 */
 
-function changeColor(id, num){
+/* function changeColor(id, num){
 	if (num < 50){
 		id.style.color = "red";
 	}
@@ -593,7 +629,7 @@ function changeColor(id, num){
 	}
 }
 
-function event(id, generation){
+function event(id, generation, totalSprints){
 	id.addEventListener("click", function(){
 		document.getElementById("enrollment-num").innerHTML = enrollment(generation);
 		var total = enrollment(generation);
@@ -606,6 +642,7 @@ function event(id, generation){
 		document.getElementById("promoters").innerHTML = promotersGlobal(generation) + "%";
 		document.getElementById("passive").innerHTML = passiveGlobal(generation) + "%";
 		document.getElementById("detractors").innertHTML = detractorsGlobal(generation) + "%";
+		document.getElementById("tech-num").innerHTML = averageBeatsTech(generation, totalSprints)
 		document.getElementById("satisfaction-per").innerHTML = happy(generation) + "%";
 		document.getElementById("teacher-rating").innerHTML = teacherScore(generation);
 		document.getElementById("jedi-rating").innerHTML = jediScore(generation);
@@ -615,6 +652,9 @@ function event(id, generation){
 var cosa = document.getElementById("cosa");
 event(cosa, santiagoIII);
 
+// Para ver los resultados de Tech Skills por sprint y no por overall
+function eventTech(id, generation, sprint){
+	id.addEventListener("click", function(){
 
-var selectElement = document.getElementById("pick-sede");
-var selectOption = "hola";
+	})
+}*/
