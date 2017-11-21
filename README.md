@@ -36,5 +36,5 @@ El **main.css** está elaborado de manera que cada parte del documento disponga 
 
 Los enlaces y menú están trabajados, en general, con una transición simple de colores.
 
-*Documento realizado en una pantalla de **1366x768** aproximadante (de resolución total).*
+*Documento realizado en una pantalla de **1366x768** aproximadamente (de resolución total).*
 
