@@ -9,13 +9,7 @@ remover cualquier estilo anterior de los elementos  */
 	margin: 0px;
 	padding: 0px;
 }
-#container{
-	text-align: center;
-    line-height: 1.5;
-    float: left;
-    outline: 1px solid red;
-    padding: 10px;
-}
+
 .container {
 	width: 100%;
 	height: 65px;
@@ -28,20 +22,47 @@ remover cualquier estilo anterior de los elementos  */
 	/* padding-right: 24px; */
 	line-height: 1.71429;
 	outline: 1px solid #EBEBEB;
-
-
 }
 
 .container img {
-width: 200px;
+    width: 200px;
     height: 65px;
-    margin-left: 30%;
+    margin-left: 39%;
     float: left;
     align-self: center;
 }
-.traducir{
-    float: left;
-    padding: 20px;
+#menu{
+	width: 300px;
+	position: absolute;
+	right: 20px;
+	text-transform: uppercase;
+	color: #000;
+	
+	
+}
+#menu ul li a:hover {
+	color: #FAB133;
+}
+#menu ul li{
+    background: none;
+    display: inline-block;
+    font-weight: 800;
+
+}
+
+#unete{
+    margin-right: 22px;
+}
+#menu ul{
+	margin-top: 18px;
+    margin-left: 145px;
+
+}
+
+.bars{
+    display: inline-block;
+    padding: 10px;
+    margin-top: 9px;
 }
 input{
 	width: 162px;
@@ -49,9 +70,18 @@ input{
 	background-color: #FFF;
 	border-radius: 6px;
 	border: 1px solid #EBEBEB;
+	display: inline-block;
+	
+	
+}
+.busqueda i{
+	margin-right: 20px;
+
+}
+.busqueda{
 	margin-right: 0px;
-	margin-left: 285px;
-	margin-top: 20px;
+	display: inline-block;
+	margin-top: 10px;
 }
 
 .superior{
@@ -150,8 +180,8 @@ nav {
 }
 .Mexico{
 	position: absolute;
-    left: 360px;
-    top: 268px;
+    left: 432px;
+    top: 272px;
 }
 .Mexico img{
     width: 100px;
@@ -162,8 +192,8 @@ nav {
 
 .Arequipa{
     position: absolute;
-    left: 395px;
-    top: 400px;
+    left: 464px;
+    top: 402px;
 }
 .Arequipa img{
     width: 150px;
@@ -173,8 +203,8 @@ nav {
 }
 .Lima{
 	position: absolute;
-    left: 834px;
-    top: 372px;
+    left: 905px;
+    top: 374px;
 }
 .Lima img{
 width: 150px;
@@ -184,7 +214,7 @@ width: 150px;
 }
 .Santiago{
     position: absolute;
-    left: 855px;
+    left: 924px;
     top: 483px;
 }
 .Santiago img{
@@ -209,9 +239,6 @@ a{
 	text-decoration: none;
 	color: #000;
 }
-a:hover{
-	background: #e0e0d1;
-}
 a:active{
 	background:#333;
 	color: #FFF; 
@@ -220,10 +247,7 @@ ul li:first-child{
 	background: #f9a91a;
 	
 }
-ul li:first-child a {
-	color:#FFF;
-	
-}
+
 ul li:first-child a:hover {
 	color:#000;
 	

@@ -4,7 +4,7 @@ console.log(data);
 // Menú por ciudad! 
 function Mexico() {
 	var menu = document.getElementsByClassName("Mexico")[0];
-	menu.style.display = '';
+		menu.style.display = '';
 }
 function Arequipa() {
 	var menu = document.getElementsByClassName("Arequipa")[0];
@@ -1327,7 +1327,7 @@ function generacionLIM2(){
 	var parrafo8=document.createElement('p');
 	var parrafo9=document.createElement('p');
 	var parrafo10=document.createElement('p');
-	
+
 	var contenedor= document.getElementById('uno');
 	
 	var contenedor2= document.getElementById('dos');
