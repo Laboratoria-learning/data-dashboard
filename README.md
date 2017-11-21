@@ -29,12 +29,12 @@ Los gráficos que se visualizan son imágenes simuladas (estáticas).
 
 Al cerrar el **main** pero antes de cerrar el **body** se enlazan los Javascript correspondientes a la data y al del propio documento.
 
-###index2.html 
+### index2.html 
 Hay un segundo HTML, que se enlaza con la pestaña de Students, en el cual dejamos planteado cómo se vería en términos de jerarquía la información.
 
 El **main.css** está elaborado de manera que cada parte del documento disponga de su propio contenedor y luego dentro de éste se agrupen y posicionen los diferentes elementos.
 
 Los enlaces y menú están trabajados, en general, con una transición simple de colores.
 
-*Documento realizado en una pantalla de **1366x768** aporximadante (de resolución total).*
+*Documento realizado en una pantalla de **1366x768** aproximadante (de resolución total).*
 
