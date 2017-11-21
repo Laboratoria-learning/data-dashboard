@@ -185,6 +185,10 @@ select {
 	background-color: #F7F7F7;
 }
 
+#drop-per {
+	color: red;
+}
+
 
 /*Titulos*/
 h3 {
