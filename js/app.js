@@ -90,7 +90,7 @@ function detractorsGlobal(generation){
 		var detractors = generation.ratings[i].nps.detractors;
 		result = result + detractors; 
 	}
-	return Math.round((result/generation.ratings.length)*100)/100;
+	return Math.round((result/generation.ratings.length)*10)/10;
 }
 
 // función de nps
@@ -321,7 +321,7 @@ function event(id, generation, totalSprints, evento){
 		changeColor(document.getElementById("nps-per"), nps(generation));
 		document.getElementById("promoters").innerHTML = promotersGlobal(generation) + " %";
 		document.getElementById("passive").innerHTML = passiveGlobal(generation) + " %";
-		document.getElementById("detractors").innertHTML = detractorsGlobal(generation) + " %";
+		document.getElementById("detractors").innerHTML = detractorsGlobal(generation) + " %";
 		document.getElementById("satisfaction-per").innerHTML = happy(generation) + " %";
 		changeColor(document.getElementById("satisfaction-per"), happy(generation));
 		document.getElementById("teacher-rating").innerHTML = teacherScore(generation);
@@ -541,4 +541,3 @@ changeTitle(SCL2017_2, pickCity, "Santiago de Chile 2017 - II");
 
 // Que Santiago de Chile 2017-II esté por default 
 event(window, santiagoIII, santiagoIII.ratings.length, "load");
-
