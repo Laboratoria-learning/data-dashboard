@@ -3,12 +3,202 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+
+    <!-- Link al estilo -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Link a los íconos -->
+    <script src="https://use.fontawesome.com/69bfbe7ab9.js"></script>
+    <!-- fuentes -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
   <body>
-    <div id="container"></div>
-		<!-- Base de datos -->
+      <!-- Barra con el logo de Laboratoria -->
+      <header>
+        <img src="assets/images/logo-laboratoria.svg" alt="Laboratoria">
+      </header>
+
+      <!-- Barra de navegación para seleccionar sede -->
+      <nav>
+
+          <div id="menu">
+            <div id="acces">
+              <!-- Selecciona Sede y Generación -->
+              <h2 id="title">Santiago de Chile 2017 - II <i class="fa fa-caret-down" aria-hidden="true"></i></h2>
+            </div>
+            <!-- Menú desplegable -->
+            <div id="invisible" class="invisible">
+              <h3>Lima</h3>
+              <hr>
+              <p id="LIM-2016-2">2016 - II</p>
+              <p id="LIM-2017-1">2017 - I</p>
+              <p id="LIM-2017-2">2017 - II</p>
+              <h3>Arequipa</h3>
+              <hr>
+              <p id="AQP-2016-2">2016 - II</p>
+              <p id="AQP-2017-1">2017 - I</p>
+              <h3>Ciudad de México</h3>
+              <hr>
+              <p id="CDMX-2017-1">2017 - I </p>
+              <p id="CDMX-2017-2">2017 - II</p>
+              <h3>Santiago de Chile</h3>
+              <hr>
+              <p id="SCL-2016-2">2016 - II</p>
+              <p id="SCL-2017-1">2017 - I</p>
+              <p id="SCL-2017-2">2017 - II</p>
+            </div>
+          </div>
+        <ul>
+          <li>Overview</li>
+          <li>Students</li>
+          <li>Teachers</li>
+        </ul>
+      </nav>
+
+      <!-- Div contenedor de la sección con los datos -->
+      <div id="container">
+      <!-- Enrrolment -->
+      <div id="enrollment">
+
+        <h2>Enrollment</h2>
+        <div class="data-cont">
+          <span id="enrollment-num">0</span>
+          <p># Students currently enrolled</p>
+        </div>
+
+        <div class="data-cont">
+          <span id="drop-per">0%</span>
+          <p>% Dropout</p>
+        </div>
+        <img src="assets/images/circle-graphic.png" class="circle" alt="Gráfico">
+      </div>
+
+      <!-- Achievement -->
+      <div id="achievement">
+        <h2>Achievement</h2>
+
+        <div class="data-cont">
+          <span id="achievement-num">0</span>
+          <p># Students that meet the target</p>
+        </div>
+
+        <div class="data-cont">
+          <span id="achievement-per">0%</span>
+          <p>% Of total</p>
+        </div>
+
+        <img src="assets/images/bar-graph.png" class="graf" alt="">
+      </div>
+      
+      <!-- NPS -->
+      <div id="nps">
+        <h2>Net Promoter Score</h2>
+        <div class="data-cont">
+          <span id="nps-per">0%</span>
+          <p>% Cumulative NPS</p>
+        </div>
+
+        <div class="data-cont nps">
+          <p><span id="promoters">0 % </span>Promoters</p>
+
+          
+          <p><span id=passive>0 % </span>Passive</p>
+
+          <p><span id="detractors">0 % </span>Detractors</p>
+        </div>
+
+        <img src="assets/images/graph.png" class="graf" alt="">
+      </div>
+      
+      <!-- Tech Skills -->
+      <div id="tech">
+        <h2>Tech Skills</h2>
+
+        <select name="tech-sprint" id="tech-sprint">
+        <option selected value="overall" id="tech-overall">Overall (cumulative)</option>
+        <option value="sprint-one" id="tech-option-one">Sprint 1</option>
+        <option value="sprint-two" id="tech-option-two">Sprint 2</option>
+        <option value="sprint-three" id="tech-option-three" class ="invisible">Sprint 3</option>
+        <option value="sprint-four" id="tech-option-four" class="invisible">Sprint 4</option>
+        </select>
+
+        <div class="data-cont">
+          <span id="tech-num">0</span>
+          <p># Students that meet the target</p>
+        </div>
+
+        <div class="data-cont">
+          <span id="tech-per">0%</span>
+          <p>% Of total</p>
+        </div>
+
+        
+      </div>
+
+      <!-- Life Skills -->
+      <div id="hse">
+        <h2>Life Skills</h2>
+
+        <select name="hse-sprint" id="hse-sprint">
+        <option selected value="overall" id="overall">Overall (cumulative)</option>
+        <option value="sprint-one" id="option-one">Sprint 1</option>
+        <option value="sprint-two" id="option-two">Sprint 2</option>
+        <option value="sprint-three" id="option-three">Sprint 3</option>
+        <option value="sprint-four" id="option-four">Sprint 4</option>
+        </select>
+
+        <div class="data-cont">
+          <span id="hse-num">0</span>
+          <p># Students that meet the target</p>
+        </div>
+
+        <div class="data-cont">
+          <span id="hse-per">0%</span>
+          <p>% Of total</p>
+        </div>
+
+        
+      </div>
+
+      <!-- Satisfaction -->
+      <div id="satisfaction">
+        <h2>Student Satisfaction</h2>
+
+        <div class="data-cont">
+          <span id="satisfaction-per">0%</span>
+          <p>% Meeting or exceding the expectations</p>
+        </div>
+
+        <img src="assets/images/graph.png" class="graf" alt="">
+      </div>
+      
+      <!-- Teacher Rating -->
+      <div id="teacher">
+        <h2>Teacher Rating</h2>
+
+        <div class="data-cont">
+          <span id="teacher-rating">0</span>
+          <p>Overall teacher rating</p>
+        </div>
+
+        <img src="assets/images/graph.png" class="graf" alt="">
+      </div>
+      
+      <!-- Jedi Rating -->
+      <div id="jedi">
+        <h2>Jedi Master Rating</h2>
+
+        <div class="data-cont">
+          <span id="jedi-rating">0</span>
+          <p>Overall jedi master rating</p>
+        </div>
+        <img src="assets/images/graph.png" class="graf" alt="">
+      </div>
+
+      </div>
+
+		<!-- Link a la base de datos -->
 		<script src="./js/data.js"></script>
-		<!-- Aquí va tus archivos JS -->
+		<!-- Link al archivo principal js -->
     <script src="./js/app.js"></script>
   </body>
 </html>
