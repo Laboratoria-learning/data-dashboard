@@ -1,3 +1,275 @@
-/*
- * Estilos de tu proyecto
- */
+* {
+	box-sizing: border-box;
+	font-family: "Opens Sans", Helvetica, sans-serif;
+	color: #2B2B2B;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	height: 70px;
+	text-align: center;
+	border-bottom: 1px solid #F7F7F7;
+}
+
+header img {
+	height: 70px;
+	vertical-align: middle;
+}
+
+
+/* Barra de Navegacion*/
+nav {
+	padding: 10px 30px 0 30px;
+	background-color: #FFC107;
+}
+
+
+/* Titulo del menu desplegable*/
+#acces {
+	display:inline-block;
+	border-bottom: 1px solid  #2B2B2B;
+	margin-left: 40px;
+}
+
+#acces:hover {
+	cursor: pointer;
+}
+
+#title {
+	size: 24px;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#title i {
+	padding-left: 13px;
+	padding-right: 10px;
+	size: 18px;
+}
+
+
+/*Sub-menu*/
+nav ul {
+	list-style: none;
+	margin: 15px 0 0 40px;
+	padding: 0;
+	text-transform: uppercase;
+}
+
+nav li {
+	display: inline-block;
+	vertical-align: bottom;
+	text-align: center;
+	width: 140px;
+	height: 40px;
+	line-height: 40px;
+	font-weight: 600;
+}
+
+nav li:first-child {
+	border-bottom: 2px solid #2B2B2B;
+}
+
+nav li:hover {
+	cursor: pointer;
+	border-bottom: 2px solid #2B2B2B;
+}
+
+#menu {
+ 	display: inline-block;
+}
+
+/*Menu desplegable*/
+#invisible {
+	display: inline-block;
+	position: absolute;
+	background-color: white;
+	margin-left: 40px;
+	width: 300px;
+	padding: 10px;
+	border-bottom: 1px solid #E1E1E1;
+}
+
+#invisible h3 {
+	font-size: 16px;
+	margin: 10px 0 0 0;
+}
+
+#invisible p {
+	font-size: 12px;
+	padding: 3px 3px 3px 8px;
+	line-height: 30px;
+	cursor: pointer;
+}
+
+#invisible p:hover {
+	background-color: #E1E1E1;
+}
+
+#invisible hr {
+	width: 150px;
+	display: inline-block;
+	margin: 0;
+	color: #FFC107;
+	border: 2px solid #FFC107;
+}
+
+.invisible {
+	visibility: hidden;
+	display:none;
+}
+
+select:focus {
+	outline: none;
+}
+
+
+/*Contenedor de Cajas*/
+#container {
+	padding: 20px 60px;
+	background-color: #F7F7F7;
+	height: 100%;
+}
+
+
+/*Primeras tres cajas para posicionar graficos*/
+#enrollment, #achievement, #nps {
+	float: left;
+	width: 350px;
+	height: 350px;
+	background-color: white;
+	padding: 10px;
+	border-bottom: 1px solid #E1E1E1;
+	margin: 20px 20px;
+	text-align: center;
+}
+
+/*Cajas Anchas*/
+#tech, #hse {
+	width: 100%;
+	height: 400px;
+	margin: 20px 0;
+	padding: 10px;
+	border-bottom: 1px solid #E1E1E1;
+	background-color: white;
+	clear: both;
+}
+
+
+select {
+	clear: both;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid #E1E1E1;
+	background-color: #F7F7F7;
+	height: 30px;
+	padding: 3px;
+}
+
+/*Cajas pequeñas contenedores de datos*/
+.data-cont {
+	float: left;
+	width: 150px;
+	height: 70px;
+	text-align: center;
+	padding: 8px;
+	border-bottom: 1px solid #E1E1E1;
+	margin-left: 7px;
+	margin-right: 7px;
+	background-color: #F7F7F7;
+}
+
+#drop-per {
+	color: red;
+}
+
+
+/*Titulos*/
+h3 {
+	text-transform: uppercase;
+	margin: 5px;
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+
+
+#container h2 {
+	text-transform: uppercase;
+	margin: 10px 10px 20px 10px;
+	font-size: 20px;
+}
+
+/*Datos Dinamicos*/
+.data-cont span {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+
+/*Definicion de datos*/
+.data-cont p {
+	margin: 2px;
+	text-transform: uppercase;
+	font-size: 10px;
+	line-height: 12px;
+}
+
+.nps {
+	text-align: justify-all;
+}
+
+.nps p {
+	text-transform: none;
+	font-size: 12px;
+	margin: 0;
+	line-height: 14px;
+	text-align: justify;
+}
+
+.nps span {
+	font-size: 12px;
+	font-weight: 400;
+	display: inline-block;
+	width: 60px;
+}
+
+#satisfaction .data-cont, #jedi .data-cont, #teacher .data-cont {
+	text-align: center;
+	margin-left: 90px;
+	margin-right: 90px;
+}
+
+/*Imagenes (Graficos)*/
+.graf {
+	width: 300px;
+	margin-top: 30px;
+}
+
+.circle {
+	height: 150px;
+	margin-top: 30px;
+}
+
+big {
+
+}
+
+/*Tres ultimas cajas*/
+#satisfaction, #teacher, #jedi {
+	display: inline-block;
+	width: 350px;
+	height: 350px;
+	background-color: white;
+	padding: 10px;
+	border-bottom: 1px solid #E1E1E1;
+	margin: 20px 20px;
+	text-align: center;
+}
+
+
