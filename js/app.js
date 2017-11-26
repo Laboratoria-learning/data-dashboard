@@ -1,9 +1,4 @@
-/*
- * Funcionalidad de tu producto
- */
 
-// Puedes hacer uso de la base de datos a través de la variable `data`
-// console.log(data);
 // Seleccion de pais
 var peru = document.getElementById('countries').children[0];
 peru.addEventListener('click', function(event) {
@@ -26,6 +21,26 @@ mexico.addEventListener('click', function(event) {
   city.classList.toggle('hide');
 });
 
+//accediendo a lima
+window.addEventListener('load',function(){
+  var lima = document.getElementById('lima');
+  var arequipa = document.getElementById('arequipa');
+  var santiago = document.getElementById('santiago');
+  var mexicoDF = document.getElementById('mexicoDF');
+
+  lima.addEventListener('click',function(){
+    var x = data.LIM["2017-2"]['ratings'][0]['nps']['promoters'];
+    var y = data.LIM["2017-2"]['ratings'][0]['nps']['passive'];
+    var z = data.LIM["2017-2"]['ratings'][0]['nps']['detractors'];
+    var numEnrollment = document.getElementById('numEnro');
+    numEnrollment.textContent=x+y+z +'#student currently enrolled';
+
+  })
+
+
+
+
+})
 
 /* var select = document.getElementById('select');
 var alumn = document.getElementById('alumn');
