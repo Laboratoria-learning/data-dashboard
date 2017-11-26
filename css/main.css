@@ -1,13 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "FaktProSoft", "Helvetica Neue", helvetica, arial, sans-serif;
+  color: #333;
+}
+/* HEADER*/
+header {
+  height: auto;
+  width: 100%;
+  background-color: #fb1;
+  box-sizing: border-box;
+}
+
+header p {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  position: relative;
+  bottom: 25px;
+  color: white;
+}
+
+.left {
+  left: 25px;
+}
+
+.right {
+  right: 25px;
+}
+
+img {
+  width: 200px;
+}
+
+.fa {
+  color: white;
+  font-size: 25px;
+  transform: translateY(-100%);
+}
+
+.fa-bars {
+  padding-left: 20px;
+}
+
+.fa-user-circle{
+  position: relative;
+  left: 900px;
+  font-size: 35px;
+  transform: translateY(-50%);
+}
+
+.text-Uppercase {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/*Navegador*/
+nav {
+  background-color: #ccc;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+p {
+  display: inline-block;
+  font-size: 20px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.nav {
+  width: 150px;
+  padding: 30px  0px;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 920px;
+}
+
+.nav img {
+  width: 100px;
+}
+
+.nav ul {
+  list-style: none;
+}
+/*Countries*/
+.nav li {
+  margin-top: 10px;
+  background-color: white;
+  width: 100px;
+  border-radius: 5px;
+  transform: translateX(25%);
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.fa-sort-desc {
+  color: black;
+  transform: translateY(-10%);
+}
+
+.city li {
+  width: 90px;
+  margin: 5px;
+  transform: translateX(-1%);
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
 
 /*Diseñando el contenido de las secciones*/
 .section {
-  position: relative;
-
+  /*position: relative;*/
+  padding-top: 70px;
+  display: block;
 }
 .firts {
+  margin-top: 60px;
   background: #F3E9E7;
   width: 377px;
   height: 272px;
+  padding-left: 20px;
+  padding-top: 10px;
+  box-sizing: border-box;
 }
 .one{
   position: absolute;
@@ -24,14 +144,12 @@
   right: 0px;
   top: 71px;
   position: absolute;
- 
-  
 }
 .four{
   position: absolute;
   top: 353px;
   left: 167px;
-  
+
 }
 .five{
   position: absolute;
@@ -46,25 +164,47 @@
 .seven{
   position: absolute;
   top: 666px;
-  left: 564px; 
+  left: 564px;
 }
 .eight{
   position: absolute;
   right: 0px;
   top: 666px;
-  
+
 }
 .second{
+  margin-top: 60px;
   width: 574px;
   height: 302px;
   background: #F3E9E7;
+  padding-left: 20px;
+  padding-top: 10px;
+  box-sizing: border-box;
 }
 .position {
+  margin-top: 50px;
   position: absolute;
   right: 7%;
   top: 7%;
 }
 
+select, a {
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0px 5px;
+}
+
+select {
+  padding: 3px;
+}
+
+a {
+  border: 2px solid #fb1;
+  padding: 5px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
 /*Diseñando las imagenes de estadistica*/
 .img img{
   width: 234px;
