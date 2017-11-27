@@ -3,8 +3,46 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <!-- Header -->
+    <header>
+      <img class="header-logo"src="assets/images/logo-laboratoria.svg" alt="">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </header>
+    <select name="select-sede" id="select-sede">
+      <option selected value="0"> Elige una opción </option>
+      <optgroup label="LIMA">
+      <option value="1">2015 - I</option>
+      <option value="2">2015 -II</option>
+      <option value="3">2016 - I</option>
+      <option value="4">2016 - II</option>
+      <option value="5">2017 - I</option>
+      <option value="6">2017 - II</option>
+    </optgroup>
+    <optgroup label="AREQUIPA">
+      <option value="10">2015 - I</option>
+      <option value="11">2016 - I</option>
+      <option value="12">2017 - I</option>
+      <option value="13">2017 - II</option>
+    </optgroup>
+    <optgroup label="SANTIAGO DE CHILE">
+      <option value="14">2015 - I</option>
+      <option value="15">2016 - I</option>
+      <option value="16">2016 - II</option>
+      <option value="17">2017 - I</option>
+      <option value="18">2017 - II</option>
+    </optgroup>
+    <optgroup label="CIUDAD DE MEXICO">
+      <option value="19">2015 - I</option>
+      <option value="20">2016 - I</option>
+      <option value="21">2016 - II</option>
+      <option value="22">2017 - I</option>
+      <option value="23">2017 - II</option>
+    </optgroup>
+      </select>
 
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
