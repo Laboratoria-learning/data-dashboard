@@ -1,3 +1,19 @@
-/*
- * Estilos de tu proyecto
- */
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+header {
+  height: 120px;
+  width: 100%;
+  text-align: center;
+  border: 10px solid #fb1;
+  box-sizing: border-box;
+}
+
+img {
+  width: 300px;
+  height: 100px;
+  display: inline-block;
+}
