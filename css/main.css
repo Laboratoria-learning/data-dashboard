@@ -1,0 +1,33 @@
+.caja {
+  background: #F3E9E7;
+  width: 350px;
+  height: 250px;
+  display: inline-block;
+  
+}
+.firtAndtree{
+  width: 320px;
+  height: 250px;
+  margin: 1%;
+  margin-top: 5%;
+}
+
+
+.second{
+  width: 500px;
+  height: 250px;
+  margin: 1%;
+
+}
+.one {
+  margin-left: 17%;
+}
+.tree{
+  margin-top: 1%;
+}
+.position {
+  position: absolute;
+  right: 7%;
+  top: 7%;
+}
+
