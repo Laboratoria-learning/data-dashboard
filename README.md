@@ -32,16 +32,20 @@ En el cual le pedimos que realice 4 operaciones :
 
 1.Loguearse  
 2.Ingresar a su perfil  
-3.filtrar su búsqueda  
+3.Filtrar su búsqueda  
 4.Ingresar a ver otros datos. (los datos de las estudiantes y profesoras).  
 
 **Prueba**
 
 
 ### PARTE 3  
-Ya que tenemos nuestra version 1 de el proyecto,añadimos el cofigo html y css.  
+Ya que tenemos nuestra version 1 del proyecto,añadimos el codigo html y css.  
 
 ### PARTE 4
 Añadimos el codigo js.
 
 **FLUJOGRAMA**
+
+Integrantes:  
+Alejandra Hoces.  
+Karina Vivanco.
