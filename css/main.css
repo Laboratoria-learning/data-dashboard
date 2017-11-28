@@ -114,8 +114,11 @@
 
  hr {
      background: orange;
-     width: 90%;
+     width: 70%;
      margin-top: 10px;
      margin-left: 20px;
+ }
 
+ .container {
+     margin-top: 20px;
  }
