@@ -39,9 +39,13 @@ img {
   transform: translateY(-100%);
 }
 
+.fa-bars {
+  padding-left: 20px;
+}
+
 .fa-user-circle{
   position: relative;
-  left: 930px;
+  left: 900px;
   font-size: 35px;
   transform: translateY(-50%);
 }
@@ -70,6 +74,7 @@ p {
   padding: 30px  0px;
   box-sizing: border-box;
   display: inline-block;
+  height: 920px;
 }
 
 .nav img {
@@ -116,10 +121,13 @@ p {
   display: block;
 }
 .firts {
-  margin-top: 80px;
+  margin-top: 60px;
   background: #F3E9E7;
   width: 377px;
   height: 272px;
+  padding-left: 20px;
+  padding-top: 10px;
+  box-sizing: border-box;
 }
 .one{
   position: absolute;
@@ -165,10 +173,13 @@ p {
 
 }
 .second{
-  margin-top: 80px;
+  margin-top: 60px;
   width: 574px;
   height: 302px;
   background: #F3E9E7;
+  padding-left: 20px;
+  padding-top: 10px;
+  box-sizing: border-box;
 }
 .position {
   margin-top: 50px;
@@ -177,6 +188,23 @@ p {
   top: 7%;
 }
 
+select, a {
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0px 5px;
+}
+
+select {
+  padding: 3px;
+}
+
+a {
+  border: 2px solid #fb1;
+  padding: 5px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
 /*Diseñando las imagenes de estadistica*/
 .img img{
   width: 234px;
