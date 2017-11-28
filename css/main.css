@@ -161,18 +161,19 @@ section.user h4 {
 
 div.home {
     border-bottom: 1px solid #ffc107; 
-    margin-top: 80px;
+    margin-top: 60px;
+    padding-top: 20px;
     padding-bottom: 10px;
 }
 
 div.tables, div.calendar {
     border-bottom: 1px solid #ffc107; 
-    margin: 20px 0px;
+    padding: 20px 0px;
     padding-bottom: 10px;
 }
 
 div.out {
-    margin: 20px 0px;
+    padding: 20px 0px;
 }
 
 .home h4, .tables h4, .calendar h4, .out h4 {
@@ -184,6 +185,11 @@ section.user i {
     margin-left: 30px;
 }
 
+div.home:hover, div.tables:hover, div.calendar:hover, div.out:hover {
+    background-color: #ffc107; 
+    color: #fff;
+
+}
 
  /*Estilo de la sección teacher */
 
