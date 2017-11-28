@@ -6,11 +6,20 @@ Gris #2b2b2b
 Gris claro #e0e0e0
  */
 
+/* Estilos generales */
 * {
   margin: 0;
   padding: 0;
   font-family: 'Lato', sans-serif;
   box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* Estilos Sidebar */
@@ -37,13 +46,8 @@ Gris claro #e0e0e0
   margin: auto;
 }
 
-#sidebar ul {
-  list-style: none;
-}
-
 #sidebar a {
   display: block;
-  text-decoration: none;
   color: #2b2b2b;
   padding: 10px;
   transition: background-color .25s;
@@ -62,6 +66,30 @@ header {
   color: #b9b9b9;
   height: 72px;
   box-shadow: 0px 5px 15px #e0e0e0;
+}
+
+header h1 {
+  float: left;
+}
+
+#nav-extra {
+  float: right;
+}
+
+#nav-extra li {
+  display: inline-block;
+}
+
+#nav-extra a {
+  color: #b9b9b9;
+  font-size: 1.5em;
+  padding: 0 15px;
+  line-height: 40px;
+  transition: .25s;
+}
+
+#nav-extra a:hover {
+  color: #ffa608;
 }
 
 /* Estilos main */
