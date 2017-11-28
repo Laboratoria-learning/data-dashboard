@@ -32,7 +32,7 @@ description.innerText = '# STUDENTS CURRENTLY ENROLLED';
 enrollment.appendChild(currentStudents);
  */
 // creando ...
-window.addEventListener('onload', function() {
+window.addEventListener('load', function() {
   var overview = document.getElementById('general');
   // enrollment 
   var enrollment = document.createElement('div');
@@ -41,7 +41,7 @@ window.addEventListener('onload', function() {
   titleEnroll.innerText = 'ENROLLMENT';
   var allStudents = document.createElement('h2');
   var textAS = document.createElement('span');
-  text.innerText = '# STUDENTS CURRENTLY ENROLLED';
+  textAS.innerText = '# STUDENTS CURRENTLY ENROLLED';
   var enrollTwo = document.createElement('div');
   var dropout = document.createElement('h2');
   dropout.innerText = '93%'
@@ -61,6 +61,8 @@ window.addEventListener('onload', function() {
   enrollTwo.setAttribute('class', 'enrollTwo');
   // achievement 
   var achievement = document.createElement('div');
+  var achiOne = document.createElement('div');
+  var achiTwo = document.createElement('div');
   var titleAchi = document.createElement('h1');
   titleAchi.innerText = 'ACHIEVEMENT';
   var target = document.createElement('h1');
@@ -69,6 +71,17 @@ window.addEventListener('onload', function() {
   var percentTotal = document.createElement('h2');
   var textTotal = document.createElement('span');
   textTotal.innerText = '% OF TOTAL ()';
+  // agregando al achievement 
+  general.appendChild(achievement);
+  achievement.appendChild(titleAchi);
+  achiOne.appendChild(target);
+  achiOne.appendChild(texTarg);
+  achiTwo.appendChild(percentTotal);
+  achiTwo.appendChild(textTotal);
+  // estilos de achievement
+  achievement.setAttribute('class', 'achievementClass');
+  achiOne.setAttribute('class', 'achiOne');
+  achiTwo.setAttribute('class', 'achiTwo');
   // promoter score
   var promoterScore = document.createElement('div');
   var titleProSco = document.createElement('h1');
@@ -76,8 +89,7 @@ window.addEventListener('onload', function() {
   var nps = document.createElement('h1');
   var textNps = document.createElement('span');
   textNps.innerText = '% CUMULATIVE NPS';
-  
-
+  // agregando promoter
 });
 // Puedes hacer uso de la base de datos a través de la variable `data`
 console.log(data);
