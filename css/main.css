@@ -8,14 +8,42 @@
 header {
   height: auto;
   width: 100%;
-  text-align: center;
-  border: 10px solid #fb1;
+  background-color: #fb1;
   box-sizing: border-box;
+}
+
+header p {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  position: relative;
+  bottom: 25px;
+  color: white;
+}
+
+.left {
+  left: 25px;
+}
+
+.right {
+  right: 25px;
 }
 
 img {
   width: 200px;
-  display: inline-block;
+}
+
+.fa {
+  color: white;
+  font-size: 25px;
+  transform: translateY(-100%);
+}
+
+.fa-user-circle{
+  position: relative;
+  left: 1000px;
+  font-size: 35px;
+  transform: translateY(-50%);
 }
 
 .text-Uppercase {
