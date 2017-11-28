@@ -1,3 +1,67 @@
 /*
  * Estilos de tu proyecto
  */
+ *{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+ /* header*/
+ .menuUno{
+   width: 100%;
+   background-color: yellow;
+ }
+ .menuUno img {
+   margin: auto 45%;
+   width: 150px;
+ }
+ .menuDos{
+   width: 100%;
+   height: 135px;
+   background-color: aqua;
+ }
+ /* overview*/
+ select {
+     background: transparent;
+     border: none;
+     font-size: 14px;
+     height: 30px;
+     padding: 5px;
+     width: 250px;
+		 outline: none;
+  }
+  .menuDos li {
+    display: inline-block;
+    margin: 10px;
+    list-style: none;
+  }
+  section{
+    width: 90%;
+    display: inline-block;
+    margin: 5% 5%;
+    outline: 1px solid blue;
+  }
+  section div {
+    float: left;
+    margin: 20px;
+  }
+  section #chart_div{
+    float: right;
+  }
+/* students*/
+.box-specialization{
+outline: 1px solid black;
+display: inline-block;
+margin: 30px 50px;
+}
+.box-search{
+outline: 1px solid red;
+display: inline-block;
+float: right;
+width: 50em;
+height: 2em;
+margin: 30px 50px;
+}
+.box-create{
+  height: 10em;
+}

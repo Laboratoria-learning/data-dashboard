@@ -1,4 +1,5 @@
 var data = {
+  /* AREQUIPA*/
   'AQP': {
     '2016-2': {
       'students': [
@@ -1063,6 +1064,7 @@ var data = {
       ]
     }
   },
+  /* MEXICO*/
   'CDMX': {
     '2017-1': {
       'students': [
@@ -2415,6 +2417,7 @@ var data = {
       ]
     }
   },
+  /* LIMA*/
   'LIM': {
     '2016-2': {
       'students': [
@@ -3629,6 +3632,7 @@ var data = {
       ]
     }
   },
+  /* SCL*/
   'SCL': {
     '2016-2': {
       'students': [
