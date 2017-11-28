@@ -18,7 +18,9 @@ for (var i = 0; i <= studemts.length; i++) {
   }
 }
 
+var porcentajeDesercion = (studemtsDeserte / studemts.length * 100);
 console.log(studemtsDeserte.length);
+console.log(porcentajeDesercion);
 // Puedes hacer uso de la base de datos a través de la variable `data`
 // console.log(data);
 
