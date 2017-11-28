@@ -25,7 +25,7 @@
 
 .icon-bars {
   text-align: center;
-  font-size: 26pt;
+  font-size: 23pt;
   position: relative;
   float: right;
   bottom: 62px;
@@ -33,8 +33,19 @@ right: 4%;
 }
 
 select {
+  /*width: 244px;*/
+/*font-size: 18px;*/
+outline: none;
+/* outline: pink; */
+border: none;
+width: 302px;
+padding: 2px;
+font-size: 22px;
+}
+
+.select-left {
   width: 240px;
-font-size: 18px;
+margin-right: 75px;
 }
 
 form {
@@ -48,7 +59,7 @@ form {
 
 .global {
   margin-left: 24px;
-margin-top: 20px;
+margin-top: 34px;
 margin-bottom: 20px;
 font-size: 20pt;
 font-weight: 600;
@@ -76,7 +87,7 @@ padding: 10px;
 
 .left {
   position: relative;
-bottom: 47px;
+bottom: 28px;
 }
 
 .medium {
@@ -88,4 +99,45 @@ bottom: 29px;
   position: relative;
 bottom: 43px;
 width: 1275px;
+}
+
+.social-habilities {
+  position: relative;
+      top: 190px;
+      width: 1275px;
+          right: 52px;
+}
+
+.div-left {
+  width: 369px;
+  margin-top: 218px;
+  height: 355px;
+  background-color: palegoldenrod;
+  padding: 20px
+}
+
+.div-center {
+  width: 369px;
+/* margin-top: 218px; */
+height: 355px;
+background-color: palegoldenrod;
+padding: 20px;
+left: 464px;
+top: 851px;
+position: absolute;
+}
+
+.div-right {
+  width: 369px;
+/* margin-top: 218px; */
+height: 355px;
+background-color: palegoldenrod;
+padding: 20px;
+position: absolute;
+top: 852px;
+right: 0px;
+}
+
+.general {
+  padding-bottom: 60px;
 }
