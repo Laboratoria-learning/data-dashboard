@@ -1,12 +1,148 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Dashboard</title>
-  </head>
-  <body>
-
-		<!-- Base de datos -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <figure class="logo">
+            <img src="assets/images/logo-laboratoria.svg" alt="logo">
+        </figure>
+        <div  class="icons-header">
+            <span><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></span>
+            <span><a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a></span>
+        </div>
+    </header>
+    <section>
+        <div class="section-1">
+            <h3 class="capital-letter">Lima 2017 - II</h3>
+            <span><a href=""><i class="fa fa-caret-down  fa-3x" aria-hidden="true"></i></a></span>
+            <div>
+                <h5 class="capital-letter"><a href="">overview</a></h5>
+                <h5 class="capital-letter"><a href="">students</a></h5>
+                <h5 class="capital-letter"><a href="">teachers</a></h5>
+            </div>
+        </div>
+    </section>
+    <section>
+         <div class="section-2">
+            <div class="box-info">
+                <h6 class="capital-letter">enrollment</h6>
+                <div class="box-container-data">
+                    <div class="box-data">
+                        <span>120</span>
+                        <p class="capital-letter"># students currently enrolled</p>
+                    </div>
+                    <div class="box-data">
+                        <span>20%</span>
+                        <p class="capital-letter">% dropout</p>
+                    </div>
+                </div>
+                <figure>
+                    <img src="assets/images/bar-graph.png" alt="grafico">
+                </figure>
+             </div>
+             <div class="box-info">
+                    <h6 class="capital-letter">achievement</h6>
+                    <div class="box-container-data">
+                        <div class="box-data">
+                            <span>105</span>
+                            <p class="capital-letter"># students that meet de target</p>
+                        </div>
+                        <div class="box-data">
+                            <span>78% <i class="fa fa-caret-up" aria-hidden="true"></i></span>
+                            <p class="capital-letter">% of total (135)</p>
+                        </div>
+                    </div>
+                    <figure>
+                        <img src="assets/images/graph.png" alt="grafico">
+                    </figure>
+                </div>
+                <div class="box-info">
+                    <h6 class="capital-letter">net promoter score</h6>
+                    <div class="box-container-data">
+                        <div class="box-data">
+                            <span>78 % <i class="fa fa-caret-up" aria-hidden="true"></i> </span>
+                            <p class="capital-letter"> % cumulative nps </p>
+                        </div>
+                        <div class="box-data">
+                            <ul>
+                                <li class="capital-letter">60 % promoters</li>
+                                <li class="capital-letter">30 % pasive</li>
+                                <li class="capital-letter">10 % detractors</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <figure>
+                        <img src="assets/images/graph.png" alt="grafico">
+                    </figure>
+                </div>
+        </div>
+    </section>
+    <!--pegar aqui seccion-3-->
+    <section class="section-5">
+        <div class="section-5">
+            <div class="box-evaluation">
+                <h6 class="capital-letter">student satisfaction</h6>
+                <div class="box-points">
+                    <p>140</p>
+                    <span class="capital-letter">% meeting or exceeding expectations (cumulative)</span>
+                </div>
+                <figure>
+                    <img src="assets/images/graph.png" alt="graph">
+                </figure>
+            </div>
+            <div class="box-evaluation">
+                <h6 class="capital-letter">teacher rating</h6>
+                <div class="box-points">
+                    <p>4.2</p>
+                    <span class="capital-letter">overall teacher rating (cumulative)</span>
+                </div>
+                <figure>
+                    <img src="assets/images/graph.png" alt="graph">
+                </figure>
+            </div>
+            <div class="box-evaluation">
+                <h6 class="capital-letter">jedi master rating</h6>
+                <div class="box-points">
+                    <p>50 <i class="fa fa-caret-up" aria-hidden="true"></i></p>
+                    <span class="capital-letter">overall jedi rating (cumulative)</span>
+                </div>
+                <figure>
+                    <img src="assets/images/graph.png" alt="graph">
+                </figure>
+            </div>
+        </div>
+    </section>
+    <div class="list-city">
+        <ul>
+            <li class="capital-letter">lima</li>
+            <li class="capital-letter"><a href=""></a>2016 ii</li>
+            <li class="capital-letter"><a href=""></a>2017 i</li>
+            <li class="capital-letter"><a href=""></a>2017 ii</li>
+        </ul>
+        <ul>
+            <li class="capital-letter">arequipa</li>
+            <li class="capital-letter"><a href=""></a>2016 ii</li>
+            <li class="capital-letter"><a href=""></a>2017 i</li>
+        </ul>
+        <ul>
+            <li class="capital-letter">santiago de chile</li>
+            <li class="capital-letter"><a href=""></a>2016 ii</li>
+            <li class="capital-letter"><a href=""></a>2017 i</li>
+            <li class="capital-letter"><a href=""></a>2017 ii</li>
+        </ul>
+        <ul>
+            <li class="capital-letter">ciudad de méxico</li>
+            <li class="capital-letter"><a href=""></a>2017 i</li>
+            <li class="capital-letter"><a href=""></a>2017 ii</li>
+        </ul>
+    </div>
+    <!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
     <script src="./js/app.js"></script>
