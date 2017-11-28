@@ -78,3 +78,44 @@
     background: #ffc107; 
     color: white;
  }
+
+ /*Estilo para esconder el modal*/
+ .hidden {
+    display: none;
+ }
+
+ /*Estilo del modal de sedes*/
+ #sedes-container {
+    position: fixed; 
+    width: 550px; 
+    height: 250px; 
+    top: 0; 
+    left: 0; 
+    font-family: sans-serif; 
+    font-size: 12px; 
+    font-weight: normal; 
+    border: none; 
+    background-color: #fff; 
+    color: #a1a0a0;
+ }
+
+ .select {
+     margin: 10px 20px 0;
+     display: inline-block;
+     width: 15px;
+     height: 15px;
+     border: 1px solid orange;
+ }
+
+ .sede-name {
+     margin-top: 5px;
+     display: inline-block;
+ }
+
+ hr {
+     background: orange;
+     width: 90%;
+     margin-top: 10px;
+     margin-left: 20px;
+
+ }
