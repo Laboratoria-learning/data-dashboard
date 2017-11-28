@@ -8,20 +8,122 @@
   <body>
     <header>
       <img src="assets/images/logo-laboratoria.svg" alt="logo">
-
-
     </header>
     <nav>
-
+      <ul>
+        <li><p>OVERVIEW</p><hr class="none"></li>
+        <li><p>TEACHERS</p><hr class="sub"></li>
+        <li><p>STUDENTS</p><hr class="none"></li>
+      </ul>
     </nav>
-    <section>
+    <main>
+      <section id=menu>
+        <div class="title">SEDES</div>
+        <div>AREQUIPA</div>
+        <div>MEXICO</div>
+        <div>LIMA</div>
+        <div>SANTIAGO DE CHILE</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </section>
+      <section id=content>
+        <div>SEDE LIMA</div>
+        <div class="filtros">
+          <select class="buton" name="Promoción">
+            <option value="">Promoción</option>
+            <option value="">2016-1</option>
+            <option value="">2016-2</option>
+            <option value="">2017-1</option>
+            <option value="">seleccionar todos</option>
+          </select>
+          <select class="buton" name="turno">
+            <option value="">turno</option>
+            <option value="">am</option>
+            <option value="">pm</option>
+            <option value="">seleccionar todos</option>
+          </select>
+          <select class="buton" name="sprint">
+            <option value="">Sprint</option>
+            <option value="">Sprint-1</option>
+            <option value="">Sprint-2</option>
+            <option value="">Sprint-3</option>
+            <option value="">Sprint-4</option>
+            <option value="">Sprint-5</option>
+            <option value="">Sprint-6</option>
+            <option value="">seleccionar todos</option>
+          </select>
+        </div>
+        <div class="name-sprint">
+          <!--sprint seleccionado-->
+          <p>Sprint N° 1 : Programacón básica</p>
+        </div>
+        <!--Ingresar datos de data general-->
+        <div id=datos>
+          <!--Promedio general de notas-->
+          <div id=promedio-total>
+            <span>
+              <p>Promedio total</p>
+              <!--Promedio total en porcentaje-->
+              <p>80%</p>
+            </span>
+              <!--Insertar grafico promedio total de notas-->
+            <img src="assets/images/circle-graphic.png" alt="grafico">
+            <!--Insertar datos numericos promedio total-->
+            <table>
+              <tr>
+                <!--Insertar porcentaje de alumnas que paso el minimo-->
+                <td>90%</td>
+                <!--Insertar numero de alumnas que paso el minimo-->
+                <td>117</td>
+              </tr>
+              <tr>
+                <!--Insertar porcentaje de alumnas que no paso el minimo-->
+                <td>10%</td>
+                <!--Insertar numero de alumnas que no paso el minimo-->
+                <td>13</td>
+              </tr>
+            </table>
+          </div>
+          <div id=notas-hse>
+            <span>
+              <p>Notas HSE</p>
+              <!--Promedio total en porcentaje-->
+              <p>80%</p>
+            </span>
+            <table>
+              <img src="assets/images/circle-graphic.png" alt="grafico">
+              <tr>
+                <!--Insertar porcentaje de alumnas que paso el minimo hse por sprint-->
+                <td>90%</td>
+                <!--Insertar numero de alumnas que paso el minimo hse por sprint-->
+                <td>117</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div id=notas-tec>
+          <span>
+            <p>Notas TEC</p>
+            <!--Promedio total en porcentaje-->
+            <p>80%</p>
+          </span>
+          <table>
+            <img src="assets/images/circle-graphic.png" alt="grafico">
+            <tr>
+              <!--Insertar porcentaje de alumnas que paso el minimo hse por sprint-->
+              <td>90%</td>
+              <!--Insertar numero de alumnas que paso el minimo hse por sprint-->
+              <td>117</td>
+            </tr>
+          </table>
+        </div>
+      </div>
 
-    </section>
-
-
-
-
-
+      </section>
+    </main>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
