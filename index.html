@@ -3,9 +3,158 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <!--Enlazamos link BootstrapCDN para utilizar los iconos en linea-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Relacionamos el documento actual con el recurso externo main.css-->
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-
+    <!--HEAD CONTAINS THE LOGO AND FOLDING ICON-->
+    <header>
+        <figure id="logo">
+          <img src="assets/images/logo-laboratoria.svg" alt="logo-laboratoria">
+        </figure>
+      <!--IN THIS SECTION CONTAINS THE HEADQUARTERS AND PROMOTION OF LABORATORIA-->
+      <nav id="sectionNav">
+        <div id="sectionSede">
+          <span>SANTIAGO DE CHILE 2017 - II <i class="fa fa-sort-desc" aria-hidden="true"></i></span>
+        </div>
+        <div id="sectionTabs">
+          <ul class="contenedorTabs">
+            <li><a href="#">OVERVIEW</a></li>
+            <li><a href="#">STUDENTS</a></li>
+            <li><a href="#">TEACHERS</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!--SECTION FOR THE OVERVIEW-->
+    <main id="overview">
+       <!--FIRST SECTION FOR THE ENROLLMENT-->
+      <section >
+        <div id="enrollment" class="firstSection">
+          <div class="enrollment">
+            <h3>ENROLLMENT</h3>
+            <div>
+              <p>0</p>
+              <span># STUDENTS CURRENTLY ENROLLED</span>
+            </div>
+            <div>
+              <p>0%</p>
+              <span>% DROPOUT</span>
+            </div>
+            <div>
+              <img src="assets/images/bar-graph.png" alt="enrollment">
+            </div>
+          </div>
+        </div>
+        <div id="achievement" class="firstSection">
+          <div class="enrollment">
+          </div>
+          <h3>ACHIEVEMENT</h3>
+          <div>
+            <p>0</p>
+            <span># STUDENTS THAT MEET THE TARGET</span>
+          </div>
+          <div>
+            <p>0%</p>
+            <span>% OF TOTAL (135)</span>
+          </div>
+          <div>
+            <img src="assets/images/graph.png" alt="achievement">
+          </div>
+        </div>
+        <div id="nps" class="firstSection">
+          <h3>NET PROMOTER SCORE</h3>
+          <div>
+            <p>0</p>
+            <span># STUDENTS THAT MEET THE TARGET</span>
+          </div>
+          <div>
+            <p>0%</p>
+            <span>% OF TOTAL (135)</span>
+          </div>
+          <div>
+            <img src="assets/images/graph.png" alt="nps">
+          </div>
+        </div>
+      </section>
+      <!--SECOND SECTION FOR THE TECH SKILLS-->
+      <section>
+        <div> 
+          <h3>TECH SKILLS</h3>
+          <span>overall (cumulative)</span><i class="fa fa-sort-desc" aria-hidden="true"></i>
+          <div>
+            <p>0</p>
+            <span># STUDENTS THAT MEET THE TARGET</span>
+          </div>
+          <div>
+            <p>0%</p>
+            <span>% OF TOTAL (135)</span>
+          </div>
+          <div>
+              <img src="assets/images/rectangular-graphic.png" alt="rectangular-graphic">
+          </div>
+          <div>
+              <img src="assets/images/circle-graphic.png" alt="meet-target">
+          </div>
+        </div>
+      </section>
+      <!--THIRD SECTION FOR THE LIFE SKILLS-->
+      <section>
+        <div> 
+          <h3>LIFE SKILLS</h3>
+          <span>latest Sprint (S4)</span><i class="fa fa-sort-desc" aria-hidden="true"></i>
+          <div>
+            <p>0</p>
+            <span># OVERALL CLASS AVERAGE</span>
+          </div>
+          <div>
+            <p>0%</p>
+            <span># OF STUDENTS THAT MEET THE TARGET</span>
+          </div>
+          <div>
+            <img src="assets/images/rectangular-graphic.png" alt="rectangular-graphic">
+          </div>
+          <div>
+            <img src="assets/images/circle-graphic.png" alt="meet-target">
+          </div>
+        </div>
+      </section>
+      <!--FOURTH SECTION FOR THE SATISFACTION-->
+      <section>
+        <div id="satisfaction" class="firstSection">
+          <h3>STUDENT SATISFACTION</h3>
+          <div>
+            <p>0</p>
+            <span>% MEETING OR EXCEEDING EXPECTATIONS (CUMULATIVE)</span>
+          </div>
+          <div>
+            <img src="assets/images/graph.png" alt="student-satisfaction">
+          </div> 
+        </div>
+        <div id="teacher-rating" class="firstSection">
+          <h3>TEACHER RATING</h3>
+          <div>
+            <p>0</p>
+            <span>OVERALL TEACHER RATING (CUMULATIVE)</span>
+          </div>
+          <div>
+            <img src="assets/images/graph.png" alt="teacher-rating">
+          </div> 
+        </div>
+        <div id="jedi-rating" class="firstSection">
+          <h3>JEDI MASTER RATING</h3>
+          <div>
+            <p>0</p>
+            <span>OVERALL JEDI RATING (CUMULATIVE)</span>
+          </div>
+          <div>
+            <img src="assets/images/graph.png" alt="jedi-rating">
+          </div>   
+        </div>
+      </section>
+    </main>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
