@@ -39,7 +39,9 @@ fotos de prueba.
 
 
 ### PARTE 3  
-Ya que tenemos el nuestra version 1 ,añadimos el cofigo html y css.  
+Ya que tenemos nuestra version 1 de el proyecto,añadimos el cofigo html y css.  
 
 ### PARTE 4
-Añadimos el codigo js
+Añadimos el codigo js.
+
+**FLUJOGRAMA**
