@@ -106,8 +106,8 @@ body {
 .datesStadisticSecond {
     height: 600px;
     width: 87%;
-    background-color: #ffffff;
-    outline: 1px solid yellow;
+    background-color: black;
+    outline: 1px solid green;
     float: left;
     margin: 70px 0 0 40px;
     transform: translateX(5%)
