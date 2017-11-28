@@ -107,3 +107,11 @@ main {
   width: 80%;
   margin: auto;
 }
+/*Estilos Students Section */
+.specialization {
+  text-align: left;
+}
+.students {
+  width:60%;
+  background-color:black;
+}
