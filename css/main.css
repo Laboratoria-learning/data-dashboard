@@ -1,10 +1,26 @@
 /*
  * Estilos de tu proyecto
  */
-.hide {
-    display: none;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-.show {
-    display: block;
+.nav-principal {
+    outline: 1 px solid red;
+    width: 25%;
+    margin: 0;
+}
+
+header {
+    outline: 1px solid rebeccapurple;
+    width: 70%;
+    margin-left: 30%;
+    margin-top: 0;
+}
+
+#log-dash {
+    outline: 1px solid royalblue;
+    width: 180px;
 }
