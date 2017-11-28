@@ -25,14 +25,17 @@ sedeGeneration.addEventListener('click', showListSedes);
 function showListSedes(event) {
   listSedes.classList.toggle('list_active');
   /* console.log(event.target);
-   sedeGeneration.addEventListener('click', showListSedes);
-  function showListSedes(event) {
+    sedeGeneration.addEventListener('click', showListSedes);
+    function showListSedes(event) {
     listSedes.classList.toggle('list_active');
     console.log(event.target);
     */
 };
 
+sede0.addEventListener('click', addVarSede);
+function addVarSede(event) {
 
+}
 /*
 codeSede0.addEventListener('click', addvarcodesede);
 function addvarcodesede(event) {
