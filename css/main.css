@@ -1,10 +1,20 @@
 /*
  * Estilos de tu proyecto
  */
- *{
+ * {
+   box-sizing: border-box;
+   font-family: Helvetica,sans-serif;
    margin: 0;
    padding: 0;
-   box-sizing: border-box;
+ }
+ /* Estilos al header */
+
+.logo {
+  display: block;
+  justify-content: flex-start;
+  padding: 16px 12px;
  }
 
- 
+ /*.title{
+   float: right;
+ }*/
