@@ -5,15 +5,16 @@
     <title>Data Dashboard</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="fonts/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
   </head>
   <body>
-        <header>
+        <header class="header-container">
               <figure>
-                    <img src="assets/images/logo-laboratoria.svg" alt="logo de laboratoria">
+                    <img class="logo" src="assets/images/logo-laboratoria.svg" alt="logo de laboratoria">
               </figure>
-              <div>
+              <!-- <div> -->
                   <span class="icon-bars"></span>
-              </div>
+              <!-- </div> -->
         </header>
         <section>
               <form>
@@ -25,7 +26,7 @@
                           <option value="">SANTIAGO DE CHILE</option>
                     </select>
                     <select>
-                          <option value="">Selecciona Año-Generacion</option>
+                          <option value="">Selecciona una promoción</option>
                           <option value=""> 2014-I</option>
                           <option value=""> 2014-II</option>
                           <option value=""> 2015-I</option>
@@ -39,44 +40,43 @@
         </section>
         <main>
               <nav>
-                    <ul>
-                        <li>GENERAL</li>
-                        <li>STUDENTS</li>
+                    <ul class="global">
+                        <li class="menu-global" >GENERAL</li>
+                        <li class="menu-global" >STUDENTS</li>
                     </ul>
               </nav>
-              <article>
+              <article class="left">
                     <h2>INSCRIPCION</h2>
-                    <div>
-                          <span id="register"></span>
-                          <p>N° ESTUDIANTES INSCRITAS</p> 
+                    <div class="squares">
+                        <span id="register"></span>
+                        <p>N° ESTUDIANTES INSCRITAS</p> 
                     </div>
-                    <div>
-                          <span id="desertStudents"></span>
+                    <div class="squares">
+                        <span id="desertStudents"></span>
                         <p>DESERTARON</p>
+                        
                     </div>
               </article>
-              <!--
-              <article>
+              <article class="medium">
                     <h2>LOGROS</h2>
-                    <div>
+                    <div class="squares">
                           N° ESTUDIANTES QUE  CUMPLIERON <br> EL OBJETIVO
                     </div>
-                    <div>
+                    <div class="squares">
                          %  DEL TOTAL ( )
                     </div>
               </article>
               <article>
                     <h2>NET PROMOTER SCORE (NPS)</h2>
-                    <div>
+                    <div class="squares">
                           % ACUMULATIVO NPS
                     </div>
-                    <div>
+                    <div class="squares">
                          %  Promoters  <br>
                          % Passive <br>
                          % Detractors
                     </div>
               </article>
-
         <article>
               <h2>HABILIDADES TECNICAS</h2>
               <form>
@@ -98,10 +98,10 @@
                         <option value=""> Sprint 7</option>
                         <option value=""> Sprint 8</option>
                     </select>
-                    <div>
+                    <div class="squares">
                           N° ESTUDIANTES QUE CUMPLIERON <br> CON EL OBJETIVO
                     </div>
-                    <div>
+                    <div class="squares">
                          % DEL TOTAL ()
                     </div>
         <article>
@@ -116,10 +116,10 @@
                        <option value=""> Sprint 4</option>
                   </select >
               </form>
-              <div>
+              <div class="squares">
                     N° PROMEDIO GENERAL <br> DE LA CLASE
               </div>
-              <div>
+              <div class="squares">
                    N° ESTUDIANTES QUE CUMPLIERON <br> CON EL OBJETIVO
               </div>
         </article>
@@ -143,15 +143,10 @@
                     </div>
               </div>
         </div>
-
-
-
         </main>
-      -->
-
-		<!-- Base de datos -->
-		<script src="./js/data.js"></script>
-		<!-- Aquí va tus archivos JS -->
+        <!-- Base de datos -->
+        <script src="./js/data.js"></script>
+        <!-- Aquí va tus archivos JS -->
     <script src="js/app.js"></script>
   </body>
 </html>
