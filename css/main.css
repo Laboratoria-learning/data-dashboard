@@ -13,15 +13,16 @@ body {
     font-size: 22px;
     font-family: 'Source Sans Pro', sans-serif;
 }
-.containerHeader {
+/*Header*/
+.containerHeader { 
     border: 1px solid red;
     height: 250px;
 } 
-#laboratoriaNav {
+.laboratoriaNav { /*first Nav: container*/
     height: 40%;
     width: 100%;
     background-color: #ffffff;
-    border: lawngreen
+    border: 3px solid blue;
 }
 .logoLaboratoria {
     float: left;
@@ -34,10 +35,11 @@ body {
     margin-right: 70px;
     padding: 30px;
 }
-#menuNav {
+.menuNav { /*second Nav: container*/
     height: 60%;
     width: 100%;
     background-color: #e1e1e1;
+    border: 3px solid yellow;
 }
 .menuSede{
     padding: 15px;
@@ -58,61 +60,95 @@ body {
     padding: 10px;
     font-weight: bolder;
 }
+ /*Main*/
 .containerMain {
-    height: 2200px;
-    border: 2px solid green;
+    height: 2500px;
+    border: 2px solid skyblue;
 }
-.titleDatesStadistic {
+.statisticalDataTitle {
     font-size: 21px;
     padding: 5px;
-    margin: 15px 0 15px 20px;
+    margin: 15px 0 10px 20px;
 }
-.datesStadisticFirst {
-    height: 300px;
+.dataNumber { 
+    background-color:#f7f7f7;
+    width: 140px;
+    height: 70px;
+    float: left;
+    margin-left: 25px;
+}
+.dataPorcent {
+    background-color:#f7f7f7;
+    width: 140px;
+    height: 70px;
+    float: left;
+    margin-left: 15px;
+}
+/* - first row statistical data*/
+.statisticalDataFirst {  /*first square / first row-->*/
+    height: 14%;
     width: 27%;
     background-color: #ffffff;
     outline: 1px solid yellow;
     float: left;
-    margin: 70px 0 0 40px;
-    transform: translateX(15%)
+    margin: 70px 5px 0 40px;
+    transform: translateX(10%)
 }
-.datesNumber {
-    background-color: grey;
-    width: 150px;
-    height: 60px;
-    float: left;
-    margin-left: 25px;
+.imageDatesStatistics img { /*image first row*/
+    transform: translateX(2%);
+    margin: 15px 0 5px 10px;
+    width: 92%;
+    height: 92%;
 }
-.datesPorcent {
-    background-color: lightskyblue;
-    width: 150px;
-    height: 60px;
-    float: left;
-    margin-left: 15px;
-}
-.imageDatesStadistic img {
-    transform: translateX(20%);
-    margin: 15px 0 5px 0;
-}
-.numDates {
+.numData {
     font-size: 25px;
     text-align: center;
 }
-.descriptionNumDates {
+.descriptionNumData {
     font-size: 10px;
     text-align: center;
     letter-spacing: 1px;
 }
-.datesStadisticSecond {
-    height: 600px;
+.porcentDataLeft {
+    float: left;
+    margin-left: 15px; 
+    font-size: 16px;
+}
+.porcentDataRigth {
+    float: left; 
+    margin-left: 20px;
+    font-size: 16px;
+}
+/* - second row statistical data*/
+.statisticalDataSecond {
+    height: 25%;
     width: 87%;
-    background-color: ffffff;
+    background-color: #ffffff;
     outline: 1px solid yellow;
     float: left;
-    margin: 70px 0 0 40px;
-    transform: translateX(5%)
+    margin: 70px 0 0 80px;     
 }
-.datesStadisticThird {
+.dataPorcentSecondRow {
+    background-color:#f7f7f7;
+    width: 140px;
+    height: 70px;
+    float: left;
+    margin-left: 45px;
+}
+.imageSecondRowLeft img {
+    margin: 80px 0 0 0;
+    width: 50%;
+    height: 50%;
+    float: left;
+}
+.imageSecondRowRigth {
+    float: left;
+    margin: 80px 0 0 700px;
+}
+.inputStatisticalData {
+    margin-left: 25px;
+}
+.statisticalDataThird {
     height: 600px;
     width: 87%;
     background-color: #ffffff;
@@ -121,7 +157,7 @@ body {
     margin: 70px 0 0 40px;
     transform: translateX(5%)
 }
-.datesStadisticFourth {
+.statisticalDataFourth {
     height: 300px;
     width: 27%;
     background-color: #ffffff;
