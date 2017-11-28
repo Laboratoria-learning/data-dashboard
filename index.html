@@ -10,16 +10,16 @@
   </head>
   <body>
     <header>
-      <section class="containerHeader">
-        <nav id="laboratoriaNav">
+      <section class="containerHeader"> <!--container Header-->
+        <nav class="laboratoriaNav"> <!-- first Nav-->
           <div class="logoLaboratoria">
             <img src="../assets/images/logo-laboratoria.svg" class="imgSVG" alt="imagen SVG" title="Logo Labo"/>
           </div>
           <div class="iconoMenu"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></div>
         </nav>
-        <nav id="menuNav"> 
+        <nav class="menuNav"> <!-- Second Nav-->
           <div class="menuPrincipal">
-              <h1 class="menuSede">SANTIAGO DE CHILE 2017-II <i class="fa fa-sort-desc fa-2x" aria-hidden="true"></i></i></h1>
+            <h1 class="menuSede">SANTIAGO DE CHILE 2017-II <i class="fa fa-sort-desc fa-2x" aria-hidden="true"></i></h1>
           </div>
           <div class="subMenuPrincipal">OVERVIEW</div>
           <div class="subMenu">STUDENTS</div>
@@ -28,75 +28,84 @@
       </section>
     </header>
     <main>
-      <section class="containerMain">
-     
-        <div class="datesStadisticFirst">
-          <h1 class="titleDatesStadistic">ENROLLMENT</h1>
-          <div class="datesNumber">
-            <h3 class="numDates">120</h3>
-            <h6 class="descriptionNumDates"># STUDENTS CURRENTLY ENROLLED</h6>
+      <section class="containerMain"> <!-- container Main-->
+      <!-- first row statistical data -->
+        <div class="statisticalDataFirst"> <!--first square-->
+          <h1 class="statisticalDataTitle">ENROLLMENT</h1>
+          <div class="dataNumber"> <!--left square-->
+            <h3 class="numData">120</h3>
+            <h6 class="descriptionNumData"># STUDENTS CURRENTLY ENROLLED</h6>
           </div>
-          <div class="datesPorcent">
-            <h3 class="numDates">20</h3>
-            <h6 class="descriptionNumDates">% DROPOUT</h6>
+          <div class="dataPorcent"> <!--rigth square-->
+            <h3 class="numData">20</h3>
+            <h6 class="descriptionNumData">% DROPOUT</h6>
           </div>
-          <div class="imageDatesStadistic"><img src="assets/images/bar-graph.png" alt="barras"></div>
+          <div class="imageDatesStatistics"><img src="assets/images/bar-graph.png" alt="barras"></div>
         </div>
-        <div class="datesStadisticFirst">
-          <h1 class="titleDatesStadistic">ACHIEVEMENT</h1>
-          <div class="datesNumber">
-            <h3 class="numDates">120</h3>
-            <h6 class="descriptionNumDates"># STUDENTS CURRENTLY ENROLLED</h6>
+        <div class="statisticalDataFirst"> <!--second square-->
+          <h1 class="statisticalDataTitle">ACHIEVEMENT</h1>
+          <div class="dataNumber"> <!--left square-->
+            <h3 class="numData">105</h3>
+            <h6 class="descriptionNumData"># STUDENTS THAT MEET THE TARGET</h6>
           </div>
-          <div class="datesPorcent">
-            <h3 class="numDates">20</h3>
-            <h6 class="descriptionNumDates">% DROPOUT</h6>
+          <div class="dataPorcent"> <!--rigth square-->
+            <h3 class="numData">78%</h3>
+            <h6 class="descriptionNumData">% OF TOTAL (135)</h6>
           </div>
+          <div class="imageDatesStatistics"><img src="assets/images/graph.png" alt="linea"></div>
         </div>
-        <div class="datesStadisticFirst">
-          <h1 class="titleDatesStadistic">NET PROMOTER SCORE</h1>
-          <div class="datesNumber">
-            <h3 class="numDates">120</h3>
-            <h6 class="descriptionNumDates"># STUDENTS CURRENTLY ENROLLED</h6>
+        <div class="statisticalDataFirst">  <!--thrid square-->
+          <h1 class="statisticalDataTitle">NET PROMOTER SCORE</h1>
+          <div class="dataNumber"> <!--left square-->
+            <h3 class="numData">120</h3>
+            <h6 class="descriptionNumData"># STUDENTS CURRENTLY ENROLLED</h6>
           </div>
-          <div class="datesPorcent">
-            <h3 class="numDates">20</h3>
-            <h6 class="descriptionNumDates">% DROPOUT</h6>
+          <div class="dataPorcent"> <!--rigth square-->
+            <h6 class="porcentDataLeft">60 % </h6><h6 class="porcentDataRigth">Promoters</h6>
+            <h6 class="porcentDataLeft">30 % </h6><h6 class="porcentDataRigth">Passive</h6>
+            <h6 class="porcentDataLeft">10 % </h6><h6 class="porcentDataRigth">Detractors</h6>
           </div>
+          <div class="imageDatesStatistics"><img src="assets/images/graph.png" alt="linea"></div>
         </div>
         <div></div>
         <div></div>
-
-        <div class="datesStadisticSecond">
-          <h1 class="titleDatesStadistic">TECH SKILLS</h1>
+        <!-- second row statistical data -->
+        <div class="statisticalDataSecond">
+          <h1 class="statisticalDataTitle">TECH SKILLS <input type="text" class="inputStatisticalData"><i class="fa fa-sort-desc" aria-hidden="true"></i></h1>
+          <div class="dataNumber"><!--left square-->
+            <h3 class="numData">90</h3>
+            <h6 class="descriptionNumData"># STUDENTS THAT MEET THE TARGET</h6>
+          </div> 
+          <div class="dataPorcentSecondRow"><!--rigth square-->
+            <h3 class="numData">62</h3>
+            <h6 class="descriptionNumData">% OF TOTAL (135)</h6>
+          </div> 
+          <div class="imageSecondRowLeft"><img src="assets/images/rectangular-graphic.png" alt="rectangular"></div>
+          <div class="imageSecondRowRigth"><img src="assets/images/circle-graphic.png" alt="circle"></div>
+        </div>
+        <!-- third row statistical data-->
+        <div class="statisticalDataThird">
+          <h1 class="statisticalDataTitle">LIFE SKILLS</h1>
           <div class="datesNumber"></div>
           <div class="datesPorcent"></div>
         </div>
           <div></div>
           <div></div>
-        
-        <div class="datesStadisticThird">
-          <h1 class="titleDatesStadistic">LIFE SKILLS</h1>
-          <div class="datesNumber"></div>
-          <div class="datesPorcent"></div>
+        <!-- fourth row statistical data-->
+        <div class="statisticalDataFourth">
+          <h1 class="statisticalDataTitle">STUDENT SATISFACTION</h1>
+          <div class="dataNumber"></div>
+          <div class="dataPorcent"></div>
         </div>
-          <div></div>
-          <div></div>
-     
-        <div class="datesStadisticFourth">
-          <h1 class="titleDatesStadistic">STUDENT SATISFACTION</h1>
-          <div class="datesNumber"></div>
-          <div class="datesPorcent"></div>
+        <div class="statisticalDataFourth">
+          <h1 class="statisticalDataTitle">TEACHER RATING</h1>
+          <div class="dataNumber"></div>
+          <div class="dataPorcent"></div>
         </div>
-        <div class="datesStadisticFourth">
-          <h1 class="titleDatesStadistic">TEACHER RATING</h1>
-          <div class="datesNumber"></div>
-          <div class="datesPorcent"></div>
-        </div>
-          <div class="datesStadisticFourth">
-          <h1 class="titleDatesStadistic">JEDI MASTER RATING</h1>
-          <div class="datesNumber"></div>
-          <div class="datesPorcent"></div>
+          <div class="statisticalDataFourth">
+          <h1 class="statisticalDataTitle">JEDI MASTER RATING</h1>
+          <div class="dataNumber"></div>
+          <div class="dataPorcent"></div>
         </div>
           <div></div>
           <div></div>
