@@ -5,23 +5,102 @@
 .header-logo{
   width: 30%;
 }
-.first{
-  background: #E1E1E1;
-  margin-top: 1%;
-  position: relative;
-  width: 100%
+*{
+  box-sizing: border-box;
+}
 
-  display: inline-block;
-  outline: 1px solid red;
-  overflow: auto;
+.header-logo{
+  width: 30%;
+}
+.contenedor{
+  background:  #F7F7F7;
+}
+.first{
+  position:relative;
+  width: 90%;
+  padding-bottom:12px;
+  outline: 1px solid black;
+  margin-left: 5%;
+  height: 104%;
 }
 .cuadro-1{
+  display: inline-block;
+ position: static;
   background: white;
-  width: 25%;
-  /*height: 40%;*/
-  position: relative;
-  outline: 1px solid red;
+  width: 31%;
+  top: 20px;
+ outline: 1px solid red;
+ height: 103%;
+ outline: 1px solid purple;
+}
+.tablaint-1{
+width: 38%;
+display: inline-block;
+background:#F7F7F7;
+margin-left:  6%;
+text-align: center;
+line-height: 10px;
+}
 
+.porcentajeCuadro-1{
+  color: red;
+}
+.tablaint-2{
+    width: 170px;
+  position: absolute;
+
+display: inline-block;
+  background:#F7F7F7;
+  left: 15%;
+  top: 16%;
+  text-align: center;
+  line-height: 10px;
+}
+.tablaint-3{
+width: 38%;
+display: inline-block;
+background:#F7F7F7;
+margin-right: 9%;
+text-align: center;
+line-height: 10px;
+}
+.tablaint-4{
+  position: absolute;
+width: 38%;
+display: inline-block;
+background:#F7F7F7;
+margin-right: 9%;
+text-align: center;
+line-height: 10px;
+top: 15%;
+
+}
+.tablaint-5{
+width: 38%;
+display: inline-block;
+background:#F7F7F7;
+margin-right: 9%;
+text-align: center;
+line-height: 10px;
+top: 20px;
+
+}
+.tablanetpromoter{
+position: absolute;
+width: 38%;
+display: inline-block;
+background:#F7F7F7;
+margin-right: 9%;
+line-height: 20px;
+top: 12%;
+height: 19%;
+font-size: 1em;
+text-decoration: none;
+list-style: none;
+text-align: center;
+}
+.porcentajeCuadro-2{
+  color: green;
 }
 .detalleCuadro-1{
   font-size: 0.7em;
@@ -31,51 +110,153 @@
 }
 
 .cuadro-2{
-  width: 25%;
+width: 31%;
   /*height: 40%;*/
-  top: 15px;
-left: 480px;
+top: 15px;
+left: 33%;
 background: white;
 position: absolute;
   outline: 1px solid red;
-
-
+padding-left: 5%;
+  height:98%;
 }
 .detalleCuadro-2{
   font-size: 0.6em;
 }
 .cuadro-3{
 position: absolute;
-width: 25%;
+width: 31%;
 background: white;
-left:950px;
+left:67%;
 top: 15px;
-
+padding-left: 5%;
 outline: 1px solid blue;
+  height: 98%;
 }
 .nps{
     font-size: 0.7em;
 }
 .first img{
-  width: 50%;
+  width: 95%;
   /*bottom: 2%;*/
 }
 .second{
   background: white;
-  margin-top: 1%;
-  position: relative;
-  width: 100%
+  margin-top: 7%;
+  position:relative;
+  width: 90%;
   display: inline-block;
   outline: 1px solid red;
+  margin-left: 5%;
 }
-/*.tech{
-  position: absolute;
-  left: 135px;
-  top: 3px;
-  border-bottom: 1px solid black;*/
-  /*top:85%;*/
+.cuadro-4{
+  padding-left: 5%;
+  width: 35%;
+}
+
 .sprintlist{
   position: absolute;
-  left: 10%;
-  top: 1%;
+  left: 16%;
+  top: 4%;
+}
+.tablaint-6{
+  width: 55%;
+  height: 76px;
+  display: inline-block;
+  background:#F7F7F7;
+  margin-right: 9%;
+  text-align: center;
+  line-height:10px;
+  top: 20px;
+}
+.tablaint-7{
+  position: absolute;
+  width: 18%;
+  display: inline-block;
+  background:#F7F7F7;
+  margin-right: 9%;
+  line-height: 8px;
+  top: 14%;
+  height: 19%;
+  font-size: 1em;
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
+}
+.porcentajeCuadro-4{
+  color: green;
+}
+.cuadro-5{
+    padding-left: 5%;
+    width: 35%;
+}
+.cuadro-5 img{
+  width: 32%;
+  height: 50%;
+  position: absolute;
+  outline: 1px solid red;
+  left: 50%;
+  top: 40%;
+
+}
+.third{
+  background: white;
+  margin-top: 5%;
+  position: relative;
+  width: 90%;
+  display: inline-block;
+  outline: 1px solid red;
+  margin-left: 5%;
+}
+.cuadro-6{
+    padding-left: 5%;
+    width: 35%;
+}
+.cuadro-7{
+    padding-left: 5%;
+    width: 35%;
+}
+.cuadro-7 img{
+  width: 27%;
+  height: 50%;
+  position: absolute;
+  outline: 1px solid red;
+  left: 50%;
+  top: 40%;
+}
+.hse{
+  position: absolute;
+  left: 16%;
+  top: 4%;
+}
+.fourth{
+  background: white;
+  margin-top: 5%;
+  position: relative;
+  width: 90%;
+  display: inline-block;
+  outline: 1px solid green;
+  margin-left: 5%;
+}
+.cuadro-8{
+  width: 35%;
+  height: 50%;
+  position: absolute;
+  outline: 1px solid red;
+  left: 30%;
+  top: 5%;
+  padding-left: 5%;
+}
+.cuadro-9{
+width: 35%;
+  height: 50%;
+  position: absolute;
+  outline: 1px solid red;
+  left: 70%;
+  top: 5%;
+  padding-left: 5%;
+}
+.cuadro-10{
+  width: 90%;
+  padding-left: 5%;
 }
