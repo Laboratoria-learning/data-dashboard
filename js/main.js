@@ -8,7 +8,7 @@ $(document).ready(function() {
     } else {
       $('.navegacion').css({'width': '0%', 'background': 'rgba(0,0,0,.0)'}); // Ocultamos el fonto transparente
       $('#button-menu').removeClass('fa fa-close icons').addClass('fa fa-bars icons'); // Agregamos el icono del Menu
-      $('.navegacion .menu').css({'left': '-320px'}); // Ocultamos el Menu
+      $('.navegacion .menu').css({'left': '-300px'}); // Ocultamos el Menu
     }
   });
 });
