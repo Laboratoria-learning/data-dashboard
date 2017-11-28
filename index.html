@@ -3,9 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-
+    <!-- estructura del header -->
+    <header class="header" id="header">
+      <figure>
+        <img class="imgLaboratoria" src="assets/images/logo-laboratoria.svg" alt="Logo Laboratoria">
+      </figure>
+      <div>
+        <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+      </div>
+    </header>
+    <!-- estructura del navber -->
+    <nav class="navber" id="navber">
+      <h1>SANTIAGO DE CHILE  <i class="fa fa-caret-down" aria-hidden="true"></i></h1>
+      <div class="listNav" id="listNav">
+        <ul>
+          <li><a href="#">OVERVIEW</a></li>
+          <li><a href="#">STUDENTS</a></li>
+          <li><a href="#">TEACHERS</a></li>
+        </ul>
+      </div>
+    </nav>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
