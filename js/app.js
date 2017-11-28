@@ -20,7 +20,7 @@ desertStudents.textContent = desert();
 
 function desert () {
     var arrActive = [];
-    
+
     for (i = 0; i< students.length; i++) {
         arrActive.push(students[i].active);
         }
@@ -34,4 +34,3 @@ function desert () {
 
     return parseInt(countDesert * 100/ students.length) + '%'
 }
-
