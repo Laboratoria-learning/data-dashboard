@@ -8,6 +8,9 @@
      padding: 0;
  }
 
+.body {
+    overflow: auto;
+} 
 .uppercase {
     text-transform: uppercase;
 }
@@ -30,16 +33,16 @@
 
  #menu {
      font-size: 30px;
-     float: right;
+     float: left;
      margin-top: 10px;
-     margin-right: 150px;
+     margin-left: 150px;
  }
 
  /*Estilo a sections-container */
 
  .sections-container {
-     width: 85%;
-     margin: 0 auto;
+     width: 80%;
+     float: right;
      background-color: #d4d4d4;
      font-family: sans-serif;
  }
@@ -125,6 +128,62 @@
  .container {
      margin-top: 20px;
  }
+
+/*Estilo del usuario */
+section.user {
+    width: 20%;
+    /*outline: 1px solid red; */
+    font-family: sans-serif;
+    border: 2px solid #ffc107; 
+}
+
+div.user-name {
+    text-align: center;
+}
+section.user img {
+    width: 30%;
+    height: 30%;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+div.name {
+    float: right;
+}
+section.user h3.name {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+section.user h4 {
+    display: inline-block;
+}
+
+div.home {
+    border-bottom: 1px solid #ffc107; 
+    margin-top: 80px;
+    padding-bottom: 10px;
+}
+
+div.tables, div.calendar {
+    border-bottom: 1px solid #ffc107; 
+    margin: 20px 0px;
+    padding-bottom: 10px;
+}
+
+div.out {
+    margin: 20px 0px;
+}
+
+.home h4, .tables h4, .calendar h4, .out h4 {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+section.user i {
+    margin-left: 30px;
+}
+
 
  /*Estilo de la sección teacher */
 
