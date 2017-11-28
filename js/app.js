@@ -68,6 +68,14 @@ var loadPage = function() {
 loadPage();
 
 // Puedes hacer uso de la base de datos a través de la variable `data`
+<<<<<<< HEAD
 // console.log(data);
 // var alert = ('Hola mundo');
 // var prompt = ('Hola mundo');
+=======
+console.log(data);
+
+winodws
+
+
+>>>>>>> ccab019fddbcd3327abdf678fd4208e95a26c898
