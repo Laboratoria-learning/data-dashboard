@@ -12,3 +12,7 @@ ul{
   width: 100%;
   background-color: #19BA76;
 }
+
+.list_active{
+  display: block;
+}
