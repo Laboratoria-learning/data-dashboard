@@ -10,7 +10,7 @@
         <div >
           <img id= "logo" src="assets/images/logo-laboratoria.svg" alt="laboratoria">
         </div>
-        <h1 class="title">Data Dashboard</h1>        
+        <h1 class="title">Data Dashboard</h1>
     </header>
     <nav>
       <select name="promociones" id="promociones" class="promo">
@@ -33,11 +33,11 @@
           <option value=""> 2017-II</option>
         </option>
       </select>
-      <ul>
-        <li><button type="button" name="button" data-tabSelection='tabOverview'>Overview</button></li>
-        <li><button type="button" name="button" data-tabSelection='tabStudents'>Students</button></li>
-        <li><button type="button" name="button" data-tabSelection='tabTeachers'>Teachers</button></li>
-        <li><button type="button" name="button" data-tabSelection='tabAllGenerations'>All Generations</button></li>
+      <ul class="container-tab">
+        <li><button type="button" name="button" data-tab-selection="tabOverview" class="tab">Overview</button></li>
+        <li><button type="button" name="button" data-tab-selection="tabStudents" class="tab">Students</button></li>
+        <li><button type="button" name="button" data-tab-selection="tabTeachers" class="tab">Teachers</button></li>
+        <li><button type="button" name="button" data-tab-selection="tabAllGenerations" class="tab">All Generations</button></li>
       </ul>
 
     </nav>
@@ -47,11 +47,10 @@
       </form>
     </section>
     <main>
-      <section id="overview">  
-        <div class="enrollments">
-             <h3>ENROLLMENTS</h3>          
-             <div class="dates"></div>
-             <div class="dates"></div>
+      <section class="principal">
+
+        <div class="">
+
         </div>
         <div class= "achievement">
              <h3>ACHIEVEMENT</h3>
@@ -62,10 +61,10 @@
              <h3>NET PROMOTER SCORE </h3>
              <div class="dates"></div>
              <div class="dates"></div>
-        </div> 
+        </div>
         <div class="tech-skills">
         </div>
-        <div class="life-skills">          
+        <div class="life-skills">
         </div>
         <div class="student">
           <h3>STUDENT SATISFACTION</h3>
@@ -86,8 +85,8 @@
 
       </section>
       <section id="students">
-        
-      </section> 
+
+      </section>
 
 
     </main>
