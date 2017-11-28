@@ -2,3 +2,83 @@
  * Estilos de tu proyecto
  */
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Catamaran', sans-serif;
+}
+header {
+    height: 76px;
+}
+nav {
+    background: #ffffff;
+    display: inline-block;
+    position: relative;
+    width: 1279px;
+    height: 76px;
+}
+.logo {
+    width: 169px;
+    height: 70px;
+    margin-left: 550px;
+    margin-top: 1px;
+}
+.icon-bars {
+    font-size: 28px;
+    padding-top: 21px;
+    padding-bottom: 27px; 
+    float: right;
+    margin-right: 86px;
+}
+.selecting {
+    background-color: #e1e1e1;
+    height: 122px;
+}
+.sedes {
+    width: 445px;
+}
+#select {
+    /*outline: 1px solid black;*/
+    border: 0;
+    background-color: transparent;
+    height: 40px;
+    font-size: 24px;
+    line-height: 20px;
+    margin-left: 81px;
+    margin-top: 20px;
+    overflow: hidden;
+    padding: 5px;
+    width: 445px;
+}
+#wrap {
+    /*outline: 1px solid red;*/
+    background-color: #e1e1e1;
+    width: 395px;
+    height: 49px;
+    max-width: 80%;
+    margin-left: 81px;
+    margin-top: 12px;
+
+}
+.tabs {
+    display: inline;
+    list-style: none;
+    position: relative;
+}
+.tabs a {
+    /*outline: 1px solid green;*/
+    text-decoration: none;
+    color: black;
+    float: left;
+    font-size: 20px;
+    margin-left: 15px;
+    margin-top: 1px;
+    padding: 8px;
+}
+.info-container {
+    background-color: #e1e1e1;
+    width: 100%;
+}
