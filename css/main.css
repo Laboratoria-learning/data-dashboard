@@ -1,3 +1,31 @@
 /*
  * Estilos de tu proyecto
- */
+*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+header {
+  padding: 7px;
+  text-align: center;
+}
+
+#logo {
+  outline: 1px solid black;
+  width: 200px;
+}
+
+nav {
+  padding: 35px;
+  background: #5EDA83;
+}
+
+#listbox {
+  font-size: 18px;
+}
+
+.options {
+  padding: 21px 0px;
+}

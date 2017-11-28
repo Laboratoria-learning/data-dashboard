@@ -3,12 +3,57 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   </head>
   <body>
+    <header>
+      <img id="logo" src="assets/images/logo-laboratoria.svg" alt="logo-laboratoria">
+      
+    </header>
+    <nav>
+      <select name="" id="listbox">
+        <option value="">SEDE/GENERACIÓN</option>
+        <optgroup label="Arequipa">
+          <option value="2016-2" data-sede="AQP">2016-II</option>
+          <option value="2017-1" data-sede="AQP">2017-I</option>
+        </optgroup>
+        <optgroup label="Lima">
+          <option value="2016-2" data-sede="LIM">2016-II</option>
+          <option value="2017-1" data-sede="LIM">2017-I</option>
+          <option value="2017-2" data-sede="LIM">2017-II</option>
+        </optgroup>
+        <optgroup label="México">
+          <option value="2017-1" data-sede="MEX">2017-I</option>
+          <option value="2017-2" data-sede="MEX">2017-II</option>
+        </optgroup>
+        <optgroup label="Santiago de Chile">
+          <option value="2016-2" data-sede="SDC">2016-II</option>
+          <option value="2017-1" data-sede="SDC">2017-I</option>
+          <option value="2017-2" data-sede="SDC">2017-II</option>
+        </optgroup>
+      </select>
+      <div class="options">
+        <span>OVERVIEW</span>
+        <span>STUDENTS</span>
+        <span>TEACHER</span>
+      </div>
+     
+      
+    </nav>
+
+    <section>
+
+    </section>
+
+     <!--Div that will hold the pie chart-->
+     <div id="chart_div"></div>
+
+
 
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
-    <script src="./js/app.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
