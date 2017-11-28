@@ -10,7 +10,6 @@ window.addEventListener('load', function(event) {
   var chileGenerations = document.getElementById('chile_generations');
 
   sedeGeneration.addEventListener('click', function(event) {
-
   /* if (characters.value) {
       var tweet = document.createElement('p');
       var textTweet = document.createTextNode('');
@@ -20,7 +19,6 @@ window.addEventListener('load', function(event) {
       tweetsPublicados.insertBefore(tweet, tweetsPublicados.firstElementChild);
       characters.value = '';
       */
-
   });
 });
 // data.AQP["2016-2"].students.length
