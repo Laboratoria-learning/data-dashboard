@@ -5,16 +5,22 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ }
+
+ .fa-bars, .fa-user-o {
+   margin: 1%;
  }
 
 .logo {
   width: 20%;
-  height: 20%;
-  vertical-align: middle;
+  display: inline-block;
+  position: absolute;
+  margin: 1.5% 50%;
 }
 
 .center {
-
+  text-align: center;
 }
 
 .menu {
@@ -25,4 +31,15 @@
 .results {
   width: 75%;
   height: 100%;
+}
+
+.fa, .li-menu {
+  padding: 10px;
+  height: 30px;
+  left: 50px;
+}
+
+.general-menu {
+  list-style: none;
+  padding: 10px;
 }
