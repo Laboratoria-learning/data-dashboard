@@ -90,11 +90,17 @@ nav {
   border-radius: 5px;
   transform: translateX(15%);
   cursor: pointer;
+  border: 1px solid black;
 }
 
 .fa-sort-desc {
   color: black;
   transform: translateY(-10%);
+}
+
+.city li {
+  width: 110px;
+  margin: 5px;
 }
 
 .hide {

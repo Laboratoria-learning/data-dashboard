@@ -4,9 +4,24 @@
 
 // Puedes hacer uso de la base de datos a través de la variable `data`
 // console.log(data);
-var countries = document.getElementById('countries').children[0];
+// Seleccion de pais 
+var peru = document.getElementById('countries').children[0];
+peru.addEventListener('click', function(event) {
+  event.preventDefault();
+  var city = document.getElementById('countries').children[0].children[1];
+  city.classList.toggle('hide');
+});
 
-countries.addEventListener('click', function(event) {
-  var list = document.getElementById('countries').children[1];
-  list.classList.toggle('hide');
+var chile = document.getElementById('countries').children[1];
+chile.addEventListener('click', function(event) {
+  event.preventDefault();
+  var city = document.getElementById('countries').children[1].children[1];
+  city.classList.toggle('hide');
+});
+
+var mexico = document.getElementById('countries').children[2];
+mexico.addEventListener('click', function(event) {
+  event.preventDefault();
+  var city = document.getElementById('countries').children[2].children[1];
+  city.classList.toggle('hide');
 });
