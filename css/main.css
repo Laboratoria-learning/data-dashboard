@@ -47,6 +47,18 @@ a {
   margin: auto;
 }
 
+#user {
+  padding: 15px 45px;
+  background-color: #fff;
+}
+
+#user figure {
+  background-color: red;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+}
+
 #sidebar a {
   display: block;
   color: #2b2b2b;
