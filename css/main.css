@@ -1,3 +1,109 @@
-/*
- * Estilos de tu proyecto
- */
+/* Seteo general */
+/*Estilos generales*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  text-align:center;
+  width: 100%;
+  font-family: 'Work Sans', sans-serif;
+}
+.remove-underlined {
+  text-decoration: none;
+  color: black;
+}
+.inline-elements {
+  display: inline-block;
+}
+.remove-style {
+  list-style: none
+}
+.small-font {
+  font-size: 11px;
+  font-weight: bold;
+  color:#515151;
+  margin:0;
+  height:50%;
+}
+/*Estilos del Header */
+header {
+  width: 100%;
+  height: 75px;
+  outline: 1px solid black;
+}
+header ul {
+  display: flex;
+  justify-content:space-around;
+}
+header .logo {
+  width: 500px;
+  height: 65px;
+  transform: translateX(45%); 
+  display: inline-block;
+}
+header #icon-menu {
+  transform: translateY(50%);
+}
+
+#wrapper {
+  width: 100%;
+  display: flex;
+  height: 1500px;
+  padding: 5px; 
+}
+/*Estilos del Nav*/
+
+nav {
+  width: 12%;
+}
+
+nav .nav-sedes {
+  padding:18px 0px;
+  background: #e4e726;
+  height: 50px;
+}
+
+/*Estilos del main*/
+main {
+  display: inline-block;
+  width:90%;
+  background-color: #c3c3c3;
+}
+.selected-box {
+  padding:10px;
+  background-color: #c0c0c0;
+}
+.tab {
+  padding: 10px 20px;
+  border-style: none;
+  background-color: #e4eb1ee0;
+}
+#container-overview {
+  margin-top:2%;
+  margin-bottom: 5%;
+}
+.chart {
+  width:30%;
+  overflow:hidden;
+  vertical-align:top;
+}
+.data-boxes {
+  overflow: hidden;
+  width: 160px;
+  height: 60px;
+  background-color: #e4e3e3;
+  font-weight: bold;
+  font-size:18px;
+}
+.sections {
+  margin-bottom: 3%;
+}
+.graphic {
+  background-color: #fff;
+}
+.second-graph {
+  width: 80%;
+  margin: auto;
+}
