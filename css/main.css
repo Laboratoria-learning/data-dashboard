@@ -45,68 +45,141 @@ img {
   font-size: 35px;
   transform: translateY(-50%);
 }
-
-.text-Uppercase {
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-nav {
-  padding-left: 100px;
-  background-color: #ccc;
-}
-
-p {
-  display: inline-block;
-  font-size: 20px;
-  padding: 15px;
-  cursor: pointer;
+font-size: 20px;
+padding: 15px;
+cursor: pointer;
 }
 
 /*Navegador*/
 nav {
-  padding: 0;
-  margin: 0;
-  text-align: center;
+padding: 0;
+margin: 0;
+text-align: center;
 }
 
 .nav {
-  width: 200px;
-  padding: 30px  0px;
+width: 200px;
+padding: 30px  0px;
 }
 
 .nav img {
-  width: 150px;
+width: 150px;
 }
 
 .nav ul {
-  list-style: none;
+list-style: none;
 }
 /*Countries*/
 .nav li {
-  margin-top: 10px;
-  background-color: white;
-  width: 150px;
-  border-radius: 5px;
-  transform: translateX(15%);
-  cursor: pointer;
-  border: 1px solid black;
+margin-top: 10px;
+background-color: white;
+width: 150px;
+border-radius: 5px;
+transform: translateX(15%);
+cursor: pointer;
+border: 1px solid black;
 }
 
 .fa-sort-desc {
-  color: black;
-  transform: translateY(-10%);
+color: black;
+transform: translateY(-10%);
 }
 
 .city li {
-  width: 110px;
-  margin: 5px;
+width: 110px;
+margin: 5px;
 }
 
 .hide {
-  display: none;
+display: none;
 }
 
 .show {
-  display: block;
+display: block;
+}
+
+/*Diseñando el contenido de las secciones*/
+.section {
+  position: relative;
+
+}
+.firts {
+  background: #F3E9E7;
+  width: 377px;
+  height: 272px;
+}
+.one{
+  position: absolute;
+  left: 168px;
+  top: 71px;
+
+}
+.two{
+  position: absolute;
+  right: 393px;
+  top: 71px;
+}
+.tree{
+  right: 0px;
+  top: 71px;
+  position: absolute;
+
+
+}
+.four{
+  position: absolute;
+  top: 353px;
+  left: 167px;
+
+}
+.five{
+  position: absolute;
+  right: 0%;
+  top: 353px;
+}
+.six{
+  position: absolute;
+  left: 167px;
+  top: 666px;
+}
+.seven{
+  position: absolute;
+  top: 666px;
+  left: 564px;
+}
+.eight{
+  position: absolute;
+  right: 0px;
+  top: 666px;
+
+}
+.second{
+  width: 574px;
+  height: 302px;
+  background: #F3E9E7;
+}
+.position {
+  position: absolute;
+  right: 7%;
+  top: 7%;
+}
+
+/*Diseñando las imagenes de estadistica*/
+.img img{
+  width: 234px;
+  height: 134px;
+}
+.info{
+  background: #E8DEDC;
+  width: 180px;
+  display: inline-block;
+  margin: 1%;
+}
+.right {
+  width: 100px;
+}
+
+.img2 img{
+  width: 234px;
+  height: 134px;
 }
