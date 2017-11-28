@@ -25,7 +25,7 @@ Estos son los requerimientos:
 Prototipamos ,lanzamos ideas y según lo requerido diseñamos un sketch y probamos con los **Training Managers (TMs)** las posibles soluciones.
 
 **Version 1**  
-![Imagen sketch](../assets/images/foto 1.jpg)
+![Imagen sketch](/assets/images/foto 1.jpg)
 
 
 Realizamos una prueba de usabilidad con el **Training Managers (TMs)** Joalbert .  
