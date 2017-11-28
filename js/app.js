@@ -27,9 +27,7 @@ console.log(desercion('LIM', '2017-2'));
 /* DATOS ACHIEVEMENT*/ 
 
 function logroMetas(sede, generacion, sprint) {
-  // debugger;
   var students = data[sede][generacion]['students'];
-  // var sprint = data[sede][generacion]['students']['sprints']['number'];
   var studentsOverTarget = [];
   var studentsDownTarget = [];
 
@@ -46,9 +44,29 @@ function logroMetas(sede, generacion, sprint) {
   var porcentajeLogroMetas = (studentsOverTarget.length * 100) / (studentsOverTarget.length + studentsDownTarget.length);
   console.log('pasaron la meta: ' + '\t' + studentsOverTarget.length);
   console.log('no llegaron a la meta: ' + '\t' + studentsDownTarget.length);
-  console.log('porcentaje que logro la meta:' + '\t' + porcentajeLogroMetas);
+  console.log('porcentaje que logro la meta:' + '\t' + porcentajeLogroMetas + '%');
 }
 
 console.log(logroMetas('LIM', '2017-1', 1));
 
-/* */ 
+/* NET PROMOTER SCORE */ 
+
+function puntajePromotor() {
+  var raiting = data[sede][generacion]['raitings'];
+  var promoters = [];
+  var passive = [];
+  var detractors = [];
+  var totalNps = [];
+  
+  for (var i = 0; i < raiting.length; i++) {
+    // if(raiting[i].nps.promoters)
+    var nps = raiting[i].nps.promoters - raiting[i].nps.detractors;
+    totalNps.push(nps);
+  }
+
+  console.log(totalNps.length);
+
+  for (var i = 0; i < totalNps.length; i++) {
+      var acumulativeNps  + = totalNps[ i ];
+  }
+}
