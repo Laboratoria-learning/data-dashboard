@@ -1,7 +1,54 @@
 /*
  * Funcionalidad de tu producto
  */
+/* ****************************************************************************************************************/
+window.addEventListener('load', function() {
+  var view = document.getElementById('overview'),
+    students = document.getElementById('students'),
+    paginaview = document.getElementById('paginaView'),
+    paginaStudents = document.getElementById('paginaStudents');
+  students.addEventListener('click', function() {
+    paginaView.classList.toggle('enabled');
+    paginaView.classList.toggle('disabled');
+    paginaStudents.classList.toggle('disabled');
+    paginaStudents.classList.toggle('enabled');
+  });
+  view.addEventListener('click', function() {
+    paginaView.classList.remove('disabled');
+    paginaView.classList.add('enabled');
+    paginaStudents.classList.remove('enabled');
+    paginaStudents.classList.add('disabled');
+  });
+});
+/* ****************************************************************************************************************/
+google.charts.load('current', {'packages': ['bar']});
+google.charts.setOnLoadCallback(drawStuff);
 
+function drawStuff() {
+  var data = new google.visualization.arrayToDataTable([
+    ['sprint', 'Puntaje'],
+    ['S1', 44],
+    ['S2', 40],
+    ['S3', 31],
+    ['S4', 12],
+  ]);
+
+  var options = {
+    width: 500,
+    legend: { position: 'none' },
+    axes: {
+      x: {
+        0: { side: 'botoom'} // Top x-axis.
+      }
+    },
+    bar: { groupWidth: '60%'}
+  };
+
+  var chart = new google.charts.Bar(document.getElementById('top_x_div'));
+  // Convert the Classic options to Material options.
+  chart.draw(data, google.charts.Bar.convertOptions(options));
+};
+/* ****************************************************************************************************************/
 // Puedes hacer uso de la base de datos a través de la variable `data`
 // Load the Visualization API and the corechart package.
 google.charts.load('current', {'packages': ['corechart']});
@@ -38,3 +85,4 @@ function drawChart() {
 }
 
 console.log(data);
+console.log(data['AQP']);

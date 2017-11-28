@@ -65,3 +65,15 @@ margin: 30px 50px;
 .box-create{
   height: 10em;
 }
+.disabled {
+  display: none;
+}
+.enabled{
+  display: block;
+}
+
+.box-barras{
+  outline: 1px solid red;
+  width: 600px;
+  height: 600px;
+}
