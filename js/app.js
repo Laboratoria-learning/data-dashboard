@@ -14,4 +14,29 @@ window.addEventListener('load', function() {
     sedes.style.marginLeft = '170px';
     // ventana.style.left = ((document.body.clientWidth - 350) / 2) + 'px';
   });
+
+  teachers.addEventListener('click', function showData(event) {
+    // Creando el contenedor del promedio de los Teachers.
+    var section = document.getElementById('teachers-ratings');
+    var teachersOption = document.getElementById('teachers');
+    var containerData = document.createElement('div');
+    var containerTeacher = document.createElement('div');
+    var titleData = document.createElement('h1');
+    titleData.textContent = 'Teacher Rating';
+    containerData.appendChild(containerTeacher);
+    containerTeacher.appendChild(titleData);
+    section.appendChild(containerData);
+    containerTeacher.classList.add('average-container');
+    containerData.classList.add('teachers-data');
+    titleData.classList.add('average-title');
+
+    // Creando el contenedor del promedio de los Jedis-masters 
+    var containerJedis = document.createElement('div');
+    var titleJedi = document.createElement('h1');
+    titleJedi.textContent = 'Jedi Master Rating';
+    containerData.appendChild(containerJedis);
+    containerJedis.appendChild(titleJedi);
+    containerJedis.classList.add('average-container');
+    titleJedi.classList.add('average-title');    
+  });
 });

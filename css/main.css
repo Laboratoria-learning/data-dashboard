@@ -125,3 +125,27 @@
  .container {
      margin-top: 20px;
  }
+
+ /*Estilo de la sección teacher */
+
+ .teachers-data {
+     margin: auto; 
+     width: 85%;
+     height: 300px;
+     background-color: #e9e3e3;
+ }
+
+.average-container{
+    font-family: sans-serif;
+    margin-top: 40px;
+    margin-left: 80px;
+    width: 40%;
+    height: 200px;
+    background-color: #fff;
+    display: inline-block;
+    text-align: center;
+}
+
+ .average-title {
+     padding-top: 15px;
+ }
