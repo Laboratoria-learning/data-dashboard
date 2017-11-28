@@ -1,23 +1,28 @@
 /*
  * Estilos de tu proyecto
  */
-.context{
+body{
+    font-family: 'PT Sans', sans-serif;
+}
+
+.context {
     margin-left: 100px;
     margin-right: 100px;
     margin-top: 20px;
 }
+
 .logo {
     width: 200px;
     position: absolute;
     left: 42%;
  }
-body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+ 
+
  button{
      width: 40px;
      margin-left: 87%;
      margin-top: 8px;
+     background-color: #fff;
  }
 
  nav{
@@ -55,5 +60,21 @@ body{
 
  .information{
      padding-left: 80px;
-     padding-top: 50px;
+     padding-top: 20px;
+     background-color: #E8E8E7;
+     margin-top: 30px;
+ }
+
+ .header{
+     margin-top: 5px;
+     margin-left: 70px;
+     font-size: 35px;;
+ }
+
+.options{
+    margin-left: 65px;
+}
+ .option{
+     margin: 10px;
+     font-size:20px;
  }
