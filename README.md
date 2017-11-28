@@ -3,8 +3,6 @@
 
 ## Flujo de trabajo
 
-**Experiencia del usuario**  
-
 ### PARTE 1  
 Realizamos el descubrimiento, y nos informamos sobre quienes son nuestros usuarios y cuales son sus necesidades.
 
@@ -26,11 +24,12 @@ Estos son los requerimientos:
 ### PARTE 2  
 Prototipamos ,lanzamos ideas y según lo requerido diseñamos un sketch y probamos con los **Training Managers (TMs)** las posibles soluciones.
 
-Version 1  
+**Version 1**  
 
 
-Realizamos una prueba de usabilidad con el **Training Managers (TMs)** Joalbert .
-En el cual le pedimos que realice 4 operaciones :
+Realizamos una prueba de usabilidad con el **Training Managers (TMs)** Joalbert .  
+En el cual le pedimos que realice 4 operaciones :  
+
 1.Loguearse  
 2.Ingresar a su perfil  
 3.filtrar su búsqueda  
