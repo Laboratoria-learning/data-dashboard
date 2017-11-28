@@ -13,12 +13,24 @@ header {
 }
 
 #logo {
-  outline: 1px solid black;
   width: 200px;
 }
 
+#icon {
+  color: #2c3e50;
+  font-size: 30px;
+  float: right;
+  margin-top: 21px;
+  transform: translateX(-80px);
+}
+
+#icon:hover {
+  color: gray;
+  cursor: pointer;
+}
+
 nav {
-  padding: 35px;
+  padding: 35px 35px 0px 35px;
   background: #5EDA83;
 }
 
@@ -27,5 +39,7 @@ nav {
 }
 
 .options {
+  outline: 1px solid pink;
   padding: 21px 0px;
+  margin-top: 20px;
 }
