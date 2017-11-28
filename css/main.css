@@ -16,7 +16,7 @@ body {
 .containerHeader {
     border: 1px solid red;
     height: 250px;
-} 
+}
 #laboratoriaNav {
     height: 40%;
     width: 100%;
@@ -124,7 +124,7 @@ body {
 .datesStadisticFourth {
     height: 300px;
     width: 27%;
-    background-color: #ffffff;
+    background-color: black;
     outline: 1px solid yellow;
     float: left;
     margin: 70px 0 0 40px;
