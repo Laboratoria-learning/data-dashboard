@@ -5,16 +5,15 @@
     <title>Data Dashboard</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="fonts/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
   </head>
   <body>
-        <header class="header-container">
+        <header>
               <figure>
-                    <img class="logo" src="assets/images/logo-laboratoria.svg" alt="logo de laboratoria">
+                    <img src="assets/images/logo-laboratoria.svg" alt="logo de laboratoria">
               </figure>
-              <!-- <div> -->
+              <div>
                   <span class="icon-bars"></span>
-              <!-- </div> -->
+              </div>
         </header>
         <section>
               <form>
@@ -26,7 +25,7 @@
                           <option value="">SANTIAGO DE CHILE</option>
                     </select>
                     <select>
-                          <option value="">Selecciona una promoción</option>
+                          <option value="">Selecciona Año-Generacion</option>
                           <option value=""> 2014-I</option>
                           <option value=""> 2014-II</option>
                           <option value=""> 2015-I</option>
@@ -40,35 +39,38 @@
         </section>
         <main>
               <nav>
-                    <ul class="global">
-                        <li class="menu-global" >GENERAL</li>
-                        <li class="menu-global" >STUDENTS</li>
+                    <ul>
+                        <li>GENERAL</li>
+                        <li>STUDENTS</li>
                     </ul>
               </nav>
-              <article class="left">
+              <article>
                     <h2>INSCRIPCION</h2>
-                    <div class="squares">
-                          N° ESTUDIANTES INSCRITAS
+                    <div>
+                          <span id="register"></span>
+                          <p>N° ESTUDIANTES INSCRITAS</p> 
                     </div>
-                    <div class="squares">
-                         %  DESERTARON
+                    <div>
+                          <span id="desertStudents"></span>
+                        <p>DESERTARON</p>
                     </div>
               </article>
-              <article class="medium">
+              <!--
+              <article>
                     <h2>LOGROS</h2>
-                    <div class="squares">
+                    <div>
                           N° ESTUDIANTES QUE  CUMPLIERON <br> EL OBJETIVO
                     </div>
-                    <div class="squares">
+                    <div>
                          %  DEL TOTAL ( )
                     </div>
               </article>
               <article>
                     <h2>NET PROMOTER SCORE (NPS)</h2>
-                    <div class="squares">
+                    <div>
                           % ACUMULATIVO NPS
                     </div>
-                    <div class="squares">
+                    <div>
                          %  Promoters  <br>
                          % Passive <br>
                          % Detractors
@@ -96,10 +98,10 @@
                         <option value=""> Sprint 7</option>
                         <option value=""> Sprint 8</option>
                     </select>
-                    <div class="squares">
+                    <div>
                           N° ESTUDIANTES QUE CUMPLIERON <br> CON EL OBJETIVO
                     </div>
-                    <div class="squares">
+                    <div>
                          % DEL TOTAL ()
                     </div>
         <article>
@@ -114,10 +116,10 @@
                        <option value=""> Sprint 4</option>
                   </select >
               </form>
-              <div class="squares">
+              <div>
                     N° PROMEDIO GENERAL <br> DE LA CLASE
               </div>
-              <div class="squares">
+              <div>
                    N° ESTUDIANTES QUE CUMPLIERON <br> CON EL OBJETIVO
               </div>
         </article>
@@ -145,6 +147,7 @@
 
 
         </main>
+      -->
 
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
