@@ -1,3 +1,85 @@
 /*
  * Estilos de tu proyecto
  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.logo {
+  height: 77px;
+  /* text-align: center; */
+  width: 207px;
+  position: relative;
+  left: 40%;
+  margin-top: 5px;
+}
+
+.header-container {
+  background-color: pink;
+  height: 80px;
+}
+
+.icon-bars {
+  text-align: center;
+  font-size: 26pt;
+  position: relative;
+  float: right;
+  bottom: 62px;
+right: 4%;
+}
+
+select {
+  width: 240px;
+font-size: 18px;
+}
+
+form {
+  padding-top: 20px;
+  padding-left: 50px;
+}
+
+.menu-global {
+  display: inline-block;
+}
+
+.global {
+  margin-left: 24px;
+margin-top: 20px;
+margin-bottom: 20px;
+font-size: 20pt;
+font-weight: 600;
+}
+
+.menu-global {
+      padding-left: 25px;
+}
+
+article {
+  width: 373px;
+  height: 362px;
+  padding: 20px;
+  display: inline-block;
+  background-color: pink;
+  margin: 36px;
+}
+
+.squares {
+  width: 161px;
+height: 61px;
+display: inline-block;
+padding: 10px;
+}
+
+.left {
+  position: relative;
+bottom: 47px;
+}
+
+.medium {
+  position: relative;
+bottom: 29px;
+}
