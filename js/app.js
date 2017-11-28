@@ -1,7 +1,8 @@
 window.addEventListener('load', function() {
 // Container de resultados en HTML
   var boxResult = document.getElementById('result');
-
+  var sede = 'LIM';
+  var generation = '2016-2';
   // Consulta Sede
   function resultSede() {
     // creando contenedores de información General
@@ -25,6 +26,12 @@ window.addEventListener('load', function() {
     var boxPercentageNps = document.createElement('div');
     var boxPercentageNpsTypes = document.createElement('div');
 
+    // Contenedores Student Satisfaction 
+    var boxStudentSatisfaction = document.createElement('div');
+    var titleStudentSatisfaction = document.createElement('p');
+    var boxPercentageStudentSat = document.createElement('div');
+
+
     // elementos que contienen información de Enrollment
     var numberStudentTotal = document.createElement('p');
     var descriptionNumber = document.createElement('p');
@@ -40,9 +47,13 @@ window.addEventListener('load', function() {
     // elementos que contienes información de NPS
     var percentageNps = document.createElement('p');
     var descriptionNps = document.createElement('p');
-    var percentageNpsTypes = document.createElement('p');
-    
+    var percentageNpsPromoter = document.createElement('p');
+    var percentageNpsPassive = document.createElement('p');
+    var percentageNpsDetractors = document.createElement('p');
 
+    // elementos que contiene información de Student Satisfaction
+
+    
     // insertando elementos a contenedor Enrollment
     boxEnrollment.appendChild(titleEnrollment);
     boxEnrollment.appendChild(boxStudentTotal);
@@ -67,7 +78,9 @@ window.addEventListener('load', function() {
     boxNps.appendChild(boxPercentageNpsTypes);
     boxPercentageNps.appendChild(percentageNps);
     boxPercentageNps.appendChild(descriptionNps);
-    boxPercentageNpsTypes.appendChild(percentageNpsTypes);
+    boxPercentageNpsTypes.appendChild(percentageNpsPromoter);
+    boxPercentageNpsTypes.appendChild(percentageNpsPassive);
+    boxPercentageNpsTypes.appendChild(percentageNpsDetractors);
 
     // insertando elementos a contenedores Generales
     boxInfoGeneral.appendChild(boxEnrollment);
@@ -88,19 +101,23 @@ window.addEventListener('load', function() {
    
     // insertando información en Enrollment
     titleEnrollment.textContent = 'Enrollment';
-    numberStudentTotal.textContent = totalStudentActive('LIM', '2016-2');
-    percentageDropout.textContent = dropout('LIM', '2016-2') + '%';
+    numberStudentTotal.textContent = totalStudentActive(sede, generation);
+    percentageDropout.textContent = dropout(sede, generation) + '%';
     descriptionNumber.textContent = '# Students Currently Enrolled';
     descriptionDropout.textContent = '% Dropout' ; 
     // insertando información en Achievement
     titleAchievement.textContent = 'Achievement';
-    numberStudentUp.textContent = studentAchievement('LIM', '2016-2');
+    numberStudentUp.textContent = studentAchievement(sede, generation);
     descriptionStudentUp.textContent = '# Students that meet the target';
-    percentageStudentUp.textContent = (studentAchievement('LIM', '2016-2') / totalStudentActive('LIM', '2016-2')) * 100 + '%';
+    percentageStudentUp.textContent = (studentAchievement(sede, generation) / totalStudentActive(sede, generation)) * 100 + '%';
     descriptionPercentageStudent.textContent = '% of Total';
     // insertando información en NPS
     titleNps.textContent = 'Net Promoter Score';
-    percentageNps.textContent = '%';
+    percentageNps.textContent = npsAverage(sede, generation) + '%';
+    descriptionNps.textContent = '% Acumulative NPS';
+    percentageNpsPromoter.textContent = promoterNps(sede, generation) + '%' + ' Promoter';
+    percentageNpsPassive.textContent = passiveNps(sede, generation) + '%' + ' Passive';
+    percentageNpsDetractors.textContent = detractorNps(sede, generation) + '%' + ' Detractors';
   }
 
   // Función que obtiene Estudiantes Activos por Sede y Generación
@@ -162,8 +179,102 @@ window.addEventListener('load', function() {
     }
     return studentsGoals;
   }
-    
 
+  function npsAverage(sede, generation) {
+    var dataSede = data[sede];
+    var dataGeneration = dataSede[generation];
+    var dataRatings = dataGeneration.ratings;
+    var numSprint = dataRatings.length;
+    var npsArray = [];
+    for (i = 0; i < numSprint;i++) {
+      var nps = dataGeneration.ratings[i].nps.promoters - dataGeneration.ratings[i].nps.detractors;
+      npsArray.push(nps);
+    }
+    var sumNps = 0;
+    for (j = 0 ; j < npsArray.length ;j++) {
+      sumNps += npsArray[j];
+    }
+    var averageNps = sumNps / numSprint;
+    return averageNps;
+  }
+
+  function promoterNps(sede, generation) {
+    var dataSede = data[sede];
+    var dataGeneration = dataSede[generation];
+    var dataRatings = dataGeneration.ratings;
+    var numSprint = dataRatings.length;
+    var promotersArray = [];
+         
+    for (i = 0; i < numSprint;i++) {
+      var totalAnswers = dataRatings[i].nps.promoters + dataRatings[i].nps.passive + dataRatings[i].nps.detractors ;
+      var promoters = ((dataRatings[i].nps.promoters) / totalAnswers) * 100;
+      promotersArray.push(promoters);
+    }
+    var sumPromoter = 0;
+    for (j = 0 ; j < promotersArray.length ;j++) {
+      sumPromoter += promotersArray[j];
+    }
+    var averagePromoter = sumPromoter / numSprint;
+    return averagePromoter;
+  }
+
+  function passiveNps(sede, generation) {
+    var dataSede = data[sede];
+    var dataGeneration = dataSede[generation];
+    var dataRatings = dataGeneration.ratings;
+    var numSprint = dataRatings.length;
+    var passiveArray = [];
+     
+    
+    for (i = 0; i < numSprint;i++) {
+      var totalAnswers = dataRatings[i].nps.promoters + dataRatings[i].nps.passive + dataRatings[i].nps.detractors ;
+      var passive = ((dataRatings[i].nps.passive) / totalAnswers) * 100;
+      passiveArray.push(passive);
+    }
+    var sumPassive = 0;
+    for (j = 0 ; j < passiveArray.length ;j++) {
+      sumPassive += passiveArray[j];
+    }
+    var averagePassive = sumPassive / numSprint;
+    return averagePassive;
+  }
+
+  function detractorNps(sede, generation) {
+    var dataSede = data[sede];
+    var dataGeneration = dataSede[generation];
+    var dataRatings = dataGeneration.ratings;
+    var numSprint = dataRatings.length;
+    var detractorArray = [];
+     
+    
+    for (i = 0; i < numSprint;i++) {
+      var totalAnswers = dataRatings[i].nps.promoters + dataRatings[i].nps.passive + dataRatings[i].nps.detractors ;
+      var detractor = ((dataRatings[i].nps.detractors) / totalAnswers) * 100;
+      detractorArray.push(detractor);
+    }
+    var sumDetractor = 0;
+    for (j = 0 ; j < detractorArray.length ;j++) {
+      sumDetractor += detractorArray[j];
+    }
+    var averageDetractor = sumDetractor / numSprint;
+    return averageDetractor;
+  }
+
+  function studentSatisfaction(sede, generation) {
+    var dataSede = data[sede];
+    var dataGeneration = dataSede[generation];
+    var arraySatisfaction = [];
+    for (i = 0;i < dataGeneration.ratings.length;i++) {
+      var datacumple = dataGeneration.ratings[i].student.cumple;
+      var dataSupera = dataGeneration.ratings[i].student.supera;
+      var totalSatisfaction = datacumple + dataSupera;
+      arraySatisfaction.push(totalSatisfaction);
+    }
+
+    return arraySatisfaction;
+  }
+
+    
   // ejecución de función
   resultSede();
 });
