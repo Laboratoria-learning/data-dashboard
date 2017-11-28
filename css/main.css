@@ -1,3 +1,43 @@
 /*
  * Estilos de tu proyecto
  */
+ *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+body{
+    background-color: #F7F7F7;
+    font-family: monospace;
+    position: relative;
+}
+.first{
+    background-color: white;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-top: 50px;
+    margin-right: 10px;
+    margin-left: 80px;
+}
+
+.second{
+    background-color: white;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-top: 50px;
+    position: absolute;
+}
+.search{
+    width:800px;
+    height:35px;
+}

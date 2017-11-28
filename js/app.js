@@ -1,9 +1,10 @@
 /*
  * Funcionalidad de tu producto
  */
-
+console.log(data);
+console.log(Object.keys(Object.getOwnPropertyNames(data)[1]));
 // console.log(data.AQP['2016-2']['students'][0]['active']);
-var studemts = data.AQP['2016-2']['students'];
+/*var studemts = data.AQP['2016-2']['students'];
 var studemtsActive = [];
 var studemtsDeserte = [];
 
@@ -20,9 +21,9 @@ for (var i = 0; i <= studemts.length; i++) {
 
 var porcentajeDesercion = (studemtsDeserte / studemts.length * 100);
 console.log(studemtsDeserte.length);
-console.log(porcentajeDesercion);
+console.log(porcentajeDesercion);*/
 // Puedes hacer uso de la base de datos a través de la variable `data`
-// console.log(data);
+//
 
 // console.log(Object.keys(data)[0]);
 
