@@ -37,13 +37,17 @@ window.addEventListener('load', function() {
       optionproms.label = promsforSede[j];
       // le asignamos donde lo va a mostrar
       optgroupsedes.appendChild(optionproms);
-
+      // recorremos los valores de las sedes
       for (var l = 0; l < valuesofSedes.length; l++) {
+        // obtenemos el valor de las sedes de la posicion l
         var valuesofProms = valuesofSedes[l];
+        // obtenemos los keys de las estudiantes
         var keysforSttudents = Object.keys(valuesofProms);
+        // obtenemos los valores de los keys de las estudiantes
         var valueskeysforStudents = Object.values(valuesofProms);
         console.log(valueskeysforStudents);
 
+        // recorremos los keys de los estudiantes
         // for (var k = 0; k < keysforSttudents.length; k++){
         //   var valuesofStudents = valuesofProms[k];
 
