@@ -1,3 +1,101 @@
-/*
- * Estilos de tu proyecto
- */
+header{
+display: flex;
+margin-left: 42%;
+margin-top: 1%;
+}
+
+img{
+  width: 25%;
+  height: 25%;
+}
+
+.fa-bars{
+  margin-top: 2%;
+  margin-left:53%;
+}
+
+.sedes{
+  display: flex;
+  margin-left: 5%;
+
+}
+
+.fa-sort-desc{
+  margin-top: 2%;
+  margin-left:1%;
+
+}
+
+.sedes h1{
+  font-size: 150%;
+  text-transform: uppercase;
+  padding-top: 1%;
+}
+div ul li{
+  display: inline-block;
+  margin-left: 2%;
+
+}
+
+li{
+  margin-right: 5%;
+  text-transform: uppercase;
+}
+
+.principal{
+  background-color: #e1e1e1;
+  width: 1360px;
+  height: 134px;
+  margin-left: 110px;
+}
+
+.secciones_sup_e_inf{
+   display: flex;
+   margin-left: 96px;
+ }
+
+.small-box{
+  width:370px;
+  height:370px;
+  background-color: #ffffff;
+  margin: 61px  31px 84px 5px;
+
+}
+
+
+.habilidad_tecnológica{
+  width:1170px;
+  height:563px;
+  margin: 0 95px 44px 95px;
+  background-color: #ffffff;
+}
+
+.otras_habilidades{
+  width:1170px;
+  height:563px;
+  margin: 0 96px 44px 96px;
+  background-color: #ffffff;
+
+}
+
+.información{
+  background-color: #f7f7f7;
+  width: 1364px;
+  margin: 0 108px 0 108px;
+}
+
+h2{
+  margin-left: 24px;
+}
+
+.habilidad_tecnológica h2{
+  padding-top: 2%;
+}
+
+.otras_habilidades h2{
+  padding-top: 2%;
+}
+
+. small-box .super-small{
+  background-color: #f7f7f7;
+}
