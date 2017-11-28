@@ -9,7 +9,6 @@
  }
  /* Estilos al header */
 #logo {
-outline: 1px solid red;
 width: 15%;
 margin-left: 42%;
 }
@@ -17,6 +16,8 @@ margin-left: 42%;
  .title {
 text-align: center;
 font-size: 20px;
+  }
 
-  
- }
+.promo {
+  margin-left: 10%;
+}
