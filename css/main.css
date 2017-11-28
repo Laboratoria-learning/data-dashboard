@@ -1,3 +1,89 @@
 /*
  * Estilos de tu proyecto
  */
+body {
+margin:0;
+padding: 0;
+}
+.logo {
+  width: 80px;
+  height: 50%;
+  margin: 1%;
+  display: inline-block;
+  margin: -10px;
+}
+.brand{
+  width: 200px;
+  margin-left: 450px;
+}
+.bar{
+  display:inline-block;
+}
+.icon{
+  font-size: 30px;
+  top: 0;
+  position: absolute;
+  right: 0;
+  margin-right: 50px;
+  margin-top: 20px;
+}
+.raya_one{
+  position: absolute;
+  top: 68%;
+  right: 79%;
+}
+.raya_two{
+  position: absolute;
+  top: 99%;
+  right: 80%;
+}
+
+#br{
+  position: absolute;
+  top: 0;
+  margin-left: 22%;
+  margin-top: 8%;
+  font-size: 28px;
+}
+#br-1{
+  position: absolute;
+  top: 65%;
+  font-size: 32px;
+  right: 79%;
+}
+#br-2{
+  position: absolute;
+  font-size: 33px;
+  top: 96%;
+  right: 80%;
+}
+.title {
+  text-align:left;
+  font-family: 'Bree Serif', serif;
+}
+.subtitle {
+  display: inline-block;
+  font-family: 'Oswald', sans-serif;
+  margin: 10px;
+}
+
+.data-div{
+  display: inline-block;
+  outline: 1px solid black;
+  font-family: 'Oswald', sans-serif;
+  text-align: left;
+  padding-bottom: 100px;
+  margin: 5px;
+  line: 20px;
+}
+
+.data {
+  margin: 5px;
+  display: inline-block;
+  outline: 1px solid red;
+}
+.span{
+  text-align: center;
+  font-family: 'Questrial', sans-serif;
+  display: inline-block;
+}
