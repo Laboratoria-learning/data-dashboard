@@ -3,12 +3,53 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="assets/icons/css-fonts/font-awesome.min.css">
   </head>
   <body>
+      <header>
+            <div class="box-header start">
+                <span id="button-menu" class="fa fa-bars icons"></span>
+                <nav class="navegacion">
+                  <ul class="menu">
+                    <li class="title-menu">Editar Datos</li>
+                    <li><a href="index.html"><span class="fa fa-home icon-menu"></span>Dashboard</a></li>
+                    <li><a href="#"><span class="fa fa-plus-circle icon-menu"></span>Añadir Estudiante</a></li>
+                    <li><a href="#"><span class="fa fa-minus-circle icon-menu"></span>Remover Estudiante</a></li>
+                    <li><a href="#">Agregar Sprint</a></li>
+                  </ul>
+                </nav>
+                <span class="box-header search">
+                  <input type="text" placeholder="search">
+                  <a href="#" class="icons-search">
+                  <i class="fa fa-search fa-rotate-90" aria-hidden="true"></i>
+                  </a>
+                </span>
+            </div>
+            <figure class="box-header logo">
+              <img src="assets/images/logo-laboratoria.svg" alt="logo">
+            </figure>
+            <div class="box-header user">
+              <ul>
+                <a class="icons" href="#">
+                  <li><i class="fa fa-envelope-o" aria-hidden="true"></i></li>
+                </a>
+                <a class="icons" href="#">
+                  <li><i class="fa fa-bell-o" aria-hidden="true"></i></li>
+                </a>
+                <a class="user-icon" href="#">
+                    <li><div>J</div></li>
+                </a>
+              </ul>
+            </div>
+      </header>
 
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/main.js"></script>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
     <script src="./js/app.js"></script>
+
   </body>
 </html>

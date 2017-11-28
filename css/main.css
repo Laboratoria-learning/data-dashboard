@@ -1,3 +1,163 @@
 /*
  * Estilos de tu proyecto
  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f7f7f7;
+    font-size: 22px;
+}
+
+header {
+    position: fixed;
+    background: white;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.start {
+    margin: 20px 5px;
+    float: left;
+}
+
+.user {
+    margin: 20px 10px;
+    float: right;
+}
+
+.logo {
+    width: 15%;
+    margin: 0 25%;
+}
+
+.logo img {
+    width: 100%;
+    
+}
+
+.user li,
+.box-main li {
+    list-style:none;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+}
+
+.box-header {
+    display: inline-block;
+}
+.bars:hover,
+.user .icons:hover {
+    background: #ffc107; 
+}
+
+.search {
+    padding: 6px;
+    border-radius: 3px;
+    background: #ecebeb;
+    margin-left: 5px;
+}
+
+.search input {
+    border: none;
+    background: none;
+    font-size: 13px;
+    line-height: 19px;
+    width: 150px;
+    outline: none;
+}
+
+.search:hover {
+    background: #dfdede;
+}
+
+.icons{
+    color: #575D69;
+    background-color: #f7b617;
+    border-radius: 3px;
+    margin-left: 10px; 
+    padding: 8px;
+    font-size: 22px;
+}
+
+.icons-search {
+    font-size: 22px;
+    color: #575D69; 
+    padding: 8px;
+}
+
+
+.user-icon div {
+    border-radius: 100%;
+    color: #333333;
+    font-size: 30px;
+    font-weight: 400;
+    background-color: #cbd5da;
+    text-align: center;
+    padding: 6px;
+    margin-left: 20px;
+    width: 50px;
+    height: 50px;
+    margin-top: -5px;
+}
+
+.user-icon div:hover {
+    background-color: #c3ced3;
+}
+
+/***************************************************************/
+header #button-menu{
+	font-size: 30px;
+	color: #575D69;
+	cursor: pointer;
+}
+
+.navegacion{
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 0%;
+	height: 100vh;
+	background: rgba(0,0,0,.0);
+}
+
+.navegacion ul{
+	width: 320px;
+	height: 100%;
+	background: #fff;
+	list-style: none;
+	position: absolute;
+	top: 0;
+	left: -320px;
+	transition: left .3s;
+}
+
+.title-menu{
+	padding: 20px;
+	background: #ffc107;
+	color: #fff;
+	text-align: center;
+}
+
+.navegacion .menu a{
+	display: block;
+	padding: 20px;
+	border-bottom: 1px solid #C6D0DA;
+	font-weight: 200;
+	text-decoration: none;
+	color: #575D69;
+}
+
+.navegacion .menu a:hover{
+	background: #e6e6e6;
+}
+
+.navegacion .menu li span.icon-menu{
+	margin-right: 12px;
+}
