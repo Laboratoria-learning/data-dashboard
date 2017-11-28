@@ -9,6 +9,10 @@
   font-family: 'Quicksand', sans-serif;
 }
 
+body {
+  background-color: #F0EFEF;
+}
+
 .logo {
   height: 77px;
   /* text-align: center; */
@@ -19,33 +23,34 @@
 }
 
 .header-container {
-  background-color: pink;
+  background-color: #ffffff;
   height: 80px;
 }
 
 .icon-bars {
+  color: #F8C341;
   text-align: center;
   font-size: 23pt;
   position: relative;
   float: right;
   bottom: 62px;
-right: 4%;
+  right: 7%;
 }
 
 select {
   /*width: 244px;*/
-/*font-size: 18px;*/
-outline: none;
-/* outline: pink; */
-border: none;
-width: 302px;
-padding: 2px;
-font-size: 22px;
+  /*font-size: 18px;*/
+  outline: none;
+  /* outline: pink; */
+  border: none;
+  width: 302px;
+  padding: 2px;
+  font-size: 22px;
 }
 
 .select-left {
   width: 240px;
-margin-right: 75px;
+  margin-right: 75px;
 }
 
 form {
@@ -59,14 +64,14 @@ form {
 
 .global {
   margin-left: 24px;
-margin-top: 34px;
-margin-bottom: 20px;
-font-size: 20pt;
-font-weight: 600;
+  margin-top: 34px;
+  margin-bottom: 20px;
+  font-size: 20pt;
+  font-weight: 600;
 }
 
 .menu-global {
-      padding-left: 25px;
+  padding-left: 25px;
 }
 
 article {
@@ -74,38 +79,38 @@ article {
   height: 362px;
   padding: 20px;
   display: inline-block;
-  background-color: pink;
+  background-color: #FFFFFF;
   margin: 36px;
 }
 
 .squares {
   width: 161px;
-height: 61px;
-display: inline-block;
-padding: 10px;
+  height: 61px;
+  display: inline-block;
+  padding: 10px;
 }
 
 .left {
   position: relative;
-bottom: 28px;
+  bottom: 28px;
 }
 
 .medium {
   position: relative;
-bottom: 29px;
+  bottom: 29px;
 }
 
 .tech-habilities {
   position: relative;
-bottom: 43px;
-width: 1275px;
+  bottom: 43px;
+  width: 1275px;
 }
 
 .social-habilities {
   position: relative;
-      top: 190px;
-      width: 1275px;
-          right: 52px;
+  top: 190px;
+  width: 1275px;
+  right: 52px;
 }
 
 .div-left {
@@ -118,24 +123,24 @@ width: 1275px;
 
 .div-center {
   width: 369px;
-/* margin-top: 218px; */
-height: 355px;
-background-color: palegoldenrod;
-padding: 20px;
-left: 464px;
-top: 851px;
-position: absolute;
+  /* margin-top: 218px; */
+  height: 355px;
+  background-color: palegoldenrod;
+  padding: 20px;
+  left: 464px;
+  top: 851px;
+  position: absolute;
 }
 
 .div-right {
   width: 369px;
-/* margin-top: 218px; */
-height: 355px;
-background-color: palegoldenrod;
-padding: 20px;
-position: absolute;
-top: 852px;
-right: 0px;
+  /* margin-top: 218px; */
+  height: 355px;
+  background-color: palegoldenrod;
+  padding: 20px;
+  position: absolute;
+  top: 852px;
+  right: 0px;
 }
 
 .general {
