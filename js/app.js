@@ -2,13 +2,34 @@
  * Funcionalidad de tu producto
  */
 
+/*selectSede[sede] = {
+  sede: currentSede,
+  }
+*/
+var inputs = document.getElementsByTagName('input');
+//var currentSede = 'LIM';
+ //Sedes 
+ //AQP, CDMX, LIM, SCL
+function selectSede() {
+  var currentSede = 'LIM';
+  for (var i = 0; i < inputs.length; i++){
+    inputs[i].addEventListener('click',function() {
+      currentSede = this.value;
+      //console.log(currentSede);
+      //return currentSede;
+    })
+    return currentSede;
+  }
+  //return currentSede;
+}
+var sede = selectSede();
 function enrollment(act,inac) {
   active = 0;
   inactive = 0;
-  for (var i = 0; i < dataStudents.AQP["2016-2"].students.length; i++) {
-    if (dataStudents.AQP["2016-2"].students[i].active === true) {
+  for (var i = 0; i < dataStudents[sede]['2016-2'].students.length; i++) {
+    if (dataStudents[sede]['2016-2'].students[i].active === true) {
       active++;
-    } else if (dataStudents.AQP["2016-2"].students[i].active === false) {
+    } else if (dataStudents[sede]['2016-2'].students[i].active === false) {
       inactive++;
     }
   }
@@ -39,16 +60,6 @@ google.charts.load('current', {
 });
 
 function drawSeriesChart() {
-
-  for (var i = 0; i < dataStudents.AQP["2016-2"].students.length; i++) {
-    var active = 0;
-    var inactive = 0;
-    if (dataStudents.AQP["2016-2"].students[i].active === true) {
-      active++;
-    } else if (dataStudents.AQP["2016-2"].students[i].active === false) {
-      inactive++;
-    }
-  }
 
   var data = new google.visualization.DataTable();
   data.addColumn('string', 'Month');
@@ -90,50 +101,7 @@ function drawSeriesChart() {
   });
 }
 
-//Aqui empieza el otro codigo
-/*
-google.charts.load('current', {packages: ['corechart', 'bar']});
-google.charts.setOnLoadCallback(drawBasic);
-
-function drawBasic() {
-
-  var data = new google.visualization.DataTable();
-  data.addColumn('timeofday', 'Time of Day');
-  data.addColumn('number', 'Motivation Level');
-
-  data.addRows([
-    [{v: [8, 0, 0], f: '8 am'}, 1],
-    [{v: [9, 0, 0], f: '9 am'}, 2],
-    [{v: [10, 0, 0], f:'10 am'}, 3],
-    [{v: [11, 0, 0], f: '11 am'}, 4],
-    [{v: [12, 0, 0], f: '12 pm'}, 5],
-    [{v: [13, 0, 0], f: '1 pm'}, 6],
-    [{v: [14, 0, 0], f: '2 pm'}, 7],
-    [{v: [15, 0, 0], f: '3 pm'}, 8],
-    [{v: [16, 0, 0], f: '4 pm'}, 9],
-    [{v: [17, 0, 0], f: '5 pm'}, 10],
-  ]);
-
-  var options = {
-    title: 'Enrollment',
-    hAxis: {
-      title: 'Estudiantes activas',
-      format: 'h:mm a',
-      viewWindow: {
-        min: [7, 30, 0],
-        max: [17, 30, 0]
-      }
-    },
-    vAxis: {
-      title: 'Porcentaje'
-    }
-  };
-
-  var chart = new google.visualization.ColumnChart(
-    document.getElementById('chart_div'));
-
-  chart.draw(data, options);
-}*/
+console.log(selectSede());
 
 // Puedes hacer uso de la base de datos a través de la variable `data`
 console.log(dataStudents);
