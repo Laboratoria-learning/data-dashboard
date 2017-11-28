@@ -82,13 +82,15 @@
  /*Estilo para esconder el modal*/
  .hidden {
     display: none;
+    margin-top: 170px;
+    margin-left: 170px;
  }
 
  /*Estilo del modal de sedes*/
  #sedes-container {
     position: fixed; 
     width: 550px; 
-    height: 250px; 
+    height: 450px; 
     top: 0; 
     left: 0; 
     font-family: sans-serif; 
@@ -97,6 +99,7 @@
     border: none; 
     background-color: #fff; 
     color: #a1a0a0;
+    overflow: scroll;
  }
 
  .select {
