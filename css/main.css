@@ -39,6 +39,7 @@ nav{
     width:100%;
     height:8em;
     background-color:#e1e1e1;
+    outline:1px solid red;
 }
 
 .div-nav{
@@ -86,6 +87,7 @@ nav{
 .main{
     width:100%;
     height:auto;
+   
 }
 
 .main-content{
@@ -125,4 +127,87 @@ nav{
 
 .boxes-top-graphic img{
     width:100%;
+}
+ /************medio**************/
+
+ .boxes-medium{
+    width:100%;
+    padding:1em 2.5em;
+    background-color:#fff;
+    clear:both;
+    outline:1px solid black; 
+ }
+
+.boxes-medium h4{
+    display:inline-block;
+}
+
+ .overall{
+     float:right;
+ }
+
+ .cajitas{
+     outline:1px solid black;
+ }
+
+ .boxes-center-skills{
+     clear:both;
+     height:6em;
+}
+.boxes-center{
+    background-color: #f7f7f7;
+    width:9.5em;
+    height:4em;
+    padding:0.6em;
+    text-align:center;
+    float:left; 
+    margin:1.5em 0.3em;
+}
+
+.boxes-center p{
+    font-size:0.6em;
+    margin-top:0.5em;
+}
+
+.box-graphics{
+    width:100%
+    height:4em;
+    clear:both;
+
+}
+.graphic-bar{
+    display:inline-block;
+    vertical-align:top;
+    width:61%;
+    height:21em;
+}
+
+.graphic-bar img{
+    width:100%;
+}
+
+.graphic-circle{
+    display:inline-block;
+    height:21em;
+    width:38%;
+}
+
+.graphic-circle img{
+    width:75%;
+    margin-top:0.5em;
+    margin-left:4em;
+}
+
+.leyend-graphics{
+    width:20em;
+    height:auto;
+    margin-left:5em;
+     margin-top:1em;
+   
+}
+
+.leyend-graphics p{
+    font-size:9px;
+    display:inline-block;
+  
 }
