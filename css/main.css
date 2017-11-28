@@ -1,29 +1,63 @@
-.caja {
+
+/*Diseñando el contenido de las secciones*/
+.section {
+  position: relative;
+
+}
+.firts {
   background: #F3E9E7;
   width: 350px;
-  height: 250px;
-  display: inline-block;
+  height: 250px;  
+}
+.one{
+  position: absolute;
+  left: 176px;
+  top: 71px;
+
+}
+.two{
+  position: absolute;
+  right: 34%;
+  top: 71px;
+}
+.tree{
+  position: absolute;
+  right: 7%;
+  top: 71px;
+ 
   
 }
-.firtAndtree{
-  width: 320px;
-  height: 250px;
-  margin: 1%;
-  margin-top: 5%;
+.four{
+  position: absolute;
+  right: 50%;
+  top: 338px;
+  
 }
-
-
+.five{
+  position: absolute;
+  right: 7%;
+  top: 338px; 
+}
+.six{
+  position: absolute;
+  left: 165px;
+  top: 616px;
+}
+.seven{
+  position: absolute;
+  top: 619px;
+  left: 531px;  
+}
+.eight{
+  position: absolute;
+  right: 92px;
+  top: 620px;
+  
+}
 .second{
   width: 500px;
   height: 250px;
-  margin: 1%;
-
-}
-.one {
-  margin-left: 17%;
-}
-.tree{
-  margin-top: 1%;
+  background: #F3E9E7;
 }
 .position {
   position: absolute;
@@ -31,3 +65,22 @@
   top: 7%;
 }
 
+/*Diseñando las imagenes de estadistica*/
+.img img{
+  width: 234px;
+  height: 134px;
+}
+.info{
+  background: #E8DEDC;
+  width: 180px;
+  display: inline-block;
+  margin: 1%;
+}
+.right {
+  width: 100px;
+}
+
+.img2 img{
+  width: 234px;
+  height: 134px;
+}
