@@ -22,8 +22,28 @@
     </header>
     <main>
       <section class="box-filter">
-        <div class="select-filter">
-          <span>LIMA 2017 - II <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i></span>          
+        <div class="select-filter">          
+          <select name="promo" id="promo-filter">
+              <option value="" hidden>Selecciona una opción</option>
+              <optgroup label="Arequipa">
+                <option value="aqp-16-2">AQP 2016 - II</option>
+                <option value="aqp-17-1">AQP 2017 - I</option>
+              </optgroup>
+              <optgroup label="Lima">
+                <option value="lim-16-2">LIM 2016 - II</option>
+                <option value="lim-17-1">LIM 2017 - I</option>
+                <option value="lim-17-2">LIM 2017 - II</option>
+              </optgroup>
+              <optgroup label="México">
+                <option value="cdmx-17-1">CDMX 2017 - I</option>
+                <option value="cdmx-17-2">CDMX 2017 - II</option>
+              </optgroup>
+              <optgroup label="Chile">
+                <option value="scl-16-2">SCL 2016 - II</option>
+                <option value="scl-17-1">SCL 2017 - I</option>
+                <option value="scl-17-2">SCL 2017 - II</option>
+              </optgroup>
+            </select>
         </div>
         <ul class="tabs">
           <li>OVERVIEW</li>
@@ -33,10 +53,41 @@
       </section>
       <section class="container-graphics">
         <div class="big-graphic">
-          <p>TECH SKILLS</p>
-          <span>overall (cumulative)<i class="fa fa-caret-down fa-lg" aria-hidden="true"></i></span>  
-          <div class="box1"></div>
-          <div class="box2"></div>
+          <div>
+            <p>TECH SKILLS</p>
+            <select name="overall" id="overall-tech" class="select-skills">
+              <optgroup label="COMMON CORE">
+                <option value="" hidden>overall (cumulative)</option>
+                <option value="sp1">Sprint 1: Create an interactive site</option>
+                <option value="sp2">Sprint 2: Create an interactive site</option>
+                <option value="sp3">Sprint 3: Create an interactive site</option>
+                <option value="sp4">Sprint 4: Create an interactive site</option>
+              </optgroup>
+            </select>
+          </div>
+          <div>
+            <div class="box1"></div>
+            <div class="box2"></div>
+          </div>
+          <div class="graphic"></div>
+        </div>
+        <div class="big-graphic">
+          <div>
+            <p>LIFE SKILLS</p>
+            <select name="overall" id="overall-life" class="select-skills">
+              <optgroup label="HSE">
+                <option value="" hidden>overall (cumulative)</option>
+                <option value="sp1">Sprint 1: Create an interactive site</option>
+                <option value="sp2">Sprint 2: Create an interactive site</option>
+                <option value="sp3">Sprint 3: Create an interactive site</option>
+                <option value="sp4">Sprint 4: Create an interactive site</option>
+              </optgroup>
+            </select>
+          </div>
+          <div>
+            <div class="box1"></div>
+            <div class="box2"></div>
+          </div>
           <div class="graphic"></div>
         </div>
         <div class="small-graphic">
@@ -58,16 +109,7 @@
         <div class="setting">Configuración</div>
         <div class="setting">Calendario</div>
         <div class="setting">Salir</div>
-      </section>
-      <section class="promo-filter">
-        <div>
-          <p>LIMA</p>
-          <hr>
-          <p><i class="fa fa-square-o" aria-hidden="true"></i> 2016 - II</p>
-          <p><i class="fa fa-square-o" aria-hidden="true"></i> 2017 - I</p>
-          <p><i class="fa fa-square-o" aria-hidden="true"></i> 2017 -II</p>
-        </div>
-      </section>
+      </section>      
     </main>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>

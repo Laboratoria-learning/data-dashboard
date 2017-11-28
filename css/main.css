@@ -41,9 +41,10 @@ header {
  padding: 30px 0;
 }
 
-.select-filter span {
-  font-size: 2em;
-  font-weight: bold;
+ #promo-filter {
+  font-size: 1.5em;
+  background-color: #e1e1e1;
+  border: none;
  }
 
 .tabs {
@@ -69,6 +70,20 @@ header {
   width: 1000px;
 }
 
+.big-graphic p {
+  display: inline-block;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.select-skills {
+  border: none;
+  border-bottom: 1px solid #000;
+  display: inline-block;
+  font-size: 1.1em;
+}
+
 .small-graphic {
   background-color: #fff;
   height: 370px;
@@ -78,8 +93,9 @@ header {
 
 .box1, .box2 {
   background-color: #f7f7f7;
+  display: inline-block;
   height: 60px;
-  margin: 10px;
+  margin: 20px;
   width: 150px;
 }
 
@@ -104,11 +120,4 @@ header {
   padding: 20px;
   border-bottom: 1px solid #fff;
   border-top: 1px solid #fff;
-}
-
-/*Promo filter section*/
-.promo-filter {
-  background-color: #fff;
-  height: 500px;
-  width: 25%;
 }
