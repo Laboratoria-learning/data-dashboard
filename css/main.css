@@ -5,3 +5,77 @@
 .header-logo{
   width: 30%;
 }
+.first{
+  background: #E1E1E1;
+  margin-top: 1%;
+  position: relative;
+  width: 100%
+
+  display: inline-block;
+  outline: 1px solid red;
+  overflow: auto;
+}
+.cuadro-1{
+  background: white;
+  width: 25%;
+  /*height: 40%;*/
+  position: relative;
+  outline: 1px solid red;
+
+}
+.detalleCuadro-1{
+  font-size: 0.7em;
+}
+.detalleCuadro-2{
+  font-size: 0.7em;
+}
+
+.cuadro-2{
+  width: 25%;
+  /*height: 40%;*/
+  top: 15px;
+left: 480px;
+background: white;
+position: absolute;
+  outline: 1px solid red;
+
+
+}
+.detalleCuadro-2{
+  font-size: 0.6em;
+}
+.cuadro-3{
+position: absolute;
+width: 25%;
+background: white;
+left:950px;
+top: 15px;
+
+outline: 1px solid blue;
+}
+.nps{
+    font-size: 0.7em;
+}
+.first img{
+  width: 50%;
+  /*bottom: 2%;*/
+}
+.second{
+  background: white;
+  margin-top: 1%;
+  position: relative;
+  width: 100%
+  display: inline-block;
+  outline: 1px solid red;
+}
+/*.tech{
+  position: absolute;
+  left: 135px;
+  top: 3px;
+  border-bottom: 1px solid black;*/
+  /*top:85%;*/
+.sprintlist{
+  position: absolute;
+  left: 10%;
+  top: 1%;
+}
