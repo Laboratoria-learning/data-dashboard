@@ -2,29 +2,33 @@
  *{
    margin: 0;
    padding: 0;
+   font-family: 'Raleway', sans-serif;
 
  }
  body{
-   background:
+   background:#fff;
  }
  /*logo-laboratoria*/
  img{
-   width: 100%;
+   outline: 1px solid red;
+   width: 63.5em;
    height: 5em;
-   
+   float: right;
+
 
  }
  /*lista de navegación*/
  nav{
    display: inline-block;
-   margin-left: 6.1em;
+   margin-left: 21.8em;
+
 
  }
  ul{
 
    list-style: none;/*los puntos los quita*/
    padding: 0;
-   background: #EDEDED;
+   background: #000;
    line-height: 70px;/*agranda la linea*/
    overflow: auto;/*devuelve el contexto del bloque*/
  }
@@ -38,17 +42,21 @@
 a{
 text-decoration: none;/*quita la linea*/
 display: block;/*ocupe el espacio disponible de la etiqueta li*/
-color: #000;
+color: #fff;
 font-size: 20px;
+}
+.title{
+  color: #000;
 }
 /*hara al pasar el mause en cada li cambiara de color*/
 a:hover{
-  background: #D8D8D8;
-  color: #000;
+  background: #2C3E50;
+  color: #fff;
 }
 /*Estilos iconos*/
 .fa{
   font-size: 35px;
+  color:#fff;
 }
 .fa.fa-bars{
     margin-top: 10px;
@@ -60,10 +68,11 @@ a:hover{
   margin-left: 1em;
   position: relative;
   top: 15.5em;
+
 }
 /* Section del Home*/
 .sub-container{
-  background-color: #D8D8D8;
+  background-color: #FFC107;
   width: 6.2em;
   height: 45em;
   position: fixed;
@@ -74,12 +83,11 @@ a:hover{
   width: 15.5em;
   display: inline-block;
   box-sizing: border-box;
-  position:sticky;
+  position:fixed;
   left: 6.2em;
   border: 1px solid #EDEDED;
 
 }
-
 .box-list{
   padding-top: 10px;
 }
@@ -89,4 +97,31 @@ a:hover{
 }
 hr{
   border: 1px solid orange;
+}
+/*Estilo de las estadisticas*/
+.container-2{
+  margin-left: 22em;
+}
+.sub-box{
+    background-color:#F2F3F4  ;
+  width: 320px;
+  height: 310px;
+  display: inline-block;
+  margin-left: 0.5em;
+  bottom: 40em;
+  position: relative;
+
+}
+h1{
+  margin-top: 1em;
+  margin-left: 1em;
+}
+.sub-box2{
+  background-color: #F7F7F7;
+  width: 140px;
+  height: 80px;
+  display: inline-block;
+  margin-left: 0.5em;
+  top: 1em;
+  position: relative;
 }
