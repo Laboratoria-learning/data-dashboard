@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="assets/fonts/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Catamaran:500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
     <title>Data Dashboard</title>
   </head>
   <body>
@@ -12,9 +12,7 @@
       <nav id="bar-nav">
           <img src="assets/images/logo-laboratoria.svg" alt="logo" class="logo">
           <span class="icon-bars"></span>
-      </nav>
-    </header>
-    <main>
+      </nav>    
       <section class="selecting">
         <div class="sedes">
         <select name="select" id="select">
@@ -68,14 +66,37 @@
         </ul>
       </div>
       </section>
-      
+    </header>
+    <main>
+        <section class="overview">
+          <div class="container">
+          <div id="enrollment" class="square">
+            <span id="data"></span><span id="data"></span>
+            
+          </figure>
+          <figure id="achivement" class="square"></figure>
+          <figure id="net-promoter-score" class="square"></figure>
+          </div>
+          <div>
+            <figure id="tech-skills" class="rectangle"></figure>
+          </div>
+          <div>
+            <figure id="life-skills" class="rectangle"></figure>
+          </div>
+          <div>
+            <figure id="student-satisfaction" class="square"></figure>
+            <figure id="teacher-rating" class="square"></figure>
+            <figure id="jedi-master-rating" class="square"></figure>
+          </div>
+        </section>
+            
+         <section class="students-container"></section>
     </main>
-    <section class="info-container">
-      
-    </section>
+    
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
     <script src="./js/app.js"></script>
+    
   </body>
 </html>
