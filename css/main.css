@@ -1,3 +1,32 @@
-/*
- * Estilos de tu proyecto
- */
+/* Seteando body*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+
+header {
+  background-color: #ffc107;
+  position: relative;
+  width: 100%;
+}
+
+.logo-laboratoria {
+  height: 90px;
+  width: 150px;
+}
+
+#select-sede {
+  display: block;
+}
+
+.options li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+}
+
