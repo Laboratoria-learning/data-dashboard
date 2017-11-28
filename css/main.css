@@ -18,7 +18,7 @@ body {
   /* text-align: center; */
   width: 207px;
   position: relative;
-  left: 40%;
+  left: 42%;
   margin-top: 5px;
 }
 
@@ -53,9 +53,14 @@ select {
   margin-right: 75px;
 }
 
-form {
+.form {
   padding-top: 20px;
   padding-left: 50px;
+}
+
+section {
+  padding-left: 38px;
+  padding-top: 10px;
 }
 
 .menu-global {
@@ -64,8 +69,8 @@ form {
 
 .global {
   margin-left: 24px;
-  margin-top: 34px;
-  margin-bottom: 20px;
+  margin-top: 44px;
+  margin-bottom: 10px;
   font-size: 20pt;
   font-weight: 600;
 }
@@ -88,6 +93,9 @@ article {
   height: 61px;
   display: inline-block;
   padding: 10px;
+  float: left;
+  margin-right: 5px;
+  background-color: #F7F7F7;
 }
 
 .left {
@@ -108,7 +116,7 @@ article {
 
 .social-habilities {
   position: relative;
-  top: 190px;
+  top: 204px;
   width: 1275px;
   right: 52px;
 }
@@ -128,7 +136,7 @@ article {
   background-color: palegoldenrod;
   padding: 20px;
   left: 464px;
-  top: 851px;
+  top: 817px;
   position: absolute;
 }
 
@@ -139,10 +147,19 @@ article {
   background-color: palegoldenrod;
   padding: 20px;
   position: absolute;
-  top: 852px;
+  top: 817px;
   right: 0px;
 }
 
 .general {
   padding-bottom: 60px;
+}
+
+p {
+  font-size: 10pt;
+}
+
+.promoters {
+  list-style: none;
+  font-size: 10pt;
 }
