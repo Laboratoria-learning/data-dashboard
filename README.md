@@ -1,5 +1,13 @@
 # Data Dashboard
 
+## Descripcion sobre el producto:
+
+El Data Dashboard es una herramienta que te brinda informacion respecto al desempeño de las alumnas
+para apoyarlas en su aprendizaje. Para revisar esta data, las Training Managers (TMs), normalmente,
+tienen que revisar muchos documentos de excel (Google Spreadsheets) que estan localizados en distintas
+carpetas y ubicaciones. Muchas veces pierden tiempo localizando estos documentos y ejecutando formulas
+para obtener los datos que necesitan.
+
 * **Track:** _Common Core_
 * **Curso:** _Creando tu primer sitio web interactivo_
 * **Unidad:** _Producto final_
