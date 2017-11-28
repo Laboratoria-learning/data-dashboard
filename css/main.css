@@ -40,7 +40,7 @@
  .sections-container {
      width: 85%;
      margin: 0 auto;
-     background-color: #c4c3c3;
+     background-color: #d4d4d4;
      font-family: sans-serif;
  }
 
@@ -61,8 +61,20 @@
 
  div#sections span {
     display: inline-block; 
-    padding-left: 60px;
+    padding-left: 50px;
     padding-bottom: 20px;
     font-weight: bold;
     font-size: 20px;
+ }
+
+ div#sections a {
+     padding: 10px;
+     text-decoration: none;
+     color: #000;
+ }
+
+ div#sections a:hover {
+    display: inline; 
+    background: #ffc107; 
+    color: white;
  }
