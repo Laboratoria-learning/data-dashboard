@@ -2,13 +2,60 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Dashboard</title>
+    <title>Dashboard-Prueba</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-
-		<!-- Base de datos -->
-		<script src="./js/data.js"></script>
-		<!-- Aquí va tus archivos JS -->
-    <script src="./js/app.js"></script>
+    <header>
+          <figure class="inline-block">
+            <img src="assets/images/laboratoria-logo.jpg" alt="Logo laboratoria">
+          </figure>
+          <div id="nav-header" class="inline-block nav-header">
+          </div>
+    </header>
+      <nav>
+        <div class="info-user">
+          <span  class="user-name-circle">AR</span>
+          <div class="margin-div-user">
+            <p class="text-align">Alejandra Ramirez</p>
+            <p class="text-align">Training Manager</p>
+          </div>
+        </div>
+        <div>
+          <div id="region" class="region margin-list yellow">
+            <a href="#">Sede<span><i class="fa fa-sort-desc fa-2x"></i></span></a>
+          </div>
+            <ul id="list-region" class="hidden">
+              <li id="lim" class="list-style margin-list list-region"><a href="#"><img src="assets/images/peru.png" alt="Bandera Perú" class="flags">Lima<span><i class="fa fa-sort-desc fa-2x"></i></span></a></li>
+              <ul>
+                <li id="lim172" class="list-style margin-list list-lim"><a href="#">2017-II</a></li>
+                <li id="lim171" class="list-style margin-list list-lim"><a href="#">2017-I</a></li>
+                <li id="lim162" class="list-style margin-lis list-lim"><a href="#">2016-II</a></li>
+              </ul>
+              <li id="aqp" class="list-style margin-list list-region"><a href="#"><img src="assets/images/peru.png" alt="Bandera Perú" class="flags">Arequipa<span><i class="fa fa-sort-desc fa-2x"></i></span></a></li>
+              <ul>
+                <li id="aqp171" class="list-style margin-list list-aqp"><a href="#">2017-I</a></li>
+                <li id="aqp162" class="list-style margin-list list-aqp"><a href="#">2016-II</a></li>
+              </ul>
+              <li id="scl" class="list-style margin-list list-region"><a href="#"><img src="assets/images/chile.png" alt="Bandera Chile" class="flags">Santiago de Chile<span><i class="fa fa-sort-desc fa-2x"></i></span></a></li>
+              <ul>
+                <li id="scl172" class="list-style margin-list list-scl"><a href="#">2017-II</a></li>
+                <li id="scl171" class="list-style margin-list list-scl"><a href="#">2017-I</a></li>
+                <li id="scl162" class="list-style margin-list list-scl"><a href="#">2016-II</a></li>
+              </ul>
+              <li id="cdmx" class="list-style margin-list list-region"><a href="#"><img src="assets/images/mexico.png" alt="Bandera México" class="flags">Ciudad de México<span><i class="fa fa-sort-desc fa-2x"></i></span></a></li>
+              <ul>
+                <li id="cdmx172" class="list-style margin-list list-cdmx"><a href="#">2017-II</a></li>
+                <li id="cdmx171" class="list-style margin-list list-cdmx"><a href="#">2017-I</a></li>
+              </ul>
+            </ul>
+        </div>
+      </nav>
+      <main id="">
+      </main>
+      <script type="text/javascript" src="js/data.js"></script>
+      <script type="text/javascript" src="js/app.js"></script>
   </body>
 </html>
