@@ -8,13 +8,15 @@
    padding: 0;
  }
  /* Estilos al header */
+#logo {
+outline: 1px solid red;
+width: 15%;
+margin-left: 42%;
+}
 
-.logo {
-  display: block;
-  justify-content: flex-start;
-  padding: 16px 12px;
+ .title {
+text-align: center;
+font-size: 20px;
+
+  
  }
-
- /*.title{
-   float: right;
- }*/
