@@ -7,6 +7,10 @@
      margin: 0;
      padding: 0;
  }
+ 
+.uppercase {
+    text-transform: uppercase;
+}
 
  header {
     width: 100%; 
