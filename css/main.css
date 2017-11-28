@@ -1,3 +1,59 @@
 /*
  * Estilos de tu proyecto
  */
+.context{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 20px;
+}
+.logo {
+    width: 200px;
+    position: absolute;
+    left: 42%;
+ }
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+ button{
+     width: 40px;
+     margin-left: 87%;
+     margin-top: 8px;
+ }
+
+ nav{
+     width: 60%;
+     margin-left: 20%;
+     text-align: center;
+ }
+
+ ul{
+     list-style: none;
+     padding-top: 40px;
+     padding-left: 0;
+ }
+
+ li:hover{
+     background-color: lightgrey; 
+ }
+
+ a {
+     text-decoration: none;
+     color: black;
+ }
+
+ a:hover {
+     color: #fff;
+ }
+
+ .menu {
+     display: block;
+ }
+
+ .disabled-menu{
+     display: none;
+ }
+
+ .information{
+     padding-left: 80px;
+     padding-top: 50px;
+ }
