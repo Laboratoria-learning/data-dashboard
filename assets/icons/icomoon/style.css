@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?o8d00r');
-  src:  url('fonts/icomoon.eot?o8d00r#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?o8d00r') format('truetype'),
-    url('fonts/icomoon.woff?o8d00r') format('woff'),
-    url('fonts/icomoon.svg?o8d00r#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?yd931a');
+  src:  url('fonts/icomoon.eot?yd931a#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?yd931a') format('truetype'),
+    url('fonts/icomoon.woff?yd931a') format('woff'),
+    url('fonts/icomoon.svg?yd931a#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -12,7 +12,7 @@
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
-  /* speak: none; */
+  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -27,11 +27,11 @@
 .icon-at-sign:before {
   content: "\e913";
 }
+.icon-award:before {
+  content: "\e914";
+}
 .icon-bell:before {
   content: "\e919";
-}
-.icon-chevron-down:before {
-  content: "\e928";
 }
 .icon-chevrons-down:before {
   content: "\e92c";

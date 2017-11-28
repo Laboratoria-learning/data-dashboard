@@ -2,8 +2,9 @@
 COLORES Laboratoria
 
 Amarillo #ffc107
-Gris #2b2b2b
-Gris claro #e0e0e0
+Gris #262626
+Gris medio #b9b9b9
+Gris claro #ecebeb
  */
 
 /* Estilos generales */
@@ -25,6 +26,7 @@ a {
 /* Estilos Sidebar */
 #sidebar {
   background-color: #ffc107;
+  color: #262626;
   position: fixed;
   top: 0;
   left: 0;
@@ -82,7 +84,7 @@ a {
 
 #sidebar a {
   display: block;
-  color: #2b2b2b;
+  color: #262626;
   padding: 20px 50px;  
   transition: background-color .25s;
 }
@@ -106,6 +108,7 @@ header {
 
 header h1 {
   float: left;
+  font-weight: 400;
 }
 
 #nav-extra {
@@ -143,26 +146,63 @@ main {
 
 select {
   padding: 5px 10px;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 5px;
+  transition: .25s;
+}
+
+select:focus {
+  outline: none;
+}
+
+select:hover {
+  border: 1px solid #262626;
 }
 
 /* Estilos container */
 #container {
-  padding: 0 2%;
+  padding: 0 0 0 2%;
   overflow: auto;
 }
 
+#container h4 {
+  color: #262626;
+  font-weight: 200;
+}
+
 #overview div {
-  width: 32%;
-  height: 100px;
+  width: 31%;
   background-color: #fff;
   box-shadow: 0px 5px 15px #b9b9b9;
   float: left;
   margin: 0 2% 2% 0;
   padding: 15px;
+  text-align: center;
+  color: #262626;
 }
 
-#overview div:nth-child(3n) {
+#overview pre {
+  display: block;
+  font-size: 3em;
+  text-align: center;
+  margin: 10px auto;
+  color: #ffc107;
+}
+
+/* #overview div:nth-child(2n) {
   margin-right: 0;
+} */
+
+#overview .data {
+  box-shadow: none;
+  width: 48%;
+}
+
+.data span {
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+.data h5 {
+  font-weight: 200;
 }
