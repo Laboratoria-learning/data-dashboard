@@ -74,6 +74,7 @@ window.addEventListener('load', function() {
   var texTarg = document.createElement('span');
   texTarg.innerText = '# STUDENTS THAT MEET THE TARGET';
   var percentTotal = document.createElement('h2');
+  percentTotal.innerText = totalAchivement('LIM', '2016-2');
   var textTotal = document.createElement('span');
   textTotal.innerText = '% OF TOTAL ()';
   // agregando al achievement 
@@ -157,13 +158,20 @@ window.addEventListener('load', function() {
           }
         } 
       } 
-    } return complete++;
+    } return complete;
   }
   function totalAchivement(sede, gene) {
+    var promSprintTotal = promSprint(sede, gene);
+    var count = 0;
     var sede = data[sede];
     var generation = sede[gene];
     var student = generation.students;
-    var promSprintTotal = promSprint(sede, gene);
+    for (var i = 0; i < student.length; i++) {
+      if (student[i].active === true) {
+        count++;
+      }
+      var percent = Math.round((promSprintTotal / count) * 100);
+    }
     // porcentaje segun la cantidad de estudiantes que pasan
     // si tenemos 7 es el total de 16 estudiantes
   };
