@@ -26,11 +26,12 @@
     <section class="students-tab" id="studentsTab">
       <!-- Filtro de alumnas por especialización -->
       <div class="specialization" id="specialization">
-        <ul>
-          <li><input type="radio" id="javascript">Javascript</li>
-          <li><input type="radio" id="uxDesign">UX Design</li>
-          <li><input type="radio" id="frontEnd">Front end Designer</li>
-        </ul>
+        <h3>Especialidad:</h3>
+        <form>
+          <label><input type="checkbox" id="javascript">Javascript</label>
+          <label><input type="checkbox" id="uxDesign">UX Design</label>
+          <label><input type="checkbox" id="frontEnd">Front end Designer</label>
+        </form>
       </div>
 
       <!-- Buscador de alumnas -->
@@ -44,14 +45,32 @@
       <!-- Contenedor de datos de alumnas -->
       <div class="students-profile" id="studentsProfile">
         <span><i class="fa fa-user-circle-o" aria-hidden="true"></i></span>
-        <h3>Nombre y Apellido</h3>
-        <h5>Especialidad</h5>
-        <p>Ver Perfil <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+        <!-- Contenedor de nombre y especialización -->
+        <div class="full-name" id="fullName">
+          <h2>Nombre y Apellido</h2>
+          <h5>Especialidad</h5>
+        </div>
+        <!-- Contenedor de habilidades y promedios -->
+        <div class="students-skills" id="studentsSkills">
+          <div class="skills">
+            <p><strong>%</strong></p>
+            <p>Tech Skills</p>
+          </div>
+          <div class="skills">
+            <p><strong>%</strong></p>
+            <p>HSE</p>
+          </div>
+          <div class="skills">
+            <p><strong>INTERM</strong></p>
+            <p>English Skills</p>
+          </div>
+        </div>
+        <p><a href="#">Ver Perfil <i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
       </div>
     </section>
 
     <!-- Pestaña Teachers -->
-    <section class="students-tab" id="studentsTab">
+    <section class="teachers-tab" id="teachersTab">
 
     </section>
 
