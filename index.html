@@ -10,42 +10,54 @@
         <div >
           <img id= "logo" src="assets/images/logo-laboratoria.svg" alt="laboratoria">
         </div>
-        <h1 class="title">Data Dashboard</h1>
-        <select name="promociones" id="promociones" class="promo">
-          <option value="">LIMA
-             <option value=""> 2016-II</option>
-             <option value=""> 2017-I</option>
-             <option value=""> 2017-II</option>
-          </option>          
-          <option value="">AREQUIPA
-             <option value=""> 2016-II</option>
-             <option value=""> 2017-I</option>
-          </option>
-          <option value="">SANTIAGO DE CHILE
-            <option value=""> 2016-II</option>
-            <option value=""> 2017-I</option>
-            <option value=""> 2017-II</option>
-          </option>
-          <option value="">CIUDAD DE MEXICO 
-            <option value=""> 2017-I</option>
-            <option value=""> 2017-II</option>
-          </option>
-        </select>       
+        <h1 class="title">Data Dashboard</h1>        
     </header>
+    <nav>
+      <select name="promociones" id="promociones" class="promo">
+        <option value="">LIMA
+          <option value=""> 2016-II</option>
+          <option value=""> 2017-I</option>
+          <option value=""> 2017-II</option>
+        </option>
+        <option value="">AREQUIPA
+          <option value=""> 2016-II</option>
+          <option value=""> 2017-I</option>
+        </option>
+        <option value="">SANTIAGO DE CHILE
+          <option value=""> 2016-II</option>
+          <option value=""> 2017-I</option>
+          <option value=""> 2017-II</option>
+        </option>
+        <option value="">CIUDAD DE MEXICO
+          <option value=""> 2017-I</option>
+          <option value=""> 2017-II</option>
+        </option>
+      </select>
+      <ul>
+        <li><button type="button" name="button" data-tabSelection='tabOverview'>Overview</button></li>
+        <li><button type="button" name="button" data-tabSelection='tabStudents'>Students</button></li>
+        <li><button type="button" name="button" data-tabSelection='tabTeachers'>Teachers</button></li>
+        <li><button type="button" name="button" data-tabSelection='tabAllGenerations'>All Generations</button></li>
+      </ul>
+
+    </nav>
     <section>
       <form class="" action="index.html" method="post">
 
       </form>
     </section>
     <main>
-      <div class="principal">
+      <section class="principal">
         <ul>
-          <li>Overview</li>
-          <li>Students</li>
-          <li>Teachers</li>
-          <li>Generaciones anteriores</li>
+          <li><button type="button" name="button" data-tabSelection = 'tabOverview'>Overview</button></li>
+          <li><button type="button" name="button" data-tabSelection = 'tabStudents'>Students</button></li>
+          <li><button type="button" name="button" data-tabSelection = 'tabTeachers'>Teachers</button></li>
+          <li><button type="button" name="button" data-tabSelection = 'tabAllGenerations'>All Generations</button></li>
         </ul>
-      </div>
+        <div class="">
+
+        </div>
+      </section>
       <div class="container">
         <div class="students">
 
