@@ -1,165 +1,141 @@
 /*
  * Estilos de tu proyecto
  */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Quicksand', sans-serif;
-}
-
-body {
-  background-color: #F0EFEF;
-}
-
-.logo {
-  height: 77px;
-  /* text-align: center; */
-  width: 207px;
-  position: relative;
-  left: 42%;
-  margin-top: 5px;
-}
-
-.header-container {
-  background-color: #ffffff;
-  height: 80px;
-}
-
-.icon-bars {
-  color: #F8C341;
-  text-align: center;
-  font-size: 23pt;
-  position: relative;
-  float: right;
-  bottom: 62px;
-  right: 7%;
-}
-
-select {
-  /*width: 244px;*/
-  /*font-size: 18px;*/
-  outline: none;
-  /* outline: pink; */
-  border: none;
-  width: 302px;
-  padding: 2px;
-  font-size: 22px;
-}
-
-.select-left {
-  width: 240px;
-  margin-right: 75px;
-}
-
-.form {
-  padding-top: 20px;
-  padding-left: 50px;
-}
-
-section {
-  padding-left: 38px;
-  padding-top: 10px;
-}
-
-.menu-global {
-  display: inline-block;
-}
-
-.global {
-  margin-left: 24px;
-  margin-top: 44px;
-  margin-bottom: 10px;
-  font-size: 20pt;
-  font-weight: 600;
-}
-
-.menu-global {
-  padding-left: 25px;
-}
-
-article {
-  width: 373px;
-  height: 362px;
-  padding: 20px;
-  display: inline-block;
-  background-color: #FFFFFF;
-  margin: 36px;
-}
-
-.squares {
-  width: 161px;
-  height: 61px;
-  display: inline-block;
-  padding: 10px;
-  float: left;
-  margin-right: 5px;
-  background-color: #F7F7F7;
-}
-
-.left {
-  position: relative;
-  bottom: 28px;
-}
-
-.medium {
-  position: relative;
-  bottom: 29px;
-}
-
-.tech-habilities {
-  position: relative;
-  bottom: 43px;
-  width: 1275px;
-}
-
-.social-habilities {
-  position: relative;
-  top: 204px;
-  width: 1275px;
-  right: 52px;
-}
-
-.div-left {
-  width: 369px;
-  margin-top: 218px;
-  height: 355px;
-  background-color: palegoldenrod;
-  padding: 20px
-}
-
-.div-center {
-  width: 369px;
-  /* margin-top: 218px; */
-  height: 355px;
-  background-color: palegoldenrod;
-  padding: 20px;
-  left: 464px;
-  top: 817px;
-  position: absolute;
-}
-
-.div-right {
-  width: 369px;
-  /* margin-top: 218px; */
-  height: 355px;
-  background-color: palegoldenrod;
-  padding: 20px;
-  position: absolute;
-  top: 817px;
-  right: 0px;
-}
-
-.general {
-  padding-bottom: 60px;
-}
-
-p {
-  font-size: 10pt;
-}
-
-.promoters {
-  list-style: none;
-  font-size: 10pt;
-}
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Quicksand', sans-serif;
+ }
+ body {
+   background-color: #F0EFEF;
+ }
+ .logo {
+   height: 77px;
+   /* text-align: center; */
+   width: 207px;
+   position: relative;
+   left: 42%;
+   margin-top: 5px;
+ }
+ .header-container {
+   background-color: #ffffff;
+   height: 80px;
+ }
+ .icon-bars {
+   color: #F8C341;
+   text-align: center;
+   font-size: 23pt;
+   position: relative;
+   float: right;
+   bottom: 62px;
+   right: 7%;
+ }
+ select {
+   /*width: 244px;*/
+   /*font-size: 18px;*/
+   outline: none;
+   /* outline: pink; */
+   border: none;
+   width: 302px;
+   padding: 2px;
+   font-size: 22px;
+ }
+ .select-left {
+   width: 240px;
+   margin-right: 75px;
+ }
+ .form {
+   padding-top: 20px;
+   padding-left: 50px;
+ }
+ section {
+   padding-left: 38px;
+   padding-top: 10px;
+ }
+ .menu-global {
+   display: inline-block;
+ }
+ .global {
+   margin-left: 24px;
+   margin-top: 44px;
+   margin-bottom: 10px;
+   font-size: 20pt;
+   font-weight: 600;
+ }
+ .menu-global {
+   padding-left: 25px;
+ }
+ article {
+   width: 373px;
+   height: 362px;
+   padding: 20px;
+   display: inline-block;
+   background-color: #FFFFFF;
+   margin: 36px;
+ }
+ .squares {
+   width: 161px;
+   height: 61px;
+   display: inline-block;
+   padding: 10px;
+   float: left;
+   margin-right: 5px;
+   background-color: #F7F7F7;
+ }
+ .left {
+   position: relative;
+   bottom: 28px;
+ }
+ .medium {
+   position: relative;
+   bottom: 29px;
+ }
+ .tech-habilities {
+   position: relative;
+   bottom: 43px;
+   width: 1275px;
+ }
+ .social-habilities {
+   position: relative;
+   top: 204px;
+   width: 1275px;
+   right: 52px;
+ }
+ .div-left {
+   width: 369px;
+   margin-top: 218px;
+   height: 355px;
+   background-color: palegoldenrod;
+   padding: 20px
+ }
+ .div-center {
+   width: 369px;
+   /* margin-top: 218px; */
+   height: 355px;
+   background-color: palegoldenrod;
+   padding: 20px;
+   left: 464px;
+   top: 817px;
+   position: absolute;
+ }
+ .div-right {
+   width: 369px;
+   /* margin-top: 218px; */
+   height: 355px;
+   background-color: palegoldenrod;
+   padding: 20px;
+   position: absolute;
+   top: 817px;
+   right: 0px;
+ }
+ .general {
+   padding-bottom: 60px;
+ }
+ p {
+   font-size: 10pt;
+ }
+ .promoters {
+   list-style: none;
+   font-size: 10pt;
+ }

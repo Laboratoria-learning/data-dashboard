@@ -12,7 +12,7 @@ console.log(students);
 console.log(aqp["2016-2"].students[0]);
 //Llamar estudiante activas
 console.log(aqp["2016-2"].students[0].active);
-
+/*
 var register = document.getElementById('register');
 register.textContent = students.length;
 var desertStudents = document.getElementById('desertStudents');
@@ -20,7 +20,7 @@ desertStudents.textContent = desert();
 
 function desert () {
     var arrActive = [];
-    
+
     for (i = 0; i< students.length; i++) {
         arrActive.push(students[i].active);
         }
@@ -34,4 +34,4 @@ function desert () {
 
     return parseInt(countDesert * 100/ students.length) + '%'
 }
-
+*/
