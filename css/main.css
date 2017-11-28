@@ -1,3 +1,103 @@
-/*
- * Estilos de tu proyecto
- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f7f7f7;
+  font-family: arial;
+}
+
+img {
+  width: 100%;
+} 
+
+header .logo {
+  margin: auto;
+  width: 250px;
+}
+
+.container {
+  /* background-color: rgba(0, 0, 0, .6); */
+  margin: auto;
+  max-width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.row {
+  margin: 0 -10px;
+}
+
+.container::after, .container::before, .row::before, .row::after {
+  display: table;
+  content: '';
+}
+
+.container::after, .row::after {
+  clear: both;
+}
+
+.col {
+  float: left;
+  padding: 0 10px;
+  width: 33.333333333333333%;
+  /* width: 50%; */
+}
+
+.content {
+  padding: 20px 0;
+}
+
+.box {
+  background-color: #fff;
+  min-height: 200px; 
+}
+
+.cajita {
+  background-color: #e1e1e1;
+  float: left;
+  margin: 23px;
+  width: 140px;
+}
+
+.section {
+  background-color: #fff;
+  margin: 50px 0;
+  overflow: auto; 
+}
+
+h1 {
+  font-size: 18px;
+  /* margin: 25px 0 0 20px; */
+  text-transform: uppercase;
+}
+h2 {
+  border-bottom: 2px solid #f7b617;
+  width: 200px;
+}
+
+
+.box-tabs {
+  overflow: auto;
+}
+
+.tab {
+  background-color: blue;
+  float: left;
+  margin-left: 5px;
+  height: 48px;
+  width: 100px;
+}
+
+.tab.active {
+  background-color: #fff;
+}
+
+.content {
+  display: none;
+}
+.content.active {
+  display: block;
+}
