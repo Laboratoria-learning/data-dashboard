@@ -76,7 +76,7 @@ El reto consiste en:
 
 * Utilizamos la paleta de colores característica de Laboratoria : `#ffc107`, `#eee` y `#2b2b2b`.
 
-* Los íconos de redes sociales los obtuvimos de [Font Awesome](http://fontawesome.io/) y [Icomoon] (https://icomoon.io/).
+* Los íconos de redes sociales los obtuvimos de [Font Awesome](http://fontawesome.io/) y [Icomoon](https://icomoon.io/).
 
 * Para este reto, necesitamos descubrir como manejar la data que nos brindaron. 
 
