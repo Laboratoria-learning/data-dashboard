@@ -18,26 +18,26 @@ body{
  }
  
 
- button{
+ #btn {
      width: 40px;
      margin-left: 87%;
      margin-top: 8px;
      background-color: #fff;
  }
 
- nav{
+ #menu-princ{
      width: 60%;
      margin-left: 20%;
      text-align: center;
  }
 
- ul{
+ .menu-list{
      list-style: none;
      padding-top: 40px;
      padding-left: 0;
  }
 
- li:hover{
+.menu-bar:hover{
      background-color: lightgrey; 
  }
 
@@ -74,7 +74,15 @@ body{
 .options{
     margin-left: 65px;
 }
- .option{
+
+.option{
      margin: 10px;
      font-size:20px;
+     list-style: none;
  }
+
+ .list-option li {
+    list-style: none;
+    display: inline-block;
+    background-color: 
+}

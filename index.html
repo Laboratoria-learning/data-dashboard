@@ -15,24 +15,44 @@
            <hr><hr><hr>
          </button>
          <nav id="menu-princ" class="disabled-menu">
-           <ul>
-            <li><a href="#">ANNA DURAND</a></li> 
-            <li><a href="#">Add strudent</a></li>
-            <li><a href="#">Remove student</a></li>
-            <li><a href="#">Add sprint</a></li>
+           <ul class="menu-list">
+            <li class="menu-bar"><a href="#">ANNA DURAND</a></li> 
+            <li class="menu-bar"><a href="#">Add strudent</a></li>
+            <li class="menu-bar"><a href="#">Remove student</a></li>
+            <li class="menu-bar"><a href="#">Add sprint</a></li>
            </ul>
           </nav>
                
        </div>
        <div class="bod1">
          <div class="information">
-         <h2 class="header"><strong>LIMA PERÚ 2017 - II</strong> </h2>
-         <div class="options">
-          <a class="option" href="#"><b>OVERVIEW</b></a>
-          <a class="option" href="#"><b>STUDENTS</b></a>
-          <a class="option" href="#"><b>TEACHERS</b></a> 
-          <a href="#"><i class="fa fa-caret-down" aria-hidden="true"></i></a>
-        </div>
+            <select name="selection-located" id="selection-located">
+                <option selected value="0">LIMA</option>
+                  <option selected value="0">2015-I</option>
+                <option selected value="1">AREQUIPA</option>
+                <option selected value="2">SANTIAGO DE CHILE</option>
+                <option selected value="3">CIUDAD DE MEXICO</option>
+                <option selected value="4">ELIGE UNA SEDE</option>
+              </select>
+         <section class="options">
+           <ul class="list-option">
+             <li><button type="button-bar" name="button-bar" data-tab-seleccionado="OVERVIEW" class="tab" >OVERVIEW</button></li>
+             <li><button type="button-bar" name="button-bar" data-tab-seleccionado="STUDENTS" class="tab" >STUDENTS</button></li>
+             <li><button type="button-bar" name="button-bar" data-tab-seleccionado="TEACHERS" class="tab" >TEACHERS</button></li>
+           </ul>
+         </section>
+         <div class="">
+           <article class="content" id="OVERVIEW">
+             <div class="content-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fugiat non culpa, excepturi veritatis debitis ut minima nisi dicta beatae voluptatem magnam ipsum necessitatibus ratione. Cumque error neque praesentium fugit?</div>
+           </article>
+           <article class="content" id="STUDENTS"><div class="content-2">SPECIALIZATION: 
+             <ul>
+            <li>Javascript</li>
+            <li>Ux Design</li>
+            <li>Front end Designer</li>
+          </ul></div></article>
+           <article class="content" id="TEACHERS"><div class="content-3">yasssssLorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat velit commodi cupiditate quibusdam nihil blanditiis? Delectus sunt voluptatum ullam in blanditiis sint ratione nihil tempora hic mollitia, aliquam recusandae doloribus.</div></article>
+         </div>
          
         </div>
        </div>
