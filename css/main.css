@@ -7,7 +7,7 @@
      margin: 0;
      padding: 0;
  }
- 
+
 .uppercase {
     text-transform: uppercase;
 }
@@ -33,4 +33,36 @@
      float: right;
      margin-top: 10px;
      margin-right: 150px;
+ }
+
+ /*Estilo a sections-container */
+
+ .sections-container {
+     width: 85%;
+     margin: 0 auto;
+     background-color: #c4c3c3;
+     font-family: sans-serif;
+ }
+
+ #sede {
+     margin-bottom: 20px;
+ }
+
+ #sede h1 {
+    margin-right: 20px; 
+    padding-top: 20px;
+    padding-left: 60px;
+    display: inline-block;
+ }
+
+ #sede i {
+     font-size: 30px;
+ }
+
+ div#sections span {
+    display: inline-block; 
+    padding-left: 60px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
  }
