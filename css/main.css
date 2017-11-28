@@ -1,3 +1,114 @@
-/*
- * Estilos de tu proyecto
- */
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f7f7f7;
+ }
+
+/*Header*/
+header {
+  background-color: #fff;
+  text-align: center;
+}
+
+.logo-header {
+  width: 200px;
+}
+
+.box-nav {
+  position: absolute;
+  right: 25px;
+  top: 20px;
+}
+
+.box-nav ul li {
+  display: inline;
+  list-style: none;
+  margin: 0 5px;
+}
+
+/*Main*/
+.box-filter {
+  background-color: #e1e1e1;
+}
+
+.select-filter {
+ margin-left: 100px;
+ padding: 30px 0;
+}
+
+.select-filter span {
+  font-size: 2em;
+  font-weight: bold;
+ }
+
+.tabs {
+  margin-left: 100px;
+  padding-bottom: 15px;
+}
+
+.tabs li {
+  display: inline-block;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.tabs li:nth-child(2) {
+  margin: 0 20px;
+}
+
+/*Graphics section*/
+.big-graphic {
+  background-color: #fff;
+  height: 500px;
+  margin: 60px auto;
+  width: 1000px;
+}
+
+.small-graphic {
+  background-color: #fff;
+  height: 370px;
+  margin: 60px auto;
+  width: 370px;
+}
+
+.box1, .box2 {
+  background-color: #f7f7f7;
+  height: 60px;
+  margin: 10px;
+  width: 150px;
+}
+
+/*Menu section*/
+.menu {
+  background-color: #2b2b2b;
+  color: #fff;
+  height: 500px;
+  width: 25%;
+}
+
+.user div {
+  display: inline-block;
+  margin: 20px 10px;
+}
+
+.user div i {
+  color: #f7b617;
+}
+
+.setting {
+  padding: 20px;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
+}
+
+/*Promo filter section*/
+.promo-filter {
+  background-color: #fff;
+  height: 500px;
+  width: 25%;
+}

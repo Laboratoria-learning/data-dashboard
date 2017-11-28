@@ -3,9 +3,72 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-
+    <header>
+      <figure class="box-logo">
+        <img class="logo-header" src="assets/images/logo-laboratoria.svg" alt="logo laboratoria">        
+      </figure>
+      <nav class="box-nav">
+        <ul>
+          <li><i class="fa fa-bars fa-lg" aria-hidden="true"></i></li>
+          <li><i class="fa fa-bell-o fa-lg" aria-hidden="true"></i></li>
+          <li><i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i></li>
+          <li><i class="fa fa-caret-down fa-lg" aria-hidden="true"></i></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="box-filter">
+        <div class="select-filter">
+          <span>LIMA 2017 - II <i class="fa fa-caret-down fa-lg" aria-hidden="true"></i></span>          
+        </div>
+        <ul class="tabs">
+          <li>OVERVIEW</li>
+          <li>STUDENTS</li>
+          <li>TEACHERS</li>
+        </ul>
+      </section>
+      <section class="container-graphics">
+        <div class="big-graphic">
+          <p>TECH SKILLS</p>
+          <span>overall (cumulative)<i class="fa fa-caret-down fa-lg" aria-hidden="true"></i></span>  
+          <div class="box1"></div>
+          <div class="box2"></div>
+          <div class="graphic"></div>
+        </div>
+        <div class="small-graphic">
+          <p>ENROLLMENT</p>
+          <div class="box1"></div>
+          <div class="box2"></div>
+          <div class="graphic"></div>
+        </div>        
+      </section>
+      <section class="menu">
+        <div class="user">
+          <div><i class="fa fa-user-circle-o fa-4x" aria-hidden="true"></i></div>
+          <div>
+            <p>Nombre</p>
+            <p>Puesto que ocupa</p>
+            <p>Último acceso</p>
+          </div>
+        </div>
+        <div class="setting">Configuración</div>
+        <div class="setting">Calendario</div>
+        <div class="setting">Salir</div>
+      </section>
+      <section class="promo-filter">
+        <div>
+          <p>LIMA</p>
+          <hr>
+          <p><i class="fa fa-square-o" aria-hidden="true"></i> 2016 - II</p>
+          <p><i class="fa fa-square-o" aria-hidden="true"></i> 2017 - I</p>
+          <p><i class="fa fa-square-o" aria-hidden="true"></i> 2017 -II</p>
+        </div>
+      </section>
+    </main>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
