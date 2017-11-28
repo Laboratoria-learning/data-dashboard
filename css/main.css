@@ -1,3 +1,31 @@
 /*
  * Estilos de tu proyecto
  */
+ * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+ }
+ header{
+     outline:1px solid pink;
+     box-shadow: 2px 2px 2px gray;
+ }
+ header img {
+    width: 150px;
+    height: 50px;
+    margin: auto 40%;
+ }
+ .location {
+     
+ }
+ .overview{
+     display: inline-block;
+     padding: 10px;
+ }
+ .enrollment, .achievement, .netPromoterScore {
+    float: left;
+ }
+ .titleStyle{
+     margin: 10px;
+     font-family: Arial, Helvetica, sans-serif;
+ }
