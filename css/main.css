@@ -1,3 +1,14 @@
-/*
- * Estilos de tu proyecto
- */
+ul{
+  /*display: none;*/
+  padding: 0;
+}
+#list_sedes{
+  text-align: center;
+  width: 20%;
+  background-color: #FF5733;
+}
+#list_sedes ul{
+  text-align: center;
+  width: 100%;
+  background-color: #19BA76;
+}
