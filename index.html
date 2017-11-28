@@ -13,10 +13,13 @@
       </figure>
       <nav class="box-nav">
         <ul>
-          <li><i class="fa fa-bars fa-lg" aria-hidden="true"></i></li>
-          <li><i class="fa fa-bell-o fa-lg" aria-hidden="true"></i></li>
-          <li><i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i></li>
-          <li><i class="fa fa-caret-down fa-lg" aria-hidden="true"></i></li>
+          <li><i class="fa fa-bars fa-2x" aria-hidden="true" id="open-animated-menu"></i></li>
+          <li><i class="fa fa-bell-o fa-2x" aria-hidden="true"></i></li>
+        </ul>
+      </nav>
+      <nav class="box-nav2">
+        <ul>
+          <li><i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
         </ul>
       </nav>
     </header>
@@ -46,8 +49,10 @@
           <div class="graphic"></div>
         </div>        
       </section>
-      <section class="menu">
+      <!--Inicio de Menu que aparece y desaparece-->
+      <section class="menu" id="animated-menu">
         <div class="user">
+            <a href="javascript:void(0)" class="closebtn" id="close-animated-menu">&times;</a>
           <div><i class="fa fa-user-circle-o fa-4x" aria-hidden="true"></i></div>
           <div>
             <p>Nombre</p>
@@ -55,10 +60,11 @@
             <p>Último acceso</p>
           </div>
         </div>
-        <div class="setting">Configuración</div>
-        <div class="setting">Calendario</div>
-        <div class="setting">Salir</div>
+        <div class="setting"><a href="#">Configuración</a></div>
+        <div class="setting"><a href="#">Calendario</a></div>
+        <div class="setting"><a href="#">Salir</a></div>
       </section>
+      <!--Fin de Menu que aparece y desaparece-->
       <section class="promo-filter">
         <div>
           <p>LIMA</p>
