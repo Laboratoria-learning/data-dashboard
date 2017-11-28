@@ -15,17 +15,17 @@
                   <span class="icon-bars"></span>
               </div>
         </header>
-        <main>
+        <section>
               <form>
                     <select>
-                          <option value="">SEDE</option>
+                          <option selected value="0">Selecciona una sede </option>
                           <option value="">AREQUIPA</option>
                           <option value="">CIUDAD DE MEXICO</option>
                           <option value="">LIMA</option>
                           <option value="">SANTIAGO DE CHILE</option>
                     </select>
                     <select>
-                          <option value="">AÑO-GENERACION</option>
+                          <option value="">Selecciona Año-Generacion</option>
                           <option value=""> 2014-I</option>
                           <option value=""> 2014-II</option>
                           <option value=""> 2015-I</option>
@@ -36,24 +36,114 @@
                           <option value=""> 2017-II</option>
                     </select>
               </form>
-        </main>
-        <section>
-              <div>
+        </section>
+        <main>
+              <nav>
                     <ul>
                         <li>GENERAL</li>
                         <li>STUDENTS</li>
                     </ul>
-              </div>
-              <div>
+              </nav>
+              <article>
                     <h2>INSCRIPCION</h2>
-                    <div class="">
+                    <div>
                           N° ESTUDIANTES INSCRITAS
                     </div>
+                    <div>
+                         %  DESERTARON
+                    </div>
+              </article>
+              <article>
+                    <h2>LOGROS</h2>
+                    <div>
+                          N° ESTUDIANTES QUE  CUMPLIERON <br> EL OBJETIVO
+                    </div>
+                    <div>
+                         %  DEL TOTAL ( )
+                    </div>
+              </article>
+              <article>
+                    <h2>NET PROMOTER SCORE (NPS)</h2>
+                    <div>
+                          % ACUMULATIVO NPS
+                    </div>
+                    <div>
+                         %  Promoters  <br>
+                         % Passive <br>
+                         % Detractors
+                    </div>
+              </article>
+
+        <article>
+              <h2>HABILIDADES TECNICAS</h2>
+              <form>
+                    <select >
+                         <option value=""> Puntaje General</option>
+                         <optgroup label="COMMON CORE">
+                        <option value=""> Sprint 1</option>
+                        <option value=""> Sprint 2</option>
+                        <option value=""> Sprint 3</option>
+                        <option value=""> Sprint 4</option>
+                        <optgroup label="JAVASCRIPT">
+                        <option value=""> Sprint 5</option>
+                        <option value=""> Sprint 6</option>
+                        <option value=""> Sprint 7</option>
+                        <option value=""> Sprint 8</option>
+                        <optgroup label="UX-DESIGNER">
+                        <option value=""> Sprint 5</option>
+                        <option value=""> Sprint 6</option>
+                        <option value=""> Sprint 7</option>
+                        <option value=""> Sprint 8</option>
+                    </select>
+                    <div>
+                          N° ESTUDIANTES QUE CUMPLIERON <br> CON EL OBJETIVO
+                    </div>
+                    <div>
+                         % DEL TOTAL ()
+                    </div>
+        <article>
+            <h2>HABILIDADES SOCIALES</h2>
+                <form>
+                    <select >
+                        <option value=""> Puntaje General</option>
+                        <optgroup label="HSE">
+                        <option value=""> Sprint 1</option>
+                        <option value=""> Sprint 2</option>
+                        <option value=""> Sprint 3</option>
+                       <option value=""> Sprint 4</option>
+                  </select >
+              </form>
+              <div>
+                    N° PROMEDIO GENERAL <br> DE LA CLASE
+              </div>
+              <div>
+                   N° ESTUDIANTES QUE CUMPLIERON <br> CON EL OBJETIVO
+              </div>
+        </article>
+        <div class="">
+              <div class="">
+                    <h2>INDICE DE SATISFACCION</h2>
                     <div class="">
-                         % ESTUDIANTES QUE DESERTARON
+                         % ESTUDIANTES SATISFECHAS
                     </div>
               </div>
-        </section>
+              <div class="">
+                    <h2>EVALUACION DEL PROFESOR</h2>
+                    <div class="">
+                         CALIFICACION GENERAL
+                    </div>
+              </div>
+              <div class="">
+                    <h2>EVALUACION JEDI MASTER</h2>
+                    <div class="">
+                         CALIFICACION GENERAL
+                    </div>
+              </div>
+        </div>
+
+
+
+        </main>
 
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
