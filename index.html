@@ -9,17 +9,22 @@
     <title>Data Dashboard</title>
   </head>
   <body>
+    <!-- Barra lateral -->
     <div id="sidebar">
+      <!-- Logo Laboratoria -->
       <figure id="logo-laboratoria"><img src="assets/images/logo-laboratoria.svg" alt="Laboratoria"></figure>
+      <!-- Info de usuario -->
       <div id="user">
         <figure><img src="" alt="profile-photo"></figure>
       </div>
+      <!-- Opciones -->
       <ul>
         <li><a href="#">username</a></li>
         <li><a href="#">Agregar alumna</a></li>
         <li><a href="#">Remover alumna</a></li>
       </ul>
     </div>
+    <!-- Encabezado -->
     <header>
       <h1>Dashboard</h1>
       <nav id="nav-extra">
@@ -29,30 +34,30 @@
         </ul>
       </nav>
     </header>
+    <!-- Contenido principal -->
     <main>
-      <select name="sede" size=1 onchange="javascript:alert('prueba');"> 
-        <option value="Arequipa">Arequipa</option>
-        <option value="lima">Lima</option>
-        <option value="Santiago">Santiago</option>
-        <option value="Ciudad">Ciudad de Mexico</option> 
-      </select> 
-      <select name="promocion" size=1 onChange="javascript:alert('prueba');"> 
-        <option value="20172">2017 - II</option>
-        <option value="20171">2017 - I</option>      <option value="20162">2016 - II</option>
-        <option value="20161">2016 - I</option>
-      </select> 
-      <select name="sprint" size=1 onChange="javascript:alert('prueba');"> 
-        <option value="sprint1">Sprint 1</option>
-        <option value="sprint2">Sprint 2</option>
-        <option value="sprint3">Sprint 3</option>
-        <option value="sprint4">Sprint 4</option> 
-      </select> 
+      <div id="filter-section">
+          <select name="sede" size=1 > 
+              <option value="Arequipa">Arequipa</option>
+              <option value="lima">Lima</option>
+              <option value="Santiago">Santiago</option>
+              <option value="Ciudad">Ciudad de México</option> 
+            </select> 
+            <select name="promocion" size=1 onChange="javascript:alert('prueba');"> 
+              <option value="20172">2017 - II</option>
+              <option value="20171">2017 - I</option>      <option value="20162">2016 - II</option>
+              <option value="20161">2016 - I</option>
+            </select> 
+            <select name="sprint" size=1 onChange="javascript:alert('prueba');"> 
+              <option value="sprint1">Sprint 1</option>
+              <option value="sprint2">Sprint 2</option>
+              <option value="sprint3">Sprint 3</option>
+              <option value="sprint4">Sprint 4</option> 
+            </select>
+      </div>
+      <section id="container">
 
-
-
-
-
-
+      </section>
     </main>
 
 		<!-- Base de datos -->
