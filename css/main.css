@@ -1,3 +1,13 @@
 /*
  * Estilos de tu proyecto
  */
+ .box.header {
+   display: inline-block;
+ }
+ .logo-header {
+   height: 200;
+   width: 180px;
+   position: absolute;
+   left: 44%;
+   top: 10px;
+ }
