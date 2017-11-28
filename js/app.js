@@ -1,6 +1,3 @@
-/*
- * Funcionalidad de tu producto
- */
 
 window.addEventListener('load', function() {
   var openAnimatedMenu = document.getElementById('open-animated-menu');
