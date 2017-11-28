@@ -57,7 +57,7 @@
 
 /* Agregando estilos al navber */
 
-.navber{
+.nav{
     background-color : #e1e1e1;
     height: 134px;
     padding-left: 100px;
@@ -67,7 +67,7 @@
     width: 100%;
 }
 
-.navber h1{
+.nav h1{
     font-size: 35px;
     margin-bottom: 30px;
 }
