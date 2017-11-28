@@ -3,12 +3,61 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="fonts/style.css">
   </head>
   <body>
+        <header>
+              <figure>
+                    <img src="assets/images/logo-laboratoria.svg" alt="logo de laboratoria">
+              </figure>
+              <div>
+                  <span class="icon-bars"></span>
+              </div>
+        </header>
+        <main>
+              <form>
+                    <select>
+                          <option value="">SEDE</option>
+                          <option value="">AREQUIPA</option>
+                          <option value="">CIUDAD DE MEXICO</option>
+                          <option value="">LIMA</option>
+                          <option value="">SANTIAGO DE CHILE</option>
+                    </select>
+                    <select>
+                          <option value="">AÑO-GENERACION</option>
+                          <option value=""> 2014-I</option>
+                          <option value=""> 2014-II</option>
+                          <option value=""> 2015-I</option>
+                          <option value=""> 2015-II</option>
+                          <option value=""> 2016-I</option>
+                          <option value=""> 2016-II</option>
+                          <option value=""> 2017-I</option>
+                          <option value=""> 2017-II</option>
+                    </select>
+              </form>
+        </main>
+        <section>
+              <div>
+                    <ul>
+                        <li>GENERAL</li>
+                        <li>STUDENTS</li>
+                    </ul>
+              </div>
+              <div>
+                    <h2>INSCRIPCION</h2>
+                    <div class="">
+                          N° ESTUDIANTES INSCRITAS
+                    </div>
+                    <div class="">
+                         % ESTUDIANTES QUE DESERTARON
+                    </div>
+              </div>
+        </section>
 
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
-    <script src="./js/app.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
