@@ -35,7 +35,7 @@ En el cual le pedimos que realice 4 operaciones :
 3.filtrar su búsqueda  
 4.Ingresar a ver otros datos. (los datos de las estudiantes y profesoras).  
 
-fotos de prueba.
+**Prueba**
 
 
 ### PARTE 3  
