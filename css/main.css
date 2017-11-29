@@ -95,10 +95,22 @@ body {
     transform: translateX(10%)
 }
 .imageDataStatistical img { /*image first row*/
-    transform: translateX(10%);
-    margin: 15px 10px 5px 10px;
-    width: 80%;
-    height: 50%;
+    transform: translateX(8%);
+    margin: 20px 10px 5px 10px;
+    width: 85%;
+    height: 60%;
+}
+.imageDataStatisticalLineOne img {
+    transform: translateX(8%);
+    margin: 55px 10px 5px 10px;
+    width: 85%;
+    height: 60%
+}
+.imageDataStatisticalLineTwo img {
+    transform: translateX(8%);
+    margin: 55px 10px 5px 10px;
+    width: 85%;
+    height: 60%
 }
 .numData { /*styles letter num-porcent data*/
     font-size: 25px;
@@ -159,12 +171,12 @@ body {
     float: left;
     margin: 15px 0 5px 5px;
 }
-.imageSecondRowRigth img{ /*rigth square*/
-    border: 2px solid red;
-    width: 35%;
-    height:65%;
+.imageSecondRowRigth img{ /*rigth circle image*/
+    border: 2px solid blue;
+    width: 32%;
+    height:60%;
     float: left;
-    margin: 15px 0 15px 20px;
+    margin: 18px 0 15px 30px;
 }
 .legendPorcentData { /*data legend*/
     font-size: 20px;
@@ -219,13 +231,13 @@ body {
 }
 /* - fourth row statistical data*/
 .statisticalDataFourth {
-    height: 15%;
+    height: 16%;
     width: 27%;
-    background-color: black;
+    background-color: #ffffff;
     outline: 1px solid yellow;
     float: left;
-    margin: 70px 0 0 40px;
-    transform: translateX(15%)
+    margin: 70px 5px 0 40px;
+    transform: translateX(10%)
 }
 .dataNumberFourthRow { /*left square*/
     background-color:#f7f7f7;
@@ -244,14 +256,14 @@ body {
 }
 .imageDataStatisticalFourthRow { /*image fourth row*/
     padding: 5px;
-    margin: 5px 0 0 0;
+    margin: 20px 0 0 0;
 }
 .imageFourthRow {
     width: 300px;
     height: 180px;
 }
 /* section checkbox */
-.checkbox-site , .checkbox-HSE , .checkbox-commoncore{
+.checkbox-site , .checkbox-HSE , .checkbox-commoncore {
     -webkit-appearance: none;
 	background-color: #fafafa;
 	border: 1px solid #f7b617 ;
