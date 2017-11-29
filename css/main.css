@@ -96,6 +96,7 @@ select{
   height:563px;
   margin: 0 95px 0 95px;
   background-color: #ffffff;
+
 }
 
 .skill-hse{
@@ -112,6 +113,7 @@ h2{
   font-style: normal;
   font-weight: bold;
   font-size: 22px;
+  padding-top: 2%;
 }
  .super-small{
   width:153px;
