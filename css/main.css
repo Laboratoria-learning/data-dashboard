@@ -17,7 +17,7 @@ body {
 .containerHeader {
     border: 1px solid red;
     height: 250px;
-} 
+}
 .laboratoriaNav { /*first Nav: container*/
     height: 40%;
     width: 100%;
@@ -123,12 +123,12 @@ body {
 }
 .porcentDataLeft {
     float: left;
-    margin: 1px 0 0 15px; 
+    margin: 1px 0 0 15px;
     font-size: 16px;
 }
 .porcentDataRigth {
-    float: left; 
-    margin: 1px 0 0 15px; 
+    float: left;
+    margin: 1px 0 0 15px;
     font-size: 16px;
 }
 /* - second row statistical data*/
@@ -164,7 +164,7 @@ body {
     margin-top: 80px;
     padding: 12px;
 }
-.imageSecondRowLeft img { /*left square*/    
+.imageSecondRowLeft img { /*left square*/
     border: 2px solid red;
     width: 62%;
     height: 100%;
@@ -213,7 +213,7 @@ body {
     background-color: #ffffff;
     outline: 1px solid yellow;
     float: left;
-    margin: 70px 0 0 80px; 
+    margin: 70px 0 0 80px;
 }
 .dataNumberThirdRow { /*left square*/
     background-color:#f7f7f7;
@@ -265,10 +265,11 @@ body {
 /* section checkbox */
 .checkbox-site , .checkbox-HSE , .checkbox-commoncore {
     -webkit-appearance: none;
+    font-size : 18px;
 	background-color: #fafafa;
 	border: 1px solid #f7b617 ;
 	box-shadow: 0 1px 2px rgba(187, 16, 16, 0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
-    width: 250px;
+    width: 400px;
     padding: 9px;
 	border-radius: 3px;
 	display: none;
