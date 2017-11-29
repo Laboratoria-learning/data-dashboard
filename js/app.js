@@ -10,7 +10,7 @@ var lowerMenu = document.querySelectorAll('.city');
 // }
 function showCity(event) {
   for (var i = 0; i < subMenu.length; i++) {
-    subMenu[i].classList.toggle('display-none');
+    subMenu[i].classList.toggle('display-');
   }
 }
 // menu.addEventListener('click', showCountry);
