@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+    <link href="https://file.myfontastic.com/xLNFR3UQF2rxkSBgDCxx2C/icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
@@ -85,57 +86,62 @@
     </section>
     <!--pegar aqui seccion-3 katherine sermeño-->
     <div class="fondo">
-      <h3>TECH SKILLS <select id ="select" title="overaL (Cumulative)">
-      <option value="COMMON CORE">COMMON CORE</option>
-      <option value="Javascript">Javascript</option>
-      <option value="UX Desing">UX Desing</option>
-      </select>
-      </h3>
+      <h3 class="subtitle">TECH SKILLS </h3>
+          <select id ="select" aria-placeholder="overaL (Cumulative)">
+             <option value="sprint-1">sprint 1</option>
+             <option value="sprint-2">sprint 2</option>
+              <option value="sprint-3">sprint 3</option>
+              <option value="sprint-4">sprint 4</option>
+          </select>
+      
 
       <div class="cuadrado">
-        <div class="box">
+        <div class="box-sprint">
           <span>90</span>
-        <p class="letras pequeñas">#ESTUDENTS THAT MEET THE TARGET</p></div>
-        <div class="box">
+          <p class="letras pequeñas">#ESTUDENTS THAT MEET THE TARGET</p>
+        </div>
+        <div class="box-sprint">
         <span>62%</span>
         <p class="letras pequeñas">%OF TOTAL (135)</p>
       </div>
        </div>
         <div class="padre">
-        <div class="caja"> <img class="uno" src="img/rectangulo.png" alt="rectangulo"></div>
-        <div class="circulo">  <img class="dos" src="img/circle.png" alt="circle">
+        <div class="caja"> <img class="uno" src="assets/images/rectangular-graphic.png" alt="rectangulo"></div>
+        <div class="circulo">  <img class="dos" src="assets/images/circle-graphic.png" alt="circle">
         <div class="letra"> #ESTUDENTS THAT MEET THE TARGET <br>#ESTUDENTS THAT DON´T MEET THE TARGET</div>
        </div>
        </div>
        </div>
 
        <div class="fondo">
-       <h3>LIFE SKILLS <select id ="select" title="overaL (Cumulative)">
-       <option value="COMMON CORE">COMMON CORE</option>
-       <option value="Javascript">Javascript</option>
-       <option value="UX Desing">UX Desing</option>
-       </select>
+       <h3 class="subtitle">LIFE SKILLS 
+        <select id ="select" title="overaL (Cumulative)">
+          <option value="sprint-1">sprint 1</option>
+          <option value="sprint-2">sprint 2</option>
+          <option value="sprint-3">sprint 3</option>
+          <option value="sprint-4">sprint 4</option>
+        </select>
        </h3>
 
        <div class="cuadrado">
-         <div class="box">
-          <span>90</span>
+         <div class="box-sprint">
+          <span>80</span>
          <p class="letras pequeñas">#ESTUDENTS THAT MEET THE TARGET</p></div>
-         <div class="box">
+         <div class="box-sprint">
          <span>62%</span>
          <p class="letras pequeñas">%OF TOTAL (135)</p>
        </div>
         </div>
 
          <div class="padre">
-         <div class="caja"> <img class="uno" src="img/rectangulo.png" alt="rectangulo"></div>
-         <div class="circulo">  <img class="dos" src="img/circle.png" alt="circle">
+         <div class="caja"> <img class="uno" src="assets/images/rectangular-graphic.png" alt="rectangulo"></div>
+         <div class="circulo">  <img class="dos" src="assets/images/circle-graphic.png" alt="circle">
          <div class="letra"> #ESTUDENTS THAT MEET THE TARGET <br>#ESTUDENTS THAT DON´T MEET THE TARGET</div>
         </div>
         </div>
         </div>
 
-    <!--pegar aqui seccion --->
+    
     <section class="section-5">
         <div class="section-5">
             <div class="box-evaluation">
@@ -194,6 +200,57 @@
             <li class="capital-letter"><a href=""></a>2017 ii</li>
         </ul>
     </div>
+    <!--estructura de la section students-->
+    <section class="students">
+            <div class="colum-left">
+              <div class="specialization">
+                  <h1>SPECIALIZATION:</h1>
+                  <ul>
+                    <li><span class="icon-square-o"></span>Javascript</li>
+                    <li><span class="icon-square-o"></span>UX Design</li>
+                    <li><span class="icon-square-o"></span>Front end Designer</li>
+                  </ul>
+              </div>
+            </div>
+            <div  id="colum-right" class="colum-right">
+              <div class="search">
+                <i class="icon-search"></i>
+                <input id="input" type="text" name="" value="">
+              </div>
+              <div class="students-skills">
+                <figure class="figure">
+                  <img class="image"src="http://dummyimage.com/244x133.png/ff4444/ffffff" alt="diana">
+                </figure>
+                <div class="colum-1">
+                  <h1 id="name"></h1>
+                  <p>FRONTEND DEVELOPER</p>
+                  <ul>
+                    <li>JAVASCRIPT</li>
+                    <li>APIs</li>
+                    <li>JQUERY</li>
+                  </ul>
+                </div>
+                <div class="colum-2">
+                  <div class="box">
+                    <h1 id="score-1"></h1>
+                    <p>TECH SKILLS</p>
+                  </div>
+                  <div class="box">
+                    <h1 id="score-2"></h1>
+                    <p>LIFE SKILLS</p>
+                  </div>
+                  <div class="box">
+                    <h1>INTERM</h1>
+                    <p>ENGLISH SKILLS</p>
+                  </div>
+                </div>
+              </div>
+              <div id="add-Names">
+      
+              </div>
+            </div>
+          </section>
+      
     <!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
