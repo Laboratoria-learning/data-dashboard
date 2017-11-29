@@ -68,11 +68,12 @@ header {
 }
 
 .name-student input {
-    width: 100%;
+    width: 90%;
     background: -webkit-linear-gradient(left, rgba(30,82,72,1) 0%, rgba(90,131,127,1) 32%, rgba(159,187,191,1) 69%, rgba(213,231,241,1) 98%);
     padding: 8px;
     border-radius: 10px;
     color: #fff;
+    outline: none;
 }
 
 .name-student input::-webkit-input-placeholder {
@@ -80,9 +81,7 @@ header {
 }
 
 .list-sedes {
-    width: 20%;
     display: inline-block;
-    
 }
 
 .list-sedes ul {
@@ -90,9 +89,13 @@ header {
 }
 
 .list-sedes li {
+<<<<<<< HEAD
     display: inline-block           ;
 }
 
 .container-list {
     color: #fff;
+=======
+    display: inline-block;
+>>>>>>> 4612f83b29ca4845b7ed36572aa8e17cd9359b64
 }
