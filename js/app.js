@@ -58,6 +58,20 @@ function countActive(sede, generation, students) {
 
 countActive('AQP', '2016-2', 'students');
 
+function achievement(sede,generation){
+  var count = 0;
+  var numberRatings = data[sede][generation]['ratings'];
+  for (var i = 0; i < numberRatings.length; i++) {
+    var ratingStudent = numberRatings[i]['student']['supera'];
+    count = count + ratingStudent;
+}
+console.log(count);
+}
+
+achievement('AQP','2016-2');
+achievement('AQP', '2017-1');
+
+
 
 
 
