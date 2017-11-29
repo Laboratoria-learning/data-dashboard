@@ -10,7 +10,16 @@
 // console.log(data['AQP']['2016-2']['ratings'][2]['teacher']);
 // console.log(data['AQP']['2016-2']['ratings'][0]['jedi']);
 // cambiar pestañas
-
+// console.log(data['AQP']['2016-2']['rating'][0]['student']['cumple']);
+// console.log(data['AQP']['2016-2']['students'][1]['name']);
+// var nombre
+// var returnCurrently
+// for(var i =0;i<15;i++){
+//   if(nombre === data['AQP']['2016-2']['students'][i]['name'])
+//   {
+//    resul.tex
+//   }
+// }
 var list = document.getElementsByTagName('ul')[0].children;
 var elementTab = document.getElementsByClassName('tab');
 var containerOverview = document.getElementById('container-overview');
@@ -184,6 +193,10 @@ function calculateJediMasterRating(sede, numSprint, year) {
   jediMasterRating.innerHTML = '<b>' + (sumJedi / numSprint).toFixed(2) + '</b>' + '<br> overall teacher rating <br> (cumulative)';
 }
 
+function calculateStudentSatisfaccion(sede, numEndSprint,year) {
+ 
+}
+
 function drawCurrently(attend, noAttend) {
   var data = google.visualization.arrayToDataTable([
     ['Currently', 'Number Student'],
@@ -198,20 +211,22 @@ function drawCurrently(attend, noAttend) {
   chart.draw(data, options);
 }
 
-function drawPromoter() {
-  // var data = google.visualization.arrayToDataTable([
-  //   ['Element', 'Density', { role: 'annotation' } ],
-  //   ['Copper', 8.94, 'Cu' ],
-  //   ['Silver', 10.49, 'Ag' ],
-  //   ['Gold', 19.30, 'Au' ],
-  //   ['Goldh', 0, 'Au' ],
-  // ]);
 
-  // var options = {
-  //   'width': 300,
-  //   'height': 200};
-  // var chart = new google.charts.Bar(document.getElementById('grafy-promoter'));
-  // chart.draw(data, google.charts.Bar.convertOptions(options));
+
+function drawPromoter() {
+  var data = google.visualization.arrayToDataTable([
+    ['Element', 'Density', { role: 'annotation' } ],
+    ['Copper', 8.94, 'Cu' ],
+    ['Silver', 10.49, 'Ag' ],
+    ['Gold', 19.30, 'Au' ],
+    ['Goldh', 0, 'Au' ],
+  ]);
+
+  var options = {
+    'width': 300,
+    'height': 200};
+  var chart = new google.charts.Bar(document.getElementById('grafy-promoter'));
+  chart.draw(data, google.charts.Bar.convertOptions(options));
 }
 
 window.onload = function() {
