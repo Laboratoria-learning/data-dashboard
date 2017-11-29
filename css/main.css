@@ -29,14 +29,6 @@
 }
 
 /*estilo students*/
-
-*{
-  box-sizing: border-box;
-}
-
-.header-logo{
-  width: 30%;
-}
 .contenedor{
   background:  #F7F7F7;
 }
@@ -44,7 +36,6 @@
   position:relative;
   width: 90%;
   padding-bottom:12px;
-  outline: 1px solid black;
   margin-left: 5%;
   height: 104%;
 }
@@ -53,10 +44,10 @@
  position: static;
   background: white;
   width: 31%;
-  top: 20px;
- outline: 1px solid red;
- height: 103%;
+  margin-top: 18px;
+ height: 106%;
  outline: 1px solid purple;
+
 }
 .tablaint-1{
 width: 38%;
@@ -71,61 +62,61 @@ line-height: 10px;
   color: red;
 }
 .tablaint-2{
-    width: 170px;
-  position: absolute;
-
-display: inline-block;
-  background:#F7F7F7;
-  left: 15%;
-  top: 16%;
-  text-align: center;
-  line-height: 10px;
+ width: 162px;
+ position: absolute;
+ height: ;
+ display: inline-block;
+ background:#F7F7F7;
+ left: 15%;
+ top: 19.5%;
+ text-align: center;
+ line-height: 10px;
 }
 .tablaint-3{
-width: 38%;
-display: inline-block;
-background:#F7F7F7;
-margin-right: 9%;
-text-align: center;
-line-height: 10px;
+ width: 38%;
+ display: inline-block;
+ background:#F7F7F7;
+ margin-right: 9%;
+ text-align: center;
+ line-height: 10px;
 }
 .tablaint-4{
-  position: absolute;
-width: 38%;
-display: inline-block;
-background:#F7F7F7;
-margin-right: 9%;
-text-align: center;
-line-height: 10px;
-top: 15%;
+ position: absolute;
+ width: 38%;
+ display: inline-block;
+ background:#F7F7F7;
+ margin-right: 9%;
+ text-align: center;
+ line-height: 10px;
+ top: 14%;
 
 }
 .tablaint-5{
-width: 38%;
-display: inline-block;
-background:#F7F7F7;
-margin-right: 9%;
-text-align: center;
-line-height: 10px;
-top: 20px;
+ width: 38%;
+ height: 22%;
+ display: inline-block;
+ background:#F7F7F7;
+ margin-left:  -8px;
+ text-align: center;
+ line-height: 9px;
+ top: 20px;
 
 }
-.tablanetpromoter{
-position: absolute;
-width: 38%;
-display: inline-block;
-background:#F7F7F7;
-margin-right: 9%;
-line-height: 20px;
-top: 12%;
-height: 19%;
-font-size: 1em;
-text-decoration: none;
-list-style: none;
-text-align: center;
+.tablanetpromoter {
+ position: absolute;
+ width: 38%;
+ display: inline-block;
+ background:#F7F7F7;
+ left:   55%;
+ line-height: 30px;
+ top: 11%;
+ height: 22%;
+ font-size: 0.9em;
+ list-style: none;
+ text-align: center;
 }
-.porcentajeCuadro-2{
-  color: green;
+.porcentajeCuadro-2 {
+  color:#68AD1D;
 }
 .detalleCuadro-1{
   font-size: 0.7em;
@@ -133,37 +124,32 @@ text-align: center;
 .detalleCuadro-2{
   font-size: 0.7em;
 }
-
 .cuadro-2{
-width: 31%;
-  /*height: 40%;*/
-top: 15px;
-left: 33%;
-background: white;
-position: absolute;
-  outline: 1px solid red;
-padding-left: 5%;
-  height:98%;
+ width: 31%;
+ top: 15px;
+ left: 33%;
+ background: white;
+ position: absolute;
+ padding-left: 5%;
+ height:98%;
 }
 .detalleCuadro-2{
   font-size: 0.6em;
 }
 .cuadro-3{
-position: absolute;
-width: 31%;
-background: white;
-left:67%;
-top: 15px;
-padding-left: 5%;
-outline: 1px solid blue;
-  height: 98%;
+ position: absolute;
+ width: 31%;
+ background: white;
+ left:67%;
+ top: 15px;
+ padding-left: 5%;
+ height: 98%;
 }
 .nps{
     font-size: 0.7em;
 }
 .first img{
   width: 95%;
-  /*bottom: 2%;*/
 }
 .second{
   background: white;
@@ -171,12 +157,19 @@ outline: 1px solid blue;
   position:relative;
   width: 90%;
   display: inline-block;
-  outline: 1px solid red;
   margin-left: 5%;
+  padding-bottom: 30%;
 }
 .cuadro-4{
   padding-left: 5%;
-  width: 35%;
+  width: 42%;
+}
+.rectangulo-1{
+  position: absolute;
+  display: inline-block;
+  width:53%;
+  bottom:  20px;
+  left: 5%;
 }
 
 .sprintlist{
@@ -192,7 +185,7 @@ outline: 1px solid blue;
   margin-right: 9%;
   text-align: center;
   line-height:10px;
-  top: 20px;
+  top: 17px;
 }
 .tablaint-7{
   position: absolute;
@@ -201,88 +194,244 @@ outline: 1px solid blue;
   background:#F7F7F7;
   margin-right: 9%;
   line-height: 8px;
-  top: 14%;
-  height: 19%;
+  top: 10%;
+  height: 13%;
   font-size: 1em;
   text-decoration: none;
   list-style: none;
   text-align: center;
 }
 .porcentajeCuadro-4{
-  color: green;
+  color:#68AD1D;
 }
 .cuadro-5{
-    padding-left: 5%;
-    width: 35%;
+  padding-left: 5%;
+  width: 100px;
 }
 .cuadro-5 img{
   width: 32%;
   height: 50%;
   position: absolute;
-  outline: 1px solid red;
-  left: 50%;
-  top: 40%;
+  left: 63%;
+  top: 30%;
+}
+.btn-green{
+  position: absolute;
+  left: 64%;
+  width: 2%;
+  height:1%;
+  background: green;
+  bottom: 12%;
 
 }
+.btn-red{
+  bottom: 8%;
+  position: absolute;
+  display: inline-block;
+  background: red;
+  width: 2%;
+  height:1%;
+  left: 64%;
+}
+.estudents-green{
+  position: absolute;
+  left: 66%;
+ bottom: 6.7%;
+}
+.estudents-red{
+  bottom: 2%;
+  position: absolute;
+  left: 66%;
+}
+
 .third{
   background: white;
-  margin-top: 5%;
+  margin-top: 7%;
   position: relative;
   width: 90%;
   display: inline-block;
-  outline: 1px solid red;
   margin-left: 5%;
-}
-.cuadro-6{
-    padding-left: 5%;
-    width: 35%;
-}
-.cuadro-7{
-    padding-left: 5%;
-    width: 35%;
-}
-.cuadro-7 img{
-  width: 27%;
-  height: 50%;
-  position: absolute;
-  outline: 1px solid red;
-  left: 50%;
-  top: 40%;
-}
-.hse{
-  position: absolute;
-  left: 16%;
-  top: 4%;
-}
-.fourth{
-  background: white;
-  margin-top: 5%;
-  position: relative;
-  width: 90%;
-  display: inline-block;
-  outline: 1px solid green;
-  margin-left: 5%;
-}
-.cuadro-8{
-  width: 35%;
-  height: 50%;
-  position: absolute;
-  outline: 1px solid red;
-  left: 30%;
-  top: 5%;
-  padding-left: 5%;
-}
-.cuadro-9{
-width: 35%;
-  height: 50%;
-  position: absolute;
-  outline: 1px solid red;
-  left: 70%;
-  top: 5%;
-  padding-left: 5%;
-}
-.cuadro-10{
-  width: 90%;
-  padding-left: 5%;
+  padding-bottom: 30%;
 }
 
+.cuadro-6{
+  padding-left: 5%;
+  width: 35%;
+}
+.cuadro-7{
+  padding-left: 5%;
+  width: 35%;
+}
+
+.hse{
+  position: absolute;
+  left: 17%;
+  top: 4%;
+}
+.tablaint-8{
+  width: 55%;
+  height: 76px;
+  display: inline-block;
+  background:#F7F7F7;
+  margin-right: 9%;
+  text-align: center;
+  line-height:10px;
+  top: 20px;
+}
+.tablaint-9{
+  position: absolute;
+  width: 18%;
+  display: inline-block;
+  background:#F7F7F7;
+  margin-right: 9%;
+  line-height: 10px;
+  top: 10%;
+  height: 13%;
+  font-size: 1em;
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
+}
+.rectangular-2{
+  position: absolute;
+  display: inline-block;
+  width:53%;
+  bottom:  20px;
+  left: 5%;
+}
+.circle-1{
+  position: absolute;
+  display: inline-block;
+  width:30%;
+  bottom:  80px;
+  left: 65%;
+}
+.btn-green{
+  position: absolute;
+  left: 64%;
+  width: 2%;
+  height:1%;
+  background: green;
+  bottom: 12%;
+
+}
+.btn-red{
+  bottom: 8%;
+  position: absolute;
+  display: inline-block;
+  background: red;
+  width: 2%;
+  height:1%;
+  left: 64%;
+}
+.estudents-green{
+  position: absolute;
+  left: 66%;
+ bottom: 6.7%;
+}
+.estudents-red{
+  bottom: 2%;
+  position: absolute;
+  left: 66%;
+}
+
+.fourth{
+  margin-top: 7%;
+  background:#F7F7F7;
+  position:relative;
+  width: 90%;
+  padding-bottom:120px;
+  margin-left: 5%;
+  height: 140%;
+}
+.cuadro-8{
+ display: inline-block;
+ position: static;
+ background: white;
+ width: 31%;
+ margin-top: 18px;
+ height: 200%;
+ padding-left: 5%;
+ padding-bottom: 16%;
+}
+.meeting{
+  font-size: 10px;
+}
+.graph-2{
+  position: absolute;
+  display: inline-block;
+  width:250px;
+  bottom:  30%;
+  left: 5%;
+}
+.cuadro-9{
+  width: 31%;
+  top: 15px;
+  left: 35%;
+  background: white;
+  position: absolute;
+  padding-left: 5%;
+  height:92%;
+}
+.graph-3{
+  position: absolute;
+  display: inline-block;
+  width:100%;
+  height: 30%;
+  bottom:  30%;
+  left: 5%;
+}
+
+.overall{
+  font-size: 10px;
+}
+.cuadro-10{
+  width: 30%;
+  height: 92%;
+  position: absolute;
+  left: 69%;
+  top: 4%;
+  background: white;
+  padding-left: 5%;
+}
+.graph-4{
+  position: absolute;
+  display: inline-block;
+  width:300px;
+  bottom:  30%;
+  left: 5%;
+}
+.jedi{
+  font-size: 10px;
+}
+
+.tablaint-10{
+position: absolute;
+width: 11%;
+display: inline-block;
+background:#F7F7F7;
+margin-right: 9%;
+text-align: center;
+line-height: 9px;
+}
+.tablaint-11{
+position: absolute;
+width: 39%;
+display: inline-block;
+background:#F7F7F7;
+margin-right: 9%;
+text-align: center;
+line-height: 10px;
+top: 14%;
+
+}
+.tablaint-12{
+width: 39%;
+height: 22%;
+display: inline-block;
+background:#F7F7F7;
+margin-left:  -8px;
+text-align: center;
+line-height: 9px;
+top: 20px;
+}
