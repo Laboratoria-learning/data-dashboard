@@ -38,10 +38,17 @@ window.addEventListener('load', function() {
     var generation = aux.join('-');
 
     var generationData = data[sedeName][generation];
+    console.log(generationData);
     var totalStudents = generationData.students.length;
     // Datos de estudiantes inscritas
+    var div = document.createElement('div');
+    var parrafo = document.createElement('p');
+    parrafo.textContent = '# estudiantes inscritas';
+    div.appendChild(parrafo);
+
     studentsInscribed.textContent = totalStudents;
-    // var div = document.createElement('div');
+
+    studentsInscribed.appendChild(div);
 
     var counter = 0;
     generationData.students.forEach(function(student) {
@@ -50,9 +57,32 @@ window.addEventListener('load', function() {
         counter ++;
       }
     });
+
+    var div = document.createElement('div');
+    var parrafo = document.createElement('p');
+    parrafo.textContent = '% estudiantes desertoras';
+    div.appendChild(parrafo);
     // Datos de estudiantes que desartaron
     studentsDeserted.textContent = Math.floor((counter * 100) / totalStudents) + '%';
-
+    studentsDeserted.appendChild(div);
+    // [Promoters] = [Respuestas 9 o 10] / [Total respuestas] * 100
+    // [Passive] = [Respuestas 7 u 8] / [Total respuestas] * 100
+    // [Detractors] = [Respuestas entre 1 y 6] / [Total respuestas] * 100
+    
+    // [NPS] = [Promoters] - [Detractors]
+    var result = 0;
+    for (var i = 0; i < generationData.ratings.length; i++) {
+      var promoters = generationData.ratings[i].nps.promoters;
+      var detractors = generationData.ratings[i].nps.detractors;
+      var nps = promoters - detractors;
+      result += nps;
+    }
+    var div = document.createElement('div');
+    var parrafo = document.createElement('p');
+    parrafo.textContent = '% de nps';
+    div.appendChild(parrafo);
+    averageNps.textContent = Math.floor(((result / generationData.ratings.length) * 100) / 100) + '%';
+    averageNps.appendChild(div);
   });
  
   // agregar el evento click a todos los tabs
