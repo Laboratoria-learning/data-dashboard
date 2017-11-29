@@ -10,20 +10,20 @@ function begin() {
   var selectLocal = document.getElementById('local');
   var selectPromo = document.getElementById('promo');
   var selectSprint = document.getElementById('sprint');
-  var currentLocal = selectLocal.value;
-  var currentPromo = selectPromo.value;
+  // var currentLocal = selectLocal.value;
+  // var currentPromo = selectPromo.value;
 
   selectLocal.addEventListener('change', fillPromos);
   selectPromo.addEventListener('change', fillSprints);
-  
+  document.addEventListener('change', studentsOverview);
+
   // Para llenar el combo de promos
   function fillPromos(event) {
     for (var i = 0; i < Object.keys(data).length; i++) {
       if (event.target.value === Object.keys(data)[i]) {
         selectPromo.innerHTML = '';
-        currentLocal = selectLocal.value;
-        var promList = Object.keys(data[currentLocal]).reverse();
-        console.log(promList);          
+        var promList = Object.keys(data[selectLocal.value]).reverse();
+        console.log(promList);
         for (var j = 0; j < promList.length; j++) {
           var optionPromo = document.createElement('option');
           optionPromo.value = promList[j];
@@ -34,42 +34,57 @@ function begin() {
     }
   }
 
+  // Llenar combo de sprints
   function fillSprints(event) {
     debugger;
-    currentLocal = selectLocal.value;
-    currentPromo = selectPromo.value;
-    // var promos = Object.keys(data[currentLocal]);  
-    // for (var i = 0; i < promos.length; i++) {          
-    //   if (event.target.value === promos[i]) {
-        var sprints = data[currentLocal][currentPromo].ratings.length;
-        selectSprint.innerHTML = '';
-        for (var i = sprints; 0 < i; i--) {
-          var optionSprint = document.createElement('option');
-          optionSprint.value = 'Sprint ' + (i);
-          optionSprint.textContent = 'Sprint ' + (i);
-          selectSprint.appendChild(optionSprint);
-        }
-      // }
-    // }
-  }
-
-  // Para contar actuales y retiradas  :(
-  function studentsCount(local, promo) {
-    var currentStudents = 0;
-    var dropoutStudents = 0;
-
-    for (var i = 0; i < data[currentLocal][promo]['students'].length; i++) {
-      if (data[currentLocal][promo]['students'][i]['active'] === true) {
-        currentStudents++;
-      } else {
-        dropoutStudents++;
-      }
+    // currentLocal = selectLocal.value;
+    // currentPromo = selectPromo.value;
+    var sprints = data[selectLocal.value][selectPromo.value].ratings.length;
+    selectSprint.innerHTML = '';
+    for (var i = sprints; 0 < i; i--) {
+      var optionSprint = document.createElement('option');
+      optionSprint.value = 'Sprint ' + (i);
+      optionSprint.textContent = 'Sprint ' + (i);
+      selectSprint.appendChild(optionSprint);
     }
-    return console.log(currentStudents + ' ' + dropoutStudents);
   }
 
-  studentsCount('LIM', '2016-2');
-  studentsCount('CDMX', '2017-1');
+  // Para contar actuales y retiradas  :)
+  function studentsOverview(event) {
+    if (event.target === selectLocal || event.target === selectPromo || event.target === selectSprint) {
+      var students = data[selectLocal.value][selectPromo.value]['students'];      
+      var currentStudents = 0;
+      var dropoutStudents = 0;
+      var targetOverview = 0;
+      var scoreTechTotal = 0;
+      var scoreHSETotal = 0;
+
+      for (var i = 0; i < students.length; i++) {
+        if (students[i]['active'] === true) {
+          // Acumular estudiantes activas
+          currentStudents++;
+          // Recorre sprints de dicha estudiante
+          for (var j = 0; j < selectSprint.options.length; j++) {
+            // Puntajes en el sprint
+            scoreTech = students[i].sprints[j].score.tech; //1260
+            scoreHSE = students[i].sprints[j].score.hse; //840
+            if (scoreTech >= 1260)
+            return console.log(scoreTech + ' ' + scoreHSE);
+            // if (students[i].sprints[j].score)
+          }
+        } else {
+          dropoutStudents++;
+        }
+      }
+      document.getElementById('current-students').textContent = currentStudents;
+      document.getElementById('dropout').textContent = Math.round((dropoutStudents / students.length) * 100) * 10 / 10 + '%';
+      
+      // return console.log(currentStudents + ' + ' + dropoutStudents + ' = ' + students.length);
+    }
+  }
+
+  // studentsCount('LIM', '2016-2');
+  // studentsCount('CDMX', '2017-1');
 };
 
 // Grafico
