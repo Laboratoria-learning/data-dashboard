@@ -1,6 +1,6 @@
 //Variables
 var sede = 'LIM';
-var promo = '2017-2';
+var promo = '2016-2';
 //var options = document.getElementsByTagName('option');
 var inputsSede = document.getElementsByClassName('sede');
 var inputsPromo = document.getElementsByClassName('promo');
@@ -9,11 +9,39 @@ var inputsPromo = document.getElementsByClassName('promo');
 //Sedes 
 //AQP, CDMX, LIM, SCL
 function selectSede () {
+  var firstPromAqp = document.getElementById('form-aqp').children[0].firstChild;
+  var firstPromCdmx = document.getElementById('form-cdmx').children[0].firstChild;
+  var firstPromScl = document.getElementById('form-scl').children[0].firstChild;
+  var firstPromLim = document.getElementById('form-lim').children[0].firstChild;
   for (var i = 0; i < inputsSede.length; i++) {
     inputsSede[i].addEventListener('click',function () {
       sede = this.value;
+      if (sede === 'AQP') {
+        firstPromAqp.checked = true;
+        promo = firstPromAqp.value;
+        firstPromLim.checked = false;
+        firstPromScl.checked = false;
+        firstPromCdmx.checked = false;
+      } else if (sede === 'CDMX') {
+        firstPromCdmx.checked = true;
+        promo = firstPromCdmx.value;
+        firstPromLim.checked = false;
+        firstPromScl.checked = false;
+        firstPromAqp.checked = false;
+      } else if (sede === 'SCL') {
+        firstPromScl.checked = true;
+        promo = firstPromScl.value;
+        firstPromLim.checked = false;
+        firstPromCdmx.checked = false;
+        firstPromAqp.checked = false;
+      } else if (sede === 'LIM') {
+        firstPromLim.checked = true;
+        promo = firstPromLim.value;
+        firstPromCdmx.checked = false;
+        firstPromScl.checked = false;
+        firstPromAqp.checked = false;
+      } 
       drawSeriesChart();
-      return sede;
     })
   }
 } 
@@ -22,9 +50,14 @@ function selectSede () {
 function selectPromo() {
   for (var i = 0; i < inputsPromo.length; i++) {
     inputsPromo[i].addEventListener('click',function () {
+      var current = this;
       promo = this.value;
+      for (var i = 0; i < inputsPromo.length; i++) {
+        if (current != inputsPromo[i]) {
+          inputsPromo[i].checked = false;
+        }
+      }
       drawSeriesChart();
-      return promo;
     })
   }
 }

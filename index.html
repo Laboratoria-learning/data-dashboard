@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
@@ -8,30 +8,6 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-
-    
-    <form>
-      <input type="radio" name="sede" class="sede" value="AQP"> Arequipa<br>
-      <input type="radio" name="sede" class="sede" value="LIM" checked> Lima<br>
-      <input type="radio" name="sede" class="sede" value="CDMX"> Ciudad de México<br>
-      <input type="radio" name="sede" class="sede" value="SCL"> Santiago de Chile
-    </form> 
-
-    <form>
-      <input type="radio" name="sede" class="promo" value="2016-2"> 2016-2<br>
-      <input type="radio" name="sede" class="promo" value="2017-1"> 2017-1<br>
-      <input type="radio" name="sede" class="promo" value="2017-2" checked> 2017-2
-    </form>
-
-    <select name="" id="padre">
-      <option value="AQP">Arequipa</option>
-      <option value="LIM">Lima</option>
-      <option value="CDMX">Ciudad de México</option>
-      <option value="SCL">Santiago de Chile</option>
-    </select>
-
-    <div id="chart_div" style="width: 900px; height: 500px;"></div>
-
     <header>
       <!--Logo-->
       <figure>
@@ -63,46 +39,49 @@
       </section>
       <!--Fila de Sedes-->
     <section class="list">
-        <div>
-          <div class="title" >Sede</div>
-        </div>
-        <div class="box-list"><input class="sede"type="radio" name="gender" value="Lima" checked> LIMA
-        <hr>
-        </div>
-        <form>
-        <div class="sub-boxList"><input class="promo" type="radio" name="gender" value="lima-2016-II"> 2016-II</div>
-        <div class="sub-boxList"><input  class="promo"type="radio" name="gender" value="lima-2017-I">  2017-I</div>
-        <div class="sub-boxList"><input  class="promo"type="radio" name="gender" value="lima-2017-II"> 2017-II</div>
-      </form>
-        <div class="box-list"><input class="sede" type="radio" name="gender" value="Arequipa" > AREQUIPA
+      <div>
+        <div class="title" >Sede</div>
+      </div>
+      <div class="box-list">
+        <input class="sede" type="radio" name="gender" value="LIM"> LIMA
         <hr>
       </div>
-        <form>
-        <div class="sub-boxList"><input  class="promo"type="radio" name="gender" value="Arequipa"> 2016-II</div>
-        <div class="sub-boxList"><input  class="promo"type="radio" name="gender" value="Arequipa"> 2017-I</div>
-        </div>
+      <form id="form-lim">
+        <div class="sub-boxList"><input class="promo prom-lim" type="radio" name="gender" value="2016-2"> 2016-II</div>
+        <div class="sub-boxList"><input class="promo prom-lim" type="radio" name="gender" value="2017-1">  2017-I</div>
+        <div class="sub-boxList"><input class="promo prom-lim" type="radio" name="gender" value="2017-2"> 2017-II</div>
       </form>
-        <div class="box-list"><input class="sede" type="radio" name="gender" value="Chile"> SANTIAGO DE CHILE
-        <hr>
+        <div class="box-list">
+          <input class="sede" type="radio" name="gender" value="AQP" > AREQUIPA
+          <hr>
         </div>
-        <form>
-        <div class="sub-boxList"><input class="promo" type="radio" name="gender" value="Chile"> 2016-II</div>
-        <div class="sub-boxList"><input class="promo" type="radio" name="gender" value="Chile"> 2017-I</div>
-        <div class="sub-boxList"><input class="promo"type="radio" name="gender" value="Chile"> 2017-II</div>
+      <form id="form-aqp">
+        <div class="sub-boxList"><input class="promo prom-aqp" type="radio" name="gender" value="2016-2"> 2016-II</div>
+        <div class="sub-boxList"><input class="promo prom-aqp" type="radio" name="gender" value="2017-1"> 2017-I</div>
       </form>
-        <div class="box-list"><input  class="sede"class="sede" type="radio" name="gender" value="Mexico" > CUIDAD DE MEXICO
+      <div class="box-list">
+        <input class="sede" type="radio" name="gender" value="SCL"> SANTIAGO DE CHILE
         <hr>
-        </div>
-        <form>
-        <div class="sub-boxList"><input  class="promo"type="radio" name="gender" value="Mexico"> 2017-I</div>
-        <div class="sub-boxList"><input  class="promo"type="radio" name="gender" value="Mexico"> 2017-II</div>
+      </div>
+      <form id="form-scl">
+        <div class="sub-boxList"><input class="promo prom-scl" type="radio" name="gender" value="2016-2"> 2016-II</div>
+        <div class="sub-boxList"><input class="promo prom-scl" type="radio" name="gender" value="2017-1"> 2017-I</div>
+        <div class="sub-boxList"><input class="promo prom-scl" type="radio" name="gender" value="2017-2"> 2017-II</div>
+      </form>
+      <div class="box-list">
+        <input  class="sede"  type="radio" name="gender" value="CDMX" > CUIDAD DE MEXICO
+        <hr>
+      </div>
+      <form id="form-cdmx">
+        <div class="sub-boxList"><input class="promo prom-cdmx" type="radio" name="gender" value="2017-1"> 2017-I</div>
+        <div class="sub-boxList"><input class="promo prom-cdmx" type="radio" name="gender" value="2017-2"> 2017-II</div>
       </form>
     </section>
     <section>
       <!--Estadisticas -->
       <div class="container-2">
        <div class="sub-box ">
-         <h1>ENROLLMENT</h1>
+          <h1>ENROLLMENT</h1>
           <div class="sub-box2 ">
                <div class="number">
 
@@ -115,6 +94,7 @@
             </div>
             <!--<div> %DROPOUT</div>-->
           </div>
+          <div id="chart_div" style="width: 900px; height: 500px;"></div>
        </div>
        <div class="sub-box ">
          <h1>ACHIEVEMENT</h1>
