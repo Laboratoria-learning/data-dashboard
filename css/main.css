@@ -2,53 +2,76 @@
  *{
    margin: 0;
    padding: 0;
+   font-family: 'Raleway', sans-serif;
 
  }
  body{
-   background: 
+   background:#fff;
  }
  /*logo-laboratoria*/
  img{
-   width: 100%;
+   outline: 1px solid red;
+   width: 85.5em;
    height: 5em;
+   position: fixed;
+   padding-left: 12em;
+   
+
+
  }
  /*lista de navegación*/
  nav{
    display: inline-block;
-   float: right;
+   margin-left: 21.8em;
+   position: fixed;
+   top:5em;
+
+
  }
  ul{
 
    list-style: none;/*los puntos los quita*/
    padding: 0;
-   background: #EDEDED;
+   background: #000;
    line-height: 70px;/*agranda la linea*/
    overflow: auto;/*devuelve el contexto del bloque*/
  }
  li{
 
-   width: 250px;/*ancho */
+       width: 254.2px;/*ancho */
  /*  display: inline-block;*//*lo pone en una sola linea una al costado de otra*/
    text-align: center;/*centrara cada li*/
    float: left;/*pone elementos flotados*/
 }
 a{
+padding-bottom: 8px;
 text-decoration: none;/*quita la linea*/
 display: block;/*ocupe el espacio disponible de la etiqueta li*/
-color: #000;
+color: #fff;
 font-size: 20px;
+}
+.title{
+  padding-top: 24px;
+  padding-bottom: 24px;
+  font-size: 25px;
+  text-align: center;
+  color: #fff;
+  background-color: #FFD65B;
 }
 /*hara al pasar el mause en cada li cambiara de color*/
 a:hover{
-  background: #D8D8D8;
-  color: #000;
+  background: #2C3E50;
+  color: #fff;
 }
 /*Estilos iconos*/
 .fa{
   font-size: 35px;
+  color:#fff;
 }
 .fa.fa-bars{
-    margin-top: 10px;
+  margin-top: 18px;
+  margin-left: 3em;
+  position: relative;
 }
 .fa.fa-home{
   margin-left: 1em;
@@ -56,42 +79,74 @@ a:hover{
 .fa.fa-user-circle{
   margin-left: 1em;
   position: relative;
-  top: 17.5em;
+  top: 15.5em;
+
 }
 /* Section del Home*/
 .sub-container{
-  background-color: #D8D8D8;
+  background-color: #FFC107;
   width: 6.2em;
   height: 45em;
+  position: fixed;
+  top: 0em;
 }
 /*Estilos a la Fila de Sedes */
 .list{
   width: 15.5em;
   display: inline-block;
-  box-sizing: border-box;
-  position: relative;
-  bottom: 45em;
+  position:fixed;
   left: 6.2em;
   border: 1px solid #EDEDED;
-}
-.title{
-  background-color: #EDEDED;
-  width: 12.5em;
-  line-height: 70px;/*agranda la linea*/
-  text-align: center;
-  font-size: 20px;
-  }
-.title:hover{
-  background: #D8D8D8;
-  color: #000;
+  top: 0em;
+
 }
 .box-list{
-  padding-top: 10px;
+  margin-left: 1em;
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 .sub-boxList{
-   margin-left: 10px;
-   padding-top: 4px;
+   margin-left: 2em;
+   padding-top: 10px;
+   padding-bottom: 5px;
 }
 hr{
   border: 1px solid orange;
+}
+/*Estilo de las estadisticas*/
+.container-2{
+  margin-left: 22em;
+
+}
+.sub-box{
+  margin-top: 12em;
+  background-color:#F2F3F4  ;
+  width: 320px;
+  height: 310px;
+  display: inline-block;
+  margin-left: 0.5em;
+  outline: 1px solid red;
+
+
+}
+h1{
+  width: 12em;
+  margin-top: 1em;
+  margin-left: 1em;
+  outline: 1px solid blue;
+}
+.sub-box2{
+  outline: 1px solid green;
+  background-color: #F7F7F7;
+  width: 140px;
+  height: 80px;
+  display: inline-block;
+  margin-left: 0.5em;
+  top: 10em;
+  position: relative;
+}
+.number{
+  outline: 1px solid red;
+  width: 5em;
+  height: 2em;
 }

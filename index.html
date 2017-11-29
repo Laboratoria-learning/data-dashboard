@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="assets/icons/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
@@ -62,51 +63,90 @@
       </section>
       <!--Fila de Sedes-->
     <section class="list">
-      <div class="title">Sedes</div>
-      <form>
-        <div class="box-list"><input type="radio" name="gender" value="Lima" checked> LIMA
+        <div>
+          <div class="title" >Sede</div>
+        </div>
+        <div class="box-list"><input class="sede"type="radio" name="gender" value="Lima" checked> LIMA
         <hr>
         </div>
-        <div class="sub-boxList"><input type="radio" name="gender" value="lima-2015-I">  2015-I</div>
-        <div class="sub-boxList"><input type="radio" name="gender" value="lima-2015-II"> 2015-II</div>
-        <div class="sub-boxList"><input type="radio" name="gender" value="lima-2016-I">  2016-I</div>
-        <div class="sub-boxList"><input type="radio" name="gender" value="lima-2016-II"> 2016-II</div>
-        <div class="sub-boxList"><input type="radio" name="gender" value="lima-2017-I">  2017-I</div>
-        <div class="sub-boxList"><input type="radio" name="gender" value="lima-2017-II"> 2017-II</div>
+        <form>
+        <div class="sub-boxList"><input class="promo" type="radio" name="gender" value="lima-2016-II"> 2016-II</div>
+        <div class="sub-boxList"><input  class="promo"type="radio" name="gender" value="lima-2017-I">  2017-I</div>
+        <div class="sub-boxList"><input  class="promo"type="radio" name="gender" value="lima-2017-II"> 2017-II</div>
       </form>
-      <form>
-        <div class="box-list"><input type="radio" name="gender" value="Arequipa" checked> AREQUIPA
+        <div class="box-list"><input class="sede" type="radio" name="gender" value="Arequipa" > AREQUIPA
+        <hr>
+      </div>
+        <form>
+        <div class="sub-boxList"><input  class="promo"type="radio" name="gender" value="Arequipa"> 2016-II</div>
+        <div class="sub-boxList"><input  class="promo"type="radio" name="gender" value="Arequipa"> 2017-I</div>
+        </div>
+      </form>
+        <div class="box-list"><input class="sede" type="radio" name="gender" value="Chile"> SANTIAGO DE CHILE
         <hr>
         </div>
-        <div class="sub-boxList"><input type="radio" name="gender" value="Arequipa"> 2015-I</div>
-        <div class="sub-boxList"><input type="radio" name="gender" value="Arequipa"> 2015-II</div>
-        <div class="sub-boxList"><input type="radio" name="gender" value="Arequipa"> 2016-I</div>
-        <div class="sub-boxList"><input type="radio" name="gender" value="Arequipa"> 2016-II</div>
-        <div class="sub-boxList"><input type="radio" name="gender" value="Arequipa"> 2017-I</div>
-        <div class="sub-boxList"><input type="radio" name="gender" value="Arequipa"> 2017-II</div>
+        <form>
+        <div class="sub-boxList"><input class="promo" type="radio" name="gender" value="Chile"> 2016-II</div>
+        <div class="sub-boxList"><input class="promo" type="radio" name="gender" value="Chile"> 2017-I</div>
+        <div class="sub-boxList"><input class="promo"type="radio" name="gender" value="Chile"> 2017-II</div>
       </form>
-      <form>
-        <div class="box-list"><input type="radio" name="gender" value="Chile" checked> SANTIAGO DE CHILE
+        <div class="box-list"><input  class="sede"class="sede" type="radio" name="gender" value="Mexico" > CUIDAD DE MEXICO
         <hr>
         </div>
-        <div class="sub-boxList"><input type="radio" name="gender" value="Chile"> 2015-I</div>
-        <div class="sub-boxList"><input type="radio" name="gender" value="Chile"> 2015-II</div>
-        <div class="sub-boxList"><input type="radio" name="gender" value="Chile"> 2016-I</div>
-        <div class="sub-boxList"><input type="radio" name="gender" value="Chile"> 2016-II</div>
-        <div class="sub-boxList"><input type="radio" name="gender" value="Chile"> 2017-I</div>
-        <div class="sub-boxList"><input type="radio" name="gender" value="Chile"> 2017-II</div>
+        <form>
+        <div class="sub-boxList"><input  class="promo"type="radio" name="gender" value="Mexico"> 2017-I</div>
+        <div class="sub-boxList"><input  class="promo"type="radio" name="gender" value="Mexico"> 2017-II</div>
       </form>
-      <form>
-        <div class="box-list"><input type="radio" name="gender" value="Mexico" checked> CUIDAD DE MEXICO
-        <hr>
-        </div>
-        <div class="sub-boxList"><input type="radio" name="gender" value="Mexico"> 2015-I</div>
-        <div class="sub-boxList"><input type="radio" name="gender" value="Mexico"> 2015-II</div>
-        <div class="sub-boxList"><input type="radio" name="gender" value="Mexico"> 2016-I</div>
-        <div class="sub-boxList"><input type="radio" name="gender" value="Mexico"> 2016-II</div>
-        <div class="sub-boxList"><input type="radio" name="gender" value="Mexico"> 2017-I</div>
-        <div class="sub-boxList"><input type="radio" name="gender" value="Mexico"> 2017-II</div>
-      </form>
+    </section>
+    <section>
+      <!--Estadisticas -->
+      <div class="container-2">
+       <div class="sub-box ">
+         <h1>ENROLLMENT</h1>
+          <div class="sub-box2 ">
+               <div class="number">
+
+               </div>
+               <!--<div>#STUDENTS CURRENTLY ENROLLED</div>-->
+          </div>
+          <div class="sub-box2">
+            <div class="number">
+
+            </div>
+            <!--<div> %DROPOUT</div>-->
+          </div>
+       </div>
+       <div class="sub-box ">
+         <h1>ACHIEVEMENT</h1>
+         <div class="sub-box2 ">
+           <div class="number">
+
+           </div>
+           <!--<div>#STUDENTS THAT MEET THE TARGET</div>-->
+         </div>
+         <div class="sub-box2">
+             <div class="number">
+
+             </div>
+             <!--<div>%OF TOTAL(135)</div>-->
+           </div>
+       </div>
+       <div class="sub-box ">
+         <h1>NET PROMOTER SCORE</h1>
+         <div class="sub-box2 ">
+           <div class="number">
+
+           </div>
+           <!--<div> %CUMULATIVE NPS</div>-->
+         </div>
+         <div class="sub-box2">
+           <div class="number">
+
+           </div>
+           <!--<div> Promoters</div>-->
+         </div>
+       </div>
+      </div>
     </section>
     <!--<div id="chart_div" style="width: 900px; height: 500px;"></div>-->
 
