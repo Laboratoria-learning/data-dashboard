@@ -14,36 +14,22 @@
         <img src="assets/images/logo-laboratoria.svg" alt="logo-laboratoria">
       </figure>
     </header>
-    <section>
-      <div class="container">
-         <nav>
-        <!--crear la lista desordenada-->
-        <ul>
-          <!--crear una lista para navegar con una nueva pestaña-->
-          <li><a href="#">Estadisticas</a></li>
-          <li><a href="#">Promedios</a></li>
-          <li><a href="#">Estudiantes</a></li>
-          <li><i class="fa fa-bars" aria-hidden="true"></i></li>
-          <!--icono de barra-->
-       </ul>
-     </nav>
-      </div>
-      <!--Sección del menu-->
-      <section >
-        <div class="sub-container">
-          <!--icono de home-->
-        <i class="fa fa-home" aria-hidden="true"></i>
-          <!--icono de user-->
-          <i class="fa fa-user-circle" aria-hidden="true"></i>
-        </div>
-      </section>
-      <!--Fila de Sedes-->
+
+    <!--Barra amarilla-->
+    <div class="sub-container">
+      <!--icono de home-->
+      <i class="fa fa-home" aria-hidden="true"></i>
+      <!--icono de user-->
+      <i class="fa fa-user-circle" aria-hidden="true"></i>
+    </div>
+
+    <!--Fila de Sedes y Promos-->
     <section class="list">
       <div>
         <div class="title" >Sede</div>
       </div>
       <div class="box-list">
-        <input class="sede" type="radio" name="gender" value="LIM"> LIMA
+        <input class="sede" type="radio" name="gender" value="LIM" > LIMA
         <hr>
       </div>
       <form id="form-lim">
@@ -77,58 +63,67 @@
         <div class="sub-boxList"><input class="promo prom-cdmx" type="radio" name="gender" value="2017-2"> 2017-II</div>
       </form>
     </section>
-    <section>
+    <nav>
+    <!--crear la lista desordenada-->
+      <ul>
+        <!--crear una lista para navegar con una nueva pestaña-->
+        <li><a href="#">Estadisticas</a></li>
+        <li><a href="#">Promedios</a></li>
+        <li><a href="#">Estudiantes</a></li>
+        <li><i class="fa fa-bars" aria-hidden="true"></i></li>
+        <!--icono de barra-->
+      </ul>
+    </nav>
+  
+      
+    <section class="stats">
       <!--Estadisticas -->
-      <div class="container-2">
-       <div class="sub-box ">
-          <h1>ENROLLMENT</h1>
-          <div class="sub-box2 ">
-               <div class="number">
-
-               </div>
-               <!--<div>#STUDENTS CURRENTLY ENROLLED</div>-->
-          </div>
-          <div class="sub-box2">
-            <div class="number">
-
-            </div>
-            <!--<div> %DROPOUT</div>-->
-          </div>
-          <div id="chart_div" style="width: 900px; height: 500px;"></div>
-       </div>
-       <div class="sub-box ">
-         <h1>ACHIEVEMENT</h1>
-         <div class="sub-box2 ">
-           <div class="number">
-
-           </div>
-           <!--<div>#STUDENTS THAT MEET THE TARGET</div>-->
-         </div>
-         <div class="sub-box2">
-             <div class="number">
-
-             </div>
-             <!--<div>%OF TOTAL(135)</div>-->
-           </div>
-       </div>
-       <div class="sub-box ">
-         <h1>NET PROMOTER SCORE</h1>
-         <div class="sub-box2 ">
-           <div class="number">
-
-           </div>
-           <!--<div> %CUMULATIVE NPS</div>-->
-         </div>
-         <div class="sub-box2">
-           <div class="number">
-
-           </div>
-           <!--<div> Promoters</div>-->
-         </div>
-       </div>
+      
+      <div class="sub-box">
+        <h2>Enrollment</h2>
+        <div class="sub-box-content">
+          <span id="total-act"></span>
+          <span class="box-text"># students currently enrolled</span>
+        </div>
+        <div class="sub-box-content">
+          <span id="dropout"></span>
+          <span class="box-text">% dropout</span>
+        </div>
+        <div id="chart_div" style="width: 700px; height: 400px;"></div>  
       </div>
+
+      <div class="sub-box">
+        <h2>Achievement</h2>
+        <div class="sub-box-content">
+          <span id="students-tar"></span>
+          <span class="box-text"># students that meet the target</span>
+        </div>
+        <div class="sub-box-content">
+          <span id="students-tar-per"></span>
+          <span class="box-text">% of total <span id="total-act">(135)</span> </span>
+        </div>
+        <!--Aca va el grafico-->
+      </div>
+
+      <div class="sub-box">
+        <h2>Net Promoter Score</h2>
+        <div class="sub-box-content">
+          <span id="net-score"></span>
+          <span class="box-text">% cumulative nps</span>
+        </div>
+        <div class="sub-box-content">
+          <span id="promoters"></span>
+          <span class="box-text">Promoters</span>
+          <span id="passive"></span>
+          <span class="box-text">Passive</span>
+          <span id="detractors"></span>
+          <span class="box-text">Detractors</span>
+        </div>
+        <!--Aca va el grafico-->
+      </div>
+       
+        
     </section>
-    <!--<div id="chart_div" style="width: 900px; height: 500px;"></div>-->
 
     <!-- Google charts -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>

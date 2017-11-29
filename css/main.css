@@ -6,28 +6,28 @@
 
  }
  body{
-   background:#fff;
+   background:#F7F7F7;
  }
  /*logo-laboratoria*/
  img{
-   outline: 1px solid red;
+
    width: 85.5em;
    height: 5em;
    position: fixed;
    padding-left: 12em;
-   
+
 
 
  }
  /*lista de navegación*/
  nav{
-   display: inline-block;
-   margin-left: 21.8em;
+   left:28%;
    position: fixed;
+   width: 72%;
    top:5em;
 
+  }
 
- }
  ul{
 
    list-style: none;/*los puntos los quita*/
@@ -37,8 +37,7 @@
    overflow: auto;/*devuelve el contexto del bloque*/
  }
  li{
-
-       width: 254.2px;/*ancho */
+    width: 25%;/*ancho */
  /*  display: inline-block;*//*lo pone en una sola linea una al costado de otra*/
    text-align: center;/*centrara cada li*/
    float: left;/*pone elementos flotados*/
@@ -60,6 +59,7 @@ font-size: 20px;
 }
 /*hara al pasar el mause en cada li cambiara de color*/
 a:hover{
+  border-bottom: 5px solid #FFC107;
   background: #2C3E50;
   color: #fff;
 }
@@ -75,35 +75,35 @@ a:hover{
 }
 .fa.fa-home{
   margin-left: 1em;
-  margin-top: 20px;}
+  margin-top: 20px;
+}
 .fa.fa-user-circle{
-  margin-left: 1em;
-  position: relative;
-  top: 15.5em;
-
+  left: 1em;
+  position: absolute;
+  bottom: 15px;
 }
 /* Section del Home*/
 .sub-container{
   background-color: #FFC107;
-  width: 6.2em;
-  height: 45em;
+  width: 8%;
+  height: 100%;
   position: fixed;
   top: 0em;
 }
 /*Estilos a la Fila de Sedes */
 .list{
-  width: 15.5em;
+  height: 100%;
+  width: 20%;
   display: inline-block;
   position:fixed;
-  left: 6.2em;
-  border: 1px solid #EDEDED;
+  left: 8%;
   top: 0em;
-
+  box-shadow:5px 0px 5px #EDEDED;
 }
 .box-list{
   margin-left: 1em;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 .sub-boxList{
    margin-left: 2em;
@@ -113,40 +113,11 @@ a:hover{
 hr{
   border: 1px solid orange;
 }
-/*Estilo de las estadisticas*/
-.container-2{
-  margin-left: 22em;
 
-}
-.sub-box{
-  margin-top: 12em;
-  background-color:#F2F3F4  ;
-  width: 320px;
-  height: 310px;
-  display: inline-block;
-  margin-left: 0.5em;
-  outline: 1px solid red;
-
-
-}
-h1{
-  width: 12em;
-  margin-top: 1em;
-  margin-left: 1em;
-  outline: 1px solid blue;
-}
-.sub-box2{
-  outline: 1px solid green;
-  background-color: #F7F7F7;
-  width: 140px;
-  height: 80px;
-  display: inline-block;
-  margin-left: 0.5em;
-  top: 10em;
-  position: relative;
-}
-.number{
-  outline: 1px solid red;
-  width: 5em;
-  height: 2em;
+.stats{
+    height: 60%;
+    width: 1300px;
+    position: absolute;
+    left: 28%;
+    top: 10em;
 }
