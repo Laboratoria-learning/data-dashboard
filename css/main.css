@@ -109,21 +109,31 @@ nav {
 }
 .data1 {
     outline: 1px solid red;
+    background: #f7f7f7;
     width: 145px;
     height: 60px;
+    margin: 4.5px;
+    margin-top: 62px;
 }
 .rectangle {
     background-color: #ffffff;
-    display: inline-block;
+    display: inline-flex;
     width: 1087px;
     height: 520px;
     margin-left: 87px;
+}
+.data2 {
+    outline: 1px solid black;
+    background: #f7f7f7;
+    width: 197px;
+    height: 60px;
+    margin: 4.5px;
+    margin-top: 65px;
 }
 .last-position {
     margin-bottom: 123px;
     margin-top: 27px;
 }
-.data2 {
-    width: 195px;
-    height: 57px;
+.initial {
+    margin-left: 20px;
 }

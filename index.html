@@ -56,9 +56,9 @@
       </div>
         <div id="wrap">
         <ul class="tabs">
-          <li><a href="#"><span>OVERVIEW</span></a></li>
-          <li><a href="#"><span>STUDENTS</span></a></li>
-          <li><a href="#">TEACHERS</a></li>
+          <li id="tab"><a href="#"><span>OVERVIEW</span></a></li>
+          <li id="tab"><a href="#"><span>STUDENTS</span></a></li>
+          <li id="tab"><a href="#">TEACHERS</a></li>
           <!-- 
           <li><button type="button" name="button" data-tabSelect="overview">OVERVIEW</button></li>
           <li><button type="button" name="button" data-tabSelect="students">STUDENTS</button></li>
@@ -68,31 +68,31 @@
       </section>
     </header>
     <main>
-        <section class="overview">
+        <section class="overview-tab">
           <div class="container1">
-          <div id="enrollment" class="square first-position"><span class="data1"></span><span class="data1"></span></div>
-          <div id="achivement" class="square"><span class="data1"></span><span class="data1"></span></div>
-          <div id="net-promoter-score" class="square"><span class="data1"></span><span class="data1"></span></div>
+          <div id="enrollment" class="square first-position"><span class="data1 initial"></span><span class="data1"></span></div>
+          <div id="achivement" class="square"><span class="data1 initial"></span><span class="data1"></span></div>
+          <div id="net-promoter-score" class="square"><span class="data1 initial"></span><span class="data1"></span></div>
           </div>
           <div class="container2">
-            <div id="tech-skills" class="rectangle"><span class="data2"></span><span class="data2"></span></div>
+            <div id="tech-skills" class="rectangle"><span class="data2 initial"></span><span class="data2"></span></div>
           </div>
           <div class="container2">
-            <div id="life-skills" class="rectangle third-position"><span class="data2"></span><span class="data2"></span></div>
+            <div id="life-skills" class="rectangle"><span class="data2 initial  "></span><span class="data2"></span></div>
           </div>
           <div class="container1">
-            <div id="student-satisfaction" class="square first-position last-position"><span class="data1"></span><span class="data1"></span></div>
-            <div id="teacher-rating" class="square last-position"><span class="data1"></span><span class="data1"></span></div>
-            <div id="jedi-master-rating" class="square last-position"><span class="data1"></span><span class="data1"></span></div>
+            <div id="student-satisfaction" class="square first-position last-position"><span class="data1 initial"></span><span class="data1"></span></div>
+            <div id="teacher-rating" class="square last-position"><span class="data1 initial"></span><span class="data1"></span></div>
+            <div id="jedi-master-rating" class="square last-position"><span class="data1 initial"></span><span class="data1"></span></div>
           </div>
         </section>
-         <section class="students-container"></section>
+         <section class="students-tab"></section>
     </main>
     
 		<!-- Base de datos -->
-		<script src="./js/data.js"></script>
+		<script src="js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
-    <script src="./js/app.js"></script>
+    <script src="js/app.js"></script>
     
   </body>
 </html>
