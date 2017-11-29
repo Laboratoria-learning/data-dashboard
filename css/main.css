@@ -96,7 +96,7 @@ section .principal{
     padding-left: 50px;
     padding-right: 50px; 
 }
-.container div{
+.container .title-overview{
     background-color: white;
     display: inline-block;
     padding-bottom: 10px;
