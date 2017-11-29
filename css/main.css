@@ -17,13 +17,8 @@ body {
 .containerHeader { 
     border: 1px solid red;
     height: 250px;
-<<<<<<< HEAD
-}
-#laboratoriaNav {
-=======
 } 
 .laboratoriaNav { /*first Nav: container*/
->>>>>>> Vanessa
     height: 40%;
     width: 100%;
     background-color: #ffffff;
