@@ -10,7 +10,7 @@
 // console.log(data['AQP']['2016-2']['ratings'][2]['teacher']);
 // console.log(data['AQP']['2016-2']['ratings'][0]['jedi']);
 // cambiar pestañas
-// console.log(data['AQP']['2016-2']['rating'][0]['student']['cumple']);
+console.log(data['AQP']['2016-2']['ratings'][0]);
 // console.log(data['AQP']['2016-2']['students'][1]['name']);
 // var nombre
 // var returnCurrently
@@ -193,7 +193,7 @@ function calculateJediMasterRating(sede, numSprint, year) {
   jediMasterRating.innerHTML = '<b>' + (sumJedi / numSprint).toFixed(2) + '</b>' + '<br> overall teacher rating <br> (cumulative)';
 }
 
-function calculateStudentSatisfaccion(sede, numEndSprint,year) {
+function calculateStudentSatisfaccion(sede, numEndSprint, year) {
 
 }
 
@@ -210,8 +210,6 @@ function drawCurrently(attend, noAttend) {
   var chart = new google.visualization.PieChart(document.getElementById('grafy-enrollment'));
   chart.draw(data, options);
 }
-
-
 
 function drawPromoter() {
   var data = google.visualization.arrayToDataTable([
@@ -236,4 +234,3 @@ window.onload = function() {
   comboBox.addEventListener('change',changeTitle)
 }
 
-alert("hola");
