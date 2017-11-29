@@ -2,10 +2,159 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
     <title>Data Dashboard</title>
   </head>
   <body>
+    <header class="header-laboratoria">
+      <img class="logo-laboratoria"src="assets/images/logo-laboratoria.svg" alt="laboratoria's logo">
+      <i class="fa fa-bars fa-2x icon-hamburger" aria-hidden="true"></i>
+    </header>
+    <nav class="nav-bar">
+        <h2>santiago de chile 2017 - II</h2>
+        <i class="fa fa-caret-down fa-2x" aria-hidden="true"></i>
+        <ul>
+          <li>overview</li>
+          <li id="students-btn">students</li>
+          <li>teachers</li>
+        </ul>
+    </nav>
+    <section>
+      <div id="students"></div>
+      <section class="first-section">
+        <div class="div-enrollment">
+          <h3>enrollment</h3>
+          <summary>
+            <b>120</b>
+            <p># students currently enrolled</p>
+          </summary>
+          <summary>
+            <b>20%</b>
+            <p>% dropout</p>
+          </summary>
+          <figure>
+            <img src="assets/images/bar-graph.png" alt="bar graph">
+          </figure>
+        </div>
+        <div class="div-achievement">
+          <h3>achievement</h3>
+          <summary>
+            <b>105</b>
+            <p># students that meet the target</p>
+          </summary>
+          <summary>
+            <b>78% <span class="fa fa-caret-up" aria-hidden="true"></span></b>
+            <p>% of total (135)</p>
+          </summary>
+          <figure>
+            <img src="assets/images/graph.png" alt="graph">
+          </figure>
+        </div>
+        <div class="div-nps">
+          <h3>net promoter score</h3>
+          <summary>
+            <b>78% <span class="fa fa-caret-up" aria-hidden="true"></span></b>
+            <p>% cumulative nps</p>
+          </summary>
+          <summary>
+            <ul>
+              <li>60% Promoters</li>
+              <li>30% Passive</li>
+              <li>10% Detractors</li>
+            </ul>
+          </summary>
+          <figure>
+            <img src="assets/images/graph.png" alt="graph">
+          </figure>
+        </div>
+      </section>
+    </section>
+    <section>
+      <section class="second-section">
+        <h3>tech skills</h3>
+        <input type="text" placeholder="overall (cumulative)">
+        <i class="fa fa-caret-down" aria-hidden="true"></i>
+        <summary>
+          <b>90</b>
+          <p># students that meet the target</p>
+        </summary>
+        <summary>
+            <b>62</b>
+            <p>% of total (135)</p>
+          </summary>
+          <figure>
+            <img src="assets/images/rectangular-graphic.png" alt="rectangular graphic">
+          </figure>
+          <div>
+            <figure>
+              <img src="assets/images/circle-graphic.png" alt="circle graphic">
+            </figure>
+            <p># students that meet the target</p>
+            <p># students that don't meet the target</p>
+          </div>
+      </section>
+    </section>
+    <section>
+        <section class="thirst-section">
+          <h3>life skills</h3>
+          <input type="text" placeholder="latest Sprint (S4)">
+          <i class="fa fa-caret-down" aria-hidden="true"></i>
+          <summary>
+            <b>80</b>
+            <p># overall class average</p>
+          </summary>
+          <summary>
+              <b>62</b>
+              <p># of students that meet the target</p>
+            </summary>
+            <figure>
+              <img src="assets/images/rectangular-graphic.png" alt="rectangular graphic">
+            </figure>
+            <div>
+              <figure>
+                <img src="assets/images/circle-graphic.png" alt="circle graphic">
+              </figure>
+              <p># students that meet the target</p>
+              <p># students that don't meet the target</p>
+            </div>
+        </section>
+      </section>
+      <section class="forth-section">
+        <div>
+          <h3>student satisfaction</h3>
+          <summary>
+            <b>140</b>
+            <p>% meeting or exceeding expectations (cumulative)</p>
+          </summary>
+          <figure>
+            <img src="assets/images/graph.png" alt="graph">
+          </figure>
+        </div>
+        <div>
+            <h3>teacher rating</h3>
+            <summary>
+              <b>4.2</b>
+              <p>overall teacher rating (cumulative)</p>
+            </summary>
+            <figure>
+              <img src="assets/images/graph.png" alt="graph">
+            </figure>
+          </div>
+          <div>
+              <h3>jedi master rating</h3>
+              <summary>
+                <b>50 <span class="fa fa-caret-up" aria-hidden="true"></span></b>
+                <p>overall jedi rating (cumulative)</p>
+              </summary>
+              <figure>
+                <img src="assets/images/graph.png" alt="graph">
+              </figure>
+            </div>
+      </section>
+      <footer>
 
+      </footer>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
