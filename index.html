@@ -29,22 +29,22 @@
           <select name="promo" id="promo-filter">
               <option value="" hidden>Selecciona una opción</option>
               <optgroup label="Arequipa">
-                <option value="aqp-16-2">AQP 2016 - II</option>
-                <option value="aqp-17-1">AQP 2017 - I</option>
+                <option value="AQP" data-year="2016-2">AQP 2016 - II</option>
+                <option value="AQP" data-year="2017-1">AQP 2017 - I</option>
               </optgroup>
               <optgroup label="Lima">
-                <option value="lim-16-2">LIM 2016 - II</option>
-                <option value="lim-17-1">LIM 2017 - I</option>
-                <option value="lim-17-2">LIM 2017 - II</option>
+                <option value="LIM" data-year="2016-2">LIM 2016 - II</option>
+                <option value="LIM" data-year="2017-1">LIM 2017 - I</option>
+                <option value="LIM" data-year="2017-2">LIM 2017 - II</option>
               </optgroup>
               <optgroup label="México">
-                <option value="cdmx-17-1">CDMX 2017 - I</option>
-                <option value="cdmx-17-2">CDMX 2017 - II</option>
+                <option value="CDMX" data-year="2017-1">CDMX 2017 - I</option>
+                <option value="CDMX" data-year="2017-2">CDMX 2017 - II</option>
               </optgroup>
               <optgroup label="Chile">
-                <option value="scl-16-2">SCL 2016 - II</option>
-                <option value="scl-17-1">SCL 2017 - I</option>
-                <option value="scl-17-2">SCL 2017 - II</option>
+                <option value="SCL" data-year="2016-2">SCL 2016 - II</option>
+                <option value="SCL" data-year="2017-1">SCL 2017 - I</option>
+                <option value="SCL" data-year="2017-2">SCL 2017 - II</option>
               </optgroup>
             </select>
         </div>
@@ -55,9 +55,10 @@
         </ul>
       </section>
       <section class="container-graphics">
+        <!-- TECH SKILLS -->
         <div class="big-graphic">
           <div>
-            <p>TECH SKILLS</p>
+            <span>TECH SKILLS</span>
             <select name="overall" id="overall-tech" class="select-skills">
               <optgroup label="COMMON CORE">
                 <option value="" hidden>overall (cumulative)</option>
@@ -69,14 +70,21 @@
             </select>
           </div>
           <div>
-            <div class="box1"></div>
-            <div class="box2"></div>
+            <div class="box1">
+              <p id="students-tech"></p>
+              <p># STUDENTS THAT MEET THE TARGET</p>
+            </div>
+            <div class="box2">
+              <p id="percent-tech"></p>
+              <p>% OF TOTAL</p>
+            </div>
           </div>
           <div class="graphic"></div>
         </div>
+        <!-- LIFE SKILLS -->
         <div class="big-graphic">
           <div>
-            <p>LIFE SKILLS</p>
+            <span>LIFE SKILLS</span>
             <select name="overall" id="overall-life" class="select-skills">
               <optgroup label="HSE">
                 <option value="" hidden>overall (cumulative)</option>
@@ -88,32 +96,87 @@
             </select>
           </div>
           <div>
-            <div class="box1"></div>
-            <div class="box2"></div>
+            <div class="box1">
+              <p id="overall-life"></p>
+              <p># OVERALL CLASS AVERAGE</p>
+            </div>
+            <div class="box2">
+              <p></p>
+              <p># OF STUDENTS THAT MEET THE TARGET</p>
+            </div>
           </div>
           <div class="graphic"></div>
         </div>
+        <!-- ENROLLMENT -->
         <div class="small-graphic">
-          <p>ENROLLMENT</p>
+          <span>ENROLLMENT</span>
           <div>
-            <div id="total-student" class="box1"></div>
-            <div id="desertaron-porcentaje"class="box2"></div>
+            <div class="box1">
+              <P id="box-enrollment"></P>
+              <P># STUDENTS CURRENTLY ENROLLED</P>
+            </div>
+            <div class="box2">
+              <P id="dropout-percent"></P>
+              <P>% DROPOUT</P>
+            </div>
           </div>
           <div class="graphic"></div>
         </div>
+        <!-- ACHIEVEMENT -->
         <div class="small-graphic">
-          <p>ACHIEVEMENT</p>
+          <span>ACHIEVEMENT</span>
           <div>
-            <div class="box1"></div>
-            <div class="box2"></div>
+            <div class="box1">
+              <p id="box-achievement"></p>
+              <p># STUDENTS THAT MEET THE TARGET</p>
+            </div>
+            <div class="box2">
+              <P id="percent-achievement"></P>
+              <P>% OF TOTAL ()</P>
+            </div>
           </div>
           <div class="graphic"></div>
         </div>
+        <!-- NET PROMOTER SCORE -->
         <div class="small-graphic">
-          <p>NET PROMOTER SCORE (NPS)</p>
+          <span>NET PROMOTER SCORE (NPS)</span>
           <div>
-            <div class="box1"></div>
-            <div class="box2" id="aqp-nps-sprint1"></div>
+            <div class="box1">
+              <p id="cumulative-nps"></p>
+              <p>% CUMULATIVE NPS</p>
+            </div>
+            <div class="box2">
+              <p id="promoters"></p>
+              <p id="passive"></p>
+              <p id="detractor"></p>
+            </div>
+          </div>
+          <div class="graphic"></div>
+        </div>
+        <!-- STUDENT SATISFACTION -->
+        <div class="small-graphic">
+          <span>STUDENT SATISFACTION</span>
+          <div class="box1">
+            <p dir="student-satisf"></p>
+            <p>% MEETING OR EXCEEDING EXPETATIONS (CUMULATIVE)</p>
+          </div>
+          <div class="graphic"></div>
+        </div>
+        <!-- TEACHER RATING -->
+        <div class="small-graphic">
+          <span>TEACHER RATING</span>
+          <div class="box1">
+            <P id="teacher-rating"></P>
+            <P>OVERALL TEACHER RATING (CUMULATIVE)</P>
+          </div>
+          <div class="graphic"></div>
+        </div>
+        <!-- JEDI MASTER RATING -->
+        <div class="small-graphic">
+          <span>JEDI MASTER RATING</span>
+          <div class="box1">
+            <P id="jedi-rating"></P>
+            <P>OVERALL JEDI RATING (CUMULATIVE)</P>
           </div>
           <div class="graphic"></div>
         </div>
