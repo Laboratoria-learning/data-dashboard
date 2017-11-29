@@ -101,16 +101,16 @@ window.addEventListener('load', function() {
   var textNps = document.createElement('span');
   textNps.innerText = '% CUMULATIVE NPS';
   var promoter = document.createElement('p');
-  promoter.innerText = 'promoterpercent';
+  promoter.innerText = promotersPercent('LIM', '2016-2');
   var passive = document.createElement('p');
   passive.innerText = 'passivepercent';
   var detractors = document.createElement('p');
   detractors.innerText = 'detractorpercent';
   // agregando promoter
   general.appendChild(promoterScore);
+  promoterScore.appendChild(titleProSco);
   promoterScore.appendChild(promoterOne);
   promoterScore.appendChild(promoterTwo);
-  promoterScore.appendChild(titleProSco);
   promoterOne.appendChild(nps);
   promoterOne.appendChild(textNps);
   promoterTwo.appendChild(promoter);
@@ -133,7 +133,7 @@ window.addEventListener('load', function() {
         count++;
       }
     } return count;
-  };
+  }
   /* function allStudents(sede, gene) {
     var count = 0;
     var sede = data[sede];
@@ -154,7 +154,7 @@ window.addEventListener('load', function() {
         count++;
       } var percent = Math.round((count / student.length) * 100);
     } return percent + ' %';
-  };
+  }
   // promedio de sprint 
   function promSprint(sede, gene) {
     var sede = data[sede];
@@ -215,6 +215,26 @@ window.addEventListener('load', function() {
       complete += arrayRatigns[p];
     } var npsPercent = complete / numRatigns;
     return npsPercent;
+  }
+  // porcentaje del promotor
+  function promotersPercent(sede, gene) {
+    var count = 0;
+    var sede = data[sede];
+    var generation = sede[gene];
+    var ratigns = generation.ratings;
+    var array = [];
+    for (var i = 0; i < ratigns[i].length; i++) {
+      var total = ratigns[i].nps.promoters + ratigns[i].nps.passive + ratigns[i].nps.detractors;
+      var promoters = (ratigns[i].nps.promoters / total) * 100;
+      array.push(promoters);
+
+      var allPromoter = 0;
+
+      for (var p = 0; p < array.length; p++) {
+        allPromoter += array[p].promoter;
+      } var totalPromoters = 0;
+      totalPromoters = allPromoter / ratigns.length;
+    } return totalPromoters;
   }
 });
 // Puedes hacer uso de la base de datos a través de la variable `data`
