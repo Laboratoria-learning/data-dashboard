@@ -92,6 +92,10 @@ header div {
   margin-left: 28px;
 }
 
+.teacher h4 {
+  margin-left: 20px;
+}
+/*
 .twoicons li a {
   list-style: none;
   color: white;
@@ -101,7 +105,7 @@ header div {
 }
 
 .twoicons li a:hover {
-  background-color: #434343;
+  background-attachment: ;ckground-color: #434343;
 }
 
 .twoicons > li {
@@ -126,7 +130,7 @@ header div {
   right: -165px;
   top:0px;
 }
-
+*/
 
 .onebox {
   width: 120px;
@@ -134,24 +138,55 @@ header div {
   font-size: 20px;
   border-radius: 5px;
   background-color:#e6e6e6;
-  color: #666666;
+  color: white;
   text-align: center;
   position: absolute;
-  top: 150px;
-  left:40%;
+  top: 100px;
+  left:43%;
 }
 
+.graphicone img {
+  height: 300px;
+  width: 400px;
+  position: absolute;
+  top: 70px;
+  left: 140px;
+}
+
+.graphictwo img {
+  height: 280px;
+  width: 400px;
+  position: absolute;
+  top: 73px;
+  left: 700px;
+}
+
+.graphicthree img {
+  height: 280px;
+  width: 400px;
+  position: absolute;
+  top: 400px;
+  left: 140px;
+}
+
+.graphicfour img {
+  height: 250px;
+  width: 400px;
+  position: absolute;
+  top: 400px;
+  left: 700px;
+}
 .oneboxx {
   width: 120px;
   height: 70px;
   font-size: 20px;
   border-radius: 5px;
   background-color:#e6e6e6;
-  color: #666666;
+  color: white;
   text-align: center;
   position: absolute;
-  top: 250px;
-  left:40%;
+  top: 200px;
+  left:43%;
 }
 
 .twobox {
@@ -160,11 +195,11 @@ header div {
   font-size: 20px;
   border-radius: 5px;
   background-color:#e6e6e6;
-  color: #666666;
+  color: white;
   text-align: center;
   position: absolute;
-  top: 150px;
-  left:80%;
+  top: 100px;
+  left:87%;
 }
 
 .twoboxx {
@@ -173,11 +208,11 @@ header div {
   font-size: 20px;
   border-radius: 5px;
   background-color:#e6e6e6;
-  color: #666666;
+  color: white;
   text-align: center;
   position: absolute;
-  top: 250px;
-  left:80%;
+  top: 200px;
+  left:87%;
 }
 
 .threebox {
@@ -186,24 +221,24 @@ header div {
   font-size: 20px;
   border-radius: 5px;
   background-color:#e6e6e6;
-  color: #666666;
+  color: white;
   text-align: center;
   position: absolute;
-  top: 380px;
-  left:40%;
+  top: 390px;
+  left:43%;
 }
 
 .threeboxx {
-  width: 120px;
-  height: 70px;
+  width: 140px;
+  height: 80px;
   font-size: 20px;
   border-radius: 5px;
   background-color:#e6e6e6;
-  color: #666666;
+  color: white;
   text-align: center;
   position: absolute;
   top: 480px;
-  left:40%;
+  left:43%;
 }
 
 .fourbox {
@@ -212,15 +247,15 @@ header div {
   font-size: 20px;
   border-radius: 5px;
   background-color:#e6e6e6;
-  color: #666666;
+  color: white;
   text-align: center;
   position: absolute;
-  top: 380px;
-  left:80%;
+  top: 390px;
+  left:88%;
 }
 
 .number {
-  color: #ffc107;
+  color: #666666;
 }
 
 .numberred {
