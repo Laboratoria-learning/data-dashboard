@@ -3,8 +3,108 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <div class="tab">
+        <select id="location" class="select">
+          <option>SELECIONE</option>
+          <option value="LIMA">Lima
+            <option value="LIMA1">2016-2</option>
+            <option value="LIMA2">2017-1</option>
+            <option value="LIMA3">2017-2</option>
+          </option>
+              
+          <option value="AQP" class="sub">Arequipa
+            <option value="AQP1">2016-2</option>
+            <option value="AQP2">2017-1</option>
+          </option>
+              
+          <option value="CHILE" class="sub">Chile
+            <option value="CHILE1">2016-2</option>
+            <option value="CHILE2">2017-1</option>
+            <option value="CHILE3">2017-2</option>
+          </option>
+              
+          <option value="DFM" class="sub">Mexico
+            <option value="DFM1">2017-1</option>
+            <option value="DFM2">2017-2</option>
+          </option>
+        </select>
+    </div>
+    <!--div#tab$*3-->
+    <div class="tab"  data-text='text1'>OVERVIEW</div>
+    <div class="tab"  data-text='text2'>STUDENT</div>
+    <div class="tab"  data-text='text3'>TEACHER</div>
+
+    <!--div#container$*3>p-->
+    <section class="inform"  id="container1" data-text='text1'>
+      <div class="estadist">
+        <div class="block">
+          <h2>ENROLLMENT</h2>
+          <div class="num">
+            <div class="box">#students</div>
+            <div class="box">%</div>
+          </div>
+          <img src="assets/images/bar-graph.png" alt="">
+        </div>
+      </div>
+      <div class="estadist">
+        <div class="block">
+          <h2>ACHIEVEMENT</h2>
+          <div class="num">
+            <div class="box">#students</div>
+            <div class="box">%</div>
+          </div>
+          <img src="assets/images/bar-graph.png" alt="">
+        </div>
+      </div>
+      <div class="estadist">
+        <div class="block">
+          <h2>NET PROMOTER SCORE</h2>
+          <div class="num">
+            <div class="box">#students</div>
+            <div class="box">%</div>
+          </div>
+          <img src="assets/images/bar-graph.png" alt="">
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+    <section  class="inform hiden" id="container2" data-text='text2'>
+      <div>
+      <div>
+        <form>
+          <input type="radio" name="gender" value="java" checked>Javascript<br>
+          <input type="radio" name="gender" value="ux" >Ux Designer<br>
+          <input type="radio" name="gender" value="front" >Front end Designer<br>
+        </form>
+      </div>
+      <div class="coders">
+      </div>
+      </div>
+    </section>
+    <section  class="inform hiden" id="container3" data-text='text3'>
+        
+    </section>
+
+
+
+
+
+
+
+
+
+
+
 
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
