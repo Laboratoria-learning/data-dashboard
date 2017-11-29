@@ -89,3 +89,59 @@ function drawChart() {
   var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
   chart.draw(data, options);
 }
+// funcionalidad para NPS
+function nps(sede, generacion) {
+  var arrayRating = data[sede][generacion]['ratings'];
+  var nps = [];
+  for (var i = 0 ; i < arrayRating.length;i++) {
+    nps[i] = arrayRating[i].nps.promoters - arrayRating[i].nps.detractors;
+  }
+  return nps;
+}
+console.log(nps('AQP', '2016-2')[0]);
+console.log(nps('AQP', '2016-2')[1]);
+console.log(nps('AQP', '2016-2')[2]);
+console.log(nps('AQP', '2016-2')[3]);
+
+// Porcentaje de estudiantes satisfechas con exp Lab
+function stdGreatLab(sede, generacion) {
+  var arrayRatings = data[sede][generacion]['ratings'];
+  var stdStf = [];
+  for (var i = 0 ; i < arrayRatings.length;i++) {
+    stdStf[i] = arrayRatings[i].student.cumple + arrayRatings[i].student.supera;
+  }
+  return stdStf;
+}
+console.log(stdGreatLab('AQP', '2016-2')[0]);
+console.log(stdGreatLab('AQP', '2016-2')[1]);
+console.log(stdGreatLab('AQP', '2016-2')[2]);
+console.log(stdGreatLab('AQP', '2016-2')[3]);
+
+// Score teachers
+function scoreTeachers(sede, generacion) {
+  var arrayRatings = data[sede][generacion]['ratings'];
+  var arrayScore = [];
+  for (var i = 0 ; i < arrayRatings.length;i++) {
+    arrayScore[i] = arrayRatings[i].teacher;
+  }
+  return arrayScore;
+}
+console.log(scoreTeachers('AQP', '2016-2')[0]);
+console.log(scoreTeachers('AQP', '2016-2')[1]);
+console.log(scoreTeachers('AQP', '2016-2')[2]);
+console.log(scoreTeachers('AQP', '2016-2')[3]);
+
+// La puntuación promedio de l@s jedis.
+function scoreJedis(sede, generacion) {
+  var arrayRatings = data[sede][generacion]['ratings'];
+  var arrayScore = [];
+  for (var i = 0 ; i < arrayRatings.length;i++) {
+    arrayScore[i] = arrayRatings[i].jedi;
+  }
+  return arrayScore;
+}
+console.log(scoreJedis('AQP', '2016-2')[0]);
+console.log(scoreJedis('AQP', '2016-2')[1]);
+console.log(scoreJedis('AQP', '2016-2')[2]);
+console.log(scoreJedis('AQP', '2016-2')[3]);
+
