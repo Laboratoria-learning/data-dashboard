@@ -39,6 +39,11 @@ figure .brand {
   width: 180px;
 }
 
+.menu-principal {
+  display: inline-block;
+  cursor: pointer;
+}
+
 .nav {
   text-align: center;
   overflow: auto;
@@ -52,7 +57,7 @@ figure .brand {
 h1 {
   display: inline-block;
   font-size: 25px;
-  margin: 20px 15px 20px 0;
+  margin: 20px 0px 20px 0;
 }
 
 .container {
@@ -144,6 +149,7 @@ i.icon {
   display: inline-block;
   border-bottom: 1px solid black;
   padding: 5px;
+  cursor: pointer;
 }
 
 .gray {
