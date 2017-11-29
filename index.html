@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Dashboard</title>
+    <title>Data Dashboard Gabo</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="assets/icons/font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
@@ -15,37 +15,19 @@
       </div>
     <nav>
       <div class="div-nav">
-        <select class="choose-sede-generation">
-          <optgroup label="LIMA" class="generation">
-            <option value="2017-II">LIMA 2017-II</option>
-            <option value="2017-I">LIMA 2017-I</option>
-            <option value="2016-II">LIMA 2016-I</option>
-            <option value="2016-I">LIMA 2016-II</option>
-            <option value="2015-II">LIMA 2015-I</option>
-            <option value="2015-I">LIMA 2015-II</option>
-          </optgroup>
-          <optgroup label="AREQUIPA" class="generation">
-            <option value="2017-II">AREQUIPA 2017-II</option>
-            <option value="2017-I">AREQUIPA 2017-I</option>
-            <option value="2016-II">AREQUIPA 2016-I</option>
-            <option value="2016-I">AREQUIPA 2016-II</option>
-            <option value="2015-I">AREQUIPA 2015-I</option>
-          </optgroup>
-          <optgroup label="SANTIAGO DE CHILE" class="generation">
-            <option value="2017-II">SANTIAGO DE CHILE 2017-I</option>
-            <option value="2017-I">SANTIAGO DE CHILE 2017-II</option>
-            <option value="2016-II">SANTIAGO DE CHILE 2016-I</option>
-            <option value="2016-I">SANTIAGO DE CHILE 2016-II</option>
-            <option value="2015-I">SANTIAGO DE CHILE 2015-I</option>
-          </optgroup>
-          <optgroup label="CIUDAD DE MEXICO" class="generation">
-            <option value="2017-II">CIUDAD DE MEXICO 2017-II</option>
-            <option value="2017-I">CIUDAD DE MEXICO 2017-I</option>
-            <option value="2016-II">CIUDAD DE MEXICO 2016-I</option>
-            <option value="2016-I">CIUDAD DE MEXICO 2016-II</option>
-            <option value="2015-I">CIUDAD DE MEXICO 2015-I</option>
-          </optgroup>
-        </select>
+       <div class="choose-sede-generation">
+            <select id="optgroupt" class="optgroupt">
+              <option value="">Seleccione una sede</option>
+              <option id="sedeLim" value="LIM">LIMA</option>
+              <option id="sedeAqp" value="AQP">AREQUIPA</option>
+              <option id="sedeCdmx" value="CDMX">CIUDAD DE MÉXICO</option>
+              <option id="sedeSlc" value="SLC">SATIAGO DE CHILE</option>
+            </select>
+            <h3 id="title" class="title">LIMA 2017 - II</h3>
+            <!--<div id="generation" class="generation display-none">-->
+            <div id="divgeneration" class="divgeneration"></div>
+            </div>
+       </div>
       </div>
         <ul class="menu-nav">
           <a href="#" class="item-list">OVERVIEW</a>
@@ -62,7 +44,7 @@
     <div class="boxes-top">
       <h3>ENROLLMENT</h3>
       <div class="boxes-top-content">
-        <h4>120</h4>
+        <h4 id="enrollment">120</h4>
         <p class="enrollment-number-info"># STUDENTS CURRENTLY ENROLLED</p>
       </div>
 
@@ -178,3 +160,4 @@
     <script src="./js/app.js"></script>
   </body>
 </html>
+
