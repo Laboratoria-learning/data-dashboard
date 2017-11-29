@@ -45,6 +45,7 @@ function logroMetas(sede, generacion, sprint) {
   console.log('pasaron la meta: ' + '\t' + studentsOverTarget.length);
   console.log('no llegaron a la meta: ' + '\t' + studentsDownTarget.length);
   console.log('porcentaje que logro la meta:' + '\t' + porcentajeLogroMetas + '%');
+  console.log('% del total' + (studentsOverTarget.length + studentsDownTarget.length));
 }
 
 console.log(logroMetas('LIM', '2017-1', 1));
@@ -66,7 +67,6 @@ function puntajePromotor(sede, generacion) {
   var totalPassive = 0;
   var totalDetractors = 0;
 
-  debugger;
   for (var i = 0; i < rating.length; i++) {
     var nps = rating[i].nps.promoters - rating[i].nps.detractors;
     totalNps.push(nps);
@@ -95,7 +95,59 @@ function puntajePromotor(sede, generacion) {
     acumulativeNps = acumulativeNps + totalNps[i];
   }
   porcentajeAcumulativeNps = acumulativeNps / totalNps.length;
-  console.log('porcentaje acumulado NPS' + porcentajeAcumulativeNps + '%');
+  console.log('porcentaje acumulado NPS' + '\t' + porcentajeAcumulativeNps + '%');
 }
 
 console.log(puntajePromotor('LIM', '2016-2'));
+
+/* TECH SKILLS */ 
+
+function logroMetasTech(sede, generacion, sprint) {
+  var students = data[sede][generacion]['students'];
+  var studentsOverTarget = [];
+  var studentsDownTarget = [];
+
+  for (var i = 0; i < students.length; i++) {
+    for (var j = 0; j < students[i].sprints.length; j++) {
+      if (students[i].sprints[j].score['tech'] >= 1260) {
+        studentsOverTarget.push(students[i].sprints[j]);
+      } else {
+        studentsDownTarget.push(students[i].sprints[j]);
+      }
+    }
+  }
+  
+  var porcentajeLogroMetasTech = (studentsOverTarget.length * 100) / (studentsOverTarget.length + studentsDownTarget.length);
+  console.log('pasaron la meta Tech: ' + '\t' + studentsOverTarget.length);
+  console.log('no llegaron a la meta Tech: ' + '\t' + studentsDownTarget.length);
+  console.log('porcentaje que logro la meta Tech:' + '\t' + porcentajeLogroMetasTech + '%');
+  console.log('% del total' + '\t' + (studentsOverTarget.length + studentsDownTarget.length));
+}
+
+console.log(logroMetasTech('LIM', '2017-1', 1));
+
+/* LIFE  SKILLS */ 
+
+function logroMetasLife(sede, generacion, sprint) {
+  var students = data[sede][generacion]['students'];
+  var studentsOverTarget = [];
+  var studentsDownTarget = [];
+
+  for (var i = 0; i < students.length; i++) {
+    for (var j = 0; j < students[i].sprints.length; j++) {
+      if (students[i].sprints[j].score['hse'] >= 840) {
+        studentsOverTarget.push(students[i].sprints[j]);
+      } else {
+        studentsDownTarget.push(students[i].sprints[j]);
+      }
+    }
+  }
+  
+  var porcentajeLogroMetasLife = (studentsOverTarget.length * 100) / (studentsOverTarget.length + studentsDownTarget.length);
+  console.log('pasaron la meta hse: ' + '\t' + studentsOverTarget.length);
+  console.log('no llegaron a la meta hse: ' + '\t' + studentsDownTarget.length);
+  console.log('porcentaje que logro la meta hse:' + '\t' + porcentajeLogroMetasLife + '%');
+  console.log('% del total' + '\t' + (studentsOverTarget.length + studentsDownTarget.length));
+}
+
+console.log(logroMetasLife('LIM', '2017-1', 1));
