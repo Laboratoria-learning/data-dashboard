@@ -1,26 +1,50 @@
+window.addEventListener('load', function(event) {
+  var country = document.querySelectorAll('.country');
+  var countryChile = document.querySelector('#chile');
+  var countryPeru = document.querySelector('#peru');
+  var countryMexico = document.querySelector('#mexico');
+
+  function showCountry(event){
+    //console.log(event.target.nextElementSibling);
+    event.target.nextElementSibling.classList.toggle('display-none');
+
+
+
+  }
+
+
+  countryChile.addEventListener('click',showCountry);
+  countryPeru.addEventListener('click',showCountry);
+  countryMexico.addEventListener('click',showCountry);
+
+
+});
+
+
 // window.addEventListener('load', function(event) {
 //
 // });
 /* Dropdwon de menu */
-  var menu = document.querySelector('.menu');
-  var country = document.querySelectorAll('.country');
-  var city = document.querySelectorAll('.city');
-  function showCountry() {
-    for (var i = 0; i < country.length; i++) {
-      switch (true) {
-        case 'Chile':
-            country.classList.toggle('display-none');
-          break;
+  // var menu = document.querySelector('.menu');
+  // var country = document.querySelectorAll('.country');
+  // var city = document.querySelectorAll('.city');
+  // function showCountry() {
+  //   for (var i = 0; i < country.length; i++) {
+  //     switch (true) {
+  //       case 'Chile':
+  //           country.classList.toggle('display-none');
+  //         break;
+  //
+  //       default:
+  //
+  //     }
+  //   }
+  // }
+  // function showCity() {
+  //
+  //
+  // }
 
-        default:
-
-      }
-    }
-  }
-  function showCity() {
-
-
-  }
 
 /* Tabs */
 // var tab = document.querySelectorAll('.tab');
@@ -66,11 +90,11 @@
 // loadPage();
 
 // Agregar fotos de coders y nombres
-function addCoder() {
-  var coderPhoto;
-  var coderName;
-  var coderTechSkills;
-  var coderLifeSkills;
-  console.log(data[]);
-}
-addCoder();
+// function addCoder() {
+//   var coderPhoto;
+//   var coderName;
+//   var coderTechSkills;
+//   var coderLifeSkills;
+//   console.log(data[]);
+// }
+// addCoder();
