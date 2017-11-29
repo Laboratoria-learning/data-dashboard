@@ -44,16 +44,21 @@ window.addEventListener('load', function() {
     switch (true) {
     case event.target.value === '2016-2':
       var generation2016II = data[sede[chooseSede]]['2016-2']; // esta seleccionando el objeto que esta dentro de 2016II el cual incluye students y ratings como keys
+      container.textContent = '';
       showGeneration(generation2016II);
       showMetas(generation2016II);
       break;
     case event.target.value === '2017-1':
       var generation2017I = data[sede[chooseSede]]['2017-1'];
+      container.textContent = '';
       showGeneration(generation2017I);
+      showMetas(generation2017I);
       break;
     case event.target.value === '2017-2':
       var generation2017II = data[sede[chooseSede]]['2017-2'];
+      container.textContent = '';
       showGeneration(generation2017II);
+      showMetas(generation2017II);
       break;
     }
   });
@@ -106,8 +111,6 @@ function showMetas(obj) {
         if (scoreStudents['hse'] > hse) {
           acumSprint1Hse = acumSprint1Hse + 1;
         };
-        console.log(acumSprint1Tech);
-        console.log(acumSprint1Hse);
         break;
       case k === 1:
         if (scoreStudents['tech'] > tech) {
@@ -116,8 +119,6 @@ function showMetas(obj) {
         if (scoreStudents['hse'] > hse) {
           acumSprint2Hse = acumSprint2Hse + 1;
         };
-        console.log(acumSprint2Tech);
-        console.log(acumSprint2Hse);
         break;
       case k === 2:
         if (scoreStudents['tech'] > tech) {
@@ -126,8 +127,6 @@ function showMetas(obj) {
         if (scoreStudents['hse'] > hse) {
           acumSprint3Hse = acumSprint3Hse + 1;
         };
-        console.log(acumSprint3Tech);
-        console.log(acumSprint3Hse);
         break;
       case k === 3:
         if (scoreStudents['tech'] > tech) {
@@ -136,10 +135,40 @@ function showMetas(obj) {
         if (scoreStudents['hse'] > hse) {
           acumSprint4Hse = acumSprint4Hse + 1;
         };
-        console.log(acumSprint4Tech);
-        console.log(acumSprint4Hse);
         break;
       }
     };
+  };
+  if (acumSprint1Tech !== 0 && acumSprint1Hse !== 0) {
+    var pTech1 = document.createElement('p');
+    var pHse1 = document.createElement('p');
+    pTech1.textContent = 'SPRINT 1 - SUPERAN EL 70% EN TECNICO: ' + acumSprint1Tech;
+    pHse1.textContent = 'SPRINT 1 - SUPERAN EL 70% EN HSE: ' + acumSprint1Hse;
+    divMetas.appendChild(pTech1);
+    divMetas.appendChild(pHse1);
+  };
+  if (acumSprint2Tech !== 0 && acumSprint2Hse !== 0) {
+    var pTech2 = document.createElement('p');
+    var pHse2 = document.createElement('p');
+    pTech2.textContent = 'SPRINT 2 - SUPERAN EL 70% EN TECNICO: ' + acumSprint2Tech;
+    pHse2.textContent = 'SPRINT 2 - SUPERAN EL 70% EN HSE: ' + acumSprint2Hse;
+    divMetas.appendChild(pTech2);
+    divMetas.appendChild(pHse2);
+  };
+  if (acumSprint3Tech !== 0 && acumSprint3Hse !== 0) {
+    var pTech3 = document.createElement('p');
+    var pHse3 = document.createElement('p');
+    pTech3.textContent = 'SPRINT 3 - SUPERAN EL 70% EN TECNICO: ' + acumSprint3Tech;
+    pHse3.textContent = 'SPRINT 3 - SUPERAN EL 70% EN HSE: ' + acumSprint3Hse;
+    divMetas.appendChild(pTech3);
+    divMetas.appendChild(pHse3);
+  };
+  if (acumSprint4Tech !== 0 && acumSprint4Hse !== 0) {
+    var pTech4 = document.createElement('p');
+    var pHse4 = document.createElement('p');
+    pTech4.textContent = 'SPRINT 4 - SUPERAN EL 70% EN TECNICO: ' + acumSprint4Tech;
+    pHse4.textContent = 'SPRINT 4 - SUPERAN EL 70% EN HSE: ' + acumSprint4Hse;
+    divMetas.appendChild(pTech4);
+    divMetas.appendChild(pHse4);
   };
 };
