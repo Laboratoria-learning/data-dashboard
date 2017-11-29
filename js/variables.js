@@ -63,6 +63,24 @@ console.log('% estudiantes Desertaron AQP20162 : ' + percDesertedAQP20162);
 var percDesertedAQP20171 = (numdesertedAQP20171 / numEstudentsAQP20171) * 100;
 console.log('% estudiantes Desertaron AQP20171 : ' + percDesertedAQP20171);
 
+//* Puntución promedio de los profesores *//
+
+// Suma de las puntuaciones por sprint de los profesores 2016-2 *//
+var pointsPerSprintTeachersAQP20162 = data.AQP['2016-2'].ratings[0].teacher + data.AQP['2016-2'].ratings[1].teacher + data.AQP['2016-2'].ratings[2].teacher + data.AQP['2016-2'].ratings[3].teacher;
+console.log('suma de puntos de profesores total sprints 20162: ' + pointsPerSprintTeachersAQP20162);
+
+// Promedio de las puntuaciones de los profesores 2016-2 //
+var averagePointsTeachersAQP20162 = pointsPerSprintTeachersAQP20162 / 4;
+console.log('promedio de puntos de profesores en todos los sprints 20162: ' + averagePointsTeachersAQP20162);
+
+// Suma de las puntuaciones por sprint de los profesores 2017-1 *//
+var pointsPerSprintTeachersAQP20171 = data.AQP['2017-1'].ratings[0].teacher + data.AQP['2017-1'].ratings[1].teacher + data.AQP['2017-1'].ratings[2].teacher;
+console.log('suma de puntos de profesores total sprints 20171: ' + pointsPerSprintTeachersAQP20171);
+
+// Promedio de las puntuaciones de los profesores 2017-1 //
+var averagePointsTeachersAQP20171 = pointsPerSprintTeachersAQP20171 / 3;
+console.log('promedio de puntos de profesores en todos los sprints 20171: ' + averagePointsTeachersAQP20171);
+
 /* ****SEDE CIUDAD DE MEXICO**** */
 console.log('MEXICO');
 /* El total de estudiantes presentes por sede y generación. */
@@ -117,6 +135,24 @@ console.log('% estudiantes Desertaron CDMX20171 : ' + percDesertedCDMX20171);
 // % estudiantes desertaron CDMX 2017-2
 var percDesertedCDMX20172 = (numdesertedCDMX20172 / numEstudentsCDMX20172) * 100;
 console.log('% estudiantes Desertaron CDMX20172 : ' + percDesertedCDMX20172);
+
+//* Puntución promedio de los profesores *//
+
+// Suma de las puntuaciones por sprint de los profesores 2017-1 *//
+var pointsPerSprintTeachersCDMX20171 = data.CDMX['2017-1'].ratings[0].teacher + data.CDMX['2017-1'].ratings[1].teacher + data.CDMX['2017-1'].ratings[2].teacher;
+console.log('suma de puntos de profesores total sprints 20171: ' + pointsPerSprintTeachersCDMX20171);
+
+// Promedio de las puntuaciones de los profesores 2017-1 //
+var averagePointsTeachersCDMX20171 = pointsPerSprintTeachersCDMX20171 / 3;
+console.log('promedio de puntos de profesores en todos los sprints 20171: ' + averagePointsTeachersCDMX20171);
+
+// Suma de las puntuaciones por sprint de los profesores 2017-2 *//
+var pointsPerSprintTeachersCDMX20172 = data.CDMX['2017-2'].ratings[0].teacher + data.CDMX['2017-2'].ratings[1].teacher;
+console.log('suma de puntos de profesores total sprints 20172: ' + pointsPerSprintTeachersCDMX20172);
+
+// Promedio de las puntuaciones de los profesores 2017-2 //
+var averagePointsTeachersCDMX20172 = pointsPerSprintTeachersCDMX20172 / 2;
+console.log('promedio de puntos de profesores en todos los sprints 20172: ' + averagePointsTeachersCDMX20172);
 
 /* ****SEDE LIMA**** */
 console.log('LIMA');
@@ -189,6 +225,32 @@ console.log('% estudiantes Desertaron LIM20171 : ' + percDesertedLIM20171);
 var percDesertedLIM20172 = (numdesertedLIM20172 / numEstudentsLIM20172) * 100;
 console.log('% estudiantes Desertaron LIM20172 : ' + percDesertedLIM20172);
 
+//* Puntución promedio de los profesores *//
+
+// Suma de las puntuaciones por sprint de los profesores 2016-2 *//
+var pointsPerSprintTeachersLIM20162 = data.LIM['2016-2'].ratings[0].teacher + data.LIM['2016-2'].ratings[1].teacher;
+console.log('suma de puntos de profesores total sprints 20162: ' + pointsPerSprintTeachersLIM20162);
+
+// Promedio de las puntuaciones de los profesores 2016-2 //
+var averagePointsTeachersLIM20162 = pointsPerSprintTeachersLIM20162 / 2;
+console.log('promedio de puntos de profesores en todos los sprints 20162: ' + averagePointsTeachersLIM20162);
+
+// Suma de las puntuaciones por sprint de los profesores 2017-1 *//
+var pointsPerSprintTeachersLIM20171 = data.LIM['2017-1'].ratings[0].teacher + data.LIM['2017-1'].ratings[1].teacher + data.LIM['2017-1'].ratings[2].teacher + data.LIM['2017-1'].ratings[3].teacher;
+console.log('suma de puntos de profesores total sprints 20171: ' + pointsPerSprintTeachersLIM20171);
+
+// Promedio de las puntuaciones de los profesores 2017-1 //
+var averagePointsTeachersLIM20171 = pointsPerSprintTeachersLIM20171 / 4;
+console.log('promedio de puntos de profesores en todos los sprints 20171: ' + averagePointsTeachersLIM20171);
+
+// Suma de las puntuaciones por sprint de los profesores 2017-2 *//
+var pointsPerSprintTeachersLIM20172 = data.LIM['2017-2'].ratings[0].teacher + data.LIM['2017-2'].ratings[1].teacher;
+console.log('suma de puntos de profesores total sprints 20172: ' + pointsPerSprintTeachersLIM20172);
+
+// Promedio de las puntuaciones de los profesores 2017-2 //
+var averagePointsTeachersLIM20172 = pointsPerSprintTeachersLIM20172 / 2;
+console.log('promedio de puntos de profesores en todos los sprints 20172: ' + averagePointsTeachersLIM20172);
+
 /* ****SEDE SANTIAGO DE CHILE**** */
 console.log('CHILE');
 /* El total de estudiantes presentes por sede y generación. */
@@ -259,3 +321,29 @@ console.log('% estudiantes Desertaron SCL20171 : ' + percDesertedSCL20171);
 // % estudiantes desertaron SCL 2017-2
 var percDesertedSCL20172 = (numdesertedSCL20172 / numEstudentsSCL20172) * 100;
 console.log('% estudiantes Desertaron SCL20172 : ' + percDesertedSCL20172);
+
+//* Puntución promedio de los profesores *//
+
+// Suma de las puntuaciones por sprint de los profesores 2016-2 *//
+var pointsPerSprintTeachersSCL20162 = data.SCL['2016-2'].ratings[0].teacher + data.SCL['2016-2'].ratings[1].teacher + data.SCL['2016-2'].ratings[2].teacher + data.SCL['2016-2'].ratings[3].teacher;
+console.log('suma de puntos de profesores total sprints 20162: ' + pointsPerSprintTeachersSCL20162);
+
+// Promedio de las puntuaciones de los profesores 2016-2 //
+var averagePointsTeachersSCL20162 = pointsPerSprintTeachersSCL20162 / 4;
+console.log('promedio de puntos de profesores en todos los sprints 20162: ' + averagePointsTeachersSCL20162);
+
+// Suma de las puntuaciones por sprint de los profesores 2017-1 *//
+var pointsPerSprintTeachersSCL20171 = data.SCL['2017-1'].ratings[0].teacher + data.SCL['2017-1'].ratings[1].teacher + data.SCL['2017-1'].ratings[2].teacher;
+console.log('suma de puntos de profesores total sprints 20171: ' + pointsPerSprintTeachersSCL20171);
+
+// Promedio de las puntuaciones de los profesores 2017-1 //
+var averagePointsTeachersSCL20171 = pointsPerSprintTeachersSCL20171 / 3;
+console.log('promedio de puntos de profesores en todos los sprints 20171: ' + averagePointsTeachersSCL20171);
+
+// Suma de las puntuaciones por sprint de los profesores 2017-2 *//
+var pointsPerSprintTeachersSCL20172 = data.SCL['2017-2'].ratings[0].teacher + data.SCL['2017-2'].ratings[1].teacher;
+console.log('suma de puntos de profesores total sprints 20172: ' + pointsPerSprintTeachersSCL20172);
+
+// Promedio de las puntuaciones de los profesores 2017-2 //
+var averagePointsTeachersSCL20172 = pointsPerSprintTeachersSCL20172 / 2;
+console.log('promedio de puntos de profesores en todos los sprints 20172: ' + averagePointsTeachersSCL20172);
