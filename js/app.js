@@ -1,6 +1,3 @@
-/*
- * Funcionalidad de tu producto
- */
 window.addEventListener('load', function() {
   var tabs = document.querySelectorAll('.tab');
   var contenidos = document.querySelectorAll('.inform');
@@ -22,9 +19,6 @@ window.addEventListener('load', function() {
       /* this.classList.add('red');*/
     }
   }
-  
-  // window.onload = function() {
-  //   toggleTab(tabs);
-  // };
+
   toggleTab(tabs);
 });
