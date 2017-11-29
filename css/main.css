@@ -26,7 +26,7 @@ body {
 
 .icon-user #ale-profile {
     width: 40px;
-    border-radius: 200px;
+    border-radius: 150px;
 }
 
 .icon-user #user-name {
@@ -49,7 +49,14 @@ a {
 }
 
 header {
-    outline: 1px solid yellowgreen;
-    width: 70%;
-    margin-left: 30%;
+    width: 83%;
+    margin-left: 17%;
+    background-color: #152638;
+    border-radius: 13px;
+    filter: drop-shadow(2px 2px 5px #999);
+    padding: 17px;
+}
+
+.name-student input {
+    
 }
