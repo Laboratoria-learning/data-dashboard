@@ -8,6 +8,9 @@ divNps = document.getElementById('kpi-nps');
 divPromoters = document.getElementById('promoters');
 divPassive = document.getElementById('passive');
 divDetractors = document.getElementById('detractors');
+divAchievement = document.getElementById('kpi-achievement');
+divPercentAchievement = document.getElementById('percent-achievement');
+divStudentsAchievement = document.getElementById('students-achievement');
 // Puedes hacer uso de la base de datos a través de la variable `data`
 
 window.addEventListener('load', function(event) {
@@ -20,8 +23,8 @@ window.addEventListener('load', function(event) {
   for (i = 0;i < generationx['ratings'].length;i++) {
     var option = document.createElement('option');
     option.text = 'Sprint ' + generationx['ratings'][i]['sprint'];
-    option.value = generationx['ratings'][i]['sprint']-1;
-    option.id = generationx['ratings'][i]['sprint']-1;
+    option.value = generationx['ratings'][i]['sprint'] - 1;
+    option.id = generationx['ratings'][i]['sprint'] - 1;
     optionSprint.add(option);
   }
 
@@ -36,7 +39,12 @@ window.addEventListener('load', function(event) {
       optionSpecialization.classList.add('hidden');
       optionSpecialization.classList.remove('show');
     }
+    divAchievement.innerHTML = generationx['ratings'][event.target.value]['student']['cumple'] + generationx['ratings'][event.target.value]['student']['supera'];
 
+    var totalStudentsAchievement = generationx['ratings'][event.target.value]['student']['cumple'] + generationx['ratings'][event.target.value]['student']['no-cumple'] + generationx['ratings'][event.target.value]['student']['supera'];
+    divStudentsAchievement.innerHTML = '% OF TOTAL (' + totalStudentsAchievement + ')';
+
+    divPercentAchievement.innerHTML = (generationx['ratings'][event.target.value]['student']['cumple'] + generationx['ratings'][event.target.value]['student']['supera']) * 100 / totalStudentsAchievement + ' %';
     var promoters = generationx['ratings'][event.target.value]['nps']['promoters'];
     var passive = generationx['ratings'][event.target.value]['nps']['passive'];
     var detractors = generationx['ratings'][event.target.value]['nps']['detractors'];
