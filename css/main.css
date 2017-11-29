@@ -29,9 +29,12 @@
 
 select {
     display: block;
-    outline: 1px solid red;
+    
     margin: 10px auto;
+    height: 30px;
+    border-radius: 10px;
 }
+
 .inline-block {
     float: left;
     background-color: #F7F7F7;
@@ -56,7 +59,23 @@ select {
     font-size: 25px;
 }
 
+.percentage-nps{
+    font-family: 'Cairo', sans-serif;
+    font-size: 14px;
+}
 
+.canvas{
+    position: relative;
+    bottom: 45%;
+    }
+
+.box-canvas{
+    width: 87%;
+    height: 50%;
+    position: relative;
+    top:30%;
+    left: 7%;
+}
 
 .style-description{
     font-family: 'Cairo', sans-serif;
@@ -65,10 +84,12 @@ select {
     margin: 5px;
 }
 .title {
-    margin:20px;
+    margin:0 0 25px 0;
     font-size: 16px;
     font-weight: 700;
     font-family: sans-serif;
+    position: relative;
+    top: 10px;
 }
 /*Styles a la página web*/
  *{
