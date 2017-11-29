@@ -14,12 +14,16 @@ window.addEventListener('load', function(event) {
   countryMexico.addEventListener('click', showCountry);
 });
 
-
-// window.addEventListener('load', function(event) {
-//
-// });
-
 /* Tabs */
+var tabs = document.querySelectorAll('.tab');
+var overview = document.querySelector('#overview');
+var students = document.querySelector('#students');
+var teachers = document.querySelector('#teachers');
+
+function showTabs(event) {
+  console.log(event.target);
+}
+overview.addEventListener('click', showTabs);
 // var tab = document.querySelectorAll('.tab');
 //
 //
@@ -62,6 +66,10 @@ window.addEventListener('load', function(event) {
 //
 // loadPage();
 
+// window.addEventListener('load', function(event) {
+//
+// });
+
 // Agregar fotos de coders y nombres
 // function addCoder() {
 //   var coderPhoto;
@@ -71,3 +79,6 @@ window.addEventListener('load', function(event) {
 //   console.log(data[]);
 // }
 // addCoder();
+// window.addEventListener('load', function(event) {
+//
+// });
