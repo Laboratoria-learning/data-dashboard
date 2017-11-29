@@ -32,6 +32,20 @@ window.addEventListener('load', function(event) {
       classCheckBoxHse.style.up = '30px';
     } else classCheckBoxHse.style.display = 'none';
   });
+
+//   creando contenedor para informacion de las alumnas
 });
+
 // Puedes hacer uso de la base de datos a través de la variable `data`
-console.log(data);
+// console.log(data['LIM']['2016-2']['students'][0]['sprints'][0]['score']['tech']);
+// console.log(data);
+
+//
+var shortCut = data['LIM']['2016-2']['students'];
+console.log(shortCut.length);
+for (var i = 0; i < shortCut.length;i++) {
+  if (i == 7) {
+    console.log(shortCut[i]['name']);
+  }
+}
+// console.log(shortCut);
