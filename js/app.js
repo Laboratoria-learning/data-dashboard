@@ -1,7 +1,3 @@
-/*
- * Funcionalidad de tu producto
- */
-
 // Puedes hacer uso de la base de datos a través de la variable `data`
 
 // Almacenamos el nombre de las sedes dado en el archivo data.js; que nos da un array:
@@ -15,6 +11,8 @@ var valuesofData = Object.values(data);
 
 // Nos aseguramos que la página cargue correctamente:
 window.addEventListener('load', function() {
+
+/* CÓDIGO PARA MOSTRAR SEDES Y PROMOCIONES */
   // Creamos una variable que va a guardar la lista desplegable
   var selectionSede = document.getElementById('select-sede');
   // Recorremos el array de nombre de las sedes que traemos del archivo data.js
@@ -46,11 +44,47 @@ window.addEventListener('load', function() {
     
     }
   }
-  
-  
+  /* FIN DE CÓDIGO MOSTRAR SEDES Y PROMOCIONES */
 
+  /* CODIGO PESTAÑAS*/
+  var show = function(e) {
+    var tabSeleccionado = e.target.dataset.tabSeleccionado;
+    var overview = document.getElementById('overview');
+    var students = document.getElementById('students');
+    var teachers = document.getElementById('teachers');
+    if (tabSeleccionado === 'tabOverview') {
+      students.style.display = 'none';
+      teachers.style.display = 'none';
+      overview.style.display = 'block';
+    } else if (tabSeleccionado === 'tabStudents') {
+      overview.style.display = 'none';
+      teachers.style.display = 'none';
+      students.style.display = 'block';
+      console.log('students');
+    } else if (tabSeleccionado === 'tabTeachers') {
+      overview.style.display = 'none';
+      students.style.display = 'none';
+      teachers.style.display = 'block';
+      console.log('teachers');
+    }
+  };
+  var chargePage = function() {
+    var overview = document.getElementById('overview');
+    var students = document.getElementById('students');
+    var teachers = document.getElementById('teachers');
+    students.style.display = 'none';
+    teachers.style.display = 'none';
+    overview.style.display = 'block';
+    var elementsTab = document.getElementsByClassName('tab');
+    for (var i = 0; i < elementsTab.length;i++) {
+      elementsTab[i].addEventListener('click', show);
+    }
+  };
+  chargePage();
+/* FIN CODIGO PESTAÑAS*/
 
 });
+
 
 // para buscar en un array
 function searchInArray(array, string) {
@@ -74,3 +108,4 @@ function searchInObject(obj, string) {
   }
   return result;
 }
+

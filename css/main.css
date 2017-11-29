@@ -5,6 +5,31 @@
 .header-logo{
   width: 30%;
 }
+
+/*estilos pestañas*/
+#tabs .tabs-container {
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  border-bottom: #fcb425 solid 1px;
+}
+
+.tabs-container li {
+  list-style: none;
+  display: inline-block;
+}
+
+.tab {
+  color: white;
+  background-color: #fcb425;
+  border-radius: 2px;
+  border-bottom: none;
+  padding: 10px;
+  width: 100px;
+}
+
+/*estilo students*/
+
 *{
   box-sizing: border-box;
 }
@@ -260,3 +285,4 @@ width: 35%;
   width: 90%;
   padding-left: 5%;
 }
+
