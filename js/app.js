@@ -34,10 +34,10 @@ console.log(data);
 // function showGeneration(){
 //     console.log('dsds');
 // }
-
-function countActive(sede, generation, students) {
-  var countActive = 0;
-  var countInActive = 0;
+var total;
+var countActive = 0;
+var countInActive = 0;
+function countStudentActive(sede, generation, students) {
   var sedeLab = data[sede][generation][students];
   for (var i = 0; i < sedeLab.length; i++) {
     if (sedeLab[i].active) {
@@ -56,7 +56,7 @@ function countActive(sede, generation, students) {
   console.log('Son ' + total + '. Las alumnas activas son: ' + countActive + '. y las alumnas retiradas son: ' + countInActive + '\n Las alumnas retiratas representan el ' + porcentaje + '%');
 }
 
-countActive('AQP', '2016-2', 'students');
+countStudentActive('AQP', '2016-2', 'students');
 
 function achievement(sede,generation){
   var count = 0;
@@ -65,12 +65,15 @@ function achievement(sede,generation){
     var ratingStudent = numberRatings[i]['student']['supera'];
     count = count + ratingStudent;
 }
-console.log(count);
+  totalStudent = countActive;
+  totalSupera = parseInt((countActive*count)/100);
+console.log('Las alumnas que superan el puntaje promedio son: ' + totalSupera + ' Y representan el: ' + count + '%');
 }
 
 achievement('AQP','2016-2');
 achievement('AQP', '2017-1');
-
+achievement('CDMX', '2017-1');
+achievement('CDMX', '2017-2');
 
 
 
