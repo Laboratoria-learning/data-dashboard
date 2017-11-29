@@ -13,26 +13,21 @@
         <h1 class="title">Data Dashboard</h1>
     </header>
     <nav>
-      <select name="promociones" id="promociones" class="promo">
-        <option value="">LIMA
-          <option value=""> 2016-II</option>
-          <option value=""> 2017-I</option>
-          <option value=""> 2017-II</option>
-        </option>
-        <option value="">AREQUIPA
-          <option value=""> 2016-II</option>
-          <option value=""> 2017-I</option>
-        </option>
-        <option value="">SANTIAGO DE CHILE
-          <option value=""> 2016-II</option>
-          <option value=""> 2017-I</option>
-          <option value=""> 2017-II</option>
-        </option>
-        <option value="">CIUDAD DE MEXICO
-          <option value=""> 2017-I</option>
-          <option value=""> 2017-II</option>
-        </option>
+      <select name="sedes" id="sede" >        
+          <option value="LIMA 2016-II">LIMA 2016-II
+          <option  value="LIMA 2017-I">LIMA 2017-I
+          <option value="LIMA 2017-II">LIMA 2017-II        
+          <option value="AREQUIPA 2017-I">AREQUIPA 2017-I
+          <option value="AREQUIPA 2017-II">AREQUIPA 2017-II          
+          <option value="Santiago de Chile 2016-II">Santiago de Chile 2016-II
+          <option value="Santiago de Chile 2017-I">Santiago de Chile 2017-I
+          <option value="Santiago de Chile 2017-II">Santiago de Chile 2017-II           
+          <option value="Ciudad de Mexico 2017-I"> Ciudad de Mexico 2017-I
+          <option value="Ciudad de Mexico 2017-II"> Ciudad de Mexico 2017-II
       </select>
+      <span id="text">
+
+      </span>
       <ul class="container-tab">
         <li><button type="button" name="button" data-tab-selection="tabOverview" class="tab">Overview</button></li>
         <li><button type="button" name="button" data-tab-selection="tabStudents" class="tab">Students</button></li>
@@ -44,7 +39,7 @@
       <section id="overview">
         <div class="enrollments">
               <h3>ENROLLMENT</h3>
-              <div class="dates"></div>
+              <div id="one" class="dates"></div>
               <div class="dates"></div>
         </div>
         <div class= "achievement">
@@ -86,9 +81,11 @@
 
     </main>
 
-		<!-- Base de datos -->
-		<script src="./js/data.js"></script>
-		<!-- Aquí va tus archivos JS -->
-    <script src="./js/app.js"></script>
+		
   </body>
+  <!-- Base de datos -->
+  <script src="./js/data.js"></script>
+  <!-- Aquí va tus archivos JS -->
+  <script src="./js/app.js"></script>
+  
 </html>

@@ -18,10 +18,18 @@ text-align: center;
 font-size: 20px;
   }
 
-.promo {
+.sedee {
   margin-left: 10%;
 }
-
+#text {
+  outline: 1px solid red;
+  width: 220px;
+  height: 20px;
+  background: red;
+  display: block;
+  margin-left: 70%;
+  
+}
 /* Estilos a button */
 .container-tab{
   background-color: #fcb425;
@@ -55,7 +63,7 @@ li {
 
 .dates {
   width: 120px;
-  height: 60px;
+  /* height: 60px; */
    /* sacar height */
   background-color: white;
   display: inline-block;
