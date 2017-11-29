@@ -21,6 +21,7 @@ window.addEventListener('load', function() {
     var optgroupsedes = document.createElement('optgroup');
     // le asignamos el valor del labol del grupo, de acuerdo al nombre extraido de data.js de cada sede
     optgroupsedes.label = dataNameSedes[i];
+    optgroupsedes.id = 'optgroupsede' + i;
     // le asignamos cada sede a la lista de sedes
     selectionSede.appendChild(optgroupsedes);
     // guardamos las promociones por sede
@@ -30,21 +31,41 @@ window.addEventListener('load', function() {
     var valuesofPromsforSede = Object.values(valuesofData[i]);
     // console.log(valuesofPromsforSede);
 
+    // var nameSede = (searchInArray(dataNameSedes, dataNameSedes[i]));
+    // console.log(nameSede);
+    var nameSede = document.getElementById('optgroupsede' + i).label;
+
     // Recorremos las promociones
     for (var j = 0; j < promsforSede.length; j++) {
       // Creamos un elemento para mostrar las promociones
       var optionproms = document.createElement('option');
       // le asignamos el valor a mostrar
       optionproms.label = promsforSede[j];
+      optionproms.id = 'optionproms' + i;
       // le asignamos donde lo va a mostrar
       optgroupsedes.appendChild(optionproms); 
-
-      var nameSede = (searchInArray(dataNameSedes, dataNameSedes[i]));
-      var nameProm = searchInArray(promsforSede, promsforSede[j]);
-    
+        
+      // var nameProm = searchInArray(promsforSede, promsforSede[j]); 
+      var nameProm = document.getElementById('optionproms' + i).label;  
+      
+      // console.log(nameProm); 
+      console.log(data[nameSede][nameProm]);
+      
     }
   }
   /* FIN DE CÓDIGO MOSTRAR SEDES Y PROMOCIONES */
+
+  // var nameSede = 'AREQUIPA';
+  // var nameProm = '2016-II';
+  // var dataforSede = getValueforkey(data, nameSede);  
+  // console.log(dataforSede);
+  // var dataforProm = getValueforkey(dataforSede, nameProm);
+  // console.log(dataforProm);
+  // console.log(dataforSede[nameProm]);
+  
+
+  /* CÓDIGO PARA EXTRAER DATA*/
+
 
   /* CODIGO PESTAÑAS*/
   var show = function(e) {
@@ -83,6 +104,7 @@ window.addEventListener('load', function() {
   chargePage();
 /* FIN CODIGO PESTAÑAS*/
 
+
 });
 
 
@@ -109,3 +131,16 @@ function searchInObject(obj, string) {
   return result;
 }
 
+// funcion para obtener el valor especifco de una key
+function getValueforkey(obj, key) {
+  var valueofkey,result;
+  var keysofObject = Object.keys(obj);
+  for (var i = 0; i < keysofObject.length; i++) {
+    keysearch = keysofObject[i];  
+    if (key === keysofObject[i]) {
+      valueofkey = obj[key];
+    }
+    result = valueofkey;
+  }  
+  return result;
+}
