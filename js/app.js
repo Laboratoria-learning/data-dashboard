@@ -25,6 +25,7 @@ window.addEventListener('load', function() {
     titleData.textContent = 'Teacher Rating';
     containerData.appendChild(containerTeacher);
     containerTeacher.appendChild(titleData);
+    containerTeacher.setAttribute('id', 'teacher-data');
     section.appendChild(containerData);
     containerTeacher.classList.add('average-container');
     containerData.classList.add('teachers-data');
@@ -37,6 +38,36 @@ window.addEventListener('load', function() {
     containerData.appendChild(containerJedis);
     containerJedis.appendChild(titleJedi);
     containerJedis.classList.add('average-container');
-    titleJedi.classList.add('average-title');    
+    titleJedi.classList.add('average-title');  
   });
+
+  teachers.addEventListener('click', function averageTeachers(event) {
+  // var arequipa = data.AQP;
+    var containerAverage = document.createElement('div');
+    var average = data.AQP['2016-2']['ratings'][0]['teacher']; // 3.6
+    // console.log(average);
+    var averageText = document.createElement('h4');
+    averageText.innerHTML = average;
+    containerAverage.appendChild(averageText);
+    var container = document.getElementById('teacher-data');
+    container.appendChild(containerAverage);
+    /*
+    for (var i in average) {
+      
+    } */  
+  });
+
 });
+
+/*function averageTeachers(data) {
+    var average = '';
+    var arequipa = data.AQP;
+    var primer = data.AQP['2016-2'];
+    for (var i in data) {
+		for(var j in arequipa) {
+        }
+          for (var k in primer) {
+    }
+    return console.log(primer);
+ }
+} */
