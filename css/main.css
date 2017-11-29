@@ -25,10 +25,6 @@
   margin: 0px;
 }
 
-body {
-  overflow: auto;
-}
-
 a {
   color: #000;
   text-decoration: none;
@@ -60,12 +56,35 @@ main {
   float: right;
   border: 1px solid black;
   width: 80%;
-  padding: 1%;
+  height: 100vh;
+}
+
+.container-icons {
+  width: 79vw;
+  outline: 1px solid green;
+  height: 10vh;
+  padding: 2vh;
+  box-sizing: border-box;
+}
+
+.container ul {
+    text-align: center;
+}
+
+.container li {
+  display: inline-block;
+  margin-right: 0.5vw;
+}
+
+.container li button {
+  border-style: none;
+  padding: 3vh;
+
 }
 
 .icons {
   float: right;
-  width: 10%;
+  width: 10vw;
 }
 
 .icons a {
@@ -80,9 +99,15 @@ main {
   margin-right: 0;
 }
 
+.container {
+  outline: 1px solid red;
+  width: 79vw;
+}
+
 nav {
-  width: 20%;
+  width: 20vw;
   border: 1px solid black;
+  box-sizing: border-box;
 }
 
 .lab-logo {
@@ -114,6 +139,7 @@ nav {
   border-radius: 8px;
   border: 1px solid blue;
   padding: 2%;
+  width: 90%;
 }
 
 .branches-section p {
@@ -148,4 +174,8 @@ nav {
   width: 2%;
   font-weight: bold;
   float: left;
+}
+
+.display-none {
+  display: none;
 }
