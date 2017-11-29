@@ -71,7 +71,18 @@ window.addEventListener('load', function() {
     var spanPercentaje = document.getElementById('percentaje-overview');
     var textPercentaje = document.createTextNode(dropoutPercentaje);
     spanPercentaje.appendChild(textPercentaje);
+    ratingTeachers(sede,generacion)
   });
    
 });
 
+function ratingTeachers() {
+    var rating=0;
+    var countRating=data[sede][generacion].ratings.length-1;
+    for(var i=0;i<data[sede][generacion].ratings;i++){ 
+     rating+=data[sede][generacion].ratings[i].teacher;
+    
+    }
+    var v=(rating/countRating)*100;
+    console.log(v);
+}
