@@ -132,17 +132,33 @@ function logroMetasLife(sede, generacion, sprint) {
   var students = data[sede][generacion]['students'];
   var studentsOverTarget = [];
   var studentsDownTarget = [];
+  // var puntajesHse = [];
+  // var totalPuntajeHse = 0;
 
   for (var i = 0; i < students.length; i++) {
-    for (var j = 0; j < students[i].sprints.length; j++) {
+    if (students[i].sprints[sprint].score['hse'] >= 840) {
+      studentsOverTarget.push(students[i].sprints[sprint]);
+    } else {
+      studentsDownTarget.push(students[i].sprints[sprint]);
+    }
+    /* for (var j = 0; j < students[i].sprints.length; j++) {
       if (students[i].sprints[j].score['hse'] >= 840) {
         studentsOverTarget.push(students[i].sprints[j]);
       } else {
         studentsDownTarget.push(students[i].sprints[j]);
       }
-    }
+    }*/
   }
-  
+
+  /*
+  for (var i = 0; i < students.length; i++) {
+    puntajesHse.push(students[i].sprints[j]['score']['hse']);
+    //totalPuntajeHse = totalPuntajeHse + puntajesHse[i];
+  }
+
+  console.log(puntajesHse);
+  console.log(totalPuntajeHse);*/
+
   var porcentajeLogroMetasLife = (studentsOverTarget.length * 100) / (studentsOverTarget.length + studentsDownTarget.length);
   console.log('pasaron la meta hse: ' + '\t' + studentsOverTarget.length);
   console.log('no llegaron a la meta hse: ' + '\t' + studentsDownTarget.length);
@@ -151,3 +167,15 @@ function logroMetasLife(sede, generacion, sprint) {
 }
 
 console.log(logroMetasLife('LIM', '2017-1', 1));
+
+/* STUDENT SATISFACTION */ 
+function satisfaccionEstudiantes(sede, generacion) {
+  var rating = data[sede][generacion]['ratings'];
+  var supera = [];
+  var cumple = [];
+  var noCumple = [];
+
+  for (var i = 0; i < rating.length; i++) {
+    
+  }
+}
