@@ -1,3 +1,126 @@
-/*
- * Estilos de tu proyecto
- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f7f7f7;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.fa-bars, .fa-user-o {
+  margin: 1%;
+}
+
+.logo {
+  width: 20%;
+  height: 20%;
+  vertical-align: middle;
+  display: inline-block;
+  position: absolute;
+  margin: 1.5% 50%;
+}
+
+.center {
+  text-align: center;
+}
+
+.menu {
+  width: 25%;
+  height: 100%;
+}
+
+.results {
+  width: 75%;
+  height: 100%;
+}
+
+.container {
+  width: 75%;
+  margin: 0 5%;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.filter {
+  background-color: #fff;
+}
+
+.new-student {
+  width: 100%;
+  font-size: 40px;
+  margin-top: 10px;
+  margin-bottom: 35px;
+  background-color: #f7b617;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.new-student p {
+  width: 85%;
+  font-size: 40px;
+}
+
+.new-student i {
+  width: 15%;
+  font-size: 40px;
+  text-align: center;
+}
+
+span, input, i, p, label {
+  display: inline-block;
+}
+
+.filter label {
+  width: 70%;
+}
+
+.filter {
+  width: 25%;
+  padding: 10px;
+}
+
+.filter input[type="radio"] {
+  /*display: none;*/
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+}
+
+.filter .radio label {
+  color: #f7b617;
+}
+
+.fa, .li-menu {
+  padding: 10px;
+  height: 30px;
+  left: 50px;
+}
+
+.general-menu {
+  list-style: none;
+  padding: 10px;
+}
+
+.sede {
+  padding: 5px;
+}
+
+.generacion {
+  border: none;
+  background-color: inherit;
+  border-style: none;
+  margin-bottom: 15px;
+  display: block;
+}
