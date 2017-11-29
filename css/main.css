@@ -1,25 +1,26 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+/*
+ * Estilos de tu proyecto
+ */
+ * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ }
 
-body {
-  background-color: #f7f7f7;
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
+ .navbar {
+   margin: 0 10px 30px;
+   float: left;
+ }
 
-.fa-bars, .fa-user-o {
-  margin: 1%;
+.logo, .navbar {
+  width: 20%;
 }
 
 .logo {
-  width: 20%;
-  height: 20%;
-  vertical-align: middle;
-  display: inline-block;
+  margin: 0 15%;
   position: absolute;
-  margin: 1.5% 50%;
+  vertical-align: middle;
 }
 
 .center {
@@ -29,6 +30,11 @@ body {
 .menu {
   width: 25%;
   height: 100%;
+
+.list {
+  width: 25%;
+  height: 100%;
+  margin-top: 20px;
 }
 
 .results {
@@ -124,3 +130,13 @@ span, input, i, p, label {
   margin-bottom: 15px;
   display: block;
 }
+
+nav:hover {
+  background: rgba(212, 212, 209, 0.6);
+  width: 15%;
+}
+
+/* .list {
+  display: none;
+} */
+

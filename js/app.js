@@ -1,3 +1,6 @@
+/*
+ * Funcionalidad de tu producto
+ */
 var studentsContainer = document.getElementById('coders-container');
 var selectGenerationLima = document.getElementsByClassName('generacion')[0];
 var selectGenerationAqp = document.getElementsByClassName('generacion')[1];
@@ -5,6 +8,18 @@ var selectGenerationSch = document.getElementsByClassName('generacion')[2];
 var selectGenerationDf = document.getElementsByClassName('generacion')[3];
 var selectGenerationG = document.getElementsByClassName('generacion')[4];
 var subImagesContainer = null;
+
+
+window.addEventListener('load', function() {  
+  var listMenu = document.querySelectorAll('.general-menu');
+  for (var i = 0; i < listMenu.length; i++) {
+    listMenu[i].addEventListener('click', showMenu);
+  }
+  
+  function showMenu(event) {
+    console.log(event.target);
+  }
+});
 
 // constantes
 var FIRST15 = 'first-15';
