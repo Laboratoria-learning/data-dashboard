@@ -6,21 +6,113 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Data Dashboard</title>
+  <script src="https://use.fontawesome.com/01c57ad38e.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/main.css">
-    
+
 </head>
 
 <body>
   <header>
-      <nav class="menu">
-        <img class="lab" id="lab" src="assets/images/logo-laboratoria.svg" alt="">
-        <div class="user" >
-       <img class="ale" id="ale" src="assets/images/ale.png" alt="">
-        <p class="name" id="name">Alejandra</p>
-        </div>
-      </nav>
+    <nav class="menu">
+
+      <!-- Creamos sección sede -->
+      <ul class="sede" id="sede">
+        <li>
+          <a class="menu1" href="#">
+            <i class="fa fa-map-marker" aria-hidden="true"></i> Sede</a>
+          <ul>
+            <li>
+              <a href="#">
+                <img class="flag" src="assets\images\peru.png" alt="">Lima</a>
+              <ul>
+                <li>
+                  <a href=".\html\lima2016-2.html">2016 - 2</a>
+                </li>
+                <li>
+                  <a href=".\html\lima2017-1.html">2017 - 1</a>
+                </li>
+                <li>
+                  <a href=".\html\lima2017-2.html">2017 - 2</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <img class="flag" src="assets\images\peru1.png" alt="">Arequipa</a>
+              <ul>
+                <li>
+                  <a href=".\html\aqp2016-2.html">2016 - 2</a>
+                </li>
+                <li>
+                  <a href=".\html\aqp2017-1.html">2017 - 1</a>
+                </li>
+
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <img class="flag" src="assets\images\chile.png" alt="">Santiago de Chile</a>
+              <ul>
+                <li>
+                  <a href=".\html\scl2016-2.html">2016 - 2</a>
+                </li>
+                <li>
+                  <a href=".\html\scl2017-1.html">2017 - 1</a>
+                </li>
+                <li>
+                  <a href=".\html\lima2017-2.html">2017 - 2</a>
+                </li>
+            </li>
+            </ul>
+        </li>
+        <li>
+          <a href="#">
+            <img class="flag" src="assets\images\mexico.png" alt="">Ciudad de Mexico</a>
+          <ul>
+            <li>
+              <a href=".\html\MX2017-1.html">2017 - 1</a>
+            </li>
+            <li>
+              <a href=".\html\MX2017-2.html">2017 - 2</a>
+            </li>
+          </ul>
+        </li>
+
+        </ul>
+
+        </li>
+      </ul>
+
+      <!-- Creamos sección idioma  -->
+      <select name="language">
+        <option value="value1" selected>Español</option>
+        <option value="value2">English</option>
+
+      </select>
+      <img class="lab" id="lab" src="assets/images/logo-laboratoria.svg" alt="">
+
+      <!--Usuario -->
+      <ul class="button" id="button">
+        <button onclick="funciona()" <i class="fa fa-bars" aria-hidden="true">
+          </i>
+          <ul class="items">
+            <!-- Menú desplegable -->
+            <li class="job-item">Edit Profile</li>
+            <li class="job-item">Add Student</li>
+            <li class="job-item">Remove Student</li>
+            <li class="job-item">Add Sprint</li>
+          </ul>
+      </ul>
+      <!-- Creamos sección user -->
+      <div class="user">
+        <img class="ale" id="ale" src="assets/images/ale.png" alt="">
+      </div>
+    </nav>
   </header>
   <div class="line" id="line"></div>
+
 
   <div id="containerone">
     <div></div>
