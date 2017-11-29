@@ -1,3 +1,25 @@
+window.addEventListener('load', function() {
+  var sedes = document.querySelectorAll('.sede');
+  for (var i = 0; i < sedes.length; i++) {
+    sedes[i].addEventListener('click', function(event){
+      var sede =  event.target.dataset.sede;
+      console.log(event.target.dataset.sede); //AQP
+      var ulParent = document.querySelector('.generations_hiden');
+      ulParent.classList.toggle('generations_show');
+     var generations = ulParent.children;
+     console.log(generations);
+     for(var j in generations) {
+         generations[j].addEventListener('click',function(event){
+           var gen = event.target.dataset.generation;
+           console.log(gen);
+           console.log(data[sede][gen].students.length)
+         })
+       }
+     })
+ }
+});
+
+/*
 var objSedes = Object.keys(data);
 console.log(objSedes);
 
@@ -9,6 +31,9 @@ var allGenerationAQP = document.querySelectorAll('.generationAQP');
 var allGenerationCDMX = document.querySelectorAll('.generationCDMX');
 var allGenerationLIM = document.querySelectorAll('.generationLIM');
 var allGenerationSCL = document.querySelectorAll('.generationSCL');
+
+// creando funcion que cree un query selector all de las genereaciones de cualquier sede
+
 
 // sedes y prefijos
 var arequipa = 'AQP' ;
@@ -45,6 +70,14 @@ var codeGenerationSCL0 = document.getElementById('code_generation_scl_0');
 var codeGenerationSCL1 = document.getElementById('code_generation_scl_1');
 var codeGenerationSCL2 = document.getElementById('code_generation_scl_2');
 
+
+/*
+var addVarSedesYshowListGenerations = function (){
+  addVarSede();
+  showListSedes();
+}
+*/
+/*
 sedeGeneration.addEventListener('click', showListSedes);
 function showListSedes(event) {
   listSedes.classList.toggle('list_active');
@@ -55,65 +88,61 @@ function showListSedes(event) {
       console.log(codeSede);
       var sede = Object.keys(data)[codeSede];
       console.log(sede) ;
-      for (var i = 0; i < allSedes.length; i++) {
-        allSedes[i].addEventListener('click', showListGenerations);
-        function showListGenerations(event) {
-        // console.log(typeof event.target.dataset.sedecod)=string;
-          switch (event.target.dataset.sedecod) {
-          case '0' :
-            // activar display block de la lista de generaciones y que se vea desplegable
-            arequipaGenerations.classList.toggle('list_active') ;
-
-            // crear evento o funcion que al dar click me almacene la variable codeGeneration
-            for (var i = 0; i < allGenerationAQP.length; i++) {
-              allGenerationAQP[i].addEventListener('click', addVarGeneration);
-              function addVarGeneration(event) {
-                var codeGeneration = event.target.dataset.codeaqpgeneration;
-                console.log(codeGeneration);
-              }
-            }
-            break;
-          case '1' :
-            mexicoGenerations.classList.toggle('list_active') ;
-            for (var i = 0; i < allGenerationCDMX.length; i++) {
-              allGenerationCDMX[i].addEventListener('click', addVarGeneration);
-              function addVarGeneration(event) {
-                var codeGeneration = event.target.dataset.codecdmxgeneration;
-                console.log(codeGeneration);
-              }
-            }
-            break;
-          case '2' :
-            limaGenerations.classList.toggle('list_active') ;
-            for (var i = 0; i < allGenerationLIM.length; i++) {
-              allGenerationLIM[i].addEventListener('click', addVarGeneration);
-              function addVarGeneration(event) {
-                var codeGeneration = event.target.dataset.codelimgeneration;
-                console.log(codeGeneration);
-              }
-            }
-            break;
-          case '3' :
-            chileGenerations.classList.toggle('list_active') ;
-            for (var i = 0; i < allGenerationSCL.length; i++) {
-              allGenerationSCL[i].addEventListener('click', addVarGeneration);
-              function addVarGeneration(event) {
-                var codeGeneration = event.target.dataset.codesclgeneration;
-                console.log(codeGeneration);
-              }
-            }
-            break;
-          }
-          var generation = Object.keys(Object.values(data)[codeSede])[codeGeneration] ;
-          console.log(generation) ;
-        }
-      }
-    }
+    };
   }
 };
 
 
+/*
 for (var i = 0; i < allSedes.length; i++) {
+allSedes[i].addEventListener('click', showListGenerations);
+function showListGenerations(event) {
+  // console.log(typeof event.target.dataset.sedecod)=string;
+  switch (event.target.dataset.sedecod) {
+  case '0' :
+    // activar display block de la lista de generaciones y que se vea desplegable
+    arequipaGenerations.classList.toggle('list_active') ;
+
+    // crear evento o funcion que al dar click me almacene la variable codeGeneration
+    for (var i = 0; i < allGenerationAQP.length; i++) {
+      allGenerationAQP[i].addEventListener('click', addVarGeneration);
+      function addVarGeneration(event) {
+        var codeGeneration = event.target.dataset.codeaqpgeneration;
+        console.log(codeGeneration);
+      }
+    }
+    break;
+  case '1' :
+    mexicoGenerations.classList.toggle('list_active') ;
+    for (var i = 0; i < allGenerationCDMX.length; i++) {
+      allGenerationCDMX[i].addEventListener('click', addVarGeneration);
+      function addVarGeneration(event) {
+        var codeGeneration = event.target.dataset.codecdmxgeneration;
+        console.log(codeGeneration);
+      }
+    }
+    break;
+  case '2' :
+    limaGenerations.classList.toggle('list_active') ;
+    for (var i = 0; i < allGenerationLIM.length; i++) {
+      allGenerationLIM[i].addEventListener('click', addVarGeneration);
+      function addVarGeneration(event) {
+        var codeGeneration = event.target.dataset.codelimgeneration;
+        console.log(codeGeneration);
+      }
+    }
+    break;
+  case '3' :
+    chileGenerations.classList.toggle('list_active') ;
+    for (var i = 0; i < allGenerationSCL.length; i++) {
+      allGenerationSCL[i].addEventListener('click', addVarGeneration);
+      function addVarGeneration(event) {
+        var codeGeneration = event.target.dataset.codesclgeneration;
+        console.log(codeGeneration);
+      }
+    }
+    break;
+  }
 
 }
 

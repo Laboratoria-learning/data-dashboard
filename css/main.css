@@ -1,7 +1,9 @@
-ul{
+/*ul{
   display: none;
   padding: 0;
 }
+*/
+
 #list_sedes{
   text-align: center;
   width: 20%;
@@ -14,5 +16,13 @@ ul{
 }
 
 .list_active{
+  display: block;
+}
+
+.generations_hiden {
+  display: none;
+}
+
+.generations_show {
   display: block;
 }
