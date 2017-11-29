@@ -235,4 +235,3 @@ window.onload = function() {
   containesStudents.classList.add('none');
   comboBox.addEventListener('change',changeTitle)
 }
-alert("como vas??")
