@@ -19,7 +19,7 @@
   background-color: rgb(255,193,7);
 }
 .hidden {
-    visibility: hidden;
+    display: none;
 }
 /*Modificando header*/
 header{
