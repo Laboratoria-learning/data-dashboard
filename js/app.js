@@ -28,10 +28,11 @@ function create() {
       }
 
 
+
 switch(sede) {
   case 'LIMA2016-II':
   var estudiantelim1 = (data["LIM"]["2016-2"]["students"].length);
-  console.log( document.getElementById('one').innerHTML = estudiantelim1);  
+  console.log( document.getElementById('one').innerHTML = estudiantelim1);
       break;
   case 'LIMA2017-I':
   var  estudiantelim2 = (data["LIM"]["2017-1"]["students"].length);
@@ -39,7 +40,7 @@ switch(sede) {
       break;
   default:
       alert('f');
-} 
+}
 
   //  var estudiantelim1 = (data["LIM"]["2016-2"]["students"].length)
   //     // document.getElementById('one').innerHTML = estudiantelim1;
