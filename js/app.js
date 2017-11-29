@@ -51,22 +51,27 @@ console.log(logroMetas('LIM', '2017-1', 1));
 
 /* NET PROMOTER SCORE */ 
 
-function puntajePromotor() {
-  var raiting = data[sede][generacion]['raitings'];
-  var promoters = [];
+function puntajePromotor(sede, generacion) {
+  var rating = data[sede][generacion]['ratings'];
+  /* var promoters = [];
   var passive = [];
-  var detractors = [];
+  var detractors = [];*/
   var totalNps = [];
-  
-  for (var i = 0; i < raiting.length; i++) {
-    // if(raiting[i].nps.promoters)
-    var nps = raiting[i].nps.promoters - raiting[i].nps.detractors;
+  var acumulativeNps = 0;
+  var porcentajeAcumulativeNps;
+  debugger;
+  for (var i = 0; i < rating.length; i++) {
+    var nps = rating[i].nps.promoters - rating[i].nps.detractors;
     totalNps.push(nps);
   }
 
   console.log(totalNps.length);
 
   for (var i = 0; i < totalNps.length; i++) {
-      var acumulativeNps  + = totalNps[ i ];
+    acumulativeNps = acumulativeNps + totalNps[i];
   }
+  porcentajeAcumulativeNps = acumulativeNps / totalNps.length;
+  console.log(porcentajeAcumulativeNps + '%');
 }
+
+console.log(puntajePromotor('LIM', '2016-2'));
