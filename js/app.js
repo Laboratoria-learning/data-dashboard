@@ -42,6 +42,9 @@ var loadTabs = function(){
 }
 
 loadTabs()
+// Cre
+
+
 
 // funcionalidades del menu desplegable de las sedes de laboratoria
 var menu = document.getElementById('menuBar');
