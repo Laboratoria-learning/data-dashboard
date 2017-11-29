@@ -9,6 +9,7 @@ window.addEventListener('load', function() {
 
     for (var i = 0; i < Object.keys(data).length; i++) {
       var containerList = document.createElement('ul');
+      containerList.className = 'container-list';
       var list = document.createElement('li');
       list.className = 'list';
       var text = document.createTextNode('local ' + Object.keys(data)[i]);
@@ -19,7 +20,9 @@ window.addEventListener('load', function() {
 
       for (var a = 0; a < Object.keys(data[Object.keys(data)[i]]).length; a++) {
         var containerListGenerations = document.createElement('ul');
+        containerListGenerations.className = 'container-generations';
         var listGenerations = document.createElement('li');
+        listGenerations.className = 'list-generations';
         var textGenerations = document.createTextNode('generacion ' + Object.keys(data[Object.keys(data)[i]])[a]);
 
         listGenerations.appendChild(textGenerations);
