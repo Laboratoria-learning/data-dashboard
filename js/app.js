@@ -1,13 +1,27 @@
 // window.addEventListener('load', function(event) {
-//   /* Dropdwon de menu*/
-//   var menu = document.querySelector('.menu');
-//   var country = document.querySelector('.country');
-//   var city = document.querySelectorAll('.city');
-//   function showCity() {
 //
-//
-//   }
 // });
+/* Dropdwon de menu */
+  var menu = document.querySelector('.menu');
+  var country = document.querySelectorAll('.country');
+  var city = document.querySelectorAll('.city');
+  function showCountry() {
+    for (var i = 0; i < country.length; i++) {
+      switch (true) {
+        case 'Chile':
+            country.classList.toggle('display-none');
+          break;
+
+        default:
+
+      }
+    }
+  }
+  function showCity() {
+
+
+  }
+
 /* Tabs */
 // var tab = document.querySelectorAll('.tab');
 //
