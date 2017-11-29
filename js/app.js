@@ -1,5 +1,5 @@
 /* Iniciamos extrayendo los datos de las sedes */
-debugger;
+// debugger;
 
 window.addEventListener('load', function() {
   var containerSedes = document.getElementById('container-sedes');
@@ -7,35 +7,40 @@ window.addEventListener('load', function() {
     var sedes = document.getElementById('container-generations');
     
     /* Variables del total de alumnas, total de desercion y activas */
-    var total = 0;
-    var totalDesertion = 0;
-    var totalActive = 0;
+    // var total = 0;
+    // var totalDesertion = 0;
+    // var totalActive = 0;
 
     for (var i = 0; i < Object.keys(data).length; i++) {
       var containerList = document.createElement('ul');
       containerList.className = 'container-list';
       var list = document.createElement('li');
       list.className = 'list';
-      var text = document.createTextNode('local ' + Object.keys(data)[i]);
+      var text = document.createTextNode(Object.keys(data)[i]);
 
       list.appendChild(text);
       containerList.appendChild(list);
       sedes.appendChild(containerList);
 
+
+      /*
       for (var a = 0; a < Object.keys(data[Object.keys(data)[i]]).length; a++) {
         var containerListGenerations = document.createElement('ul');
         containerListGenerations.className = 'container-generations';
         var listGenerations = document.createElement('li');
         listGenerations.className = 'list-generations';
-        var textGenerations = document.createTextNode('generacion ' + Object.keys(data[Object.keys(data)[i]])[a]);
+        var textGenerations = document.createTextNode(Object.keys(data[Object.keys(data)[i]])[a]);
 
+        
         listGenerations.appendChild(textGenerations);
         containerListGenerations.appendChild(listGenerations);
         list.appendChild(containerListGenerations);
+
+
         // console.log(data[Object.keys(data)[i]]);  
 
         /* Usamos esta formula para obtener el total de alumnas */ 
-        total = total + (Object.values((Object.values(Object.values(data)[i]))[a])[0].length);
+      /*  total = total + (Object.values((Object.values(Object.values(data)[i]))[a])[0].length);
 
         for (var b = 0; b < Object.values((Object.values(Object.values(data)[i]))[a])[0].length; b++) {
           if (Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[2]) {
@@ -71,9 +76,18 @@ window.addEventListener('load', function() {
           paragraphApproved.appendChild(textApproved);
           approvedStudents.appendChild(paragraphApproved);
           firstContainer.appendChild(approvedStudents);
-        });
-      }
+        }); 
+      }*/
     }  
+
+    if (sedes.classList.contains('hide')) {
+      sedes.classList.remove('hide');
+      sedes.classList.add('show');
+    } else {
+      sedes.innerHTML = '';        
+      sedes.classList.remove('show');
+      sedes.classList.add('hide');
+    }
   });
 }); 
 

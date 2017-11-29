@@ -103,6 +103,8 @@ header section {
     margin: 30px;
 }
 
+/*Style for First Section*/
+
 .section-data {
     width: 80%;
     margin-left: 17%;
@@ -110,4 +112,12 @@ header section {
 
 .list {
     background: #fff;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
 }
