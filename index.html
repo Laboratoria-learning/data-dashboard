@@ -3,9 +3,193 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link rel="icon" href="assets/images/lab.ico">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-
+    <header>
+      <div class="container">
+        <nav class="subcontainer left">
+          <ul>
+            <li class="nav-bar">
+              <div class="photo"></div>
+            </li>
+            <li class="nav-bar">
+              <i class="fa fa-sort-desc fa-2x" aria-hidden="true"></i>
+            </li>
+          </ul>
+        </nav>
+        <figure class="subcontainer icon">
+          <img src="assets/images/logo-laboratoria.svg" alt="logo">
+        </figure>
+        <nav class="subcontainer right">
+          <ul>
+            <li class="nav-extra">
+              <div class="language">
+                <a href="#">ES</a>/<a href="#">EN</a>
+              </div>
+            </li>
+            <li class="nav-extra">
+              <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="selections">
+      <select class="sedes">
+        <option value="AQP">Arequipa</option>
+        <option value="CDMX">Ciudad de México</option>
+        <option value="LIM">Lima</option>
+        <option value="SCL">Santiago de Chile</option>
+      </select>
+      <select class="generations"></select>
+      <div class="tab">
+        <ul>
+          <li>
+            <button type="button" name="button">Visión General</button>
+          </li>
+          <li>
+            <button type="button" name="button">Estudiantes</button>
+          </li>
+          <li>
+            <button type="button" name="button">Profesores</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- Estructura de Visión General-->
+    <article id="overview">
+      <!-- Estructura de la primera sección o fila-->
+      <section>
+        <div class="enrollment">
+          <p>MATRICULADAS</p>
+          <div class='container-box'>
+            <div class='box'>
+              <p>120</p>
+              <p>Total de Estudiantes</p>
+            </div>
+            <div class='box'>
+              <p>20%</p>
+              <p>% Deserción</p>
+            </div>
+          </div>
+          <div>
+            <img src="assets/images/bar-graph.png" alt="grafico">
+          </div>
+        </div>
+        <div class="achievement">
+          <p>LOGROS</p>
+          <div class='container-box'>
+            <div class='box'>
+              <p>105</p>
+              <p># Estudiantes que alcanzaron la meta</p>
+            </div>
+            <div class='box'>
+              <p>78%</p>
+              <p>% Estudiantes que alcanzaron la meta</p>
+            </div>
+          </div>
+          <div>
+            <img src="assets/images/graph.png" alt="grafico">
+          </div>
+        </div>
+        <div class="nps">
+          <p>PUNTAJE DE PROMOTOR</p>
+          <div class='container-box'>
+            <div class='box'>
+              <p>78%</p>
+              <p>%acumulativo</p>
+            </div>
+            <div class='box'>
+              <p>60% Promotores</p>
+              <p>30% Pasivo</p>
+              <p>10% Detractores</p>
+            </div>
+          </div>
+          <div>
+            <img src="assets/images/graph.png" alt="grafico">
+          </div>
+        </div>
+      </section>
+      <!-- Estructura de la segunda sección-->
+      <section>
+        <select> <!-- Estructura del selector de Sprint-->
+          <option>Sprint 1</option>
+          <option>Sprint 2</option>
+          <option>Sprint 3</option>
+          <option>Sprint 4</option>
+        </select>
+        <div>
+          <div class='tech-skills'>
+            <p>Habilidades técnicas</p>
+            <div class="container-box">
+              <div class='box'>
+                <p>90</p>
+                <p># Estudiantes que alcanzaron la meta</p>
+              </div>
+              <div class='box'>
+                <p>62%</p>
+                <p>% Estudiantes que alcanzaron la meta</p>
+              </div>
+            </div>
+            <div>
+              <img src="assets/images/rectangular-graphic.png" alt="grafico">
+            </div>
+          </div>
+          <div class='life-skills'>
+            <p>HSE</p>
+            <div class="container-box">
+              <div class='box'>
+                <p>80</p>
+                <p>Promedio general de la clase</p>
+              </div>
+              <div class='box'>
+                <p>62</p>
+                <p># Estudiantes que alcanzaron la meta</p>
+              </div>
+            </div>
+            <div>
+              <img src="assets/images/rectangular-graphic.png" alt="grafico">
+            </div>
+          </div>
+      </section>
+      <!-- Estructura de la tercera sección-->
+      <section>
+        <div class="student-satisfacción">
+          <p>Satisfacción Estudiantes</p>
+          <div class='box'>
+            <p>120</p>
+            <p>% Cumpliendo o excediendo las espectativas(acumulado)</p>
+          </div>
+          <div>
+            <img src="assets/images/graph.png" alt="">
+          </div>
+        </div>
+        <div class="teacher-rating">
+          <p>Puntuación Profesores</p>
+          <div class='box'>
+            <p>4.2</p>
+            <p>Calificación general del maestro</p>
+          </div>
+          <div>
+            <img src="assets/images/graph.png" alt="">
+          </div>
+        </div>
+        <div class="jedi-rating">
+          <p>Puntuación Jedi</p>
+          <div class='box'>
+            <p>50</p>
+            <p>Calificación general del jedi</p>
+          </div>
+          <div>
+            <img src="assets/images/graph.png" alt="">
+          </div>
+        </div>
+      </section>
+    </article>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->

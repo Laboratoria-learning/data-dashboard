@@ -1,3 +1,162 @@
-/*
- * Estilos de tu proyecto
- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*Estilos del header*/
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #00000040;
+  font-weight: 900;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  position: relative;
+  margin: 0 5%;
+  /*outline: 1px solid black;*/
+  overflow: auto;
+  width: 90%;
+  text-align: center;
+}
+
+.left {
+  float: left;
+  display: inline-block;
+  padding-top: 13px;
+}
+
+.nav-bar {
+  float: left;
+  list-style: none;
+  padding-right: 20px;
+}
+
+.icon {
+  display: inline-block;
+}
+
+img {
+  height: 80px;
+  width: 200px;
+}
+
+.right {
+  float: right;
+  text-align: left;
+  padding-top: 26px;
+}
+
+.nav-extra {
+  float: left;
+  list-style: none;
+  padding-left: 20px;
+}
+
+.photo {
+  background-image: url(../assets/images/usuario.png);
+  background-size: cover;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  /*border: 3px solid white;*/
+}
+
+.language {
+  background-color: #FFC107;
+  width: 80px;
+  border-radius: 19px;
+  color: #000;
+  text-align: center;
+  padding:5px 0;
+}
+
+.language a {
+  color: #000;
+  text-decoration: none;
+}
+
+.language a:hover {
+  color: #fff;
+}
+
+/*Estilos a sección de selectores*/
+.selections {
+  padding-top: 100px;
+  background-color: #E1E1E1;
+  box-shadow: 10px 5px 5px #E1E1E1;
+}
+
+.sedes {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  border: 1px solid #00000040;
+  margin: 10px;
+  margin-left: 4.7em;
+}
+
+.tab ul li {
+  display: inline;
+}
+button {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  margin-left: 2em;
+}
+
+/*Estilos al primera pestaña Visión general*/
+article {
+  background-color: #F7F7F7;
+}
+
+article section {
+  background-color: #fff;
+  outline: 1px solid black;
+  margin: 20px;
+  overflow: auto;
+  text-align: center;
+}
+
+.enrollment {
+  display: inline-block;
+  float:left;
+}
+
+.achievement {
+  display: inline-block;
+}
+
+.nps {
+  display: inline-block;
+  float: right;
+}
+
+.tech-skills {
+}
+
+.life-skills {
+}
+
+.student-satisfacción {
+  display: inline-block;
+  float: left;
+}
+
+.teacher-rating {
+  display: inline-block;
+}
+
+.jedi-rating {
+  display: inline-block;
+  float: right;
+}
