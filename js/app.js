@@ -32,8 +32,9 @@ studentsBtn.addEventListener('click', function(){
     var z = x.name;
       var img = document.createElement('img');
       var p = document.createElement('p');
-      p.textContent = z
+      p.textContent = z;
       img.setAttribute('src',y)
+      img.setAttribute('class','y')
       console.log(img);
 
       //div.innerHTML = x.name + '</br>';
