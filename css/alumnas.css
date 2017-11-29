@@ -1,0 +1,129 @@
+/*agregando estilos a la section students*/
+.students{
+    box-sizing: content-box;
+    padding:0 ;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+  }
+  .columna-izquierda,.columna-derecha,.colum-1,.colum-2{
+    display: inline-block;
+    margin: 7px;
+  }
+  .columna-izquierda{
+    position: absolute;
+    left: 0;
+    width:40%;
+    height: 100%;
+    padding: 7px;
+    
+  }
+  .especializacion{
+    position: absolute;
+    right: 0;
+    padding: 15px;
+    width: 450px;
+    border-radius: 5px;
+    background: #f7f7f7;
+    border-bottom: 1px solid gray; 
+    border-right:  1px solid gray;
+  }
+
+  .h1color{
+      color: #ffc107;
+  }
+  
+  .especializacion ul,.colum-1 ul{
+    padding: 0;
+  }
+  .especializacion ul li{
+    list-style: none;
+  }
+
+  .icon-square-o{
+    margin-right: 10px;
+    color: #ffc107;
+  }
+  .icon-square-o:hover{
+    background: #ffc107;
+  }
+  .columna-derecha{
+    position:absolute;
+    right: 0;
+    width:55%;
+    height: 100%;
+  }
+  .search{
+    position: absolute;
+    left: 0;
+    width: 820px;
+    height: 40px;
+    top: 0;
+    border-radius: 5px;
+    background: #f7f7f7;
+    border-bottom: 1px solid gray; 
+    border-right:  1px solid gray;
+  }
+  input{
+    display:inline-block;
+    border: none;
+    outline: none;
+    width: 670px;
+    background: #f7f7f7;  
+  }
+  .icon-search{
+    display: inline-block;
+    margin: 10px;
+  }
+  .students-skills{
+    position:absolute;
+    left: 0;
+    top:60px;
+    padding: 10px;
+    width: 800px;
+    height: 190px;
+    border-radius: 5px;
+    background: #f7f7f7;
+    border-bottom: 1px solid gray; 
+    border-right:  1px solid gray;
+  }
+  .figure{
+    margin: 5px;
+    float: left;
+  }
+  .figure .image{
+    width: 160px;
+    height: 180px;
+  }
+  .colum-1{
+    font-size: 20px;
+  }
+
+  .h1nombre{
+      color: #ffc107;
+  }
+  
+  .colum-1 h1,.colum-1 p,.box h1,.box p{
+    margin: 0;
+  }
+  
+  .colum-1 ul li{
+    padding: 2px;
+    display: inline-block;
+    list-style: none;
+    font-size: 10px;
+    margin-right: 20px;
+    background: white;  
+  }
+  .colum-2{
+    float: right;
+    margin:10px;
+    font-size: 10px;
+  }
+  .box{
+    display: inline-block;
+    padding: 8px;
+    margin-right: 5px;
+    background:white;
+  }
