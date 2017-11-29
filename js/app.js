@@ -50,11 +50,17 @@ window.addEventListener('load', function() {
   });
 
   // Mostrando información de cede Lima - lim20162
+  lim20162.addEventListener('click', callSede);
+ 
+  callSede('LIM', '2016-2');  
   
-  lim20162.addEventListener('click', function callSede() {
+  function callSede(sede, generacion) {
+    /* if (event.target.matches('lim-2016-2')) {
+      
+    }*/
     var numEnrollment = document.getElementById('numEnro');
-    var arrayAlumn = data.LIM['2016-2']['students'];
-    var totalAlumn = data.LIM['2016-2']['students'].length;
+    var arrayAlumn = data[sede][generacion]['students'];
+    var totalAlumn = data[sede][generacion]['students'].length;
     var desert = document.getElementById('desert');
     var active = document.getElementById('active');
 
@@ -90,52 +96,12 @@ window.addEventListener('load', function() {
       var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
       chart.draw(data, options);
     }
-  });
+  }
 
-  lim20171.addEventListener('click', function callSede() {
-    var numEnrollment = document.getElementById('numEnro');
-    var arrayAlumn = data.LIM['2017-1']['students'];
-    var totalAlumn = data.LIM['2017-1']['students'].length;
-    var desert = document.getElementById('desert');
-    var active = document.getElementById('active');
-
-    numEnrollment.textContent = 'Total :' + totalAlumn;
-    var activeStudents = 0;
-    var desertStudents = 0;
-
-    for (i = 0; i < arrayAlumn.length; i++) {     
-      if (arrayAlumn[i]['active'] === true) {
-        activeStudents++;
-      } if (arrayAlumn[i]['active'] === false) {
-        desertStudents++;
-      }  
-    }
-    active.textContent = 'Activas :' + activeStudents ;
-    desert.textContent = 'Desertoras :' + desertStudents ;
+  function supMeta() {
     
-
-    // UTILIZAMOS GOOGLE CHARTS PARA GENERAR GRAFICO INTERACTIVO
-    google.charts.load('current', {'packages': ['corechart']});    
-    google.charts.setOnLoadCallback(drawChart);
-    function drawChart() {      
-      var data = new google.visualization.DataTable();
-      data.addColumn('string', 'Topping');
-      data.addColumn('number', 'Slices');
-      data.addRows([
-        ['Activas', activeStudents],
-        ['Desertoras', desertStudents],                 
-      ]);
-      var options = {'title': 'Total de Alumnas :' + totalAlumn,
-        'width': 400,
-        'height': 300};  
-      var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-      chart.draw(data, options);
-    }
-  });
-
-
-
-  
+    console.log(data.LIM['2016-2']['students'][0]['sprints'][0]['score']['tech']);
+  }
 });
 
 
