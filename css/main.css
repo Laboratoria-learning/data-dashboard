@@ -45,3 +45,226 @@
     font-weight: 700;
     font-family: sans-serif;
 }
+/*Styles a la página web*/
+ *{
+    margin: 0;
+    padding: 0;
+  }
+  /*Alineo mi texto en el centro*/
+body{
+    text-align: center;
+    }
+header{
+    width: 100%;
+    overflow: hidden;/*para desplazar algunos elementos de izquierda y derecha*/
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 2;
+    background: #B1ABAC;
+   }
+   .head{
+    width: 95%;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;/*para desplazar algunos elementos de izquierda y derecha*/
+    }
+
+    .logo-header{
+        width: 20%;
+        float: left;
+        padding: 1%;
+        margin-left: 2%;
+    }
+  header nav{
+     float: right;
+     line-height: 100px;
+    /* padding-right: 2%; */
+    }
+  header nav a{
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 10px;
+      line-height: normal;
+      font-size: 15px;
+      font-weight: bold;
+    }
+  header nav a:hover{
+     color: #18bc9c;
+    }
+  header nav a:active{
+      color: #eff3f2;
+      background-color: #18bc9c;
+      padding: 10px;
+      border-radius: 5px;
+     }
+  .menu{
+      width: 20%;
+      display: inline-block;
+      float: left;
+      margin-left: 2%;
+      height: 1000px;
+      background: #333;
+            }
+ #result{
+     background: #C0BEBE;
+     padding: 100px ;
+     display: inline-block;
+     width: 60% ;
+     height: 1000px;
+     float: left;
+ }
+
+ /*Style para el menú*/
+
+ ul.acorh,
+ ul.acorh * {
+ margin: 0;
+ padding: 0;
+ border: 0;
+ }
+ ul.acorh {
+ margin: 0 auto;
+ padding: 0;
+ list-style: none;
+ width: 100%;
+ font-size: 18px;
+ }
+ ul.acorh li {
+ list-style: none;
+ }
+ /*Primeros títulos*/
+ /*---------------------*/
+ ul.acorh li a {
+   display: block;
+   padding: 10px 10px 10px 20px;
+   background: #333;
+   color: #eee;
+   border-bottom: 1px solid #000;
+   border-top: 1px solid #666;
+   text-decoration: none;
+   box-sizing: border-box;
+   }
+   ul.acorh li ul {
+   max-height: 0;
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   overflow: hidden;
+   transition: .3s all ease-in;
+   }
+   ul.acorh li li a {
+   padding: 10px 10px 10px 40px;
+   background: #999;
+   color: #000;
+   font-size: 16px;
+   border: 0;
+   border-bottom: 1px solid #ccc;
+   box-sizing: border-box;
+   }
+   ul.acorh li li:last-child a {
+   border-bottom: 0;
+   }
+   ul.acorh li:hover ul {
+   max-height: 1000px;
+   transition: .3s all ease-in;
+   }
+   ul.acorh li a:hover {
+   background: #666;
+   color: #fff;
+   }
+  /*---------------------*/
+  ul.acorh ul.children li {
+   list-style: none;
+   }
+
+  ul.acorh ul.children li a {
+   display: block;
+   padding: 10px 10px 10px 20px;
+   background: #BBB8B8;
+   color: #080808;
+   border-bottom: 1px solid #000;
+   border-top: 1px solid #666;
+   text-decoration: none;
+   box-sizing: border-box;
+   }
+   ul.acorh ul.children li ul {
+   max-height: 0;
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   overflow: hidden;
+   transition: .3s all ease-in;
+   }
+   ul.acorh ul.children li li a {
+   padding: 10px 10px 10px 40px;
+   background: #C5B8B8;
+   color: #000;
+   font-size: 16px;
+   border: 0;
+   border-bottom: 1px solid #ccc;
+   box-sizing: border-box;
+   }
+   ul.acorh ul.children li li:last-child a {
+   border-bottom: 0;
+   }
+   ul.acorh ul.children li:hover ul {
+   max-height: 300px;
+   transition: .3s all ease-in;
+   }
+   ul.acorh ul.children li a:hover {
+   background: #666;
+   color: #fff;
+   }
+ /*---------------------------*/
+ 
+ ul.acorh ul.children  ul.children2 li {
+   list-style: none;
+   }
+ ul.acorh ul.children ul.children2 li a {
+   display: block;
+   padding: 10px 10px 10px 20px;
+   background: #333;
+   color: #eee;
+   border-bottom: 1px solid #000;
+   border-top: 1px solid #666;
+   text-decoration: none;
+   box-sizing: border-box;
+   }
+   ul.acorh ul.children ul.children2 li ul {
+   max-height: 0;
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   overflow: hidden;
+   transition: .3s all ease-in;
+   }
+   ul.acorh ul.children ul.children2 li li a {
+   padding: 10px 10px 10px 40px;
+   background: #999;
+   color: #000;
+   font-size: 16px;
+   border: 0;
+   border-bottom: 1px solid #ccc;
+   box-sizing: border-box;
+   }
+   ul.acorh ul.children ul.children2 li li:last-child a {
+   border-bottom: 0;
+   }
+   ul.acorh ul.children ul.children2 li:hover ul {
+   max-height: 300px;
+   transition: .3s all ease-in;
+   }
+   ul.acorh ul.children ul.children2 li a:hover {
+   background: #666;
+   color: #fff;
+   }
+   /*Para la imagen del usuario*/
+   .silueta{
+    width: 75%;
+    border-radius: 50%;
+    margin: 5%;
+    }
+    figcaption{
+        color: white;
+    }
