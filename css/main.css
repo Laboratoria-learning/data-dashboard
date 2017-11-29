@@ -27,6 +27,9 @@ body {
   margin:0;
   height:50%;
 }
+h3 {
+  padding: 12px 0px;
+}
 /*Estilos del Header */
 header {
   width: 100%;
@@ -50,8 +53,7 @@ header #icon-menu {
 #wrapper {
   width: 100%;
   display: flex;
-  height: 1500px;
-  padding: 5px; 
+  height: 1750px; 
 }
 /*Estilos del Nav*/
 
@@ -69,7 +71,7 @@ nav .nav-sedes {
 main {
   display: inline-block;
   width:90%;
-  background-color: #c3c3c3;
+  background-color: #f1eeeeee;
 }
 .selected-box {
   padding:10px;
@@ -86,8 +88,11 @@ main {
 }
 .chart {
   width:30%;
+  height: 300px;
   overflow:hidden;
   vertical-align:top;
+  padding:30px 10px;
+  border-radius: 8px;
 }
 .data-boxes {
   overflow: hidden;
@@ -102,16 +107,38 @@ main {
 }
 .graphic {
   background-color: #fff;
+  border-radius:8px;
+  padding:20px 0px;
 }
 .second-graph {
   width: 80%;
   margin: auto;
 }
 /*Estilos Students Section */
+#container-students {
+  margin-top:2%;
+}
 .specialization {
   text-align: left;
+  width: 30%;
+  vertical-align: middle;
+  padding:10px;
 }
 .students {
+  text-align: left;
   width:60%;
-  background-color:black;
+  background-color:rgb(197, 196, 196);
+  vertical-align: top;
+  padding:15px;
+  border-radius: 8px;
+  
+}
+.search-students {
+  display:inline-block;
+  width:600px;
+  height:40px;
+}
+form .fa-search {
+  padding: 10px;
+
 }
