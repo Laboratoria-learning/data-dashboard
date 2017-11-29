@@ -1,7 +1,7 @@
 // creando ...
 window.addEventListener('load', function() {
   var overview = document.getElementById('general');
-  // enrollment 
+  // enrollment
   var enrollment = document.createElement('div');
   var enrollOne = document.createElement('div');
   var titleEnroll = document.createElement('h1');
@@ -30,7 +30,7 @@ window.addEventListener('load', function() {
   enrollment.setAttribute('class', 'enrollmentClass');
   enrollOne.setAttribute('class', 'enrollOne');
   enrollTwo.setAttribute('class', 'enrollTwo');
-  // achievement 
+  // achievement
   var achievement = document.createElement('div');
   var achiOne = document.createElement('div');
   var achiTwo = document.createElement('div');
@@ -44,7 +44,7 @@ window.addEventListener('load', function() {
   percentTotal.innerText = totalAchivement('LIM', '2016-2');
   var textTotal = document.createElement('span');
   textTotal.innerText = '% of total( )'// allStudents('LIM', '2016-2');
-  // agregando al achievement 
+  // agregando al achievement
   general.appendChild(achievement);
   achievement.appendChild(titleAchi);
   achievement.appendChild(achiOne);
@@ -78,6 +78,7 @@ window.addEventListener('load', function() {
   promoterScore.appendChild(titleProSco);
   promoterScore.appendChild(promoterOne);
   promoterScore.appendChild(promoterTwo);
+
   promoterOne.appendChild(nps);
   promoterOne.appendChild(textNps);
   promoterTwo.appendChild(promoter);
@@ -87,6 +88,7 @@ window.addEventListener('load', function() {
   promoterScore.setAttribute('class', 'promoterClass');
   promoterOne.setAttribute('class', 'pOneClass');
   promoterTwo.setAttribute('class', 'pTwoClass');
+<<<<<<< HEAD
   // TechSkills
   var techSkills = document.createElement('div');
   var titleTS = document.createElement('h1');
@@ -125,6 +127,10 @@ window.addEventListener('load', function() {
   metTarget.setAttribute('class', 'metTargetStyle');
   totalTS.setAttribute('class', 'totalTSStyle');
   
+=======
+  // solo todos los alumnos completos
+
+>>>>>>> e393ddbe79127c17b7613e647cb9ebc12ec157d2
   // funcion para sacar la cantidad actual activos de estudiantes por sede
   function currentStudents(sede, gene) {
     var count = 0;
@@ -157,8 +163,8 @@ window.addEventListener('load', function() {
         count++;
       } var percent = Math.round((count / student.length) * 100);
     } return percent + ' %';
-  }
-  // promedio de sprint 
+  };
+  // promedio de sprint
   function promSprint(sede, gene) {
     var sede = data[sede];
     var generation = sede[gene];
@@ -184,8 +190,8 @@ window.addEventListener('load', function() {
           if (array[p][0] >= 1260 && array[p][1] >= 840) {
             complete++;
           }
-        } 
-      } 
+        }
+      }
     } return complete;
   }
   // para el achivement total.
@@ -208,7 +214,7 @@ window.addEventListener('load', function() {
     var arrayRatigns = [];
     for (var i = 0; i < numRatigns; i++) {
       // nps segun la formula dadaa
-      // nps = promoters - detractors 
+      // nps = promoters - detractors
       var nps = ratigns[i].nps.promoters - ratigns[i].nps.detractors;
       // agrega al array
       arrayRatigns.push(nps);

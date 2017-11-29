@@ -1,39 +1,187 @@
 /*
  * Estilos de tu proyecto
  */
+ /*seteando el proyecto*/
  * {
      padding: 0;
      margin: 0;
      box-sizing: border-box;
+     font-family: 'Montserrat', sans-serif;
  }
- header{
-     outline:1px solid pink;
+/*sección header*/
+ header {
      box-shadow: 2px 2px 2px gray;
+     height: 70px;
  }
  header img {
-    width: 150px;
-    height: 50px;
+    float: left;
+    margin-top: 20px;
+    margin-right: 350px;
+    width: 190px;
+    height: 80px;
     margin: auto 40%;
  }
- #location {
-     margin: 10px;
+
+header .fa {
+    margin-top: 30px;
+    float: right;
+    font-size: 30px;
+    }
+
+/*sección mainBarr*/
+
+#mainBarr {
+  height: 120px;
+  background-color: #e1e1e1;
+}
+
+ul li a {
+color: #000;
+text-decoration: none;
+text-transform: uppercase;
+float: left;
+display: inline-block;
+}
+
+li {
+  display: inline-block;
+  margin-top: 30px;
+  margin-left: 40px;
+}
+
+#location {
+background-color: #e1e1e1;
+width: 260px;
+height: 60px;
+margin-top: 10px;
+margin-left: 40px;
+font-weight: 900;
+font-size: 25px;
+border: none;
+text-transform: uppercase;
+}
+
+/*sección 1 enrollment*/
+
+ #general {
+   background-color: #e6ecf0;
+   height: 450px;
  }
- .overview{
+
+ }
+ .overview {
      display: inline-block;
      padding: 10px;
      float: left;
  }
-.enrollmentClass {
-    background-color: lightgray;
-    width: 25%;
-    float: left;
-}
-.achievementClass {
-    width: 25%;
-    background-color: lightgray;
-    float: left;
-}
- .titleStyle{
-     margin: 10px;
-     font-family: Arial, Helvetica, sans-serif;
+
+ .enrollmentClass {
+ background-color:#fff;
+ box-sizing: border-box;
+ display: inline-block;
+ width: 350px;
+ height: 300px;
+ padding: 20px;
+ border-top: 40px;
+ margin-left: 40px;
+ text-align: center;
  }
+
+.enrollOne {
+  background-color: #e6ecf0;
+  display: inline-block;
+  font-size: 20px;
+  width: 140px;
+  height: 60px;
+  font-size: 10px;
+  text-align: center;
+  margin-top: 15px;
+
+}
+
+.enrollTwo {
+    background-color: #e6ecf0;
+    float: left;
+    width: 140px;
+    height: 60px;
+    font-size: 11px;
+    text-align: center;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.achievementClass {
+  margin-top: 40px;
+  margin-left: 80px;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 20px;
+  display: inline-block;
+  width: 350px;
+  height: 300px;
+  text-align: center;
+}
+.achievementClass h1{
+  font-weight: bolder;
+}
+.achiOne {
+  background-color: #e6ecf0;
+  font-size: 10px;
+  height: 60px;
+  width : 140px;
+  display: inline-block;
+  text-align: center;
+  margin-top: 15px;
+
+  }
+
+.achiTwo {
+  background-color:#e6ecf0;
+  font-size: 11px;
+  height: 60px;
+  width : 140px;
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 15px;
+
+}
+
+.promoterClass {
+  float: right;
+  margin-top: 40px;
+  margin-right: 40px;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 20px;
+  display: inline-block;
+  width: 350px;
+  height: 300px;
+  text-align: center;
+}
+
+.pOneClass {
+  background-color:#e6ecf0;
+  font-size: 11px;
+  height: 60px;
+  width : 140px;
+  display: inline-block;
+  margin-top: 15px;
+
+}
+
+.pTwoClass {
+  background-color:#e6ecf0;
+  font-size: 11px;
+  height: 60px;
+  width : 140px;
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 15px;
+
+}
+
+.titleStyle {
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*seccion 2 Tech Skills/*

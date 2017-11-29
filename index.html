@@ -4,46 +4,52 @@
     <meta charset="utf-8">
     <title>Data Dashboard</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="assets/icons/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   </head>
   <body>
-    <header class="header" >
-      <div class="logo"></div>
-      <div class="menu"></div>
-    </header>
-<!--primera sección -->
+  <!--primera sección -->
   <header>
+      <i class="fa fa-bars"></i>
       <img src="assets/images/logo-laboratoria.svg" alt="LogoLaboratoria">
+
 
     </header>
     <!-- sede -->
-    <select id="location">
-      <option value="LIM">Lima
+    <section id="mainBarr">
+      <select id="location">
+        <option value="LIM">Lima
           <option value="LIM1">2016-2</option>
           <option value="LIM2">2017-1</option>
           <option value="LIM3">2017-2</option>
-      </option>
-        
+        </option>
+
       <option value="AQP">Arequipa
           <option value="AQP1">2016-2</option>
           <option value="AQP2">2017-1</option>
       </option>
-        
+
       <option value="CHL">Santiago de Chile
           <option value="CHL1">2016-2</option>
           <option value="CHL2">2017-1</option>
           <option value="CHL3">2017-2</option>
       </option>
-        
+
       <option value="MEX">Mexico
         <option value="MEX1">2017-1</option>
         <option value="MEX2">2017-2</option>
       </option>
     </select>
-
+    <ul>
+      <li><a href="#">Overview</a></li>
+      <li><a href="#">Students</a></li>
+      <li><a href="#">Teachers</a></li>
+    </ul>
+</section>
     <section id="general">
 
     </section>
-    
+
     <!--  
 		<!-- Base de datos -->
     <script src="./js/data.js"></script>
