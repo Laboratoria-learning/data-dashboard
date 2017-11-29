@@ -8,24 +8,27 @@
   </head>
   <body>
     <!-- estructura del header -->
-    <header class="header" id="header">
-      <figure>
-        <img class="imgLaboratoria" src="assets/images/logo-laboratoria.svg" alt="Logo Laboratoria">
-      </figure>
-      <div>
-        <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
-      </div>
-    </header>
+    <div class="headboard" id="headboard">
+      <header class="header" id="header">
+        <figure>
+          <img class="imgLaboratoria" src="assets/images/logo-laboratoria.svg" alt="Logo Laboratoria">
+       </figure>
+      </header>
     <!-- estructura del navber -->
-    <nav class="navber" id="navber">
-      <h1>SANTIAGO DE CHILE  <i class="fa fa-caret-down" aria-hidden="true"></i></h1>
-      <div class="listNav" id="listNav">
-        <ul>
-          <li><a href="#">OVERVIEW</a></li>
-          <li><a href="#">STUDENTS</a></li>
-          <li><a href="#">TEACHERS</a></li>
-        </ul>
-      </div>
+      <nav class="nav" id="nav">
+        <div>
+        <h1>SANTIAGO DE CHILE  <i class="fa fa-caret-down" aria-hidden="true"></i></h1>
+        </div>
+        <div class="menuBar" id="menuBar"> 
+        </div>
+        <div class="listNav" id="listNav">
+          <ul>
+            <li><button type="button" name="button" data-tab-selector ="tabOverviews" class="tab"> OVERVIEW </button></li>
+            <li><button type="button" name="button" data-tab-selector ="tabStudents" class="tab"> STUDENTS </button></li>
+            <li><button type="button" name="button" data-tab-selector ="tabTeachers" class="tab"> TEACHERS </button></li>
+          </ul>
+        </div>
+      </nav>
     </nav>
     <main>
       <div id="options" class="options">
@@ -53,6 +56,21 @@
         <div id="promoters"></div>
         <div id="passive"></div>
         <div id="detractors"></div>
+      </div>
+      <!-- para modificar -->
+      </div>
+      <div id="students">
+        <ul>
+          <li>holaaaaa</li>
+          <li>isaaa</li>
+          <li>holaaa</li>
+        </ul>
+      </div>
+      <div id="teachers">
+        <ul>
+          <li>caja 33333</li>
+          <li>caja33333</li>
+        </ul>
       </div>
     </main>
 		<!-- Base de datos -->
