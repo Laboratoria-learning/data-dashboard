@@ -6,6 +6,7 @@
     <link rel="icon" href="assets/images/labo-ico.ico">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
+    
   </head>
   <body>
     <header>
@@ -19,8 +20,9 @@
     <nav class="nav text-Uppercase">
       <img src="assets/images/l-image.png" alt="">
           <ul id="countries">
-            <li id="lima">
-              Lima
+            <li >
+                Lima
+               <!--<a href="" id="lima"></a>-->
               <i class="fa fa-sort-desc" aria-hidden="true"></i>
               <ul class="city hide">
                 <li id="lim-2016-2">2016-II</li>
@@ -29,7 +31,7 @@
               </ul>
             </li>
             <li>
-              Arequipa
+               <a href="" id="Arequipa">Arequipa</a>
               <i class="fa fa-sort-desc" aria-hidden="true"></i>
               <ul class="city hide">
                 <li id="aqp-2016-2">2016-II</li>
@@ -37,7 +39,7 @@
               </ul>
             </li>
             <li>
-              Santiago
+               <a href="" id="Santiago">Santiago</a>
               <i class="fa fa-sort-desc" aria-hidden="true"></i>
               <ul class="city hide">
                 <li id="scl-2016-2">2016-II</li>
@@ -46,7 +48,7 @@
               </ul>
             </li>
             <li>
-              Mexico df
+               <a href="" id="MexicoDf">Mexico df</a>
               <i class="fa fa-sort-desc" aria-hidden="true"></i>
               <ul class="city hide">
                 <li id="cdmx-2017-1">2017-I</li>
@@ -62,13 +64,12 @@
 
     <section class="section">
       <div class="firts one">
-        <h2>ENROLLMENT</h2>
+        <h2>ESTUDIANTES</h2>
         <span class="info" id="numEnro"></span>
-        <span class="info right">20%
-          <br> %droppout</span>
-        <figure class="img">
-          <img src="assets/images/bar-graph.png" alt="">
-        </figure>
+        <span class="info right" id="desert">  </span>
+        <span class="info" id="active"></span>
+        <div id="chart_div"></div>
+        
       </div>
 
       <div class="firts two">
@@ -154,5 +155,8 @@
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
     <script src="./js/app.js"></script>
+    <!-- GOOGLE CHARTS-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    
   </body>
 </html>
