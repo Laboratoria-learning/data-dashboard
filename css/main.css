@@ -196,6 +196,15 @@ a {
   box-sizing: border-box;
   text-decoration: none;
 }
+
+a:hover {
+  background-color: black;
+  color: #fb1;
+}
+
+a:active {
+  text-decoration: underline;
+}
 /*Diseñando las imagenes de estadistica*/
 .img img{
   width: 234px;

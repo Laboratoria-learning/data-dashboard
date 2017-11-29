@@ -1,4 +1,4 @@
-var frontEnd = document.getElementById('frontEnd');
+var student = document.getElementById('student');
 var container = document.getElementsByClassName('container')[0];
 /*Variables globales por sedes*/
 //Lima
@@ -16,10 +16,9 @@ var container = document.getElementsByClassName('container')[0];
  var arrayAlumn20171M = data.CDMX['2017-1']['students'];
  var arrayAlumn20172M = data.CDMX['2017-2']['students'];
 
-
-frontEnd.addEventListener('click', showAlumn);
+showAlumn();
+//student.addEventListener('onclick', showAlumn);
 function showAlumn() {
-
   //var dataArray = data.AQP["2016-2"]['students'];
   for (var i = 0; i < arrayAlumn20162A.length; i++) {
     if(arrayAlumn20162A[i]['active'] == true){
