@@ -15,14 +15,25 @@
     </nav>
     <nav>
       <div class="menuDos">
-        <select class="" name="alumnas-lab">
-          <option value="2017-II">2017-II</option>
-    			<optgroup label="chile"></optgroup>
-    			<optgroup label="arequipa"></optgroup>
-    			<optgroup label="mexico"></optgroup>
-    			<optgroup label="arequipa"></optgroup>
-    			<optgroup label="peru"></optgroup>
-    			<optgroup label="brazil"></optgroup>
+        <select id="filtro" name="filtro">
+          <optgroup id="lima" label="Lima">
+            <option id="0" value="0">2016-2</option>
+            <option id="1" value="1">2017-1</option>
+            <option id="2" value="2">2017-2</option>
+          </optgroup>
+          <optgroup label="Arequipa">
+            <option id="3" value="3">2016-2</option>
+            <option id="4" value="4">2017-1</option>
+          </optgroup>
+          <optgroup label="Chile">
+            <option id="5" value="5">2016-2</option>
+            <option id="6" value="6">2017-1</option>
+            <option id="7" value="7">2017-2</option>
+          </optgroup>
+          <optgroup label="Mexico">
+            <option id="8" value="8">2017-1</option>
+            <option id="9" value="9">2017-2</option>
+          </optgroup>
 		    </select>
         <ul>
           <li id="overview">overview</li>
@@ -34,9 +45,25 @@
   </header>
   <main id="paginaView" class="enabled">
     <section>
-      <div id="top_x_div" class="box-barras"></div>
-      <div><img src="assets\images\graph.png" alt=""></div>
-      <div><img src="assets\images\graph.png" alt=""></div>
+      <div class="container">
+        <div id="top_x_div" class="box-barras"></div>
+        <div class="caja">
+          <span id="total">t</span>
+        </div>
+        <div class="caja">
+          <span id="porcentaje"></span>
+        </div>
+      </div>
+      <div class="container">
+        <div id="meta" class="caja"></div>
+        <div class="caja"></div>
+        <img src="assets\images\graph.png" alt="">
+      </div>
+      <div class="container">
+        <div class="caja"></div>
+        <div class="caja"></div>
+        <img src="assets\images\graph.png" alt="">
+      </div>
     </section>
     <section>
       <img src="assets\images\rectangular-graphic.png" alt="">
@@ -47,9 +74,27 @@
       <img src="assets\images\circle-graphic.png" alt="">
     </section>
     <section>
-      <div><img src="assets\images\graph.png" alt=""></div>
-      <div><img src="assets\images\graph.png" alt=""></div>
-      <div><img src="assets\images\graph.png" alt=""></div>
+      <div class="container">
+        <h1>STUDENT SATISFACTION</h1>
+        <div class="caja">
+
+        </div>
+        <img src="assets\images\graph.png" alt="">
+      </div>
+      <div class="container">
+        <h1>TEACHER RATING</h1>
+        <div id="box-teacher" class="caja">
+
+        </div>
+        <img src="assets\images\graph.png" alt="">
+      </div>
+      <div class="container">
+        <h1>JEDI MASTER RATING</h1>
+        <div id="box-jedi" class="caja">
+
+        </div>
+        <img src="assets\images\graph.png" alt="">
+      </div>
     </section>
   </main>
   <main id="paginaStudents" class="disabled">

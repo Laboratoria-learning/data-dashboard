@@ -16,34 +16,13 @@ window.addEventListener('load', function() {
 
 
   /* ***************************************************************llamando por sede y por promocion**********************************************************************/
-  filtro.addEventListener('change', function(event) {
-    switch (event.target.value) {
-    case '0': sedePromo('LIM', '2016-2');
-      break;
-    case '1':sedePromo('LIM', '2017-1');
-      break;
-    case '2':sedePromo('LIM', '2017-2');
-      break;
-    case '3':sedePromo('AQP', '2016-2');
-      break;
-    case '4':sedePromo('AQP', '2017-1');
-      break;
-    case '5':sedePromo('SCL', '2016-2');
-      break;
-    case '6':sedePromo('SCL', '2017-1');
-      break;
-    case '7':sedePromo('SCL', '2017-2');
-      break;
-    case '8':sedePromo('CDMX', '2017-1');
-      break;
-    case '9':sedePromo('CDMX', '2017-2');
-      break;
-    }
-    function sedePromo(sede, promo) {
-      var arr = data[sede][promo]['students'];
+  filtro.addEventListener('change', function() {
+    if (event.target.value === '1') {
+      var arr = data['LIM']['2016-2']['students'];
       var cant = 0;
       var nocant = 0;
       for (var i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
         if (arr[i].active === true) {
           cant++;
         } else {
@@ -61,6 +40,7 @@ window.addEventListener('load', function() {
   var cant = 0;
   var nocant = 0;
   for (var i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
     if (arr[i].active === true) {
       cant++;
     } else {
@@ -75,12 +55,17 @@ window.addEventListener('load', function() {
   var sumaRatings = 0;
   for (var i = 0; i < arrRatings.length; i++) {
     var ratings = data['AQP']['2016-2']['ratings'][i]['student']['supera'];
+    console.log(ratings);
     sumaRatings = sumaRatings + ratings;
     var promedio = parseInt(sumaRatings / arrRatings.length);
   }
   meta.textContent = 'promedio' + promedio;
+  console.log(arrRatings.length);
+  console.log(sumaRatings);
+  console.log(promedio);
   /* cantida de nps*********************************************************************************/
   var arrNps = data['AQP']['2016-2']['ratings'][0]['nps']['passive'];
+  console.log(arrNps);
   for (var i = 0; i < arrRatings.length; i++) {
     data['AQP']['2016-2']['ratings'][i]['nps']['passive'];
   }
@@ -143,3 +128,41 @@ function drawStuff() {
   // Convert the Classic options to Material options.
   chart.draw(data, google.charts.Bar.convertOptions(options));
 };
+/* **************************************************grafico circular**************************************************************/
+// Puedes hacer uso de la base de datos a través de la variable `data`
+// Load the Visualization API and the corechart package.
+google.charts.load('current', {'packages': ['corechart']});
+
+// Set a callback to run when the Google Visualization API is loaded.
+google.charts.setOnLoadCallback(drawChart);
+
+// Callback that creates and populates a data table,
+// instantiates the pie chart, passes in the data and
+// draws it.
+function drawChart() {
+  // Create the data table.
+  var data = new google.visualization.DataTable();
+  data.addColumn('string', 'Topping');
+  data.addColumn('number', 'Slices');
+  data.addRows([
+    ['Mushrooms', 2],
+    ['Onions', 3],
+    ['Olives', 1],
+    ['Zucchini', 1],
+    ['Pepperoni', 1]
+  ]);
+
+  // Set chart options
+  var options = {
+    'title': 'How Much Pizza I Ate Last Night',
+    'width': 400,
+    'height': 400,
+  };
+
+  // Instantiate and draw our chart, passing in some options.
+  var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+  chart.draw(data, options);
+}
+
+console.log(data);
+console.log(data['AQP']['2016-2']['students'][0].active);

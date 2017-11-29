@@ -22,18 +22,22 @@
  }
  /* overview*/
  select {
-     background: transparent;
+     /*background: transparent;*/
      border: none;
      font-size: 14px;
      height: 30px;
      padding: 5px;
      width: 250px;
 		 outline: none;
+     margin: 20px 200px;
   }
   .menuDos li {
     display: inline-block;
     margin: 10px;
     list-style: none;
+  }
+  .menuDos ul #overview{
+    margin-left: 200px;
   }
   section{
     width: 90%;
@@ -74,6 +78,21 @@ margin: 30px 50px;
 
 .box-barras{
   outline: 1px solid red;
-  width: 600px;
-  height: 600px;
+  width: 300px;
+  height: 250px;
+  position: absolute;
+  bottom: 0;
+}
+.caja {
+  outline: 1px solid blue;
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+.container {
+  outline: 1px solid black;
+  width: 350px;
+  height: 350px;
+  position: relative;
+  top: 0;
 }
