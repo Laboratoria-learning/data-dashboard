@@ -1,3 +1,9 @@
+var objSedes = Object.keys(data);
+console.log(objSedes);
+
+var allSedes = document.querySelectorAll('.sede');
+console.log(allSedes);
+
 // sedes y prefijos
 var arequipa = 'AQP' ;
 var mexico = 'CDMX' ;
@@ -21,6 +27,7 @@ var sede1 = document.getElementById('sede_1');
 var sede2 = document.getElementById('sede_2');
 var sede3 = document.getElementById('sede_3');
 
+
 sedeGeneration.addEventListener('click', showListSedes);
 function showListSedes(event) {
   listSedes.classList.toggle('list_active');
@@ -32,10 +39,54 @@ function showListSedes(event) {
     */
 };
 
-sede0.addEventListener('click', addVarSede);
-function addVarSede(event) {
-
+for (var i = 0; i < allSedes.length; i++) {
+  allSedes[i].addEventListener('click', addVarSede);
+  function addVarSede(event) {
+  //  console.log(event.target.dataset.cod);
+    var codeSede = event.target.dataset.sedecod;
+    console.log(codeSede);
+  };
+  allSedes[i].addEventListener('click')
 }
+
+
+/*var codeSede = '' ;
+switch (true) {
+case event.target.dataset.cod = 0:
+  codeSede = 0 ;
+  break;
+case event.target.dataset.cod = 1:
+  codeSede = 1 ;
+  break;
+case event.target.dataset.cod = 2:
+  codeSede = 2 ;
+  break;
+case event.target.dataset.cod = 3:
+  codeSede = 3 ;
+  break;
+}
+*/
+//  console.log(codeSede) ;
+
+/*
+sede1.addEventListener('click', addVarSede);
+function addVarSede(event) {
+  var codeSede = 1 ;
+  console.log(codeSede) ;
+}
+
+sede2.addEventListener('click', addVarSede);
+function addVarSede(event) {
+  var codeSede = 2 ;
+  console.log(codeSede) ;
+}
+
+sede3.addEventListener('click', addVarSede);
+function addVarSede(event) {
+  var codeSede = 3 ;
+  console.log(codeSede) ;
+}
+
 /*
 codeSede0.addEventListener('click', addvarcodesede);
 function addvarcodesede(event) {
@@ -47,7 +98,7 @@ function addvarcodesede(event) {
 */
 
 // data.AQP["2016-2"].students.length --> me da el total de estudiantes de arequipa 2016-2
-console.log(data);
+//console.log(data);
 
 // var students = data.AQP['2016-2'].students.length ;
 // console.log(students);
