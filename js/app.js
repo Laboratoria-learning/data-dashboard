@@ -21,13 +21,49 @@ function arrayLocations(data, sede, number) {
   }
   return keys;
 }
-  
+/*
+  foto de la usuaria || nombre de la usuaria
+  hr
+  add student
+  hr
+  remove student
+  hr
+  add sprint
+  hr
+  */ 
 arrayLocations(data, 'LIM', '2016-2');
 
 var inputStudents = document.getElementById('students');
 inputStudents.addEventListener('click', function() {
-  document.body.innerHTML = data['LIM']['2016-2']['students'];
+  // document.body.innerHTML = data['LIM']['2016-2']['students']['photo'];
+  // var img = data['LIM']['2016-2']['students'][0]['photo'];
+  // document.body.innerHTML = data['LIM']['2016-2']['students'][0]['photo'];
+  var info = Object.keys(data['LIM']['2016-2']['students']).length;
+  for (var i = 0; i < info; i++) {
+    // document.body.innerHTML = data['LIM']['2016-2']['students'][i]['photo'];
+   
+    var img = document.createElement('img');
+    var container = data['LIM']['2016-2']['students'][i]['photo'];
+    img.setAttribute('src', container);
+    
+    var div = document.createElement('div');
+    div.appendChild(img);
+    document.body.appendChild(div);
+
+
+  }
 });
+/*
+var iconHumburger = document.getElementById('icon-hamburger');
+iconHumburger.addEventListener('click', function() {
+  var creatingDiv = document.createElement('div');
+  var creatingP = document.createElement('p');
+  var text = document.createTextNode('hey');
+  creatingP.appendChild(text);
+  creatingDiv.appendChild(creatingP);
+  iconHumburger.appendChild(creatingDiv);
+});*/
+
 
 // Puedes hacer uso de la base de datos a través de la variable `data`
 console.log(data);
