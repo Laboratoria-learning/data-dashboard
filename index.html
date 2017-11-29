@@ -5,36 +5,34 @@
     <title>Data Dashboard</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Oswald|Roboto+Condensed" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Oswald|Questrial|Roboto+Condensed" rel="stylesheet">
   </head>
   <body>
     <header>
-      <nav>
-        <section>
-          <div class="logo">
-            <figure>
-                <img class="brand" src="assets/images/images.png" alt="imagen">
-            </figure>
-          </div>
-          <div class="icon">
-          <i class="fa fa-bars" aria-hidden="true"></i>
-          </div>
-        </section>
-        <h1 class="title">SANTIAGO DE CHILE 2017-II</h1>
-        <section id="br">
-          <i class="fa fa-caret-down" aria-hidden="true"></i>
-        </section>
-        <div class="bar">
-          <h2 class="subtitle">OVERVIEW</h2>
-          <h2 class="subtitle">STUDENTS</h2>
-          <h2 class="subtitle">TEACHERS</h2>
+      <div class="nav">
+        <div class="container">
+          <figure>
+            <img class="brand" src="assets/images/images.png" alt="imagen">
+          </figure>
+          <span>
+            <i class="icon fa fa-bars" aria-hidden="true"></i>
+          </span class="icon">
         </div>
-
-      </nav>
+      </div>
     </header>
     <main>
+      <nav class="menu">
+        <div class="container">
+          <div class="menu-principal">
+            <h1 class="title">SANTIAGO DE CHILE 2017-II</h1>
+            <i class="icon fa fa-caret-down" aria-hidden="true"></i>
+          </div>
+          <div class="submenu">
+            <h2 class="subtitle active">OVERVIEW</h2>
+            <h2 class="subtitle">STUDENTS</h2>
+            <h2 class="subtitle">TEACHERS</h2>
+          </div>
+        </div>
+      </nav>
       <section>
         <div class="data-div">
           <h3>ENROLLMENT</h3>
@@ -47,44 +45,41 @@
             <span>DROPOUT</span>
           </div>
         </div>
-
         <div class="data-div">
           <h3>ACHIEVEMENT</h3>
           <div class="data">
             <span>105</span>
             <span># STUDENTS THAT MEET THE TARGET</span>
           </div>
-            <div class="data">
-              <span>78%</span>
-              <span>% of total (135)</span>
+          <div class="data">
+            <span>78%</span>
+            <span>% of total (135)</span>
             <i class="fa fa-caret-up" aria-hidden="true"></i>
-            </div>
           </div>
-
-
+        </div>
         <div class="data-div">
           <h3>NET PROMOTER SCORE</h3>
           <div class="data">
             <span>78%</span>
             <span>% CUMULATIVE NPS</span>
-          <i class="fa fa-caret-up" aria-hidden="true"></i>
-        </div>
-            <div class="data">
-              <span>60% PROMOTERS</span>
-              <span>30% PASSIVE </span>
-              <span>10% DETRACTORS</span>
+            <i class="fa fa-caret-up" aria-hidden="true"></i>
+          </div>
+          <div class="data">
+            <span>60% PROMOTERS</span>
+            <span>30% PASSIVE </span>
+            <span>10% DETRACTORS</span>
           </div>
       </div>
     </section>
-
-      <section>
-        <div class="data-div">
+    <section class="tech-skills">
+      <div class="data-div">
+        <div class="select-tech">
           <h3>TEACH SKILLS</h3>
-            <input class="raya_one"type="text" placeholder="overall(cumulative)">
-        <section id="br-1">
+          <div class="content-search">
+            <p>overall (cumulative)</p>
+          </div>
           <i class="fa fa-caret-down" aria-hidden="true"></i>
-        </section>
-
+        </div>
         <div class="data">
           <span>90</span>
           <span>#STUDENTS THAT MEET THE TARGET</span>
@@ -94,60 +89,55 @@
           <span>OF TOTAL (135)</span>
         </div>
       </div>
-      </section>
-
-      <section>
-        <div class="data-div">
+    </section>
+    <section class="life-skills">
+      <div class="data-div">
+        <div class="select-tech">
           <h3>LIFE SKILLS</h3>
-          <input class="raya_two"type="text" placeholder="latest Sprint(S4)">
-          <section id="br-2">
-            <i class="fa fa-caret-down" aria-hidden="true"></i>
-          </section>
-
+          <div class="content-search">
+            <p>Lastest Sprint (S4)</p>
+          </div>
+          <i class="fa fa-caret-down icon" aria-hidden="true"></i>
+        </div>
         <div class="data">
-          <span>80 <span>
+          <span>80</span>
           <span>#OVERALL CLASS AVERAGE</span>
         </div>
-          <div class="data">
-            <span>62</span>
-            <span># OF STUDENTS THAT MEET THE TARGET</span>
-          </div>
-       </div>
-      </section>
-
-      <section>
-        <div class="data-div">
-          <h3>STUDENT SATISFACTION</h1>
-          <div class="data">
-            <span>140 </span>
-          </div>
-          <div class="data">
-              <span>% MEETING OR EXCEEDING EXPECTATIONS (CUMULATIVE)</span>
-          </div>
-        </div>
-
-        <div class="data-div">
-          <h3>TEACHER RATING</h3>
-          <div class="data">
-            <span>4.2</span>
-          </div>
-          <div class="data">
-            <span>OVERALL TEACHER RATING (CUMULATIVE)</span>
-          </div>
-        </div>
-
-        <div class="data-div">
-          <h3>JEDI MASTER RATING</h3>
-          <div class="data">
-            <span>50</span>
-          <i class="fa fa-caret-up" aria-hidden="true"></i>
-        </div>
-          <div class="data">
-          </span>OVERALL JEDI RATING (CUMULATIVE)</span>
+        <div class="data">
+          <span>62</span>
+          <span># OF STUDENTS THAT MEET THE TARGET</span>
         </div>
       </div>
-      </section>
-    </main>
+    </section>
+    <section>
+      <div class="student data-div">
+        <h3>STUDENT SATISFACTION</h3>
+        <div class="data">
+          <span>140</span>
+          <span>% MEETING OR EXCEEDING EXPECTATIONS (CUMULATIVE)</span>
+        </div>
+      </div>
+      <div class="teacher data-div">
+        <h3>TEACHER RATING</h3>
+        <div class="data">
+          <span>4.2</span>
+          <span>OVERALL TEACHER RATING (CUMULATIVE)</span>
+        </div>
+      </div>
+      <div class="jedi data-div">
+        <h3>JEDI MASTER RATING</h3>
+        <div class="data">
+          <span>50</span>
+          <span>OVERALL JEDI RATING (CUMULATIVE)</span>
+        </div>
+      </div>
+    </section>
+  </main>  
+      
+
+          
+
+          
 
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
