@@ -50,14 +50,24 @@ window.addEventListener('load', function() {
           nocant++;
         }
       }
-      var calculandoPorcentaje = parseInt((nocant / 15) * 100);
+      var calculandoPorcentaje = parseInt((nocant / arr.length) * 100);
       total.textContent = '# activas' + cant;
       porcentaje.textContent = '% desercion' + calculandoPorcentaje + '%';
+      /* Cantida de alumnas que superan el objetivo*******************************************************************/
+      var arrRatings = data[sede][promo]['ratings'];
+      var sumaRatings = 0;
+      for (var i = 0; i < arrRatings.length; i++) {
+        var ratings = data[sede][promo]['ratings'][i]['student']['supera'];
+        sumaRatings = sumaRatings + ratings;
+        var promedio = parseInt(sumaRatings / arrRatings.length);
+      }
+      meta.textContent = 'promedio' + promedio;
     }
   });
 
   /* **************************************************************Cantida de alumnas por sede y promocion*****************************************************************/
-  var arr = data['AQP']['2016-2']['students'];
+  var arr = data['CDMX']['2017-1']['students'];
+  console.log(arr);
   var cant = 0;
   var nocant = 0;
   for (var i = 0; i < arr.length; i++) {
@@ -67,22 +77,36 @@ window.addEventListener('load', function() {
       nocant++;
     }
   }
+  console.log(cant);
+  console.log(nocant);
   var calculandoPorcentaje = parseInt((nocant / 15) * 100);
   total.textContent = '# activas' + cant;
   porcentaje.textContent = '% desercion' + calculandoPorcentaje + '%';
   /* Cantida de alumnas que superan el objetivo*******************************************************************/
-  var arrRatings = data['AQP']['2016-2']['ratings'];
-  var sumaRatings = 0;
+  var arrRatings = data['AQP']['2016-2']['students'];
+  var sumaScore = 0;
   for (var i = 0; i < arrRatings.length; i++) {
-    var ratings = data['AQP']['2016-2']['ratings'][i]['student']['supera'];
-    sumaRatings = sumaRatings + ratings;
-    var promedio = parseInt(sumaRatings / arrRatings.length);
+    var suma = 0;
+    for (var j = 0; j < 4; j++) {
+      var tech = data['AQP']['2016-2']['students'][i]['sprints'][j]['score']['tech'];
+      var hse = data['AQP']['2016-2']['students'][i]['sprints'][j]['score']['hse'];
+      if (tech >= 1260 && hse >= 840) {
+        suma++;
+      } else {
+        suma = 0;
+      }
+    }
+    if (suma === 4) {
+      sumaScore++;
+    } else {
+      sumaScore = sumaScore;
+    }
   }
-  meta.textContent = 'promedio' + promedio;
+  console.log(sumaScore);
+  meta.textContent = 'meta' + sumaScore;
   /* cantida de nps*********************************************************************************/
   var arrNps = data['AQP']['2016-2']['ratings'][0]['nps']['passive'];
   for (var i = 0; i < arrRatings.length; i++) {
-    data['AQP']['2016-2']['ratings'][i]['nps']['passive'];
   }
   /* ******************************************************************************************************************/
   var promedioTeacher = 0;
