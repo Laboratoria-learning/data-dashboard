@@ -16,7 +16,7 @@ body{
     position: absolute;
     left: 42%;
  }
- 
+
 
  #btn {
      width: 40px;
@@ -38,7 +38,7 @@ body{
  }
 
 .menu-bar:hover{
-     background-color: lightgrey; 
+     background-color: lightgrey;
  }
 
  a {
@@ -65,28 +65,42 @@ body{
      margin-top: 30px;
  }
 
- .selection{
-     padding-left: 105px; 
- }
-
  .header{
      margin-top: 5px;
      margin-left: 70px;
      font-size: 35px;;
  }
 
-.options{
-    margin-left: 65px;
-}
-
 .option{
      margin: 10px;
      font-size:20px;
      list-style: none;
  }
-
+.list-option{
+  padding: 0px;
+}
  .list-option li {
     list-style: none;
     display: inline-block;
-    background-color: 
+    background-color:
+}
+select{
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  font-weight:600;
+  height: 30px;
+  padding: 5px;
+  width: 250px;
+  outline:0px;
+}
+input{
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  font-weight:600;
+  height: 30px;
+  padding: 5px;
+  width: 150px;
+  outline:0px;
 }

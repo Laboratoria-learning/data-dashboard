@@ -16,48 +16,48 @@
          </button>
          <nav id="menu-princ" class="disabled-menu">
            <ul class="menu-list">
-            <li class="menu-bar"><a href="#">ANNA DURAND</a></li> 
+            <li class="menu-bar"><a href="#">ANNA DURAND</a></li>
             <li class="menu-bar"><a href="#">Add strudent</a></li>
             <li class="menu-bar"><a href="#">Remove student</a></li>
             <li class="menu-bar"><a href="#">Add sprint</a></li>
            </ul>
           </nav>
-               
+
        </div>
        <div class="bod1">
          <div class="information">
-           <div class="selection">
             <select name="selection-located" id="selection-located">
-                <option selected value="0">LIMA</option>
-                  <option selected value="0">2015-I</option>
-                <option selected value="1">AREQUIPA</option>
-                <option selected value="2">SANTIAGO DE CHILE</option>
-                <option selected value="3">CIUDAD DE MEXICO</option>
-                <option selected value="4">ELIGE UNA SEDE</option>
+                <option  value="4">ELIGE UNA SEDE</option>
+                <option value="lim" id="lim">LIMA</option>
+                <option value="0">2015-I</option>
+                <option value="aqp"id="aqp">AREQUIPA</option>
+                <option value="cl" id="cl">SANTIAGO DE CHILE</option>
+                <option value="cdmx"id="cdmx">CIUDAD DE MEXICO</option>
               </select>
-            </div>
          <section class="options">
            <ul class="list-option">
-             <li><button type="button-bar" name="button-bar" data-tab-seleccionado="OVERVIEW" class="tab" >OVERVIEW</button></li>
-             <li><button type="button-bar" name="button-bar" data-tab-seleccionado="STUDENTS" class="tab" >STUDENTS</button></li>
-             <li><button type="button-bar" name="button-bar" data-tab-seleccionado="TEACHERS" class="tab" >TEACHERS</button></li>
+             <li><input type="button" name="button-bar" data-tab-seleccionado="OVERVIEW" class="tab" value="OVERVIEW"></input></li>
+             <li><input type="button" name="button-bar" data-tab-seleccionado="STUDENTS" class="tab" value="STUDENTS"></input></li>
+             <li><input type="button" name="button-bar" data-tab-seleccionado="TEACHERS" class="tab" value="TEACHERS"></input></li>
            </ul>
          </section>
         </div>
-         <div class="">
-           <article class="content" id="OVERVIEW">
-             <div class="content-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fugiat non culpa, excepturi veritatis debitis ut minima nisi dicta beatae voluptatem magnam ipsum necessitatibus ratione. Cumque error neque praesentium fugit?</div>
-           </article>
-           <article class="content" id="STUDENTS"><div class="content-2">SPECIALIZATION: 
-             <ul>
-            <li>Javascript</li>
-            <li>Ux Design</li>
-            <li>Front end Designer</li>
-          </ul></div></article>
-           <article class="content" id="TEACHERS"><div class="content-3">yasssssLorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat velit commodi cupiditate quibusdam nihil blanditiis? Delectus sunt voluptatum ullam in blanditiis sint ratione nihil tempora hic mollitia, aliquam recusandae doloribus.</div></article>
-         </div>
        </div>
      </div>
+     <section>
+       <div class="">
+         <article class="content" id="OVERVIEW">
+           <div class="content-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fugiat non culpa, excepturi veritatis debitis ut minima nisi dicta beatae voluptatem magnam ipsum necessitatibus ratione. Cumque error neque praesentium fugit?</div>
+         </article>
+         <article class="content" id="STUDENTS"><div class="content-2">SPECIALIZATION:
+           <ul>
+          <li>Javascript</li>
+          <li>Ux Design</li>
+          <li>Front end Designer</li>
+        </ul></div></article>
+         <article class="content" id="TEACHERS"><div class="content-3">yasssssLorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat velit commodi cupiditate quibusdam nihil blanditiis? Delectus sunt voluptatum ullam in blanditiis sint ratione nihil tempora hic mollitia, aliquam recusandae doloribus.</div></article>
+       </div>
+     </section>
 
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
