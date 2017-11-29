@@ -81,6 +81,24 @@ console.log('suma de puntos de profesores total sprints 20171: ' + pointsPerSpri
 var averagePointsTeachersAQP20171 = pointsPerSprintTeachersAQP20171 / 3;
 console.log('promedio de puntos de profesores en todos los sprints 20171: ' + averagePointsTeachersAQP20171);
 
+//* Puntución promedio de los jedis *//
+
+// Suma de las puntuaciones por sprint de los jedis 2016-2 *//
+var pointsPerSprintJediAQP20162 = data.AQP['2016-2'].ratings[0].jedi + data.AQP['2016-2'].ratings[1].jedi + data.AQP['2016-2'].ratings[2].jedi + data.AQP['2016-2'].ratings[3].jedi;
+console.log('suma de puntos de jedi total sprints 20162: ' + pointsPerSprintJediAQP20162);
+
+// Promedio de las puntuaciones de los jedis 2016-2 //
+var averagePointsJediAQP20162 = pointsPerSprintJediAQP20162 / 4;
+console.log('promedio de puntos de jedi en todos los sprints 20162: ' + averagePointsJediAQP20162);
+
+// Suma de las puntuaciones por sprint de los jedis 2017-1 *//
+var pointsPerSprintJediAQP20171 = data.AQP['2017-1'].ratings[0].jedi + data.AQP['2017-1'].ratings[1].jedi + data.AQP['2017-1'].ratings[2].jedi;
+console.log('suma de puntos de jedi total sprints 20171: ' + pointsPerSprintJediAQP20171);
+
+// Promedio de las puntuaciones de los jedis 2017-1 //
+var averagePointsJediAQP20171 = pointsPerSprintJediAQP20171 / 3;
+console.log('promedio de puntos de jedi en todos los sprints 20171: ' + averagePointsJediAQP20171);
+
 /* ****SEDE CIUDAD DE MEXICO**** */
 console.log('MEXICO');
 /* El total de estudiantes presentes por sede y generación. */
@@ -153,6 +171,24 @@ console.log('suma de puntos de profesores total sprints 20172: ' + pointsPerSpri
 // Promedio de las puntuaciones de los profesores 2017-2 //
 var averagePointsTeachersCDMX20172 = pointsPerSprintTeachersCDMX20172 / 2;
 console.log('promedio de puntos de profesores en todos los sprints 20172: ' + averagePointsTeachersCDMX20172);
+
+//* Puntución promedio de los jedis *//
+
+// Suma de las puntuaciones por sprint de los jedis 2017-1 *//
+var pointsPerSprintJedisCDMX20171 = data.CDMX['2017-1'].ratings[0].jedi + data.CDMX['2017-1'].ratings[1].jedi + data.CDMX['2017-1'].ratings[2].jedi;
+console.log('suma de puntos de jedis total sprints 20171: ' + pointsPerSprintJedisCDMX20171);
+
+// Promedio de las puntuaciones de los jedis 2017-1 //
+var averagePointsJedisCDMX20171 = pointsPerSprintJedisCDMX20171 / 3;
+console.log('promedio de puntos de jedis en todos los sprints 20171: ' + averagePointsJedisCDMX20171);
+
+// Suma de las puntuaciones por sprint de los jedis 2017-2 *//
+var pointsPerSprintJedisCDMX20172 = data.CDMX['2017-2'].ratings[0].jedi + data.CDMX['2017-2'].ratings[1].jedi;
+console.log('suma de puntos de jedis total sprints 20172: ' + pointsPerSprintJedisCDMX20172);
+
+// Promedio de las puntuaciones de los jedis 2017-2 //
+var averagePointsJedisCDMX20172 = pointsPerSprintJedisCDMX20172 / 2;
+console.log('promedio de puntos de jedis en todos los sprints 20172: ' + averagePointsJedisCDMX20172);
 
 /* ****SEDE LIMA**** */
 console.log('LIMA');
@@ -251,6 +287,32 @@ console.log('suma de puntos de profesores total sprints 20172: ' + pointsPerSpri
 var averagePointsTeachersLIM20172 = pointsPerSprintTeachersLIM20172 / 2;
 console.log('promedio de puntos de profesores en todos los sprints 20172: ' + averagePointsTeachersLIM20172);
 
+//* Puntución promedio de los jedis *//
+
+// Suma de las puntuaciones por sprint de los jedis 2016-2 *//
+var pointsPerSprintJedisLIM20162 = data.LIM['2016-2'].ratings[0].jedi + data.LIM['2016-2'].ratings[1].jedi;
+console.log('suma de puntos de jedis total sprints 20162: ' + pointsPerSprintJedisLIM20162);
+
+// Promedio de las puntuaciones de los jedis 2016-2 //
+var averagePointsJedisLIM20162 = pointsPerSprintJedisLIM20162 / 2;
+console.log('promedio de puntos de jedis en todos los sprints 20162: ' + averagePointsJedisLIM20162);
+
+// Suma de las puntuaciones por sprint de los jedis 2017-1 *//
+var pointsPerSprintJedisLIM20171 = data.LIM['2017-1'].ratings[0].jedi + data.LIM['2017-1'].ratings[1].jedi + data.LIM['2017-1'].ratings[2].jedi + data.LIM['2017-1'].ratings[3].jedi;
+console.log('suma de puntos de jedis total sprints 20171: ' + pointsPerSprintJedisLIM20171);
+
+// Promedio de las puntuaciones de los jedis 2017-1 //
+var averagePointsJedisLIM20171 = pointsPerSprintJedisLIM20171 / 4;
+console.log('promedio de puntos de jedis en todos los sprints 20171: ' + averagePointsJedisLIM20171);
+
+// Suma de las puntuaciones por sprint de los jedis 2017-2 *//
+var pointsPerSprintJedisLIM20172 = data.LIM['2017-2'].ratings[0].jedi + data.LIM['2017-2'].ratings[1].jedi;
+console.log('suma de puntos de jedis total sprints 20172: ' + pointsPerSprintJedisLIM20172);
+
+// Promedio de las puntuaciones de los jedis 2017-2 //
+var averagePointsJedisLIM20172 = pointsPerSprintJedisLIM20172 / 2;
+console.log('promedio de puntos de jedis en todos los sprints 20172: ' + averagePointsJedisLIM20172);
+
 /* ****SEDE SANTIAGO DE CHILE**** */
 console.log('CHILE');
 /* El total de estudiantes presentes por sede y generación. */
@@ -347,3 +409,29 @@ console.log('suma de puntos de profesores total sprints 20172: ' + pointsPerSpri
 // Promedio de las puntuaciones de los profesores 2017-2 //
 var averagePointsTeachersSCL20172 = pointsPerSprintTeachersSCL20172 / 2;
 console.log('promedio de puntos de profesores en todos los sprints 20172: ' + averagePointsTeachersSCL20172);
+
+//* Puntución promedio de los jedis *//
+
+// Suma de las puntuaciones por sprint de los jedis 2016-2 *//
+var pointsPerSprintJedisSCL20162 = data.SCL['2016-2'].ratings[0].jedi + data.SCL['2016-2'].ratings[1].jedi + data.SCL['2016-2'].ratings[2].jedi + data.SCL['2016-2'].ratings[3].jedi;
+console.log('suma de puntos de jedis total sprints 20162: ' + pointsPerSprintJedisSCL20162);
+
+// Promedio de las puntuaciones de los jedis 2016-2 //
+var averagePointsJedisSCL20162 = pointsPerSprintJedisSCL20162 / 4;
+console.log('promedio de puntos de jedis en todos los sprints 20162: ' + averagePointsJedisSCL20162);
+
+// Suma de las puntuaciones por sprint de los jedis 2017-1 *//
+var pointsPerSprintJedisSCL20171 = data.SCL['2017-1'].ratings[0].jedi + data.SCL['2017-1'].ratings[1].jedi + data.SCL['2017-1'].ratings[2].jedi;
+console.log('suma de puntos de jedis total sprints 20171: ' + pointsPerSprintJedisSCL20171);
+
+// Promedio de las puntuaciones de los jedis 2017-1 //
+var averagePointsJedisSCL20171 = pointsPerSprintJedisSCL20171 / 3;
+console.log('promedio de puntos de jedis en todos los sprints 20171: ' + averagePointsJedisSCL20171);
+
+// Suma de las puntuaciones por sprint de los jedis 2017-2 *//
+var pointsPerSprintJedisSCL20172 = data.SCL['2017-2'].ratings[0].jedi + data.SCL['2017-2'].ratings[1].jedi;
+console.log('suma de puntos de jedis total sprints 20172: ' + pointsPerSprintJedisSCL20172);
+
+// Promedio de las puntuaciones de los jedis 2017-2 //
+var averagePointsJedisSCL20172 = pointsPerSprintJedisSCL20172 / 2;
+console.log('promedio de puntos de jedi en todos los sprints 20172: ' + averagePointsJedisSCL20172);
