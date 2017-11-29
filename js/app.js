@@ -45,7 +45,7 @@ window.addEventListener('load', function() {
     case event.target.value === '2016-2':
       var generation2016II = data[sede[chooseSede]]['2016-2']; // esta seleccionando el objeto que esta dentro de 2016II el cual incluye students y ratings como keys
       showGeneration(generation2016II);
-      showRatings(generation2016II);
+      showMetas(generation2016II);
       break;
     case event.target.value === '2017-1':
       var generation2017I = data[sede[chooseSede]]['2017-1'];
@@ -80,21 +80,66 @@ function showGeneration(obj) { // nos va a mostrar la cantidad de estudiantes ac
   divStudents.appendChild(pStudentsDeserter);
 }
 
-function showRatings(obj) {
-  var divRatings = document.createElement('div');
-  container.appendChild(divRatings);
-  // var pStudentsSupera = document.createElement('p');
-  // var acumulStudentsSupera = 0;
-  for (var j = 0; j < obj['ratings'].length; j++) { // recorre el array ratings
-    console.log(obj['ratings'][j]['student']); // me da un objeto que contiene los keys de cumple o no
-    var ulStudentsPoints = document.createElement('ul');
-    var liStudentsCumple = document.createElement('li');
-    ulStudentsPoints.textContent = 'SPRINT ' + (j + 1) + ':';
-    liStudentsCumple.textContent = 'Estudiantes que superan la meta: ' + obj['ratings'][j]['student']['supera'] + '%';
-    ulStudentsPoints.appendChild(liStudentsCumple);
-    divRatings.appendChild(ulStudentsPoints);
-    /* acumulStudentsSupera = acumulStudentsSupera + obj['ratings'][j]['student']['supera'];
-    pStudentsSupera.textContent = 'ALUMNAS QUE SUPERAN LA META: ' + acumulStudentsSupera;
-    divRatings.appendChild(pStudentsSupera); */
+function showMetas(obj) {
+  var tech = (1800 * 70) / 100;// calcula el 70% (1800) 1260
+  var hse = (1200 * 70) / 100;// clacula el 70% (1200) 840
+  var divMetas = document.createElement('div');
+  container.appendChild(divMetas);
+  var acumSprint1Tech = 0;
+  var acumSprint1Hse = 0;
+  var acumSprint2Tech = 0;
+  var acumSprint2Hse = 0;
+  var acumSprint3Tech = 0;
+  var acumSprint3Hse = 0;
+  var acumSprint4Tech = 0;
+  var acumSprint4Hse = 0;
+  for (var j = 0; j < obj['students'].length; j++) {// recorre el array con las estudiantes
+    var sprintByStudents = obj['students'][j]['sprints']; // contiene un array con los sprint de cada estidiante
+    for (var k = 0; k < sprintByStudents.length; k++) {// recorre el array con los sprint
+      // console.log(obj['students'][j]['sprints'][k]);
+      var scoreStudents = obj['students'][j]['sprints'][k]['score'];
+      switch (true) {
+      case k === 0:
+        if (scoreStudents['tech'] > tech) {
+          acumSprint1Tech = acumSprint1Tech + 1;
+        };
+        if (scoreStudents['hse'] > hse) {
+          acumSprint1Hse = acumSprint1Hse + 1;
+        };
+        console.log(acumSprint1Tech);
+        console.log(acumSprint1Hse);
+        break;
+      case k === 1:
+        if (scoreStudents['tech'] > tech) {
+          acumSprint2Tech = acumSprint2Tech + 1;
+        };
+        if (scoreStudents['hse'] > hse) {
+          acumSprint2Hse = acumSprint2Hse + 1;
+        };
+        console.log(acumSprint2Tech);
+        console.log(acumSprint2Hse);
+        break;
+      case k === 2:
+        if (scoreStudents['tech'] > tech) {
+          acumSprint3Tech = acumSprint3Tech + 1;
+        };
+        if (scoreStudents['hse'] > hse) {
+          acumSprint3Hse = acumSprint3Hse + 1;
+        };
+        console.log(acumSprint3Tech);
+        console.log(acumSprint3Hse);
+        break;
+      case k === 3:
+        if (scoreStudents['tech'] > tech) {
+          acumSprint4Tech = acumSprint4Tech + 1;
+        };
+        if (scoreStudents['hse'] > hse) {
+          acumSprint4Hse = acumSprint4Hse + 1;
+        };
+        console.log(acumSprint4Tech);
+        console.log(acumSprint4Hse);
+        break;
+      }
+    };
   };
 };
