@@ -91,42 +91,6 @@ header div {
 .teacher h4 {
  margin-left: 20px;
 }
-/*
-.twoicons li a {
- list-style: none;
- color: white;
- background: black;
- padding: 10px 15px;
- display: block;
-}
-
-.twoicons li a:hover {
- background-attachment: ;ckground-color: #434343;
-}
-
-.twoicons > li {
- float: left;
-}
-
-.twoicons li ul {
- display: none;
- position: absolute;
- min-width: 140px;
-}
-
-.twoicons li:hover > ul {
- display: block;
-}
-
-.twoicons li ul li {
- position: relative;
-}
-
-.twoicons li ul li ul {
- right: -165px;
- top:0px;
-}
-*/
 
 .onebox {
  width: 120px;
