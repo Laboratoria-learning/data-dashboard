@@ -2,21 +2,277 @@
 /*
  * Estilos de tu proyecto
  */
-*{
-  font-family: 'Roboto', sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
 }
+
+body {
+  background-image: url(../assets/images/ball.gif);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  /* overflow: hidden; */
+}
+
+nav {
+  text-align: center;
+  height: 100px;
+  background-color: #f9ff5b;
+}
+
+.img1 {
+  margin-top: 10px;
+  width: 300px;
+  height: 80px;
+}
+
+ul li {
+  display: inline;
+  box-sizing: border-box;
+  float: right;
+  margin: -65px 150px;
+}
+
+i.icon {
+  font-size: 40px;
+}
+
+.firstSection {
+  display: inline-block;
+  margin: 0px 0px 20px 0px;
+  width: 89.6%;
+  padding: 0 70px;
+  font-size: 25px;
+  background-image: url(../assets/images/ice.gif);
+}
+
+i.icon2 {
+  font-size: 50px;
+}
+
+.options {
+  letter-spacing: 10px;
+  margin: 15px 0;
+}
+
+.firstBox {
+  background-color: white;
+  box-sizing: border-box;
+  display: inline-block;
+  /* padding: 0px; */
+  float: left;
+  margin: 10px 30px 10px 60px;
+  border-radius: 10px;
+}
+
+.img2 {
+  margin: 0px 50px;
+  width: 280px;
+  height: 180px;
+}
+
+.firstTitles {
+  padding: 50px 40px;
+  margin: 0px 5px;
+}
+
+.text {
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: #F7F7F7;
+  text-align: center;
+  /* line-height: 25px; */
+  width: 150px;
+  height: 60px;
+  padding: 10px;
+  margin: 15px 5px;
+}
+
+.text2 {
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: #F7F7F7;
+  text-align: center;
+  line-height: 22px;
+  width: 120px;
+  height: 60px;
+  padding: 10px;
+  margin: 15px 5px;
+}
+
+.red {
+  color: #eb5e5e;
+}
+
+.green {
+  color: #77B433;
+}
+
+.sizeLetter {
+  font-size: 9px;
+}
+
+
+/* .center {
+    text-align: center;
+} */
+
+.secondBox {
+  background-color: white;
+  box-sizing: border-box;
+  display: inline-block;
+  /* padding: 0px; */
+  float: left;
+  margin: 10px 10px 60px;
+  border-radius: 10px;
+}
+
+.thirdBox {
+  background-color: white;
+  box-sizing: border-box;
+  display: inline-block;
+  /* padding: 0px; */
+  float: left;
+  margin: 10px 30px 60px;
+  border-radius: 10px;
+}
+
+.altura {
+  line-height: 10.5px;
+}
+
+#options {
+  border: none;
+  background: white;
+  color: #7C7C7C;
+  font-size: 15px;
+}
+
+.color {
+  color: black;
+  background-color: transparent;
+  border: none;
+  font-size: 15px;
+  display: inline-block;
+}
+
+.multiselect {
+  width: 250px;
+  position: absolute;
+  font-size: 16px;
+}
+
+.selectBox {
+  position: relative;
+}
+
+.selectBox select {
+  width: 100%;
+  font-weight: bold;
+}
+
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  line-height: 6px;
+}
+
+#checkboxes {
+  display: none;
+  border: 1px #dadada solid;
+  background-color: #f9ff5b;
+}
+
+#checkboxes label {
+  display: block;
+}
+
+#checkboxes label:hover {
+  background-color: rgb(50, 146, 184);
+}
+
+.space {
+  margin: 0px 50px;
+}
+
+.style {
+  border: red;
+  background-color: white;
+}
+
+.text3 {
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: #F7F7F7;
+  text-align: center;
+  /* line-height: 25px; */
+  width: 150px;
+  height: 60px;
+  padding: 10px;
+  margin: 40px 0px 0px 50px;
+}
+
+.text4 {
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: #F7F7F7;
+  text-align: center;
+  /* line-height: 25px; */
+  width: 150px;
+  height: 60px;
+  padding: 10px;
+  margin: 40px 0px 0px 20px
+}
+
+.minBoxes {
+  background-color: #F7F7F7;
+  box-sizing: border-box;
+  display: inline-block;
+  /* padding: 0px; */
+  float: left;
+  border-radius: 5px;
+}
+
+.barras {
+  padding: 50px;
+  float: left;
+}
+
+.model1 {
+  border-radius: 5px;
+  width: 500px;
+  height: 250px;
+  background-color: white;
+  margin: 150px -250px;
+  padding: 50px;
+}
+
+.circle {
+  margin: 80px;
+  padding: 50px;
+  float: right;
+}
+
+.model2 {
+  border-radius: 5px;
+  width: 300px;
+  height: 250px;
+  background-color: white;
+  margin: 150px;
+  padding: 50px 70px;
+}
+
 
 h3{
   color: blue;
   font-weight: 100px;
 }
- #options{
-   border: none;
-   background: white;
-   color: #b9b9b9;
-   font-size: 15px;
-   margin: 15px; 
- }
 
  /*dando estilos a la seccion life skills */
 .class-figure figure{
@@ -39,13 +295,12 @@ h3{
   margin: 20px 30px 20px 30px;
   padding: 15px 30px 20px 30px;
 }
+
 .graph img{
   width: 250px;
   height: 150px;
 }
 
-
-/*el contenido de las cajas pequenas*/
 .content{
   outline: 1px solid red;
   color: #b9b9b9;
@@ -55,12 +310,10 @@ h3{
   width: 150px;
   font-size: 20px;
   margin: 10px 10px 10px 10px;
-  /*margin: 30px;*/
   text-align: center;
   padding: 10px 10px 10px 10px;
 }
 
-/*el contenido de las cajas pequenas*/
 .content1{
   outline: 1px solid blue;
   color: #b9b9b9;
@@ -85,4 +338,3 @@ h3{
   margin-top: 2px;
   margin-right: 50px;*/
   display: inline-block;
-}
