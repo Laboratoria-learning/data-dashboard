@@ -46,59 +46,8 @@ for (var i = 0; i < allSedes.length; i++) {
     var codeSede = event.target.dataset.sedecod;
     console.log(codeSede);
   };
-  allSedes[i].addEventListener('click')
+  allSedes[i].addEventListener('click', showListGenerations);
+  function showListGenerations(event) {
+
+  }
 }
-
-
-/*var codeSede = '' ;
-switch (true) {
-case event.target.dataset.cod = 0:
-  codeSede = 0 ;
-  break;
-case event.target.dataset.cod = 1:
-  codeSede = 1 ;
-  break;
-case event.target.dataset.cod = 2:
-  codeSede = 2 ;
-  break;
-case event.target.dataset.cod = 3:
-  codeSede = 3 ;
-  break;
-}
-*/
-//  console.log(codeSede) ;
-
-/*
-sede1.addEventListener('click', addVarSede);
-function addVarSede(event) {
-  var codeSede = 1 ;
-  console.log(codeSede) ;
-}
-
-sede2.addEventListener('click', addVarSede);
-function addVarSede(event) {
-  var codeSede = 2 ;
-  console.log(codeSede) ;
-}
-
-sede3.addEventListener('click', addVarSede);
-function addVarSede(event) {
-  var codeSede = 3 ;
-  console.log(codeSede) ;
-}
-
-/*
-codeSede0.addEventListener('click', addvarcodesede);
-function addvarcodesede(event) {
-  codeSede0.textContent = objSedes.indexOf(event.target.textContent);
-
-  listSedes.classList.toggle('list_active');
-  console.log(event.target);
-};
-*/
-
-// data.AQP["2016-2"].students.length --> me da el total de estudiantes de arequipa 2016-2
-//console.log(data);
-
-// var students = data.AQP['2016-2'].students.length ;
-// console.log(students);
