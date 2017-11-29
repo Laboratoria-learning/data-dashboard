@@ -9,6 +9,7 @@
   <script src="https://use.fontawesome.com/01c57ad38e.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
   <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/icons/css-fonts/font-awesome.min.css">
   <link rel="stylesheet" href="css/main.css">
 
 </head>
@@ -16,8 +17,37 @@
 <body>
   <header>
     <nav class="menu">
+      <!-- Sección menu-->
+      <div class="box-header start">
+        <span id="button-menu" class="fa fa-bars icons"></span>
+        <nav class="navegacion">
+          <ul class="menu">
+            <li class="title-menu">Editar Datos</li>
+            <li>
+              <a href="index.html">Dashboard</a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="fa fa-plus-circle icon-menu"></span>Añadir Estudiante</a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="fa fa-minus-circle icon-menu"></span>Remover Estudiante</a>
+            </li>
+            <li>
+              <a href="#">Agregar Sprint</a>
+            </li>
+          </ul>
+        </nav>
+        <span class="box-header search">
+          <input type="text" placeholder="search">
+          <a href="#" class="icons-search">
+            <i class="fa fa-search fa-rotate-90"></i>
+          </a>
+        </span>
+      </div>
 
-      <!-- Creamos sección sede -->
+      <!--Sección sede -->
       <ul class="sede" id="sede">
         <li>
           <a class="menu1" href="#">
@@ -79,39 +109,24 @@
             </li>
           </ul>
         </li>
-
         </ul>
 
         </li>
       </ul>
 
-      <!-- Creamos sección idioma  -->
+      <!--Sección idioma  -->
       <select name="language">
         <option value="value1" selected>Español</option>
         <option value="value2">English</option>
-
       </select>
+
       <img class="lab" id="lab" src="assets/images/logo-laboratoria.svg" alt="">
 
-      <!--Usuario -->
-      <ul class="button" id="button">
-        <button onclick="funciona()" <i class="fa fa-bars" aria-hidden="true">
-          </i>
-          <ul class="items">
-            <!-- Menú desplegable -->
-            <li class="job-item">Edit Profile</li>
-            <li class="job-item">Add Student</li>
-            <li class="job-item">Remove Student</li>
-            <li class="job-item">Add Sprint</li>
-          </ul>
-      </ul>
-      <!-- Creamos sección user -->
-      <div class="user">
-        <img class="ale" id="ale" src="assets/images/ale.png" alt="">
-      </div>
+      <!--Sección user -->
+      <img class="ale" id="ale" src="assets/images/ale.png" alt="">
+
     </nav>
   </header>
-  <div class="line" id="line"></div>
 
 
   <div id="containerone">
@@ -126,15 +141,15 @@
 
 
 
-
-
-
-
-
   <!-- Base de datos -->
   <script src="./js/data.js"></script>
   <!-- Aquí va tus archivos JS -->
   <script src="./js/app.js"></script>
+  <script src="js/jquery-3.2.1.js"></script>
+  <script src="js/main.js"></script>
+  <!-- Base de datos -->
+
+
 </body>
 
 </html>
