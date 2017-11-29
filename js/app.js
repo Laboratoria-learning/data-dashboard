@@ -17,14 +17,14 @@ window.addEventListener('load', function(event) {
   // Ocultando especializacion de las estudiantes
   optionSpecialization.classList.add('hidden');
   
-  var generationx = data['LIM']['2016-2'];
+  var str = data['LIM']['2016-2'];
 
   // Cargando las opciones de sprint segun generation 
-  for (i = 0;i < generationx['ratings'].length;i++) {
+  for (i = 0;i < str['ratings'].length;i++) {
     var option = document.createElement('option');
-    option.text = 'Sprint ' + generationx['ratings'][i]['sprint'];
-    option.value = generationx['ratings'][i]['sprint'] - 1;
-    option.id = generationx['ratings'][i]['sprint'] - 1;
+    option.text = 'Sprint ' + str['ratings'][i]['sprint'];
+    option.value = str['ratings'][i]['sprint'] - 1;
+    option.id = str['ratings'][i]['sprint'] - 1;
     optionSprint.add(option);
   }
 
@@ -39,15 +39,15 @@ window.addEventListener('load', function(event) {
       optionSpecialization.classList.add('hidden');
       optionSpecialization.classList.remove('show');
     }
-    divAchievement.innerHTML = generationx['ratings'][event.target.value]['student']['cumple'] + generationx['ratings'][event.target.value]['student']['supera'];
+    divAchievement.innerHTML = str['ratings'][event.target.value]['student']['cumple'] + str['ratings'][event.target.value]['student']['supera'];
 
-    var totalStudentsAchievement = generationx['ratings'][event.target.value]['student']['cumple'] + generationx['ratings'][event.target.value]['student']['no-cumple'] + generationx['ratings'][event.target.value]['student']['supera'];
+    var totalStudentsAchievement = str['ratings'][event.target.value]['student']['cumple'] + str['ratings'][event.target.value]['student']['no-cumple'] + str['ratings'][event.target.value]['student']['supera'];
     divStudentsAchievement.innerHTML = '% OF TOTAL (' + totalStudentsAchievement + ')';
 
-    divPercentAchievement.innerHTML = (generationx['ratings'][event.target.value]['student']['cumple'] + generationx['ratings'][event.target.value]['student']['supera']) * 100 / totalStudentsAchievement + ' %';
-    var promoters = generationx['ratings'][event.target.value]['nps']['promoters'];
-    var passive = generationx['ratings'][event.target.value]['nps']['passive'];
-    var detractors = generationx['ratings'][event.target.value]['nps']['detractors'];
+    divPercentAchievement.innerHTML = (str['ratings'][event.target.value]['student']['cumple'] + str['ratings'][event.target.value]['student']['supera']) * 100 / totalStudentsAchievement + ' %';
+    var promoters = str['ratings'][event.target.value]['nps']['promoters'];
+    var passive = str['ratings'][event.target.value]['nps']['passive'];
+    var detractors = str['ratings'][event.target.value]['nps']['detractors'];
     
     var nps = promoters - detractors;
     console.log(nps);
