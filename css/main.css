@@ -1,6 +1,7 @@
 /* Seteando body*/
 
 * {
+  font-family: 'Roboto', sans-serif;  
   margin: 0;
   padding: 0;
 }
@@ -8,14 +9,16 @@
 /* Header */
 
 header {
-  background-color: #ffc107;
+  background-color: #f7c635;
   position: relative;
   width: 100%;
+  position: fixed;
 }
 
 .logo-laboratoria {
   height: 90px;
   width: 150px;
+  margin-left: 500px;
 }
 
 #select-sede {
@@ -24,9 +27,107 @@ header {
 
 .options li {
   display: inline-block;
+  margin: 12px;
 }
 
 a {
   text-decoration: none;
 }
 
+/* Dashboard */
+
+#dashboard-container {
+  background-color: rgb(221, 220, 220);
+  display: block;
+  width: 100%;  
+}
+
+.data-cont1 {
+  outline: 1px solid black;
+  display: inline-block;
+  height: 270px;
+  margin-top: 145px;
+  margin-left: 120px;
+  width: 270px;
+}
+
+.data-cont2 {
+  outline: 1px solid black;
+  display: inline-block;
+  height: 270px;
+  margin-top: 30px;
+  margin-left: 40px;
+  width: 270px;
+}
+
+.data-cont3 {
+  outline: 1px solid black;
+  display: inline-block;
+  height: 270px;
+  margin-top: 60px;
+  margin-left: 40px;
+  width: 270px;
+}
+
+.data-cont4 {
+  outline: 1px solid black;
+  display: inline-block;
+  height: 270px;
+  margin-top: 60px;
+  margin-left: 120px;
+  width: 900px;
+}
+
+.data-cont5 {
+  outline: 1px solid black;
+  display: inline-block;
+  height: 270px;
+  margin-top: 60px;
+  margin-left: 120px;
+  width: 900px;
+}
+
+.data-cont6 {
+  outline: 1px solid black;
+  display: inline-block;
+  height: 270px;
+  margin-bottom: 60px;  
+  margin-top: 60px;
+  margin-left: 120px;
+  width: 270px;
+}
+
+.data-cont7 {
+  outline: 1px solid black;
+  display: inline-block;
+  height: 270px;
+  margin-bottom: 60px;  
+  margin-top: 60px;
+  margin-left: 40px;
+  width: 270px;
+}
+
+.data-cont8 {
+  outline: 1px solid black;
+  display: inline-block;
+  height: 270px;
+  margin-bottom: 60px;
+  margin-top: 60px;
+  margin-left: 40px;
+  width: 270px;
+}
+
+.contain-number {
+  outline: 1px solid black;
+  float: left;
+  font-size: 15px;
+  height: 70px;
+  width: 100px;
+}
+
+.contain-percentage {
+  outline: 1px solid black;
+  float: left;
+  height: 70px;
+  width: 100px;
+}
