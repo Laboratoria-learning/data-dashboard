@@ -73,12 +73,16 @@ window.addEventListener('load', function() {
     var titleEnrollment = document.createElement('p');
     var boxStudentTotal = document.createElement('div');
     var boxDropout = document.createElement('div');
+    var boxCanvas = document.createElement('div');
+    var canvasEnrollment = document.createElement('canvas');
 
     // Contenedores de Achievement
     var boxAchievement = document.createElement('div');
     var titleAchievement = document.createElement('p');
     var boxStudentUp = document.createElement('div');
     var boxPercentageStudentUp = document.createElement('div');
+    var boxCanvas2 = document.createElement('div');
+    var canvasArchievement2 = document.createElement('canvas');
 
     // Contenedores de Net Promoter Score
     var boxNps = document.createElement('div');
@@ -108,6 +112,7 @@ window.addEventListener('load', function() {
     var optionTechS4 = document.createElement('option');
     var boxPercentageStudentTech = document.createElement('div');
     var boxNumberStudentTech = document.createElement('div');
+    var boxAverageTech = document.createElement('div');
 
     // contenedores HSE
     var boxStudentHse = document.createElement('div');
@@ -120,6 +125,7 @@ window.addEventListener('load', function() {
     var optionHseS4 = document.createElement('option');
     var boxPercentageStudentHse = document.createElement('div');
     var boxNumberStudentHse = document.createElement('div');
+    var boxAverageHse = document.createElement('div');
 
     // Contenedores  Teacher
     var boxTeacher = document.createElement('div');
@@ -172,12 +178,17 @@ window.addEventListener('load', function() {
     var descriptionNumberTech = document.createElement('p');
     var percentageTech = document.createElement('p');
     var descriptionTech = document.createElement('p');
+    var averageTech = document.createElement('p');
+    var descriptionAverageTech = document.createElement('p');
 
     // elementos que contiene información de Student HSE
     var numberHse = document.createElement('p');
     var descriptionNumberHse = document.createElement('p');
     var percentageHse = document.createElement('p');
     var descriptionHse = document.createElement('p');
+    var averageHse = document.createElement('p');
+    var descriptionAverageHse = document.createElement('p');
+
 
     // elementos que contienen información de Teacher
     var percentageTeacher = document.createElement('p');
@@ -191,6 +202,8 @@ window.addEventListener('load', function() {
     boxEnrollment.appendChild(titleEnrollment);
     boxEnrollment.appendChild(boxStudentTotal);
     boxEnrollment.appendChild(boxDropout);
+    boxEnrollment.appendChild(boxCanvas);
+    boxCanvas.appendChild(canvasEnrollment);
     boxStudentTotal.appendChild(numberStudentTotal);
     boxStudentTotal.appendChild(descriptionNumber);
     boxDropout.appendChild(percentageDropout);
@@ -204,6 +217,8 @@ window.addEventListener('load', function() {
     boxStudentUp.appendChild(descriptionStudentUp);
     boxPercentageStudentUp.appendChild(percentageStudentUp);
     boxPercentageStudentUp.appendChild(descriptionPercentageStudent);
+    boxAchievement.appendChild(boxCanvas2);
+    boxCanvas2.appendChild(canvasArchievement2);
    
     // insertando elementos a contenedor NPS
     boxNps.appendChild(titleNps);
@@ -221,10 +236,13 @@ window.addEventListener('load', function() {
     boxStudentTech.appendChild(selectTech);
     boxStudentTech.appendChild(boxNumberStudentTech);
     boxStudentTech.appendChild(boxPercentageStudentTech);
+    boxStudentTech.appendChild(boxAverageTech);
     boxNumberStudentTech.appendChild(numberTech);
     boxNumberStudentTech.appendChild(descriptionNumberTech);
     boxPercentageStudentTech.appendChild(percentageTech);
     boxPercentageStudentTech.appendChild(descriptionTech);
+    boxAverageTech.appendChild(averageTech);
+    boxAverageTech.appendChild(descriptionAverageTech);
     selectTech.appendChild(optionTech);
     selectTech.appendChild(optionTechS1);
     selectTech.appendChild(optionTechS2);
@@ -236,10 +254,13 @@ window.addEventListener('load', function() {
     boxStudentHse.appendChild(selectHse);
     boxStudentHse.appendChild(boxNumberStudentHse);
     boxStudentHse.appendChild(boxPercentageStudentHse);
+    boxStudentHse.appendChild(boxAverageHse);
     boxNumberStudentHse.appendChild(numberHse);
     boxNumberStudentHse.appendChild(descriptionNumberHse);
     boxPercentageStudentHse.appendChild(percentageHse);
     boxPercentageStudentHse.appendChild(descriptionHse);
+    boxAverageHse.appendChild(averageHse);
+    boxAverageHse.appendChild(descriptionAverageHse);
     selectHse.appendChild(optionHse);
     selectHse.appendChild(optionHseS1);
     selectHse.appendChild(optionHseS2);
@@ -317,6 +338,8 @@ window.addEventListener('load', function() {
     boxNumberStudentTech.classList.add('inline-block');
     boxPercentageStudentHse.classList.add('inline-block');
     boxPercentageStudentTech.classList.add('inline-block');
+    boxAverageTech.classList.add('inline-block');
+    boxAverageHse.classList.add('inline-block');
     boxPercentageJedi.classList.add('inline-block');
     boxPercentageTeacher.classList.add('inline-block');
     boxPercentageStudentSat.classList.add('inline-block');
@@ -328,6 +351,7 @@ window.addEventListener('load', function() {
     numberHse.classList.add('style-number');
     percentageHse.classList.add('style-number');
     percentageTech.classList.add('style-number');
+    
     percentageJedi.classList.add('style-number');
     percentageNps.classList.add('style-number');
     percentageStudentUp.classList.add('style-number');
@@ -345,10 +369,8 @@ window.addEventListener('load', function() {
     descriptionSatisfaction.classList.add('style-description');
     descriptionJedi.classList.add('style-description');
     descriptionTeacher.classList.add('style-description');
-
+    boxPercentageNpsTypes.classList.add('percentage-nps');
     studentsInfo.classList.add('box-students');
-    
-    
     titleAchievement.classList.add('title');
     titleEnrollment.classList.add('title');
     titleNps.classList.add('title');
@@ -361,16 +383,83 @@ window.addEventListener('load', function() {
    
     // insertando información en Enrollment
     titleEnrollment.textContent = 'Enrollment';
+    boxCanvas.classList.add('box-canvas');
+    boxCanvas.setAttribute('id','canvas-container');
+    canvasEnrollment.setAttribute('id','chart');
+    canvasEnrollment.classList.add('canvas');
     numberStudentTotal.textContent = totalStudentActive(sede, generation);
     percentageDropout.textContent = (dropout(sede, generation)).toFixed(1) + '%';
     descriptionNumber.textContent = '# Students Currently Enrolled';
     descriptionDropout.textContent = '% Dropout' ; 
+    $(document).ready(function () {
+      var datos = {
+          type: "pie",
+          data: {
+              datasets: [{
+                  data: [
+                    dropout(sede, generation),
+                      100 - dropout(sede, generation),
+                                     ],
+                  backgroundColor: [
+                      "#f7464A ",
+                      "#46BFBD ",              
+                  ]
+              }],
+              labels: [
+                  "Dropout",
+                  "Active",
+                             ]
+          },
+          options: {
+              reponsive: true,
+          }
+      };
+      var canvas = document.getElementById("chart").getContext('2d');
+      window.pie = new Chart(canvas, datos);
+   });
+
+
+
+
+
+
     // insertando información en Achievement
     titleAchievement.textContent = 'Achievement';
+    boxCanvas2.classList.add('box-canvas');
+    boxCanvas2.setAttribute('id', 'canvas-container2');
+    canvasArchievement2.setAttribute('id','chart2');
+    canvasArchievement2.classList.add('canvas');
     numberStudentUp.textContent = studentAchievement(sede, generation);
     descriptionStudentUp.textContent = '# Students that meet the target';
     percentageStudentUp.textContent = ((studentAchievement(sede, generation) / totalStudentActive(sede, generation)) * 100).toFixed(1) ;
-    descriptionPercentageStudent.textContent = '% of Total';
+    descriptionPercentageStudent.textContent = '% of Total'; $(document).ready(function () {
+      var datos2 = {
+          type: "pie",
+          data: {
+              datasets: [{
+                  data: [
+                    ((studentAchievement(sede, generation) / totalStudentActive(sede, generation)) * 100).toFixed(1),
+                    100-((studentAchievement(sede, generation) / totalStudentActive(sede, generation)) * 100).toFixed(1),
+                                     ],
+                  backgroundColor: [
+                      "#f7464A ",
+                      "#46BFBD ",              
+                  ]
+              }],
+              labels: [
+                  "Goal",
+                  "Goal no",
+                             ]
+          },
+          options: {
+              reponsive: true,
+          }
+      };
+      var canvas2 = document.getElementById("chart2").getContext('2d');
+      window.pie = new Chart(canvas2, datos2);
+   });
+
+
 
     // insertando información en NPS
     titleNps.textContent = 'Net Promoter Score';
