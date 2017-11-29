@@ -22,10 +22,19 @@
   height: 70%;
   margin-top:13px;
 }
-.header i {
+.header button {
   float: right;
   padding-top: 20px;
   font-size: 30px;
+  border: none;
+  background: none;
+  outline: none;
+}
+.select {
+  font-size: 29px;
+  background: none;
+  border: none;
+  outline: none;
 }
 .nav-menu {
   background:rgb(225,225,225) ;
@@ -33,9 +42,6 @@
   height: 130px;
   position: relative;
   padding: 32px 0 29px 86px;
-}
-.nav-menu p {
-  font-size: 27px;
 }
 .nav-menu li {
   display: inline-block;
@@ -95,9 +101,25 @@
   height: 500px;
   margin-bottom: 77px;
 }
+.tech-skills p {
+  margin-right: 15px;
+}
+.overall {
+  color: rgba(43,43,43,0.6);
+  border: none;
+  border-bottom: 2px solid black;
+}
 .life-skills {
   height: 500px;
   margin-bottom: 77px;
+}
+.life-skills p {
+  margin-right: 15px;
+}
+.sprints {
+  color: rgba(43,43,43,0.6);
+  border: none;
+  border-bottom: 2px solid black;
 }
 .box-two {
   overflow: auto;
