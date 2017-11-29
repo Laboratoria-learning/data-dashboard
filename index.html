@@ -2,26 +2,55 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Data Dashboard</title>
   </head>
   <body>
-    <!-- Nav -->
-    <nav>
-      <div class="logo-lab">
-          <img src="assets/images/logo-lab.png" alt="">
-      </div>
-      <div class="menu-user">
-        <span></span>
-      </div>
-    </nav>
-    <!-- Header -->
-    <header>
-      <div>
-        <a href="">SEDES</a>
-      </div>
-      <div class="hide container-generations"></div>
-    </header>
+  <!-- First Section -->
+    <section id="first-container"></section>
+        <nav class="nav-principal">
+            <div>
+                <img id="log-dash" src="assets/images/logo-lab.png" alt="">
+            </div>
+            <div class="icon-user">
+                <a href="" target="_black"><i class="fa fa-user fa-2x" style="color:aliceblue;" aria-hidden="true"></i> USER 1</a>
+            </div>
+            <div class="icon-list">
+                <ul>
+                    <li>
+                      <a href=""><i class="fa fa-home fa-lg" style="color:aliceblue;" aria-hidden="true"> Home</i></a>
+                      <ul>
+                        <li><a href="">Dashboard 1</a></li>
+                        <li><a href="">Dashboard 2</a></li>
+                      </ul>
+                    </li>
+                    <li><a href=""><i class="fa fa-briefcase" style="color:aliceblue;" aria-hidden="true"> Sprint</i></a></li>
+                    <li><a href=""><i class="fa fa-area-chart" style="color:aliceblue;" aria-hidden="true"> Averages</i></a>
+                      <ul>
+                        <li><a href=""><i class="fa fa-circle-thin" style="color:aliceblue;" aria-hidden="true"> Tech</i></a></li>
+                        <li><a href=""><i class="fa fa-circle-thin" style="color:aliceblue;" aria-hidden="true"> HSE</i></a></li>
+                      </ul>
+                    </li>
+                    <li><a href=""><i class="fa fa-heart" style="color:aliceblue;" aria-hidden="true"> Fell - Lab</i></a></li>
+                    <li><a href=""><i class="fa fa-bar-chart" style="color:aliceblue;" aria-hidden="true"> Comparative</i></a></li>
+                    <li><a href=""><i class="fa fa-cog fa-spin fa-fw" style="color:aliceblue;"></i><span class="sr-only">Loading...</span> Settings</a></li>
+                    <li><a href=""><i class="fa fa-sign-out" style="color:aliceblue;" aria-hidden="true"> Sign-Out</i></a></li>
+                  </ul>
+            </div>
+        </nav>
+          <!-- Header -->
+        <header>
+        <section>
+          <div>
+              <input type="" placeholder="Ingrese nombre de la estudiante"checked>
+          </div>
+          <div>
+              <a id="container-sedes">SEDES</a>
+              <div id="container-generations" class="show"></div>
+          </div>
+        </section>
+      </header>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
