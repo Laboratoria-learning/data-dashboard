@@ -21,13 +21,41 @@ function estudentcont () {
 
 function create() {       
   var sede = document.getElementById('sede').value;   
-  document.getElementById('text').innerHTML = sede ;   
-    var datos = (data["AQP"]["2016-2"]["students"]);
-    
-    if (datos == true ) {
-     document.getElementById('one').innerHTML = datos;
-      }
+  document.getElementById('text').innerHTML = sede ; 
+
+ var estudiantelim1 = (data["LIM"]["2016-2"]["students"].length);
+ var  estudiantelim2 = (data["LIM"]["2017-1"]["students"].length);
+// if (estudiantelim1) {
+//  console.log( document.getElementById('one').innerHTML = estudiantelim1);
+// }
+// else if (estudiantelim2) {
+//   console.log( document.getElementById('one').innerHTML = estudiantelim2);
+// }
  
+
+switch(sede) {
+  case 'LIMA2016-II':
+  var estudiantelim1 = (data["LIM"]["2016-2"]["students"].length);
+  console.log( document.getElementById('one').innerHTML = estudiantelim1);  
+      break;
+  case 'LIMA2017-I':
+  var  estudiantelim2 = (data["LIM"]["2017-1"]["students"].length);
+  console.log( document.getElementById('one').innerHTML = estudiantelim2);
+      break;
+  default:
+      alert('f');
+} 
+
+  //  var estudiantelim1 = (data["LIM"]["2016-2"]["students"].length)
+  //     // document.getElementById('one').innerHTML = estudiantelim1;
+  //  var  estudiantelim2 = (data["LIM"]["2017-1"]["students"].length)
+  //     document.getElementById('one').innerHTML = estudiantelim2;
+  // var estudiantelim3 = (data["LIM"]["2017-2"]["students"].length)
+  //     document.getElementById('one').innerHTML = estudiantelim3;
+  // var estudianteareq1 = (data["AQP"]["2016-2"]["students"].length);
+  //     document.getElementById('one').innerHTML =  estudianteareq1;
+  // var estudianteareq2 = (data["AQP"]["2017-1"]["students"].length);
+  //     document.getElementById('one').innerHTML =  estudianteareq2;
 
 }
 
