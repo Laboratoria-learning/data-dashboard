@@ -1,36 +1,3 @@
-/* var Arequipa = data.AQP;
-var prom1AQP = Arequipa['2016-2'];
-var studentsPromOne = prom1AQP['students'];
-var prom2AQP = Arequipa['2017-1'];
-var studentsPromTwo = prom2AQP['students'];
-
-var Mexico = data.CDMX;
-var prom1MX = Mexico['2017-1'];
-var prom2MX = Mexico['2017-2'];
-
-var Lima = data.LIM;
-var prom1LM = Lima['2016-2'];
-var prom2LM = Lima['2017-1'];
-var prom3LM = Lima['2017-2'];
-
-var Chile = data.SCL;
-var prom1CHL = Chile['2016-2'];
-var prom2CHL = Chile['2017-1'];
-var prom3CHL = Chile['2017-2'];
-// dentro del enrollment
-
-// titulo 
-var titleEn = document.createElement('h1');
-titleEn.innerText = 'ENROLLMENT';
-titleEn.classList.add('titleStyle');
-enrollment.appendChild(titleEn);
-// cantidad Total de alumnas
-var currentStudents = document.createElement('h2');
-currentStudents.innerText = prom1AQP['students'].length;
-var description = document.createElement('span');
-description.innerText = '# STUDENTS CURRENTLY ENROLLED';
-enrollment.appendChild(currentStudents);
- */
 // creando ...
 window.addEventListener('load', function() {
   var overview = document.getElementById('general');
@@ -120,7 +87,44 @@ window.addEventListener('load', function() {
   promoterScore.setAttribute('class', 'promoterClass');
   promoterOne.setAttribute('class', 'pOneClass');
   promoterTwo.setAttribute('class', 'pTwoClass');
-  // solo todos los alumnos completos
+  // TechSkills
+  var techSkills = document.createElement('div');
+  var titleTS = document.createElement('h1');
+  titleTS.innerText = 'TECH SKILLS';
+  var comboTS = document.createElement('select');
+  var OP1 = document.createElement('option');
+  OP1.innerText = 'Option1';
+  var OP2 = document.createElement('option');
+  OP2.innerText = 'Option2';
+  var metTarget = document.createElement('div');
+  var titleMT = document.createElement('h1');
+  titleMT.innerText = 'numberofpercent';
+  var textMT = document.createElement('span');
+  textMT.innerText = '# STUDENTS THAT MEET THE TARGET';
+  var totalTS = document.createElement('div');
+  var titleTS2 = document.createElement('h1');
+  titleTS2.innerText = 'percentoftotal';
+  var textTS = document.createElement('span');
+  textTS.innerText = '% Of TOTAL';
+
+  general.appendChild(techSkills);
+  techSkills.appendChild(titleTS);
+  techSkills.appendChild(comboTS);
+  comboTS.appendChild(OP1);
+  comboTS.appendChild(OP2);
+  techSkills.appendChild(metTarget);
+  techSkills.appendChild(totalTS);
+  metTarget.appendChild(titleMT);
+  metTarget.appendChild(textMT);
+  totalTS.appendChild(titleTS2);
+  totalTS.appendChild(textTS);
+  // agregando clases al los elementos
+
+  techSkills.setAttribute('class', 'techSkillStyle');
+  comboTS.setAttribute('class', 'comboStyle');
+  metTarget.setAttribute('class', 'metTargetStyle');
+  totalTS.setAttribute('class', 'totalTSStyle');
+
   
   // funcion para sacar la cantidad actual activos de estudiantes por sede
   function currentStudents(sede, gene) {
@@ -227,15 +231,14 @@ window.addEventListener('load', function() {
       var total = ratigns[i].nps.promoters + ratigns[i].nps.passive + ratigns[i].nps.detractors;
       var promoters = (ratigns[i].nps.promoters / total) * 100;
       array.push(promoters);
-
+ }
       var allPromoter = 0;
-
       for (var p = 0; p < array.length; p++) {
         allPromoter += array[p].promoter;
       } var totalPromoters = 0;
       totalPromoters = allPromoter / ratigns.length;
     } return totalPromoters;
-  }
+
 });
 // Puedes hacer uso de la base de datos a través de la variable `data`
 console.log(data);
