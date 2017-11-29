@@ -156,7 +156,7 @@ height: 50px;
 cursor: pointer;
 }
 .sprints:hover{
-  outline-color: #grey;
+  outline-color: grey;
 }
 .sprints:active{
   background-color: rgb(236,235,235);

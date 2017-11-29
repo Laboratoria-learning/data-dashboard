@@ -79,6 +79,9 @@ function optionslim172() {
 function optionslim171() {
   paintOptions(lim171, previous);
   previous = lim171;
+  var region = lim171.dataset.region;
+  var promotion = lim171.dataset.promotion;
+  showMain(region, promotion);
 }
 function optionslim162() {
   paintOptions(lim162, previous);
@@ -100,37 +103,45 @@ function optionsMexico() {
   ulCdmx.classList.toggle('hidden');
 }
 
-function showMain(promotion) {
-  showTotalStudents(promotion);
+function showMain(region, promotion) {
+  showTotalStudents(region, promotion);
 }
 
 function showTotalStudents(region, promotion) {
-  drawTotalStudents(6, 7);
+  var current = 0;
+  var deserted = 0;
+  
+  console.log('region '+region+' promotion '+promotion );
+  var sedeRegion = region;
+  var generation = promotion;
+  
   /*
-  console.log(data.LIM);
-  for(var regionData in data) {
-    if(region === regionData)
-      console.log(regionData);
-  }
-  */
   var sedeRegion = 'LIM';
-  var generacion = '2017-2';
-  for (var regionData in data)  {
-    if (regionData === sedeRegion)
-      {
-      for (var semestre in data [regionData])
-          {
-        if (semestre === generacion)
-        {
-          console.log(data[regionData][semestre].students);
+  var generation = '2017-2';
+  */
+  for (var regionData in data) {
+    if (regionData === sedeRegion) {      
+      for (var promo in data [regionData]) {
+        if (promo === generation) {
+          for (var students in data [regionData][promo]) {
+            if (students === 'students') {
+              for (var eachStudent in data [regionData][promo][students]) {
+                var active = data[sedeRegion][promo][students][eachStudent]['active'];
+                
+                (active) ? current++ : deserted++;
+              }
             }
+          }  
         }
       }
+      
+    }
   }
+  console.log("current "+current+" deserted "+deserted);
+  drawTotalStudents(current, deserted);
 }
 // Obtener a quien elijo
 // LIM172 = data.LIM['2017-2'];
-// console.log(LIM172);
 // Pasar parametro para obtener ya datos estadisticos
 
 /*************************GRAFICOS************/
@@ -146,7 +157,7 @@ function drawTotalStudents(current, deserted) {
       ['Inscritas', current],
       ['Desertaron', deserted],
     ]);  
-    var options = {'title': 'Estudiantes Laboratoria',
+    var options = {
       'colors': ['#109618', '#dc3912'],
       'width': 400,
       'height': 300 };
