@@ -4,10 +4,11 @@
 
 // Puedes hacer uso de la base de datos a través de la variable `data`
 
-console.log(data['SCL']);
-console.log(data['AQP']['2016-2']['students'][1]['active']);
-console.log(data['AQP']['2016-2']['ratings'][1]['nps']['promoters']);
-console.log(data['AQP']['2016-2']['ratings'][2]['teacher']);
+// console.log(data['SCL']);
+// console.log(data['AQP']['2016-2']['students'][1]['active']);
+// console.log(data['AQP']['2016-2']['ratings'][1]['nps']['promoters']);
+// console.log(data['AQP']['2016-2']['ratings'][2]['teacher']);
+// console.log(data['AQP']['2016-2']['ratings'][0]['jedi']);
 // cambiar pestañas
 
 var list = document.getElementsByTagName('ul')[0].children;
@@ -19,6 +20,8 @@ var studentCurrently = document.getElementById('student-currently');
 var dropout = document.getElementById('dropout');
 var cumulativeNps = document.getElementById('cumulative-nps');
 var percentage = document.getElementById('percentage');
+var teacherRating = document.getElementById('teacher-rating');
+var jediMasterRating = document.getElementById('jedi-master-rating');
 function show(event) {
   var tabSelection = event.target.dataset.tabSelection;
   if (tabSelection === 'overview') {
@@ -49,13 +52,18 @@ function changeTitle() {
     titleSelector.textContent = 'Lima 2016-II';
     calculateCurrently('LIM', 35, '2016-2');
     calculatePromoter('LIM', 2, '2016-2');
+    calculateTeacherRating('LIM', 2, '2016-2');
+    calculateJediMasterRating('LIM', 2, '2016-2');
     var attend = parseInt(calculateCurrently('LIM', 35, '2016-2'));
     drawCurrently(attend, 35 - attend);
+    drawPromoter();
     break;
   case 'lim2017I':
     titleSelector.textContent = 'Lima 2017-I';
     calculateCurrently('LIM', 17, '2017-1');
     calculatePromoter('LIM', 4, '2017-1');
+    calculateTeacherRating('LIM', 4, '2017-1');
+    calculateJediMasterRating('LIM', 4, '2017-1');
     var attend = parseInt(calculateCurrently('LIM', 17, '2017-1'));
     drawCurrently(attend, 17 - attend);
     break;
@@ -63,13 +71,17 @@ function changeTitle() {
     titleSelector.textContent = 'Lima 2017-II';
     calculateCurrently('LIM', 14, '2017-2');
     calculatePromoter('LIM', 2, '2017-2');
+    calculateTeacherRating('LIM', 2, '2017-2');
+    calculateJediMasterRating('LIM', 2, '2017-2');
     var attend = parseInt(calculateCurrently('LIM', 14, '2017-2'));
     drawCurrently(attend, 14 - attend);
     break;
   case 'are2016II':
     titleSelector.textContent = 'Arequipa 2016-II';
     calculateCurrently('AQP', 15, '2016-2');
-    calculatePromoter('AQP', 4,'2016-2');
+    calculatePromoter('AQP', 4, '2016-2');
+    calculateTeacherRating('AQP', 4, '2016-2');
+    calculateJediMasterRating('AQP', 4, '2016-2');
     var attend = parseInt(calculateCurrently('AQP', 15, '2016-2'));
     drawCurrently(attend, 15 - attend);
     break;
@@ -77,6 +89,8 @@ function changeTitle() {
     titleSelector.textContent = 'Arequipa 2017-I';
     calculateCurrently('AQP', 15, '2017-1');
     calculatePromoter('AQP', 3, '2017-1');
+    calculateTeacherRating('AQP', 3, '2017-1');
+    calculateJediMasterRating('LIM', 4, '2017-1');
     var attend = parseInt(calculateCurrently('AQP', 15, '2017-1'));
     drawCurrently(attend, 15 - attend);
     break;
@@ -84,6 +98,8 @@ function changeTitle() {
     titleSelector.textContent = 'Chile 2016-II';
     calculateCurrently('SCL', 11, '2016-2');
     calculatePromoter('SCL', 4, '2016-2');
+    calculateTeacherRating('SCL', 4, '2016-2');
+    calculateJediMasterRating('SCL', 4, '2016-2');
     var attend = parseInt(calculateCurrently('SCL', 11, '2016-2'));
     drawCurrently(attend, 11 - attend);
     break;
@@ -91,6 +107,8 @@ function changeTitle() {
     titleSelector.textContent = 'Chile 2017-I';
     calculateCurrently('SCL', 23, '2017-1');
     calculatePromoter('SCL', 3, '2017-1');
+    calculateTeacherRating('SCL', 3, '2017-1');
+    calculateJediMasterRating('SCL', 3, '2017-1');
     var attend = parseInt(calculateCurrently('SCL', 23, '2017-1'));
     drawCurrently(attend, 23 - attend);
     break;
@@ -98,6 +116,8 @@ function changeTitle() {
     titleSelector.textContent = 'Chile 2017-II';
     calculateCurrently('SCL', 61, '2017-2');
     calculatePromoter('SCL', 2, '2017-2');
+    calculateTeacherRating('SCL', 2, '2017-2');
+    calculateJediMasterRating('SCL', 2, '2017-2');
     var attend = parseInt(calculateCurrently('SCL', 61, '2017-2'));
     drawCurrently(attend, 61 - attend);
     break;
@@ -105,6 +125,8 @@ function changeTitle() {
     titleSelector.textContent = 'Mexico 2017-I';
     calculateCurrently('CDMX', 24, '2017-1');
     calculatePromoter('CDMX', 3, '2017-1');
+    calculateTeacherRating('CDMX', 3, '2017-1');
+    calculateJediMasterRating('CDMX', 3, '2017-1');
     var attend = parseInt(calculateCurrently('CDMX', 24, '2017-1'));
     drawCurrently(attend, 24 - attend);
     break;
@@ -112,6 +134,8 @@ function changeTitle() {
     titleSelector.textContent = 'Mexico 2017-II';
     calculateCurrently('CDMX', 46, '2017-2');
     calculatePromoter('CDMX', 2,'2017-2');
+    calculateTeacherRating('CDMX', 2, '2017-2');
+    calculateJediMasterRating('CDMX', 2, '2017-2');
     var attend = parseInt(calculateCurrently('CDMX', 46, '2017-2'));
     drawCurrently(attend, 46 - attend);
     break;
@@ -126,7 +150,7 @@ function calculateCurrently(sede, numEstudents, year) {
       cont++;
     }
   }
-  studentCurrently.textContent = numEstudents + ' students currently enrolled';
+  studentCurrently.innerHTML = '<b>' + numEstudents + '</b>' + ' students currently enrolled';
   dropout.textContent = ((100 * (numEstudents - cont)) / numEstudents).toFixed(0) + ' % dropout';
   return cont;
 }
@@ -144,8 +168,20 @@ function calculatePromoter(sede, numSprint, year) {
   percentage.innerHTML = (contPromoters / numSprint).toFixed(0) + ' % Promoters <br>' + (contPassive / numSprint).toFixed(0) + ' % Passive </br>' + (contDetractors / numSprint).toFixed(0) + ' % Detractors';
 }
 
-function calculateTeacherRating() {
+function calculateTeacherRating(sede, numSprint, year) {
+  var sumRating = 0;
+  for (var i = 0; i < numSprint;i++) {
+    sumRating = data[sede][year]['ratings'][i]['teacher'] + sumRating;
+  }
+  teacherRating.innerHTML = '<b>' + (sumRating / numSprint).toFixed(2) + '</b>' + '<br> overall teacher rating <br> (cumulative)';
+}
 
+function calculateJediMasterRating(sede, numSprint, year) {
+  var sumJedi = 0;
+  for (var i = 0;i < numSprint;i++) {
+    sumJedi = data[sede][year]['ratings'][i]['jedi'] + sumJedi;
+  }
+  jediMasterRating.innerHTML = '<b>' + (sumJedi / numSprint).toFixed(2) + '</b>' + '<br> overall teacher rating <br> (cumulative)';
 }
 
 function drawCurrently(attend, noAttend) {
@@ -156,10 +192,26 @@ function drawCurrently(attend, noAttend) {
   ]);
   var options = {
     'width': 300,
-    'height': 250};
+    'height': 200};
 
   var chart = new google.visualization.PieChart(document.getElementById('grafy-enrollment'));
   chart.draw(data, options);
+}
+
+function drawPromoter() {
+  // var data = google.visualization.arrayToDataTable([
+  //   ['Element', 'Density', { role: 'annotation' } ],
+  //   ['Copper', 8.94, 'Cu' ],
+  //   ['Silver', 10.49, 'Ag' ],
+  //   ['Gold', 19.30, 'Au' ],
+  //   ['Goldh', 0, 'Au' ],
+  // ]);
+
+  // var options = {
+  //   'width': 300,
+  //   'height': 200};
+  // var chart = new google.charts.Bar(document.getElementById('grafy-promoter'));
+  // chart.draw(data, google.charts.Bar.convertOptions(options));
 }
 
 window.onload = function() {

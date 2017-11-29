@@ -52,8 +52,8 @@
                   <div id="enrollment" class="square">
                     <p>ENROLLMENT</p>
                     <p id="student-currently" class="graphic-data"></p>
-                    <p id="dropout"  class="graphic-data"></p>
-                    <div id="grafy-enrollment"></div>
+                    <p id="dropout"  class="graphic-data red"></p>
+                    <div id="grafy-enrollment" class="container-grafy"></div>
                   </div>
                   <div id="achievement" class="square">
                     <p>ACHIEVEMENT</p>
@@ -64,6 +64,7 @@
                     <p>NET PROMOTER SCORE</p>
                     <p id="cumulative-nps" class="graphic-data"></p>
                     <p id="percentage"  class="graphic-data"></p>
+                    <div id="grafy-promoter" class="container-grafy"></div>
                   </div>
                 </section>
                 <section class="data-part-two container-big">
@@ -123,11 +124,11 @@
                   </div>
                   <div class="square">
                     <p>TEACHER RATING</p>
-                    <p class="graphic-data"></p>
+                    <p class="graphic-data" id="teacher-rating"></p>
                   </div>
                   <div class="square">
                     <p>JEDI MASTER RATING</p>
-                    <p class="graphic-data"></p>
+                    <p class="graphic-data" id="jedi-master-rating"></p>
                   </div>
                 </section>
           </div>
@@ -187,7 +188,8 @@
     <script src="./js/app.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-      google.charts.load('current', {packages: ['corechart']});     
+      google.charts.load('current', {packages: ['corechart']});
+      google.charts.load('current', {'packages':['bar']});     
    </script>
   </body>
 </html>
