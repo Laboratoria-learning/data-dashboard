@@ -92,3 +92,7 @@ header {
 .list-sedes li {
     display: inline-block           ;
 }
+
+.container-list {
+    color: #fff;
+}
