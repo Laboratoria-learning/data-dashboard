@@ -27,6 +27,10 @@
   text-align: center;
 }
 
+.menu {
+  width: 25%;
+  height: 100%;
+
 .list {
   width: 25%;
   height: 100%;
@@ -36,6 +40,72 @@
 .results {
   width: 75%;
   height: 100%;
+}
+
+.container {
+  width: 75%;
+  margin: 0 5%;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.filter {
+  background-color: #fff;
+}
+
+.new-student {
+  width: 100%;
+  font-size: 40px;
+  margin-top: 10px;
+  margin-bottom: 35px;
+  background-color: #f7b617;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.new-student p {
+  width: 85%;
+  font-size: 40px;
+}
+
+.new-student i {
+  width: 15%;
+  font-size: 40px;
+  text-align: center;
+}
+
+span, input, i, p, label {
+  display: inline-block;
+}
+
+.filter label {
+  width: 70%;
+}
+
+.filter {
+  width: 25%;
+  padding: 10px;
+}
+
+.filter input[type="radio"] {
+  /*display: none;*/
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+}
+
+.filter .radio label {
+  color: #f7b617;
 }
 
 .fa, .li-menu {
@@ -49,6 +119,18 @@
   padding: 10px;
 }
 
+.sede {
+  padding: 5px;
+}
+
+.generacion {
+  border: none;
+  background-color: inherit;
+  border-style: none;
+  margin-bottom: 15px;
+  display: block;
+}
+
 nav:hover {
   background: rgba(212, 212, 209, 0.6);
   width: 15%;
@@ -57,3 +139,4 @@ nav:hover {
 /* .list {
   display: none;
 } */
+
