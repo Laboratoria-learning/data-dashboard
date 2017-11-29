@@ -59,16 +59,22 @@ header {
     background-color: #152638;
     border-radius: 13px;
     filter: drop-shadow(2px 2px 5px #999);
-    padding: 17px;
+    padding: 5px;
+    height: 80px;
+}
+
+header section {
+    height: 100%
 }
 
 .name-student {
-    width: 70%;
+    width: 60%;
     display: inline-block;
+    margin-top: 20px;
 }
 
 .name-student input {
-    width: 90%;
+    width: 95%;
     background: -webkit-linear-gradient(left, rgba(30,82,72,1) 0%, rgba(90,131,127,1) 32%, rgba(159,187,191,1) 69%, rgba(213,231,241,1) 98%);
     padding: 8px;
     border-radius: 10px;
@@ -80,22 +86,28 @@ header {
     color: #fff;
 }
 
-.list-sedes {
+.notificacion {
+    width: 30%;
     display: inline-block;
+    margin: 0;
+    margin-left: 90px;
 }
 
-.list-sedes ul {
-    list-style-type: none;
+.notificacion ul {
+    list-style: none;
+    margin-left: 80px;
 }
 
-.list-sedes li {
-<<<<<<< HEAD
-    display: inline-block           ;
-}
-
-.container-list {
-    color: #fff;
-=======
+.notificacion ul li {
     display: inline-block;
->>>>>>> 4612f83b29ca4845b7ed36572aa8e17cd9359b64
+    margin: 30px;
+}
+
+.section-data {
+    width: 80%;
+    margin-left: 17%;
+}
+
+.list {
+    background: #fff;
 }
