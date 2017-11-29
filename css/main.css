@@ -58,7 +58,11 @@ header .logo {
 .cajita {
   background-color: #e1e1e1;
   float: left;
+  font-size: 20px;
+  font-weight: bold;
   margin: 23px;
+  height: 50px;
+  text-align: center;
   width: 140px;
 }
 
