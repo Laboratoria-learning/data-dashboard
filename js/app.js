@@ -76,7 +76,7 @@ window.addEventListener('load', function() {
   var percentTotal = document.createElement('h2');
   percentTotal.innerText = totalAchivement('LIM', '2016-2');
   var textTotal = document.createElement('span');
-  textTotal.innerText = '% OF TOTAL ()';
+  textTotal.innerText = '% of total( )'//allStudents('LIM', '2016-2');
   // agregando al achievement 
   general.appendChild(achievement);
   achievement.appendChild(titleAchi);
@@ -106,6 +106,8 @@ window.addEventListener('load', function() {
   promoterScore.appendChild(titleProSco);
   promoterOne.appendChild(nps);
   promoterOne.appendChild(textNps);
+  // solo todos los alumnos completos
+  
   // funcion para sacar la cantidad actual activos de estudiantes por sede
   function currentStudents(sede, gene) {
     var count = 0;
@@ -118,6 +120,15 @@ window.addEventListener('load', function() {
       }
     } return count;
   };
+  /* function allStudents(sede, gene) {
+    var count = 0;
+    var sede = data[sede];
+    var generation = sede[gene];
+    var student = generation.students;
+    for (var i = 0; i < student.length; i++) {
+      count++;
+    } return count;
+  } */
   // promedio de desertadas
   function dropoutAll(sede, gene) {
     var count = 0;
@@ -162,18 +173,13 @@ window.addEventListener('load', function() {
   }
   function totalAchivement(sede, gene) {
     var promSprintTotal = promSprint(sede, gene);
-    var count = 0;
+    var totalStudents = currentStudents(sede, gene);
     var sede = data[sede];
     var generation = sede[gene];
     var student = generation.students;
-    for (var i = 0; i < student.length; i++) {
-      if (student[i].active === true) {
-        count++;
-      }
-      var percent = Math.round((promSprintTotal / count) * 100);
-    }
-    // porcentaje segun la cantidad de estudiantes que pasan
-    // si tenemos 7 es el total de 16 estudiantes
+
+    var percentAchievement = (promSprintTotal / totalStudents) * 100;
+    return percentAchievement;
   };
 });
 // Puedes hacer uso de la base de datos a través de la variable `data`

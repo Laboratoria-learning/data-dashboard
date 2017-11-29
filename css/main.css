@@ -16,16 +16,23 @@
     margin: auto 40%;
  }
  #location {
-     float: left;
+     margin: 10px;
  }
  .overview{
      display: inline-block;
      padding: 10px;
      float: left;
  }
- .enrollment, .achievement, .netPromoterScore {
+.enrollmentClass {
+    background-color: lightgray;
+    width: 25%;
     float: left;
- }
+}
+.achievementClass {
+    width: 25%;
+    background-color: lightgray;
+    float: left;
+}
  .titleStyle{
      margin: 10px;
      font-family: Arial, Helvetica, sans-serif;
