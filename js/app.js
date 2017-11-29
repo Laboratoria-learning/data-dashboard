@@ -165,3 +165,11 @@ var sprint1numExceedGoalCDMX20172 = percesExceedGoalCDMX20172[0] * numEstudentsC
 console.log('numero alumnas exceden meta CDMX20172-sprint1 : ' + sprint1numExceedGoalCDMX20172);
 var sprint2numExceedGoalCDMX20172 = percesExceedGoalCDMX20172[1] * numEstudentsCDMX20172 / 100;
 console.log('numero alumnas exceden meta CDMX20172-sprint2 : ' + sprint2numExceedGoalCDMX20172);
+
+
+// numero estudiantes superaron la meta CDMX 2017-1 por sprint
+
+var sprint1numExceedGoalCDMX20172 = percesExceedGoalCDMX20172[0] * numEstudentsCDMX20172 / 100; // <-- linea 9
+console.log('numero alumnas exceden meta CDMX20172-sprint1 : ' + sprint1numExceedGoalCDMX20172);
+var sprint2numExceedGoalCDMX20172 = percesExceedGoalCDMX20172[1] * numEstudentsCDMX20172 / 100;
+console.log('numero alumnas exceden meta CDMX20172-sprint2 : ' + sprint2numExceedGoalCDMX20172);
