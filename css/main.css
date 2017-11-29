@@ -81,9 +81,9 @@ nav {
     margin-top: 12px;
     padding: 4px;
 }
-.first {
+/*.first {
     margin-left: 85px;
-}
+}*/
 .info-container {
     background-color: #e1e1e1;
     width: 100%;
@@ -95,10 +95,9 @@ nav {
     background: #f7f7f7;
     height: 433px;
     width: 100%;
-
 }
 .container2 {
-    display: block;
+    display: inline-block;
     background: #f7f7f7;
     height: 559px;
     width: 100%;

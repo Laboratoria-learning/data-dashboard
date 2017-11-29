@@ -17,10 +17,8 @@ var showHide = function(e) {
     } else if (tabs === 'students'){
       console.log('vas bien');
       //ocultar overview y teachers
-      changeOne.toggle('overview-tab');
       //mostrar students
       var changeTwo = studentsTab.style.display = 'block';
-      
     changeTwo.toggle('students-tab');
     } if (tabs === 'teachers')
       console.log('lo lograste');
