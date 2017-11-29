@@ -93,6 +93,7 @@ p {
   transform: translateX(25%);
   cursor: pointer;
   border: 1px solid black;
+  font-size: 14px;
 }
 
 .fa-sort-desc {
