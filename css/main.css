@@ -127,11 +127,14 @@ main {
 .students {
   text-align: left;
   width:60%;
-  background-color:rgb(197, 196, 196);
   vertical-align: top;
   padding:15px;
   border-radius: 8px;
-  
+}
+.students-form {
+  background-color:rgb(197, 196, 196);
+  padding:5px;
+  border-radius:5px;
 }
 .search-students {
   display:inline-block;
@@ -140,5 +143,12 @@ main {
 }
 form .fa-search {
   padding: 10px;
-
+}
+.arequipa-2017-2 {
+  margin-top: 12px;
+}
+.student-data {
+  padiing:10px;
+  background-color: #e3f0fb;
+  border-radius:10px;
 }
