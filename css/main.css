@@ -9,7 +9,7 @@
 
 body {
     background-color: #f7f7f7;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 header {
@@ -47,6 +47,10 @@ header {
 
 a {
     text-decoration: none;
+}
+
+ul {
+    list-style: none;
 }
 
 .box-header {
@@ -148,4 +152,49 @@ a {
 .navegacion .menu a:hover{
 	background: #e6e6e6;
 }
+/*****menu de sedes***********************/
 
+.container-menu {
+    margin: 10px 20px;
+    width: 170px; 
+}
+
+.sedes {
+    text-align: center;
+}
+
+.menu-sedes li a {
+    padding: 10px 5px;
+    display: block;
+    background-color: #ffc107;
+    color: black;
+}
+
+.menu-sedes li a:hover {
+    background-color: #e0e0e0;
+}
+
+.menu-sedes li ul {
+    display: none ;
+    position: absolute;
+    min-width: 170px;
+}
+
+/* .menu-sedes >li {
+    float: left;
+} */
+
+.menu-sedes li:hover > ul {
+    display: block;
+}
+
+.menu-sedes li ul li{
+    position: relative; 
+}
+
+.menu-sedes li ul li ul{
+    right: -170px; 
+    top:  0px;
+}
+
+/*****************estilos tabs***************************/
