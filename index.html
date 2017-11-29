@@ -52,15 +52,20 @@
               <option value="20171">2017 - I</option>      <option value="20162">2016 - II</option>
               <option value="20161">2016 - I</option>
             </select> 
-            <select name="sprint" onChange="javascript:alert('prueba');"> 
+            <select name="sprint"> 
               <option value="sprint1">Sprint 1</option>
               <option value="sprint2">Sprint 2</option>
               <option value="sprint3">Sprint 3</option>
               <option value="sprint4">Sprint 4</option> 
             </select>
       </div>
-      <section id="container">
-        <section id="overview">
+      <div class="content">
+          <button class="menus" onclick="openPage(event, 'overview')" id="default">OVERVIEW</button>
+          <button class="menus" onclick="openPage(event, 'students')">STUDENTS</button>
+    </div>
+
+      <section id="container"> 
+        <section id="overview" class="tabContent">
             <div id="students-overview">
               <pre class="icon-users"></pre>
               <h4>ALUMNAS</h4>
@@ -112,13 +117,18 @@
             <div id="jedi-avrg">
               <h4>NET PROMOTER SCORE</h4>
             </div>
+          </div>
         </section>
 
-        <section id="students"></section>
+        <section id="students" class="tabContent">
+          <h3>Students</h3>
+          <p>La pagina del estudiante</p> 
+        </section>
 
         <section id="teachers"></section>
         
       </section>
+
     </main>
 
 		<!-- Base de datos -->

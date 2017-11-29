@@ -138,6 +138,37 @@ main {
   height: 1000px;
   background-color: #ecebeb;
 }
+/* menu */
+.content {
+  overflow: hidden;
+  background-color: inherit;
+}
+
+.content button {
+  padding-top: 0;
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 15px;
+}
+.content button:hover {
+  background-color: #D7D2D2;
+}
+
+.content button.active {
+  background-color: #DFDDDD;
+}
+.tabContent {
+  display: none;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  overflow: hidden;
+}
 
 /* Filtros */
 #filter-section {
