@@ -17,11 +17,6 @@ h3 {
   margin-right: 10px;
 }
 
-.nav {
-  text-align: center;
-  overflow: auto;
-}
-
 section {
   padding-top: 50px;
 }
@@ -31,12 +26,17 @@ section:last-child {
 }
 
 figure {
-  margin: 0;
+  margin: 5px 0;
   display: inline-block;
 }
 
 figure .brand {
   width: 180px;
+}
+
+.nav {
+  text-align: center;
+  overflow: auto;
 }
 
 .nav span {
@@ -117,7 +117,6 @@ i.icon {
 .overview .data {
   background-color: #f7f7f7;
   width: 150px;
-  height: 65px;
   display: inline-block;
   vertical-align: top;
   padding: 15px;
