@@ -10,20 +10,6 @@ body {
     background-color: rgb(250, 250, 250);
 }
 
-/*Coloca los div en inline block para la seccion 1 y la ultima*/
-.firstSection {
-    display: inline-block;
-    background-color: white;
-    width: 370px;
-    height: 320px; 
-    margin-right: 36px;
-    margin-bottom: 90px;
-    text-align: left;
-}
-.contentFirst {
-
-}
-
 /*STYLE FOR THE HEADER*/
 header {
     /*outline: 1px solid red;*/
@@ -58,6 +44,7 @@ ul {
     list-style: none;
     margin: 0 6px 0 90px;
     overflow: auto; /*devuelve su contexto de bloque y asi alvergue los eleemntos li flotando*/  
+    /*text-align: left;*/
 }
 
 li {
@@ -87,11 +74,84 @@ a:hover { /*cambiar el background del texto*/
 
 .enrollment {
     margin: 25px;
-    
 }
 /*FIRST SECTION*/
+/*Coloca los div en inline block para la seccion 1 y la ultima*/
+h3 {
+    margin-bottom: 25px;
+}
 
-/*div {
+h2 {
+    text-align: left;
+    margin-left: 10px;
+}
+
+p {
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 2px;
+}
+
+.firstSection {
     display: inline-block;
-    width: 33%;
-}*/
+    background-color: white;
+    width: auto;
+    height: auto; /*320px*/
+    margin-right: 36px;
+    margin-bottom: 90px;
+    text-align: left;
+}
+
+.secondSection {
+    display: inline-block;
+    background-color: white;
+    width: auto;
+    height: auto;
+    text-align: left;
+    margin-bottom: 90px;
+}
+
+.contentScore { /*Contenido de las secciones debajo de cada puntaje*/
+    height: 62px;
+    width: 156px;
+    background: rgb(235, 235, 235);
+    float:left;    
+    text-align: center;
+    margin-right: 5px;
+}
+.contentSkill {
+    height: 62px;
+    width: 214px;
+    background: rgb(235, 235, 235);
+    float:left;    
+    margin-right: 5px;
+    text-align: center;
+}
+.contentScore, .contentSkill span {
+    
+    font-size:0.6rem;
+}
+
+/*Estilo para los diagrmas*/
+.graphic {
+    /*outline: 1px solid yellow;*/
+    margin-top: 25px;
+    width: 326px;
+    height: 190px;
+}
+.skillGraphic {
+    margin-top: 25px;
+    width: 660px;
+    height: 342px;
+    margin-right: 50px;;
+}
+.skillPastel {
+    width: 310px;
+    height: 263px;
+    margin: 60px;
+}
+
+/*Añadiendo colores a los puntajes*/
+
+
+
