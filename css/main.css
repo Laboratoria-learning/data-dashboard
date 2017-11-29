@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 header{
 
 }
@@ -20,6 +21,39 @@ header img{
   width: 160px;
 }
 
+=======
+>>>>>>> seccion2
 /*
  * Estilos de tu proyecto
  */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#section2 {
+    display: inline-block;
+    background-color: rgb(203, 203, 238);
+    width: 100%;
+    height: 200px;
+}
+
+.active {
+    position: absolute;
+    left: 5%;
+    display: inline-block;
+    width: 100px;
+    height: 100px;   
+}
+.sprint{
+ position: absolute;
+ left: 25%;
+ display: inline-block;
+ width: 100%;
+ height: 100px; 
+}
+.grafic{
+width: 300px;
+height: auto;
+}
