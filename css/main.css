@@ -1,6 +1,3 @@
-/*
- * Estilos de tu proyecto
- */
  * {
     padding: 0;
     margin: 0;
@@ -30,6 +27,7 @@
 .menu {
   width: 25%;
   height: 100%;
+}
 
 .list {
   width: 25%;
@@ -97,6 +95,13 @@ span, input, i, p, label {
   padding: 10px;
 }
 
+.sub-container {
+  width: 70%;
+  margin-top: 10px;
+  border: 1px solid blue;
+  overflow: auto;
+}
+
 .filter input[type="radio"] {
   /*display: none;*/
   width: 20px;
@@ -139,4 +144,3 @@ nav:hover {
 /* .list {
   display: none;
 } */
-
