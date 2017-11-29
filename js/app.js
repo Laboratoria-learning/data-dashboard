@@ -22,7 +22,7 @@ window.addEventListener('load', function() {
     var containerData = document.createElement('div');
     var containerTeacher = document.createElement('div');
     var titleData = document.createElement('h1');
-    titleData.textContent = 'Teacher Rating';
+    titleData.textContent = 'Overall Teacher Rating';
     containerData.appendChild(containerTeacher);
     containerTeacher.appendChild(titleData);
     containerTeacher.setAttribute('id', 'teacher-data');
@@ -42,45 +42,15 @@ window.addEventListener('load', function() {
   });
 
   teachers.addEventListener('click', function averageTeachers(event) {
-  // var arequipa = data.AQP;
-    var containerAverage = document.createElement('div');
-    var average2016 = (data.AQP['2016-2']['ratings'][0]['teacher'] + data.AQP['2016-2']['ratings'][1]['teacher'] + data.AQP['2016-2']['ratings'][2]['teacher'] + data.AQP['2016-2']['ratings'][3]['teacher']) / 4;
-    console.log(average2016); // 3.5999999999999996    
-    var average2017 = (data.AQP['2017-1']['ratings'][0]['teacher'] + data.AQP['2017-1']['ratings'][1]['teacher'] + data.AQP['2017-1']['ratings'][2]['teacher']) / 3;
-    console.log(average2017); // 4.166666666666667
-    var averageTotal = (average2016 + average2017) / 2;
-    var averageText = document.createElement('h4');
-    averageText.innerHTML = averageTotal;
-    containerAverage.appendChild(averageText);
-    var container = document.getElementById('teacher-data');
-    container.appendChild(containerAverage);
-    /*
-    for (var i in average) {
-      
-    } */  
+  // Promedio general Arequipa
+  // var containerAverageAqp = document.createElement('div');
+    var aqp = data.AQP;
+    var average2016Aqp = function(data) {
+      for (var i in aqp) {
+        return console.log(aqp);
+      }
+    }
   });
 
 });
 
-
-
-
-
-
-
-
-
-
-
-/*function averageTeachers(data) {
-    var average = '';
-    var arequipa = data.AQP;
-    var primer = data.AQP['2016-2'];
-    for (var i in data) {
-		for(var j in arequipa) {
-        }
-          for (var k in primer) {
-    }
-    return console.log(primer);
- }
-} */
