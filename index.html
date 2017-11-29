@@ -50,11 +50,12 @@
         </div>
         <ul class="tabs">
           <li>OVERVIEW</li>
-          <li>STUDENTS</li>
+          <li id="studentsTab">STUDENTS
+          </li>
           <li>TEACHERS</li>
         </ul>
       </section>
-      <section class="container-graphics">
+      <section class="container-graphics" id="section-overview">
         <!-- TECH SKILLS -->
         <div class="big-graphic">
           <div>
@@ -197,6 +198,19 @@
         <div class="setting"><a href="#">Salir</a></div>
       </section>
       <!--Fin de Menu que aparece y desaparece-->
+
+      <section id="section-students"class="hide container-students">
+        <div class="specialization">
+          <h4>SPECIALIZATION</h4>
+          <form>
+            <input type="checkbox"> UX Design
+            <input type="checkbox"> Front end developer
+          </form>
+        </div>
+        <div id="students-hidden" class="student-hide">
+
+        </div>
+      </section>
     </main>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>

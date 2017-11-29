@@ -3,7 +3,7 @@ window.addEventListener('load', function() {
   // ------------> Funcionalidad Menú <-------------------------
   var openAnimatedMenu = document.getElementById('open-animated-menu');
   var closeAnimatedMenu = document.getElementById('close-animated-menu');
-    
+
   openAnimatedMenu.addEventListener('click', function() {
     document.getElementById('animated-menu').style.width = '250px';
   });
@@ -82,4 +82,57 @@ window.addEventListener('load', function() {
     box2.appendChild(parag2);
 */
   });
+
+// ------------> Crea función para generar lista de estudiantes <-----------------
+
+  var studentsTab = document.getElementById('studentsTab');
+  studentsTab.addEventListener('click', showSectionStudents);
+
+  var sectionOverview = document.getElementById('section-overview');
+  var sectionStudents = document.getElementById('section-students');
+
+  function showSectionStudents(event) {
+    console.log(event.target);
+    sectionOverview.classList.add('hide');
+    sectionStudents.classList.remove('hide');
+    sectionStudents.style.cssText = 'display:inline-block; background:white;';
+  }
+
+  // ruta para hallar el value del filtro
+  var promoFilter = document.getElementById('promo-filter');
+
+  if (promoFilter.children[1].children[0].value === 'aqp-16-2') {
+    students = data.AQP['2016-2'].students;
+    //console.log(students);
+    showStudents();
+  } else if (promoFilter.children[1].children[1].value === 'aqp-17-1') {
+    students = data.AQP['2017-1'].students;
+    console.log(students);
+    showStudents();
+  }
+
+  function showStudents() {
+    var container = document.getElementById('students-hidden');
+    for (var i = 0; i < students.length; i++) {
+    //crear un div para una estudiante
+   var profilestudent = document.createElement('div');
+   container.appendChild(profilestudent);
+
+   //crear la imagen para la foto de perfil
+   var imgprofile= document.createElement('img');
+   imgprofile.classList.add('img-student');
+   imgprofile.setAttribute('src', students[i].photo);
+
+   profilestudent.appendChild(imgprofile);
+
+   //agregar nombre de estudiante
+   var information  = document.createElement('p');
+    information.classList.add('datos-studen');
+   var otherName = document.createElement('h5');
+   otherName.textContent=(students[i].name);
+
+   information.appendChild(otherName);
+   profilestudent.appendChild(information);
+    }
+  }
 });

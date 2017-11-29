@@ -206,3 +206,50 @@ header {
 .setting a:hover {
   color: #f7b617;
 }
+
+/*---------> Gaby agrega clases <---------*/
+.show {
+  display:block;
+}
+
+.hide {
+  display: none;
+}
+
+/*---------> clases para seccion students <---------*/
+.container-students {
+  display: block;
+  background: white;
+  width: 90%;
+  margin: 0 auto;
+  outline: 1px solid red;
+  text-align: center;
+}
+
+.specialization {
+  display: inline-block;
+  vertical-align: top;
+  background-color: lightgray;
+  margin: 1em;
+  padding: 1.5em;
+  width: 30%;
+}
+
+.student-hide {
+  display: inline-block;
+  background-color: lightgray;
+  margin: 1em;
+  padding: 1em;
+  width: 60%;
+}
+
+.img-student {
+  display: inline-block;
+  width: 10em;
+  margin-right: 0.5em;
+}
+
+.datos-student {
+  display: inline-block;
+  vertical-align: top;
+}
