@@ -5,35 +5,7 @@
 // Puedes hacer uso de la base de datos a través de la variable `data`
 console.log(data);
 
-//función que cuenta alumnas en total, activas y retiradas.
-// function countActive(sede, generacion, estudiantes) {
-//   var countActive = 0;
-//   var countInActive = 0;
-//   var sedeLab = data[sede][generacion][estudiantes];
-//   for (var i = 0; i < sedeLab.length; i++) {
-//     if (sedeLab[i].active) {
-//       countActive++
-//     } else if (sedeLab[i].active === false) {
-//       countInActive++
-//     }
-
-//     total = countActive + countInActive;
-//   }
-//   console.log('Son ' + total + '. Las alumnas activas son: ' + countActive + '. y las alumnas retiradas son: ' + countInActive);
-
-// }
-
-// countActive('AQP', '2016-2', 'students');
-
-//función que cuenta alumnas en total, activas, retiradas y proporciona porcentaje de retiradas.
-
-// var sede = document.getElementById('sede');
-
-// sede.addEventListener('click', showGeneration);
-
-// function showGeneration(){
-//     console.log('dsds');
-// }
+// función que devuelve alumnas en total, alumnas activas, alumnas retiradas y porcentaje de retiradas.
 var total;
 var countActive = 0;
 var countInActive = 0;
@@ -52,12 +24,13 @@ function countStudentActive(sede, generation, students) {
   }
 
   var porcentaje = parseInt((countInActive * 100) / total);
-  // return 'Son ' + total + '. Las alumnas activas son: ' + countActive + '. y las alumnas retiradas son: ' + countInActive + '\n Las alumnas retiratas representan el ' + porcentaje + '%';
   console.log('Son ' + total + '. Las alumnas activas son: ' + countActive + '. y las alumnas retiradas son: ' + countInActive + '\n Las alumnas retiratas representan el ' + porcentaje + '%');
 }
 
 countStudentActive('AQP', '2016-2', 'students');
 
+
+// Función que devuelve alumans qye pasan promedio de puntajes y el porcentaje que representan.
 function achievement(sede,generation){
   var count = 0;
   var numberRatings = data[sede][generation]['ratings'];
@@ -75,11 +48,15 @@ achievement('AQP', '2017-1');
 achievement('CDMX', '2017-1');
 achievement('CDMX', '2017-2');
 
+// función para promedio NPS de todos los sprints
 
+function nps(sede,generation){
+  var count = 0;
+  var numberRatings = data[sede][generation]['ratings'];
+  for (var i = 0; i < numberRatings.length; i++) {
+    var averageNps = numberRatings[i]['nps']['promoters'] - numberRatings[i]['nps']['detractors'];
+    console.log(averageNps);
+  }
+}
 
-
-
-
-
-
-
+nps('AQP', '2016-2');
