@@ -11,9 +11,11 @@
  /*logo-laboratoria*/
  img{
    outline: 1px solid red;
-   width: 63.5em;
+   width: 85.5em;
    height: 5em;
-   float: right;
+   position: fixed;
+   padding-left: 12em;
+   
 
 
  }
@@ -21,6 +23,8 @@
  nav{
    display: inline-block;
    margin-left: 21.8em;
+   position: fixed;
+   top:5em;
 
 
  }
@@ -34,19 +38,25 @@
  }
  li{
 
-   width: 250px;/*ancho */
+       width: 254.2px;/*ancho */
  /*  display: inline-block;*//*lo pone en una sola linea una al costado de otra*/
    text-align: center;/*centrara cada li*/
    float: left;/*pone elementos flotados*/
 }
 a{
+padding-bottom: 8px;
 text-decoration: none;/*quita la linea*/
 display: block;/*ocupe el espacio disponible de la etiqueta li*/
 color: #fff;
 font-size: 20px;
 }
 .title{
-  color: #000;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  font-size: 25px;
+  text-align: center;
+  color: #fff;
+  background-color: #FFD65B;
 }
 /*hara al pasar el mause en cada li cambiara de color*/
 a:hover{
@@ -59,7 +69,9 @@ a:hover{
   color:#fff;
 }
 .fa.fa-bars{
-    margin-top: 10px;
+  margin-top: 18px;
+  margin-left: 3em;
+  position: relative;
 }
 .fa.fa-home{
   margin-left: 1em;
@@ -82,18 +94,21 @@ a:hover{
 .list{
   width: 15.5em;
   display: inline-block;
-  box-sizing: border-box;
   position:fixed;
   left: 6.2em;
   border: 1px solid #EDEDED;
+  top: 0em;
 
 }
 .box-list{
-  padding-top: 10px;
+  margin-left: 1em;
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 .sub-boxList{
-   margin-left: 10px;
-   padding-top: 4px;
+   margin-left: 2em;
+   padding-top: 10px;
+   padding-bottom: 5px;
 }
 hr{
   border: 1px solid orange;
@@ -101,27 +116,37 @@ hr{
 /*Estilo de las estadisticas*/
 .container-2{
   margin-left: 22em;
+
 }
 .sub-box{
-    background-color:#F2F3F4  ;
+  margin-top: 12em;
+  background-color:#F2F3F4  ;
   width: 320px;
   height: 310px;
   display: inline-block;
   margin-left: 0.5em;
-  bottom: 40em;
-  position: relative;
+  outline: 1px solid red;
+
 
 }
 h1{
+  width: 12em;
   margin-top: 1em;
   margin-left: 1em;
+  outline: 1px solid blue;
 }
 .sub-box2{
+  outline: 1px solid green;
   background-color: #F7F7F7;
   width: 140px;
   height: 80px;
   display: inline-block;
   margin-left: 0.5em;
-  top: 1em;
+  top: 10em;
   position: relative;
+}
+.number{
+  outline: 1px solid red;
+  width: 5em;
+  height: 2em;
 }
