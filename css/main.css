@@ -14,6 +14,11 @@
     padding-right: 75px;
  }
 
+ body{
+     padding-right: 75px;
+     padding-left: 75px;
+ }
+
  /* Agregando estilos al header */
 
  .header{
@@ -25,7 +30,7 @@
  }  
 
  .header figure{
-    position: absolute;
+    position: relative;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -39,6 +44,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
+    outline: solid 2px green;
 }
 
 .header div ul{
@@ -55,7 +61,7 @@
     text-decoration: none;
 }
 
-/* Agregando estilos al navber */
+/* Agregando estilos al nav */
 
 .nav{
     background-color : #e1e1e1;
@@ -98,4 +104,22 @@
     cursor: pointer;
 }
 
+main {
+    top: 600px;
+    background: #f7f7f7;
+    width: 100%;
+    height: 10px;
+    position: relative;
+    border:1px  solid red;
+    padding: 75px 100px 75px 100px;
+       
+}
+
+/*clase usada en el js*/
+.hidden{
+ display:none;
+}
+.show{
+ display: inline-block;
+}
 

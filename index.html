@@ -13,16 +13,14 @@
         <figure>
           <img class="imgLaboratoria" src="assets/images/logo-laboratoria.svg" alt="Logo Laboratoria">
        </figure>
-        <div class="menuBar" id="menuBar">
-          
-        </div>
       </header>
     <!-- estructura del navber -->
       <nav class="nav" id="nav">
+        <div>
         <h1>SANTIAGO DE CHILE  <i class="fa fa-caret-down" aria-hidden="true"></i></h1>
-        <ul class="dropdownBar">
-          
-        </ul>
+        </div>
+        <div class="menuBar" id="menuBar"> 
+        </div>
         <div class="listNav" id="listNav">
           <ul>
             <li><button type="button" name="button" data-tab-selector ="tabOverviews" class="tab"> OVERVIEW </button></li>
@@ -31,15 +29,35 @@
           </ul>
         </div>
       </nav>
-    </div>
-    <section>
-      <div id="overviews">
-        <ul>
-          <li>dfhhud</li>
-          <li>sfknjdhg</li>
-          <li>fdknghndf</li>
-          <li>jfjdo</li>
-        </ul>
+    </nav>
+    <main>
+      <div id="options" class="options">
+        <select id="sprint" class="sprint">
+          <option value="none">Elija una opción</option>
+          <option value="5">Sprint 5</option>
+        </select>
+        <select id="specialization" class="specialization">
+          <option value="js">Javascript</option>
+          <option value="ux">UX</option>
+        </select>
+      </div>
+      <div id="enrollment">
+        <div id="kpi-enrollment"></div>
+        <div id=""></div>
+      </div>
+      <div id="achievement">
+        <div id="kpi-achievement"></div>
+        <div id="percent-achievement"></div>
+        <div id="students-achievement"></div>
+      </div>
+
+      <div id="nps">
+        <div id="kpi-nps"></div>
+        <div id="promoters"></div>
+        <div id="passive"></div>
+        <div id="detractors"></div>
+      </div>
+      <!-- para modificar -->
       </div>
       <div id="students">
         <ul>
@@ -54,11 +72,12 @@
           <li>caja33333</li>
         </ul>
       </div>
-    </section>
-<!-- agre -->
+    </main>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
     <script src="./js/app.js"></script>
+  
+  
   </body>
 </html>
