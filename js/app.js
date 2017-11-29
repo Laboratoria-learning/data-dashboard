@@ -54,7 +54,7 @@ function show(event) {
 function changeTitle() {
   var titleSelector = document.getElementById('title-selector');
   var valueSelector = comboBox.value;
-  
+
   var returnCurrently;
   switch (valueSelector) {
   case 'lim2016II':
@@ -194,7 +194,7 @@ function calculateJediMasterRating(sede, numSprint, year) {
 }
 
 function calculateStudentSatisfaccion(sede, numEndSprint,year) {
- 
+
 }
 
 function drawCurrently(attend, noAttend) {
@@ -235,3 +235,5 @@ window.onload = function() {
   containesStudents.classList.add('none');
   comboBox.addEventListener('change',changeTitle)
 }
+
+alert("hola");
