@@ -15,23 +15,18 @@ function estudentcont () {
 }
  function overcont () {
   contentOverview.style.display = 'block';
-  contentStudents.style.display = 'none';
-  
+
 };
 
-function create() {       
-  var sede = document.getElementById('sede').value;   
-  document.getElementById('text').innerHTML = sede ; 
+function create() {
+  var sede = document.getElementById('sede').value;
+  document.getElementById('text').innerHTML = sede ;
+    var datos = (data["AQP"]["2016-2"]["students"]);
 
- var estudiantelim1 = (data["LIM"]["2016-2"]["students"].length);
- var  estudiantelim2 = (data["LIM"]["2017-1"]["students"].length);
-// if (estudiantelim1) {
-//  console.log( document.getElementById('one').innerHTML = estudiantelim1);
-// }
-// else if (estudiantelim2) {
-//   console.log( document.getElementById('one').innerHTML = estudiantelim2);
-// }
- 
+    if (datos == true ) {
+     document.getElementById('one').innerHTML = datos;
+      }
+
 
 switch(sede) {
   case 'LIMA2016-II':
@@ -63,7 +58,6 @@ function select() {
   sede.addEventListener('change', create);
   students.addEventListener('click', estudentcont);
   overview.addEventListener('click', overcont);
-  
+
 
 };
-

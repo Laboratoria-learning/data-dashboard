@@ -28,7 +28,7 @@ font-size: 20px;
   background: red;
   display: block;
   margin-left: 70%;
-  
+
 }
 /* Estilos a button */
 .container-tab{
@@ -108,7 +108,7 @@ h3{
   background-color: skyblue;
   display: inline-block;
   width: 100%;
-  
+
 }
 .specialization{
   background-color: #fff;
@@ -125,6 +125,9 @@ h3{
   margin: 15px;
 }
 /*****************************/
+#contentStudents{
+  display: none;
+}
 .list-students {
   background-color: #fff;
   float: right;
