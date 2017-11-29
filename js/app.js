@@ -5,7 +5,11 @@ window.addEventListener('load', function() {
   var containerSedes = document.getElementById('container-sedes');
   containerSedes.addEventListener('click', function() {
     var sedes = document.getElementById('container-generations');
+    
+    /* Variables del total de alumnas, total de desercion y activas */
     var total = 0;
+    var totalDesertion = 0;
+    var totalActive = 0;
 
     for (var i = 0; i < Object.keys(data).length; i++) {
       var containerList = document.createElement('ul');
@@ -30,8 +34,16 @@ window.addEventListener('load', function() {
         list.appendChild(containerListGenerations);
         // console.log(data[Object.keys(data)[i]]);  
 
-        /* Usamos esta formula para obtener el total de alumnas */
+        /* Usamos esta formula para obtener el total de alumnas */ 
         total = total + (Object.values((Object.values(Object.values(data)[i]))[a])[0].length);
+
+        for (var b = 0; b < Object.values((Object.values(Object.values(data)[i]))[a])[0].length; b++) {
+          if (Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[2]) {
+            totalActive = totalActive + 1;
+          } else {
+            totalDesertion = totalDesertion + 1;
+          }
+        }
 
         listGenerations.addEventListener('click', function() {
           var firstContainer = document.getElementById('first-container');
@@ -42,11 +54,11 @@ window.addEventListener('load', function() {
 
           var desertion = document.createElement('div');
           var paragraphDesertion = document.createElement('p');
-          var textDesertion = document.createTextNode('Desertion');
+          var textDesertion = document.createTextNode('Desertion ' + totalDesertion);
 
           var approvedStudents = document.createElement('div');
           var paragraphApproved = document.createElement('p');
-          var textApproved = document.createTextNode('Approved Students');
+          var textApproved = document.createTextNode('Approved Students ' + totalActive);
 
           paragraphStudent.appendChild(textStudent);
           totalStudents.appendChild(paragraphStudent);
@@ -64,6 +76,7 @@ window.addEventListener('load', function() {
     }  
   });
 }); 
+
 /*
 var sum = 0;
 for (var i = 0; i < Object.keys(data).length; i++) {
@@ -74,3 +87,25 @@ for (var i = 0; i < Object.keys(data).length; i++) {
   }
 }
 console.log(sum); */
+/*
+var sum = 0;
+var rest = 0;
+for (var i = 0; i < Object.keys(data).length; i++) {
+  for (var a = 0; a < Object.keys(data[Object.keys(data)[i]]).length; a++) {
+    for (var b = 0; b < Object.values((Object.values(Object.values(data)[i]))[a])[0].length; b++) {
+    // console.log(Object.values(data)[i]); 
+    // se obtiene el array de datos de las alummnas 
+    // console.log(Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[2]);
+
+      if (Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[2]) {
+        sum = sum + 1;
+
+      } else {
+        rest = rest + 1;
+
+      }
+    }
+  }
+}
+console.log(sum);
+console.log(rest); */
