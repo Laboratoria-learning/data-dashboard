@@ -18,6 +18,7 @@ _**[Promoters] = [Respuestas 9 o 10] / [Total respuestas] * 100
 [Detractors] = [Respuestas entre 1 y 6] / [Total respuestas] * 100
 
 [NPS] = [Promoters] - [Detractors]**_
+
 7.La cantidad y el porcentaje que representa el total de estudiantes que superan la meta de puntos técnicos en promedio y por sprint.
 8.La cantidad y el porcentaje que representa el total de estudiantes que superan la meta de puntos de HSE en promedio y por sprint.
 9.El porcentaje de estudiantes satisfechas con la experiencia de Laboratoria.
