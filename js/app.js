@@ -56,11 +56,24 @@ var city = Object.keys(data);
         for(var j = 0; j< generationx.length; j++){
             newli = document.createElement('li');
             newli.id = 'data[\'' + city[i] + '\'][\'' + generationx[j] + '\']';
+            newli.setAttribute('class','bootcamps');
             newli.innerHTML = generationx[j];
             newUl.appendChild(newli);
         }
     }
-       
+    
+    var bootcamps = document.getElementsByClassName('bootcamps');
+    for(var x = 0; x < bootcamps.length; x++ ){
+        bootcamps[x].addEventListener('click',showMenu);
+    }
+
+    function showMenu(){
+        var str = event.target.id;
+        console.log(str);
+    }
+
+
+ 
 
     console.log(menu);
     console.log(city);

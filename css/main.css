@@ -94,6 +94,8 @@
     border-bottom: 6px solid #fac646;
 }
 
-
+.menuBar li:hover{
+    cursor: pointer;
+}
 
 
