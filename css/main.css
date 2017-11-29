@@ -21,13 +21,13 @@
  }
  /*lista de navegación*/
  nav{
-   display: inline-block;
-   margin-left: 21.8em;
+   left:28%;
    position: fixed;
+   width: 72%;
    top:5em;
 
+  }
 
- }
  ul{
 
    list-style: none;/*los puntos los quita*/
@@ -37,7 +37,7 @@
    overflow: auto;/*devuelve el contexto del bloque*/
  }
  li{
-       width: 250px;/*ancho */
+    width: 25%;/*ancho */
  /*  display: inline-block;*//*lo pone en una sola linea una al costado de otra*/
    text-align: center;/*centrara cada li*/
    float: left;/*pone elementos flotados*/
@@ -75,34 +75,38 @@ a:hover{
 }
 .fa.fa-home{
   margin-left: 1em;
-  margin-top: 20px;}
+  margin-top: 20px;
+}
 .fa.fa-user-circle{
-  margin-left: 1em;
-  position: relative;
-  top: 15.5em;
-
+  left: 1em;
+  position: absolute;
+  bottom: 15px;
 }
 /* Section del Home*/
 .sub-container{
   background-color: #FFC107;
-  width: 6.2em;
-  height: 45em;
+  width: 8%;
+  height: 100%;
   position: fixed;
   top: 0em;
+  z-index: 1;
 }
 /*Estilos a la Fila de Sedes */
 .list{
-  width: 15.5em;
+  height: 100%;
+  width: 20%;
   display: inline-block;
   position:fixed;
-  left: 6.2em;
+  left: 8%;
   top: 0em;
   box-shadow:5px 0px 5px #EDEDED;
+  z-index: 1;
+  background-color: #fff;
 }
 .box-list{
   margin-left: 1em;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 .sub-boxList{
    margin-left: 2em;
@@ -112,37 +116,47 @@ a:hover{
 hr{
   border: 1px solid orange;
 }
-/*Estilo de las estadisticas*/
-.container-2{
-  margin-left: 22em;
-
+  /* Estadisticas */
+.stats{
+    height: 75%;
+    width: 4000px;
+    position: absolute;
+    left: 28%;
+    top: 10em;
 }
 .sub-box{
-  margin-top: 12em;
-  background-color:#fff  ;
-  width: 320px;
-  height: 310px;
-  display: inline-block;
-  margin-left: 0.5em;
-}
-h1{
-  width: 12em;
-  margin-top: 1em;
-  margin-left: 1em;
-  outline: 1px solid blue;
-}
-.sub-box2{
-  outline: 1px solid green;
-  background-color: #F7F7F7;
-  width: 140px;
-  height: 80px;
-  display: inline-block;
-  margin-left: 0.5em;
+ background-color: #fff;
+ width: 500px;
+ height: 100%;
+display: inline-block;
+float: left;
 
-  position: relative;
 }
-.number{
-  outline: 1px solid red;
-  width: 5em;
-  height: 2em;
+h2{
+  margin-top: 10px;
+  width:325px;
+  padding-left:10px;
+}
+.sub-box-content{
+  background-color:#EFEFEF;
+  width: 40%;
+  height:22%;
+  float: left;
+  margin-top: 30px;
+  margin-left: 10px;
+
+}
+
+.box-text{
+  width: 100%;
+  height: 50px;
+
+}
+
+/*Primera estadistica*/
+#chart_div{
+  width:100%;
+  height: 250px;
+  margin-top:33%;
+
 }
