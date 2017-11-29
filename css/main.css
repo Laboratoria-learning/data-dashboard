@@ -2,28 +2,54 @@
  * Estilos de tu proyecto
 
  */
- 
  * {
     margin: 0; 
     padding: 0;
-    background: gray;
+    /* background: rgba(209, 214, 224, 0.247); */
 }
 
+.logo {
+    background: white;
+}
+
+.logo img {
+    width: 150px;
+    margin: 0 42%;
+}
+
+.options {
+    background:rgba(253, 234, 27, 0.938); 
+}
+.select {
+    border:none;
+    height: 28px;
+    margin:0 35px; 
+    background:rgba(255, 251, 0, 0.082); 
+
+}
+
+.tabs {
+    background:rgba(255, 251, 0, 0.548); 
+    
+}
 .tab {
     display: inline-block;
     padding: 7px;
-    margin: 30px; 
+    margin: 14px 35px; 
     cursor: pointer;
-    border-bottom: 2px solid rgb(253, 253, 8);
+    border-bottom: 4px solid rgb(236, 195, 11);
 }
 
 .tab:hover {
-    border-bottom: 2px solid rgb(143, 143, 145);
+    border-bottom: 4px solid rgb(17, 17, 17);
 }
 
-.select {
-    border:none;
+
+
+.firt-boxes {
+    margin: 28px 95px 28px 95px; 
 }
+
 
 div.estadist {
     display: inline-block;
@@ -38,28 +64,92 @@ h2 {
 div.block {
     display: inline-block;
     background: white;
-    padding: 0 0 0 49px;
+    padding: 0 0 0 35px;
 }
  div.num {
      display: inline-block;
      background: white;
-     padding: 7px 28px;   
+     margin:  14px;  
  }
 
  div.box {
-     background: rgba(199, 183, 38, 0.795);
+     background: #d6d8d3bb;
      display:inline-block;
-     height: 40px;
-     width: 70px;
-     margin: 0 28px 0 14px;
-     text-align: center;
+     height: 49px;
+     width:127px;
  }
 
 img {
-    display: block;
+    display: inline-block;
 }
 
+/* segunda section */
 
+
+
+ 
+
+ 
+ /* .information {
+   background-color: #a0246c;
+ } */
+ 
+ .tec {
+   height:420px;
+   margin: 28px 95px 28px 95px; 
+   /* background-color: #dbeff56c; */
+ 
+ }
+
+ 
+ .hse{
+    height:420px;
+    margin: 28px 95px 28px 95px; 
+    /* background-color: #dbeff56c; */
+ }
+ 
+ /* h2{
+   margin-left: 24px;
+   text-transform: uppercase;
+   font-size: 20px;
+   font-family: inherit;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 22px;
+   padding-top: 2%;
+ } */
+  .super-small{
+   width:50%;
+   height:63px;
+   background-color: #d6d8d3bb;
+   display: inline-block;
+   margin-left:28px; 
+ }
+ 
+ .box2{
+   width:21%;
+   height:63px;
+   background-color: #d6d8d3bb;;
+   display: inline-block;
+   margin: 20px 0.5px 19px 30px;
+ 
+ }
+ 
+
+ .last-box{
+    background-color: #e41e1e;
+    height:420px;
+    display: flex;
+    margin: 28px 95px 28px 95px;
+  }
+
+  .small-box{
+    width:33%;
+    height:280px;
+    background-color: #ffffff;
+    margin: 61px  31px 84px 5px;  
+  }
+ 
 
 /*fffffffffffffffffffffffffffffffffffff*/
 .inline {
