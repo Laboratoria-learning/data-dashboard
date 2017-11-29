@@ -45,6 +45,7 @@ window.addEventListener('load', function() {
     case event.target.value === '2016-2':
       var generation2016II = data[sede[chooseSede]]['2016-2']; // esta seleccionando el objeto que esta dentro de 2016II el cual incluye students y ratings como keys
       showGeneration(generation2016II);
+      showRatings(generation2016II);
       break;
     case event.target.value === '2017-1':
       var generation2017I = data[sede[chooseSede]]['2017-1'];
@@ -58,26 +59,42 @@ window.addEventListener('load', function() {
   });
 });
 
-function showGeneration(obj) {
-  var divStudents = document.createElement('div');
-  var pStudents = document.createElement('p');
-  pStudents.textContent = 'ESTUDIANTES INSCRITAS: ' + obj['students'].length + ' inscritas'; 
-  divStudents.appendChild(pStudents);
-  container.appendChild(divStudents);
-  var acumulStudentsActive = 0;
-  for (var i = 0; i < obj['students'].length; i++) {
-    if (obj['students'][i]['active'] === true) {
-      acumulStudentsActive++;
+function showGeneration(obj) { // nos va a mostrar la cantidad de estudiantes activas
+  var divStudents = document.createElement('div'); // crea un div
+  var pStudents = document.createElement('p'); // crea un p
+  pStudents.textContent = 'ESTUDIANTES INSCRITAS: ' + obj['students'].length + ' inscritas'; // agrega contenido al p
+  divStudents.appendChild(pStudents); // agrega el p dentro del div
+  container.appendChild(divStudents); // agrega el div dentro del container
+  var acumulStudentsActive = 0; // acumulara la cantidad de estudiantes activas
+  for (var i = 0; i < obj['students'].length; i++) { // recorre el array con las estudiantes
+    if (obj['students'][i]['active'] === true) { // verifica si es true
+      acumulStudentsActive++; // aumenta la variable en 1 cada que es true
     }
   };
   var pStudentsAactive = document.createElement('p');
-  pStudentsAactive.textContent = 'ESTUDIANTES ACTIVAS:' + acumulStudentsActive + ' activas';
-  divStudents.appendChild(pStudentsAactive);
+  pStudentsAactive.textContent = 'ESTUDIANTES ACTIVAS:' + acumulStudentsActive + ' activas'; // contenido del p que muestra las estudiantes activas
+  divStudents.appendChild(pStudentsAactive); // agrega el p al div
   console.log(acumulStudentsActive);
   var pStudentsDeserter = document.createElement('p');
-  pStudentsDeserter.textContent = 'ESTUDIANTES DESERTORAS:' + (obj['students'].length-acumulStudentsActive) + ' desertoras';
+  pStudentsDeserter.textContent = 'ESTUDIANTES DESERTORAS:' + (obj['students'].length - acumulStudentsActive) + ' desertoras'; // mueustra las desertoras
   divStudents.appendChild(pStudentsDeserter);
 }
 
-// Puedes hacer uso de la base de datos a través de la variable `data`
-// console.log(data);
+function showRatings(obj) {
+  var divRatings = document.createElement('div');
+  container.appendChild(divRatings);
+  // var pStudentsSupera = document.createElement('p');
+  // var acumulStudentsSupera = 0;
+  for (var j = 0; j < obj['ratings'].length; j++) { // recorre el array ratings
+    console.log(obj['ratings'][j]['student']); // me da un objeto que contiene los keys de cumple o no
+    var ulStudentsPoints = document.createElement('ul');
+    var liStudentsCumple = document.createElement('li');
+    ulStudentsPoints.textContent = 'SPRINT ' + (j + 1) + ':';
+    liStudentsCumple.textContent = 'Estudiantes que superan la meta: ' + obj['ratings'][j]['student']['supera'] + '%';
+    ulStudentsPoints.appendChild(liStudentsCumple);
+    divRatings.appendChild(ulStudentsPoints);
+    /* acumulStudentsSupera = acumulStudentsSupera + obj['ratings'][j]['student']['supera'];
+    pStudentsSupera.textContent = 'ALUMNAS QUE SUPERAN LA META: ' + acumulStudentsSupera;
+    divRatings.appendChild(pStudentsSupera); */
+  };
+};
