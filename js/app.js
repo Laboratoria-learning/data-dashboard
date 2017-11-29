@@ -1,7 +1,6 @@
-
 window.addEventListener('load', function () {
-    var cont = document.getElementById('contenedor');
-    var contAlumnas = document.getElementById('alumnas');
+    var cont = document.getElementById('container');
+    var contStudents = document.getElementById('students');
     var count = 0;
 
     var active1 = data.AQP["2016-2"]["students"];
@@ -62,29 +61,55 @@ window.addEventListener('load', function () {
     for (var i = 0; i < active10.length; i++) {
         if (active10[i].active === false) {
             count++;
-            //    var cuadro =  document.createElement('p');
-            //      cuadro.textContent=count;
-            //      contAlumnas.appendChild(cuadro);
-        }
+                    }
     };
-    var aqp2016 = data.AQP["2016-2"].students.length; //1
-    var aqp2017 = data.AQP["2017-1"].students.length;//2
-    var cdmx20171 = data.CDMX["2017-1"].students.length;//3
-    var cdmx20172 = data.CDMX["2017-2"].students.length;//4
-    var lim20162 = data.LIM["2016-2"].students.length;//5
-    var lim20171 = data.LIM["2017-1"].students.length;//6
-    var lim20172 = data.LIM["2017-2"].students.length;//7
-    var scl20162 = data.SCL["2016-2"].students.length;//8
-    var scl20171 = data.SCL["2017-1"].students.length;//9
-    var scl20172 = data.SCL["2017-2"].students.length;//10
-    var contAlumnasRet = document.createElement('div');
-    contAlumnasRet.classList = 'activas';
+    var aqp2016 = data.AQP["2016-2"].students.length; 
+    var aqp2017 = data.AQP["2017-1"].students.length;
+    var cdmx20171 = data.CDMX["2017-1"].students.length;
+    var cdmx20172 = data.CDMX["2017-2"].students.length;
+    var lim20162 = data.LIM["2016-2"].students.length;
+    var lim20171 = data.LIM["2017-1"].students.length;
+    var lim20172 = data.LIM["2017-2"].students.length;
+    var scl20162 = data.SCL["2016-2"].students.length;
+    var scl20171 = data.SCL["2017-1"].students.length;
+    var scl20172 = data.SCL["2017-2"].students.length;
+    var contStudentsRet = document.createElement('div');
+    contStudentsRet.classList = 'active';
     var txtdates = document.createElement('H3');
     txtdates.textContent = 'Desercion Total';
     var dates = document.createElement('H1');
     dates.textContent = ((count * 100) / (aqp2016 + aqp2017 + cdmx20171 + cdmx20172 + lim20162 + lim20171 + lim20172 + scl20162 + scl20171 + scl20172)).toFixed(2) + '% ';
-    contAlumnasRet.appendChild(txtdates);
-    contAlumnasRet.appendChild(dates);
-    cont.appendChild(contAlumnasRet);
+    contStudentsRet.appendChild(txtdates);
+    contStudentsRet.appendChild(dates);
+    cont.appendChild(contStudentsRet);
 
+
+//3er filtro
+
+ //   var actual = data.AQP["2016-2"]["students"];  
+   
+    for (var i = 0; i < active1.length; i++) {
+        for (var j = 0; j < active1[i]['sprints'].length; j++) {
+            var sprintNote = active1[i]['sprints'][j]['score']['tech'] + active1[i]['sprints'][j]['score']['hse'];
+            //console.log(notas);
+            countSprints=0;
+            if (sprintNote >= 2330) {
+                countSprints++;
+                var notesprom = sprintNote;
+                var name = active1[i]['name'];
+                var sprint = active1[i]['sprints'][j]['number'];
+                console.log(notesprom + name + sprint);
+                //creando variables
+
+                var contFilter3 = document.createElement('div');
+                contFilter3.classList = 'sprint';
+                var sectionFilter3 = document.createElement('section');
+                var optionFilter3 = document.createElement('textarea');
+                optionFilter3.textContent= name + sprint;
+                contFilter3.appendChild(optionFilter3);
+                cont.appendChild(contFilter3);
+
+            }           
+        }  
+    };
 });
