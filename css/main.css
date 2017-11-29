@@ -68,23 +68,38 @@ button {
 
 header {
   background-color: #ffffff;
-  display: inline-block;
+  display: block;
+  margin-left: 223px;  
   width: 100%;
 }
 
 .logo-laboratoria {
-  height: 90px;
-  position: absolute;
-  right: 0;
+  display: block;
+  height: 60px;
+  margin-bottom: 10px;
+  margin-left: 30px;
   width: 150px;
 }
 
 #select-sede {
-  display: block;
+  border: none;
+  border-bottom: 2px solid gainsboro;
+  display: inline-block;
+  font-size: 15px;
+  height: 30px;
+  margin-bottom: 5px;
+  margin-left: 30px;
+  width: 210px;
+}
+
+nav {
+  display: inline-block;
+  margin-left: 10px;
 }
 
 .options li {
   display: inline-block;
+  margin: 5px;
 }
 
 a {
@@ -94,11 +109,10 @@ a {
 /* Dashboard */
 
 #dashboard-container {
-  background-color: #c1d0d8;
-  display: inline-flex;
-  height: 100vh;
+  background-color: #faea90;
   margin-left: 223px;
-  width: 100%;
+  display: block;
+  width: 100%;  
 }
 
 .data-cont1 {
