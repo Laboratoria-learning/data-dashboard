@@ -163,6 +163,42 @@ body {
     background-color: black;
     outline: 1px solid yellow;
     float: left;
-    margin: 70px 0 0 40px;
-    transform: translateX(15%)
+    margin: 70px 5px 0 40px;
+    transform: translateX(10%)
+}
+.dataNumberFourthRow { /*left square*/
+    background-color:#f7f7f7;
+    width: 155px; /*pendiente cambiar a porcentaje*/
+    height: 70px;
+    float: left;
+    margin: 5px 20px 7px 30px;
+}
+.numDataFourthRow { /*styles letter num-porcent data*/
+    font-size: 36px;
+    font-weight: 900;
+    text-align: center;
+}
+.fa-caret-up {
+    margin-left: 10px;
+}
+.imageDataStatisticalFourthRow { /*image fourth row*/
+    padding: 5px;
+    margin: 20px 0 0 0;
+}
+.imageFourthRow {
+    width: 300px;
+    height: 180px;
+}
+/* section checkbox */
+.checkbox-site , .checkbox-HSE , .checkbox-commoncore {
+    -webkit-appearance: none;
+	background-color: #fafafa;
+	border: 1px solid #f7b617 ;
+	box-shadow: 0 1px 2px rgba(187, 16, 16, 0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+    width: 250px;
+    padding: 9px;
+	border-radius: 3px;
+	display: none;
+    position: absolute;
+    z-index: 100;
 }
