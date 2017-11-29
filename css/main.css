@@ -1,3 +1,107 @@
 /*
  * Estilos de tu proyecto
  */
+ * {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+ }
+ body {
+    background: rgb(247,247,247);
+    color: rgb(43,43,43);
+ }
+.header {
+  width: 100%;
+  height: 79px;
+  padding-right: 93px;
+  text-align: center;
+  background: #fff;
+}
+.header img {
+  height: 70%;
+  margin-top:13px;
+}
+.header i {
+  float: right;
+  padding-top: 20px;
+  font-size: 30px;
+}
+.nav-menu {
+  background:rgb(225,225,225) ;
+  width: 100%;
+  height: 130px;
+  position: relative;
+  padding: 32px 0 29px 86px;
+}
+.nav-menu p {
+  font-size: 27px;
+}
+.nav-menu li {
+  display: inline-block;
+  margin: 32px 25px 0 0;
+  font-size: 19px;
+}
+.nav-menu hr {
+  width: 110px;
+  height: 5px;
+  background:rgb(247,182,23);
+  border: none;
+}
+
+.content {
+  margin: 41px 93px 111px 93px;
+}
+.box-one {
+  overflow: auto;
+  margin-bottom: 77px;
+}
+.box-left {
+  width: 340px;
+  height: 326px;
+  float: left;
+}
+.sce {
+  background: rgb(247,247,247);
+}
+.box-center {
+  width: 340px;
+  height: 326px;
+  margin: 0 60px;
+  float: left;
+}
+.box-right {
+  width: 340px;
+  height: 326px;
+  float: right;
+}
+
+.tech-skills {
+  height: 500px;
+  margin-bottom: 77px;
+}
+.life-skills {
+  height: 500px;
+  margin-bottom: 77px;
+}
+.box-two {
+  overflow: auto;
+}
+
+
+/*CLASES REUTILIZABLES*/
+.background-w {
+  background: #fff;
+}
+.bold {
+  font-weight: 700;
+}
+.inline-b {
+  display: inline-block;
+}
+.font-s {
+  font-size: 20px;
+}
+.padding {
+  padding: 20px;
+}
