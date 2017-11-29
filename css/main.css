@@ -1,52 +1,55 @@
+body{
+  margin: 0;
+  padding: 0;
+}
 header{
 display: flex;
 margin-left: 42%;
 margin-top: 1%;
 }
-
-img{
-  width: 25%;
-  height: 25%;
+header i {
+  color: #383838;
+}
+header img{
+  width: 200px;
+  height: 70px;
 }
 
 .fa-bars{
-  margin-top: 2%;
-  margin-left:53%;
+  margin-top: 10px;
+  margin-left:400px;
 }
 
 .sedes{
   display: flex;
-  margin-left: 5%;
-
+  margin-left:20px;
 }
 
 .fa-sort-desc{
-  margin-top: 2%;
-  margin-left:1%;
+  margin-top: 25px;
+  margin-left:5px;
 
 }
 
 .sedes h1{
-  font-size: 150%;
+  font-size: 30px;
   text-transform: uppercase;
-  padding-top: 1%;
+  padding-top: 5px;
 }
 div ul li{
   display: inline-block;
-  margin-left: 2%;
-
+  margin-left: 20px;
 }
 
 li{
-  margin-right: 5%;
+  margin-right: 40px;
   text-transform: uppercase;
 }
 
 .principal{
   background-color: #e1e1e1;
-  width: 1360px;
+  box-sizing: border-box;
   height: 134px;
-  margin-left: 110px;
 }
 
 .secciones_sup_e_inf{
@@ -62,16 +65,27 @@ li{
 
 }
 
-
+select{
+  background-color: #ffc107;
+  width: 160px;
+  height: 40px;
+  border-radius: 10px;
+  padding: 5px;
+  margin-left: 50px;
+  position: relative;
+  top: 5px;
+  left: 400px;
+  outline: none;
+}
 .habilidad_tecnológica{
-  width:1170px;
+  /* width:1170px; */
   height:563px;
   margin: 0 95px 44px 95px;
   background-color: #ffffff;
 }
 
 .otras_habilidades{
-  width:1170px;
+  /* width:1170px; */
   height:563px;
   margin: 0 96px 44px 96px;
   background-color: #ffffff;
@@ -80,7 +94,7 @@ li{
 
 .información{
   background-color: #f7f7f7;
-  width: 1364px;
+  /* width: 1364px; */
   margin: 0 108px 0 108px;
 }
 
