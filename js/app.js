@@ -16,11 +16,11 @@ window.addEventListener('load', function(event) {
   displayFilterTwo.addEventListener('click', function(event) {
     var checkBoxCommonCore = document.getElementById('checkbox-commoncore');
     var classCheckBoxCommonCore = document.getElementsByClassName('checkbox-commoncore')[0];
-    if (classCheckBoxSite.style.display = 'none') {
-      classCheckBoxSite.style.display = 'block';
-      classCheckBoxSite.style.left = '180px';
-      classCheckBoxSite.style.up = '30px';
-    } else classCheckBoxSite.style.display = 'none';
+    if (classCheckBoxCommonCore.style.display = 'none') {
+      classCheckBoxCommonCore.style.display = 'block';
+      classCheckBoxCommonCore.style.left = '180px';
+      classCheckBoxCommonCore.style.up = '30px';
+    } else classCheckBoxCommonCore.style.display = 'none';
   });
 
   displayFilterThree.addEventListener('click', function(event) {
