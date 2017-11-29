@@ -53,25 +53,49 @@ console.log(logroMetas('LIM', '2017-1', 1));
 
 function puntajePromotor(sede, generacion) {
   var rating = data[sede][generacion]['ratings'];
-  /* var promoters = [];
+  var promoters = [];
   var passive = [];
-  var detractors = [];*/
+  var detractors = [];
   var totalNps = [];
   var acumulativeNps = 0;
   var porcentajeAcumulativeNps;
+  var porcentajePromotors = 0;
+  var porcentajePassive = 0;
+  var porcentajeDetractors = 0;
+  var totalPromoters = 0;
+  var totalPassive = 0;
+  var totalDetractors = 0;
+
   debugger;
   for (var i = 0; i < rating.length; i++) {
     var nps = rating[i].nps.promoters - rating[i].nps.detractors;
     totalNps.push(nps);
-  }
 
+    promoters.push(rating[i].nps.promoters);
+    passive.push(rating[i].nps.passive);
+    detractors.push(rating[i].nps.detractors);
+
+    totalPromoters = totalPromoters + promoters[i];
+    totalPassive = totalPassive + passive[i];
+    totalDetractors = totalDetractors + detractors[i];
+  }
+ 
+  porcentajePromotors = totalPromoters * 100 / (totalPromoters + totalDetractors + totalPassive);
+  porcentajeDetractors = totalDetractors * 100 / (totalPromoters + totalDetractors + totalPassive);
+  porcentajePassive = totalPassive * 100 / (totalPromoters + totalDetractors + totalPassive);
+
+  console.log('porcentaje de promoters:' + '\t' + porcentajePromotors + '%');
+  console.log('porcentaje de detractors:' + '\t' + porcentajeDetractors + '%');
+  console.log('porcentaje de passive:' + '\t' + porcentajePassive + '%');
+
+ 
   console.log(totalNps.length);
 
   for (var i = 0; i < totalNps.length; i++) {
     acumulativeNps = acumulativeNps + totalNps[i];
   }
   porcentajeAcumulativeNps = acumulativeNps / totalNps.length;
-  console.log(porcentajeAcumulativeNps + '%');
+  console.log('porcentaje acumulado NPS' + porcentajeAcumulativeNps + '%');
 }
 
 console.log(puntajePromotor('LIM', '2016-2'));
