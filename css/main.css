@@ -3,21 +3,31 @@
   padding: 0;
 }
 
+body {
+  font-family: 'Lato', sans-serif;
+}
+
 main {
   background-color: #f7f7f7;
 }
 
 h3 {
   margin-bottom: 20px;
+  display: inline-block;
+  margin-right: 10px;
 }
+
 .nav {
-  outline: 1px solid pink;
   text-align: center;
   overflow: auto;
 }
 
 section {
-  padding: 50px 0;
+  padding-top: 50px;
+}
+
+section:last-child {
+  padding-bottom: 50px;
 }
 
 figure {
@@ -69,6 +79,10 @@ i.icon {
   background-color: #fff;
 }
 
+.content-data {
+  background: #fff;
+}
+
 .data-div .content-data .num {
   display: block;
   text-align: center;
@@ -76,10 +90,11 @@ i.icon {
 }
 
 .data-div .content-data .text {
-  font-size: 12px;
+  font-size: 11px;
   display: block;
   text-align: center;
   margin: 9px 0;
+  color: gray;
 }
 
 .overview .data-div {
@@ -87,7 +102,6 @@ i.icon {
   vertical-align: top;
   justify-content: space-between;
   padding: 25px;
-  
 }
 
 .content-center {
@@ -102,7 +116,7 @@ i.icon {
 
 .overview .data {
   background-color: #f7f7f7;
-  width: 147px;
+  width: 150px;
   height: 65px;
   display: inline-block;
   vertical-align: top;
@@ -115,8 +129,23 @@ i.icon {
 
 .green {
   color: green;
+  font-weight: 800;
 }
 
 .flex {
   display: flex;
+}
+
+.select {
+  display: inline-block;
+  border-bottom: 1px solid black;
+  padding: 5px;
+}
+
+.gray {
+  color: gray;
+}
+
+.tech-skills {
+  width: 100%;
 }
