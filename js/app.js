@@ -89,6 +89,8 @@ window.addEventListener('load', function() {
     var titleNps = document.createElement('p');
     var boxPercentageNps = document.createElement('div');
     var boxPercentageNpsTypes = document.createElement('div');
+    var boxCanvas3 = document.createElement('div');
+    var canvasNetPromoterScore3 = document.createElement('canvas');
 
     // Contenedores Student Satisfaction 
     var boxStudentSatisfaction = document.createElement('div');
@@ -229,6 +231,8 @@ window.addEventListener('load', function() {
     boxPercentageNpsTypes.appendChild(percentageNpsPromoter);
     boxPercentageNpsTypes.appendChild(percentageNpsPassive);
     boxPercentageNpsTypes.appendChild(percentageNpsDetractors);
+    boxNps.appendChild(boxCanvas3);
+    boxCanvas3.appendChild(canvasNetPromoterScore3);
 
     // insertando elementos a contenedor TECH
     
@@ -393,7 +397,7 @@ window.addEventListener('load', function() {
     descriptionDropout.textContent = '% Dropout' ; 
     $(document).ready(function () {
       var datos = {
-          type: "pie",
+          type: "doughnut",
           data: {
               datasets: [{
                   data: [
@@ -417,12 +421,6 @@ window.addEventListener('load', function() {
       var canvas = document.getElementById("chart").getContext('2d');
       window.pie = new Chart(canvas, datos);
    });
-
-
-
-
-
-
     // insertando información en Achievement
     titleAchievement.textContent = 'Achievement';
     boxCanvas2.classList.add('box-canvas');
@@ -434,7 +432,7 @@ window.addEventListener('load', function() {
     percentageStudentUp.textContent = ((studentAchievement(sede, generation) / totalStudentActive(sede, generation)) * 100).toFixed(1) ;
     descriptionPercentageStudent.textContent = '% of Total'; $(document).ready(function () {
       var datos2 = {
-          type: "pie",
+          type: "doughnut",
           data: {
               datasets: [{
                   data: [
@@ -459,15 +457,46 @@ window.addEventListener('load', function() {
       window.pie = new Chart(canvas2, datos2);
    });
 
-
-
     // insertando información en NPS
     titleNps.textContent = 'Net Promoter Score';
+    boxCanvas3.classList.add('box-canvas');
+    boxCanvas3.setAttribute('id', 'canvas-container3');
+    canvasNetPromoterScore3.setAttribute('id', 'chart3');
+    canvasNetPromoterScore3.classList.add('canvas');
     percentageNps.textContent = (npsAverage(sede, generation)).toFixed(1) + '%';
     descriptionNps.textContent = '% Acumulative NPS';
     percentageNpsPromoter.textContent = (promoterNps(sede, generation)).toFixed(1) + '%' + ' Promoter';
     percentageNpsPassive.textContent = (passiveNps(sede, generation)).toFixed(1) + '%' + ' Passive';
     percentageNpsDetractors.textContent = (detractorNps(sede, generation)).toFixed(1) + '%' + ' Detractors';
+    $(document).ready(function () {
+      var datos3 = {
+          type: "doughnut",
+          data: {
+              datasets: [{
+                  data: [
+                    (promoterNps(sede, generation)).toFixed(1),
+                    (passiveNps(sede, generation)).toFixed(1),
+                    (detractorNps(sede, generation)).toFixed(1),
+                                     ],
+                  backgroundColor: [
+                      "#f7464A ",
+                      "#46BFBD ",
+                      "#F8BFAD",              
+                  ]
+              }],
+              labels: [
+                  "Promoter",
+                  "Passive",
+                  "Detractors",
+                             ]
+          },
+          options: {
+              reponsive: true,
+          }
+      };
+      var canvas3 = document.getElementById("chart3").getContext('2d');
+      window.pie = new Chart(canvas3, datos3);
+   });
 
     // insertando información en TECH
     titleStudentTech.textContent = 'Tech Skills';
