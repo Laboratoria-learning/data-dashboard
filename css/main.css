@@ -2,3 +2,86 @@
  * Estilos de tu proyecto
 
  */
+ 
+ * {
+    margin: 0; 
+    padding: 0;
+    background: gray;
+}
+
+.tab {
+    display: inline-block;
+    padding: 7px;
+    margin: 30px; 
+    cursor: pointer;
+    border-bottom: 2px solid rgb(253, 253, 8);
+}
+
+.tab:hover {
+    border-bottom: 2px solid rgb(143, 143, 145);
+}
+
+.select {
+    border:none;
+}
+
+div.estadist {
+    display: inline-block;
+    width: 33%;
+    background: white;
+}
+
+h2 {
+    background: white;
+    text-align: center;
+}
+div.block {
+    display: inline-block;
+    background: white;
+    padding: 0 0 0 49px;
+}
+ div.num {
+     display: inline-block;
+     background: white;
+     padding: 7px 28px;   
+ }
+
+ div.box {
+     background: rgba(199, 183, 38, 0.795);
+     display:inline-block;
+     height: 40px;
+     width: 70px;
+     margin: 0 28px 0 14px;
+     text-align: center;
+ }
+
+img {
+    display: block;
+}
+
+
+
+/*fffffffffffffffffffffffffffffffffffff*/
+.inline {
+    display: inline-block;
+}
+
+
+.coders {
+    height: 300px;
+    width: 100px;
+    background: red;
+}
+
+
+
+
+
+
+
+
+
+
+.hiden {
+    display: none;
+}
