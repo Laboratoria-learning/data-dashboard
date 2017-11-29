@@ -146,10 +146,3 @@ h1{
   width: 5em;
   height: 2em;
 }
-.bar-graph{
-
-  outline: 1px solid green;
-  width: 100px;
-  height: 50px;
-position: absolute;
-}
