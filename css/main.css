@@ -95,10 +95,10 @@ body {
     transform: translateX(10%)
 }
 .imageDataStatistical img { /*image first row*/
-    transform: translateX(2%);
-    margin: 5px 0 5px 10px;
-    width: 92%;
-    height: 92%;
+    transform: translateX(10%);
+    margin: 15px 10px 5px 10px;
+    width: 80%;
+    height: 50%;
 }
 .numData { /*styles letter num-porcent data*/
     font-size: 25px;
@@ -161,10 +161,10 @@ body {
 }
 .imageSecondRowRigth img{ /*rigth square*/
     border: 2px solid red;
-    width: 32%;
-    height: 32%;
+    width: 35%;
+    height:65%;
     float: left;
-    margin: 15px 0 15px 40px;
+    margin: 15px 0 15px 20px;
 }
 .legendPorcentData { /*data legend*/
     font-size: 20px;
