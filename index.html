@@ -16,92 +16,185 @@
 </head>
 
 <body>
-  <main>
-    <!--Sección Título -->
-    <div class="title-container">
-      <h1 class="title">Lima</h1>
-      <h2 class="subtitle">2017-2</h2>
-    </div>
-    <!-- Inscripción -->
-    <div class="enrollment container">
-      <h1 class="enrollment-title">Enrollment</h1>
-      <div class="enrollment-info izq">
-        <p class="total-enrollment"></p>
-        <p class="text-enrollment"># Students currently enrolled</p>
-      </div>
-      <div class="enrollment-info der">
-        <p class="total-enrollment red"></p>
-        <p class="text-enrollment">% Dropout</p>
-      </div>
-      <div class="enrollment-graph"></div>
-    </div>
-    <!-- Porcentaje por Sprint -->
-    <div class="achievement container">
-      <h1 class="enrollment-title">Achievement</h1>
-      <div class="enrollment-info izq">
-        <p class="total-enrollment">140</p>
-        <p class="text-enrollment"># students that meet the target</p>
-      </div>
-      <div class="enrollment-info der">
-        <p class="total-enrollment blue">78%</p>
-        <p class="text-enrollment">% of total (140)</p>
-      </div>
-      <div class="achievement-graph"></div>
-    </div>
-    <!-- Promote -->
-    <div class="promote container">
-      <h1 class="enrollment-title">Net Promoter Score</h1>
-      <div class="enrollment-info izq">
-        <p class="total-enrollment blue">78%</p>
-        <p class="text-enrollment">% acumulate NPS</p>
-      </div>
-      <div class="enrollment-info der">
-        <p class="text-enrollment alignleft">60% Promoters</p>
-        <p class="text-enrollment alignleft">30% Passive</p>
-        <p class="text-enrollment alignleft">10% Detractors</p>
-      </div>
-      <div class="promote-graph"></div>
-    </div>
-    <!-- Tech Skills -->
-    <div class="tech container">
-      <h1 class="enrollment-title">Tech Skills</h1>
-      <div class="enrollment-info izq marg">
-        <p class="total-enrollment">62</p>
-        <p class="text-enrollment"># students that meet the target</p>
-      </div>
-      <div class="enrollment-info izq">
-        <p class="total-enrollment blue">78%</p>
-        <p class="text-enrollment">% of total (135)</p>
-      </div>
-      <div class="tech-graph"></div>
-    </div>
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <title>Data Dashboard</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="assets/icons/css-fonts/font-awesome.min.css">
+      </head>
+      <body>
+          <header>
+                <div class="box-header start">
+                    <span id="button-menu" class="fa fa-bars icons"></span>
+                    <nav class="navegacion">
+                      <ul class="menu">
+                        <li class="title-menu">Editar Datos</li>
+                        <li><a href="index.html">Dashboard</a></li>
+                        <li><a href="#"><span class="fa fa-plus-circle icon-menu"></span>Añadir Estudiante</a></li>
+                        <li><a href="#"><span class="fa fa-minus-circle icon-menu"></span>Remover Estudiante</a></li>
+                        <li><a href="#">Agregar Sprint</a></li>
+                      </ul>
+                    </nav>
+                    <!-- buscador 
+                    <span class="box-header search">
+                      <input type="text" placeholder="search">
+                      <a href="#" class="icons-search">
+                      <i class="fa fa-search fa-rotate-90"></i>
+                      </a>
+                    </span>
+                    -->
+                </div>
+                <figure class="box-header logo">
+                  <a href="index.html"><img src="assets/images/logo-laboratoria.svg" alt="logo"></a> 
+                </figure>
+                <!-- iconos de mensaje y notificaciones
+                <div class="box-header user">
+                  <ul>
+                      <li><a class="icons" href="#"><span class="fa fa-envelope-o"></span></a></li>
+                      <li><a class="icons" href="#"><span class="fa fa-bell-o"></span></a></li>
+                  </ul>
+                </div>
+                -->
+                <!--Sección idioma  -->
+                <select  class='idioma' name="language">
+                    <option value="value1" selected>Español</option>
+                    <option value="value2">English</option>
+                </select>
+                <img class="ale"  src="assets/images/ale.png" alt="Alejandra"> 
+          </header>
+          <section class="container-section">
+              <div class="box-menu" >
+                  <ul class="menu-sedes">
+                      <li><a href="#" class="sedes icons-search"><i class="fa fa-map-marker"></i>SEDES</a>
+                        <ul>
+                          <li><a href="#"><img class="flag" src="assets\images\peru.png" alt="">Arequipa</a>
+                            <ul>
+                              <li><a href="#">2016-2</a></li>
+                              <li><a href="#">2017-1</a></li>
+                            </ul>
+                          </li>
+                          <li><a href="#"><img class="flag" src="assets\images\peru1.png" alt="">Lima</a>
+                            <ul>
+                              <li><a href="#">2016-2</a></li>
+                              <li><a href="#">2017-1</a></li>
+                            </ul>
+                          </li>
+                          <li><a href="#"><img class="flag" src="assets\images\mexico.png" alt="">Ciudad de México</a>
+                            <ul>
+                              <li><a href="#">2017-1</a></li>
+                              <li><a href="#">2017-2</a></li>
+                            </ul>
+                          </li>
+                          <li><a href="#"><img class="flag" src="assets\images\chile.png" alt="">Santiago de Chile</a>
+                            <ul>
+                              <li><a href="#">2016-2</a></li>
+                              <li><a href="#">2017-1</a></li>
+                              <li><a href="#">2017-2</a></li>
+                            </ul>
+                          </li>
+                        </ul> 
+                      </li>
+                  </ul>      
+              </div>
+              <div class="box-button">
+                  <a class="tab" data-selection="one">General</a>
+                  <a class="tab" data-selection="two">Estudiantes</a>
+                  <a class="tab" data-selection="tree">Profesores</a>
+              </div>
+          </section>
+          <section class="box-information">
+              <div class="first hide">
+                  <!--Sección Título -->
+                  <div class="title-container">
+                    <h1 class="title">Lima</h1>
+                    <h2 class="subtitle">2017-2</h2>
+                  </div>
+                  <!-- Inscripción -->
+                  <div class="enrollment container">
+                    <h1 class="enrollment-title">Enrollment</h1>
+                    <div class="enrollment-info izq">
+                      <p class="total-enrollment"></p>
+                      <p class="text-enrollment"># Students currently enrolled</p>
+                    </div>
+                     <div class="enrollment-info der">
+                      <p class="total-enrollment red"></p>
+                      <p class="text-enrollment">% Dropout</p>
+                    </div>
+                    <div class="enrollment-graph"></div>
+                  </div>
+                  <!-- Porcentaje por Sprint -->
+                  <div class="achievement container">
+                    <h1 class="enrollment-title">Achievement</h1>
+                    <div class="enrollment-info izq">
+                      <p class="total-enrollment">140</p>
+                      <p class="text-enrollment"># students that meet the target</p>
+                    </div>
+                    <div class="enrollment-info der">
+                      <p class="total-enrollment blue">78%</p>
+                      <p class="text-enrollment">% of total (140)</p>
+                    </div>
+                    <div class="achievement-graph"></div>
+                  </div>
+                  <!-- Promote -->
+                  <div class="promote container">
+                    <h1 class="enrollment-title">Net Promoter Score</h1>
+                    <div class="enrollment-info izq">
+                      <p class="total-enrollment blue">78%</p>
+                      <p class="text-enrollment">% acumulate NPS</p>
+                    </div>
+                    <div class="enrollment-info der">
+                      <p class="text-enrollment alignleft">60% Promoters</p>
+                      <p class="text-enrollment alignleft">30% Passive</p>
+                      <p class="text-enrollment alignleft">10% Detractors</p>
+                    </div>
+                    <div class="promote-graph"></div>
+                  </div>
+                  <!-- Tech Skills -->
+                  <div class="tech container">
+                    <h1 class="enrollment-title">Tech Skills</h1>
+                    <div class="enrollment-info izq marg">
+                      <p class="total-enrollment">62</p>
+                      <p class="text-enrollment"># students that meet the target</p>
+                    </div>
+                    <div class="enrollment-info izq">
+                      <p class="total-enrollment blue">78%</p>
+                      <p class="text-enrollment">% of total (135)</p>
+                    </div>
+                    <div class="tech-graph"></div>
+                  </div>
+                    
+                  <div class="tech container">
+                    <h1 class="enrollment-title">Life Skills</h1>
+                    <div class="enrollment-info izq marg">
+                      <p class="total-enrollment">80</p>
+                      <p class="text-enrollment"># overall class average</p>
+                    </div>
+                    <div class="enrollment-info izq">
+                      <p class="total-enrollment blue">62</p>
+                      <p class="text-enrollment"># of students meet the target</p>
+                    </div>
+                    <div class="tech-graph"></div>
+                  </div>
+                </div>
+                <div class="second hide ">
+                    Sed ut s
+                </div>
+                <div class="third hide">
+                    Muy lejos, más allá de lasen camino.
+                </div>
+          </section>
+        <script src="js/jquery-3.2.1.js"></script>
+        <script src="js/main.js"></script>
+        <!-- Base de datos -->
+        <script src="./js/data.js"></script>
+        <!-- Aquí va tus archivos JS -->
+        <script src="./js/app.js"></script>
+    
+      </body>
+    </html>
+  
 
-    <div class="tech container">
-      <h1 class="enrollment-title">Life Skills</h1>
-      <div class="enrollment-info izq marg">
-        <p class="total-enrollment">80</p>
-        <p class="text-enrollment"># overall class average</p>
-      </div>
-      <div class="enrollment-info izq">
-        <p class="total-enrollment blue">62</p>
-        <p class="text-enrollment"># of students meet the target</p>
-      </div>
-      <div class="tech-graph"></div>
-    </div>
-  </main>
 
 
-
-
-  <!-- Base de datos -->
-  <script src="./js/data.js"></script>
-  <!-- Aquí va tus archivos JS -->
-  <script src="./js/app.js"></script>
-  <script src="js/jquery-3.2.1.js"></script>
-  <script src="js/main.js"></script>
-  <!-- Base de datos -->
-
-
-</body>
-
-</html>
