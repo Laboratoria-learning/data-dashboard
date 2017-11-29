@@ -2,41 +2,40 @@
 // Puedes hacer uso de la base de datos a través de la variable `data`
 // console.log(data);
 
-<<<<<<< HEAD
-window.addEventListener('load', function(event) {
-  var overview = document.getElementById('tab-overview');// lo que quiero hacer click
-  var contentOverview = document.getElementById('contentOverview');// lo que quiero que aparezca
-  var students = document.getElementById('tab-students');// lo que quiero hacer click
-  var contentStudents = document.getElementById('contentStudents');// lo que quiero que aparezca
-
-  overview.addEventListener('click', function(event) {
-    contentOverview.style.display = 'block';
-    contentStudents.style.display = 'none';
-  });
-  students.addEventListener('click', function(event) {
-    contentOverview.style.display = 'none';
-    contentStudents.style.display = 'block';
-  });
-
-  var promocion = document.getElementById('')
-});
-=======
 window.addEventListener('load', select);
+
+var overview = document.getElementById('tab-overview');// lo que quiero hacer click
+var contentOverview = document.getElementById('contentOverview');// lo que quiero que aparezca
+var students = document.getElementById('tab-students');// lo que quiero hacer click
+var contentStudents = document.getElementById('contentStudents');// lo que quiero que aparezca
+
+function estudentcont () {
+  contentOverview.style.display = 'none';
+  contentStudents.style.display = 'block';
+}
+ function overcont () {
+  contentOverview.style.display = 'block';
+  contentStudents.style.display = 'none';
+  
+};
+
 function create() {       
   var sede = document.getElementById('sede').value;   
   document.getElementById('text').innerHTML = sede ;   
-    var datos = (data["AQP"]["2016-2"]["students"][0]["active"]);
+    var datos = (data["AQP"]["2016-2"]["students"]);
     
     if (datos == true ) {
-     document.getElementById('one').innerHTML = datos.length; 
- }
+     document.getElementById('one').innerHTML = datos;
+      }
  
 
 }
 
-
 function select() {
   sede.addEventListener('change', create);
+  students.addEventListener('click', estudentcont);
+  overview.addEventListener('click', overcont);
+  
+
 };
 
->>>>>>> 28ba585302520f9dfc14aec6ccec960af9313a00
