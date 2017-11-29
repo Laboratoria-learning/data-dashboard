@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="
     ./css/main.css">
     <title>Data Dashboard</title>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   </head>
   <body>
     <!-- Barra lateral -->
@@ -41,23 +40,23 @@
     <!-- Contenido principal -->
     <main>
       <div id="filter-section">
-          <select name="sede"> 
-              <option value="Arequipa">Arequipa</option>
-              <option value="lima">Lima</option>
-              <option value="Santiago">Santiago</option>
-              <option value="Ciudad">Ciudad de México</option> 
-            </select> 
-            <select name="promocion" onChange="javascript:alert('prueba');"> 
-              <option value="20172">2017 - II</option>
-              <option value="20171">2017 - I</option>      <option value="20162">2016 - II</option>
-              <option value="20161">2016 - I</option>
-            </select> 
-            <select name="sprint" onChange="javascript:alert('prueba');"> 
-              <option value="sprint1">Sprint 1</option>
-              <option value="sprint2">Sprint 2</option>
-              <option value="sprint3">Sprint 3</option>
-              <option value="sprint4">Sprint 4</option> 
-            </select>
+        <select id="local" name="sede">
+          <option value="LIM">Lima</option>
+          <option value="AQP">Arequipa</option>
+          <option value="SCL">Santiago</option>
+          <option value="CDMX">Ciudad de México</option> 
+        </select> 
+        <select id="promo" name="promocion"> 
+          <option value="2017-2">2017-2</option>
+          <option value="2017-1">2017-1</option>
+          <option value="2016-2">2016-1</option>
+        </select> 
+        <select id="sprint" name="sprint"> 
+          <option value="sprint1">Sprint 4</option>
+          <option value="sprint2">Sprint 3</option>
+          <option value="sprint3">Sprint 2</option>
+          <option value="sprint4">Sprint 1</option> 
+        </select>
       </div>
       <section id="container">
         <section id="overview">
@@ -125,6 +124,7 @@
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
     <script src="./js/app.js"></script>
-    
+    <!-- Gráfico -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>    
   </body>
 </html>
