@@ -41,16 +41,16 @@ inputStudents.addEventListener('click', function() {
   var info = Object.keys(data['LIM']['2016-2']['students']).length;
   for (var i = 0; i < info; i++) {
     // document.body.innerHTML = data['LIM']['2016-2']['students'][i]['photo'];
-   
     var img = document.createElement('img');
     var container = data['LIM']['2016-2']['students'][i]['photo'];
     img.setAttribute('src', container);
     
     var div = document.createElement('div');
     div.appendChild(img);
-    document.body.appendChild(div);
-
-
+    var allSections = document.getElementById('sections');
+    allSections.appendChild(div);
+    document.body.appendChild(allSections);
+    // document.body.appendChild(div);
   }
 });
 /*
