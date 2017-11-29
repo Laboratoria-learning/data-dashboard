@@ -92,7 +92,7 @@ header {
   width: 1000px;
 }
 
-.big-graphic p {
+.big-graphic span {
   display: inline-block;
   font-size: 1.5em;
   font-weight: bold;
@@ -108,9 +108,17 @@ header {
 
 .small-graphic {
   background-color: #fff;
+  display: inline-block;
   height: 370px;
   margin: 60px auto;
-  width: 370px;
+  vertical-align: top;
+  width: 390px;
+}
+
+.small-graphic span {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 20px;
 }
 
 .box1, .box2 {
@@ -118,7 +126,31 @@ header {
   display: inline-block;
   height: 60px;
   margin: 20px;
+  text-align: center;
+  vertical-align: top;
   width: 150px;
+}
+
+.box1 p:first-child {
+  font-size: 1.5em;
+  font-weight: bold;
+  height: 30px;;
+}
+
+.box1 p:last-child {
+  font-size: 0.7em;
+  height: 30px;;
+}
+
+.box2 p:first-child {
+  font-size: 1.5em;
+  font-weight: bold;
+  height: 30px;;
+}
+
+.box2 p:last-child {
+  font-size: 0.7em;
+  height: 30px;;
 }
 
 /*Menu section*/
