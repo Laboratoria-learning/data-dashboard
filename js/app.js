@@ -6,11 +6,12 @@ window.addEventListener('load', function() {
   // Consulta Sede
   function resultSede() {
     // creando contenedores de información General
-    var consultLima = document.createElement('div');
+    var consultSede = document.createElement('div');
     var boxInfoGeneral = document.createElement('div');
     var boxRating = document.createElement('div');
     var boxTech = document.createElement('div');
     var boxHse = document.createElement('div');
+    var studentsInfo = document.createElement('div');
 
     // Contenedores de Enrollment
     var boxEnrollment = document.createElement('div');
@@ -235,12 +236,12 @@ window.addEventListener('load', function() {
     boxRating.appendChild(boxStudentSatisfaction);
     boxRating.appendChild(boxTeacher);
     boxRating.appendChild(boxJedi);
-    consultLima.appendChild(boxInfoGeneral);
-    consultLima.appendChild(boxTech);
-    consultLima.appendChild(boxHse);
-    consultLima.appendChild(boxRating);
-    boxResult.appendChild(consultLima);
-    
+    consultSede.appendChild(boxInfoGeneral);
+    consultSede.appendChild(boxTech);
+    consultSede.appendChild(boxHse);
+    consultSede.appendChild(boxRating);
+    boxResult.appendChild(consultSede);
+    consultSede.appendChild(studentsInfo);
     // estilos 
     boxEnrollment.classList.add('box-info');
     boxAchievement.classList.add('box-info');
@@ -256,6 +257,9 @@ window.addEventListener('load', function() {
     boxPercentageStudentUp.classList.add('inline-block');
     boxPercentageNps.classList.add('inline-block');
     boxPercentageNpsTypes.classList.add('inline-block');
+    boxRating.classList.add('box-float');
+
+    studentsInfo.classList.add('box-students');
     
     
     titleAchievement.classList.add('title');
@@ -727,6 +731,8 @@ window.addEventListener('load', function() {
     arrayHseTotal.push(countHse1, countHse2, countHse3, countHse4);
     return arrayHseTotal;
   }
+
+  // agregar info Students
 
     
   // ejecución de función
