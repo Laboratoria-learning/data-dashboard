@@ -46,16 +46,16 @@
         <option value="SCL">Santiago de Chile</option>
       </select>
       <select class="generations"></select>
-      <div class="tab">
+      <div class="label">
         <ul>
           <li>
-            <button type="button" name="button">Visión General</button>
+            <button type="button" name="button" data-tab-select = 'tabOverview' class="tab">Visión General</button>
           </li>
           <li>
-            <button type="button" name="button">Estudiantes</button>
+            <button type="button" name="button" data-tab-select = 'tabStudents' class="tab">Estudiantes</button>
           </li>
           <li>
-            <button type="button" name="button">Profesores</button>
+            <button type="button" name="button" data-tab-select = 'tabTeachers' class="tab">Profesores</button>
           </li>
         </ul>
       </div>
@@ -116,7 +116,7 @@
       </section>
       <!-- Estructura de la segunda sección-->
       <section>
-        <select> <!-- Estructura del selector de Sprint-->
+        <select id="sprints"> <!-- Estructura del selector de Sprint-->
           <option>Sprint 1</option>
           <option>Sprint 2</option>
           <option>Sprint 3</option>
@@ -190,6 +190,8 @@
         </div>
       </section>
     </article>
+    <article id="students"></article>
+    <article id="teachers"></article>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->

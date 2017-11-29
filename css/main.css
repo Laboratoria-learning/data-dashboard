@@ -68,7 +68,7 @@ img {
   width: 60px;
   height: 60px;
   border-radius: 50px;
-  /*border: 3px solid white;*/
+  border: 3px solid #FFC107;
 }
 
 .language {
@@ -92,8 +92,8 @@ img {
 /*Estilos a sección de selectores*/
 .selections {
   padding-top: 100px;
-  background-color: #E1E1E1;
-  box-shadow: 10px 5px 5px #E1E1E1;
+  background-color: #FFC107;
+  border-bottom: 1px solid #00000040;
 }
 
 .sedes {
@@ -105,7 +105,7 @@ img {
   margin-left: 4.7em;
 }
 
-.tab ul li {
+.label ul li {
   display: inline;
 }
 button {
