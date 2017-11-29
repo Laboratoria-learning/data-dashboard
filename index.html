@@ -1,27 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Dashboard</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="fonts/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-  </head>
-  <body>
-        <header class="header-container">
-              <figure>
-                    <img class="logo" src="assets/images/logo-laboratoria.svg" alt="logo de laboratoria">
-              </figure>
-              <!-- <div> -->
-                  <span class="icon-bars"></span>
-              <!-- </div> -->
-        </header>
-        <section>
-              <!-- <form> -->
-              <div class="form">
 
-              </div>
-                      <select class="select-left">
+<head>
+  <meta charset="utf-8">
+  <title>Data Dashboard</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="fonts/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header-container">
+    <figure>
+      <img class="logo" src="assets/images/logo-laboratoria.svg" alt="logo de laboratoria">
+    </figure>
+    <!-- <div> -->
+    <span id="span" class="icon-bars"></span>
+    <ul class="hide list item-list">
+      <li class="name"> <img class="student" src="assets/images/student.jpg" alt="estudiante">Longui Valverde</li>
+      <li>Add student</li>
+      <li>Remove student</li>
+      <li>Add sprint</li>
+    </ul>
+
+    <!-- </div> -->
+  </header>
+  <section>
+    <!-- <form> -->
+    <div class="form">
+
+    </div>
+    <select class="select-left">
                            <option>Selecciona una sede </option>
                            <optgroup label="AREQUIPA">
                              <option class="sedePromo" value ="aqp2016-2"> 2016-II</option>
@@ -38,60 +47,60 @@
                              <option class="sedePromo" value ="stg2017-1"> 2017-I</option>
                              <option class="sedePromo" value ="stg2017-2"> 2017-II</option>
                      </select>
-              <!-- </form> -->
-            </div>
-        </section>
-        <!-- <main> -->
-              <nav>
-                    <ul class="global">
-                        <li class="menu-global" >GENERAL</li>
-                        <li class="menu-global" >STUDENTS</li>
-                    </ul>
-              </nav>
-              <article class="left">
-                    <h2>INSCRIPCION</h2>
-                    <div class="squares">
-                        <span id="register"></span>
-                        <p>N° ESTUDIANTES INSCRITAS</p>
-                    </div>
-                    <div class="squares">
-                        <span id="desertStudents"></span>
-                        <p>DESERTARON</p>
-                        <img class="first-graphic" src="assets/images/bar-graph.png" alt="desertoras">
-                    </div>
-              </article>
-              <article class="medium">
-                    <h2>LOGROS</h2>
-                    <div class="squares">
-                          <p>N° ESTUDIANTES QUE  CUMPLIERON <br> EL OBJETIVO</p>
-                          <img class="second-graphic" src="assets/images/graph.png" alt="dream-goles">
-                    </div>
-                    <div class="squares">
-                         <p>%  DEL TOTAL ( )</p>
-                    </div>
-              </article>
-              <article>
-                    <h2>NET PROMOTER SCORE (NPS)</h2>
-                    <div class="squares">
-                          <p>% ACUMULATIVO NPS</p>
-                          <img class="third-graphic" src="assets/images/rectangular-graphic.png" alt="nts">
-                    </div>
-                    <div class="squares">
-                      <ul>
-                        <li class="promoters"> %  Promoters</li>
-                        <li class="promoters"> % Passive</li>
-                        <li class="promoters"> % Detractors</li>
-                       </ul>
-                    </div>
-              </article>
+    <!-- </form> -->
+    </div>
+  </section>
+  <!-- <main> -->
+  <nav>
+    <ul class="global">
+      <li class="menu-global">GENERAL</li>
+      <li class="menu-global">STUDENTS</li>
+    </ul>
+  </nav>
+  <article class="left">
+    <h2>INSCRIPCION</h2>
+    <div class="squares">
+      <span id="register"></span>
+      <p>N° ESTUDIANTES INSCRITAS</p>
+    </div>
+    <div class="squares">
+      <span id="desertStudents"></span>
+      <p>DESERTARON</p>
+      <img class="first-graphic" src="assets/images/bar-graph.png" alt="desertoras">
+    </div>
+  </article>
+  <article class="medium">
+    <h2>LOGROS</h2>
+    <div class="squares">
+      <p>N° ESTUDIANTES QUE CUMPLIERON <br> EL OBJETIVO</p>
+      <img class="second-graphic" src="assets/images/graph.png" alt="dream-goles">
+    </div>
+    <div class="squares">
+      <p>% DEL TOTAL ( )</p>
+    </div>
+  </article>
+  <article>
+    <h2>NET PROMOTER SCORE (NPS)</h2>
+    <div class="squares">
+      <p>% ACUMULATIVO NPS</p>
+      <img class="third-graphic" src="assets/images/rectangular-graphic.png" alt="nts">
+    </div>
+    <div class="squares">
+      <ul>
+        <li class="promoters"> % Promoters</li>
+        <li class="promoters"> % Passive</li>
+        <li class="promoters"> % Detractors</li>
+      </ul>
+    </div>
+  </article>
 
-        <!-- <article class="tech-habilities"> -->
-        <article class="tech-habilities">
+  <!-- <article class="tech-habilities"> -->
+  <article class="tech-habilities">
 
-              <h2>HABILIDADES TECNICAS</h2>
-              <!-- <form> -->
-              <div class="form">
-                    <select >
+    <h2>HABILIDADES TECNICAS</h2>
+    <!-- <form> -->
+    <div class="form">
+      <select>
                          <option value=""> Puntaje General</option>
                          <optgroup label="COMMON CORE">
                         <option value=""> Sprint 1</option>
@@ -109,22 +118,22 @@
                         <option value=""> Sprint 7</option>
                         <option value=""> Sprint 8</option>
                     </select>
-                  </div>
-                  <!-- </form> -->
-                    <div class="squares">
-                          <p>N° ESTUDIANTES QUE CUMPLIERON <br> CON EL OBJETIVO</p>
-                    </div>
-                    <div class="squares">
-                        <p> % DEL TOTAL () </p>                       
-                    </div>
-                    <img class="cuarter-graphic" src="assets/images/rectangular-graphic.png" alt="nts">
-                    <img class="circle-graphic" src="assets/images/circle-graphic.png" alt="nts">
-        </article>
-        <article class="social-habilities">
-            <h2>HABILIDADES SOCIALES</h2>
-                <!-- <form> -->
-                <div class="form">
-                    <select >
+    </div>
+    <!-- </form> -->
+    <div class="squares">
+      <p>N° ESTUDIANTES QUE CUMPLIERON <br> CON EL OBJETIVO</p>
+    </div>
+    <div class="squares">
+      <p> % DEL TOTAL () </p>
+    </div>
+    <img class="cuarter-graphic" src="assets/images/rectangular-graphic.png" alt="nts">
+    <img class="circle-graphic" src="assets/images/circle-graphic.png" alt="nts">
+  </article>
+  <article class="social-habilities">
+    <h2>HABILIDADES SOCIALES</h2>
+    <!-- <form> -->
+    <div class="form">
+      <select>
                         <option value=""> Puntaje General</option>
                         <optgroup label="HSE">
                         <option value=""> Sprint 1</option>

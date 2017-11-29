@@ -27,6 +27,8 @@ body {
   height: 80px;
 }
 
+/*desde cá es menú desplegable*/
+
 .icon-bars {
   color: #F8C341;
   text-align: center;
@@ -35,6 +37,46 @@ body {
   float: right;
   bottom: 62px;
   right: 7%;
+}
+
+.icon-bars:hover {
+  cursor: pointer;
+}
+.list {
+  padding: 20px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  float: right;
+  display: block;
+  background-color: #f8c341;
+  width: 320px;
+  height: 356px;
+  position: absolute;
+  line-height: 76px;
+  list-style: none;
+  right: 20px;
+  /* float: right; */
+  bottom: 176px;
+  z-index: 999;
+}
+
+.name {
+  text-align: right;
+  padding-right: 9px;
+  padding-bottom: 20px;
+}
+
+.student {
+  width: 89px;
+  height: 78px;
+  /* margin-right: 54px; */
+  margin-top: 6px;
+  float: left;
 }
 
 select {
