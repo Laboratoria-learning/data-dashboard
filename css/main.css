@@ -61,8 +61,23 @@
   height: 326px;
   float: left;
 }
-.sce {
+.gray-box {
   background: rgb(247,247,247);
+  font-size: 10px;
+  text-align: center;
+  width: 142px;
+  height: 60px;
+  float: left;
+  margin: 14px 8px 14px 0;
+  padding: 6px;
+}
+.box-one img {
+  width: 301px;
+  height: 176px;
+}
+
+.color-red {
+  color: rgb(237,119,119);
 }
 .box-center {
   width: 340px;
@@ -87,7 +102,37 @@
 .box-two {
   overflow: auto;
 }
-
+.box-two img {
+  width: 301px;
+  height: 176px;
+}
+.gray-content {
+  display: block;
+  overflow: auto;
+}
+#graph-img {
+  width: 660px;
+  height: 310px;
+}
+#circle-img {
+  width: 320px;
+  height:255px;
+  outline: 1px solid purple;
+  margin-bottom: 10px;
+}
+.information {
+  margin-right: 40px;
+  float: right;
+  font-size: 11.3px;
+  line-height: 20px;
+  color: rgba(43,43,43,0.6);
+}
+#pastel-green {
+  color: rgb(126,211,33);
+}
+#pastel-red {
+  color: rgb(234,81,81);
+}
 
 /*CLASES REUTILIZABLES*/
 .background-w {
@@ -100,8 +145,20 @@
   display: inline-block;
 }
 .font-s {
-  font-size: 20px;
+  font-size: 19px;
 }
 .padding {
   padding: 20px;
+}
+.font-s-two {
+  font-size: 14px;
+}
+.color-green {
+  color: rgb(107,174,32);
+}
+.font-s-three {
+  font-size: 28px;
+}
+.font-s-four {
+  font-size: 8px;
 }
