@@ -1,6 +1,9 @@
 /*
  * Funcionalidad de tu producto
  */
+// selector de sedes
+
+ //tabs overview, students y teacher
 var showHide = function(e) {
     var tabs = e.target.dataset.selecttab;
     var overContent = document.getElementById('overview-tab');
