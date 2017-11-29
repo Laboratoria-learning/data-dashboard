@@ -17,6 +17,7 @@ header {
     width: 100%;
     margin: 0 auto;
     height: 17%;
+    overflow: hidden;
 }
 
 .start {
@@ -31,7 +32,7 @@ header {
 
 .logo {
     width: 17%;
-    margin: 0 20%;
+    margin: 0 30%;
 }
 
 .logo img {
@@ -98,23 +99,27 @@ ul {
     padding: 5px;
 }
 
-.user-icon div {
-    border-radius: 100%;
-    color: #333333;
-    font-size: 28px;
-    font-weight: 400;
-    background-color: #cbd5da;
-    text-align: center;
-    padding: 5px;
-    margin-left: 20px;
-    width: 45px;
-    height: 45px;
-    margin-top: -5px;
+/*jymma*/
+.idioma {
+    position: relative;
+    top: -25px;
+    left: 60px;
 }
 
-.user-icon div:hover {
-    background-color: #c3ced3;
-    transition: 0.3s;
+.ale{
+    border-radius: 100%;
+    width: 65px;
+    height: 65px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+
+  .flag{
+	width: 25px;
+	height: 15px;
+    float: left;
+    margin-right: 5px;
 }
 
 /***************************************************************/
@@ -160,7 +165,7 @@ ul {
 
 .box-menu {
     margin: 10px 20px;
-    width: 170px; 
+    width: 174px; 
     display: inline-block;
 }
 
