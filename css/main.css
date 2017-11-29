@@ -49,8 +49,47 @@ nav{
     background-color: #e1e1e1;
 }
 section{
+    width: 100%;
+    margin: auto;
     background-color: #F7F7F7;
 }
+section .principal{
+    width: 80%;
+    /*outline: 1px solid orange;*/
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+/*PRIMER DIV DEL SECTION BAR-CONTAINER*/
+.principal:nth-child(1){
+    padding: 20px;
+    outline: 1px solid orange;
+}
+.principal .lista{
+    /*outline: 1px solid red;*/
+}
+/*SEGUNDO DIV DEL SECTION BAR-CONTAINER*/
+.lista li{
+    /*outline: 1PX solid aqua;*/
+    display: inline-block;
+    padding: 10px;
+    margin-left: 10px;
+    list-style: none;
+}
+.lista li a{
+    display: block;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1em;
+    color: black;
+    text-decoration: none;
+}
+.lista li:hover{
+    border-bottom: 5px solid #EFB415;
+}
+
+/*Estilos para la seccion overview*/
 .overview-one,.overview-two{
     padding-bottom: 10px;
     padding-top: 10px;
