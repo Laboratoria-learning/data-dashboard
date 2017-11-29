@@ -1,3 +1,99 @@
-/*
- * Estilos de tu proyecto
- */
+*{
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-family: "FaktProSoft", "Helvetica Neue", helvetica, arial, sans-serif;
+    color: black;
+    text-rendering: optimizeLegibility;
+}
+/* encabezado */
+.header-laboratoria{
+    display: inline-block;
+    height: 70px;
+    width: 100%;
+}
+.logo-laboratoria{
+    height: 70px;
+    position: relative;
+    left: 40%;
+}
+.icon-hamburger{
+    position: relative;
+    left: 80%;
+    margin-top: 0;
+    padding-top: 0;
+    bottom: 30%;
+}
+/* barra de navegación */
+.nav-bar{
+    background: #e1e1e1;
+    height: 130px;
+}
+.nav-bar>h2,i{
+    display: inline-block;
+    position: relative;
+    left: 7%;
+    margin:35px 15px 0 0;
+    font-size: 30px;  
+}
+.nav-bar input{
+    font-size: 20px;
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    left: -360px;
+    top: 25px;
+    margin-right: 20px;
+}
+/* etiqueta section en general */
+section{
+    background-color: #f7f7f7;
+    position: relative;
+}
+/* primera sección y cuarta sección*/
+.first-section div, .forth-section div {
+    display: inline-block;
+    margin: 50px 0px 50px 70px;
+    background-color: #fff;
+    padding: 30px;
+    position: relative;
+    height: 300px;
+    left: 50px;
+}
+.first-section div summary, .forth-section div summary{
+    display: block;
+    float: left;
+    font-size: 12px;
+    background-color: #f7f7f7;
+    width: 120px;
+    height: 50px;
+    margin:5px 0 5px 15px;
+    text-align: center;
+}
+.first-section div summary b, .forth-section div summary b{
+    font-size: 16px;
+}
+.first-section div summary p, .forth-section div summary p{
+    font-size: 9px;
+}
+.first-section div summary ul, .forth-section div summary ul{
+    list-style: none;
+    font-size: 11px;
+    text-align: center;
+    padding: 0;
+}
+.div-enrollment{
+    position: relative;
+    top: 22px;
+}
+/* segunda sección y tercera sección*/
+.second-section, .thirst-section{
+    outline: 2px solid red;
+    background-color: #fff;
+    display: inline-block;
+    position: relative;
+    width: 90%;
+    height: auto;
+    left: 70px;
+    margin-bottom: 50px;
+}
