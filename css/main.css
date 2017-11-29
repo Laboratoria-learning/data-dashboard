@@ -103,10 +103,10 @@ main {
   margin-right: 0;
 }
 
-.container {
+/*.container {
   outline: 1px solid red;
   width: 79vw;
-}
+}*/
 
 .container-one {
   display: flex;
@@ -168,6 +168,20 @@ main {
 
 .box-size .figures p {
   font-size: 10px;
+}
+
+#students figure img {
+  width: 2vw;
+  height: 10vh;
+}
+
+#students figcaption, #students .figures {
+  display: inline-block;
+}
+
+#students .figures {
+  width: 5vw;
+  height: 5vh;
 }
 
 nav {
@@ -248,9 +262,23 @@ nav {
 
 
 /*Tab*/
-#over-view , #students , #teachers {
-  width: 20vh;
+#students {
+  width: 76vw;
   height: 20vh;
-  background-color: red;
-  margin: 2vh;
+  border: 1px solid red;
+  /*margin-left: 2vw;*/
+}
+
+.students-info {
+  border: 1px solid green;
+  width: 60vw;
+  margin-left: 8vw;
+  text-align: center;
+}
+
+.students-info figure, .name, .students-info .figures {
+  vertical-align: top;
+  display: inline-block;
+  margin: 3vh;
+  padding: 0 3vh;
 }
