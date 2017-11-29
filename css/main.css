@@ -8,24 +8,29 @@
     font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
  }
 
- .fa-bars, .fa-user-o {
-   margin: 1%;
+ .navbar {
+   margin: 0 10px 30px;
+   float: left;
  }
 
-.logo {
+.logo, .navbar {
   width: 20%;
-  display: inline-block;
+}
+
+.logo {
+  margin: 0 15%;
   position: absolute;
-  margin: 1.5% 50%;
+  vertical-align: middle;
 }
 
 .center {
   text-align: center;
 }
 
-.menu {
+.list {
   width: 25%;
   height: 100%;
+  margin-top: 20px;
 }
 
 .results {
@@ -43,3 +48,12 @@
   list-style: none;
   padding: 10px;
 }
+
+nav:hover {
+  background: rgba(212, 212, 209, 0.6);
+  width: 15%;
+}
+
+/* .list {
+  display: none;
+} */
