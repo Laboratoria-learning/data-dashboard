@@ -45,19 +45,29 @@ desertaronPorcentaje.appendChild(textPorcentaje);
 desertaronPorcentaje.appendChild(leyendaDesertaronPorcentaje);
 
 // ------------> NPS - arequipa 2016-II <-----------------
+//creando variables
 var box2 = document.getElementById('aqp-nps-sprint1');
 var promoS120162 = data.AQP['2016-2'].ratings[0].nps.promoters;
 var detracS120162 = data.AQP['2016-2'].ratings[0].nps.detractors;
+var passS120262 = data.AQP['2016-2'].ratings[0].nps.passive;
 
+//PROMOTERS
 var parag = document.createElement("p");
 var text = document.createTextNode(promoS120162);
 parag.appendChild(text);
 box2.appendChild(parag);
 
+//PASSIVE
 var parag2 = document.createElement("p");
-var text2 = document.createTextNode(detracS120162);
+var text2 = document.createTextNode(passS120262);
 parag2.appendChild(text2);
 box2.appendChild(parag2);
+
+//DETRACTORS
+var parag3 = document.createElement("p");
+var text3 = document.createTextNode(detracS120162);
+parag3.appendChild(text3);
+box2.appendChild(parag3);
 
 
 // Puedes hacer uso de la base de datos a través de la variable `data`
