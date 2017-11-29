@@ -17,13 +17,8 @@ body {
 .containerHeader { 
     border: 1px solid red;
     height: 250px;
-<<<<<<< HEAD
 } 
 .laboratoriaNav { /*first Nav: container*/
-=======
-}
-#laboratoriaNav {
->>>>>>> origin/jsTestFunction
     height: 40%;
     width: 100%;
     background-color: #ffffff;
