@@ -1,20 +1,81 @@
 /* Seteando body*/
 
 * {
+  box-sizing: border-box;  
+  font-family: 'Roboto', sans-serif;  
   margin: 0;
   padding: 0;
+}
+
+/* User Bar */
+
+#user-bar {
+  background-color: #ff9800;
+  height: 100vh;
+  position: fixed;
+  width: 20%;
+}
+
+.box-user {
+  height: 40%;
+  width: 100%;
+}
+
+.box-user img {
+  height: 150px;
+  width: 100%;
+}
+
+.photo-user img {
+  border-radius: 50%;
+  border: 3px solid white;
+  height: 170px;
+  margin-left: 40px;
+  position: absolute;
+  top: 40px;  
+  width: 140px;
+}
+
+.box-name-user{
+  display: block;
+  margin-left: 50px;
+  margin-top: 60px;
+  text-align: center;
+  width: 110px;  
+}
+
+.name-user {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.first-user {
+  color: #657796;
+  font-size: 14px;
+}
+
+button {
+  background-color: #fcd375;
+  border: none;
+  border-radius: 10px;
+  display: block;
+  height: 10%;
+  margin: 30px 15px 15px;
+  width: 80%;
 }
 
 /* Header */
 
 header {
-  background-color: #ffc107;
-  position: relative;
+  background-color: #ffffff;
+  display: inline-block;
   width: 100%;
 }
 
 .logo-laboratoria {
   height: 90px;
+  position: absolute;
+  right: 0;
   width: 150px;
 }
 
@@ -30,3 +91,102 @@ a {
   text-decoration: none;
 }
 
+/* Dashboard */
+
+#dashboard-container {
+  background-color: #c1d0d8;
+  display: inline-flex;
+  height: 100vh;
+  margin-left: 223px;
+  width: 100%;
+}
+
+.data-cont1 {
+  outline: 1px solid black;
+  display: inline-block;
+  height: 270px;
+  margin-top: 60px;
+  margin-left: 120px;
+  width: 270px;
+}
+
+.data-cont2 {
+  outline: 1px solid black;
+  display: inline-block;
+  height: 270px;
+  margin-top: 60px;
+  margin-left: 40px;
+  width: 270px;
+}
+
+.data-cont3 {
+  outline: 1px solid black;
+  display: inline-block;
+  height: 270px;
+  margin-top: 60px;
+  margin-left: 40px;
+  width: 270px;
+}
+
+.data-cont4 {
+  outline: 1px solid black;
+  display: inline-block;
+  height: 270px;
+  margin-top: 60px;
+  margin-left: 120px;
+  width: 900px;
+}
+
+.data-cont5 {
+  outline: 1px solid black;
+  display: inline-block;
+  height: 270px;
+  margin-top: 60px;
+  margin-left: 120px;
+  width: 900px;
+}
+
+.data-cont6 {
+  outline: 1px solid black;
+  display: inline-block;
+  height: 270px;
+  margin-bottom: 60px;  
+  margin-top: 60px;
+  margin-left: 120px;
+  width: 270px;
+}
+
+.data-cont7 {
+  outline: 1px solid black;
+  display: inline-block;
+  height: 270px;
+  margin-bottom: 60px;  
+  margin-top: 60px;
+  margin-left: 40px;
+  width: 270px;
+}
+
+.data-cont8 {
+  outline: 1px solid black;
+  display: inline-block;
+  height: 270px;
+  margin-bottom: 60px;
+  margin-top: 60px;
+  margin-left: 40px;
+  width: 270px;
+}
+
+.contain-number {
+  outline: 1px solid black;
+  float: left;
+  font-size: 15px;
+  height: 70px;
+  width: 100px;
+}
+
+.contain-percentage {
+  outline: 1px solid black;
+  float: left;
+  height: 70px;
+  width: 100px;
+}
