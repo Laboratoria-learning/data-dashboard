@@ -235,5 +235,4 @@ window.onload = function() {
   containesStudents.classList.add('none');
   comboBox.addEventListener('change',changeTitle)
 }
-
-alert("hola");
+alert("como vas??")
