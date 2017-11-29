@@ -6,16 +6,16 @@
 
  }
  body{
-   background:#fff;
+   background:#F7F7F7;
  }
  /*logo-laboratoria*/
  img{
-   outline: 1px solid red;
+
    width: 85.5em;
    height: 5em;
    position: fixed;
    padding-left: 12em;
-   
+
 
 
  }
@@ -37,8 +37,7 @@
    overflow: auto;/*devuelve el contexto del bloque*/
  }
  li{
-
-       width: 254.2px;/*ancho */
+       width: 250px;/*ancho */
  /*  display: inline-block;*//*lo pone en una sola linea una al costado de otra*/
    text-align: center;/*centrara cada li*/
    float: left;/*pone elementos flotados*/
@@ -60,6 +59,7 @@ font-size: 20px;
 }
 /*hara al pasar el mause en cada li cambiara de color*/
 a:hover{
+  border-bottom: 5px solid #FFC107;
   background: #2C3E50;
   color: #fff;
 }
@@ -96,9 +96,8 @@ a:hover{
   display: inline-block;
   position:fixed;
   left: 6.2em;
-  border: 1px solid #EDEDED;
   top: 0em;
-
+  box-shadow:5px 0px 5px #EDEDED;
 }
 .box-list{
   margin-left: 1em;
@@ -120,14 +119,11 @@ hr{
 }
 .sub-box{
   margin-top: 12em;
-  background-color:#F2F3F4  ;
+  background-color:#fff  ;
   width: 320px;
   height: 310px;
   display: inline-block;
   margin-left: 0.5em;
-  outline: 1px solid red;
-
-
 }
 h1{
   width: 12em;
@@ -142,11 +138,18 @@ h1{
   height: 80px;
   display: inline-block;
   margin-left: 0.5em;
-  top: 10em;
+
   position: relative;
 }
 .number{
   outline: 1px solid red;
   width: 5em;
   height: 2em;
+}
+.bar-graph{
+
+  outline: 1px solid green;
+  width: 100px;
+  height: 50px;
+position: absolute;
 }
