@@ -1,32 +1,131 @@
 /*
  * Estilos de tu proyecto
  */
+ /*seteando el proyecto*/
  * {
      padding: 0;
      margin: 0;
      box-sizing: border-box;
+     font-family: 'Montserrat', sans-serif;
  }
+/*sección header*/
  header{
-     outline:1px solid pink;
      box-shadow: 2px 2px 2px gray;
+     height: 70px;
  }
  header img {
+    float: left;
+    margin-top: 30px;
+    margin-right: 350px;
     width: 150px;
-    height: 50px;
+    height: 60px;
     margin: auto 40%;
  }
- #location {
-     float: left;
+
+header .fa {
+    margin-top: 30px;
+    float: right;
+    font-size: 30px;
+    }
+
+/*sección mainBarr*/
+
+#mainBarr{
+  height: 120px;
+  background-color: #e1e1e1;
+}
+ul li a {
+color: #000;
+text-decoration: none;
+text-transform: uppercase;
+float: left;
+display: inline-block;
+}
+
+li{
+  display: inline-block;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+#location {
+background-color: #e1e1e1;
+margin-top: 20px;
+margin-left: 40px
+}
+
+/*sección 1 enrollment*/
+
+ #general {
+   background-color: #e6ecf0;
+ }
+
  }
  .overview{
      display: inline-block;
      padding: 10px;
      float: left;
  }
- .enrollment, .achievement, .netPromoterScore {
-    float: left;
+
+ .enrollmentClass{
+ background-color:#fff;
+ box-sizing: border-box;
+ display: inline-block;
+ width: 310px;
+ height: 300px;
+ padding: 20px;
+ border-top: 20px;
  }
+
+.enrollOne {
+  background-color: #e6ecf0;
+  display: inline-block;
+  font-size: 20px;
+  width: 130px;
+  height: 60px;
+  font-size: 10px;
+  text-align: center;
+
+}
+
+.enrollTwo{
+    background-color: #e6ecf0;
+    float: left;
+    width: 130px;
+    height: 60px;
+    font-size: 11px;
+    text-align: center;
+}
+.achievementClass{
+  margin-top: 40px;
+  margin-left: 80px;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 20px;
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+}
+.achiOne {
+  background-color: #e6ecf0;
+  font-size: 10px;
+  height: 60px;
+  width : 140px;
+  display: inline-block;
+  font-size: 11px;
+  text-align: center;
+  }
+
+.achiTwo{
+  background-color:#e6ecf0;
+  font-size: 11px;
+  height: 60px;
+  width : 120px;
+  display: inline-block;
+
+}
  .titleStyle{
      margin: 10px;
      font-family: Arial, Helvetica, sans-serif;
  }
+/*seccion 2 Tech Skills/*
