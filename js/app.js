@@ -1,13 +1,20 @@
 /* Dropdwon de menu*/
 var menu = document.querySelector('.menu');
 var subMenu = document.querySelectorAll('.country');
+var lowerMenu = document.querySelectorAll('.city');
 // console.log(subMenu);
-function showMenu(event) {
+// function showCountry(event) {
+//   for (var i = 0; i < subMenu.length; i++) {
+//     subMenu[i].classList.toggle('display-none');
+//   }
+// }
+function showCity(event) {
   for (var i = 0; i < subMenu.length; i++) {
     subMenu[i].classList.toggle('display-none');
   }
 }
-menu.addEventListener('click', showMenu);
+// menu.addEventListener('click', showCountry);
+subMenu.addEventListener('click', showCity);
 
 /* Tabs */
 var tab = document.querySelectorAll('.tab');

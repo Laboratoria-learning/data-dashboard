@@ -38,6 +38,10 @@ a:hover {
   text-transform: uppercase;
 }
 
+h1 {
+  font-weight: bold;
+}
+
 .country {
   font-weight: bold;
 }
@@ -61,7 +65,7 @@ main {
 
 .container-icons {
   width: 79vw;
-  outline: 1px solid green;
+  border: 1px solid #ffc107;
   height: 10vh;
   padding: 2vh;
   box-sizing: border-box;
@@ -69,6 +73,7 @@ main {
 
 .container-tabs ul {
     text-align: center;
+    padding: 2vh;
 }
 
 .container-tabs li {
@@ -76,10 +81,9 @@ main {
   margin-right: 0.5vw;
 }
 
-.container li button {
+.container-tabs li button {
   border-style: none;
   padding: 3vh;
-
 }
 
 .icons {
@@ -110,18 +114,33 @@ main {
 }
 
 .box-medium-size {
-  border: 1px solid orange;
+  border: 1px solid #ffc107;
   box-sizing: border-box;
   width: 35vw;
   height: auto;
   background-color: #ffffff;
   font-size: 14px;
   margin: 5px;
-  padding: 5vh;
+  padding: 3vh;
+}
+
+.box-medium-size .figures {
+  border: 1px solid violet;
+  box-sizing: border-box;
+  width: 10vw;
+  height: auto;
+  margin: 3px;
+  padding: 2vh;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.box-medium-size .figures p {
+  font-size: 10px;
 }
 
 .box-size {
-  border: 1px solid orange;
+  border: 1px solid #ffc107;
   box-sizing: border-box;
   width: 78vw;
   height: auto;
@@ -129,7 +148,26 @@ main {
   display: inline-flex;
   margin: 5px;
   font-size: 14px;
-  padding: 8vh;
+  padding: 4vh;
+}
+
+.box-size .figures {
+  border: 1px solid violet;
+  box-sizing: border-box;
+  width: 10vw;
+  height: auto;
+  margin: 3px;
+  padding: 2vh;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.box-size h1 {
+  display: block;
+}
+
+.box-size .figures p {
+  font-size: 10px;
 }
 
 nav {
