@@ -83,23 +83,47 @@ nav {
     background-color: #e1e1e1;
     width: 100%;
 }
-.container {
+.container1 {
     background: #f7f7f7;
-    position: ;
+    height: 433px;
+    width: 100%;
+
+}
+.container2 {
+    display: block;
+    background: #f7f7f7;
+    height: 559px;
+    width: 100%;
 }
 .square {
     background-color: #ffffff;
-    display: inline-block;
-    outline: 1px solid green;
+    display: inline-flex;
     height: 335px;
     width: 342px;
-    margin: 20px;
+    margin-top: 58px;
+    margin-left:26px;
+    margin-bottom: 41px;
+}
+.first-position {
+    margin-left: 87px;
+}
+.data1 {
+    outline: 1px solid red;
+    width: 145px;
+    height: 60px;
 }
 .rectangle {
     background-color: #ffffff;
     display: inline-block;
-    outline: 1px solid orange;
     width: 1087px;
     height: 520px;
-    margin:10px;
+    margin-left: 87px;
+}
+.last-position {
+    margin-bottom: 123px;
+    margin-top: 27px;
+}
+.data2 {
+    width: 195px;
+    height: 57px;
 }
