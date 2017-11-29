@@ -1,36 +1,3 @@
-/* var Arequipa = data.AQP;
-var prom1AQP = Arequipa['2016-2'];
-var studentsPromOne = prom1AQP['students'];
-var prom2AQP = Arequipa['2017-1'];
-var studentsPromTwo = prom2AQP['students'];
-
-var Mexico = data.CDMX;
-var prom1MX = Mexico['2017-1'];
-var prom2MX = Mexico['2017-2'];
-
-var Lima = data.LIM;
-var prom1LM = Lima['2016-2'];
-var prom2LM = Lima['2017-1'];
-var prom3LM = Lima['2017-2'];
-
-var Chile = data.SCL;
-var prom1CHL = Chile['2016-2'];
-var prom2CHL = Chile['2017-1'];
-var prom3CHL = Chile['2017-2'];
-// dentro del enrollment
-
-// titulo
-var titleEn = document.createElement('h1');
-titleEn.innerText = 'ENROLLMENT';
-titleEn.classList.add('titleStyle');
-enrollment.appendChild(titleEn);
-// cantidad Total de alumnas
-var currentStudents = document.createElement('h2');
-currentStudents.innerText = prom1AQP['students'].length;
-var description = document.createElement('span');
-description.innerText = '# STUDENTS CURRENTLY ENROLLED';
-enrollment.appendChild(currentStudents);
- */
 // creando ...
 window.addEventListener('load', function() {
   var overview = document.getElementById('general');
@@ -101,7 +68,7 @@ window.addEventListener('load', function() {
   var textNps = document.createElement('span');
   textNps.innerText = '% CUMULATIVE NPS';
   var promoter = document.createElement('p');
-  promoter.innerText = 'promoterpercent';
+  promoter.innerText = promotersPercent('LIM', '2016-2');
   var passive = document.createElement('p');
   passive.innerText = 'passivepercent';
   var detractors = document.createElement('p');
@@ -134,7 +101,7 @@ window.addEventListener('load', function() {
         count++;
       }
     } return count;
-  };
+  }
   /* function allStudents(sede, gene) {
     var count = 0;
     var sede = data[sede];
@@ -217,6 +184,25 @@ window.addEventListener('load', function() {
     } var npsPercent = complete / numRatigns;
     return npsPercent;
   }
+  // porcentaje del promotor
+  function promotersPercent(sede, gene) {
+    var count = 0;
+    var sede = data[sede];
+    var generation = sede[gene];
+    var ratigns = generation.ratings;
+    var array = [];
+    for (var i = 0; i < ratigns[i].length; i++) {
+      var total = ratigns[i].nps.promoters + ratigns[i].nps.passive + ratigns[i].nps.detractors;
+      var promoters = (ratigns[i].nps.promoters / total) * 100;
+      array.push(promoters);
+ }
+      var allPromoter = 0;
+      for (var p = 0; p < array.length; p++) {
+        allPromoter += array[p].promoter;
+      } var totalPromoters = 0;
+      totalPromoters = allPromoter / ratigns.length;
+    } return totalPromoters;
+
 });
 // Puedes hacer uso de la base de datos a través de la variable `data`
 console.log(data);

@@ -39,14 +39,13 @@ ul li a {
 color: #000;
 text-decoration: none;
 text-transform: uppercase;
-font-weight: 800;
 float: left;
 display: inline-block;
 }
 
 li {
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 30px;
   margin-left: 40px;
 }
 
@@ -54,7 +53,7 @@ li {
 background-color: #e1e1e1;
 width: 260px;
 height: 60px;
-margin-top: 5px;
+margin-top: 10px;
 margin-left: 40px;
 font-weight: 900;
 font-size: 25px;
