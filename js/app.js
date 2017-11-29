@@ -11,12 +11,43 @@ menu.addEventListener('click', showMenu);
 
 /* Tabs */
 var tab = document.querySelectorAll('.tab');
-console.log(tab[0]);
-/*
+
+
 function showTab(event) {
-  for (var i = 0; i < tab.length; i++) {
-    console.log(event);
+  // console.log(event.target.dataset.selectedTab);
+  selectedTab = event.target.dataset.selectedTab;
+  var overView = document.querySelector('#over-view');
+  var students = document.querySelector('#students');
+  var teacher = document.querySelector('#teachers');
+
+  switch (selectedTab) {
+  case 'tabOverView':
+    students.style.displayNone;
+    // teacher.style.displayNone;
+    break;
+
+  case 'tabStudents':
+    // overView.style.displayNone;
+    // teacher.style.displayNone;
+    break;
+
+  case 'tabTeacher':
+    // overView.style.displayNone;
+    // students.style.displayNone;
+    break;
+  default:
+    // overView.style.displayNone;
+    // students.style.displayNone;
+    // teacher.style.displayNone;
+    break;
   }
 }
-*/
-tab[0].addEventListener('click', showTab);
+function loadPage() {
+  var tab = document.querySelectorAll('.tab');
+  for (var i = 0; i < tab.length; i++) {
+    tab[i].addEventListener('click', showTab);
+  }
+}
+
+
+loadPage();

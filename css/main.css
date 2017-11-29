@@ -179,3 +179,12 @@ nav {
 .display-none {
   display: none;
 }
+
+
+/*Tab*/
+#over-view , #students , #teachers {
+  width: 20vh;
+  height: 20vh;
+  background-color: red;
+  margin: 2vh;
+}
