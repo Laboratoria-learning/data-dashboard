@@ -1,55 +1,120 @@
-/*
- * Estilos de tu proyecto
- */
- * {
-     box-sizing: border-box ;
-     font-family: 'Montserrat', sans-serif;
-     color: "#2b2b2b";
-     background-color: #f4f6f7;
- }
- /* clases de tamaños de letra - student */
- .little-letter {
-     font-size: 60%;
-     text-align: center;
-     background-color: white;
- }
-
- .big-letter {
-     font-size: 120%;
-     font-weight: bold;
-     text-align: center;
-     background-color: white;
- }
-
- .medium-letter {
-     font-size: 80%;
-     font-weight: bold;
-     background-color: white;
- }
-
- .stardart-letter {
-     font-size: 100%;
-     background-color: white;
- }
+* {
+    box-sizing: border-box ;
+    font-family: 'Montserrat', sans-serif;
+    color: "#2b2b2b";
+    background-color: #f4f6f7;
+}
 
 
+#especialization {
+    left: 15px;
+    /*height: 100%;*/
+    height: 2000px;
+    width: 20%;
+    background-color: white;
+    display: inline-block;
+    margin-left: 350px;
+}
 
- #skill-1 , #skill-2 , #skill-3 {
-     display: inline-block;
-     background-color: white;
- }
+li {
+    text-decoration-style: none;
+}
 
- #photo, .date {
-     padding-top: 15px;
-     background-color: white;
- }
 
- #student {
-     background-color: white;
- }
+#visualization {
+    height: 100%;
+    width: 50% ;
+    background-color: white ;
+    display: inline-block;
+    margin-left: 20px;
+    /*float: right;*/
+}
 
- #nuevo {
-     height: 20px;
-     width: 100px;
-     background-color: red;
- }
+ul, li{
+    background-color: white ;
+}
+
+li input {
+    background-color: white ;
+}
+
+li label {
+    background-color: white ;
+}
+
+#content-search {
+    display: inline-block;
+}
+
+#input-student {
+    display: inline-block;
+}
+
+#photo , #date-student , #tech-skills , #life-skills, english-skill , .date , #english-skills {
+    display: inline-block;
+}
+#name , #especialization-student ,   #skills-details  {
+    margin-left: 20px;
+}
+
+#photo {
+    margin-left: 20px;
+}
+#tech-skills {
+    margin-left: 40px;
+}
+#date-student , #name , #especialization-student {
+    background-color: white;
+}
+
+#tech-skills , #life-skills , #english-skills{
+    border: 1px solid black;
+    text-align: center;
+}
+
+/* clases de tamaños de letra - student */
+.little-letter {
+    font-size: 60%;
+    text-align: center;
+    background-color: white;
+}
+
+.big-letter {
+    font-size: 120%;
+    font-weight: bold;
+    text-align: center;
+    background-color: white;
+}
+
+.medium-letter {
+    font-size: 80%;
+    font-weight: bold;
+    background-color: white;
+}
+
+.stardart-letter {
+    font-size: 100%;
+    background-color: white;
+}
+
+
+
+#skill-1 , #skill-2 , #skill-3 {
+    display: inline-block;
+    background-color: white;
+}
+
+#photo, .date {
+    padding-top: 15px;
+    background-color: white;
+}
+
+#student {
+    background-color: white;
+}
+
+#nuevo {
+    height: 20px;
+    width: 100px;
+    background-color: red;
+}
