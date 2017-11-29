@@ -29,7 +29,7 @@ mexicoDf.addEventListener('click', function(event) {
 });
 
 //accediendo a lima
-window.addEventListener('load',function(){
+/*window.addEventListener('load',function(){
   var lima = document.getElementById('lima');
   var arequipa = document.getElementById('arequipa');
   var santiago = document.getElementById('santiago');
@@ -41,13 +41,23 @@ window.addEventListener('load',function(){
     var z = data.LIM["2017-2"]['ratings'][0]['nps']['detractors'];
     var numEnrollment = document.getElementById('numEnro');
     numEnrollment.textContent=x+y+z +'#student currently enrolled';
-
   })
-
-
-
-
-})
+});*/
+//Seleccionando las sedes
+//Lima
+var lim20162 = document.getElementById('lim-2016-2');
+var lim20171 = document.getElementById('lim-2017-1');
+var lim20172 = document.getElementById('lim-2017-2');
+//Arequipa
+var aqp20162 = document.getElementById('aqp-2016-2');
+var aqp20171 = document.getElementById('aqp-2017-1');
+//Santiago
+var scl20162 = document.getElementById('scl-2016-2');
+var scl20171 = document.getElementById('scl-2017-1');
+var scl20172 = document.getElementById('scl-2017-2');
+//Mexico df
+var cdmx20162 = document.getElementById('cdmx-2017-1');
+var cdmx20171 = document.getElementById('cdmx-2017-2');
 
 /* var select = document.getElementById('select');
 var alumn = document.getElementById('alumn');
