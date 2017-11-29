@@ -1,147 +1,102 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Data Dashboard</title>
-  <script src="https://use.fontawesome.com/01c57ad38e.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-  <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="assets/icons/css-fonts/font-awesome.min.css">
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"> </script>
-  <link rel="stylesheet" href="css/main.css">
-
-</head>
-
-<body>
-  <header>
-    <nav class="menu">
-      <!-- Sección menu-->
-      <div class="box-header start">
-        <span id="button-menu" class="fa fa-bars icons"></span>
-        <nav class="navegacion">
-          <ul class="menu">
-            <li class="title-menu">Editar Datos</li>
-            <li>
-              <a href="index.html">Dashboard</a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="fa fa-plus-circle icon-menu"></span>Añadir Estudiante</a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="fa fa-minus-circle icon-menu"></span>Remover Estudiante</a>
-            </li>
-            <li>
-              <a href="#">Agregar Sprint</a>
-            </li>
-          </ul>
-                     
-      </div>
-        <!--Sección botones -->
-      <ul class="botones">
-          <li><button id="b2" type="button" name="button" data-tab-seleccionado='tabEstudiantes' class='tab'>Estudiantes</button></li>
-          <li><button id="b3" type="button" name="button" data-tab-seleccionado='tabStaff' class='tab'>Equipo</button></li>
-      </ul>
-
-      <!--Sección sede -->
-      <ul class="sede" id="sede">
-        <li>
-          <a class="menu1" href="#">
-            <i class="fa fa-map-marker" aria-hidden="true"></i> Sede</a>
-          <ul>
-            <li>
-              <a href="#">
-                <img class="flag" src="assets\images\peru.png" alt="">Lima</a>
+  <head>
+    <meta charset="utf-8">
+    <title>Data Dashboard</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="assets/icons/css-fonts/font-awesome.min.css">
+  </head>
+  <body>
+      <header>
+            <div class="box-header start">
+                <span id="button-menu" class="fa fa-bars icons"></span>
+                <nav class="navegacion">
+                  <ul class="menu">
+                    <li class="title-menu">Editar Datos</li>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="#"><span class="fa fa-plus-circle icon-menu"></span>Añadir Estudiante</a></li>
+                    <li><a href="#"><span class="fa fa-minus-circle icon-menu"></span>Remover Estudiante</a></li>
+                    <li><a href="#">Agregar Sprint</a></li>
+                  </ul>
+                </nav>
+                <span class="box-header search">
+                  <input type="text" placeholder="search">
+                  <a href="#" class="icons-search">
+                  <i class="fa fa-search fa-rotate-90"></i>
+                  </a>
+                </span>
+            </div>
+            <figure class="box-header logo">
+              <a href="index.html"><img src="assets/images/logo-laboratoria.svg" alt="logo"></a> 
+            </figure>
+            <div class="box-header user">
               <ul>
-                <li>
-                  <a href=".\html\lima2016-2.html">2016 - 2</a>
-                </li>
-                <li>
-                  <a href=".\html\lima2017-1.html">2017 - 1</a>
-                </li>
-                <li>
-                  <a href=".\html\lima2017-2.html">2017 - 2</a>
-                </li>
+                  <li><a class="icons" href="#"><span class="fa fa-envelope-o"></span></a></li>
+                  <li><a class="icons" href="#"><span class="fa fa-bell-o"></span></a></li>
+                  <li><a class="user-icon" href="#"><div>J</div></a></li> 
               </ul>
-            </li>
-            <li>
-              <a href="#">
-                <img class="flag" src="assets\images\peru1.png" alt="">Arequipa</a>
-              <ul>
-                <li>
-                  <a href=".\html\aqp2016-2.html">2016 - 2</a>
-                </li>
-                <li>
-                  <a href=".\html\aqp2017-1.html">2017 - 1</a>
-                </li>
+            </div>
+      </header>
+      <section class="container-section">
+          <div class="box-menu" >
+              <ul class="menu-sedes">
+                  <li><a href="#" class="sedes">SEDES</a>
+                    <ul>
+                      <li><a href="#">Arequipa</a>
+                        <ul>
+                          <li><a href="#">2016-2</a></li>
+                          <li><a href="#">2017-1</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Lima</a>
+                        <ul>
+                          <li><a href="#">2016-2</a></li>
+                          <li><a href="#">2017-1</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Ciudad de México</a>
+                        <ul>
+                          <li><a href="#">2017-1</a></li>
+                          <li><a href="#">2017-2</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Santiago de Chile</a>
+                        <ul>
+                          <li><a href="#">2016-2</a></li>
+                          <li><a href="#">2017-1</a></li>
+                          <li><a href="#">2017-2</a></li>
+                        </ul>
+                      </li>
+                    </ul> 
+                  </li>
+              </ul>      
+          </div>
+          <div class="box-button">
+              <a class="tab" data-selection="one">General</a>
+              <a class="tab" data-selection="two">Estudiantes</a>
+              <a class="tab" data-selection="tree">Profesores</a>
+          </div>
+      </section>
+      <section class="box-information">
+            <div class="first hide">
+                Lorem ipsum dolor sit amet
+            </div>
+            <div class="second hide ">
+                Sed ut s
+            </div>
+            <div class="third hide">
+                Muy lejos, más allá de lasen camino.
+            </div>
+      </section>
+      
+     
 
-              </ul>
-            </li>
-            <li>
-              <a href="#">
-                <img class="flag" src="assets\images\chile.png" alt="">Santiago de Chile</a>
-              <ul>
-                <li>
-                  <a href=".\html\scl2016-2.html">2016 - 2</a>
-                </li>
-                <li>
-                  <a href=".\html\scl2017-1.html">2017 - 1</a>
-                </li>
-                <li>
-                  <a href=".\html\lima2017-2.html">2017 - 2</a>
-                </li>
-            </li>
-            </ul>
-        </li>
-        <li>
-          <a href="#">
-            <img class="flag" src="assets\images\mexico.png" alt="">Ciudad de Mexico</a>
-          <ul>
-            <li>
-              <a href=".\html\MX2017-1.html">2017 - 1</a>
-            </li>
-            <li>
-              <a href=".\html\MX2017-2.html">2017 - 2</a>
-            </li>
-          </ul>
-        </li>
-        </ul>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/main.js"></script>
+		<!-- Base de datos -->
+		<script src="./js/data.js"></script>
+		<!-- Aquí va tus archivos JS -->
+    <script src="./js/app.js"></script>
 
-        </li>
-      </ul>
-
-      <!--Sección idioma  -->
-      <select name="language">
-        <option value="value1" selected>Español</option>
-        <option value="value2">English</option>
-      </select>
-
-      <img class="lab" id="lab" src="assets/images/logo-laboratoria.svg" alt="">
-
-      <!--Sección user -->
-      <img class="ale" id="ale" src="assets/images/ale.png" alt="">
-
-    </nav>
-  </header>
-  
-
-
-  
-
-
-        <!-- Base de datos -->
-        <script src="./js/data.js"></script>
-        <!-- Aquí va tus archivos JS -->
-        <script src="./js/app.js"></script>
-        <script src="js/jquery-3.2.1.js"></script>
-        <script src="js/main.js"></script>
-        <!-- Base de datos -->
-
-
-</body>
-
+  </body>
 </html>
