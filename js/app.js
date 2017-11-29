@@ -32,7 +32,7 @@ function optionsMexico() {
   paintOptions(mexico, previous);
   previous = mexico;
 }
-function paintOptions(option,previous) {
+function paintOptions(option, previous) {
   option.classList.add('yellow');
   previous.classList.remove('yellow');
 }

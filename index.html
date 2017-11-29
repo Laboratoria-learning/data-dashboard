@@ -13,6 +13,10 @@
             <img src="assets/images/laboratoria-logo.jpg" alt="Logo laboratoria">
           </figure>
           <div id="nav-header" class="inline-block nav-header">
+            <ul id="container-tabs">
+             <li id="oerview" class="list-style inline-block"><button type="button" name="button" data-tab-select='taboverview' class="tab">Overview</button></li>
+             <li id="students" class="list-style inline-block"><button type="button" name="button" data-tab-select='tabstudents' class="tab">Students</button></li>
+           </ul>
           </div>
     </header>
       <nav>
@@ -30,30 +34,118 @@
             <ul id="list-region" class="hidden">
               <li id="lim" class="list-style margin-list list-region"><a href="#"><img src="assets/images/peru.png" alt="Bandera Perú" class="flags">Lima<span><i class="fa fa-sort-desc fa-2x"></i></span></a></li>
               <ul>
-                <li id="lim172" class="list-style margin-list list-lim"><a href="#">2017-II</a></li>
-                <li id="lim171" class="list-style margin-list list-lim"><a href="#">2017-I</a></li>
-                <li id="lim162" class="list-style margin-lis list-lim"><a href="#">2016-II</a></li>
+                <li class="list-style margin-list list-lim"><a href="#">2017-II</a></li>
+                <li class="list-style margin-list list-lim"><a href="#">2017-I</a></li>
+                <li class="list-style margin-lis list-lim"><a href="#">2016-II</a></li>
               </ul>
               <li id="aqp" class="list-style margin-list list-region"><a href="#"><img src="assets/images/peru.png" alt="Bandera Perú" class="flags">Arequipa<span><i class="fa fa-sort-desc fa-2x"></i></span></a></li>
               <ul>
-                <li id="aqp171" class="list-style margin-list list-aqp"><a href="#">2017-I</a></li>
-                <li id="aqp162" class="list-style margin-list list-aqp"><a href="#">2016-II</a></li>
+                <li class="list-style margin-list list-aqp"><a href="#">2017-I</a></li>
+                <li class="list-style margin-list list-aqp"><a href="#">2016-II</a></li>
               </ul>
               <li id="scl" class="list-style margin-list list-region"><a href="#"><img src="assets/images/chile.png" alt="Bandera Chile" class="flags">Santiago de Chile<span><i class="fa fa-sort-desc fa-2x"></i></span></a></li>
               <ul>
-                <li id="scl172" class="list-style margin-list list-scl"><a href="#">2017-II</a></li>
-                <li id="scl171" class="list-style margin-list list-scl"><a href="#">2017-I</a></li>
-                <li id="scl162" class="list-style margin-list list-scl"><a href="#">2016-II</a></li>
+                <li class="list-style margin-list list-scl"><a href="#">2017-II</a></li>
+                <li class="list-style margin-list list-scl"><a href="#">2017-I</a></li>
+                <li class="list-style margin-list list-scl"><a href="#">2016-II</a></li>
               </ul>
               <li id="cdmx" class="list-style margin-list list-region"><a href="#"><img src="assets/images/mexico.png" alt="Bandera México" class="flags">Ciudad de México<span><i class="fa fa-sort-desc fa-2x"></i></span></a></li>
               <ul>
-                <li id="cdmx172" class="list-style margin-list list-cdmx"><a href="#">2017-II</a></li>
-                <li id="cdmx171" class="list-style margin-list list-cdmx"><a href="#">2017-I</a></li>
+                <li class="list-style margin-list list-cdmx"><a href="#">2017-II</a></li>
+                <li class="list-style margin-list list-cdmx"><a href="#">2017-I</a></li>
               </ul>
             </ul>
         </div>
       </nav>
-      <main id="">
+      <main id="" class="margin">
+        <div id="sprints-container" class="container-sprints">
+          <ul class="inline-block">
+            <li class="sprints list-style"><a href="#">Sprints<span><i class="fa fa-sort-desc fa-2x"></i></span></a></li>
+          </ul>
+        </div>
+        <article id="overview-article" class="background-color-article padding-article">
+          <div id="">
+            <div id="" class="inline-block">
+              <h3>ENROLLMENT</h3>
+              <div><span>120</span><p class="inline-block">#STUDENTS CURRENTLY ENROLLED</p></div>
+              <div><span>20%</span><p class="inline-block">% DROPOUT</p></div>
+              <figure>
+                <img src="assets/images/bar-graph.png" alt="">
+              </figure>
+            </div>
+            <div id="" class="inline-block">
+              <h3>ACHIEVEMENT</h3>
+              <div><span>105</span><p class="inline-block">#STUDENTS THAT MEET THE TARGET</p></div>
+              <div><span>78%</span><p class="inline-block">% OF TOTAL (135)</p></div>
+              <figure>
+                <img src="assets/images/graph.png" alt="">
+              </figure>
+            </div>
+            <div id="" class="inline-block">
+              <h3>NET PROMOTER SCORE</h3>
+              <div><span>78%</span><p class="inline-block">% CUMULATIVE NPS</p></div>
+              <div>
+                <span>60%</span><p class="inline-block">Promoters</p>
+                <span>30%</span><p class="inline-block">Passive</p>
+                <span>10%</span><p class="inline-block">Detractors</p>
+              </div>
+              <figure>
+                <img src="assets/images/graph.png" alt="">
+              </figure>
+            </div>
+          </div>
+
+          <div id="">
+            <div id="">
+              <h3>TECH SKILLS</h3>
+              <div><span>90</span><p class="inline-block">#STUDENTS THAT MEET THE TARGET</p></div>
+              <div><span>62%</span><p class="inline-block">% OF TOTAL (135)</p></div>
+              <figure>
+                <img src="assets/images/circle-graphic.png" alt="">
+              </figure>
+              <div id="">
+                <span></span><p>#STUDENTS THAT MEET THE TARGET</p>
+                <span></span><p>#STUDENTS THAT DON'T MEET THE TARGET</p>
+              </div>
+            </div>
+
+            <div id="">
+              <h3>LIFE SKILLS</h3>
+              <div><span>80</span><p class="inline-block">#OVERALL CLASS AVERAGE</p></div>
+              <div><span>62</span><p class="inline-block">#STUDENTS THAT MEET THE TARGET</p></div>
+              <figure>
+                <img src="assets/images/circle-graphic.png" alt="">
+              </figure>
+              <div id="">
+                <span></span><p>#STUDENTS THAT MEET THE TARGET</p>
+                <span></span><p>#STUDENTS THAT DON'T MEET THE TARGET</p>
+              </div>
+            </div>
+          </div>
+          <div id="">
+            <div id="" class="inline-block">
+              <h3>STUDENT SATISFATION</h3>
+              <div><span>140</span><p class="inline-block">% MEETING OR EXCEEDING EXPECTATIONS (CUMULATIVE)</p></div>
+              <figure>
+                <img src="assets/images/graph.png" alt="">
+              </figure>
+            </div>
+            <div id="" class="inline-block">
+              <h3>TEACHER RATING</h3>
+              <div><span>4.2</span><p class="inline-block">OVERALL TEACHER RATING (CUMULATIVE)</p></div>
+              <figure>
+                <img src="assets/images/graph.png" alt="">
+              </figure>
+            </div>
+            <div id="" class="inline-block">
+              <h3>JEDI MASTER RATING</h3>
+              <div><span>50</span><p class="inline-block">OVERALL JEDI RATING (CUMULATIVE)</p></div>
+              <figure>
+                <img src="assets/images/graph.png" alt="">
+              </figure>
+            </div>
+          </div>
+        </article>
       </main>
       <script type="text/javascript" src="js/data.js"></script>
       <script type="text/javascript" src="js/app.js"></script>

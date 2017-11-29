@@ -1,7 +1,4 @@
-/*
- * Estilos de tu proyecto
- */
- /*Resetando*/
+/*Resetando*/
 *{
   margin: 0;
   padding: 0;
@@ -11,6 +8,9 @@
 /*Clases reutilizables*/
 .inline-block{
   display: inline-block;
+}
+.block{
+  display: block;
 }
 .list-style{
   list-style: none;
@@ -25,30 +25,55 @@
 header{
   margin-top: 0;
   width: 100%;
-  height: 61.48px;
+  height: 9.2%;
   position: fixed;
   z-index: 1000;
   background-color: rgba(255,193,7,0.5);
+  box-shadow: 0 0 3px #000;
+  top: 0;
 }
 .nav-header{
-  width: 81%;
-  height: 61.48px;
-  vertical-align: top;
-  outline: 1px solid blue;
+  width: 81.2%;
+  height: 100%;
+  position: fixed;
 }
 
 img{
   width: 150px;
-  margin: 2px 50px;
+  margin: 2px 51px;
 }
 figure{
   background-color: #fff;
 }
-
+/*Modificando tabs*/
+.tab{
+  color: #000;
+  background-color: rgba(236,235,235,0.8);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 10px;
+  width: 220px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 9px #999;
+  transform: translateY(69%);
+  margin-left: 25px;
+}
+.tab:hover{
+  background-color: rgb(236,235,235);
+}
+.tab:active {
+  background-color: rgb(255,193,7);
+  box-shadow: 0 0 9px #666;
+  transform: translateY(63%);
+}
 /*Modificando nav*/
 nav{
-  padding-top: 61.48px;
-  width: 250px;
+  width: 252px;
+  position: fixed;
+  box-shadow: 0 0 3px #000;
 }
 .info-user{
   width: 100%;
@@ -89,6 +114,7 @@ a{
   text-decoration: none;
   color: #000;
   width: 100%;
+  height: 100%;
 }
 .flags{
   width: 30px;
@@ -110,5 +136,35 @@ a{
   font-size: 15px;
   padding: 7px 0;
   padding-left: 50px;
-
+}
+/*Modificando Main*/
+.margin{
+  margin-top: 60.89px;
+  margin-left: 252px;
+}
+.container-sprints{
+  width: 100%;
+  border-bottom: 2px solid rgb(255,193,7);
+  position: fixed;
+  background-color: #FFF;
+}
+.sprints{
+text-align: center;
+padding: 5px 10px;
+width: 220px;
+height: 50px;
+cursor: pointer;
+}
+.sprints:hover{
+  outline-color: #grey;
+}
+.sprints:active{
+  background-color: rgb(236,235,235);
+}
+/*Modificando aticle Overview*/
+.background-color-article{
+  background-color: rgb(247,247,247);
+}
+.padding-article{
+    padding-top: 50px;
 }
