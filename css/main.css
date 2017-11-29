@@ -1,3 +1,88 @@
+
 /*
  * Estilos de tu proyecto
  */
+*{
+  font-family: 'Roboto', sans-serif;
+}
+
+h3{
+  color: blue;
+  font-weight: 100px;
+}
+ #options{
+   border: none;
+   background: white;
+   color: #b9b9b9;
+   font-size: 15px;
+   margin: 15px; 
+ }
+
+ /*dando estilos a la seccion life skills */
+.class-figure figure{
+  display: inline-block;
+  margin-top: 100px;
+  margin: 40px;
+}
+
+/*dando estilos a la seccion student satisfaction */
+.class-studentsatisfaction{
+  position: relative;
+}
+
+.graph{
+  outline: 1px solid brown;
+  line-height: 3.5px;
+  text-align: center;
+  background: #ffffff;
+  display: inline-block;
+  margin: 20px 30px 20px 30px;
+  padding: 15px 30px 20px 30px;
+}
+.graph img{
+  width: 250px;
+  height: 150px;
+}
+
+
+/*el contenido de las cajas pequenas*/
+.content{
+  outline: 1px solid red;
+  color: #b9b9b9;
+  display: block;
+  background: #f7f7f7;
+  height: 80px;
+  width: 150px;
+  font-size: 20px;
+  margin: 10px 10px 10px 10px;
+  /*margin: 30px;*/
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+}
+
+/*el contenido de las cajas pequenas*/
+.content1{
+  outline: 1px solid blue;
+  color: #b9b9b9;
+  display: block;
+  background: #f7f7f7;
+  height: 130px;
+  width: 140px;
+  font-size: 20px;
+  text-align: center;
+  margin: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
+}
+
+.left{
+  /*margin-left: 50px; */
+  margin: 0;   
+  display: inline-block;
+}
+
+.rigth{
+  margin: 0;/*
+  margin-top: 2px;
+  margin-right: 50px;*/
+  display: inline-block;
+}
