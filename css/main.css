@@ -22,7 +22,6 @@ font-size: 20px;
   margin-left: 10%;
 }
 
-<<<<<<< HEAD
 /* Estilos a button */
 .container-tab{
   background-color: #fcb425;
@@ -45,7 +44,6 @@ li {
 .tab:hover{
   text-decoration: underline;
 }
-=======
 .enrollments,.achievement,.net  {
   width: 300px;
   height: 300px;
@@ -93,4 +91,3 @@ h3{
   margin-left: 5%;
   margin-top: 5%;
 }
->>>>>>> ccab019fddbcd3327abdf678fd4208e95a26c898
