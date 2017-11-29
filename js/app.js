@@ -5,6 +5,18 @@ function totalStudents(place, generation) {
  var totalStudents = data[place][generation].students.length;
  return totalStudents;
 };
+
+/*Porcentaje de Deserción*/
+function numDesert(place, generation, totalAlumns) {
+  var desertion = 0;
+  for (var i=0; i < totalAlumns; i++) {
+   if (data[place][generation].students[i].active === false) {
+    desertion ++;
+   }
+  }
+  return desertion;
+};
+
 /*Función para obtener el total de puntos Tech por Sprint de cada alumna*/
 function totalPointsPerStudent(place, generation, curse, numberStudent) {
   var totalPoints = 0;
@@ -27,11 +39,11 @@ function convertApercentage (points, maxScore) {
 };
 
 /*Cantidad de estudiantes que superan y que están debajo de la meta de puntos en promedio de todos los sprints cursados en HSE y en tech.*/
-function numberStudentsExceededAndBelowGoalPercentage () {
+function numberStudentsExceededAndBelowGoalPercentage (sede, generation) {
   var exceededGoal = 0;
   var belowGoal = 0;
-  for ( var i = 0; i < data['AQP']['2016-2'].students.length; i++) {
-    if ((convertApercentagePerAllSprints(totalPointsPerStudent('AQP', '2016-2', 'tech', i), 1800) + convertApercentagePerAllSprints(totalPointsPerStudent('AQP', '2016-2', 'hse', i), 1200)) / 2 >= 70) {
+  for ( var i = 0; i < data[sede][generation].students.length; i++) {
+    if ((convertApercentagePerAllSprints(totalPointsPerStudent(sede, generation, 'tech', i), 1800) + convertApercentagePerAllSprints(totalPointsPerStudent(sede, generation, 'hse', i), 1200)) / 2 >= 70) {
       exceededGoal ++ ;
     } else {
       belowGoal ++;
@@ -93,13 +105,6 @@ var sprints = document.getElementById('sprints');
 /*Ejecución del programa*/
 function begin() {
   console.log(data);
-  console.log(numberStudentsExceededAndBelowGoalPercentage());
-  console.log(convertApercentage(numberStudentsExceededAndBelowGoalPercentage(), totalStudents('AQP', '2016-2')));
-  console.log(npsAllSprints('AQP', '2016-2'));
-  console.log(satisfiedLaboratoria('AQP', '2016-2'));
-  console.log(averageTeachersOrJedis('AQP', '2016-2', 'teacher'));
-  console.log(averageTeachersOrJedis('AQP', '2016-2', 'jedi'));
-
   /*mediante esta función cambiaremos el contenido segun boton*/
   var addAndHide = function (event) {
     var tabSeleccionado = event.target.dataset.tabSelect;
@@ -138,12 +143,50 @@ function begin() {
   };
   /*Funcion para que al seleccionar una sede cambie las generaciones en base a cada sede*/
   function genSelect(sede) {
+    var textSelect = document.getElementById('text-select');
     var datagene = Object.keys(data[sede]);
-    generations.textContent = "";
+    generations.textContent = '';
+    generations.appendChild(textSelect);
     for (var i = 0; i < datagene.length; i++) {
       var option = document.createElement('option');
       option.textContent= datagene[i];
       generations.appendChild(option);
     }
+    loadData(sede, datagene[i]);
   }
+    /*  Funcion para agregar datos al HTML*/
+  function loadData(sede, generation) {
+    var optionGenerations = Object.keys(data[sede]);
+    generations.onchange = function (event) {
+      addDataForGeneration(event.target.value);
+    }
+
+    function addDataForGeneration(generationOption) {
+      /*Número de estudiantes que lograron alcanzar la meta*/
+      var numExceedeGoal = document.getElementById('num-exceede-goal');
+      numExceedeGoal.textContent = numberStudentsExceededAndBelowGoalPercentage(sede, generationOption);
+      /*Número de estudiantes que lograron alcanzar la meta*/
+      var percentageExceedeGoal = document.getElementById('percentage-exceede-goal');
+      percentageExceedeGoal.textContent = convertApercentage(numberStudentsExceededAndBelowGoalPercentage(sede, generationOption), totalStudents(sede, generationOption)) + ' %';
+      /*Promedio NPS*/
+      var nps = document.getElementById('nps');
+      nps.textContent = npsAllSprints(sede, generationOption);
+      /*Estudiantes satisfechas con la experiencia*/
+      var happy = document.getElementById('happy');
+      happy.textContent = satisfiedLaboratoria(sede, generationOption);
+      /*Promedio de los jedis*/
+      var jedi = document.getElementById('jedi');
+      jedi.textContent = averageTeachersOrJedis(sede, generationOption, 'jedi');
+      /*Promedio de los profesores*/
+      var teacher = document.getElementById('teacher');
+      teacher.textContent = averageTeachersOrJedis(sede, generationOption, 'teacher');
+      debugger
+      /*Total de estudiantes*/
+      var alumnsTotal = document.getElementById('alumns-total');
+      alumnsTotal.textContent = totalStudents(sede, generationOption);
+      /*Porcentaje de desercion de estudiantes*/
+      var desert = document.getElementById('desert-percentage');
+      desert.textContent = convertApercentage(numDesert(sede, generationOption, totalStudents(sede, generationOption)), totalStudents(sede, generationOption));
+    }
+  };
 };
