@@ -1,6 +1,5 @@
 console.log(data);
-// console.log(Object.keys(Object.getOwnPropertyNames(data)[1]));
-// console.log(data.AQP['2016-2']['students'][0]['active']);
+
 
 /* DATOS QUE MUESTRA EL ENROLLMENT */ 
 function desercion(sede, generacion) {
@@ -17,9 +16,15 @@ function desercion(sede, generacion) {
   }
  
   var porcentajeDesercion = ((studentsDeserte.length * 100 / students.length));
-  console.log('STUDENTS CURRENTLY ENROLLMENT' + '\t' + studentsActive.length);
+  var studentsCurrent = studentsActive.length + '\n' + 'STUDENTS CURRENTLY ENROLLMENT' ;
   console.log('STUDENTS DROPOUT' + '\t' + studentsDeserte.length);
-  console.log('PERCENTAGE OF DESERTION' + '\t' + porcentajeDesercion + '%');
+  var desercion = Math.round(porcentajeDesercion) + '%' + '\t' + 'PERCENTAGE OF DESERTION' ;
+
+  var studentsCurrentEnrollment = document.getElementById('studentsCurrent');
+  studentsCurrentEnrollment.textContent = studentsCurrent;
+
+  var dropout = document.getElementById('dropout');
+  dropout.textContent = desercion;
 }
 
 console.log(desercion('LIM', '2017-2'));
@@ -106,17 +111,27 @@ function logroMetasTech(sede, generacion, sprint) {
   var students = data[sede][generacion]['students'];
   var studentsOverTarget = [];
   var studentsDownTarget = [];
+  var puntajesTech = [];
+  var totalPuntajeTech = 0;
+  var promedioNotaTech = 0;
 
   for (var i = 0; i < students.length; i++) {
-    for (var j = 0; j < students[i].sprints.length; j++) {
-      if (students[i].sprints[j].score['tech'] >= 1260) {
-        studentsOverTarget.push(students[i].sprints[j]);
-      } else {
-        studentsDownTarget.push(students[i].sprints[j]);
-      }
+    if (students[i].sprints[sprint].score['tech'] >= 1260) {
+      studentsOverTarget.push(students[i].sprints[sprint].score['tech']);
+    } else {
+      studentsDownTarget.push(students[i].sprints[sprint].score['tech']);
     }
   }
+
+  for (var i = 0; i < students.length; i++) {
+    puntajesTech.push(students[i].sprints[sprint].score['tech']);
+    totalPuntajeTech = totalPuntajeTech + puntajesTech[i];
+  }
   
+  promedioNotaTech = totalPuntajeTech / students.length;
+  
+  console.log(promedioNotaTech);
+
   var porcentajeLogroMetasTech = (studentsOverTarget.length * 100) / (studentsOverTarget.length + studentsDownTarget.length);
   console.log('pasaron la meta Tech: ' + '\t' + studentsOverTarget.length);
   console.log('no llegaron a la meta Tech: ' + '\t' + studentsDownTarget.length);
@@ -124,7 +139,7 @@ function logroMetasTech(sede, generacion, sprint) {
   console.log('% del total' + '\t' + (studentsOverTarget.length + studentsDownTarget.length));
 }
 
-console.log(logroMetasTech('LIM', '2017-1', 1));
+console.log(logroMetasTech('AQP', '2016-2', '1'));
 
 /* LIFE  SKILLS */ 
 
@@ -132,32 +147,26 @@ function logroMetasLife(sede, generacion, sprint) {
   var students = data[sede][generacion]['students'];
   var studentsOverTarget = [];
   var studentsDownTarget = [];
-  // var puntajesHse = [];
-  // var totalPuntajeHse = 0;
+  var puntajesHse = [];
+  var totalPuntajeHse = 0;
+  var promedioNotaHse = 0;
 
   for (var i = 0; i < students.length; i++) {
     if (students[i].sprints[sprint].score['hse'] >= 840) {
-      studentsOverTarget.push(students[i].sprints[sprint]);
+      studentsOverTarget.push(students[i].sprints[sprint].score['hse']);
     } else {
-      studentsDownTarget.push(students[i].sprints[sprint]);
+      studentsDownTarget.push(students[i].sprints[sprint].score['hse']);
     }
-    /* for (var j = 0; j < students[i].sprints.length; j++) {
-      if (students[i].sprints[j].score['hse'] >= 840) {
-        studentsOverTarget.push(students[i].sprints[j]);
-      } else {
-        studentsDownTarget.push(students[i].sprints[j]);
-      }
-    }*/
   }
 
-  /*
   for (var i = 0; i < students.length; i++) {
-    puntajesHse.push(students[i].sprints[j]['score']['hse']);
-    //totalPuntajeHse = totalPuntajeHse + puntajesHse[i];
+    puntajesHse.push(students[i].sprints[sprint].score['hse']);
+    totalPuntajeHse = totalPuntajeHse + puntajesHse[i];
   }
-
-  console.log(puntajesHse);
-  console.log(totalPuntajeHse);*/
+  
+  promedioNotaHse = totalPuntajeHse / students.length;
+  
+  console.log(promedioNotaHse);
 
   var porcentajeLogroMetasLife = (studentsOverTarget.length * 100) / (studentsOverTarget.length + studentsDownTarget.length);
   console.log('pasaron la meta hse: ' + '\t' + studentsOverTarget.length);
@@ -166,7 +175,7 @@ function logroMetasLife(sede, generacion, sprint) {
   console.log('% del total' + '\t' + (studentsOverTarget.length + studentsDownTarget.length));
 }
 
-console.log(logroMetasLife('LIM', '2017-1', 1));
+console.log(logroMetasLife('AQP', '2016-2', '1'));
 
 /* STUDENT SATISFACTION */ 
 function satisfaccionEstudiantes(sede, generacion) {
