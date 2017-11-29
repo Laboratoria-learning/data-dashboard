@@ -76,7 +76,7 @@ window.addEventListener('load', function() {
   var percentTotal = document.createElement('h2');
   percentTotal.innerText = totalAchivement('LIM', '2016-2');
   var textTotal = document.createElement('span');
-  textTotal.innerText = '% of total( )'//allStudents('LIM', '2016-2');
+  textTotal.innerText = '% of total( )'// allStudents('LIM', '2016-2');
   // agregando al achievement 
   general.appendChild(achievement);
   achievement.appendChild(titleAchi);
@@ -97,8 +97,15 @@ window.addEventListener('load', function() {
   var titleProSco = document.createElement('h1');
   titleProSco.innerText = 'NET PROMOTER SCORE';
   var nps = document.createElement('h1');
+  nps.innerText = npsCumulative('LIM', '2016-2');
   var textNps = document.createElement('span');
   textNps.innerText = '% CUMULATIVE NPS';
+  var promoter = document.createElement('p');
+  promoter.innerText = 'promoterpercent';
+  var passive = document.createElement('p');
+  passive.innerText = 'passivepercent';
+  var detractors = document.createElement('p');
+  detractors.innerText = 'detractorpercent';
   // agregando promoter
   general.appendChild(promoterScore);
   promoterScore.appendChild(promoterOne);
@@ -106,6 +113,13 @@ window.addEventListener('load', function() {
   promoterScore.appendChild(titleProSco);
   promoterOne.appendChild(nps);
   promoterOne.appendChild(textNps);
+  promoterTwo.appendChild(promoter);
+  promoterTwo.appendChild(passive);
+  promoterTwo.appendChild(detractors);
+  // agregando estilos al nps
+  promoterScore.setAttribute('class', 'promoterClass');
+  promoterOne.setAttribute('class', 'pOneClass');
+  promoterTwo.setAttribute('class', 'pTwoClass');
   // solo todos los alumnos completos
   
   // funcion para sacar la cantidad actual activos de estudiantes por sede
@@ -171,6 +185,7 @@ window.addEventListener('load', function() {
       } 
     } return complete;
   }
+  // para el achivement total.
   function totalAchivement(sede, gene) {
     var promSprintTotal = promSprint(sede, gene);
     var totalStudents = currentStudents(sede, gene);
@@ -180,7 +195,27 @@ window.addEventListener('load', function() {
 
     var percentAchievement = (promSprintTotal / totalStudents) * 100;
     return percentAchievement;
-  };
+  }
+  // funcion para el porcentaje del nps.
+  function npsCumulative(sede, gene) {
+    var sede = data[sede];
+    var generation = sede[gene];
+    var ratigns = generation.ratings;
+    var numRatigns = ratigns.length;
+    var arrayRatigns = [];
+    for (var i = 0; i < numRatigns; i++) {
+      // nps segun la formula dadaa
+      // nps = promoters - detractors 
+      var nps = ratigns[i].nps.promoters - ratigns[i].nps.detractors;
+      // agrega al array
+      arrayRatigns.push(nps);
+    }
+    var complete = 0;
+    for (var p = 0; p < arrayRatigns.length; p++) {
+      complete += arrayRatigns[p];
+    } var npsPercent = complete / numRatigns;
+    return npsPercent;
+  }
 });
 // Puedes hacer uso de la base de datos a través de la variable `data`
 console.log(data);
