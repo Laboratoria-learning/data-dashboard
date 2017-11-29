@@ -26,10 +26,19 @@ console.log(data);
 // countActive('AQP', '2016-2', 'students');
 
 //función que cuenta alumnas en total, activas, retiradas y proporciona porcentaje de retiradas.
-function countActive(sede, generacion, estudiantes) {
+
+// var sede = document.getElementById('sede');
+
+// sede.addEventListener('click', showGeneration);
+
+// function showGeneration(){
+//     console.log('dsds');
+// }
+
+function countActive(sede, generation, students) {
   var countActive = 0;
   var countInActive = 0;
-  var sedeLab = data[sede][generacion][estudiantes];
+  var sedeLab = data[sede][generation][students];
   for (var i = 0; i < sedeLab.length; i++) {
     if (sedeLab[i].active) {
       countActive = countActive + 1;

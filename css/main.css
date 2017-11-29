@@ -1,15 +1,21 @@
+*{
+  font-family: 'Roboto', sans-serif;
+}
 body{
   margin: 0;
   padding: 0;
 }
+
 header{
 display: flex;
 margin-left: 42%;
 margin-top: 1%;
 }
+
 header i {
   color: #383838;
 }
+
 header img{
   width: 200px;
   height: 70px;
@@ -36,6 +42,7 @@ header img{
   text-transform: uppercase;
   padding-top: 5px;
 }
+
 div ul li{
   display: inline-block;
   margin-left: 20px;
@@ -68,15 +75,16 @@ li{
 select{
   background-color: #ffc107;
   width: 160px;
-  height: 40px;
+  height: 50px;
   border-radius: 10px;
   padding: 5px;
-  margin-left: 50px;
+  margin-left: 100px;
   position: relative;
-  top: 5px;
-  left: 400px;
+  top: 40px;
   outline: none;
+  font-size: 20px;
 }
+
 .habilidad_tecnológica{
   /* width:1170px; */
   height:563px;
@@ -89,7 +97,6 @@ select{
   height:563px;
   margin: 0 96px 44px 96px;
   background-color: #ffffff;
-
 }
 
 .información{
@@ -110,6 +117,6 @@ h2{
   padding-top: 2%;
 }
 
-. small-box .super-small{
+.small-box .super-small{
   background-color: #f7f7f7;
 }

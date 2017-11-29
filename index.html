@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <!-- <link rel="icon" type="image/png" href="link"> --> <!--para agregar icono -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <header>
@@ -15,30 +16,32 @@
     <!-- Base de datos -->
     <section class="principal">
       <select>
-        <option value="sede">Sede</option>
-        <option value="AQP">AQP</option>
-        <option value="CDMX">CDMX</option>
-        <option value="LIM">LIMA</option>
-        <option value="SCL">SCL</option>
+        <option class="sede" value="AQP">AREQUIPA</option>
+        <option class="promo" value="2016-2">2016-2</option>
+        <option class="promo" value="2017-1">2017-1</option>
       </select>
       <select>
-        <option value="generacion">Generación</option>
-        <option value="2016-2">2016-2</option>
-        <option value="2017-1">2017-1</option>
-        <option value="2017-2">2017-2</option>
+        <option class="sede" value="CDMX">MÉXICO</option>
+        <option class="promo" value="2017-1">2017-1</option>
+        <option class="promo" value="2017-2">2017-2</option>
       </select>
-      <div>
-        <ul>
-          <li>Overview</li>
-          <li>Students</li>
-          <li>Teachers</li>
-        </ul>
-      </div>
+      <select>
+        <option class="sede" value="LIM">LIMA</option>
+        <option class="promo" value="2016-2">2016-2</option>
+        <option class="promo" value="2017-1">2017-1</option>
+        <option class="promo" value="2017-2">2017-2</option>
+      </select>
+      <select>
+        <option class="sede" value="SCL">CHILE</option>
+        <option class="promo" value="2016-2">2016-2</option>
+        <option class="promo" value="2017-1">2017-1</option>
+        <option class="promo" value="2017-2">2017-2</option>
+      </select>
     </section>
     
     <section class="información">
       <section class="secciones_sup_e_inf">
-        <div class="small-box">
+        <div class="small-box" id="enrollment">
           <h2>Enrollment</h2>
             <div class="super-small"></div>
             <div class="super-small"></div>
