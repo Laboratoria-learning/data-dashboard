@@ -7,12 +7,12 @@
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Task', 'Hours per Day'],
-          ['Alumnas activas',     activeAqp],
-          ['Alumnas inactivas',     inactiveAqp],
+          ['Work',     activeAqp],
+          ['Eat',      inactiveAqp],
         ]);
 
         var options = {
-          title: 'ALUMNAS - AREQUIPA',
+          title: 'My Daily Activities',
           is3D: true,
         };
 
@@ -23,9 +23,8 @@
   </head>
   <body>
     <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+    <script src="./js/data.js"></script>
+		<!-- Aquí va tus archivos JS -->
+    <script src="./js/app.js"></script>
   </body>
-  <!-- Base de datos -->
-  <script src="./js/data.js"></script>
-  <!-- Aquí va tus archivos JS -->
-  <script src="./js/app.js"></script>
 </html>
