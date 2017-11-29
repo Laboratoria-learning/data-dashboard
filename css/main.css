@@ -42,9 +42,10 @@ body {
 .icon-bars:hover {
   cursor: pointer;
 }
-.list {
+
+/*.list {
   padding: 20px;
-}
+}*/
 
 .hide {
   display: none;
@@ -53,16 +54,28 @@ body {
 .show {
   float: right;
   display: block;
-  background-color: #f8c341;
+  background-color: #FDE6BF;
+  /*background-color: #1E2327;*/
   width: 320px;
-  height: 356px;
+  height: auto;
   position: absolute;
   line-height: 76px;
   list-style: none;
   right: 20px;
   /* float: right; */
-  bottom: 176px;
+  bottom: 157px;
   z-index: 999;
+}
+
+.show li {
+  padding: 15px;
+  padding-right: 77px
+}
+
+.show li:hover {
+  /*background-color: pink;*/
+  background-color: #f8c341;
+  cursor: pointer;
 }
 
 .name {
