@@ -37,32 +37,33 @@
           </ul>
         </nav>
       </div>
+      <section class="selections">
+        <select class="sedes">
+          <option value="">Selecciona una sede</option>
+          <option value="AQP">Arequipa</option>
+          <option value="CDMX">Ciudad de México</option>
+          <option value="LIM">Lima</option>
+          <option value="SCL">Santiago de Chile</option>
+        </select>
+        <select class="generations">
+          <option id="text-select" value="">Generación</option>
+        </select>
+        <div class="label">
+          <ul>
+            <li>
+              <button type="button" name="button" data-tab-select = 'tabOverview' class="tab">Visión General</button>
+            </li>
+            <li>
+              <button type="button" name="button" data-tab-select = 'tabStudents' class="tab">Estudiantes</button>
+            </li>
+            <li>
+              <button type="button" name="button" data-tab-select = 'tabTeachers' class="tab">Profesores</button>
+            </li>
+          </ul>
+        </div>
+      </section>
     </header>
-    <section class="selections">
-      <select class="sedes">
-        <option value="">Selecciona una sede</option>
-        <option value="AQP">Arequipa</option>
-        <option value="CDMX">Ciudad de México</option>
-        <option value="LIM">Lima</option>
-        <option value="SCL">Santiago de Chile</option>
-      </select>
-      <select class="generations">
-        <option id="text-select" value="">Generación</option>
-      </select>
-      <div class="label">
-        <ul>
-          <li>
-            <button type="button" name="button" data-tab-select = 'tabOverview' class="tab">Visión General</button>
-          </li>
-          <li>
-            <button type="button" name="button" data-tab-select = 'tabStudents' class="tab">Estudiantes</button>
-          </li>
-          <li>
-            <button type="button" name="button" data-tab-select = 'tabTeachers' class="tab">Profesores</button>
-          </li>
-        </ul>
-      </div>
-    </section>
+
     <!-- Estructura de Visión General-->
     <article id="overview">
       <!-- Estructura de la primera sección o fila-->
@@ -194,7 +195,40 @@
       </section>
     </article>
     <article id="students"></article>
-    <article id="teachers"></article>
+    <article id="teachers">
+      <div class="box-t">
+        <figure><img src="assets/images/ruth.jpg" alt="photo"></figure>
+        <a href="https://github.com/RuthSalvador" target="_blank">@RuthSalvador</a>
+      </div>
+      <div class="box-t">
+        <figure><img src="assets/images/gaby.jpg" alt="photo"></figure>
+        <a href="https://github.com/Gabx04">@Gabx04</a>
+      </div>
+      <div class="box-t">
+        <figure><img src="assets/images/joalbert.jpg" alt="photo"></figure>
+        <a href="https://github.com/joalbertg">@joalbertg</a>
+      </div>
+      <div class="box-t">
+        <figure><img src="assets/images/lulu.jpg" alt="photo"></figure>
+        <a href="https://github.com/developerVilchez">@developerVilchez</a>
+      </div>
+      <div class="box-t">
+        <figure><img src="assets/images/michelle.jpg" alt="photo"></figure>
+        <a href="https://github.com/michellesegv">@michellesegV</a>
+      </div>
+      <div class="box-t">
+        <figure><img src="assets/images/usuario.png" alt="photo"></figure>
+        <a href="#" target="_blank">Alejandra</a>
+      </div>
+      <div class="box-t">
+        <figure><img src="assets/images/mari.png" alt="photo"></figure>
+        <a href="#" target="_blank">Mariana</a>
+      </div>
+      <div class="box-t">
+        <figure><img src="assets/images/laura.png" alt="photo"></figure>
+        <a href="#" target="_blank">Laura</a>
+      </div>
+    </article>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
