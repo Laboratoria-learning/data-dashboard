@@ -1,10 +1,65 @@
 window.addEventListener('load', function() {
-// Container de resultados en HTML
+  // Container de resultados en HTML
   var boxResult = document.getElementById('result');
-  var sede = 'LIM';
-  var generation = '2016-2';
+  // Arequipa
+  var dataA2017I = document.getElementById('dataA_2017I');
+  var dataA2016II = document.getElementById('dataA_2016II');
+  // México
+  var dataM2017I = document.getElementById('dataM_2017I');
+  var dataM2017II = document.getElementById('dataM_2017II');
+  // Lima
+  var dataL2017I = document.getElementById('dataL_2017I');
+  var dataL2017II = document.getElementById('dataL_2017II');
+  var dataL2016II = document.getElementById('dataL_2016II');
+  // Chile
+  var dataC2017I = document.getElementById('dataC_2017I');
+  var dataC2017II = document.getElementById('dataC_2017II');
+  var dataC2016II = document.getElementById('dataC_2016II');
+
+  dataA2017I.addEventListener('click', function() {
+    clear();
+    resultSede('AQP', '2017-1');
+  });
+  dataA2016II.addEventListener('click', function() {
+    clear();
+    resultSede('AQP', '2016-2');
+  });
+  dataM2017I.addEventListener('click', function() {
+    clear();
+    resultSede('CDMX', '2017-1');
+  });
+  dataM2017II.addEventListener('click', function() {
+    clear();
+    resultSede('CDMX', '2017-2');
+  });
+  dataL2017I.addEventListener('click', function() {
+    clear();
+    resultSede('LIM', '2017-1');
+  });
+  dataL2017II.addEventListener('click', function() {
+    clear();
+    resultSede('LIM', '2017-2');
+  });
+  dataL2016II.addEventListener('click', function() {
+    clear();
+    resultSede('LIM', '2016-2');
+  });
+  dataC2017I.addEventListener('click', function() {
+    clear();
+    resultSede('SCL', '2017-1');
+  });
+  dataC2017II.addEventListener('click', function() {
+    clear();
+    resultSede('SCL', '2017-2');
+  });
+  dataC2016II.addEventListener('click', function() {
+    clear();
+    resultSede('SCL', '2016-2');
+  });
+ 
+  
   // Consulta Sede
-  function resultSede() {
+  function resultSede(sede, generation) {
     // creando contenedores de información General
     var consultSede = document.createElement('div');
     var boxInfoGeneral = document.createElement('div');
@@ -258,6 +313,38 @@ window.addEventListener('load', function() {
     boxPercentageNps.classList.add('inline-block');
     boxPercentageNpsTypes.classList.add('inline-block');
     boxRating.classList.add('box-float');
+    boxNumberStudentHse.classList.add('inline-block');
+    boxNumberStudentTech.classList.add('inline-block');
+    boxPercentageStudentHse.classList.add('inline-block');
+    boxPercentageStudentTech.classList.add('inline-block');
+    boxPercentageJedi.classList.add('inline-block');
+    boxPercentageTeacher.classList.add('inline-block');
+    boxPercentageStudentSat.classList.add('inline-block');
+    numberStudentTotal.classList.add('style-number');
+    percentageDropout.classList.add('style-number');
+    numberStudentTotal.classList.add('style-number');
+    numberStudentUp.classList.add('style-number');
+    numberTech.classList.add('style-number');
+    numberHse.classList.add('style-number');
+    percentageHse.classList.add('style-number');
+    percentageTech.classList.add('style-number');
+    percentageJedi.classList.add('style-number');
+    percentageNps.classList.add('style-number');
+    percentageStudentUp.classList.add('style-number');
+    percentageTeacher.classList.add('style-number');
+    percentSatisfaction.classList.add('style-number');
+    descriptionNumber.classList.add('style-description');
+    descriptionDropout.classList.add('style-description');
+    descriptionHse.classList.add('style-description');
+    descriptionTech.classList.add('style-description');
+    descriptionNumberHse.classList.add('style-description');
+    descriptionNumberTech.classList.add('style-description');
+    descriptionPercentageStudent.classList.add('style-description');
+    descriptionStudentUp.classList.add('style-description');
+    descriptionNps.classList.add('style-description');
+    descriptionSatisfaction.classList.add('style-description');
+    descriptionJedi.classList.add('style-description');
+    descriptionTeacher.classList.add('style-description');
 
     studentsInfo.classList.add('box-students');
     
@@ -275,23 +362,23 @@ window.addEventListener('load', function() {
     // insertando información en Enrollment
     titleEnrollment.textContent = 'Enrollment';
     numberStudentTotal.textContent = totalStudentActive(sede, generation);
-    percentageDropout.textContent = dropout(sede, generation) + '%';
+    percentageDropout.textContent = (dropout(sede, generation)).toFixed(1) + '%';
     descriptionNumber.textContent = '# Students Currently Enrolled';
     descriptionDropout.textContent = '% Dropout' ; 
     // insertando información en Achievement
     titleAchievement.textContent = 'Achievement';
     numberStudentUp.textContent = studentAchievement(sede, generation);
     descriptionStudentUp.textContent = '# Students that meet the target';
-    percentageStudentUp.textContent = (studentAchievement(sede, generation) / totalStudentActive(sede, generation)) * 100 ;
+    percentageStudentUp.textContent = ((studentAchievement(sede, generation) / totalStudentActive(sede, generation)) * 100).toFixed(1) ;
     descriptionPercentageStudent.textContent = '% of Total';
 
     // insertando información en NPS
     titleNps.textContent = 'Net Promoter Score';
-    percentageNps.textContent = npsAverage(sede, generation) + '%';
+    percentageNps.textContent = (npsAverage(sede, generation)).toFixed(1) + '%';
     descriptionNps.textContent = '% Acumulative NPS';
-    percentageNpsPromoter.textContent = promoterNps(sede, generation) + '%' + ' Promoter';
-    percentageNpsPassive.textContent = passiveNps(sede, generation) + '%' + ' Passive';
-    percentageNpsDetractors.textContent = detractorNps(sede, generation) + '%' + ' Detractors';
+    percentageNpsPromoter.textContent = (promoterNps(sede, generation)).toFixed(1) + '%' + ' Promoter';
+    percentageNpsPassive.textContent = (passiveNps(sede, generation)).toFixed(1) + '%' + ' Passive';
+    percentageNpsDetractors.textContent = (detractorNps(sede, generation)).toFixed(1) + '%' + ' Detractors';
 
     // insertando información en TECH
     titleStudentTech.textContent = 'Tech Skills';
@@ -310,25 +397,25 @@ window.addEventListener('load', function() {
       if (selectTech.value === 'sprint1') {
         numberTech.textContent = studentsTech(sede, generation)[0];
         descriptionNumberTech.textContent = '# student That meet the target ';
-        percentageTech.textContent = (studentsTech(sede, generation)[0] / totalStudentActive(sede, generation)) * 100 ;
+        percentageTech.textContent = ((studentsTech(sede, generation)[0] / totalStudentActive(sede, generation)) * 100).toFixed(1) ;
         descriptionTech.textContent = '% of total';
       }
       if (selectTech.value === 'sprint2') {
         numberTech.textContent = studentsTech(sede, generation)[1];
         descriptionNumberTech.textContent = '# student That meet the target ';
-        percentageTech.textContent = (studentsTech(sede, generation)[1] / totalStudentActive(sede, generation)) * 100 ;
+        percentageTech.textContent = ((studentsTech(sede, generation)[1] / totalStudentActive(sede, generation)) * 100).toFixed(1) ;
         descriptionTech.textContent = '% of total';
       }
       if (selectTech.value === 'sprint3') {
         numberTech.textContent = studentsTech(sede, generation)[2];
         descriptionNumberTech.textContent = '# student That meet the target ';
-        percentageTech.textContent = (studentsTech(sede, generation)[2] / totalStudentActive(sede, generation)) * 100 ;
+        percentageTech.textContent = ((studentsTech(sede, generation)[2] / totalStudentActive(sede, generation)) * 100).toFixed(1) ;
         descriptionTech.textContent = '% of total';
       }
       if (selectTech.value === 'sprint4') {
         numberTech.textContent = studentsTech(sede, generation)[3];
         descriptionNumberTech.textContent = '# student That meet the target ';
-        percentageTech.textContent = (studentsTech(sede, generation)[3] / totalStudentActive(sede, generation)) * 100 ;
+        percentageTech.textContent = ((studentsTech(sede, generation)[3] / totalStudentActive(sede, generation)) * 100).toFixed(1) ;
         descriptionTech.textContent = '% of total';
       }
     });
@@ -389,19 +476,19 @@ window.addEventListener('load', function() {
     selectSatisfaction.addEventListener('change', function() {
       if (selectSatisfaction.value === 'sprint1') {
         percentSatisfaction.textContent = studentSatisfaction(sede, generation)[0];
-        descriptionSatisfaction.textContent = '% Meeting or exceeding expectations(Cumulative)';
+        descriptionSatisfaction.textContent = '% Meeting or exceeding ';
       }
       if (selectSatisfaction.value === 'sprint2') {
         percentSatisfaction.textContent = studentSatisfaction(sede, generation)[1];
-        descriptionSatisfaction.textContent = '% Meeting or exceeding expectations(Cumulative)';
+        descriptionSatisfaction.textContent = '% Meeting or exceeding ';
       }
       if (selectSatisfaction.value === 'sprint3') {
         percentSatisfaction.textContent = studentSatisfaction(sede, generation)[2];
-        descriptionSatisfaction.textContent = '% Meeting or exceeding expectations(Cumulative)';
+        descriptionSatisfaction.textContent = '% Meeting or exceeding ';
       }
       if (selectSatisfaction.value === 'sprint4') {
         percentSatisfaction.textContent = studentSatisfaction(sede, generation)[3];
-        descriptionSatisfaction.textContent = '% Meeting or exceeding expectations(Cumulative)';
+        descriptionSatisfaction.textContent = '% Meeting or exceeding ';
       }
     });
     
@@ -732,9 +819,12 @@ window.addEventListener('load', function() {
     return arrayHseTotal;
   }
 
+  function clear() {
+    boxResult.textContent = '';
+  }
+
   // agregar info Students
 
     
   // ejecución de función
-  resultSede();
 });

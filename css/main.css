@@ -9,9 +9,9 @@
 
 
 .box-info {
-    outline: 1px solid red;
+    background-color: white;
     text-align: center;
-    width: 300px;
+    width: 30%;
     height: 300px;
     display: inline-block;
     margin: 10px;
@@ -19,25 +19,50 @@
 }
 
 .box-rating  {
-    outline: 1px solid red;
+    background-color: white;
     text-align: center;
-    width: 300px;
+    width: 30%;
     height: 300px;
-    float: left;
+    display: inline-block;
     margin: 10px;
 }
 
+select {
+    display: block;
+    outline: 1px solid red;
+    margin: 10px auto;
+}
 .inline-block {
-    display: inline-block;
-    outline: 1px solid blue;
-    width: 50%;
+    float: left;
+    background-color: #F7F7F7;
+    width: 43%;
+    height: 75px;
+    margin: 5px;
+    position: relative;
+    left: 9px;
 }
 .box-courses{
     display: block;
-    outline: 1px solid blue;
-     width: 80%;
-     margin: 10px;
+    background-color: white;
+     width: 95%;
+     height: 300px;
+     margin: 0 0 10px 22px;
      text-align: center;
+}
+
+.style-number {
+    margin: 7px;
+    font-family: 'Russo One', sans-serif;
+    font-size: 25px;
+}
+
+
+
+.style-description{
+    font-family: 'Cairo', sans-serif;
+    font-size: 12px;
+    line-height: 1;
+    margin: 5px;
 }
 .title {
     margin:20px;
@@ -103,15 +128,15 @@ header{
       display: inline-block;
       float: left;
       margin-left: 2%;
-      height: 1000px;
+      height: auto;
       background: #333;
             }
  #result{
      background: #C0BEBE;
      padding: 100px ;
      display: inline-block;
-     width: 60% ;
-     height: 1000px;
+     width: 78% ;
+     height: auto;
      float: left;
  }
 
@@ -253,7 +278,7 @@ header{
    }
    ul.acorh ul.children ul.children2 li:hover ul {
    max-height: 300px;
-   transition: .3s all ease-in;
+   transition: .9s all ease-in;
    }
    ul.acorh ul.children ul.children2 li a:hover {
    background: #666;
