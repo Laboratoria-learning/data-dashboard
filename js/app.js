@@ -25,7 +25,10 @@ sumEstudentsCDMX = 0;
 for (var i = 0; i < studentsSeatCDMX.length; i++) {
   sumEstudentsCDMX = sumEstudentsCDMX + studentsSeatCDMX[i];
 };
+
 console.log('total estududiantes CDMX : ' + sumEstudentsCDMX);
+
+
 // sede LIM
 var studentsSeatLIM = [numEstudentsLIM20162, numEstudentsLIM20171, numEstudentsLIM20172];
 sumEstudentsLIM = 0;
