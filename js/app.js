@@ -1,38 +1,20 @@
-/*
- * Funcionalidad de tu producto
- */
-
-// Puedes hacer uso de la base de datos a través de la variable `data`
-// console.log(data.LIM);
-  
 // agregar el evento load
 window.addEventListener('load', function() {
   var lima = data.LIM;
-  console.log(lima);
+  // console.log(lima);
   var arequipa = data.AQP;
-  console.log(arequipa);
+  // console.log(arequipa);
   var santiagoChile = data.SCL;
-  console.log(santiagoChile);
+  // console.log(santiagoChile);
   var cMexico = data.CDMX;
-  console.log(cMexico);
-
+  // console.log(cMexico);
   var selection = document.getElementById('selection');
-  console.log(selection);
+  // console.log(selection);
   var contenidoSede = document.getElementById('contenido-sede');
-  console.log(contenidoSede);
-  // seleccionar los tabs
+  // console.log(contenidoSede);
   var tabs = document.getElementsByClassName('tab');
   var contents = document.getElementsByClassName('content');
-
-
-  // function mostrarInfo(sede) {
-  //   contenidoSede.textContent = '';
-  //   if (sede === 'lima') {
-  //     lima.forEach(function() {
-  //       var 
-  //     });
-  //   }
-  // }
+  var filtrosSede = document.getElementById('filtros-sede');
 
   // agregar el evento click a todos los tabs
   for (var i = 0; i < tabs.length; i++) {

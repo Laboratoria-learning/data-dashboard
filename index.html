@@ -1,98 +1,112 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Dashboard</title>
-    <link rel="stylesheet" href="css/main.css">
-  </head>
-  <body>
-    <header>
-      <figure class="logo"><img src="assets/images/logo-laboratoria.svg" alt=""></figure>
-    </header>
-      <!-- Seleccionar sede -->
-      <select name="" id="selection">
-        <option value="lima">Lima</option>
-        <option value="arequipa">Arequipa</option>
-        <option value="mexico">Ciudad de Mexico</option>
-        <option value="chile">Santiago de Chile</option>
-      </select>
-    
-    <section id="contenido-sede">
-      <div class="container">
-        <div class="box-tabs">
-          <div class="tab" data-content="0">Overview</div>
-          <div class="tab" data-content="1">Students</div>
-          <div class="tab" data-content="2">Teacher</div>
-        </div>
-          <div class="box-contents">
-              <div class="container">
-                <div class="content">
-                  <div class="row">
-                    <div class="col">
-                      <div class="box">
-                        <h1>Inscritas</h1>
-                        <div class="cajita number">#</div>
-                        <div class="cajita porcentaje">%</div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="box">
-                        <h1>Logrado</h1>
-                        <div class="cajita number">#</div>
-                        <div class="cajita porcentaje">%</div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="box">
-                        <h1>Net Promoter Score</h1>
-                        <div class="cajita number">#</div>
-                        <div class="cajita porcentaje">%</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class=" section tech">
-                    <h1>Tech</h1>
-                    <div class="cajita">#</div>
-                    <div class="cajita">%</div>
-                  </div>
-                  <div class="section hse">
-                    <h1>Hse</h1>
-                    <div class="cajita">#</div>
-                    <div class="cajita">%</div>
-                  </div>
-                  <div class="row">
-                    <div class="col">
-                      <div class="box">
-                        <h1>Superan las metas</h1>
-                        <div class="cajita number">#</div>
-                        <div class="cajita porcentaje">%</div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="box">
-                        <h1>Calificación del teacher</h1>
-                        <div class="cajita number">#</div>
-                        <div class="cajita porcentaje">%</div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="box">
-                        <h1>Calificación jedi master</h1>
-                        <div class="cajita number">#</div>
-                        <div class="cajita porcentaje">%</div>
-                      </div>
-                    </div>
-                  </div>
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Dashboard</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <header>
+    <figure class="logo">
+      <img src="assets/images/logo-laboratoria.svg" alt="">
+    </figure>
+  </header>
+  <!-- Seleccionar sede -->
+  <select name="" id="selection" value="arequipa">
+
+    <option value="lima-2016-2">Lima 2016 - II</option>
+    <option value="lima-2017-1">Lima 2017 - I</option>
+    <option value="lima-2017-2">Lima 2017 - II</option>
+
+    <option value="arequipa-2016-2">Arequipa 2016-II</option>
+    <option value="arequipa-2017-1">Arequipa 2017-I</option>
+
+    <option value="mexico-2017-1">Ciudad de Mexico 2017-I</option>
+    <option value="mexico-2017-2">Ciudad de Mexico 2017-II</option>
+
+    <option value="chile-2016-2">Santiago de Chile 2016-II</option>
+    <option value="chile-2017-1">Santiago de Chile 2017-I</option>
+    <option value="chile-2017-2">Santiago de Chile 2017-II</option>
+  </select>
+
+  <section id="contenido-sede">
+    <div class="container">
+      <div class="box-tabs">
+        <div class="tab" data-content="0">Overview</div>
+        <div class="tab" data-content="1">Students</div>
+        <div class="tab" data-content="2">Teacher</div>
+      </div>
+      <div class="box-contents">
+        <div class="container">
+          <div class="content">
+            <div class="row">
+              <div class="col">
+                <div class="box">
+                  <h1>Inscritas</h1>
+                  <div id="" class="cajita number">#</div>
+                  <div class="cajita porcentaje">%</div>
                 </div>
+              </div>
+              <div class="col">
+                <div class="box">
+                  <h1>Logrado</h1>
+                  <div class="cajita number">#</div>
+                  <div class="cajita porcentaje">%</div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="box">
+                  <h1>Net Promoter Score</h1>
+                  <div class="cajita number">#</div>
+                  <div class="cajita porcentaje">%</div>
+                </div>
+              </div>
             </div>
-            <div class="content">Contenido 2</div>
-            <div class="content">Contenido 3</div>
+            <div class=" section tech">
+              <h1>Tech</h1>
+              <div class="cajita">#</div>
+              <div class="cajita">%</div>
+            </div>
+            <div class="section hse">
+              <h1>Hse</h1>
+              <div class="cajita">#</div>
+              <div class="cajita">%</div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="box">
+                  <h1>Superan las metas</h1>
+                  <div class="cajita number">#</div>
+                  <div class="cajita porcentaje">%</div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="box">
+                  <h1>Calificación del teacher</h1>
+                  <div class="cajita number">#</div>
+                  <div class="cajita porcentaje">%</div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="box">
+                  <h1>Calificación jedi master</h1>
+                  <div class="cajita number">#</div>
+                  <div class="cajita porcentaje">%</div>
+                </div>
+              </div>
+            </div>
           </div>
-      </div> 
-    </section>
-    <!-- Filtros -->
-    <!-- <div class="filtros-sede">
-      <h2>Lima</h2>
+        </div>
+        <div class="content">Contenido 2</div>
+        <div class="content">Contenido 3</div>
+      </div>
+    </div>
+  </section>
+  <!-- Filtros -->
+  <div id="filtros-sede" class="filtros-sede">
+    <!-- <h2>Lima</h2>
       <ul>
         <li>2015-I</li>
         <li>2015-II</li>
@@ -127,11 +141,12 @@
         <li>2016-II</li>
         <li>2017-I</li>
         <li>2017-II</li>
-      </ul>
-    </div> -->
-		<!-- Base de datos -->
-		<script src="./js/data.js"></script>
-		<!-- Aquí va tus archivos JS -->
-    <script src="./js/app.js"></script>
-  </body>
+      </ul> -->
+  </div>
+  <!-- Base de datos -->
+  <script src="./js/data.js"></script>
+  <!-- Aquí va tus archivos JS -->
+  <script src="./js/app.js"></script>
+</body>
+
 </html>

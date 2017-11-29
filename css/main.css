@@ -78,26 +78,27 @@ h2 {
   width: 200px;
 }
 
-
 .box-tabs {
   overflow: auto;
 }
 
 .tab {
-  background-color: blue;
   float: left;
+  cursor: pointer;
   margin-left: 5px;
   height: 48px;
   width: 100px;
 }
 
 .tab.active {
-  background-color: #fff;
+  border-bottom: 4px solid #f7b617;
+  /* background-color: #fff; */
 }
 
 .content {
   display: none;
 }
+
 .content.active {
   display: block;
 }
