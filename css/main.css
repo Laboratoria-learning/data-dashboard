@@ -98,9 +98,29 @@ section .principal{
 }
 .container .title-overview{
     background-color: white;
-    display: inline-block;
+    /* display: inline-block;*/
     padding-bottom: 10px;
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
+}
+.data-overview{
+    background-color: white;
+    border: 2px solid red;
+    display: inline-block;
+}
+.description{
+    background-color: #e1e1e1;
+    display: block;
+    width:50%;  
+    font-size:  10px;
+    text-align: center;
+
+}
+.data-style {
+    font-weight: bold;
+    font-size: 24px;
+}
+.display-inline-block{
+    display: inline-block;
 }
