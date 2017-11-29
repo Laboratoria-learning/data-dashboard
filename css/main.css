@@ -58,5 +58,23 @@ header {
 }
 
 .name-student input {
-    
+    width: 70%;
+    background: -webkit-linear-gradient(left, rgba(30,82,72,1) 0%, rgba(90,131,127,1) 32%, rgba(159,187,191,1) 69%, rgba(213,231,241,1) 98%);
+    padding: 8px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.name-student input::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.list-sedes ul {
+    list-style-type: none;
+    margin-left: 77%;
+}
+
+.list-sedes li {
+    display: inline-block           ;
+    margin: 25px;
 }
