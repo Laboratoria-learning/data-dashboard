@@ -59,6 +59,7 @@ ul {
 .bars:hover,
 .user .icons:hover {
     background: #ffc107; 
+    transition: 0.3s;
 }
 
 .search {
@@ -79,6 +80,7 @@ ul {
 
 .search:hover {
     background: #dfdede;
+    transition: 0.3s;
 }
 
 .icons{
@@ -99,19 +101,20 @@ ul {
 .user-icon div {
     border-radius: 100%;
     color: #333333;
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 400;
     background-color: #cbd5da;
     text-align: center;
-    padding: 6px;
+    padding: 5px;
     margin-left: 20px;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     margin-top: -5px;
 }
 
 .user-icon div:hover {
     background-color: #c3ced3;
+    transition: 0.3s;
 }
 
 /***************************************************************/
@@ -150,13 +153,15 @@ ul {
 }
 
 .navegacion .menu a:hover{
-	background: #e6e6e6;
+    background: #e6e6e6;
+    transition: 0.3s;
 }
 /*****menu de sedes***********************/
 
-.container-menu {
+.box-menu {
     margin: 10px 20px;
     width: 170px; 
+    display: inline-block;
 }
 
 .sedes {
@@ -164,7 +169,7 @@ ul {
 }
 
 .menu-sedes li a {
-    padding: 10px 5px;
+    padding: 15px 5px;
     display: block;
     background-color: #ffc107;
     color: black;
@@ -172,6 +177,7 @@ ul {
 
 .menu-sedes li a:hover {
     background-color: #e0e0e0;
+    transition: 0.3s;
 }
 
 .menu-sedes li ul {
@@ -186,6 +192,7 @@ ul {
 
 .menu-sedes li:hover > ul {
     display: block;
+    transition: 0.3s;
 }
 
 .menu-sedes li ul li{
@@ -198,3 +205,32 @@ ul {
 }
 
 /*****************estilos tabs***************************/
+.tab {
+    background-color: #ffc107;
+    padding: 15px; 
+    cursor: pointer;
+}
+
+.box-button {
+    display: inline-block;
+    margin-left: 60%;
+}
+
+.box-information {
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    text-align: justify;
+    background-color: #333333;
+    color: white;
+}
+
+.tab:hover {
+    background: #e0e0e0;
+    border-bottom: 5px solid #ffc107; 
+    transition: 0.3s;
+}
+
+.container-section {
+    overflow: hidden;
+}
