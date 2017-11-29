@@ -15,8 +15,10 @@
 4. Nuestro proyecto esta basado en este [**diseño**](https://marvelapp.com/104ejifg/) en combinación con nuestro primer sketch a continuación:
 
 ![Sin titulo](assets/images/sketch.jpg)
+
+5. Se mostró el sketch anterior al usuario final (Training Manager) para obtener un primer feedback.
 ***
 ## Autores
 
 * Nelida Sheridan Quispe Tacuri
-* Yanira
+* Yanira Jazmin Arenazas Bueno
