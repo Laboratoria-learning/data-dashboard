@@ -1,8 +1,11 @@
 /* Style general */
+
 body {
     padding: 5%;
     background: -webkit-linear-gradient(left, rgba(30,82,72,1) 0%, rgba(90,131,127,1) 32%, rgba(159,187,191,1) 69%, rgba(213,231,241,1) 98%);
 }
+
+/* Style for Nav */
 
 .nav-principal {
     display: block;
@@ -48,8 +51,10 @@ a {
     padding: 15px;
 }
 
+/* Style for header */
+
 header {
-    width: 83%;
+    width: 80%;
     margin-left: 17%;
     background-color: #152638;
     border-radius: 13px;
@@ -57,8 +62,13 @@ header {
     padding: 17px;
 }
 
-.name-student input {
+.name-student {
     width: 70%;
+    display: inline-block;
+}
+
+.name-student input {
+    width: 100%;
     background: -webkit-linear-gradient(left, rgba(30,82,72,1) 0%, rgba(90,131,127,1) 32%, rgba(159,187,191,1) 69%, rgba(213,231,241,1) 98%);
     padding: 8px;
     border-radius: 10px;
@@ -69,12 +79,16 @@ header {
     color: #fff;
 }
 
+.list-sedes {
+    width: 20%;
+    display: inline-block;
+    
+}
+
 .list-sedes ul {
     list-style-type: none;
-    margin-left: 77%;
 }
 
 .list-sedes li {
     display: inline-block           ;
-    margin: 25px;
 }
