@@ -7,9 +7,9 @@ body{
 }
 
 header{
-display: flex;
-margin-left: 42%;
-margin-top: 1%;
+  display: flex;
+  margin-left: 42%;
+  margin-top: 1%;
 }
 
 header i {
@@ -20,15 +20,9 @@ header img{
   width: 200px;
   height: 70px;
 }
-
 .fa-bars{
   margin-top: 10px;
   margin-left:400px;
-}
-
-.sedes{
-  display: flex;
-  margin-left:20px;
 }
 
 .fa-sort-desc{
@@ -37,20 +31,26 @@ header img{
 
 }
 
-.sedes h1{
-  font-size: 30px;
-  text-transform: uppercase;
-  padding-top: 5px;
+body{
+  margin: 0;
+  padding: 0;
 }
 
 div ul li{
   display: inline-block;
   margin-left: 20px;
+
 }
 
 li{
-  margin-right: 40px;
+  margin-right:  0 30px 10px 10px;
   text-transform: uppercase;
+  margin-top: 27px;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+
 }
 
 .principal{
@@ -59,16 +59,19 @@ li{
   height: 134px;
 }
 
-.secciones_sup_e_inf{
+.higher-lower{
    display: flex;
-   margin-left: 96px;
+   background-color: #f7f7f7;
+   margin-left: 6.5%;
+
  }
 
 .small-box{
-  width:370px;
-  height:370px;
+  width:363px;
+  height:353px;
   background-color: #ffffff;
   margin: 61px  31px 84px 5px;
+
 
 }
 
@@ -85,38 +88,49 @@ select{
   font-size: 20px;
 }
 
-.habilidad_tecnológica{
-  /* width:1170px; */
-  height:563px;
-  margin: 0 95px 44px 95px;
-  background-color: #ffffff;
-}
-
-.otras_habilidades{
-  /* width:1170px; */
-  height:563px;
-  margin: 0 96px 44px 96px;
-  background-color: #ffffff;
-}
-
-.información{
+.information {
   background-color: #f7f7f7;
-  /* width: 1364px; */
-  margin: 0 108px 0 108px;
+}
+
+.skill-tec {
+  height:563px;
+  margin: 0 95px 0 95px;
+  background-color: #ffffff;
+}
+
+.skill-hse{
+  height:563px;
+  margin: 0 95px 0 95px;
+  background-color: #ffffff;
 }
 
 h2{
   margin-left: 24px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+}
+ .super-small{
+  width:153px;
+  height:65px;
+  background-color: #f7f7f7;
+  display: inline-block;
+  margin-left: 4.6%;
 }
 
-.habilidad_tecnológica h2{
-  padding-top: 2%;
-}
+.super-small-2{
+  width:208px;
+  height:63px;
+  background-color: #f7f7f7;
+  display: inline-block;
+  margin: 20px 0.5px 19px 30px;
 
-.otras_habilidades h2{
-  padding-top: 2%;
 }
 
 .small-box .super-small{
   background-color: #f7f7f7;
+
 }
