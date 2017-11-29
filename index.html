@@ -10,17 +10,25 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   </head>
   <body>
+    <!-- Barra lateral -->
     <div id="sidebar">
+      <!-- Logo Laboratoria -->
       <figure id="logo-laboratoria"><img src="assets/images/logo-laboratoria.svg" alt="Laboratoria"></figure>
+      <!-- Info de usuario -->
       <div id="user">
-        <figure><img src="" alt="profile-photo"></figure>
+        <figure><img src="assets/images/profile-photo.png" alt="Profile photo"></figure>
+        <div id="user-info">
+          <h4>Alejandra Ramírez</h4>
+          <span>TM Laboratoria Lima</span>  
+        </div>
       </div>
+      <!-- Opciones -->
       <ul>
-        <li><a href="#">username</a></li>
-        <li><a href="#">Agregar alumna</a></li>
-        <li><a href="#">Remover alumna</a></li>
+        <li><a href="#"><span class="icon-plus-circle"></span>&ensp; Agregar alumna</a></li>
+        <li><a href="#"><span class="icon-minus-circle"></span>&ensp; Remover alumna</a></li>
       </ul>
     </div>
+    <!-- Encabezado -->
     <header>
       <h1>Dashboard</h1>
       <nav id="nav-extra">
@@ -30,33 +38,87 @@
         </ul>
       </nav>
     </header>
+    <!-- Contenido principal -->
     <main>
-      <select name="sede" size=1 onchange="javascript:alert('prueba');"> 
-        <option value="lima">Lima</option>
-        <option value="Arequipa">Arequipa</option>
-        <option value="Santiago">Santiago</option>
-        <option value="Ciudad">Ciudad de Mexico</option> 
-      </select> 
-      <select name="promocion" size=1 onChange="javascript:alert('prueba');"> 
-        <option value="20172">2017 - II</option>
-        <option value="20171">2017 - I</option>      
-        <option value="20162">2016 - II</option>
-        <option value="20161">2016 - I</option>
-        <option value="20152">2015 - II</option>
-        <option value="20151">2015 - I</option>
-      </select> 
-      <select name="sprint" size=1 onChange="javascript:alert('prueba');"> 
-        <option value="sprint1">Sprint 1</option>
-        <option value="sprint2">Sprint 2</option>
-        <option value="sprint3">Sprint 3</option>
-        <option value="sprint4">Sprint 4</option> 
-      </select> 
-      <div id="piechart" style="width: 900px; height: 500px;"></div>
-    
+      <div id="filter-section">
+          <select name="sede"> 
+              <option value="Arequipa">Arequipa</option>
+              <option value="lima">Lima</option>
+              <option value="Santiago">Santiago</option>
+              <option value="Ciudad">Ciudad de México</option> 
+            </select> 
+            <select name="promocion" onChange="javascript:alert('prueba');"> 
+              <option value="20172">2017 - II</option>
+              <option value="20171">2017 - I</option>      <option value="20162">2016 - II</option>
+              <option value="20161">2016 - I</option>
+            </select> 
+            <select name="sprint" onChange="javascript:alert('prueba');"> 
+              <option value="sprint1">Sprint 1</option>
+              <option value="sprint2">Sprint 2</option>
+              <option value="sprint3">Sprint 3</option>
+              <option value="sprint4">Sprint 4</option> 
+            </select>
+      </div>
+      <section id="container">
+        <section id="overview">
+            <div id="students-overview">
+              <pre class="icon-users"></pre>
+              <h4>ALUMNAS</h4>
+              <div class="data">
+                <span id="current-students">120</span>
+                <h5># estudiantes inscritas</h5>
+              </div>
+              <div class="data">
+                <span id="dropout">10%</span>
+                <h5>% de deserción</h5>
+              </div>
+            </div>
+            <div id="achievement-overview">
+                <pre class="icon-award"></pre>
+                <h4>RENDIMIENTO</h4>
+                <div class="data">
+                  <span id="current-students">105</span>
+                  <h5>superan la meta de puntos</h5>
+                </div>
+                <div class="data">
+                  <span id="dropout">78%</span>
+                  <h5>del total de alumnas</h5>
+                </div>
+            </div>
+            <div id="progress-overview">
+                <!-- <pre class="icon-users"></pre> -->
+                <h4>PROGRESO POR SPRINT</h4>
+                <figure><img src="assets/images/graph.png" alt=""></figure>
+                <!-- <div class="data">
+                  <span id="dropout">10%</span>
+                  <h5>% de deserción</h5>
+                </div> -->
+              </div>
+            <div id="tech-skills">
+              <h4>TECH</h4>
+            </div>
+            <div id="life-skills">
+              <h4>LIFE SKILLS</h4>
+            </div>
+            <div id="satisfaction">
+              <h4>EXPERIENCIA LABORATORIA</h4>
+            </div>
+            <div id="students-avrg">
+              <h4>PROMEDIO PROFESORES</h4>
+            </div>
+            <div id="teachers-avrg">
+              <h4>PROMEDIO JEDI MASTERS</h4>
+            </div>
+            <div id="jedi-avrg">
+              <h4>NET PROMOTER SCORE</h4>
+            </div>
+        </section>
 
+        <section id="students"></section>
 
-
-
+        <section id="teachers"></section>
+        
+      </section>
     </main>
 
 		<!-- Base de datos -->
