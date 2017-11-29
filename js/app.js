@@ -11,11 +11,41 @@ divDetractors = document.getElementById('detractors');
 divAchievement = document.getElementById('kpi-achievement');
 divPercentAchievement = document.getElementById('percent-achievement');
 divStudentsAchievement = document.getElementById('students-achievement');
+menu = document.getElementById('menuBar');
 // Puedes hacer uso de la base de datos a través de la variable `data`
 
 window.addEventListener('load', function(event) {
   // Ocultando especializacion de las estudiantes
   optionSpecialization.classList.add('hidden');
+
+  // funcionalidades del menu desplegable de las sedes de laboratoria
+  
+console.log(menu);
+  var city = Object.keys(data);
+  for (var i = 0; i < city.length; i++) {
+    newUl = document.createElement('ul');
+    newUl.innerHTML = city[i];
+    newUl.id = city[i];
+    menu.appendChild(newUl);
+    var generationx = Object.keys(data[city[i]]);
+    for (var j = 0; j < generationx.length; j++) {
+      newli = document.createElement('li');
+      newli.id = 'data[\'' + city[i] + '\'][\'' + generationx[j] + '\']';
+      newli.setAttribute('class', 'bootcamps');
+      newli.innerHTML = generationx[j];
+      newUl.appendChild(newli);
+    }
+  }
+    
+  var bootcamps = document.getElementsByClassName('bootcamps');
+  for (var x = 0; x < bootcamps.length; x++) {
+    bootcamps[x].addEventListener('click', showMenu);
+  }
+
+  function showMenu() {
+    var str = event.target.id;
+    console.log(str);
+  }
   
   var str = data['LIM']['2016-2'];
 
@@ -58,7 +88,7 @@ window.addEventListener('load', function(event) {
   });
 
  
-/*
+  /*
 
  console.log(data['LIM']['2016-2']['ratings'][0]); // sprint 1 
   console.log(data['LIM']['2016-2']['ratings'][1]); // sprint 2 
@@ -83,4 +113,48 @@ console.log(data['LIM']['2016-2']['students'][0]['sprints'][0]['score']['hse']);
   console.log(data['AQP']['2016-2']['ratings'][0]['nps']) //nps
   console.log(data['AQP']['2016-2']['ratings'][0]['nps']['promoters'])
   console.log(data);*/
+  // Funcionalidad de los tabs Overviews, Students y Teachers
+
+  var showHide = function(e) { 
+    var tabSelector = e.target.dataset.tabSelector;
+    var overviews = document.getElementById('overviews');
+    var students = document.getElementById('students');
+    var teachers = document.getElementById('teachers');
+
+    if (tabSelector === 'tabOverviews') {
+      console.log('mostrar overviews');
+      // ocultar students y teacher
+      students.style.display = 'none';
+      teachers.style.display = 'none';
+      // mostrar overviews
+      overviews.style.display = 'block';
+    } else if (tabSelector === 'tabStudents') {
+      console.log('Mostrar a los estudiantes');
+      // ocultar overviews y teacher
+      overviews.style.display = 'none';
+      teachers.style.display = 'none';
+      // mostrar students
+      students.style.display = 'block';
+    } else if (tabSelector === 'tabTeachers') {
+      console.log('mostrar a los profesores');
+      // mostrar overviews y students
+      students.style.display = 'none';
+      overviews.style.display = 'none';
+      // mostrar students
+      teachers.style.display = 'block';
+    }
+  };
+
+  var loadTabs = function() {
+    var elementsTabs = document.getElementsByClassName('tab');
+    for (var i = 0; i < elementsTabs.length; i++) {
+      elementsTabs[i].addEventListener('click', showHide);
+    }
+  };
+
+  loadTabs();
 });
+ 
+
+// // Puedes hacer uso de la base de datos a través de la variable `data`
+// console.log(data);
