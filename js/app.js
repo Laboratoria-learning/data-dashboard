@@ -20,13 +20,7 @@ function estudentcont () {
 
 function create() {
   var sede = document.getElementById('sede').value;
-  document.getElementById('text').innerHTML = sede ;
-    var datos = (data["AQP"]["2016-2"]["students"]);
-
-    if (datos == true ) {
-     document.getElementById('one').innerHTML = datos;
-      }
-
+  document.getElementById('text').innerHTML = sede ; 
 
 switch(sede) {
   case 'LIMA2016-II':
@@ -37,6 +31,40 @@ switch(sede) {
   var  estudiantelim2 = (data["LIM"]["2017-1"]["students"].length);
   console.log( document.getElementById('one').innerHTML = estudiantelim2);
       break;
+  case 'LIMA2017-II':
+  var  estudiantelim3 = (data["LIM"]["2017-1"]["students"].length);
+  console.log( document.getElementById('one').innerHTML = estudiantelim3);
+      break;
+  case 'AREQUIPA2016-II':
+  var  estudiantelim4 = (data["AQP"]["2016-2"]["students"].length);
+  console.log( document.getElementById('one').innerHTML = estudiantelim4);
+       break;
+  case 'AREQUIPA2017-I':
+  var  estudiantelim5 = (data["AQP"]["2017-1"]["students"].length);
+  console.log( document.getElementById('one').innerHTML = estudiantelim5);
+      break;
+  case 'SantiagodeChile2016-II':
+  var  estudiantelim6 = (data["SCL"]["2017-1"]["students"].length);
+  console.log( document.getElementById('one').innerHTML = estudiantelim6);
+      break;
+  case 'SantiagodeChile2017-I':
+  var  estudiantelim7 = (data["SCL"]["2017-1"]["students"].length);
+  console.log( document.getElementById('one').innerHTML = estudiantelim7);
+      break;  
+  case 'SantiagodeChile2017-II':
+  var  estudiantelim8 = (data["SCL"]["2017-2"]["students"].length);
+  console.log( document.getElementById('one').innerHTML = estudiantelim8);
+      break;
+  case 'CiudaddeMexico2017-I':
+  var  estudiantelim9 = (data["CDMX"]["2017-1"]["students"].length);
+  console.log( document.getElementById('one').innerHTML = estudiantelim9);
+     break;
+  case 'CiudaddeMexico2017-II':
+  var  estudiantelim10 = (data["CDMX"]["2017-2"]["students"].length);
+  console.log( document.getElementById('one').innerHTML = estudiantelim10);
+    break;
+
+
   default:
       alert('f');
 } 
