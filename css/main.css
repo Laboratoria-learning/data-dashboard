@@ -62,31 +62,31 @@ body {
 }
  /*Main*/
 .containerMain {
-    height: 2500px;
+    height: 2300px;
     border: 2px solid skyblue;
 }
-.statisticalDataTitle {
+.statisticalDataTitle { /*all titles of row */
     font-size: 21px;
     padding: 5px;
-    margin: 15px 0 10px 20px;
+    margin: 20px 0 10px 20px;
 }
-.dataNumber {
+.dataNumber { /*left square*/
     background-color:#f7f7f7;
-    width: 140px;
-    height: 70px;
+    width: 145px;
+    height: 65px;
     float: left;
-    margin-left: 25px;
+    margin: 5px 20px 7px 30px;
 }
-.dataPorcent {
+.dataPorcent { /*rigth square*/
     background-color:#f7f7f7;
-    width: 140px;
-    height: 70px;
+    width: 145px;
+    height: 65px;
     float: left;
-    margin-left: 15px;
+    margin: 5px 10px 7px 0px;
 }
 /* - first row statistical data*/
 .statisticalDataFirst {  /*first square / first row-->*/
-    height: 14%;
+    height: 16%;
     width: 27%;
     background-color: #ffffff;
     outline: 1px solid yellow;
@@ -94,13 +94,25 @@ body {
     margin: 70px 5px 0 40px;
     transform: translateX(10%)
 }
-.imageDatesStatistics img { /*image first row*/
-    transform: translateX(2%);
-    margin: 15px 0 5px 10px;
-    width: 92%;
-    height: 92%;
+.imageDataStatistical img { /*image first row*/
+    transform: translateX(8%);
+    margin: 20px 10px 5px 10px;
+    width: 85%;
+    height: 60%;
 }
-.numData {
+.imageDataStatisticalLineOne img {
+    transform: translateX(8%);
+    margin: 55px 10px 5px 10px;
+    width: 85%;
+    height: 60%
+}
+.imageDataStatisticalLineTwo img {
+    transform: translateX(8%);
+    margin: 55px 10px 5px 10px;
+    width: 85%;
+    height: 60%
+}
+.numData { /*styles letter num-porcent data*/
     font-size: 25px;
     text-align: center;
 }
@@ -111,15 +123,32 @@ body {
 }
 .porcentDataLeft {
     float: left;
-    margin-left: 15px;
+    margin: 1px 0 0 15px;
     font-size: 16px;
 }
 .porcentDataRigth {
     float: left;
-    margin-left: 20px;
+    margin: 1px 0 0 15px;
     font-size: 16px;
 }
 /* - second row statistical data*/
+.inputStatisticalData {
+    margin-left: 25px;
+}
+.dataNumberSecondRow { /*left square*/
+    background-color:#f7f7f7;
+    width: 200px; /*pendiente cambiar a porcentaje*/
+    height: 65px;
+    float: left;
+    margin: 5px 20px 7px 30px;
+}
+.dataPorcentSecondRow { /*rigth square*/
+    background-color:#f7f7f7;
+    width: 200px; /*pendiente cambiar a porcentaje*/
+    height: 65px;
+    float: left;
+    margin: 5px 10px 7px 0px;
+}
 .statisticalDataSecond {
     height: 25%;
     width: 87%;
@@ -128,53 +157,119 @@ body {
     float: left;
     margin: 70px 0 0 80px;
 }
-.dataPorcentSecondRow {
-    background-color:#f7f7f7;
-    width: 140px;
-    height: 70px;
-    float: left;
-    margin-left: 45px;
+.containerImagesSecondRow {
+    border: 2px solid orchid;
+    width: 100%;
+    height: 440px;
+    margin-top: 80px;
+    padding: 12px;
 }
-.imageSecondRowLeft img {
-    margin: 80px 0 0 0;
-    width: 50%;
-    height: 50%;
+.imageSecondRowLeft img { /*left square*/
+    border: 2px solid red;
+    width: 62%;
+    height: 100%;
     float: left;
+    margin: 15px 0 5px 5px;
 }
-.imageSecondRowRigth {
+.imageSecondRowRigth img{ /*rigth circle image*/
+    border: 2px solid blue;
+    width: 32%;
+    height:60%;
+    float: left;
+    margin: 18px 0 15px 30px;
+}
+.legendPorcentData { /*data legend*/
+    font-size: 20px;
+    width: 30%;
+    height: 25px;
+    margin: 0 45px 0 0;
     float: right;
-    margin: 80px 0 0 700px;
+    padding: 15px;
 }
-.inputStatisticalData {
-    margin-left: 25px;
+.numberLegendPorcentData { /*p de data legend*/
+    font-size: 12px;
+    float: left;
 }
+.hrGreen { /*bar legend*/
+    background-color: #7ed321;
+    height: 10px;
+    width: 9%;
+    float: left;
+}
+.hrRed {  /*bar legend*/
+    background-color:#ea5151;
+    height: 10px;
+    width: 9%;
+    float: left;
+  }
+.numberLegendPorcentData {
+    margin-left: 8px;
+    margin-bottom: 10px;
+}
+/* - third row statistical data*/
 .statisticalDataThird {
-    height: 600px;
+    height: 25%;
     width: 87%;
     background-color: #ffffff;
     outline: 1px solid yellow;
     float: left;
-    margin: 70px 0 0 40px;
-    transform: translateX(5%)
+    margin: 70px 0 0 80px;
 }
+.dataNumberThirdRow { /*left square*/
+    background-color:#f7f7f7;
+    width: 200px; /*pendiente cambiar a porcentaje*/
+    height: 65px;
+    float: left;
+    margin: 5px 20px 7px 30px;
+}
+.dataPorcentThirdRow { /*rigth square*/
+    background-color:#f7f7f7;
+    width: 200px; /*pendiente cambiar a porcentaje*/
+    height: 65px;
+    float: left;
+    margin: 5px 10px 7px 0px;
+}
+/* - fourth row statistical data*/
 .statisticalDataFourth {
-    height: 300px;
+    height: 16%;
     width: 27%;
     background-color: #ffffff;
     outline: 1px solid yellow;
     float: left;
-    margin: 70px 0 0 40px;
-    transform: translateX(15%)
+    margin: 70px 5px 0 40px;
+    transform: translateX(10%)
 }
-
+.dataNumberFourthRow { /*left square*/
+    background-color:#f7f7f7;
+    width: 155px; /*pendiente cambiar a porcentaje*/
+    height: 70px;
+    float: left;
+    margin: 5px 20px 7px 30px;
+}
+.numDataFourthRow { /*styles letter num-porcent data*/
+    font-size: 36px;
+    font-weight: 900;
+    text-align: center;
+}
+.fa-caret-up {
+    margin-left: 10px;
+}
+.imageDataStatisticalFourthRow { /*image fourth row*/
+    padding: 5px;
+    margin: 20px 0 0 0;
+}
+.imageFourthRow {
+    width: 300px;
+    height: 180px;
+}
 /* section checkbox */
-
-.checkbox-site , .checkbox-HSE , .checkbox-commoncore{
+.checkbox-site , .checkbox-HSE , .checkbox-commoncore {
     -webkit-appearance: none;
+    font-size : 18px;
 	background-color: #fafafa;
 	border: 1px solid #f7b617 ;
 	box-shadow: 0 1px 2px rgba(187, 16, 16, 0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
-    width: 250px;
+    width: 400px;
     padding: 9px;
 	border-radius: 3px;
 	display: none;
