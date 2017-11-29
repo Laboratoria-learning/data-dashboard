@@ -40,7 +40,7 @@ function viewText(event) {
 }
 
 function loadPage() {
-  textFirst.style.display = 'none';
+  textFirst.style.display = 'block';
   textSecond.style.display = 'none';
   textThird.style.display = 'none';
   var tabs = document.getElementsByClassName('tab');
