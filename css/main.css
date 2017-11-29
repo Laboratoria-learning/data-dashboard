@@ -70,18 +70,26 @@ nav {
     list-style: none;
     position: relative;
 }
-.tabs a {
+.tabBtn {
     text-decoration: none;
+    background-color: transparent;
+    border: none;
     color: black;
     float: left;
-    font-size: 20px;
+    font-size: 22px;
     margin-left: 15px;
-    margin-top: 1px;
-    padding: 6px;
+    margin-top: 12px;
+    padding: 4px;
+}
+.first {
+    margin-left: 85px;
 }
 .info-container {
     background-color: #e1e1e1;
     width: 100%;
+}
+.overview-tab {
+    display: none;
 }
 .container1 {
     background: #f7f7f7;
@@ -136,4 +144,7 @@ nav {
 }
 .initial {
     margin-left: 20px;
+}
+.students-tab {
+    display: none;
 }
