@@ -34,7 +34,8 @@ for (var i = 0; i < studentsSeatLIM.length; i++) {
 };
 console.log('total estududiantes LIM : ' + sumEstudentsLIM);
 
-/* El porcentaje de deserción de estudiantes----------------------------------*/
+/* Deserción de estudiantes---------------------------------------------*/
+
 // estudiantes CDMX
 var studentsCDMX20171 = data.CDMX['2017-1'].students;// Array
 var studentsCDMX20172 = data.CDMX['2017-2'].students;
@@ -44,7 +45,8 @@ var studentsLIM20162 = data.LIM['2016-2'].students;
 var studentsLIM20171 = data.LIM['2017-1'].students;
 var studentsLIM20172 = data.LIM['2017-2'].students;
 
-/* estudiantes desertaron CDMX-------------------*/
+/* numero estudiantes desertaron CDMX---------------------------------------*/
+
 // estudiantes desertaron CDMX 2017-1
 desertedCDMX20171 = [];
 for (var i = 0; i < studentsCDMX20171.length; i++) {
@@ -53,9 +55,7 @@ for (var i = 0; i < studentsCDMX20171.length; i++) {
   }
 }
 var numdesertedCDMX20171 = desertedCDMX20171.length;
-var percDesertedCDMX2017
 console.log('numero de estudiantes Desertaron CDMX20171 : ' + numdesertedCDMX20171);
-console.log('% estudiantes Desertaron CDMX20171 : ' + numdesertedCDMX20171);
 
 // estudiantes desertaron CDMX 2017-2
 desertedCDMX20172 = [];
@@ -67,7 +67,8 @@ for (var i = 0; i < studentsCDMX20172.length; i++) {
 var numdesertedCDMX20172 = desertedCDMX20172.length;
 console.log('numero de estudiantes Desertaron CDMX20172 : ' + numdesertedCDMX20172);
 
-/* estudiantes desertaron LIM-------------------*/
+/* numero estudiantes desertaron LIM-----------------------------------------*/
+
 // estudiantes desertaron LIM 2016-2
 desertedLIM20162 = [];
 for (var i = 0; i < studentsLIM20162.length; i++) {
@@ -77,6 +78,7 @@ for (var i = 0; i < studentsLIM20162.length; i++) {
 }
 var numdesertedLIM20162 = desertedLIM20162.length;
 console.log('numero de estudiantes Desertaron LIM20162 : ' + numdesertedLIM20162);
+
 // estudiantes desertaron LIM 2017-1
 desertedLIM20171 = [];
 for (var i = 0; i < studentsLIM20171.length; i++) {
@@ -86,6 +88,7 @@ for (var i = 0; i < studentsLIM20171.length; i++) {
 }
 var numdesertedLIM20171 = desertedLIM20171.length;
 console.log('numero de estudiantes Desertaron LIM20171 : ' + numdesertedLIM20171);
+
 // estudiantes desertaron LIM 2017-2
 desertedLIM20172 = [];
 for (var i = 0; i < studentsLIM20172.length; i++) {
@@ -95,3 +98,24 @@ for (var i = 0; i < studentsLIM20172.length; i++) {
 }
 var numdesertedLIM20172 = desertedLIM20172.length;
 console.log('numero de estudiantes Desertaron LIM20172 : ' + numdesertedLIM20172);
+
+/* Porcentaje estudiantes desertaron CDMX------------------------------------*/
+
+// % estudiantes desertaron CDMX 2017-1
+var percDesertedCDMX20171 = (numdesertedCDMX20171 / numEstudentsCDMX20171) * 100;// <-- variable de la linea 9
+console.log('% estudiantes Desertaron CDMX20171 : ' + percDesertedCDMX20171);
+// % estudiantes desertaron CDMX 2017-2
+var percDesertedCDMX20172 = (numdesertedCDMX20172 / numEstudentsCDMX20172) * 100;
+console.log('% estudiantes Desertaron CDMX20172 : ' + percDesertedCDMX20172);
+
+/* Porcentaje estudiantes desertaron LIM;-------------------------------------*/
+
+// % estudiantes desertaron LIM 2016-2
+var percDesertedLIM20162 = (numdesertedLIM20162 / numEstudentsLIM20162) * 100;
+console.log('% estudiantes Desertaron LIM20162 : ' + percDesertedLIM20162);
+// % estudiantes desertaron LIM 2017-1
+var percDesertedLIM20171 = (numdesertedLIM20171 / numEstudentsLIM20171) * 100;
+console.log('% estudiantes Desertaron LIM20171 : ' + percDesertedLIM20171);
+// % estudiantes desertaron LIM 2017-2
+var percDesertedLIM20172 = (numdesertedLIM20172 / numEstudentsLIM20172) * 100;
+console.log('% estudiantes Desertaron LIM20172 : ' + percDesertedLIM20172);
