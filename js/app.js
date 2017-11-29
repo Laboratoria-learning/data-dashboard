@@ -106,7 +106,7 @@ window.addEventListener('load', function() {
   titleTS2.innerText = 'percentoftotal';
   var textTS = document.createElement('span');
   textTS.innerText = '% Of TOTAL';
-
+ // agregando clases 
   general.appendChild(techSkills);
   techSkills.appendChild(titleTS);
   techSkills.appendChild(comboTS);
@@ -124,7 +124,6 @@ window.addEventListener('load', function() {
   comboTS.setAttribute('class', 'comboStyle');
   metTarget.setAttribute('class', 'metTargetStyle');
   totalTS.setAttribute('class', 'totalTSStyle');
-
   
   // funcion para sacar la cantidad actual activos de estudiantes por sede
   function currentStudents(sede, gene) {
@@ -222,7 +221,6 @@ window.addEventListener('load', function() {
   }
   // porcentaje del promotor
   function promotersPercent(sede, gene) {
-    var count = 0;
     var sede = data[sede];
     var generation = sede[gene];
     var ratigns = generation.ratings;
@@ -238,7 +236,7 @@ window.addEventListener('load', function() {
       } var totalPromoters = 0;
       totalPromoters = allPromoter / ratigns.length;
     } return totalPromoters;
-
+    
 });
 // Puedes hacer uso de la base de datos a través de la variable `data`
 console.log(data);
