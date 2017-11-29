@@ -34,6 +34,8 @@
         <option value="default">Seleccione Generación</option> 
       
       </select>
+      <input type="button" id="btndash" value="Dashboard">
+
       <div class="principal">
         <ul class="lista">
           <li><a href="#">overview</a></li>
@@ -46,8 +48,14 @@
       <section class="overview-one">
         <div class="data-overview">
          <div class="title-overview">ENROLLMENT</div>
-         <div><span># STUDENTS CURRENTLY ENROLLED</span></div>
-         <div></div> 
+         <div class="display-inline-block">
+           <span id="count-overview" class="data-style"></span>
+           <span class="description"># STUDENTS CURRENTLY ENROLLED</span>
+         </div>
+         <div class="display-inline-block">
+            <span id="percentaje-overview" class="data-style"></span>
+            <span class="description">% DROPOUT</span>
+         </div> 
         </div>
         <div class="data-overview">
           <div class="title-overview">ACHIEVEMENT</div>
@@ -64,6 +72,7 @@
           <div>
             <div class="title-overview">TECH SKILLS</div>
              <form action="">
+
               <select name="sprint">
                <option value="1">Sprint 1</option> 
               </select>
