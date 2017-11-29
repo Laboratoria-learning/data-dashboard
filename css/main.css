@@ -67,11 +67,11 @@ main {
   box-sizing: border-box;
 }
 
-.container ul {
+.container-tabs ul {
     text-align: center;
 }
 
-.container li {
+.container-tabs li {
   display: inline-block;
   margin-right: 0.5vw;
 }
@@ -102,6 +102,34 @@ main {
 .container {
   outline: 1px solid red;
   width: 79vw;
+}
+
+.container-one {
+  display: flex;
+  align-items: center;
+}
+
+.box-medium-size {
+  border: 1px solid orange;
+  box-sizing: border-box;
+  width: 35vw;
+  height: auto;
+  background-color: #ffffff;
+  font-size: 14px;
+  margin: 5px;
+  padding: 5vh;
+}
+
+.box-size {
+  border: 1px solid orange;
+  box-sizing: border-box;
+  width: 78vw;
+  height: auto;
+  background-color: #ffffff;
+  display: inline-flex;
+  margin: 5px;
+  font-size: 14px;
+  padding: 8vh;
 }
 
 nav {
