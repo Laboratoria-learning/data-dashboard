@@ -83,18 +83,23 @@ nav {
     background-color: #e1e1e1;
     width: 100%;
 }
-.overview {
-    outline: 1px solid black;
+.container {
+    background: #f7f7f7;
+    position: ;
 }
 .square {
+    background-color: #ffffff;
     display: inline-block;
     outline: 1px solid green;
     height: 335px;
     width: 342px;
+    margin: 20px;
 }
 .rectangle {
-    display: block;
+    background-color: #ffffff;
+    display: inline-block;
     outline: 1px solid orange;
     width: 1087px;
     height: 520px;
+    margin:10px;
 }
