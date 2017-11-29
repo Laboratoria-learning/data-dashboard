@@ -164,7 +164,7 @@
   #container form input{
     margin: 10px;
   }
-  /*
+
   #formulario input[type="checkbox"]{
     display:none;
   }
@@ -176,7 +176,7 @@
     font-size: 1em;
     border-radius: 3px;
     cursor:pointer;
-    /*-webkit-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.35s ease;
   }
@@ -202,7 +202,7 @@
   #formulario input[type="checkbox"]:checked + label:before{
     display:none;
   }
-  */
+
   #first{
     padding:10px;
     box-shadow: 5px 5px 0px #ccc;

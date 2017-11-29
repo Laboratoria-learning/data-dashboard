@@ -142,7 +142,7 @@ function changeTitle() {
   case 'mex2017II':
     titleSelector.textContent = 'Mexico 2017-II';
     calculateCurrently('CDMX', 46, '2017-2');
-    calculatePromoter('CDMX', 2,'2017-2');
+    calculatePromoter('CDMX', 2, '2017-2');
     calculateTeacherRating('CDMX', 2, '2017-2');
     calculateJediMasterRating('CDMX', 2, '2017-2');
     var attend = parseInt(calculateCurrently('CDMX', 46, '2017-2'));
@@ -193,7 +193,7 @@ function calculateJediMasterRating(sede, numSprint, year) {
   jediMasterRating.innerHTML = '<b>' + (sumJedi / numSprint).toFixed(2) + '</b>' + '<br> overall teacher rating <br> (cumulative)';
 }
 
-function calculateStudentSatisfaccion(sede, numEndSprint,year) {
+function calculateStudentSatisfaccion(sede, numEndSprint, year) {
 
 }
 
@@ -210,7 +210,6 @@ function drawCurrently(attend, noAttend) {
   var chart = new google.visualization.PieChart(document.getElementById('grafy-enrollment'));
   chart.draw(data, options);
 }
-
 
 
 function drawPromoter() {
@@ -233,5 +232,5 @@ window.onload = function() {
   elementTab[0].addEventListener('click', show);
   elementTab[1].addEventListener('click', show);
   containesStudents.classList.add('none');
-  comboBox.addEventListener('change',changeTitle)
-}
+  comboBox.addEventListener('change', changeTitle);
+};
