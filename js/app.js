@@ -1,22 +1,26 @@
+var ulRegion = document.getElementById('ul-region');
+var ulLim = document.getElementById('ul-lim');
+
 var divRegion = document.getElementById('divRegion');
-
-var ul = document.getElementsByTagName('ul');
-
 var lima = document.getElementById('lim');
+var ulLim = document.getElementById('ul-lim');
 var lim172 = document.getElementById('lim172');
 var lim171 = document.getElementById('lim171');
 var lim162 = document.getElementById('lim162');
 
 var arequipa = document.getElementById('aqp');
+var ulAqp = document.getElementById('ul-aqp');
 var aqp171 = document.getElementById('aqp171');
 var aqp162 = document.getElementById('aqp162');
 
 var chile = document.getElementById('scl');
+var ulScl = document.getElementById('ul-scl');
 var scl172 = document.getElementById('scl172');
 var scl171 = document.getElementById('scl171');
 var scl162 = document.getElementById('scl162');
 
 var mexico = document.getElementById('cdmx');
+var ulCdmx = document.getElementById('ul-cdmx');
 var cdmx172 = document.getElementById('cdmx172');
 var cdmx171 = document.getElementById('cdmx171');
 
@@ -39,12 +43,12 @@ window.addEventListener('load', function() {
 
 function showAllRegions() {
   // ulRegion.classList.toggle('hidden');
-  ul[0].classList.toggle('hidden');
+  ulRegion.classList.toggle('hidden');
   paintOptions(lim172, previous);
   // paintOptions(divRegion, previous);
-  ul[2].classList.toggle('hidden');
-  ul[3].classList.toggle('hidden');
-  ul[4].classList.toggle('hidden');
+  ulAqp.classList.toggle('hidden');
+  ulScl.classList.toggle('hidden');
+  ulCdmx.classList.toggle('hidden');
 };
 
 function paintOptions(option, previous) {
@@ -63,7 +67,7 @@ function options(optionRegion, index) {
 function optionsLima() {
   paintOptions(lima, previous);
   previous = lima;
-  ul[1].classList.toggle('hidden');
+  ulLim.classList.toggle('hidden');
 }
 function optionslim172() {
   paintOptions(lim172, previous);
@@ -83,17 +87,17 @@ function optionslim162() {
 function optionsArequipa() {
   paintOptions(arequipa, previous);
   previous = arequipa;
-  ul[2].classList.toggle('hidden');
+  ulAqp.classList.toggle('hidden');
 }
 function optionsChile() {
   paintOptions(chile, previous);
   previous = chile;
-  ul[3].classList.toggle('hidden');
+  ulScl.classList.toggle('hidden');
 }
 function optionsMexico() {
   paintOptions(mexico, previous);
   previous = mexico;
-  ul[4].classList.toggle('hidden');
+  ulCdmx.classList.toggle('hidden');
 }
 
 function showMain(promotion) {
