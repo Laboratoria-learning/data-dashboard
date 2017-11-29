@@ -25,14 +25,15 @@ font-size: 20px;
 /* Estilos a button */
 .container-tab{
   background-color: #fcb425;
-  display: block;
+  display: flex;
   margin-top: 20px;
   width: 100%;
+  list-style: none;
   outline: 1px solid red;
 }
-li {
+/*li {
   display: inline-block;
-}
+}*/
 .tab {
   color: white;
   background-color: #fcb425;
@@ -41,9 +42,11 @@ li {
   padding: 10px;
   width: 120px;
 }
-.tab:hover{
+
+span:hover{
   text-decoration: underline;
 }
+/*****************************/
 .enrollments,.achievement,.net  {
   width: 300px;
   height: 300px;
@@ -72,7 +75,7 @@ h3{
   height: 500px;
   background: rgb(129, 177, 151);
   margin-top: 2%;
-  margin-left: 13%;  
+  margin-left: 13%;
 }
 .student,.teacher,.jedi  {
   width: 300px;
@@ -90,4 +93,93 @@ h3{
   display: inline-block;
   margin-left: 5%;
   margin-top: 5%;
+}
+
+/* ****************************** */
+#contentStudents {
+  background-color: skyblue;
+  display: inline-block;
+  width: 100%;
+}
+.specialization{
+  background-color: #fff;
+  float: left;
+  margin: 20px;
+  width: 20%;
+}
+.specialization h3{
+  margin: 15px;
+  text-align: left;
+}
+.list-specialization li{
+  list-style: none;
+  margin: 15px;
+}
+/*****************************/
+.list-students {
+  background-color: #fff;
+  float: right;
+  margin: 20px;
+  width: 70%;
+}
+.content-1 {
+  display: inline-block;
+  margin: 15px;
+  width: 100%;
+}
+.picture {
+  background-color: red;
+  float: left;
+  margin: 15px;
+  height: 150px;
+  width: 20%;
+}
+.container-dates {
+  float: right;
+  height: 150px;
+  margin: 15px 20px;
+  width: 71%;
+  outline: 1px solid black;
+}
+.dates-coder {
+  display: inline-block;
+  height: 150px;
+  width: 100%;
+  outline: 2px solid red;
+}
+.specialization-student{
+  float: left;
+  margin: 10px;
+  width: 46%;
+  outline: 1px solid green;
+}
+.specialization-student h2, .specialization-student span {
+  letter-spacing: 3px;
+  margin: 10px;
+  text-align: left;
+}
+.specialization-student ul{
+  display: flex;
+  list-style: none;
+  margin: 15px;
+}
+.specialization-student ul li{
+  font-size: 10px;
+  margin-right: 53px;
+  margin-top: 8px;
+}
+
+.skills-students {
+  display: flex;
+  float: right;
+  margin: 15px;
+  width: 45%;
+  outline: 1px solid green;
+}
+.tec-skill, .life-skill, .english-skill {
+  background-color: red;
+  margin-right: 18px;
+  height: 60px;
+  width: 100px;
+  outline: 1px solid red;
 }
