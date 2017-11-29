@@ -41,6 +41,14 @@ var mostrarOcultar = function(event) {
   }
 };
 var cargarPagina = function() {
+  var OVERVIEW = document.getElementById('OVERVIEW');
+  var STUDENTS = document.getElementById('STUDENTS');
+  var TEACHERS = document.getElementById('TEACHERS');
+
+  STUDENTS.style.display = 'none';
+  TEACHERS.style.display = 'none';
+  OVERVIEW.style.display = 'block';
+
   var elementosTab = document.getElementsByClassName('tab');
   for (var i = 0; i < elementosTab.length;i++) {
     elementosTab[i].addEventListener('click', mostrarOcultar);
