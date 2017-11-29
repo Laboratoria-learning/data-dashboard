@@ -1,5 +1,36 @@
 /* Puedes hacer uso de la base de datos a través de la variable `data`*/
+
 console.log(data);
+
+window.addEventListener('load', function() {
+  var containerOverview = document.querySelector('.container-overview');
+  var containerTeachers = document.querySelector('.container-teachers');
+  var hideForTeachers = document.querySelector('.hide-for-teachers');
+  var navigator = document.querySelector('.navigator');
+  // agregando evento click a la barra de navegacion principal
+  navigator.addEventListener('click', showCharts);
+  function showCharts(event) {
+    console.log(event.target.getAttribute('value'));
+    // console.log(event.target.firstChild);
+    if (event.target.getAttribute('value') === 'teachers') {
+      hideForTeachers.classList.remove('show');
+      hideForTeachers.classList.add('hide');
+      //    containerTeachers.classList.remove('show');
+      //  containerTeachers.classList.add('hide');
+      console.log('hola');
+    } else if (event.target.getAttribute('value') === 'overview')
+    // containerOverview.classList.add('show')
+      hideForTeachers.classList.remove('hide');
+    hideForTeachers.classList.add('show');
+  }
+  // evento select para filtros :
+  var enrollmentStudents = document.querySelector('.enrollment-students'); // celda que recibira los numeros
+  var codeFilter = document.querySelector('.code-filter');
+  var sprintFilter = document.querySelector('sprint-filter');
+  var placeFilter = document.querySelector('placeFilter');
+//  codeFilter.addEventListener('select', )
+});
+
 
 function totalActive(place, code, activeOrNotActive) {
   var listOfCodes = data[place];

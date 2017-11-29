@@ -9,28 +9,32 @@
     <header>
       <img src="assets/images/logo-laboratoria.svg" alt="logo">
     </header>
-    <nav>
-      <ul>
-        <li><p>OVERVIEW</p><hr class="none"></li>
-        <li><p>TEACHERS</p><hr class="sub"></li>
+    <nav class="navigator">
+       <ul>
+
+        <li><p value="overview">OVERVIEW</p><hr class="none"></li>
+        <li><p  value="teachers">TEACHERS</p><hr class="sub"></li>
         <li><p>STUDENTS</p><hr class="none"></li>
-      </ul>
+
+       </ul>
     </nav>
+
     <main>
       <section id=filtros>
-        <div>
-          <select class="filtro" name="Promoción">
+
+    <!--    <div>
+          <select class="place-filter" name="Promoción">
             <option value="">SEDE</option>
-            <option value="">Arequipa</option>
-            <option value="">Lima</option>
-            <option value="">Mexico</option>
-            <option value="">Santiago de chile</option>
+            <option value="arequipa">Arequipa</option>
+            <option value="lima">Lima</option>
+            <option value="mexico">Mexico</option>
+            <option value="santiago">Santiago de chile</option>
           </select>
-          <select class="filtro" name="Promoción">
+          <select class="code-filter" name="Promoción">
             <option value="">PROMOCIÓN</option>
-            <option value="">2016-1</option>
-            <option value="">2016-2</option>
-            <option value="">2017-1</option>
+            <option value="2016-1">2016-1</option>
+            <option value="2016-2">2016-2</option>
+            <option value="2017-1">2017-1</option>
             <option value="">seleccionar todos</option>
           </select>
           <select class="filtro" name="turno">
@@ -39,19 +43,53 @@
             <option value="">pm</option>
             <option value="">seleccionar todos</option>
           </select>
-          <select class="buton" name="sprint">
+          <select class="sprint-filter" name="sprint">
             <option value="">SPRINT</option>
-            <option value="">Sprint-1</option>
-            <option value="">Sprint-2</option>
-            <option value="">Sprint-3</option>
-            <option value="">Sprint-4</option>
-            <option value="">Sprint-5</option>
-            <option value="">Sprint-6</option>
+            <option value="1">Sprint-1</option>
+            <option value="2">Sprint-2</option>
+            <option value="3">Sprint-3</option>
+            <option value="4">Sprint-4</option>
+            <option value="5">Sprint-5</option>
+            <option value="6">Sprint-6</option>
             <option value="">seleccionar todos</option>
           </select>
-        </div>
+        </div>  -->
+        <div id="options-menu" class="disabled-menu">
+      <ul>
+        <li> <a href="#">PERÚ</a> </li>
+        <ul>
+          <li>LIMA</li>
+          <ul>
+            <li>2016-2</li>
+            <li>2017-1</li>
+            <li>2017-2</li>
+          </ul>
+          <li>AREQUIPA</li>
+          <ul>
+            <li>2016-2</li>
+            <li>2017-1</li>
+          </ul>
+
+        </ul>
+        <li>MÉXICO</li>
+
+        <li>CHILE</li>
+        <ul>
+          <li>2017-1</li>
+          <li>2017-2</li>
+        </ul>
+        <li> <a href="#">MÉXICO</a> </li>
+        <ul>
+          <li>CIUDAD DE MÉXICO</li>
+        </ul>
+        <li> <a href="#">SANTIAGO DE CHILE</a> </li>
+      </ul>
+    </div>
+
       </section>
-      <section id=content>
+
+   <section id=content>
+
         <div class="name-sprint">
           <!--insertar sede Sede seleccionada-->
           <p>SEDE LIMA</p>
@@ -61,196 +99,216 @@
         <!--Ingresar datos de data general-->
         <div id=datos>
           <!--Promedio general de notas-->
-          <div id=promedio-total>
-            <span>
-              <p>ACHIEVEMENT</p>
-              <!--Insetar Promedio total en porcentaje-->
-              <p>80%</p>
-            </span>
-              <!--Insertar grafico promedio total de notas-->
-            <img src="assets/images/circle-graphic.png" alt="grafico">
-            <!--Insertar datos numericos promedio total -->
-            <table>
-              <tbody>
-              <tr>
-                <td>Supera</td>
-                <!--Insertar porcentaje de alumnas que paso el minimo-->
-                <td>90%</td>
-                <!--Insertar numero de alumnas que paso el minimo-->
-                <td>117</td>
-              </tr>
-              <tr>
-                <td>No supera</td>
-                <!--Insertar porcentaje de alumnas que no paso el minimo-->
-                <td>10%</td>
-                <!--Insertar numero de alumnas que no paso el minimo-->
-                <td>13</td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id=notas-hse>
-            <span>
-              <p>HSE ACHIEVEMENT</p>
-              <!--Promedio total en porcentaje-->
-              <p>80%</p>
-            </span>
-            <!--Insertar grafico promedio de notas HSE-->
-            <img src="assets/images/circle-graphic.png" alt="grafico">
-            <!--Insertar datos numericos promedio notas HSE-->
-            <table>
-              <tbody>
-              <tr>
-                <td>Supera</td>
-                <!--Insertar porcentaje de alumnas que paso el minimo hse por sprint-->
-                <td>90%</td>
-                <!--Insertar numero de alumnas que paso el minimo hse por sprint-->
-                <td>117</td>
-              </tr>
-              <tr>
-                <td>No Supera</td>
-                <!--Insertar porcentaje de alumnas que no paso el minimo hse por sprint-->
-                <td>10%</td>
-                <!--Insertar numero de alumnas que no paso el minimo hse por sprint-->
-                <td>13</td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id=notas-tech>
-          <span>
-            <p> TECH ACHIEVEMENT </p>
-            <!--Promedio total en porcentaje-->
-            <p>80%</p>
-          </span>
-            <!--Insertar grafico promedio de notas TECH-->
-          <img src="assets/images/circle-graphic.png" alt="grafico">
-            <!--Insertar datos numericos promedio notas HSE-->
-          <table>
-            <tbody>
-            <tr>
-              <td>Supera</td>
-              <!--Insertar porcentaje de alumnas que paso el minimo tech por sprint-->
-              <td>90%</td>
-              <!--Insertar numero de alumnas que paso el minimo tech por sprint-->
-              <td>117</td>
-            </tr>
-            <tr>
-              <td>No Supera</td>
-              <!--Insertar porcentaje de alumnas que no paso el minimo tech por sprint-->
-              <td>10%</td>
-              <!--Insertar numero de alumnas que no paso el minimo tech por sprint-->
-              <td>13</td>
-            </tr>
-              </tbody>
-          </table>
-        </div>
-        <div id=enrolled>
-          <span>
-            <p>ENROLLMENT</p>
-          </span>
-          <!--Insertar grafico estudiantes activas por sede-->
-          <img src="assets/images/bar-graph.png" alt="grafico">
-          <table>
-            <tbody>
-            <tr>
-              <!--Insetar total estudiantes activas-->
-              <td>145</td>
-              <!--Insertar porcentaje de desertoras-->
-              <td>20%</td>
-            </tr>
-            <tr>
-              <td>#Estudents Enrolled</td>
-              <td>%Dropout</td>
-            </tr>
-          </tbody>
-          </table>
-        </div>
-        <div id=nps>
-          <span>
-            <p>NET PROMOTER SCORE</p>
-          </span>
-          <!--Insertar grafico nps por sede-->
-          <img src="assets/images/graph.png" alt="grafico">
-          <table>
-            <tbody>
-            <tr>
-              <!--Insertar acumulado nps-->
-              <td>78%</td>
-              <!--Insertar % promotores-->
-              <td>60%</td>
-              <td>promoters</td>
-            </tr>
-            <tr>
-              <td>Cumulative NPS</td>
-              <!--Insertar % pasive-->
-              <td>30%</td>
-              <td>pasive</td>
-            </tr>
-            <tr>
-              <td></td>
-              <!--Insertar % detractors-->
-              <td>30%</td>
-              <td>detractors</td>
-            </tr>
-          </tbody>
-          </table>
-        </div>
-        <div id=satisfaction>
-          <span>
-            <p>ESTUDENTS SATISFACTION</p>
-          </span>
-          <!--Insertar grafico estudiantes activas por sede-->
-          <img src="assets/images/graph.png" alt="grafico">
-          <table>
-            <tbody>
-            <tr>
-              <!--Insetar total estudiantes satisfechas-->
-              <td>140</td>
-            </tr>
-            <tr>
-              <td>MEETING OR EXCEEDING EXPECTACION (CUMULATIVE)</td>
-            </tr>
-          </tbody>
-          </table>
-        </div>
-        <div id=teacher>
-          <span>
-            <p>TEACHER RATINGS</p>
-          </span>
-          <!--Insertar grafico estudiantes activas por sede-->
-          <img src="assets/images/graph.png" alt="grafico">
-          <table>
-            <tbody>
-            <tr>
-              <!--Insetar total estudiantes satisfechas-->
-              <td>4.2</td>
-            </tr>
-            <tr>
-              <td>OVERALL TEACHER RATING (CUMULATIVE)</td>
-            </tr>
-          </tbody>
-          </table>
-        </div>
-        <div id=jedi>
-            <span>
-              <p>JEDI MASTER RATINGS</p>
-            </span>
-            <!--Insertar grafico estudiantes activas por sede-->
-            <img src="assets/images/graph.png" alt="grafico">
-            <table>
-              <tbody>
-              <tr>
-                <!--Insetar total estudiantes satisfechas-->
-                <td>50</td>
-              </tr>
-              <tr>
-                <td>OVERALL JEDI RATING (CUMULATIVE)</td>
-              </tr>
-            </tbody>
-            </table>
-          </div>
-        </div>
+          <div class="container-overview show">
+
+            <div class="hide-for-teachers show">
+              <div id=promedio-total>  <!--- -->
+                <span>
+                  <p>ACHIEVEMENT</p>
+                  <!--Insetar Promedio total en porcentaje-->
+                  <p>80%</p>
+                </span>
+                  <!--Insertar grafico promedio total de notas-->
+                <img src="assets/images/circle-graphic.png" alt="grafico">
+                <!--Insertar datos numericos promedio total -->
+                <table>
+                  <tbody>
+                  <tr>
+                    <td>Supera</td>
+                    <!--Insertar porcentaje de alumnas que paso el minimo-->
+                    <td>90%</td>
+                    <!--Insertar numero de alumnas que paso el minimo-->
+                    <td>117</td>
+                  </tr>
+                  <tr>
+                    <td>No supera</td>
+                    <!--Insertar porcentaje de alumnas que no paso el minimo-->
+                    <td>10%</td>
+                    <!--Insertar numero de alumnas que no paso el minimo-->
+                    <td>13</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div id=notas-hse>      <!-- -->
+                <span>
+                  <p>HSE ACHIEVEMENT</p>
+                  <!--Promedio total en porcentaje-->
+                  <p>80%</p>
+                </span>
+                <!--Insertar grafico promedio de notas HSE-->
+                <img src="assets/images/circle-graphic.png" alt="grafico">
+                <!--Insertar datos numericos promedio notas HSE-->
+                <table>
+                  <tbody>
+                  <tr>
+                    <td>Supera</td>
+                    <!--Insertar porcentaje de alumnas que paso el minimo hse por sprint-->
+                    <td>90%</td>
+                    <!--Insertar numero de alumnas que paso el minimo hse por sprint-->
+                    <td>117</td>
+                  </tr>
+                  <tr>
+                    <td>No Supera</td>
+                    <!--Insertar porcentaje de alumnas que no paso el minimo hse por sprint-->
+                    <td>10%</td>
+                    <!--Insertar numero de alumnas que no paso el minimo hse por sprint-->
+                    <td>13</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div id=notas-tech>
+                  <span>
+                      <p> TECH ACHIEVEMENT </p>
+         <!--Promedio total en porcentaje-->
+                      <p>80%</p>
+                  </span>
+         <!--Insertar grafico promedio de notas TECH-->
+                  <img src="assets/images/circle-graphic.png" alt="grafico">
+                         <!--Insertar datos numericos promedio notas HSE-->
+                   <table>
+                       <tbody>
+                          <tr>
+                             <td>Supera</td>
+      <!--Insertar porcentaje de alumnas que paso el minimo tech por sprint-->
+                             <td>90%</td>
+      <!--Insertar numero de alumnas que paso el minimo tech por sprint-->
+                             <td>117</td>
+                         </tr>
+                         <tr>
+                             <td>No Supera</td>
+      <!--Insertar porcentaje de alumnas que no paso el minimo tech por sprint-->
+                              <td>10%</td>
+      <!--Insertar numero de alumnas que no paso el minimo tech por sprint-->
+                              <td>13</td>
+                         </tr>
+                       </tbody>
+                    </table>
+
+                     </div>
+  <!-- -->
+
+
+
+
+    <div id=enrolled>
+
+      <span>
+        <p>ENROLLMENT</p>
+      </span>
+      <!--Insertar grafico estudiantes activas por sede-->
+      <img src="assets/images/bar-graph.png" alt="grafico">
+      <table>
+        <tbody>
+        <tr>
+          <!--Insetar total estudiantes activas-->
+          <td class="enrollment-students">145</td>
+          <!--Insertar porcentaje de desertoras-->
+          <td>20%</td>
+        </tr>
+        <tr>
+          <td>#Estudents Enrolled</td>
+          <td>%Dropout</td>
+        </tr>
+      </tbody>
+      </table>
+    </div>
+    <div id=nps>
+      <span>
+        <p>NET PROMOTER SCORE</p>
+      </span>
+      <!--Insertar grafico nps por sede-->
+      <img src="assets/images/graph.png" alt="grafico">
+      <table>
+        <tbody>
+        <tr>
+          <!--Insertar acumulado nps-->
+          <td>78%</td>
+          <!--Insertar % promotores-->
+          <td>60%</td>
+          <td>promoters</td>
+        </tr>
+        <tr>
+          <td>Cumulative NPS</td>
+          <!--Insertar % pasive-->
+          <td>30%</td>
+          <td>pasive</td>
+        </tr>
+        <tr>
+          <td></td>
+          <!--Insertar % detractors-->
+          <td>30%</td>
+          <td>detractors</td>
+        </tr>
+      </tbody>
+      </table>
+    </div>
+    <div id=satisfaction>
+      <span>
+        <p>ESTUDENTS SATISFACTION</p>
+      </span>
+      <!--Insertar grafico estudiantes activas por sede-->
+      <img src="assets/images/graph.png" alt="grafico">
+      <table>
+        <tbody>
+        <tr>
+          <!--Insetar total estudiantes satisfechas-->
+          <td>140</td>
+        </tr>
+        <tr>
+          <td>MEETING OR EXCEEDING EXPECTACION (CUMULATIVE)</td>
+        </tr>
+      </tbody>
+      </table>
+    </div>
+            </div>
+  <div class="container-teachers show">
+  <div id=teacher>
+    <span>
+      <p>TEACHER RATINGS</p>
+    </span>
+    <!--Insertar grafico estudiantes activas por sede-->
+    <img src="assets/images/graph.png" alt="grafico">
+    <table>
+      <tbody>
+      <tr>
+        <!--Insetar total estudiantes satisfechas-->
+        <td>4.2</td>
+      </tr>
+      <tr>
+        <td>OVERALL TEACHER RATING (CUMULATIVE)</td>
+      </tr>
+    </tbody>
+    </table>
+  </div>
+  <div id=jedi>
+      <span>
+        <p>JEDI MASTER RATINGS</p>
+      </span>
+      <!--Insertar grafico estudiantes activas por sede-->
+      <img src="assets/images/graph.png" alt="grafico">
+      <table>
+        <tbody>
+        <tr>
+          <!--Insetar total estudiantes satisfechas-->
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>OVERALL JEDI RATING (CUMULATIVE)</td>
+        </tr>
+      </tbody>
+      </table>
+    </div>
+  </div>
+           </div>
+
+
+
+       </div>
+
     </section>
     </main>
 		<!-- Base de datos -->
