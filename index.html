@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">    
     <link rel="stylesheet" href="assets/icons/icomoon/style.css">
     <link rel="stylesheet" href="css/main.css">
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   </head>
   <body>
     <header>
@@ -14,7 +14,7 @@
     </header>
     <nav>
       <select name="" id="listbox">
-        <option value="">SEDE/GENERACIÓN</option>
+        <option value="">Sede-Generación</option>
         <optgroup label="Arequipa">
           <option value="2016-2" data-sede="AQP">2016-II</option>
           <option value="2017-1" data-sede="AQP">2017-I</option>
@@ -35,9 +35,9 @@
         </optgroup>
       </select>
       <div class="options">
-        <span>OVERVIEW</span>
-        <span>STUDENTS</span>
-        <span>TEACHER</span>
+        <span class="option-text">OVERVIEW</span>
+        <span class="option-text">STUDENTS</span>
+        <span class="option-text">TEACHER</span>
       </div>
      
       
@@ -51,7 +51,7 @@
      <div id="chart_div"></div>
 
 
-
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->

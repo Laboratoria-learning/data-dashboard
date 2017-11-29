@@ -4,6 +4,7 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: 'Quicksand', sans-serif;  
 }
 
 
@@ -31,15 +32,30 @@ header {
 
 nav {
   padding: 35px 35px 0px 35px;
-  background: #5EDA83;
+  background: DarkGray;
 }
 
 #listbox {
-  font-size: 18px;
+  border-radius: 7px;
+  font-size: 21px;
+  margin-left: 21px;
+  outline: none;
 }
 
 .options {
-  outline: 1px solid pink;
-  padding: 21px 0px;
+  box-sizing: border-box;
+  padding: 21px 0px 7px 21px;
   margin-top: 20px;
+}
+
+.option-text {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 35px;
+}
+
+.option-text:hover {
+  color: #fff;
+  border-bottom: 4px solid #ffc107;
+  cursor: pointer;
 }
