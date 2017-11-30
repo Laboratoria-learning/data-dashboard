@@ -15,7 +15,7 @@
       <select name="select-sede" id="select-sede">
       </select>
   </header>
-  
+
   <section id="tabs">
     <ul class="tabs-container">
     <li><button type="button" name="button-tab" data-tab-seleccionado='tabOverview' class='tab' >OVERVIEW</button></li>
@@ -24,9 +24,143 @@
     </ul>
     <div class="">
       <article id="overview" class="content">
-        <h1>OVERVIEW</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="contenedor">
+            <section class ='first'>
+              <!-- <div id='overview'class='elements'> -->
+              <div class ='cuadro-1'>
+                  <h2 class=tituloCuadro-1><strong>ENROLLMENT</strong></h2>
+                  <div class='tablaint-1'>
+                          <h2 class='numeroCuadro-1'><strong>120</strong></h2>
+                          <p class='detalleCuadro-1'>#STUDENTS CURRENTLY <br>ENROLLED </p>
+                          </div>
+                  <div class='tablaint-2'>
+                 <h2 class='porcentajeCuadro-1'><strong>20%</strong></h2>
+                 <h5 class='porcentajeDropout'>% DROPOUT</h5>
+             </div>
+                 <img src='assets/images/bar-graph.png' alt='enrolled'>
+             <div class ='cuadro-2'>
+                   <h3 class=tituloCuadro-2><strong>ACHIEVEMENT</strong></h3>
+                <div class='tablaint-3'>
+                 <h2 class='numeroCuadro-2'><strong>105</strong></h2>
+                 <p class='detalleCuadro-2'>#STUDENTS THAT METT <br>THE TARGET  </p>
+                </div>
+                <div class='tablaint-4'>
+                   <h2 class='porcentajeCuadro-2'>78%</h2>
+                   <h5 class='porcentajetotal'>% OF TOTAL(135)</h5>
+                </div>
+                  <img src='assets/images/graph.png' alt='achievement'>
+            </div>
+             <div class ='cuadro-3'>
+                  <h3 class=tituloCuadro-3>NET PROMOTER SCORE</h3>
+                <div class='tablaint-5'>
+                    <h3 class='porcentajeCuadro-2'>78%</h3>
+                    <h6 class='porcentajetotal'>% CUMULATIVE NPS</h6>
+                 </div>
+                    <ul class ='tablanetpromoter'>
+                      <li>60 %  Promoters</li>
+                      <li> 30 %  Passive</li>
+                      <li>10 %  Detractores</li>
+                    </ul>
+                   <img src='assets/images/graph.png' alt='achievement'>
+             </div>
+            </section>
+            <section class ='second'>
+                <div class ='cuadro-4'>
+                   <h3 class=tituloCuadro-4>TECH SKILLS</h3>
+                <div class='sprintlist'>
+                  <select name='OS'>
+                  <option selected value="0"> Overall (cumulative) </option>
+                  <optgroup label ="COMMON CORE">
+                    <option value='1'>Sprint 1:Create an interactive site</option>
+                    <option value="2">Sprint 2:Create an interactive site</option>
+                    <option value="3">Sprint 3:Create an interactive site</option>
+                    <option value="4">Sprint 4:Create an interactive site</option>
+                  </optgroup>
+                  <optgroup label="Javascript">
+                    <option value="10">Sprint 5:Create an interactive site</option>
+                    <option value="11">Sprint 6:Create an interactive site</option>
+                    <option value="12">Sprint 7:Create an interactive site</option>
+                    <option value="13">Sprint 8:Create an interactive site</option>
+                   </optgroup>
+                   <optgroup label="UX Design">
+                     <option value="14">Sprint 5:Create an interactive site</option>
+                     <option value="15">Sprint 6:Create an interactive site</option>
+                     <option value="16">Sprint 7:Create an interactive site</option>
+                     <option value="17">Sprint 8:Create an interactive site</option>
+                  </optgroup>
+                  </select>
+                 </div>
+                 <div class='tablaint-6'>
+                   <h2 class='numeroCuadro-4'><strong>90</strong></h2>
+                   <h6 class='detalleCuadro-4'>#STUDENTS THAT MEET<br>THE TARGET</h6>
+                 </div>
+                 <div class='tablaint-7'>
+                  <h2 class='porcentajeCuadro-4'><strong>62</strong></h2>
+                  <h5 class='porcentajetotal'>% OF TOTAL(135)</h5>
+                 </div>
+                  <img class='rectangulo-1' src="assets/images/rectangular-graphic.png" alt="">
+              <div class ='cuadro-5'>
+                  <img src="assets/images/circle-graphic.png" alt="">
+             </div>
+                <div class ='btn-green'></div>
+                 <h6 class='estudents-green'>#ESTUDENTS THAT MEET TARGET</h6>
+                <div class ='btn-red'></div>
+                 <h6 class='estudents-red'>#ESTUDENTS THAT DONT MEET TARGET</h6>
+               </div>
+          </section>
+         <section class ='third'>
+            <div class ='cuadro-6'>
+                <h3 class=tituloCuadro-6>TECH SKILLS</h3>
+              <div class='hse'>
+             <select name="OS">
+                <option selected value="0"> Latest sprint(S4)</option>
+              <optgroup label ="HSE">
+                <option value="1">Sprint 1:Create an interactive site</option>
+                <option value="2">Sprint 2:Create an interactive site</option>
+                <option value="3">Sprint 3:Create an interactive site</option>
+                <option value="4">Sprint 4:Create an interactive site</option>
+              </optgroup>
+            </select>
+            </div>
+           <div class='tablaint-8'>
+             <h3 class='numeroCuadro-6'>80</h3>
+             <h5 class='detalleCuadro-6'>#OVERALL CLASS AVERAGE</h5>
+           </div>
+           <div class='tablaint-9'>
+             <h3 class='porcentajeCuadro-4'>62%</h3>
+             <p class='detalleCuadro-2'>#STUDENTS THAT METT <br>THE TARGET</p>
+           </div>
+           <img class='rectangular-2'src="assets/images/rectangular-graphic.png" alt="">
+         <div class ='cuadro-7'>
+           <img class='circle-1'src="assets/images/circle-graphic.png" alt="">
+          </div>
+           <div class ='btn-green'></div>
+             <h6 class='estudents-green'>#ESTUDENTS THAT MEET TARGET</h6>
+           <div class ='btn-red'></div>
+             <h6 class='estudents-red'>#ESTUDENTS THAT DONT MEET TARGET</h6>
+          </div>
+          </section>
+          <section class ='fourth'>
+            <div class ='cuadro-8'>
+              <h3 class=tituloCuadro-8>STUDENT SATISFAXTION</h3>
+             <div class='tablaint-10'>
+               <h3 class='numeroCuadro-8'>140</h3>
+               <p class='meeting'>% MEETING OR EXCEEDING <br>EXPECTATIONS(CUMULATIVE)</p>
+             </div>
+              <div class='graph-2'>
+               <img src='assets/images/graph.png' alt='achievement'>
+            </div>
+            </div>
+          <div class ='cuadro-9'>
+               <h3 class=tituloCuadro-9>TEACHER RATING</h3>
+             <div class='tablaint-11'>
+               <h3 class='numeroCuadro-10'>4.2</h3>
+               <p class='overall'>OVERALL TEZHER RATING<br>(CUMULATIVE)</p>
+             </div>
+              <div class='graph-3'>
+                <img src='assets/images/graph.png' alt='achievement'>
+              </div>
+          </div>
       </article>
       <article id="students" class="content">
         <h1>STUDENTS</h1>
@@ -49,7 +183,7 @@
       </article>
     </div>
   </section>
-  
+
 
     <!-- Base de datos -->
     <script src="./js/data.js"></script>
