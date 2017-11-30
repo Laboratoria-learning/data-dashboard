@@ -164,50 +164,24 @@ color: #575D69;
 /*****menu de sedes***********************/
 
 .box-menu {
-  margin: 10px 20px;
-  width: 174px; 
+  margin: 10px 20px; 
   display: inline-block;
 }
 
-.sedes {
+#site {
+  width: 150px;
+  font-size: 20px;
+  display: inline-block;
+  margin: 10px 20px;
+  color: white;
+}
+
+#select-sprint {
+  width: 162px;
+  font-size: 18px;
   text-align: center;
 }
 
-.menu-sedes li a {
-  padding: 15px 5px;
-  display: block;
-  background-color: #ffc107;
-  color: black;
-}
-
-.menu-sedes li a:hover {
-  background-color: #e0e0e0;
-  transition: 0.3s;
-}
-
-.menu-sedes li ul {
-  display: none ;
-  position: absolute;
-  min-width: 170px;
-}
-
-/* .menu-sedes >li {
-  float: left;
-} */
-
-.menu-sedes li:hover > ul {
-  display: block;
-  transition: 0.3s;
-}
-
-.menu-sedes li ul li{
-  position: relative; 
-}
-
-.menu-sedes li ul li ul{
-  right: -170px; 
-  top:  0px;
-}
 
 /*****************estilos tabs***************************/
 .tab {
@@ -218,16 +192,12 @@ color: #575D69;
 
 .box-button {
   display: inline-block;
-  margin-left: 60%;
+  margin-left: 45%;
 }
 
 .box-information {
   width: 100%;
-  height: 100vh;
   padding: 20px;
-  text-align: justify;
-  background-color: #333333;
-  color: white;
 }
 
 .tab:hover {
@@ -238,13 +208,12 @@ color: #575D69;
 
 .container-section {
   overflow: hidden;
+  background-color: #333333;
 }
 
+
+
 /***********************************************************************************jymma************************/
-main{
-  position: absolute;
-  z-index:-1;
-}
 
 /*Contenedor Título*/
 .title-container {
@@ -365,14 +334,9 @@ main{
 }
 
 /*Gráfico Inscripción*/
-.enrollment-graph {
-	background-image: url(../assets/images/bar-graph.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-	width: 294px;
-  height: 226px;
-  margin-top: 89px;
-  margin-left: px;
+#enrollment-graph {
+margin-left: 25px;
+margin-top: 100px;
 }
 
 /*Gráfico Achievement*/
