@@ -26,10 +26,10 @@ function countStudentActive(sede, generation, students) {
   }
 
   var porcentaje = parseInt((countInActive * 100) / total);
-  console.log('Son ' + total + '. Las alumnas activas son: ' + countActive + '. y las alumnas retiradas son: ' + countInActive + '\n Las alumnas retiratas representan el ' + porcentaje + '%');
+  // console.log('Son ' + total + '. Las alumnas activas son: ' + countActive + '. y las alumnas retiradas son: ' + countInActive + '\n Las alumnas retiratas representan el ' + porcentaje + '%');
 }
 
-countStudentActive('AQP', '2016-2', 'students');
+// countStudentActive('AQP', '2016-2', 'students');
 
 
 // Función que devuelve alumans qye pasan promedio de puntajes y el porcentaje que representan.
@@ -43,13 +43,13 @@ function achievement(sede,generation){
 }
   totalStudent = countActive;
   totalSupera = parseInt((countActive*count)/100);
-console.log('Las alumnas que superan el puntaje promedio son: ' + totalSupera + ' Y representan el: ' + count + '%');
+// console.log('Las alumnas que superan el puntaje promedio son: ' + totalSupera + ' Y representan el: ' + count + '%');
 }
 
-achievement('AQP','2016-2');
-achievement('AQP', '2017-1');
-achievement('CDMX', '2017-1');
-achievement('CDMX', '2017-2');
+// achievement('AQP','2016-2');
+// achievement('AQP', '2017-1');
+// achievement('CDMX', '2017-1');
+// achievement('CDMX', '2017-2');
 
 // función para promedio NPS de todos los sprints
 
@@ -58,22 +58,22 @@ function nps(sede,generation){
   var numberRatings = data[sede][generation]['ratings'];
   for (var i = 0; i < numberRatings.length; i++) {
     var averageNps = numberRatings[i]['nps']['promoters'] - numberRatings[i]['nps']['detractors'];
-    console.log(averageNps);
+    // console.log(averageNps);
   }
 }
 
 nps('AQP', '2016-2');
-function satisfaction(sede,generation){
-  var count = 0;
-  var numberRatings = data[sede][generation]['ratings'];
-  for (var i = 0; i < numberRatings.length; i++) {
-    var promoterStudent = numberRatings[i]['nps']['promoters'];
-   count = count + promoterStudent;
-   var averagePromoters=parseInt(count/numberRatings.length)
-    }
-    console.log(averagePromoters);
-    }
-    satisfaction('AQP','2016-2');
+// function satisfaction(sede,generation){
+//   var count = 0;
+//   var numberRatings = data[sede][generation]['ratings'];
+//   for (var i = 0; i < numberRatings.length; i++) {
+//     var promoterStudent = numberRatings[i]['nps']['promoters'];
+//    count = count + promoterStudent;
+//    var averagePromoters=parseInt(count/numberRatings.length)
+//     }
+//     console.log(averagePromoters);
+//     }
+//     satisfaction('AQP','2016-2');
 
 // función que devuelve cantidad de alumna por sede y generación.
 
@@ -82,6 +82,7 @@ var generationSelected = document.getElementById('select-generation');
 var sede = '';
 var gen = '';
 var students = {};
+var ratings = {};
 var studenDesert = 0;
 
 generationSelected.addEventListener('change', inscription);
@@ -101,7 +102,7 @@ function inscription(event) {
   var studentsDeserted = 0;
 
   // función que devuelve el porcentaje de alumnas desertadas
-  
+
   function percentDeserted(){
     for(var i = 0; i<students.length;i++){
       if (students[i].active === false){
@@ -114,6 +115,24 @@ function inscription(event) {
   var numberDesert = document.getElementById('numberDesert');
   numberDesert.textContent = percentDeserted();  
   numberDesert.setAttribute('class', 'number');
+
+  // función que devuelve porcentaje de satisfacción de las alumnas
+
+  var sumPercent = 0;
+  function satisfied (){
+    ratings = data[sede][gen].ratings;
+    for(var i = 0;i < ratings.length; i++){
+      sumPercent= sumPercent + ratings[i]['nps']['promoters'];
+    }
+
+    var averageSatisfied = sumPercent/ratings.length
+    return averageSatisfied + '%';
+  }
+
+  var alumSatisfied = document.getElementById('alum-satifaction');
+  alumSatisfied.textContent = satisfied();
+  alumSatisfied.setAttribute('class', 'number');
+  
 };
 
 //función para  verificar el porcentaje de estudiantes satisfechas con la experiencia de Laboratoria.
