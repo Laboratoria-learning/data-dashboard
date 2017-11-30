@@ -247,3 +247,10 @@ select{
   margin-top: 20px;
   width: 80%;
   height: 35%;}
+
+.ocultar{
+  display: none;
+}
+.mostrar{
+  display: block;
+}

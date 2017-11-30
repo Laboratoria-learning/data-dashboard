@@ -42,6 +42,9 @@ var teacherRated = document.getElementById('teacher-rating');
 //Jedi Rated 
 var jediRated = document.getElementById('JediMaster-rating')
 
+//Eventos del nav
+var navStudents = document.getElementById('estudiantes')
+
 //Sedes 
 //AQP, CDMX, LIM, SCL
 function selectSede () {
@@ -400,6 +403,15 @@ function sprintsNoteHse(sp1b, sp1l, sp2b, sp2l, sp3b, sp3l, sp4b, sp4l) {
     sp4l: sprint4low,
   }
 }
+
+function navClick() {
+  navStudents.addEventListener('click',function(evento) {
+    evento.preventDefault();
+    document.getElementsByClassName('stats')[0].classList.add('ocultar');
+    document.getElementsByClassName('students')[0].classList.add('mostrar');
+    document.getElementsByClassName('students')[0].classList.remove('ocultar');
+  })
+}navClick();
 
 // Puedes hacer uso de la base de datos a través de la variable `data`
 console.log(dataStudents);
