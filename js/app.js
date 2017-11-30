@@ -10,10 +10,10 @@ window.addEventListener('load', function() {
   var overcon = document.getElementById('overview');// contenido overview
   
 
-  function studentsLaboratoria(sede, generacion) {
+ /* function studentsLaboratoria(sede, generacion) {
     
   }  
-  studentsLaboratoria('Lima', '2017-II');
+  studentsLaboratoria('Lima', '2017-II');*/
 
 
   student.addEventListener('click', elige);
