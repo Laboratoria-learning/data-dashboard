@@ -149,3 +149,8 @@ section {
   margin-left: 30px;
   margin-top: 10px;
 }
+
+.show{
+  position: absolute;
+  z-index: +1;
+}

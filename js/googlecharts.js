@@ -28,7 +28,7 @@ function drawChartTotalStudentsAQP() {
     bar: {groupWidth: '95%'},
     legend: { position: 'none' },
   };
-  var chartTotalStudentsAQP = new google.visualization.ColumnChart(document.getElementById('columnchart1_values'));
+  var chartTotalStudentsAQP = new google.visualization.ColumnChart(document.getElementById('columnchart1Values'));
   chartTotalStudentsAQP.draw(viewTotalStudentsAQP, optionsTotalStudentsAQP);
 }
 
@@ -60,7 +60,7 @@ function drawChartTotalStudentsCDMX() {
     bar: {groupWidth: '95%'},
     legend: { position: 'none' },
   };
-  var chartTotalStudentsCDMX = new google.visualization.ColumnChart(document.getElementById('columnchart2_values'));
+  var chartTotalStudentsCDMX = new google.visualization.ColumnChart(document.getElementById('columnchart2Values'));
   chartTotalStudentsCDMX.draw(viewTotalStudentsCDMX, optionsTotalStudentsCDMX);
 }
 
@@ -93,7 +93,7 @@ function drawChartTotalStudentsLIM() {
     bar: {groupWidth: '95%'},
     legend: { position: 'none' },
   };
-  var chartTotalStudentsLIM = new google.visualization.ColumnChart(document.getElementById('columnchart3_values'));
+  var chartTotalStudentsLIM = new google.visualization.ColumnChart(document.getElementById('columnchart3Values'));
   chartTotalStudentsLIM.draw(viewTotalStudentsLIM, optionsTotalStudentsLIM);
 }
 
@@ -126,6 +126,6 @@ function drawChartTotalStudentsSCL() {
     bar: {groupWidth: '95%'},
     legend: { position: 'none' },
   };
-  var chartTotalStudentsSCL = new google.visualization.ColumnChart(document.getElementById('columnchart4_values'));
+  var chartTotalStudentsSCL = new google.visualization.ColumnChart(document.getElementById('columnchart4Values'));
   chartTotalStudentsSCL.draw(viewTotalStudentsSCL, optionsTotalStudentsSCL);
 }
