@@ -35,4 +35,4 @@
 * Nelida Sheridan Quispe Tacuri
 * Yanira Jazmin Arenazas Bueno
 
-Nota: Este trabajo se subió en gh-pages: [Sin titulo](https://bc-nelida-yanira.github.io/data-dashboard/)
+Nota: Este trabajo se subió en gh-pages: [PRODUCTO FINAL](https://bc-nelida-yanira.github.io/data-dashboard/)
