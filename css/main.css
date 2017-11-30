@@ -15,6 +15,9 @@
     padding: 0;
     margin: 0;
     font-family: 'Raleway', sans-serif;
+    border-bottom-right-radius: 10px;
+    border-color: #ffc107;
+    outline:none;
 }
 
 nav{
@@ -90,12 +93,12 @@ nav .fa-bars{
 
 .graphic-data{
    width: 150px;
-   outline: 1px solid red;
    display: inline-block;
    margin: 5px;
-   margin-top: 20px;
-   background:#f7f7f7;
+   margin-top: 15px;
+   background:#e1e1e1;
    text-align: center;
+   padding:5px;
 }
 
 .skill{
@@ -240,6 +243,11 @@ nav .fa-bars{
   #img-container span{
     font-size: 10px;
   }
+  #img-container .item{
+    background-color: #efefef;
+    padding: 4px;
+    margin-right: 5px;
+  }
   #img-container #porcentage-box{
     position:absolute;
     right: 10px;
@@ -261,6 +269,14 @@ nav .fa-bars{
     right:10px;
     bottom: 10px;
     font-size: 20px;
+  }
+
+  #img-container .remove{
+    background-color: #f7b617;
+    color: #fff;
+    display:inline-block;
+    margin-top: 35px;
+    padding: 5px 10px;
   }
 
 .container-grafy{
