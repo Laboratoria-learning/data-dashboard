@@ -154,24 +154,3 @@ var overcome = 0;
 for (var i = 0; i < ratings.length; i++) {
   overcome += ratings[i].student.supera;
 }
-
-
-// Grafico
-var sede1 = data['AQP']['2017-1']['students']['active'];
-var sede2 = data['AQP']['2016-2']['students'];
-// google.charts.load('current', { 'packages': ['corechart'] });
-// google.charts.setOnLoadCallback(drawChart);
-
-// function drawChart() {
-//   var data = google.visualization.arrayToDataTable([
-//     ['Generacion', 'Porcentaje'],
-//     ['2017', sede1],
-//     ['2016', sede2]]);
-
-//   var options = { title: 'Alumnas' };
-
-//   var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-//   chart.draw(data, options);
-// }
-// fin grafico
