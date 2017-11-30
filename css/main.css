@@ -1,20 +1,167 @@
+/*
+ * Estilos de tu proyecto
+ */
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-.contst {
-width: 700px;
-height: 160px;
+body {
+  background-color: #f7f7f7;
+  font-size: 18px;
+}
+
+header {
+  background: white;
+  width: 100%;
+  margin: 0 auto;
+  height: 17%;
+  overflow: hidden;
+}
+
+.start {
+  margin: 20px 5px;
+  float: left;
+}
+
+.user {
+  margin: 20px 10px;
+  float: right;
+}
+
+.logo {
+  width: 17%;
+  margin: 0 30%;
+}
+
+.logo img {
+  width: 100%;
+  
+}
+
+.user li,
+.box-main li {
+  list-style:none;
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.box-header {
+  display: inline-block;
+}
+.bars:hover,
+.user .icons:hover {
+  background: #ffc107; 
+  transition: 0.3s;
+}
+
+.search {
+  padding: 6px;
+  border-radius: 3px;
+  background: #ecebeb;
+  margin-left: 5px;
+}
+
+.search input {
+  border: none;
+  background: none;
+  font-size: 13px;
+  line-height: 19px;
+  width: 200px;
+  outline: none;
+}
+
+.search:hover {
+  background: #dfdede;
+  transition: 0.3s;
+}
+
+.icons{
+  color: #575D69;
+  background-color: #f7b617;
+  border-radius: 3px;
+  margin-left: 10px; 
+  padding: 8px;
+  font-size: 22px;
+}
+
+.icons-search {
+  font-size: 22px;
+  color: #575D69; 
+  padding: 5px;
+}
+
+/*jymma*/
+.idioma {
+  position: relative;
+  top: -25px;
+  left: 60px;
+}
+
+.ale{
+  border-radius: 100%;
+  width: 65px;
+  height: 65px;
+  float: right;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.flag{
+width: 25px;
+height: 15px;
+  float: left;
+  margin-right: 5px;
+}
+
+/***************************************************************/
+.navegacion{
 position: absolute;
-top: 40px;
-left: 80px;
+top: 12%;
+left: 0;
+width: 0%;
+height: 88vh;
+background: rgba(0,0,0,.0);
 }
-#studentname{
-	font-size: 25px;
-	margin-top:10px;
-	position: relative;
-	margin-left: 220px;
+
+.navegacion ul{
+width: 300px;
+height: 100%;
+background: #fff;
+list-style: none;
+position: absolute;
+top: 0;
+left: -300px;
+transition: left .3s;
 }
-#studentpic{
-	position: absolute;
+
+.title-menu{
+padding: 20px;
+background: #ffc107;
+color: #fff;
+text-align: center;
 }
+
+.navegacion .menu a{
+display: block;
+padding: 20px;
+border-bottom: 1px solid #C6D0DA;
+color: #575D69;
+}
+
+.navegacion .menu a:hover{
+  background: #e6e6e6;
+  transition: 0.3s;
+}
+/*****menu de sedes***********************/
 
 .box-menu {
   margin: 10px 20px; 
@@ -198,3 +345,8 @@ left: 80px;
 .marg {
 	margin-right: 20px;
 }
+
+/**************************************jymma*****************************/
+
+
+
