@@ -55,20 +55,22 @@ window.addEventListener('load', function() {
     var jediMasterRatings = document.querySelector('.jedi-master-ratings');
     jediMasterRatings.textContent = jediMasterPoints(PLACE, CODE);
 
+    var studentsPercentagePassed = document.querySelector('.percentage-passed');
+    studentsPercentagePassed.textContent = studentPercentagePassed(PLACE, CODE) + '%';
+    var studentsPassed = document.querySelector('.students-passed');
+    // VERIFICAR
+    studentsPassed.textContent = (studentPercentagePassed(PLACE, CODE) * totalActive(PLACE, CODE, 'active')) / 100;
+
     var sede = document.getElementById('sede');
-    if (PLACE==="LIM") {
-      sede.textContent="SEDE LIMA";
+    if (PLACE === 'LIM') {
+      sede.textContent = 'SEDE LIMA';
+    } else if (PLACE === 'AQP') {
+      sede.textContent = 'SEDE AREQUIPA';
+    } else if (PLACE === 'CDMX') {
+      sede.textContent = 'SEDE MEXICO';
+    } else if (PLACE === 'SCL') {
+      sede.textContent = 'SEDE CHILE';
     }
-    else if (PLACE==="AQP") {
-      sede.textContent="SEDE AREQUIPA";
-    }
-    else if (PLACE==="CDMX") {
-      sede.textContent="SEDE MEXICO";
-    }
-    else if (PLACE==="SCL") {
-      sede.textContent="SEDE CHILE";
-    }
-  
   }
 });
 
@@ -106,39 +108,43 @@ function TeachersPoints(place, code) {
   return average;
 }
 
+// para calcular el porcentaje de las que superan la nota en hse y tech :
+
+function studentPercentagePassed(place, code) {
+  var array = [];
+  var sum = 0;
+  var ratings = data[place][code].ratings;
+  for (var i = 0 ; i < ratings.length; i++) {
+    array.push(ratings[i].student.supera);
+  }
+
+  for (var j = 0 ; j < array.length;j++) {
+    sum += array[j];
+  }
+  return sum / array.length;
+}
+// funcion que calcula el numero de personas que representa  el porcentaje de las que superan la meta en ambos cursos:
+function studentPassed(place, code) {
+  var result = (studentPercentagePassed(PLACE, CODE) * totalActive(PLACE, CODE, 'active')) / 100;
+  return result;
+}
+
 // funcion que saca el promedio de los puntajes de los jedi-master   (todos los sprints)
 
 function jediMasterPoints(place, code) {
   var listOfCodes = data[place];
-  var arrayPrueba = [];
   var sum = 0;
   var promocion = listOfCodes[code];
   var students = promocion.students;
   var ratings = promocion.ratings;
   for (var i = 0 ; i < ratings.length ; i++) {
-    // arrayPrueba.push(ratings[i].jedi)  ;
     sum += ratings[i].jedi;
   }
   var average = sum / ratings.length;
   return average;
-// return arrayPrueba
 }
 /*
-// sacand el total de estudiantes activas y no activas
-totalActive('LIM', '2017-1', 'notActive') + totalActive('LIM', '2017-1', 'active');
-console.log(totalActive('AQP', '2016-2', 'active') + totalActive('AQP', '2016-2', 'notActive'));// PROMOCION 2016-2;
-console.log(totalActive('AQP', '2017-1', 'active') + totalActive('AQP', '2017-1', 'notActive'));// PROMOCION 2017-1
-console.log(totalActive('LIM', '2016-2', 'notActive') + totalActive('LIM', '2016-2', 'active'));
-console.log(totalActive('LIM', '2017-1', 'notActive') + totalActive('LIM', '2017-1', 'active'));
-console.log(totalActive('LIM', '2017-2', 'notActive') + totalActive('LIM', '2017-2', 'active'));
-// En Mexico
-console.log(totalActive('CDMX', '2017-1', 'notActive') + totalActive('CDMX', '2017-1', 'active'));
-console.log(totalActive('CDMX', '2017-2', 'notActive') + totalActive('CDMX', '2017-2', 'active'));
-// En Chile
-console.log(totalActive('SCL', '2016-2', 'notActive') + totalActive('SCL', '2016-2', 'active'));
-console.log(totalActive('SCL', '2017-1', 'notActive') + totalActive('SCL', '2017-1', 'active'));
-console.log(totalActive('SCL', '2017-2', 'notActive') + totalActive('SCL', '2017-2', 'active'));
-// totalActive('LIM', '', activeOrNotActive) +  totalActive('LIM', generacion, activeOrNotActive);
+
 // FUNCION QUE CALCULA EL PORCENTAJE DESERCION:
 
 // porcentaje de estudiantes en hse y tech :
@@ -204,43 +210,6 @@ function sprintPassingScore(place, code, sprint) {
 sprintPassingScore('LIM', '2017-1', 4);
 //  calculando el porcentaje de las alumnas que superan la meta por sprint:
 var resultado = (sprintPassingScore('LIM', '2017-1', 3) / totalActive('LIM', '2017-1', 'active')) * 100;
-
-
-// funcion que saca el promedio de los puntajes de los profesores   (todos los sprints)
-function TeachersPoints(place, code) {
-  var listOfCodes = data[place];
-  // var arrayPrueba= []
-  var sum = 0;
-  var promocion = listOfCodes[code];
-  var students = promocion.students;
-  var ratings = promocion.ratings;
-  for (var i = 0 ; i < ratings.length ; i++) {
-  // arrayPrueba.push(ratings[i].teacher)  ;
-    sum += ratings[i].teacher;
-  }
-  var average = sum / ratings.length;
-  return average;
-}
-
-TeachersPoints('LIM', '2017-2');
-// funcion que saca el promedio de los puntajes de los jedi-master   (todos los sprints)
-
-function jediMasterPoints(place, code) {
-  var listOfCodes = data[place];
-  var arrayPrueba = [];
-  var sum = 0;
-  var promocion = listOfCodes[code];
-  var students = promocion.students;
-  var ratings = promocion.ratings;
-  for (var i = 0 ; i < ratings.length ; i++) {
-    // arrayPrueba.push(ratings[i].jedi)  ;
-    sum += ratings[i].jedi;
-  }
-  var average = sum / ratings.length;
-  return average;
-// return arrayPrueba
-}
-jediMasterPoints('LIM', '2017-2');
 
 // funcion que calcula el nps
 function npsOfSprints(place, code) {
