@@ -3,9 +3,245 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link rel="icon" href="assets/images/lab.ico">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-
+    <!-- Estructura del header-->
+    <header>
+      <div class="container">
+        <nav class="subcontainer left">
+          <ul>
+            <li class="nav-bar">
+              <div class="photo"></div>
+              <p>¡Bienvenida!</p>
+            </li>
+            <li class="nav-bar" id="menuD">
+              <i class="fa fa-sort-desc fa-2x" aria-hidden="true"></i>
+              <ul>
+                <li><a href="#">PERFIL</a></li>
+                <li><a href="#">MENSAJES</a></li>
+                <li><a href="#">CONFIGURACION</a></li>
+                <li><a href="#">CERRAR SESION</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <figure class="subcontainer icon">
+          <img src="assets/images/logo-laboratoria.svg" alt="logo">
+        </figure>
+        <nav class="subcontainer right">
+          <ul>
+            <li class="nav-extra">
+              <div class="language">
+                <a href="#">ES</a>/<a href="#">EN</a>
+              </div>
+            </li>
+            <li class="nav-extra">
+              <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <section class="selections">
+        <select class="sedes">
+          <option value="">Selecciona una sede</option>
+          <option value="AQP">Arequipa</option>
+          <option value="CDMX">Ciudad de México</option>
+          <option value="LIM">Lima</option>
+          <option value="SCL">Santiago de Chile</option>
+        </select>
+        <select class="generations">
+          <option id="text-select" value="">Generación</option>
+        </select>
+        <div class="label">
+          <ul>
+            <li>
+              <button type="button" name="button" data-tab-select = 'tabOverview' class="tab">VISION GENERAL</button>
+            </li>
+            <li>
+              <button type="button" name="button" data-tab-select = 'tabStudents' class="tab">ESTUDIANTES</button>
+            </li>
+            <li>
+              <button type="button" name="button" data-tab-select = 'tabTeachers' class="tab">PROFESORES</button>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </header>
+    <!-- Estructura de Visión General-->
+    <article id="overview">
+      <!-- Estructura de la primera sección o fila-->
+      <section>
+        <div class="enrollment">
+          <h1>MATRICULADAS</h1>
+          <div class='container-box'>
+            <div class='box'>
+              <p id="alumns-total">-</p>
+              <p>Total de Estudiantes</p>
+            </div>
+            <div class='box'>
+              <p id="desert-percentage">-</p>
+              <p>% Deserción</p>
+            </div>
+          </div>
+          <div>
+            <img src="assets/images/bar-graph.png" alt="grafico">
+          </div>
+        </div>
+        <div class="achievement">
+          <h1>LOGROS</h1>
+          <div class='container-box'>
+            <div class='box'>
+              <p id="num-exceede-goal">-</p>
+              <p># Estudiantes que alcanzaron la meta</p>
+            </div>
+            <div class='box'>
+              <p id="percentage-exceede-goal">-</p>
+              <p>% Estudiantes que alcanzaron la meta</p>
+            </div>
+          </div>
+          <div>
+            <img src="assets/images/graph.png" alt="grafico">
+          </div>
+        </div>
+        <div class="nps">
+          <h1>PUNTAJE DE PROMOTOR</h1>
+          <div class='container-box'>
+            <div class='box'>
+              <p id="nps">-</p>
+              <p>%acumulativo</p>
+            </div>
+            <div class='box'>
+              <p>60% Promotores</p>
+              <p>30% Pasivo</p>
+              <p>10% Detractores</p>
+            </div>
+          </div>
+          <div>
+            <img src="assets/images/graph.png" alt="grafico">
+          </div>
+        </div>
+      </section>
+      <!-- Estructura de la segunda sección-->
+      <section>
+        <select id="sprints" class="sedes"><!-- Estructura del selector de Sprint-->
+          <option id="text-sprint" value="">Sprint...</option>
+        </select>
+        <div>
+          <div class='tech-skills'>
+            <h1>HABILIDADES TECNICAS</h1>
+            <div class="container-box">
+              <div class='box'>
+                <p id="over-goal-tech">-</p>
+                <p># Estudiantes que alcanzaron la meta</p>
+              </div>
+              <div class='box'>
+                <p id="over-goal-tech-percentage">-</p>
+                <p>% Estudiantes que alcanzaron la meta</p>
+              </div>
+            </div>
+            <div>
+              <img src="assets/images/rectangular-graphic.png" alt="grafico">
+            </div>
+          </div>
+          <div class='life-skills'>
+            <h1>HSE</h1>
+            <div class="container-box">
+              <div class='box'>
+                <p id="over-goal-hse">-</p>
+                <p># Estudiantes que alcanzaron la meta</p>
+              </div>
+              <div class='box'>
+                <p id="over-goal-hse-percentage">-</p>
+                <p>% Estudiantes que alcanzaron la meta</p>
+              </div>
+            </div>
+            <div>
+              <img src="assets/images/rectangular-graphic.png" alt="grafico">
+            </div>
+          </div>
+      </section>
+      <!-- Estructura de la tercera sección-->
+      <section>
+        <div class="student-satisfacción">
+          <h1>SATISFACCION DE ESTUDIANTES</h1>
+          <div class='box'>
+            <p id='happy'>-</p>
+            <p>% Cumpliendo o excediendo las espectativas(acumulado)</p>
+          </div>
+          <div>
+            <img src="assets/images/graph.png" alt="">
+          </div>
+        </div>
+        <div class="teacher-rating">
+          <h1>PUNTUACION DE PROFESORES</h1>
+          <div class='box'>
+            <p id="teacher">-</p>
+            <p>Calificación general del maestro</p>
+          </div>
+          <div>
+            <img src="assets/images/graph.png" alt="">
+          </div>
+        </div>
+        <div class="jedi-rating">
+          <h1>PUNTUACION JEDI</h1>
+          <div class='box'>
+            <p id="jedi">-</p>
+            <p>Calificación general del jedi</p>
+          </div>
+          <div>
+            <img src="assets/images/graph.png" alt="">
+          </div>
+        </div>
+      </section>
+    </article>
+    <!-- Estructura de estudiantes-->
+    <article id="students" style="display:none">
+      <form class="search-box">
+        <input type="text" placeholder="Buscar">
+        <i class="fa fa-search fa-2x" aria-hidden="true"></i>
+      </form>
+      <div id="listOfStudents">
+      </div>
+    </article>
+    <!-- Estructura de teachers-->
+    <article id="teachers" style="display:none">
+      <div class="box-t">
+        <figure><img src="assets/images/ruth.jpg" alt="photo"></figure>
+        <a href="https://github.com/RuthSalvador" target="_blank">@RuthSalvador</a>
+      </div>
+      <div class="box-t">
+        <figure><img src="assets/images/gaby.jpg" alt="photo"></figure>
+        <a href="https://github.com/Gabx04">@Gabx04</a>
+      </div>
+      <div class="box-t">
+        <figure><img src="assets/images/joalbert.jpg" alt="photo"></figure>
+        <a href="https://github.com/joalbertg">@joalbertg</a>
+      </div>
+      <div class="box-t">
+        <figure><img src="assets/images/lulu.jpg" alt="photo"></figure>
+        <a href="https://github.com/developerVilchez">@developerVilchez</a>
+      </div>
+      <div class="box-t">
+        <figure><img src="assets/images/michelle.jpg" alt="photo"></figure>
+        <a href="https://github.com/michellesegv">@michellesegV</a>
+      </div>
+      <div class="box-t">
+        <figure><img src="assets/images/usuario.png" alt="photo"></figure>
+        <a href="#" target="_blank">Alejandra</a>
+      </div>
+      <div class="box-t">
+        <figure><img src="assets/images/mari.png" alt="photo"></figure>
+        <a href="#" target="_blank">Mariana</a>
+      </div>
+      <div class="box-t">
+        <figure><img src="assets/images/laura.png" alt="photo"></figure>
+        <a href="#" target="_blank">Laura</a>
+      </div>
+    </article>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->

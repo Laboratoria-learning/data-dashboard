@@ -1,3 +1,393 @@
-/*
- * Estilos de tu proyecto
- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*Estilos del header*/
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #00000040;
+  font-weight: 900;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  margin: 0 5%;
+  overflow: auto;
+  position: relative;
+  width: 90%;
+  text-align: center;
+}
+
+.left {
+  display: inline-block;
+  float: left;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.nav-bar {
+  float: left;
+  list-style: none;
+  padding-right: 20px;
+}
+
+#menuD ul li a{
+  background-color: #000;
+  color: #fff;
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+#menuD ul li a:hover{
+  background-color: #434343;
+}
+
+#menuD ul {
+  display: none; /* Hace que todo este bloque desaparezca*/
+  list-style: none;
+  margin-right: 960px;
+  min-width: 40px;
+  position: fixed;
+  right: 15px;
+  z-index: 100;
+}
+
+ /* Al aplicar hover permite que todo este bloque aparezca al pasar el mouse*/
+#menuD:hover>ul {
+  display: block;
+}
+
+.icon {
+  display: inline-block;
+}
+
+img {
+  height: 112px;
+  width: 270px;
+}
+
+.right {
+  float: right;
+  padding-top: 38px;
+  text-align: left;
+}
+
+.nav-extra {
+  float: left;
+  list-style: none;
+  padding-left: 20px;
+}
+
+.photo {
+  background-image: url(../assets/images/usuario.png);
+  background-size: cover;
+  border-radius: 50px;
+  border: 3px solid #FFC107;
+  height: 70px;
+  margin-left: 29px;
+  width: 70px;
+}
+
+.nav-bar p {
+  font-size: 20px;
+}
+
+.language {
+  background-color: #FFC107;
+  border-radius: 19px;
+  color: #000;
+  padding:10px 18px;
+  text-align: center;
+  width: 80px;
+}
+
+.language a {
+  color: black;
+  text-decoration: none;
+}
+
+.language a:hover {
+  color: #fff;
+}
+
+/*Estilos a sección de selectores*/
+.selections {
+  background-color: #FFC107;
+  border-bottom: 1px solid #00000040;
+  border-top: 1px solid #00000040;
+  padding-top: 16px;
+}
+
+.sedes {
+  background-color: black;
+  border: 2px solid black;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  margin: 10px;
+  margin-left: 22px;
+  outline: none;
+  text-transform: uppercase;
+}
+
+.generations {
+  background-color: black;
+  border: 2px solid black;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  outline: none;
+}
+
+.label {
+  padding-top: 10px;
+}
+
+.label ul li {
+  display: inline;
+}
+
+button {
+  background-color: black;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 19px;
+  outline: none;
+  padding: 5px 35px;
+}
+
+button:hover {
+ background: #F7F7F7;
+ color: black;
+ font-weight: 600;
+}
+
+/* ESTILOS DE LA PRIMERA PESTAÑA VISION GENERAL*/
+article {
+  background-color: black;
+  padding-top: 260px;
+}
+
+article section {
+  background-color: #fff;
+  box-shadow: 5px 5px 10px grey;
+  border-radius: 0.5em;
+  margin: 0 20px 20px;
+  padding-top: 20px;
+  overflow: auto;
+  text-align: center;
+}
+
+h1 {
+  font-weight: 900;
+}
+
+.box {
+  background-color: #E1E1E1;
+  display: inline-block;
+}
+
+.container-box {
+  padding: 10px 0;
+}
+
+p{
+  font-weight: 600;
+}
+
+.enrollment {
+  display: inline-block;
+  float:left;
+  margin-left: 30px;
+}
+
+.achievement {
+  display: inline-block;
+}
+
+.nps {
+  display: inline-block;
+  float: right;
+  margin-right: 30px;
+}
+
+.tech-skills {
+}
+
+.life-skills {
+}
+
+.student-satisfacción {
+  display: inline-block;
+  float: left;
+}
+
+.teacher-rating {
+  display: inline-block;
+}
+
+.jedi-rating {
+  display: inline-block;
+  float: right;
+}
+
+/* ESTILOS DE LA SEGUNDA PESTAÑA ESTUDIANTES*/
+.search-box {
+  background-color: #E1E1E1;
+  border: 1px solid #e6ecf0;
+  font-size: 12px;
+  padding: 8px 32px 8px 12px;
+  text-align: center;
+}
+
+.search-box input {
+  font-size: 20px;
+  height: 40px;
+  outline: none;
+  padding-left: 13px;
+  width: 500px;
+}
+
+.fa-search {
+  cursor: pointer;
+  display: inline-block;
+  height: 26px;
+  padding-right: 476px;
+  position: absolute;
+  padding-top: 7px;
+  right: 0;
+  width: 26px;
+}
+
+.studentInfo {
+  background-color:#E1E1E1;
+  border-radius: 0.5em;
+  box-shadow: 5px 5px 10px grey;
+  color: black;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 414px;
+  position: relative;
+  width: 500px;
+}
+
+.studentPhoto img {
+  height: 200px;
+  width: 200px;
+}
+
+.studentName {
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 8px 0 8px 40px;
+}
+
+.studentScores {
+  width: 150px;
+  position: absolute;
+  right: 85px;
+  top: 57px;
+  background-color: white;
+  outline: 2px solid black;
+}
+
+.techScore {
+  outline: 1px solid black;
+  width: 150px;
+  height: 50px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.techScore p {
+  padding-top: 15px;
+  text-transform: uppercase;
+}
+
+.lifeScore {
+  outline: 1px solid black;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+}
+
+.lifeScore p {
+  padding-top: 15px;
+  text-transform: uppercase;
+}
+
+.studentName {
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 8px 0 8px 40px;
+}
+
+.studentScores {
+  width: 150px;
+  position: absolute;
+  right: 85px;
+  top: 57px;
+  background-color: white;
+  outline: 2px solid black;
+}
+
+.techScore {
+  outline: 1px solid black;
+  width: 150px;
+  height: 50px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.techScore p {
+  padding-top: 15px;
+  text-transform: uppercase;
+}
+
+.lifeScore {
+  outline: 1px solid black;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+}
+
+.lifeScore p {
+  padding-top: 15px;
+  text-transform: uppercase;
+}
+
+/* ESTILOS DE LA TERCERA PESTAÑA PROFESORES*/
+#teachers {
+  text-align: center;
+}
+
+.box-t {
+  box-shadow: 0 0 1em gold;
+  display: inline-block;
+  margin: 22px;
+}
+
+#teachers figure img {
+  height: 200px;
+  width: 200px;
+}
+
+.box-t a{
+  color: white;
+  text-decoration: none;
+}
