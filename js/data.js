@@ -132,7 +132,7 @@ var data = {
                 'tech': 1516,
                 'hse': 649
               }
-            },
+            },  
             {
               'number': 4,
               'score': {
