@@ -67,23 +67,24 @@ nav {
 }
 
 .container {
-  outline: 1px solid black;
   box-sizing: border-box;
   width: 1300x;
 
 }
 
 .cont-1 {
-  outline: 1px solid green;
+  background: #ffffff;
   box-sizing: border-box;
   display: inline-block;
+  padding: 17px;
   transform: translateY(-160px);
   width: 400px;
 }
 
 .cont-2 {
-  outline: 1px solid orange;
+  background: #ffffff;
   box-sizing: border-box;
   display: inline-block;
+  padding: 17px;
   width: 800px;
 }
