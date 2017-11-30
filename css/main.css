@@ -1,35 +1,8 @@
-/*
- * Estilos de tu proyecto
-
- */
  * {
     margin: 0;
     padding: 0;
     /* background: rgba(209, 214, 224, 0.247); */
 }
-
-/*-------Colocando estilos a nuestro header------*/
-
-header {
-   position: relative;
-   width: 100%;
-   height: 100px;
- }
-
-.logo {
-  width: 200px;
-  height: 100px;
-  display: inline-block;
-  margin-left: 45%;
-}
-
-#icon {
-float: right;
-font-size: 30px;
-margin-right:50px;
-margin-top: 30px;
-}
-/*-----fin del header----*/
 
 
 .logo {
@@ -38,58 +11,77 @@ margin-top: 30px;
 
 .logo img {
     width: 150px;
-    margin: 0 42%;
+    margin: 0 44%;
 }
 
-.options {
-    background:rgba(253, 234, 27, 0.938);
-}
+
 .select {
-    border:none;
-    height: 28px;
-    margin:0 35px;
-    background:rgba(255, 251, 0, 0.082);
-
+    padding: 7px 35px; 
+    background:rgba(255, 251, 0, 0.548); 
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
 }
+
+.option {
+    background: rgb(253, 251, 104);
+    padding: 7px 14px;
+    margin-right: 21px;
+    font-weight: 600;
+    border:none;
+    border-bottom: 4px solid rgb(253, 208, 8); 
+}
+
+
+.option:hover {
+    color :rgb(253, 208, 8);
+    border-bottom: 4px solid black; 
+}
+
+ li.list:hover {
+     background: white;
+     cursor: pointer;
+ }
 
 .tabs {
-    background:rgba(255, 251, 0, 0.548);
-
+    background:rgba(255, 251, 0, 0.548);   
 }
+
 .tab {
     display: inline-block;
     padding: 7px;
     margin: 14px 35px;
     cursor: pointer;
-    border-bottom: 4px solid rgb(236, 195, 11);
+    border-bottom: 4px solid rgb(253, 208, 8);
+    font-weight: 600; 
 }
 
 .tab:hover {
-    border-bottom: 4px solid rgb(17, 17, 17);
+    color :rgb(253, 208, 8);
+    border-bottom: 4px solid black;
 }
-
-
 
 .firt-boxes {
     margin: 28px 95px 28px 95px;
 }
 
-
 div.estadist {
     display: inline-block;
     width: 33%;
+    height: 280px;
     background: white;
 }
 
 h2 {
-    background: white;
     text-align: center;
 }
+
 div.block {
     display: inline-block;
     background: white;
     padding: 0 0 0 35px;
 }
+
  div.num {
      display: inline-block;
      background: white;
@@ -99,8 +91,11 @@ div.block {
  div.box {
      background: #d6d8d3bb;
      display:inline-block;
-     height: 49px;
-     width:127px;
+     height: 42px;
+     width:120px;
+     font-size:19px;
+     padding: 7px;
+     text-align: center;
  }
 
 img {
@@ -108,65 +103,50 @@ img {
 }
 
 /* segunda section */
- /* .information {
-   background-color: #a0246c;
- } */
 
- .tec {
+ 
+.tec {
    height:420px;
    margin: 28px 95px 28px 95px;
    /* background-color: #dbeff56c; */
-
- }
+}
 
 
  .hse{
     height:420px;
     margin: 28px 95px 28px 95px;
     /* background-color: #dbeff56c; */
- }
 
- /* h2{
-   margin-left: 24px;
-   text-transform: uppercase;
-   font-size: 20px;
-   font-family: inherit;
-   font-style: normal;
-   font-weight: bold;
-   font-size: 22px;
-   padding-top: 2%;
- } */
+}
+
   .super-small{
+
    width:50%;
    height:63px;
-   background-color: #d6d8d3bb;
+   background-color: #19bb5abb;
    display: inline-block;
+   margin-left:28px; 
+}
+ 
+.box2{
    margin-left:28px;
- }
-
- .box2{
-   width:21%;
-   height:63px;
-   background-color: #d6d8d3bb;;
-   display: inline-block;
-   margin: 20px 0.5px 19px 30px;
-
- }
+}
 
 
- .last-box{
-    background-color: #e41e1e;
+.last-box{
+    background-color: #e4c61e67;
     height:420px;
     display: flex;
     margin: 28px 95px 28px 95px;
-  }
+}
 
-  .small-box{
+.small-box{
     width:33%;
     height:280px;
     background-color: #ffffff;
-    margin: 61px  31px 84px 5px;
-  }
+    margin: 61px  31px 84px 5px;  
+}
+ 
 
 
 
@@ -174,6 +154,12 @@ img {
 
 .inline {
     display: inline-block;
+}
+
+.coders {
+    height: 300px;
+    width: 100px;
+    background: red;
 }
 
 .menu {
@@ -185,13 +171,18 @@ img {
   display:inline-block;
   margin-left: 20px;
   margin-top: 10px;
-
 }
+
 form h2 {
   font-size: 15px;
   padding: 10px;
-
 }
+
+
+.list {
+    list-style: none;
+}
+
 
 form {
   line-height: 2.5px;
@@ -258,3 +249,4 @@ form {
 .hiden {
     display: none;
 }
+
