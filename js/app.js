@@ -25,7 +25,6 @@ window.addEventListener('load', function() {
     var arrayStudents = data[city][prom]['students'];
 
     // ----------------> ENROLLMENT<----------------
-
     // Recorre la longitud de las estudiantes y muestra a las que desertaron en porcentaje
     var dropout = 0;
     for (var i = 0; i < arrayStudents.length; i++) {
