@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">    
     <link rel="stylesheet" href=""https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css>
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <div id="user-bar">
+    <div id="sidebar" class="sidebar">
+      <a href="#" class="close-button" onclick="ocultar()">x</a>
       <div class="box-user">
         <figure>
               <img src="assets/images/zebra.jpg" alt="background">
@@ -25,8 +26,11 @@
       <button>Calendar</button>
       <button>Settings</button>
     </div>
+    <div id="content">
     <header>
       <img class="logo-laboratoria" src="assets/images/logo-laboratoria.svg" alt="logo-laboratoria">
+      <a id="open" class="open-close" href="javascript:void(0)" onclick="mostrar()">Abrir menu</a>
+      <a id="close" class="open-close" href="#" onclick="ocultar()">Cerrar menu</a>
       <select id="select-sede">
         <option value="lm">LIMA</option>
         <option value="20151">Lima 2015-I</option>
@@ -62,6 +66,7 @@
         </ul>
       </nav>
     </header>
+
     <div id="dashboard-container">
       <div class="data-cont1">
         <h3>ENROLLMENT</h3>
@@ -80,6 +85,8 @@
       </div>
       <div class="data-cont4">
         <h3>TECH SKILLS</h3>
+        <div class="contain-number"># STUDENTS THAT MEET THE TARGET</div>
+        <div class="contain-percentage">% OF TOTAL (135)</div>
         <select id="tech-skills">
           <option value=" ">COMMON CORE</option>
           <option value="sprint1">Sprint 1: Create an interactive site</option>
@@ -97,11 +104,11 @@
           <option value="sprint11">Sprint 11: Create an interactive site</option>
           <option value="sprint12">Sprint 12: Create an interactive site</option>
         </select>
-        <div class="contain-number"># STUDENTS THAT MEET THE TARGET</div>
-        <div class="contain-percentage">% OF TOTAL (135)</div>
       </div>
       <div class="data-cont5">
         <h3>LIFE SKILLS</h3>
+        <div class="contain-number"># OVERALL CLASS AVERAGE</div>
+        <div class="contain-percentage"># OF STUDENTS THAT MEET THE TARGET</div>
         <select id="life-skills">
           <option value=" ">HSE</option>
           <option value="sprint1">Sprint 1: Create an interactive site</option>
@@ -109,8 +116,6 @@
           <option value="sprint3">Sprint 3: Create an interactive site</option>
           <option value="sprint4">Sprint 4: Create an interactive site</option>
         </select>
-        <div class="contain-number"># OVERALL CLASS AVERAGE</div>
-        <div class="contain-percentage"># OF STUDENTS THAT MEET THE TARGET</div>
       </div>
       <div class="data-cont6">
         <h3>STUDENT SATISFACTION</h>
@@ -125,7 +130,8 @@
         <div class="contain-number">OVERALL JEDI RATING (CUMULATIVE)</div>
       </div>
     </div>
-
+    </div>
+  
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
