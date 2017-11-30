@@ -130,6 +130,25 @@ function begin() {
     var reachExp = ratings[selectSprint.value - 1].student.cumple + ratings[selectSprint.value - 1].student.supera;
     document.getElementById('satisfaction-percent').textContent = reachExp + '%';
   }
+
+  // Grafico
+  var sede1 = data['AQP']['2017-1']['students'].length;
+  var sede2 = data['AQP']['2016-2']['students'].length;
+  google.charts.load('current', { 'packages': ['corechart'] });
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Generacion', 'Porcentaje'],
+      ['2017', sede1],
+      ['2016', sede2]]);
+
+    var options = { title: 'Alumnas' };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+    chart.draw(data, options);
+  }
 };
 
 function openPage(evnt, opt) {
@@ -146,11 +165,3 @@ function openPage(evnt, opt) {
   evnt.currentTarget.className += 'active';
 }
 document.getElementById('default').click();
-
-// Superan expectativas exp Laboratoria
-var ratings = data[selectLocal.value][selectPromo.value].ratings;
-var overcome = 0;
-// Promedio superan la meta de puntos
-for (var i = 0; i < ratings.length; i++) {
-  overcome += ratings[i].student.supera;
-}
