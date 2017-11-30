@@ -53,11 +53,11 @@ window.addEventListener('load', function() {
       // console.log(nameProm); 
       // console.log(data[nameSede][nameProm]);
 
-      nameProm.addEventListener('change', function(event) {
-        switch (true) {
+      // nameProm.addEventListener('change', function(event) {
+      //   switch (true) {
 
-        }
-      });
+      //   }
+      // });
     }
   }
   /* FIN DE CÓDIGO MOSTRAR SEDES Y PROMOCIONES */
@@ -77,6 +77,7 @@ window.addEventListener('load', function() {
   /* CODIGO PESTAÑAS*/
   var show = function(e) {
     var tabSeleccionado = e.target.dataset.tabSeleccionado;
+    console.log(tabSeleccionado);
     var overview = document.getElementById('overview');
     var students = document.getElementById('students');
     var teachers = document.getElementById('teachers');
