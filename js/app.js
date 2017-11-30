@@ -153,3 +153,5 @@ function drawTotalStudents(current, deserted) {
     chart.draw(dataTest, options);
   }
 }
+
+

@@ -43,7 +43,6 @@ header{
   position: fixed;
   z-index: 1000;
     background-color: rgb(236,235,235);
->>>>>>> 403eece7bac2f3ea9a8659fba715ed92bdb08e7b
   box-shadow: 0 0 3px #000;
   top: 0;
 }
@@ -172,13 +171,11 @@ cursor: pointer;
 }
 .sprints:hover{
   outline-color: #grey;
-=======
 height: 100%;
 }
 a:hover {
   outline-color: grey;
   cursor: pointer;
->>>>>>> 944dceb7cc23481fd61f3ec1da565027ea80bf92
 }
 .sprints:active{
   background-color: rgb(236,235,235);
