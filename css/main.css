@@ -65,7 +65,7 @@ span:hover{
 }
 
 .dates {
-  width: 120px;   
+  width: 120px;
   background-color: white;
   display: inline-block;
   margin-left: 5%;
@@ -74,6 +74,10 @@ span:hover{
 
 h3{
   text-align: center;
+}
+/* añadiendo graficos */
+.graph-line img{
+  font-size: 20px;
 }
 
 .tech-skills,.life-skills {
@@ -92,7 +96,7 @@ h3{
   margin-top: 2%;
 }
 .dates-student{
-  width: 120px; 
+  width: 120px;
   background-color: white;
   display: inline-block;
   margin-left: 5%;
