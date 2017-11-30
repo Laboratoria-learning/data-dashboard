@@ -50,7 +50,7 @@ function studentSatisfactionTotal(place, generation) {
     var current = nps[i]['nps']['promoters']
     totalPromoters = totalPromoters + current;
   }
-  var averagePromoters = totalPromoters / nps.length;
+  var averagePromoters = (totalPromoters / nps.length).toFixed(1);
   return averagePromoters;
 }
 
