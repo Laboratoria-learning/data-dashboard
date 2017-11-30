@@ -18,7 +18,7 @@
       </section>
       <section class="container-tabs">
         <ul>
-          <li><button type="button" name="button" data-selected-tab="tabOverView" class="tab">Overview</button></li>
+          <li><button type="button" name="button" data-selected-tab="tabOverView" class="tab" id="#btnoverview">Overview</button></li>
           <li><button type="button" name="button" data-selected-tab="tabStudents" class="tab">Students</button></li>
           <li><button type="button" name="button" data-selected-tab="tabTeacher" class="tab">Teachers</button></li>
         </ul>
@@ -32,17 +32,19 @@
             <section class="container-one">
               <section class="enrollment box-medium-size">
                 <h1 class="text-uppercase">Enrollment</h1>
-                  <div class="figures">
+                  <div class="figures" id="student-currently">
                     <p class="text-uppercase"># students currently enrolled</p>
                   </div>
-                  <div class="figures">
+                  <div class="figures" id="student-dropount">
+                    <p></p>
                     <p class="text-uppercase">% dropout</p>
                   </div>
 
               </section>
               <section class="achievement box-medium-size">
                 <h1 class="text-uppercase">Achievement</h1>
-                  <div class="figures">
+                  <div class="figures" id="achievement-student">
+                    <p></p>
                     <p class="text-uppercase"># students that meet the target</p>
                   </div>
                   <div class="figures">
@@ -51,10 +53,12 @@
               </section>
               <section class="promoter-score box-medium-size">
                 <h1 class="text-uppercase">Net Promoter Score</h1>
-                  <div class="figures">
+                  <div class="figures" id="net-promoter-score">
+                    <p></p>
                     <p class="text-uppercase">% cumulative nps</p>
                   </div>
-                  <div class="figures">
+                  <div class="figures" id="detalle-net-promoter-score">
+                    <p></p>
                     <!-- 3 porcentajes que provienen de data y DOM -->
                   </div>
               </section>
@@ -62,16 +66,22 @@
 
               <section class="tech-skills box-size">
                 <h1 class="text-uppercase">Tech Skills</h1>
-                  <div class="figures">
+                  <div class="figures" id="techSkillsTech">
+
+                  <p></p>
                     <p class="text-uppercase"># students that meet the target</p>
                   </div>
-                  <div class="figures">
+                  <div class="figures" >
+                    <p></p>
+
                     <p class="text-uppercase">% of total ()</p>
                   </div>
               </section>
               <section class="life-skills box-size">
                 <h1 class="text-uppercase">Life Skills</h1>
-                  <div class="figures">
+                  <div class="figures" id="techSkillsLife">
+
+                  <p></p>
                     <p class="text-uppercase">overall call average</p>
                   </div>
                   <div class="figures">
@@ -81,7 +91,8 @@
               <section class="container-one">
                 <section class="student-satisfaction box-medium-size">
                   <h1 class="text-uppercase">Student satisfaction</h1>
-                    <div class="figures">
+                    <div class="figures" id="satisfaction">
+                      <p></p>
                       <p class="text-uppercase">% meeting or exceeding expectations (cumulative)</p>
                     </div>
 
