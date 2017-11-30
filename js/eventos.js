@@ -18,7 +18,7 @@ function showMenu() {
   }
 }
 // div contenedor de resultados
-var cambiarDIV = document.getElementById('cambiarDIV');
+var divEnrollment = document.getElementById('divEnrollment');
 
 // Generaciones en el menu desplegable
 var aqp20162 = document.getElementById('AQP20162');
@@ -26,10 +26,10 @@ var aqp20171 = document.getElementById('AQP20171');
 
 // funcionalidad Generaciones en el menu desplegable
 function faqp20162() {
-  cambiarDIV.textContent = 'numEstudentsAQP20162';
+  divEnrollment.textContent = numEstudentsAQP20162;
 }
 function faqp20171() {
-  cambiarDIV.textContent = 'numEstudentsAQP20171';
+  divEnrollment.textContent = numEstudentsAQP20171;
 }
 // eventos Generaciones en el menu desplegable
 aqp20162 .addEventListener('click', faqp20162);
