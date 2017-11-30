@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">    
     <link rel="stylesheet" href=""https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css>
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <div id="user-bar">
+    <div id="sidebar" class="sidebar">
+      <a href="#" class="close-button" onclick="ocultar()">x</a>
       <div class="box-user">
         <figure>
               <img src="assets/images/zebra.jpg" alt="background">
@@ -25,8 +26,11 @@
       <button>Calendar</button>
       <button>Settings</button>
     </div>
+    <div id="content">
     <header>
       <img class="logo-laboratoria" src="assets/images/logo-laboratoria.svg" alt="logo-laboratoria">
+      <a id="open" class="open-close" href="javascript:void(0)" onclick="mostrar()">Abrir menu</a>
+      <a id="close" class="open-close" href="#" onclick="ocultar()">Cerrar menu</a>
       <select id="select-sede">
         <option value="lm">LIMA</option>
         <option value="20151">Lima 2015-I</option>
@@ -62,24 +66,30 @@
         </ul>
       </nav>
     </header>
+
     <div id="dashboard-container">
       <div class="data-cont1">
         <h3>ENROLLMENT</h3>
         <div class="contain-number"># STUDENTS CURRENTLY ENROLLED</div>
         <div class="contain-percentage">% DROPOUT</div>
+        <div id="chart_div"></div>
       </div>
       <div class="data-cont2">
         <h3>ACHIEVEMENT</h3>
         <div class="contain-number"># STUDENTS THAT MEET THE TARGET</div>
         <div class="contain-percentage">% OF TOTAL (135)</div>
+        <div id="chart_div1"></div>
       </div>
       <div class="data-cont3">
         <h3>NET PROMOTER SCORE</h3>
         <div class="contain-number">% CUMULATIVE NPS</div>
         <div class="contain-percentage"></div>
+        <div id="chart_div2"></div>
       </div>
       <div class="data-cont4">
         <h3>TECH SKILLS</h3>
+        <div class="contain-number"># STUDENTS THAT MEET THE TARGET</div>
+        <div class="contain-percentage">% OF TOTAL (135)</div>
         <select id="tech-skills">
           <option value=" ">COMMON CORE</option>
           <option value="sprint1">Sprint 1: Create an interactive site</option>
@@ -97,11 +107,12 @@
           <option value="sprint11">Sprint 11: Create an interactive site</option>
           <option value="sprint12">Sprint 12: Create an interactive site</option>
         </select>
-        <div class="contain-number"># STUDENTS THAT MEET THE TARGET</div>
-        <div class="contain-percentage">% OF TOTAL (135)</div>
+        <img id="chart_div3" src="assets/images/bar-graph.png" alt="bar graph">
       </div>
       <div class="data-cont5">
         <h3>LIFE SKILLS</h3>
+        <div class="contain-number"># OVERALL CLASS AVERAGE</div>
+        <div class="contain-percentage"># OF STUDENTS THAT MEET THE TARGET</div>
         <select id="life-skills">
           <option value=" ">HSE</option>
           <option value="sprint1">Sprint 1: Create an interactive site</option>
@@ -109,23 +120,27 @@
           <option value="sprint3">Sprint 3: Create an interactive site</option>
           <option value="sprint4">Sprint 4: Create an interactive site</option>
         </select>
-        <div class="contain-number"># OVERALL CLASS AVERAGE</div>
-        <div class="contain-percentage"># OF STUDENTS THAT MEET THE TARGET</div>
+        <img src="assets/images/rectangular-graphic.png" alt="rectangular graphic">
       </div>
       <div class="data-cont6">
         <h3>STUDENT SATISFACTION</h>
         <div class="contain-number">% MEETING OR EXCEEDING EXPECTATIONS (CUMULATIVE)</div>
+        <img id="chart_div4" src="assets/images/circle-graphic.png" alt="circle graphic">
       </div>
       <div class="data-cont7">
         <h3>TEACHER RATING</h3>
         <div class="contain-number">OVERALL TEACHER RATING (CUMULATIVE)</div>
+        <img id="chart_div5" src="assets/images/graph.png" alt="graph">
       </div>
       <div class="data-cont8">
         <h3>JEDI MASTER RATING</h3>
         <div class="contain-number">OVERALL JEDI RATING (CUMULATIVE)</div>
+        <img id="chart_div6" src="assets/images/graph-statistic.jpg" alt="graphic statistic">
       </div>
     </div>
-
+    </div>
+          
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
