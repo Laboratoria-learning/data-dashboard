@@ -13,7 +13,8 @@ window.addEventListener('load', function() {
   var listMenu = document.querySelectorAll('.menu');
   var metaTech = 1800;
   var metaHSE = 1200;
-
+  var totalContainer = document.querySelector('#report-container');
+  var dataNCiudad = [];
 
   selectGenerationLima.addEventListener('change', selectionGeneration);
   selectGenerationAqp.addEventListener('change', selectionGeneration);
@@ -24,12 +25,13 @@ window.addEventListener('load', function() {
   
   function showHiddenMenu(event) {
     for (var i = 0; i < listMenu.length; i++) {
-    //   if (listMenu[i].style.display === 'none') {
-    //     document.querySelectorAll('.menu').style.display = 'block';
-    //   }
-    //   document.querySelectorAll('.menu').style.display = 'none';
+      if (listMenu[i].style.display === 'none') {
+        document.querySelectorAll('.menu').hidden = true;
+      }
+      document.querySelectorAll('.menu').hidden = false;
     }
   }
+  
   function selectionGeneration(event) {
     studentsContainer.textContent = '';
     var filtro = event.target.value;
@@ -96,50 +98,32 @@ window.addEventListener('load', function() {
     return Math.round(((totalhsePoints / sprints) / metaHSE) * 100 * 10) / 10;
   }
 
-  function headquarters(ciudad, periodo) {
-    for (var i = 0 ; i < data[ciudad][periodo].students.length; i++) {
-      
-      var studentsTotal = data[ciudad][periodo].students[i].active;
-      var totalActive =+ studentsTotal;
-
-      var studentsHeadquarters = data[ciudad][periodo].students[i]
-      var totalHeadquartersLim =+ studentsHeadquarters;
-      var totalHeadquartersAqp =+ studentsHeadquarters;
-      var totalHeadquartersCM =+ studentsHeadquarters;
-      var totalHeadquartersSLC =+ studentsHeadquarters;
-      graphicsData();
+  // function selectionG(event) {
+  //   totalContainer.textContent = '';
+  //   var filtro = event.target.value;
+  //   cargarGraphics(filtro.split('_')[0], filtro.split('_')[1]);
+  // }  
+  
+  function dataCiudad() {
+    for (var ciudad in data) {
+      var active = 0;
+      var students = 0;
+      for (var periodo in data[ciudad]) {
+        for (var i = 0; i < data[ciudad][periodo].students.length; i++) {
+          if (data[ciudad][periodo].students[i].active) {
+            active++;
+          };
+        }
+        students += data[ciudad][periodo].students.length;
+      }
+      var ciudadN = {
+        'ciudad': ciudad,
+        'students': students,
+        'active': active
+      };
+      dataNCiudad.push(ciudadN);
     }
   }
-  function graphicsData() {
-    var studentData = {
-      type: 'bar',
-      data: {
-        datasets: [{
-          data: [
-            5,
-            10,
-            40,
-            12,
-          ],
-          backgroundColor: [
-            '#ffe0e6',
-            '#ffecd9',
-            '#fff5dd',
-            '#dbf2f2', 
-          ]
-        }],
-        labels: [
-          'AQP',
-          'CDMX',
-          'LIM',
-          'SLC',
-        ]
-      },
-      options: {
-        reponsive: true,
-      }
-    };
-  };
-  var canvas = document.getElementById('chart').getContext('2d');
-  window.bar = new Chart(canvas, studentData);
+  
+  dataCiudad();
 });

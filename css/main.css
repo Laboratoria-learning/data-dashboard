@@ -171,6 +171,14 @@ span, input, i, p {
   height: '50px';
 }
 
+.filter-report {
+  width: 100%;
+  background-color: #fff;
+}
+
+.reports {
+  background-color: #f7b617;
+}
 /* .list {
   display: none;
 } */
