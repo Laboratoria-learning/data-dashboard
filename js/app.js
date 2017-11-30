@@ -72,6 +72,13 @@ window.addEventListener('load', function(event){
     
                 }
                 console.log(dataSede);//me devuelve el contenido de la sede elegida: {2016-2: {…}, 2017-1: {…}, 2017-2: {…}}
+                
+                for(var p in dataSede){
+                    var datesGen={};
+                    datesGen = dataSede[p];
+                }
+                console.log(datesGen);//me muestra en un objeto:{students: Array(61), ratings: Array(2)}
+    
                 //debugger
                 for(var i in dataSede){
                     if(i === event.target.value){
@@ -80,29 +87,68 @@ window.addEventListener('load', function(event){
                     }
                 }
                 console.log(dataAlumns)//tengo a todos los estudiantes de la sede y generación elegida en un array
-               
-                debugger
-                var cont=0;
-                for(var k = 0; k<dataAlumns.length;k++){
-                  if(dataAlumns[k].active === false)                   
-                            cont++;
-                }
-                console.log(cont);//número de alumnos inactivos
-              //alumno[0].active
-                /*for(var items in contentDataGeneration){           
-                    var dataStudents = items;
-                    var contentDataStudents = contentDataGeneration[items];
-                }
-                console.log(dataStudents);
-                console.log(contentDataStudents);
-    */
+                var contGoal = 0;//que alcanzaron la meta
+                var contTech = 0;
+                var contHse = 0;
+                var qTech;
+                var uHse;
+                var contCalc = 0;
+                var contInactive=0;
+                for (var k = 0; k < dataAlumns.length; k++) {
+                    if(dataAlumns[k].active === false) {
+                        contInactive++;
+                    }
+                    //console.log(contInactive);//número de alumnos inactivos por sede elegida
+                    //console.log(dataAlumns[k]);//me muestra cada objeto alumno
+                    /***********empezando los calculos cuando el alumno está activo******************************/
+                    if(dataAlumns[k].active === true) {
+                        var sumTech = 0;//suma tech
+                        var sumHse = 0;
     
-                
+                        for (var y = 0; y < dataAlumns[k].sprints.length; y++) { //va a sumar el puntaje total de los sprints-alumna en tech y hse
+                            sumTech += dataAlumns[k].sprints[y].score.tech;
+                            //console.log(dataAlumns[k].sprints[y].score.tech);//ingresa a la nota por número de sprint del alumno
+                            sumHse += dataAlumns[k].sprints[y].score.hse; 
+                            //console.log(dataAlumns[k].sprints[y].score.hse);  
+                        }
+                        //console.log(sumTech);//suma total de notas en tech de cada alumno de la generación elegida
+                        //console.log(sumHse);//suma total de notas en tech de cada alumno de la generación elegida
+                        //console.log(dataAlumns[k].sprints)//me muestra los sprints del alumno
+    
+                        /*****************Cálculos para los promedios por generación escogida****************************/
+           
+                        qTech = sumTech/dataAlumns[k].sprints.length;//me muestra el promedio de las notas tech (sumTech/#sprints llevados)
+                        uHse = sumHse/dataAlumns[k].sprints.length;//me muestra el promedio de las notas hse (sumHse/#sprints llevados)
+    
+    
+                        console.log(qTech);//promedio de tech(de c/alumno)
+                        console.log(dataAlumns[k].sprints);//número de sprints(de c/alumno)
+    
+                        
+                        if (uHse >= 840 && qTech >= 1240) {
+                            contGoal++; 
+                        }
+                        console.log(contGoal);
+                        if (qTech >= 1240) {
+                            contTech++;              
+                        }
+                    
+                        if (uHse >= 840) {
+                            contHse++;
+                        }
+                   
+                            contCalc++;
+                    }
+                  console.log(contGoal);
+                }
+                console.log(contTech);//número de estudiantes que pasaron el mínimo requerido en tech
+                console.log(contHse);//número de estudiantes que pasaron el mínimo requerido en hse
+                console.log(contGoal);//número de estudiantes que pasaron el mínimo requerido en ambos skills
+                var retired = ((datesGen.students.length)*100).toFixed(1);
+                var studentAchievement = ((contGoal/datesGen.students.length)*100).toFixed(1);
+                console.log(studentAchievement);
+                console.log(retired);     
             });
-    
-    
-    
-    
     });
     
                         //var test = "2017-2";
@@ -154,7 +200,7 @@ window.addEventListener('load', function(event){
       });*/
     });
      
-    
+    /*
     //debugger
     console.log(data);
     console.log(Object.keys(data));//["AQP", "CDMX", "LIM", "SCL"]
@@ -169,7 +215,7 @@ window.addEventListener('load', function(event){
     console.log(Object.keys(Object.values(data)[0]))
     console.log(Object.keys(Object.values(data)[0]).length);
     //console.log(Object.keys(Object.keys(data)));
-    
+    */
     
       /*
       var nuevo = data.LIM["2017-2"].students;
