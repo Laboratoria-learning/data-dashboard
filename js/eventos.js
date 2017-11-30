@@ -20,6 +20,8 @@ function showMenu() {
 // div contenedor de resultados
 var enrollmentDiv1 = document.getElementById('enrollmentDiv1');
 var enrollmentDiv2 = document.getElementById('enrollmentDiv2');
+var teacherRating = document.getElementById('teacherRating');
+var jediMAster = document.getElementById('jediMAster');
 // Generaciones en el menu desplegable
 var aqp20162 = document.getElementById('AQP20162');
 var aqp20171 = document.getElementById('AQP20171');
@@ -35,42 +37,62 @@ var scl20172 = document.getElementById('SCL20172');
 function faqp20162() {
   enrollmentDiv1.textContent = numEstudentsAQP20162;
   enrollmentDiv2.textContent = percDesertedAQP20162;
+  teacherRating.textContent = averagePointsTeachersAQP20162;
+  jediMAster.textContent = averagePointsJediAQP20162;
 }
 function faqp20171() {
   enrollmentDiv1.textContent = numEstudentsAQP20171;
   enrollmentDiv2.textContent = percDesertedAQP20171;
+  teacherRating.textContent = averagePointsTeachersAQP20171;
+  jediMAster.textContent = averagePointsJediAQP20171;
 }
 function fcdmx20171() {
   enrollmentDiv1.textContent = numEstudentsCDMX20171;
   enrollmentDiv2.textContent = percDesertedCDMX20171;
+  teacherRating.textContent = averagePointsTeachersCDMX20171;
+  jediMAster.textContent = averagePointsJedisCDMX20171;
 }
 function fcdmx20172() {
   enrollmentDiv1.textContent = numEstudentsCDMX20172;
   enrollmentDiv2.textContent = percDesertedCDMX20172;
+  teacherRating.textContent = averagePointsTeachersCDMX20172;
+  jediMAster.textContent = averagePointsJedisCDMX20172;
 }
 function flim20162() {
   enrollmentDiv1.textContent = numEstudentsLIM20162;
   enrollmentDiv2.textContent = percDesertedLIM20162;
+  teacherRating.textContent = averagePointsTeachersLIM20162;
+  jediMAster.textContent = averagePointsJedisLIM20162;
 }
 function flim20171() {
   enrollmentDiv1.textContent = numEstudentsLIM20171;
   enrollmentDiv2.textContent = percDesertedLIM20171;
+  teacherRating.textContent = averagePointsTeachersLIM20171;
+  jediMAster.textContent = averagePointsJedisLIM20171;
 }
 function flim20172() {
   enrollmentDiv1.textContent = numEstudentsLIM20172;
   enrollmentDiv2.textContent = percDesertedLIM20172;
+  teacherRating.textContent = averagePointsTeachersLIM20172;
+  jediMAster.textContent = averagePointsJedisLIM20172;
 }
 function fscl20162() {
   enrollmentDiv1.textContent = numEstudentsSCL20162;
   enrollmentDiv2.textContent = percDesertedSCL20162;
+  teacherRating.textContent = averagePointsTeachersSCL20162;
+  jediMAster.textContent = averagePointsJedisSCL20162;
 }
 function fscl20171() {
   enrollmentDiv1.textContent = numEstudentsSCL20171;
   enrollmentDiv2.textContent = percDesertedSCL20171;
+  teacherRating.textContent = averagePointsTeachersSCL20171;
+  jediMAster.textContent = averagePointsJedisSCL20171;
 }
 function fscl20172() {
   enrollmentDiv1.textContent = numEstudentsSCL20172;
   enrollmentDiv2.textContent = percDesertedSCL20172;
+  teacherRating.textContent = averagePointsTeachersSCL20172;
+  jediMAster.textContent = averagePointsJedisSCL20172;
 }
 // eventos Generaciones en el menu desplegable
 aqp20162 .addEventListener('click', faqp20162);

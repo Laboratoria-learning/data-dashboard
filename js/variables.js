@@ -40,14 +40,14 @@ console.log('% estudiantes Desertaron AQP20162 : ' + percDesertedAQP20162);
 var pointsPerSprintTeachersAQP20162 = data.AQP['2016-2'].ratings[0].teacher + data.AQP['2016-2'].ratings[1].teacher + data.AQP['2016-2'].ratings[2].teacher + data.AQP['2016-2'].ratings[3].teacher;
 console.log('suma de puntos de profesores total sprints 20162: ' + pointsPerSprintTeachersAQP20162);
 // Promedio de las puntuaciones de los profesores 2016-2 //
-var averagePointsTeachersAQP20162 = pointsPerSprintTeachersAQP20162 / 4;
+var averagePointsTeachersAQP20162 = parseInt(pointsPerSprintTeachersAQP20162 / 4);
 console.log('promedio de puntos de profesores en todos los sprints 20162: ' + averagePointsTeachersAQP20162);
 //* Puntución promedio de los jedis *//
 // Suma de las puntuaciones por sprint de los jedis 2016-2 *//
 var pointsPerSprintJediAQP20162 = data.AQP['2016-2'].ratings[0].jedi + data.AQP['2016-2'].ratings[1].jedi + data.AQP['2016-2'].ratings[2].jedi + data.AQP['2016-2'].ratings[3].jedi;
 console.log('suma de puntos de jedi total sprints 20162: ' + pointsPerSprintJediAQP20162);
 // Promedio de las puntuaciones de los jedis 2016-2 //
-var averagePointsJediAQP20162 = pointsPerSprintJediAQP20162 / 4;
+var averagePointsJediAQP20162 = parseInt(pointsPerSprintJediAQP20162 / 4);
 console.log('promedio de puntos de jedi en todos los sprints 20162: ' + averagePointsJediAQP20162);
 // NPS //
 var npsAQP20162 = (((data.AQP['2016-2'].ratings[0].nps.promoters - data.AQP['2016-2'].ratings[0].nps.detractors) + (data.AQP['2016-2'].ratings[1].nps.promoters - data.AQP['2016-2'].ratings[1].nps.detractors) + (data.AQP['2016-2'].ratings[2].nps.promoters - data.AQP['2016-2'].ratings[2].nps.detractors) + (data.AQP['2016-2'].ratings[3].nps.promoters - data.AQP['2016-2'].ratings[3].nps.detractors)) / 4) + '%';
@@ -79,14 +79,14 @@ console.log('% estudiantes Desertaron AQP20171 : ' + percDesertedAQP20171);
 var pointsPerSprintTeachersAQP20171 = data.AQP['2017-1'].ratings[0].teacher + data.AQP['2017-1'].ratings[1].teacher + data.AQP['2017-1'].ratings[2].teacher;
 console.log('suma de puntos de profesores total sprints 20171: ' + pointsPerSprintTeachersAQP20171);
 // Promedio de las puntuaciones de los profesores 2017-1 //
-var averagePointsTeachersAQP20171 = pointsPerSprintTeachersAQP20171 / 3;
+var averagePointsTeachersAQP20171 = parseInt(pointsPerSprintTeachersAQP20171 / 3);
 console.log('promedio de puntos de profesores en todos los sprints 20171: ' + averagePointsTeachersAQP20171);
 //* Puntución promedio de los jedis *//
 // Suma de las puntuaciones por sprint de los jedis 2017-1 *//
 var pointsPerSprintJediAQP20171 = data.AQP['2017-1'].ratings[0].jedi + data.AQP['2017-1'].ratings[1].jedi + data.AQP['2017-1'].ratings[2].jedi;
 console.log('suma de puntos de jedi total sprints 20171: ' + pointsPerSprintJediAQP20171);
 // Promedio de las puntuaciones de los jedis 2017-1 //
-var averagePointsJediAQP20171 = pointsPerSprintJediAQP20171 / 3;
+var averagePointsJediAQP20171 = parseInt(pointsPerSprintJediAQP20171 / 3);
 console.log('promedio de puntos de jedi en todos los sprints 20171: ' + averagePointsJediAQP20171);
 // NPS //
 var npsAQP20171 = (((data.AQP['2017-1'].ratings[0].nps.promoters - data.AQP['2017-1'].ratings[0].nps.detractors) + (data.AQP['2017-1'].ratings[1].nps.promoters - data.AQP['2017-1'].ratings[1].nps.detractors) + (data.AQP['2017-1'].ratings[2].nps.promoters - data.AQP['2017-1'].ratings[2].nps.detractors)) / 3) + '%';
@@ -131,14 +131,14 @@ console.log('% estudiantes Desertaron CDMX20171 : ' + percDesertedCDMX20171);
 var pointsPerSprintTeachersCDMX20171 = data.CDMX['2017-1'].ratings[0].teacher + data.CDMX['2017-1'].ratings[1].teacher + data.CDMX['2017-1'].ratings[2].teacher;
 console.log('suma de puntos de profesores total sprints 20171: ' + pointsPerSprintTeachersCDMX20171);
 // Promedio de las puntuaciones de los profesores 2017-1 //
-var averagePointsTeachersCDMX20171 = pointsPerSprintTeachersCDMX20171 / 3;
+var averagePointsTeachersCDMX20171 = parseInt(pointsPerSprintTeachersCDMX20171 / 3);
 console.log('promedio de puntos de profesores en todos los sprints 20171: ' + averagePointsTeachersCDMX20171);
 //* Puntución promedio de los jedis *//
 // Suma de las puntuaciones por sprint de los jedis 2017-1 *//
 var pointsPerSprintJedisCDMX20171 = data.CDMX['2017-1'].ratings[0].jedi + data.CDMX['2017-1'].ratings[1].jedi + data.CDMX['2017-1'].ratings[2].jedi;
 console.log('suma de puntos de jedis total sprints 20171: ' + pointsPerSprintJedisCDMX20171);
 // Promedio de las puntuaciones de los jedis 2017-1 //
-var averagePointsJedisCDMX20171 = pointsPerSprintJedisCDMX20171 / 3;
+var averagePointsJedisCDMX20171 = parseInt(pointsPerSprintJedisCDMX20171 / 3);
 console.log('promedio de puntos de jedis en todos los sprints 20171: ' + averagePointsJedisCDMX20171);
 // NPS //
 var npsCDMX20171 = (((data.CDMX['2017-1'].ratings[0].nps.promoters - data.CDMX['2017-1'].ratings[0].nps.detractors) + (data.CDMX['2017-1'].ratings[1].nps.promoters - data.CDMX['2017-1'].ratings[1].nps.detractors)) / 2) + '%';
@@ -170,14 +170,14 @@ console.log('% estudiantes Desertaron CDMX20172 : ' + percDesertedCDMX20172);
 var pointsPerSprintTeachersCDMX20172 = data.CDMX['2017-2'].ratings[0].teacher + data.CDMX['2017-2'].ratings[1].teacher;
 console.log('suma de puntos de profesores total sprints 20172: ' + pointsPerSprintTeachersCDMX20172);
 // Promedio de las puntuaciones de los profesores 2017-2 //
-var averagePointsTeachersCDMX20172 = pointsPerSprintTeachersCDMX20172 / 2;
+var averagePointsTeachersCDMX20172 = parseInt(pointsPerSprintTeachersCDMX20172 / 2);
 console.log('promedio de puntos de profesores en todos los sprints 20172: ' + averagePointsTeachersCDMX20172);
 //* Puntución promedio de los jedis *//
 // Suma de las puntuaciones por sprint de los jedis 2017-2 *//
 var pointsPerSprintJedisCDMX20172 = data.CDMX['2017-2'].ratings[0].jedi + data.CDMX['2017-2'].ratings[1].jedi;
 console.log('suma de puntos de jedis total sprints 20172: ' + pointsPerSprintJedisCDMX20172);
 // Promedio de las puntuaciones de los jedis 2017-2 //
-var averagePointsJedisCDMX20172 = pointsPerSprintJedisCDMX20172 / 2;
+var averagePointsJedisCDMX20172 = parseInt(pointsPerSprintJedisCDMX20172 / 2);
 console.log('promedio de puntos de jedis en todos los sprints 20172: ' + averagePointsJedisCDMX20172);
 // NPS //
 var npsCDMX20172 = (((data.CDMX['2017-2'].ratings[0].nps.promoters - data.CDMX['2017-2'].ratings[0].nps.detractors) + (data.CDMX['2017-2'].ratings[1].nps.promoters - data.CDMX['2017-2'].ratings[1].nps.detractors)) / 2) + '%';
@@ -221,14 +221,14 @@ console.log('% estudiantes Desertaron LIM20162 : ' + percDesertedLIM20162);
 var pointsPerSprintTeachersLIM20162 = data.LIM['2016-2'].ratings[0].teacher + data.LIM['2016-2'].ratings[1].teacher;
 console.log('suma de puntos de profesores total sprints 20162: ' + pointsPerSprintTeachersLIM20162);
 // Promedio de las puntuaciones de los profesores 2016-2 //
-var averagePointsTeachersLIM20162 = pointsPerSprintTeachersLIM20162 / 2;
+var averagePointsTeachersLIM20162 = parseInt(pointsPerSprintTeachersLIM20162 / 2);
 console.log('promedio de puntos de profesores en todos los sprints 20162: ' + averagePointsTeachersLIM20162);
 //* Puntución promedio de los jedis *//
 // Suma de las puntuaciones por sprint de los jedis 2016-2 *//
 var pointsPerSprintJedisLIM20162 = data.LIM['2016-2'].ratings[0].jedi + data.LIM['2016-2'].ratings[1].jedi;
 console.log('suma de puntos de jedis total sprints 20162: ' + pointsPerSprintJedisLIM20162);
 // Promedio de las puntuaciones de los jedis 2016-2 //
-var averagePointsJedisLIM20162 = pointsPerSprintJedisLIM20162 / 2;
+var averagePointsJedisLIM20162 = parseInt(pointsPerSprintJedisLIM20162 / 2);
 console.log('promedio de puntos de jedis en todos los sprints 20162: ' + averagePointsJedisLIM20162);
 // NPS //
 var npsLIM20162 = (((data.LIM['2016-2'].ratings[0].nps.promoters - data.LIM['2016-2'].ratings[0].nps.detractors) + (data.LIM['2016-2'].ratings[1].nps.promoters - data.LIM['2016-2'].ratings[1].nps.detractors)) / 2) + '%';
@@ -260,14 +260,14 @@ console.log('% estudiantes Desertaron LIM20171 : ' + percDesertedLIM20171);
 var pointsPerSprintTeachersLIM20171 = data.LIM['2017-1'].ratings[0].teacher + data.LIM['2017-1'].ratings[1].teacher + data.LIM['2017-1'].ratings[2].teacher + data.LIM['2017-1'].ratings[3].teacher;
 console.log('suma de puntos de profesores total sprints 20171: ' + pointsPerSprintTeachersLIM20171);
 // Promedio de las puntuaciones de los profesores 2017-1 //
-var averagePointsTeachersLIM20171 = pointsPerSprintTeachersLIM20171 / 4;
+var averagePointsTeachersLIM20171 = parseInt(pointsPerSprintTeachersLIM20171 / 4);
 console.log('promedio de puntos de profesores en todos los sprints 20171: ' + averagePointsTeachersLIM20171);
 //* Puntución promedio de los jedis *//
 // Suma de las puntuaciones por sprint de los jedis 2017-1 *//
 var pointsPerSprintJedisLIM20171 = data.LIM['2017-1'].ratings[0].jedi + data.LIM['2017-1'].ratings[1].jedi + data.LIM['2017-1'].ratings[2].jedi + data.LIM['2017-1'].ratings[3].jedi;
 console.log('suma de puntos de jedis total sprints 20171: ' + pointsPerSprintJedisLIM20171);
 // Promedio de las puntuaciones de los jedis 2017-1 //
-var averagePointsJedisLIM20171 = pointsPerSprintJedisLIM20171 / 4;
+var averagePointsJedisLIM20171 = parseInt(pointsPerSprintJedisLIM20171 / 4);
 console.log('promedio de puntos de jedis en todos los sprints 20171: ' + averagePointsJedisLIM20171);
 // NPS //
 var npsLIM20171 = (((data.LIM['2017-1'].ratings[0].nps.promoters - data.LIM['2017-1'].ratings[0].nps.detractors) + (data.LIM['2017-1'].ratings[1].nps.promoters - data.LIM['2017-1'].ratings[1].nps.detractors) + (data.LIM['2017-1'].ratings[2].nps.promoters - data.LIM['2017-1'].ratings[2].nps.detractors) + (data.LIM['2017-1'].ratings[3].nps.promoters - data.LIM['2017-1'].ratings[3].nps.detractors)) / 4) + '%';
@@ -299,14 +299,14 @@ console.log('% estudiantes Desertaron LIM20172 : ' + percDesertedLIM20172);
 var pointsPerSprintTeachersLIM20172 = data.LIM['2017-2'].ratings[0].teacher + data.LIM['2017-2'].ratings[1].teacher;
 console.log('suma de puntos de profesores total sprints 20172: ' + pointsPerSprintTeachersLIM20172);
 // Promedio de las puntuaciones de los profesores 2017-2 //
-var averagePointsTeachersLIM20172 = pointsPerSprintTeachersLIM20172 / 2;
+var averagePointsTeachersLIM20172 = parseInt(pointsPerSprintTeachersLIM20172 / 2);
 console.log('promedio de puntos de profesores en todos los sprints 20172: ' + averagePointsTeachersLIM20172);
 //* Puntución promedio de los jedis *//
 // Suma de las puntuaciones por sprint de los jedis 2017-2 *//
 var pointsPerSprintJedisLIM20172 = data.LIM['2017-2'].ratings[0].jedi + data.LIM['2017-2'].ratings[1].jedi;
 console.log('suma de puntos de jedis total sprints 20172: ' + pointsPerSprintJedisLIM20172);
 // Promedio de las puntuaciones de los jedis 2017-2 //
-var averagePointsJedisLIM20172 = pointsPerSprintJedisLIM20172 / 2;
+var averagePointsJedisLIM20172 = parseInt(pointsPerSprintJedisLIM20172 / 2);
 console.log('promedio de puntos de jedis en todos los sprints 20172: ' + averagePointsJedisLIM20172);
 // NPS //
 var npsLIM20172 = (((data.LIM['2017-2'].ratings[0].nps.promoters - data.LIM['2017-2'].ratings[0].nps.detractors) + (data.LIM['2017-2'].ratings[1].nps.promoters - data.LIM['2017-2'].ratings[1].nps.detractors)) / 2) + '%';
@@ -350,14 +350,14 @@ console.log('% estudiantes Desertaron SCL20162 : ' + percDesertedSCL20162);
 var pointsPerSprintTeachersSCL20162 = data.SCL['2016-2'].ratings[0].teacher + data.SCL['2016-2'].ratings[1].teacher + data.SCL['2016-2'].ratings[2].teacher + data.SCL['2016-2'].ratings[3].teacher;
 console.log('suma de puntos de profesores total sprints 20162: ' + pointsPerSprintTeachersSCL20162);
 // Promedio de las puntuaciones de los profesores 2016-2 //
-var averagePointsTeachersSCL20162 = pointsPerSprintTeachersSCL20162 / 4;
+var averagePointsTeachersSCL20162 = parseInt(pointsPerSprintTeachersSCL20162 / 4);
 console.log('promedio de puntos de profesores en todos los sprints 20162: ' + averagePointsTeachersSCL20162);
 //* Puntución promedio de los jedis *//
 // Suma de las puntuaciones por sprint de los jedis 2016-2 *//
 var pointsPerSprintJedisSCL20162 = data.SCL['2016-2'].ratings[0].jedi + data.SCL['2016-2'].ratings[1].jedi + data.SCL['2016-2'].ratings[2].jedi + data.SCL['2016-2'].ratings[3].jedi;
 console.log('suma de puntos de jedis total sprints 20162: ' + pointsPerSprintJedisSCL20162);
 // Promedio de las puntuaciones de los jedis 2016-2 //
-var averagePointsJedisSCL20162 = pointsPerSprintJedisSCL20162 / 4;
+var averagePointsJedisSCL20162 = parseInt(pointsPerSprintJedisSCL20162 / 4);
 console.log('promedio de puntos de jedis en todos los sprints 20162: ' + averagePointsJedisSCL20162);
 // NPS //
 var npsSCL20162 = (((data.SCL['2016-2'].ratings[0].nps.promoters - data.SCL['2016-2'].ratings[0].nps.detractors) + (data.SCL['2016-2'].ratings[1].nps.promoters - data.SCL['2016-2'].ratings[1].nps.detractors) + (data.SCL['2016-2'].ratings[2].nps.promoters - data.SCL['2016-2'].ratings[2].nps.detractors) + (data.SCL['2016-2'].ratings[3].nps.promoters - data.SCL['2016-2'].ratings[3].nps.detractors)) / 4) + '%';
@@ -389,14 +389,14 @@ console.log('% estudiantes Desertaron SCL20171 : ' + percDesertedSCL20171);
 var pointsPerSprintTeachersSCL20171 = data.SCL['2017-1'].ratings[0].teacher + data.SCL['2017-1'].ratings[1].teacher + data.SCL['2017-1'].ratings[2].teacher;
 console.log('suma de puntos de profesores total sprints 20171: ' + pointsPerSprintTeachersSCL20171);
 // Promedio de las puntuaciones de los profesores 2017-1 //
-var averagePointsTeachersSCL20171 = pointsPerSprintTeachersSCL20171 / 3;
+var averagePointsTeachersSCL20171 = parseInt(pointsPerSprintTeachersSCL20171 / 3);
 console.log('promedio de puntos de profesores en todos los sprints 20171: ' + averagePointsTeachersSCL20171);
 //* Puntución promedio de los jedis *//
 // Suma de las puntuaciones por sprint de los jedis 2017-1 *//
 var pointsPerSprintJedisSCL20171 = data.SCL['2017-1'].ratings[0].jedi + data.SCL['2017-1'].ratings[1].jedi + data.SCL['2017-1'].ratings[2].jedi;
 console.log('suma de puntos de jedis total sprints 20171: ' + pointsPerSprintJedisSCL20171);
 // Promedio de las puntuaciones de los jedis 2017-1 //
-var averagePointsJedisSCL20171 = pointsPerSprintJedisSCL20171 / 3;
+var averagePointsJedisSCL20171 = parseInt(pointsPerSprintJedisSCL20171 / 3);
 console.log('promedio de puntos de jedis en todos los sprints 20171: ' + averagePointsJedisSCL20171);
 // NPS //
 var npsSCL20171 = (((data.SCL['2017-1'].ratings[0].nps.promoters - data.SCL['2017-1'].ratings[0].nps.detractors) + (data.SCL['2017-1'].ratings[1].nps.promoters - data.SCL['2017-1'].ratings[1].nps.detractors) + (data.SCL['2017-1'].ratings[2].nps.promoters - data.SCL['2017-1'].ratings[2].nps.detractors)) / 3) + '%';
@@ -428,14 +428,14 @@ console.log('% estudiantes Desertaron SCL20172 : ' + percDesertedSCL20172);
 var pointsPerSprintTeachersSCL20172 = data.SCL['2017-2'].ratings[0].teacher + data.SCL['2017-2'].ratings[1].teacher;
 console.log('suma de puntos de profesores total sprints 20172: ' + pointsPerSprintTeachersSCL20172);
 // Promedio de las puntuaciones de los profesores 2017-2 //
-var averagePointsTeachersSCL20172 = pointsPerSprintTeachersSCL20172 / 2;
+var averagePointsTeachersSCL20172 = parseInt(pointsPerSprintTeachersSCL20172 / 2);
 console.log('promedio de puntos de profesores en todos los sprints 20172: ' + averagePointsTeachersSCL20172);
 //* Puntución promedio de los jedis *//
 // Suma de las puntuaciones por sprint de los jedis 2017-2 *//
 var pointsPerSprintJedisSCL20172 = data.SCL['2017-2'].ratings[0].jedi + data.SCL['2017-2'].ratings[1].jedi;
 console.log('suma de puntos de jedis total sprints 20172: ' + pointsPerSprintJedisSCL20172);
 // Promedio de las puntuaciones de los jedis 2017-2 //
-var averagePointsJedisSCL20172 = pointsPerSprintJedisSCL20172 / 2;
+var averagePointsJedisSCL20172 = parseInt(pointsPerSprintJedisSCL20172 / 2);
 console.log('promedio de puntos de jedi en todos los sprints 20172: ' + averagePointsJedisSCL20172);
 
 // NPS //
