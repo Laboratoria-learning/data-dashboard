@@ -70,9 +70,9 @@ window.addEventListener('load', function() {
   var promoter = document.createElement('p');
   promoter.innerText = promotersPercent('LIM', '2016-2');
   var passive = document.createElement('p');
-  passive.innerText = 'passivepercent';
+  passive.innerText = passivePercent('LIM', '2016-2');
   var detractors = document.createElement('p');
-  detractors.innerText = 'detractorpercent';
+  detractors.innerText = detractorPercent('LIM', '2016-2');
   // agregando promoter
   general.appendChild(promoterScore);
   promoterScore.appendChild(titleProSco);
@@ -226,20 +226,56 @@ window.addEventListener('load', function() {
     var sede = data[sede];
     var generation = sede[gene];
     var ratigns = generation.ratings;
+    var cants = ratigns.length;
     var array = [];
-    for (var i = 0; i < ratigns[i].length; i++) {
+    for (var i = 0; i < cants; i++) {
       var total = ratigns[i].nps.promoters + ratigns[i].nps.passive + ratigns[i].nps.detractors;
-      var promoters = (ratigns[i].nps.promoters / total) * 100;
+      var promoters = ((ratigns[i].nps.promoters) / total) * 100;
       array.push(promoters);
  }
       var allPromoter = 0;
       for (var p = 0; p < array.length; p++) {
-        allPromoter += array.length[p];
+        allPromoter += array[p];
       } 
-       var totalPromoters = allPromoter / ratigns.length;
-       return totalPromoters;
+       var totalPromoter = allPromoter / ratigns.length;
+       return totalPromoter + ' % Promoter';
     } 
-    
+    function passivePercent(sede, gene){
+      var sede = data[sede];
+      var generation = sede[gene];
+      var ratigns = generation.ratings;
+      var cants = ratigns.length;
+      var array = [];
+      for (var i = 0; i < cants; i++) {
+        var total = ratigns[i].nps.promoters + ratigns[i].nps.passive + ratigns[i].nps.detractors;
+        var passive = ((ratigns[i].nps.passive) / total) * 100;
+        array.push(passive);
+   }
+        var allPassive = 0;
+        for (var p = 0; p < array.length; p++) {
+          allPassive += array[p];
+        } 
+         var totalPassive = allPassive / ratigns.length;
+         return totalPassive + ' % Passive';
+    }
+    function detractorPercent(sede, gene){
+      var sede = data[sede];
+      var generation = sede[gene];
+      var ratigns = generation.ratings;
+      var cants = ratigns.length;
+      var array = [];
+      for (var i = 0; i < cants; i++) {
+        var total = ratigns[i].nps.promoters + ratigns[i].nps.passive + ratigns[i].nps.detractors;
+        var detractor = ((ratigns[i].nps.detractors) / total) * 100;
+        array.push(detractor);
+   }
+        var allDetractor = 0;
+        for (var p = 0; p < array.length; p++) {
+          allDetractor += array[p];
+        } 
+         var totalDetractor = allDetractor / ratigns.length;
+         return totalDetractor + ' % Detractor';
+    }
 });
 // Puedes hacer uso de la base de datos a través de la variable `data`
 console.log(data);
