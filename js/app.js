@@ -26,11 +26,22 @@ var currentSprintTech = 1;
 var selectTech = document.getElementById('tech-sprints');
 var techSprintNote = document.getElementById('tech-skills');
 var techSprintPer = document.getElementById('students-tar-tech');
+
 //Life Skills
 var currentSprintHse = 1;
 var selectHse = document.getElementById('hse-sprints');
 var hseSprintNote = document.getElementById('life-skills');
 var hseSprintPer = document.getElementById('students-tar-hse');
+
+//Student Satisfaction
+var studentSatisfac = document.getElementById('student-satisfaction');
+
+//Teacher Rating
+var teacherRated = document.getElementById('teacher-rating');
+
+//Jedi Rated 
+var jediRated = document.getElementById('JediMaster-rating')
+
 //Sedes 
 //AQP, CDMX, LIM, SCL
 function selectSede () {
@@ -70,6 +81,9 @@ function selectSede () {
       createSelect(selectHse);
       techSkills();
       softSkills();
+      studentSatisfaction();
+      teacherRating();
+      jediMaster();
       drawSeriesChart();
     })
   }
@@ -90,6 +104,9 @@ function selectPromo() {
       createSelect(selectHse);
       techSkills();
       softSkills();
+      studentSatisfaction(); 
+      teacherRating();
+      jediMaster();
       drawSeriesChart();
     })
   }
@@ -110,7 +127,7 @@ function enrollment(act,inac) {
     }
   }
   totalActStudents.textContent = active;
-  dropoutStudents.textContent = Math.floor((inactive/(active+inactive))*100);
+  dropoutStudents.textContent = Math.floor((inactive/(active+inactive))*100) + ' %';
   return enrollment[act] = {
     act: active,
     inac: inactive,
@@ -140,7 +157,7 @@ function achievement () {
     }
   }
   studentsTar.textContent = studentsAchieve;
-  studentsTarPer.textContent = (studentsAchieve/(studentsAchieve+studentsNoAchieve))*100;
+  studentsTarPer.textContent = (studentsAchieve/(studentsAchieve+studentsNoAchieve))*100 + ' %';
   studentsTotal.textContent = studentsAchieve+studentsNoAchieve;
 }
 achievement();
@@ -241,6 +258,43 @@ function softSkills () {
 
 softSkills();
 
+//Student Satisfaction
+
+function studentSatisfaction () {
+  var sprintSatis = 0;
+  for (var i = 0; i < dataStudents[sede][promo].ratings.length; i++) {
+    var satisSup = dataStudents[sede][promo].ratings[i].student.supera;
+    var satisCumple = dataStudents[sede][promo].ratings[i].student.cumple;
+    sprintSatis += (satisSup + satisCumple);
+  }
+  studentSatisfac.textContent = Math.floor(sprintSatis/(dataStudents[sede][promo].ratings.length*100)*100) + ' %';
+}
+
+studentSatisfaction(); 
+
+//Teacher Rating
+
+function teacherRating () {
+  var teacherRat = 0;
+  for (var i = 0; i < dataStudents[sede][promo].ratings.length; i++) {
+    var teacherScore = dataStudents[sede][promo].ratings[i].teacher;
+    teacherRat += teacherScore;
+  }
+  teacherRated.textContent = Math.floor(teacherRat/dataStudents[sede][promo].ratings.length);
+}
+
+teacherRating();
+
+function jediMaster () {
+  var jedi = 0;
+  for (var i = 0; i < dataStudents[sede][promo].ratings.length; i++) {
+    var jediScore = dataStudents[sede][promo].ratings[i].jedi;
+    jedi += jediScore;
+  }
+  jediRated.textContent = Math.floor(jedi/dataStudents[sede][promo].ratings.length);
+}
+
+jediMaster();
 
 function sprintsNoteTech(sp1b, sp1l, sp2b, sp2l, sp3b, sp3l, sp4b, sp4l) {
 
