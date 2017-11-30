@@ -53,12 +53,38 @@ section{
     margin: auto;
     background-color: #F7F7F7;
 }
+section .higher{
+    width: 80%;
+    /*outline: 1px solid orange;*/
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 20px;
+
+}
+.slc-transp {
+    background-color: transparent;
+    height: 30px;
+}
+.btn-higher{
+    background-color: transparent;
+    border-radius: 5px;
+    border:1px solid  #3333;
+    height: 30px;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+}
 section .principal{
     width: 80%;
     /*outline: 1px solid orange;*/
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+<<<<<<< HEAD
+=======
+    
+>>>>>>> overview
 
 }
 /*PRIMER DIV DEL SECTION BAR-CONTAINER*/
@@ -98,9 +124,36 @@ section .principal{
 }
 .container .title-overview{
     background-color: white;
-    display: inline-block;
+    /* display: inline-block;*/
     padding-bottom: 10px;
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
+}
+.data-overview{
+    background-color: white;
+   /*  border: 2px solid red; */
+    display: inline-block;
+}
+.description{
+    background-color: #e1e1e1;
+    display: block;
+    font-size:  10px;
+    text-align: center;
+
+}
+.data-style {
+    font-weight: bold;
+    font-size: 24px;
+}
+.display-inline-block{
+    display: inline-block;
+}
+.c-plomo{
+    background-color: #e1e1e1;
+
+}
+.text-align-center{
+    text-align: center;
+    border-radius: 5px;
 }
