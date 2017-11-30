@@ -7,6 +7,8 @@ window.addEventListener('load', function() {
   var containerTeachers = document.querySelector('.container-teachers');
   var hideForTeachers = document.querySelector('.hide-for-teachers');
   var navigator = document.querySelector('.navigator');
+  var hrover=document.getElementsByTagName('hr')[0];
+  var hrteacher=document.getElementsByTagName('hr')[1];
   // agregando evento click a la barra de navegacion principal
   navigator.addEventListener('click', showCharts);
   function showCharts(event) {
@@ -15,10 +17,13 @@ window.addEventListener('load', function() {
     if (event.target.getAttribute('value') === 'teachers') {
       hideForTeachers.classList.remove('show');
       hideForTeachers.classList.add('hide');
+      hrover.classList.remove('sub');
+      hrover.classList.add('none');
+      hrteacher.classList.remove('none');
+      hrteacher.classList.add('sub');
     } else if (event.target.getAttribute('value') === 'overview')
     // containerOverview.classList.add('show')
-      hideForTeachers.classList.remove('hide');
-    hideForTeachers.classList.add('show');
+      location.reload();
   }
   // evento select para filtros :
   var enrollmentStudents = document.querySelector('.enrollment-students'); // celda que recibira los numeros
