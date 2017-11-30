@@ -51,7 +51,7 @@ window.addEventListener('load', function() {
     ratingTeachers(sede, generacion);
     ratingJedi(sede, generacion);
     studentSatisfation(sede, generacion);
-    location.reload();
+    
   });
 });
 /* Funciones */
