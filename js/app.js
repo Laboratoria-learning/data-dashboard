@@ -107,6 +107,7 @@ window.addEventListener('load', function() {
   promoterTwo.setAttribute('class', 'pTwoClass');
   // TechSkills
   var techS = document.getElementById('techS');
+  var techSection = document.createElement('section')
   var techSkills = document.createElement('div');
   var titleTS = document.createElement('h1');
   titleTS.innerText = 'TECH SKILLS';
@@ -130,7 +131,8 @@ window.addEventListener('load', function() {
   var textTS = document.createElement('span');
   textTS.innerText = '% Of TOTAL';
  // agregando clases
-  techS.appendChild(techSkills);
+  techS.appendChild(techSection);
+  techSection.appendChild(techSkills)
   techSkills.appendChild(titleTS);
   techSkills.appendChild(comboTS);
   comboTS.appendChild(OP1);
@@ -144,6 +146,7 @@ window.addEventListener('load', function() {
   totalTS.appendChild(titleTS2);
   totalTS.appendChild(textTS);
   // agregando clases al los elementos
+  techSection.setAttribute('class', 'sectionTech');
   OP1.setAttribute('value', 'SP1');
   OP2.setAttribute('value', 'SP2');
   OP3.setAttribute('value', 'SP3');
