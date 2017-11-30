@@ -15,9 +15,8 @@ var valuesofData = Object.values(data);
 window.addEventListener('load', function() {
 
   var nameshow = document.getElementById('nameshow');
-  var selectSede = document.getElementById('select-sede');
 
-/* CÓDIGO PARA MOSTRAR SEDES Y PROMOCIONES */
+  /* CÓDIGO PARA MOSTRAR SEDES Y PROMOCIONES */
   // Creamos una variable que va a guardar la lista desplegable
   var selectionSede = document.getElementById('select-sede');
 
@@ -28,7 +27,7 @@ window.addEventListener('load', function() {
     // le asignamos el valor del labol del grupo, de acuerdo al nombre extraido de data.js de cada sede
     optgroupsedes.label = dataNameSedes[i];
     optgroupsedes.id = 'optgroupsede' + i;
-    // console.log(dataNameSedes[i]);
+    
     // le asignamos cada sede a la lista de sedes
     selectionSede.appendChild(optgroupsedes);
     // guardamos las promociones por sede
@@ -38,25 +37,30 @@ window.addEventListener('load', function() {
     var valuesofPromsforSede = Object.values(valuesofData[i]);
     // console.log(valuesofData[i]);
     // console.log(valuesofPromsforSede);
+    
 
     // var nameSede = (searchInArray(dataNameSedes, dataNameSedes[i]));
     // console.log(nameSede);
     var nameSede = document.getElementById('optgroupsede' + i).label;
-
+    
     
     var arrayNumberStudentsActiveforSede = [];
     // Recorremos las promociones  
     for (var j = 0; j < valuesofPromsforSede.length; j++) {
+      
       // Creamos un elemento para mostrar las promociones
       var optionproms = document.createElement('option');
       // le asignamos el valor a mostrar
-      optionproms.label = promsforSede[j];
       optionproms.id = 'optionproms' + j;
+      optionproms.label = promsforSede[j];
+      optionproms.value = j;
+
       // le asignamos donde lo va a mostrar
       optgroupsedes.appendChild(optionproms); 
-  
+      // console.log(optionproms.id);
       // var nameProm = searchInArray(promsforSede, promsforSede[j]); 
       var nameProm = document.getElementById('optionproms' + j).label; 
+      // console.log( optionproms.value);
           
       var numberOfStudentsforProm = valuesofPromsforSede[j].students.length;
       // console.log(numberOfStudentsforProm);
@@ -70,19 +74,25 @@ window.addEventListener('load', function() {
       var percentSatudentsActiveforProm = Math.round((numberStudentsActiveforProm * 100) / numberOfStudentsforProm);
       // Porcentaje de alumnas inactivas por promoción
       var percentSatudentsIntiveforProm = Math.round((numberStudentsInactiveforProm * 100) / numberOfStudentsforProm);
-      
-      
+
       // console.log(numberOfStudentsforProm);
       
-      selectSede.addEventListener('change', function(event) {
-        var valueSelector = nameSede + nameProm;
-        console.log(valueSelector);
-        switch (valueSelector) {
-          case (nameProm):
-            nameshow.textContent = nameSede + ' ' + valueSelector;
+      selectionSede.addEventListener('change', function(event) {
+        
+        var nodosoptGroup = event.target.children;
+        for (var h = 0; h < nodosoptGroup. length; h++) {
+          var nodosOption = nodosoptGroup[h].children;
+          for (var d =0 ; d < nodosOption.length; d++) {
             
-            break;
-        }
+            var nodo = nodosOption [d];
+            console.log(nodo);
+            if (nodo.value = ) {
+              nameshow.textContent = nameSede + ' ' + nameProm;
+            }
+
+            // console.log(optionproms.id);
+          }
+        } 
       });
 
           
@@ -114,10 +124,12 @@ window.addEventListener('load', function() {
         var PercentTotalStudent = parseInt(sumElementArray(arrayPercentTotalStudent) / arraysprints.length); 
         // console.log(PercentTotalStudent); 
         arrayPercentTotalProm.push(PercentTotalStudent);
-      }
 
-      var PercentTotalProm = parseInt(sumElementArray(arrayPercentTotalProm) / dataStudent.length);
-      // console.log(PercentTotalProm);
+        var PercentTotalProm = parseInt(sumElementArray(arrayPercentTotalProm) / dataStudent.length);
+        // console.log(PercentTotalProm);
+      }
+      // console.log(optgroupsedes.id);
+
       /* FIN ACCEDER*/
     }
     // total de studiantes por sede;
@@ -177,31 +189,31 @@ function searchInArray(array, string) {
   return result;
 }
 
-// para buscar una key en un objeto
-function searchInObject(obj, string) {
-  var result;
-  var keys = Object.keys(obj);
-  for (var s = 0; s < keys.length; s++) {
-    if (string === keys[s]) {
-      result = string;
-    }
-  }
-  return result;
-}
+// // para buscar una key en un objeto
+// function searchInObject(obj, string) {
+//   var result;
+//   var keys = Object.keys(obj);
+//   for (var s = 0; s < keys.length; s++) {
+//     if (string === keys[s]) {
+//       result = string;
+//     }
+//   }
+//   return result;
+// }
 
-// funcion para obtener el valor especifco de una key
-function getValueforkey(obj, key) {
-  var valueofkey,result;
-  var keysofObject = Object.keys(obj);
-  for (var i = 0; i < keysofObject.length; i++) {
-    keysearch = keysofObject[i];  
-    if (key === keysofObject[i]) {
-      valueofkey = obj[key];
-    }
-    result = valueofkey;
-  }  
-  return result;
-}
+// // funcion para obtener el valor especifco de una key
+// function getValueforkey(obj, key) {
+//   var valueofkey,result;
+//   var keysofObject = Object.keys(obj);
+//   for (var i = 0; i < keysofObject.length; i++) {
+//     keysearch = keysofObject[i];  
+//     if (key === keysofObject[i]) {
+//       valueofkey = obj[key];
+//     }
+//     result = valueofkey;
+//   }  
+//   return result;
+// }
 
 // para buscar estudiantes activas
 function serchStudentsActive(studentsList) {
