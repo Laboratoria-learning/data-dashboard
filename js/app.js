@@ -594,6 +594,7 @@ function create() {
 }
 
 function select() {
+  
   sede.addEventListener('change', create);
   students.addEventListener('click', estudentcont);
   overview.addEventListener('click', overcont);
