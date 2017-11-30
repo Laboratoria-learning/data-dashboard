@@ -2,19 +2,19 @@ var student = document.getElementById('student');
 var container = document.getElementsByClassName('container')[0];
 /*Variables globales por sedes*/
 //Lima
- var arrayAlumn20162L = data.LIM['2016-2']['students'];
- var arrayAlumn20171L = data.LIM['2017-1']['students'];
- var arrayAlumn20172L = data.LIM['2017-2']['students'];
- // Arequipa
- var arrayAlumn20162A = data.AQP['2016-2']['students'];
- var arrayAlumn20171A = data.AQP['2017-1']['students'];
- // Santiago
- var arrayAlumn20162S = data.SCL['2016-2']['students'];
- var arrayAlumn20171S = data.SCL['2017-1']['students'];
- var arrayAlumn20172S = data.SCL['2017-2']['students'];
- // Mexico df
- var arrayAlumn20171M = data.CDMX['2017-1']['students'];
- var arrayAlumn20172M = data.CDMX['2017-2']['students'];
+var arrayAlumn20162L = data.LIM['2016-2']['students'];
+var arrayAlumn20171L = data.LIM['2017-1']['students'];
+var arrayAlumn20172L = data.LIM['2017-2']['students'];
+// Arequipa
+var arrayAlumn20162A = data.AQP['2016-2']['students'];
+var arrayAlumn20171A = data.AQP['2017-1']['students'];
+// Santiago
+var arrayAlumn20162S = data.SCL['2016-2']['students'];
+var arrayAlumn20171S = data.SCL['2017-1']['students'];
+var arrayAlumn20172S = data.SCL['2017-2']['students'];
+// Mexico df
+var arrayAlumn20171M = data.CDMX['2017-1']['students'];
+var arrayAlumn20172M = data.CDMX['2017-2']['students'];
 //Arequipa
 showAlumn4s(arrayAlumn20162A);
 showAlumn3s(arrayAlumn20171A);
@@ -33,7 +33,7 @@ showAlumn2s(arrayAlumn20172M);
 function showAlumn4s(sede) {
   //var dataArray = data.AQP["2016-2"]['students'];
   for (var i = 0; i < sede.length; i++) {
-    if(sede[i]['active'] == true){
+    if (sede[i]['active'] == true) {
       var div = document.createElement('div');
       div.classList.add('style');
       container.appendChild(div);
@@ -77,47 +77,47 @@ function showAlumn4s(sede) {
       div.appendChild(divNote);
       var sprint = sede[i]['sprints'];
       var sc = 'score',
-          hs = 'hse',
-          tc = 'tech';
+        hs = 'hse',
+        tc = 'tech';
       var techSkill = document.createElement('p');
-        var tech = ((sprint[0][sc][tc]) + (sprint[1][sc][tc]) + (sprint[2][sc][tc]) + (sprint[3][sc][tc])) / 4;
-        var skillT = document.createElement('span');
-        skillT.textContent = 'TECH SKILLS';
-        skillT.classList.add('skill');
-        skillT.classList.add('skillT');
-        divNote.appendChild(skillT);
-        techSkill.innerHTML = parseInt(tech / 18) + '%';
-        techSkill.classList.add('note');
-        divNote.appendChild(techSkill);
-        var lifeSkill = document.createElement('p');
-          //tech.textContent = (sprint[0]['score']['hse']+ sprint[1]['score']['hse'] + sprint[2]['score']['hse'] + sprint[3]['score']['hse']) / 4;
-          /* HSE = 1200 puntos máximo --> el 70% son 840 pts.
-            tech = 1800 puntos máximo --> el 70%  son 1260pts.*/
-        var hse = ((sprint[0][sc][hs]) + (sprint[1][sc][hs]) + (sprint[2][sc][hs]) + (sprint[3][sc][hs])) / 4;
-        lifeSkill.innerHTML = parseInt(hse / 12) + '%';
-        lifeSkill.classList.add('note');
-        divNote.appendChild(lifeSkill);
-        var skillH = document.createElement('span');
-        skillH.textContent = 'LIFE SKILLS';
-        skillH.classList.add('skill');
-        skillH.classList.add('skillH');
-        divNote.appendChild(skillH);
-          //Ingles
-        var englishSkill = document.createElement('p');
-        englishSkill.textContent = 'INTERM';
-        //englishSkill.classList.add('note');
-        englishSkill.classList.add('noteM');
-        divNote.appendChild(englishSkill);
-        var skillE = document.createElement('span');
-        skillE.textContent = 'ENGLISH SKILLS';
-        skillE.classList.add('skill');
-        skillE.classList.add('skillE');
-        divNote.appendChild(skillE);
-        //Perfil
-        var profile = document.createElement('p');
-        profile.textContent = 'Ver perfil >';
-        profile.classList.add('profile');
-        div.appendChild(profile);
+      var tech = ((sprint[0][sc][tc]) + (sprint[1][sc][tc]) + (sprint[2][sc][tc]) + (sprint[3][sc][tc])) / 4;
+      var skillT = document.createElement('span');
+      skillT.textContent = 'TECH SKILLS';
+      skillT.classList.add('skill');
+      skillT.classList.add('skillT');
+      divNote.appendChild(skillT);
+      techSkill.innerHTML = parseInt(tech / 18) + '%';
+      techSkill.classList.add('note');
+      divNote.appendChild(techSkill);
+      var lifeSkill = document.createElement('p');
+      //tech.textContent = (sprint[0]['score']['hse']+ sprint[1]['score']['hse'] + sprint[2]['score']['hse'] + sprint[3]['score']['hse']) / 4;
+      /* HSE = 1200 puntos máximo --> el 70% son 840 pts.
+        tech = 1800 puntos máximo --> el 70%  son 1260pts.*/
+      var hse = ((sprint[0][sc][hs]) + (sprint[1][sc][hs]) + (sprint[2][sc][hs]) + (sprint[3][sc][hs])) / 4;
+      lifeSkill.innerHTML = parseInt(hse / 12) + '%';
+      lifeSkill.classList.add('note');
+      divNote.appendChild(lifeSkill);
+      var skillH = document.createElement('span');
+      skillH.textContent = 'LIFE SKILLS';
+      skillH.classList.add('skill');
+      skillH.classList.add('skillH');
+      divNote.appendChild(skillH);
+      //Ingles
+      var englishSkill = document.createElement('p');
+      englishSkill.textContent = 'INTERM';
+      //englishSkill.classList.add('note');
+      englishSkill.classList.add('noteM');
+      divNote.appendChild(englishSkill);
+      var skillE = document.createElement('span');
+      skillE.textContent = 'ENGLISH SKILLS';
+      skillE.classList.add('skill');
+      skillE.classList.add('skillE');
+      divNote.appendChild(skillE);
+      //Perfil
+      var profile = document.createElement('p');
+      profile.textContent = 'Ver perfil >';
+      profile.classList.add('profile');
+      div.appendChild(profile);
     }
   }
 };
@@ -125,7 +125,7 @@ function showAlumn4s(sede) {
 function showAlumn3s(sede) {
   //var dataArray = data.AQP["2016-2"]['students'];
   for (var i = 0; i < sede.length; i++) {
-    if(sede[i]['active'] == true){
+    if (sede[i]['active'] == true) {
       var div = document.createElement('div');
       div.classList.add('style');
       container.appendChild(div);
@@ -169,54 +169,54 @@ function showAlumn3s(sede) {
       div.appendChild(divNote);
       var sprint = sede[i]['sprints'];
       var sc = 'score',
-          hs = 'hse',
-          tc = 'tech';
+        hs = 'hse',
+        tc = 'tech';
       var techSkill = document.createElement('p');
-        var tech = ((sprint[0][sc][tc]) + (sprint[1][sc][tc]) + (sprint[2][sc][tc])) / 3;
-        var skillT = document.createElement('span');
-        skillT.textContent = 'TECH SKILLS';
-        skillT.classList.add('skill');
-        skillT.classList.add('skillT');
-        divNote.appendChild(skillT);
-        techSkill.innerHTML = parseInt(tech / 18) + '%';
-        techSkill.classList.add('note');
-        divNote.appendChild(techSkill);
-        var lifeSkill = document.createElement('p');
-          //tech.textContent = (sprint[0]['score']['hse']+ sprint[1]['score']['hse'] + sprint[2]['score']['hse'] + sprint[3]['score']['hse']) / 4;
-          /* HSE = 1200 puntos máximo --> el 70% son 840 pts.
-            tech = 1800 puntos máximo --> el 70%  son 1260pts.*/
-        var hse = ((sprint[0][sc][hs]) + (sprint[1][sc][hs]) + (sprint[2][sc][hs])) / 3;
-        lifeSkill.innerHTML = parseInt(hse / 12) + '%';
-        lifeSkill.classList.add('note');
-        divNote.appendChild(lifeSkill);
-        var skillH = document.createElement('span');
-        skillH.textContent = 'LIFE SKILLS';
-        skillH.classList.add('skill');
-        skillH.classList.add('skillH');
-        divNote.appendChild(skillH);
-          //Ingles
-        var englishSkill = document.createElement('p');
-        englishSkill.textContent = 'INTERM';
-        //englishSkill.classList.add('note');
-        englishSkill.classList.add('noteM');
-        divNote.appendChild(englishSkill);
-        var skillE = document.createElement('span');
-        skillE.textContent = 'ENGLISH SKILLS';
-        skillE.classList.add('skill');
-        skillE.classList.add('skillE');
-        divNote.appendChild(skillE);
-        //Perfil
-        var profile = document.createElement('p');
-        profile.textContent = 'Ver perfil >';
-        profile.classList.add('profile');
-        div.appendChild(profile);
+      var tech = ((sprint[0][sc][tc]) + (sprint[1][sc][tc]) + (sprint[2][sc][tc])) / 3;
+      var skillT = document.createElement('span');
+      skillT.textContent = 'TECH SKILLS';
+      skillT.classList.add('skill');
+      skillT.classList.add('skillT');
+      divNote.appendChild(skillT);
+      techSkill.innerHTML = parseInt(tech / 18) + '%';
+      techSkill.classList.add('note');
+      divNote.appendChild(techSkill);
+      var lifeSkill = document.createElement('p');
+      //tech.textContent = (sprint[0]['score']['hse']+ sprint[1]['score']['hse'] + sprint[2]['score']['hse'] + sprint[3]['score']['hse']) / 4;
+      /* HSE = 1200 puntos máximo --> el 70% son 840 pts.
+        tech = 1800 puntos máximo --> el 70%  son 1260pts.*/
+      var hse = ((sprint[0][sc][hs]) + (sprint[1][sc][hs]) + (sprint[2][sc][hs])) / 3;
+      lifeSkill.innerHTML = parseInt(hse / 12) + '%';
+      lifeSkill.classList.add('note');
+      divNote.appendChild(lifeSkill);
+      var skillH = document.createElement('span');
+      skillH.textContent = 'LIFE SKILLS';
+      skillH.classList.add('skill');
+      skillH.classList.add('skillH');
+      divNote.appendChild(skillH);
+      //Ingles
+      var englishSkill = document.createElement('p');
+      englishSkill.textContent = 'INTERM';
+      //englishSkill.classList.add('note');
+      englishSkill.classList.add('noteM');
+      divNote.appendChild(englishSkill);
+      var skillE = document.createElement('span');
+      skillE.textContent = 'ENGLISH SKILLS';
+      skillE.classList.add('skill');
+      skillE.classList.add('skillE');
+      divNote.appendChild(skillE);
+      //Perfil
+      var profile = document.createElement('p');
+      profile.textContent = 'Ver perfil >';
+      profile.classList.add('profile');
+      div.appendChild(profile);
     }
   }
 };
 function showAlumn2s(sede) {
   //var dataArray = data.AQP["2016-2"]['students'];
   for (var i = 0; i < sede.length; i++) {
-    if(sede[i]['active'] == true){
+    if (sede[i]['active'] == true) {
       var div = document.createElement('div');
       div.classList.add('style');
       container.appendChild(div);
@@ -260,47 +260,47 @@ function showAlumn2s(sede) {
       div.appendChild(divNote);
       var sprint = sede[i]['sprints'];
       var sc = 'score',
-          hs = 'hse',
-          tc = 'tech';
+        hs = 'hse',
+        tc = 'tech';
       var techSkill = document.createElement('p');
-        var tech = ((sprint[0][sc][tc]) + (sprint[1][sc][tc])) / 2;
-        var skillT = document.createElement('span');
-        skillT.textContent = 'TECH SKILLS';
-        skillT.classList.add('skill');
-        skillT.classList.add('skillT');
-        divNote.appendChild(skillT);
-        techSkill.innerHTML = parseInt(tech / 18) + '%';
-        techSkill.classList.add('note');
-        divNote.appendChild(techSkill);
-        var lifeSkill = document.createElement('p');
-          //tech.textContent = (sprint[0]['score']['hse']+ sprint[1]['score']['hse'] + sprint[2]['score']['hse'] + sprint[3]['score']['hse']) / 4;
-          /* HSE = 1200 puntos máximo --> el 70% son 840 pts.
-            tech = 1800 puntos máximo --> el 70%  son 1260pts.*/
-        var hse = ((sprint[0][sc][hs]) + (sprint[1][sc][hs])) / 2;
-        lifeSkill.innerHTML = parseInt(hse / 12) + '%';
-        lifeSkill.classList.add('note');
-        divNote.appendChild(lifeSkill);
-        var skillH = document.createElement('span');
-        skillH.textContent = 'LIFE SKILLS';
-        skillH.classList.add('skill');
-        skillH.classList.add('skillH');
-        divNote.appendChild(skillH);
-          //Ingles
-        var englishSkill = document.createElement('p');
-        englishSkill.textContent = 'INTERM';
-        //englishSkill.classList.add('note');
-        englishSkill.classList.add('noteM');
-        divNote.appendChild(englishSkill);
-        var skillE = document.createElement('span');
-        skillE.textContent = 'ENGLISH SKILLS';
-        skillE.classList.add('skill');
-        skillE.classList.add('skillE');
-        divNote.appendChild(skillE);
-        //Perfil
-        var profile = document.createElement('p');
-        profile.textContent = 'Ver perfil >';
-        profile.classList.add('profile');
-        div.appendChild(profile);
+      var tech = ((sprint[0][sc][tc]) + (sprint[1][sc][tc])) / 2;
+      var skillT = document.createElement('span');
+      skillT.textContent = 'TECH SKILLS';
+      skillT.classList.add('skill');
+      skillT.classList.add('skillT');
+      divNote.appendChild(skillT);
+      techSkill.innerHTML = parseInt(tech / 18) + '%';
+      techSkill.classList.add('note');
+      divNote.appendChild(techSkill);
+      var lifeSkill = document.createElement('p');
+      //tech.textContent = (sprint[0]['score']['hse']+ sprint[1]['score']['hse'] + sprint[2]['score']['hse'] + sprint[3]['score']['hse']) / 4;
+      /* HSE = 1200 puntos máximo --> el 70% son 840 pts.
+        tech = 1800 puntos máximo --> el 70%  son 1260pts.*/
+      var hse = ((sprint[0][sc][hs]) + (sprint[1][sc][hs])) / 2;
+      lifeSkill.innerHTML = parseInt(hse / 12) + '%';
+      lifeSkill.classList.add('note');
+      divNote.appendChild(lifeSkill);
+      var skillH = document.createElement('span');
+      skillH.textContent = 'LIFE SKILLS';
+      skillH.classList.add('skill');
+      skillH.classList.add('skillH');
+      divNote.appendChild(skillH);
+      //Ingles
+      var englishSkill = document.createElement('p');
+      englishSkill.textContent = 'INTERM';
+      //englishSkill.classList.add('note');
+      englishSkill.classList.add('noteM');
+      divNote.appendChild(englishSkill);
+      var skillE = document.createElement('span');
+      skillE.textContent = 'ENGLISH SKILLS';
+      skillE.classList.add('skill');
+      skillE.classList.add('skillE');
+      divNote.appendChild(skillE);
+      //Perfil
+      var profile = document.createElement('p');
+      profile.textContent = 'Ver perfil >';
+      profile.classList.add('profile');
+      div.appendChild(profile);
     }
   }
 };
