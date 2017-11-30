@@ -1,3 +1,121 @@
-/*
- * Estilos de tu proyecto
- */
+
+*{
+
+  margin:0;
+}
+ header{
+   height: 100px;
+   width: 90%;
+ }
+ header img{
+   width: 20%;
+   margin: auto;
+   display: block;
+ }
+.bars{
+float: right;
+font-size: 40px;
+/*outline: 1px solid red;*/
+position: relative;
+top:-80px;
+
+ }
+ul{
+  list-style: none;
+}
+
+.disabled-menu{
+display: none;
+
+}
+
+
+.selectors{
+  background-color: #e1e1e1;
+  height: 70px;
+}
+
+
+
+.enabled-menu{
+display: block;
+}
+
+.section-gray{
+/*outline:1px solid red;*/
+height: 80px;
+background-color: #e2e4e6;
+}
+/*selectores sede-generaciones*/
+.selections{
+  border: none;
+  background-color: #e2e4e6;
+  margin-left: 100px;
+  margin-top: 10px;
+  font-size: 20px;
+}
+.container-subtitle{
+  overflow: auto;
+  margin-left: 80px;
+  margin-top: 20px;
+}
+.subtitle{
+  float: left;
+  margin-left: 20px;
+}
+.results{
+  background-color: #f7f7f7;
+  /*outline:1px solid red;*/
+  height: 900px;
+}
+.container{
+margin-left: 80px;
+}
+.container .box{
+  /*outline:1px solid red;*/
+  border: 1px solid black;
+  border-radius: 7px;
+  height: 300px;
+  width: 300px;
+  background-color: #ffffff;
+  float: left;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+/*estilo a la caja total de estudiantes*/
+.total-students{
+  height: 70px;
+  width: 120px;
+  background-color: #e2e4e6;
+  float: left;
+}
+
+/*estilo a las cajas de la seccion nps*/
+.total-nps, .seccion-nps, .satisfaction-nps {
+  height: 70px;
+    width: 120px;
+    background-color: #e2e4e6;
+    float: left;
+    margin-left: 20px;
+  }
+#section2 {
+    display: inline-block;
+    background-color: rgb(203, 203, 238);
+    width: 100%;
+    height: 200px;
+}
+/*pase a hoja de melli*/
+
+.filter2 {
+  height: 70px;
+  width: 120px;
+  background-color: #e2e4e6;
+  float: left;
+  margin-left: 20px;
+
+  text-align: center;
+}
+
+.filtertxt {
+  font-size: 12px;
+}
