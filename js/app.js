@@ -1,8 +1,8 @@
-// Load google charts-satisfied-students
+// Cargar gráfico desde  google charts  
 google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart);
-
-// Draw the chart and set the chart values
+// google.charts.setOnLoadCallback(drawNpsChart);
+// Draw the chart and set the chart values, satisfied-students-chart
 function drawChart() {
   var data = google.visualization.arrayToDataTable([
   ['Sprint', 'Satisfied',],
@@ -20,6 +20,23 @@ function drawChart() {
   var chart = new google.visualization.LineChart(document.getElementById('satisfied-chart'));
   chart.draw(data, options);
 }
+// nps-chart
+// var aqp20172 = data.AQP['2016-2']['students'];
+// var aqp20172Ratings = data.AQP['2016-2']['ratings'];
+// aqp20172Ratings
+
+//    function drawNpsChart() {
+//    var dataNps = google.visualization.arrayToDataTable([
+//    ['Sprint','promoters','passive','detractors'],
+//    ['S1 ', 70, 15, 15 ],
+//    ['S2', 74, 16, 10],
+//    ['S3', 78, 13, 9],
+//    ['S4', 78,15,7],
+//    ]);
+//    var optionsNps = { 'width':325, 'height':170};
+//    var chartNps = new google.visualization.LineChart(document.getElementById('nps-chart'));
+//    chartNps.draw(dataNps, optionsNps);
+
 //funcion de los tabs de main section
 var showHide = function(e) {
     var tabSelected = e.target.dataset.tabSelected;

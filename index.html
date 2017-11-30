@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Dashboard</title>
     <script src="https://use.fontawesome.com/21b158d175.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">    
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
@@ -24,6 +24,9 @@
             <li class="nav-sedes"><a class="remove-underlined"href="#">Ciudad de México<i class="fa fa-sort-desc" aria-hidden="true"></i></a></li>
           </ul>
         </nav>
+        <div class="total-data">
+          <button class="total-data-button"><i class="fa fa-line-chart" aria-hidden="true"></i> TOTAL DATA</button>
+        </div>
         <main>
           <div class="container">
             <div class="selected-box">
@@ -31,7 +34,7 @@
               <i class="fa fa-angle-down fa-2x" aria-hidden="true"></i>
             </div>
             <section>
-              <ul class="remove-style">
+              <ul class="tabs remove-style">
                 <li class="inline-elements"><button class="tab"data-tab-selected="tabOverview">Overview</button></li>
                 <li class="inline-elements"><button class="tab"data-tab-selected="tabStudents">Students</button></li>
                 <li class="inline-elements"><button class="tab"data-tab-selected="tabTeachers">Teachers</button></li>
@@ -65,8 +68,7 @@
                               <div class="inline-elements data-boxes">120<div class="small-font"><br># STUDENTS CURRENTLY<br>ENROLLED</div></div>
                               <div class="inline-elements data-boxes">20%<div class="small-font"><br>%DROPOUT</div></div>                       
                             </div>
-                            <div class="graphic-img">
-                              <img src="assets/images/graph.png" alt="graphic">
+                            <div id="nps-chart"class="graphic-img">
                             </div>
                           </div>
                   </div>
@@ -74,7 +76,12 @@
                     <div class="graphic second-graph">
                         <div>
                           <h3 class="inline-elements">TECH SKILLS</h3>
-                          <select class="inline-elements" name="" id=""></select>
+                          <select class=" select inline-elements" name="" id="">
+                            <option value="">TECH</option>
+                            <option value="">Common Core</option>
+                            <option value="">Javascript</option>
+                            <option value="">UX Design</option>
+                          </select>
                         </div>
                         <div>
                             <div class="inline-elements data-boxes">120<div class="small-font"><br># STUDENTS CURRENTLY<br>ENROLLED</div></div>
@@ -90,7 +97,13 @@
                       <div class="graphic second-graph">
                           <div>
                               <h3 class="inline-elements">LIFE SKILLS</h3>
-                              <select class="inline-elements" name="" id=""></select>
+                              <select class="select inline-elements" name="" id="">
+                                <option selected>HSE</option>
+                                <option>Sprint 1</option>
+                                <option>Sprint 2</option>
+                                <option>Sprint 3</option>
+                                <option>Sprint 4</option>
+                              </select>
                             </div>
                             <div>
                                 <div class="inline-elements data-boxes">120<div class="small-font"><br># STUDENTS CURRENTLY<br>ENROLLED</div></div>
@@ -109,7 +122,6 @@
                           <div class="inline-elements data-boxes">140<div class="small-font"><br>% MEETING OR EXCEEDING EXPECTATIONS</div></div>
                         </div>
                         <div id="satisfied-chart"class="graphic-img">
-                          <img src="assets/images/bar-graph.png" alt="bar-graphic">
                         </div>
                       </div>
                       <div class="graphic inline-elements chart">
@@ -157,10 +169,11 @@
                                 <h1>DIANA NAVARRO</h1>
                                 <h2>Front-End Developer</h2>
                                 <div>
-                                  <div>96%</div>
-                                  <div>80%</div>
-                                  <div>40%</div>
+                                    <div class="box-student inline-elements">96%</div>
+                                    <div class="box-student inline-elements">80%</div>
+                                    <div class="box-student inline-elements">40%</div>
                                 </div>
+                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
                               </div>
                             </div>
                             <div class="student-data">
@@ -169,10 +182,11 @@
                                 <h1>DIANA NAVARRO</h1>
                                 <h2>Front-End Developer</h2>
                                 <div>
-                                  <div>96%</div>
-                                  <div>80%</div>
-                                  <div>40%</div>
+                                    <div class="box-student inline-elements">96%</div>
+                                    <div class="box-student inline-elements">80%</div>
+                                    <div class="box-student inline-elements">40%</div>
                                 </div>
+                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
                               </div>
                             </div>
                             <div class="student-data">
@@ -181,10 +195,11 @@
                                 <h1>DIANA NAVARRO</h1>
                                 <h2>Front-End Developer</h2>
                                 <div>
-                                  <div>96%</div>
-                                  <div>80%</div>
-                                  <div>40%</div>
+                                    <div class="box-student inline-elements">96%</div>
+                                    <div class="box-student inline-elements">80%</div>
+                                    <div class="box-student inline-elements">40%</div>
                                 </div>
+                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
                               </div>
                             </div>
                             <div class="student-data">
@@ -193,10 +208,11 @@
                                 <h1>DIANA NAVARRO</h1>
                                 <h2>Front-End Developer</h2>
                                 <div>
-                                  <div>96%</div>
-                                  <div>80%</div>
-                                  <div>40%</div>
+                                    <div class="box-student inline-elements">96%</div>
+                                    <div class="box-student inline-elements">80%</div>
+                                    <div class="box-student inline-elements">40%</div>
                                 </div>
+                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
                               </div>
                             </div>
                             <div class="student-data">
@@ -205,10 +221,11 @@
                                 <h1>DIANA NAVARRO</h1>
                                 <h2>Front-End Developer</h2>
                                 <div>
-                                  <div>96%</div>
-                                  <div>80%</div>
-                                  <div>40%</div>
+                                    <div class="box-student inline-elements">96%</div>
+                                    <div class="box-student inline-elements">80%</div>
+                                    <div class="box-student inline-elements">40%</div>
                                 </div>
+                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
                               </div>
                             </div>
                             <div class="student-data">
@@ -217,10 +234,11 @@
                                 <h1>DIANA NAVARRO</h1>
                                 <h2>Front-End Developer</h2>
                                 <div>
-                                  <div>96%</div>
-                                  <div>80%</div>
-                                  <div>40%</div>
+                                    <div class="box-student inline-elements">96%</div>
+                                    <div class="box-student inline-elements">80%</div>
+                                    <div class="box-student inline-elements">40%</div>
                                 </div>
+                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
                               </div>
                             </div>
                             <div class="student-data">
@@ -229,10 +247,11 @@
                                 <h1>DIANA NAVARRO</h1>
                                 <h2>Front-End Developer</h2>
                                 <div>
-                                  <div>96%</div>
-                                  <div>80%</div>
-                                  <div>40%</div>
+                                    <div class="box-student inline-elements">96%</div>
+                                    <div class="box-student inline-elements">80%</div>
+                                    <div class="box-student inline-elements">40%</div>
                                 </div>
+                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
                               </div>
                             </div>
                             <div class="student-data">
@@ -241,10 +260,11 @@
                                 <h1>DIANA NAVARRO</h1>
                                 <h2>Front-End Developer</h2>
                                 <div>
-                                  <div>96%</div>
-                                  <div>80%</div>
-                                  <div>40%</div>
+                                    <div class="box-student inline-elements">96%</div>
+                                    <div class="box-student inline-elements">80%</div>
+                                    <div class="box-student inline-elements">40%</div>
                                 </div>
+                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
                               </div>
                             </div>
                             <div class="student-data">
@@ -253,10 +273,11 @@
                                 <h1>DIANA NAVARRO</h1>
                                 <h2>Front-End Developer</h2>
                                 <div>
-                                  <div>96%</div>
-                                  <div>80%</div>
-                                  <div>40%</div>
+                                    <div class="box-student inline-elements">96%</div>
+                                    <div class="box-student inline-elements">80%</div>
+                                    <div class="box-student inline-elements">40%</div>
                                 </div>
+                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
                               </div>
                             </div>
                             <div class="student-data">
@@ -265,10 +286,11 @@
                                 <h1>DIANA NAVARRO</h1>
                                 <h2>Front-End Developer</h2>
                                 <div>
-                                  <div>96%</div>
-                                  <div>80%</div>
-                                  <div>40%</div>
+                                    <div class="box-student inline-elements">96%</div>
+                                    <div class="box-student inline-elements">80%</div>
+                                    <div class="box-student inline-elements">40%</div>
                                 </div>
+                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
                               </div>
                             </div>
                             <div class="student-data">
@@ -277,10 +299,11 @@
                                 <h1>DIANA NAVARRO</h1>
                                 <h2>Front-End Developer</h2>
                                 <div>
-                                  <div>96%</div>
-                                  <div>80%</div>
-                                  <div>40%</div>
+                                    <div class="box-student inline-elements">96%</div>
+                                    <div class="box-student inline-elements">80%</div>
+                                    <div class="box-student inline-elements">40%</div>
                                 </div>
+                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
                               </div>
                             </div>
                             <div class="student-data">
@@ -289,10 +312,11 @@
                                 <h1>DIANA NAVARRO</h1>
                                 <h2>Front-End Developer</h2>
                                 <div>
-                                  <div>96%</div>
-                                  <div>80%</div>
-                                  <div>40%</div>
+                                    <div class="box-student inline-elements">96%</div>
+                                    <div class="box-student inline-elements">80%</div>
+                                    <div class="box-student inline-elements">40%</div>
                                 </div>
+                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
                               </div>
                             </div>
                             <div class="student-data">
@@ -301,10 +325,11 @@
                                 <h1>DIANA NAVARRO</h1>
                                 <h2>Front-End Developer</h2>
                                 <div>
-                                  <div>96%</div>
-                                  <div>80%</div>
-                                  <div>40%</div>
+                                    <div class="box-student inline-elements">96%</div>
+                                    <div class="box-student inline-elements">80%</div>
+                                    <div class="box-student inline-elements">40%</div>
                                 </div>
+                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
                               </div>
                             </div>
                             <div class="student-data">
@@ -313,10 +338,11 @@
                                 <h1>DIANA NAVARRO</h1>
                                 <h2>Front-End Developer</h2>
                                 <div>
-                                  <div>96%</div>
-                                  <div>80%</div>
-                                  <div>40%</div>
+                                    <div class="box-student inline-elements">96%</div>
+                                    <div class="box-student inline-elements">80%</div>
+                                    <div class="box-student inline-elements">40%</div>
                                 </div>
+                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
                               </div>
                             </div>
                             <div class="student-data"> 
@@ -325,10 +351,11 @@
                                 <h1>DIANA NAVARRO</h1>
                                 <h2>Front-End Developer</h2>
                                 <div>
-                                  <div>96%</div>
-                                  <div>80%</div>
-                                  <div>40%</div>
+                                    <div class="box-student inline-elements">96%</div>
+                                    <div class="box-student inline-elements">80%</div>
+                                    <div class="box-student inline-elements">40%</div>
                                 </div>
+                                <div class="view">Ver Perfil<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
                               </div>
                             </div>
                           </div>

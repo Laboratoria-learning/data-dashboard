@@ -8,7 +8,7 @@
 body {
   text-align:center;
   width: 100%;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 .remove-underlined {
   text-decoration: none;
@@ -34,7 +34,6 @@ h3 {
 header {
   width: 100%;
   height: 75px;
-  outline: 1px solid black;
 }
 header ul {
   display: flex;
@@ -62,8 +61,10 @@ nav {
 }
 
 nav .nav-sedes {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
   padding:18px 0px;
-  background: #e4e726;
+  background: #ffb100;
   height: 50px;
 }
 
@@ -77,10 +78,23 @@ main {
   padding:10px;
   background-color: #c0c0c0;
 }
+.tabs {
+  margin-top:10px;
+}
 .tab {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
   padding: 10px 20px;
   border-style: none;
-  background-color: #e4eb1ee0;
+  background-color: #ffae00d5;
+  border-radius: 10px;
+  border-style: none;
+  outline:none;
+}
+.tab:hover {
+  background-color: #515151;
+  color: #ffae00d5;
+  transition: 0.5s;
 }
 #container-overview {
   margin-top:2%;
@@ -113,6 +127,21 @@ main {
 .second-graph {
   width: 80%;
   margin: auto;
+}
+.select {
+  font: sans-serif;
+  border: 1px solid rgb(255, 239, 21);
+  line-height: 1;
+  outline: 0;
+  color:inherit;
+  border-color:rgb(255, 239, 21);
+  padding: 5px 8px 5px 3px;
+  border-radius: 3px;
+  background: linear-gradient(rgb(255, 233, 105), rgb(255, 233, 105)) no-repeat,
+              linear-gradient(-135deg, rgba(255,255,255,0) 50%, white 50%) no-repeat,
+              linear-gradient(-225deg, rgba(255,255,255,0) 50%, white 50%) no-repeat,
+              linear-gradient(rgb(255, 233, 105),rgb(255, 233, 105)) no-repeat;
+  background-color:rgb(255, 241, 88);
 }
 /*Estilos Students Section */
 #container-students {
@@ -148,7 +177,40 @@ form .fa-search {
   margin-top: 12px;
 }
 .student-data {
-  padiing:10px;
-  background-color: #e3f0fb;
+  padding:5px;
+  background-color: rgba(255, 223, 40, 0.795);
   border-radius:10px;
+  margin-bottom:5px;
+}
+.box-student {
+  padding:12px;
+  background-color: #e4e3e3;
+}
+.view{
+  padding:15px 0px;
+  text-align:right;
+  transform:translateX(70%)
+}
+
+/* Estilos total-data*/
+
+.total-data {
+  position:absolute;
+}
+.total-data-button {
+  position: relative;
+  transform: translateY(800%);
+  font: sans-serif;
+  border: 1px solid rgb(255, 239, 21);
+  line-height: 1;
+  outline: 0;
+  color:inherit;
+  border-color:rgb(255, 239, 21);
+  padding: 15px;
+  border-radius: 3px;
+  background-color:rgb(255, 241, 88);
+}
+.total-data:hover {
+  padding: 18px;
+  cursor: pointer;
 }
