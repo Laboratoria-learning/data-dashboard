@@ -1,4 +1,4 @@
-window.addEventListener(load, function(event){
+  var mostrar = prompt('hola');
   google.charts.load('current', {'packages':['corechart']});
   google.charts.setOnLoadCallback(drawChart);
 
@@ -20,5 +20,4 @@ window.addEventListener(load, function(event){
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
     chart.draw(data, options);
-  };
-});
+  }

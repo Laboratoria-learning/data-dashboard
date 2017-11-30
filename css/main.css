@@ -147,3 +147,12 @@ header section {
     color: #333333;
     font-size: 15px;
 }
+
+.grafhic {
+    width: 80%;
+    margin-left: 17%;
+}
+
+.grafhic .grafhic-prueba {
+    outline: 1px solid green;
+}
