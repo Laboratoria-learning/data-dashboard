@@ -13,11 +13,11 @@
 4.El porcentaje que representa el dato anterior en relación al total de estudiantes.
 5.El Net Promoter Score (NPS) promedio de los sprints cursados. 6.El NPS se calcula en base a la encuesta que las estudiantes responden al respecto de la recomendación que darían de Laboratoria, bajo la siguiente fórmula:
 
-**[Promoters] = [Respuestas 9 o 10] / [Total respuestas] * 100
+*[Promoters] = [Respuestas 9 o 10] / [Total respuestas] * 100
 [Passive] = [Respuestas 7 u 8] / [Total respuestas] * 100
 [Detractors] = [Respuestas entre 1 y 6] / [Total respuestas] * 100
 
-[NPS] = [Promoters] - [Detractors]**
+[NPS] = [Promoters] - [Detractors]*
 
 7.La cantidad y el porcentaje que representa el total de estudiantes que superan la meta de puntos técnicos en promedio y por sprint.
 8.La cantidad y el porcentaje que representa el total de estudiantes que superan la meta de puntos de HSE en promedio y por sprint.
@@ -37,6 +37,6 @@ Tener un botón que permita indicar que una estudiante ha salido del Bootcamp y 
 
 ## Vista previa:
 
-![]()
-![]()
-![]()
+![](https://raw.githubusercontent.com/NatalyCortez/data-dashboard/master/assets/images/screen.JPG)
+![](https://raw.githubusercontent.com/NatalyCortez/data-dashboard/master/assets/images/screentwo.JPG)
+![](https://raw.githubusercontent.com/NatalyCortez/data-dashboard/master/assets/images/screenthree.JPG)
