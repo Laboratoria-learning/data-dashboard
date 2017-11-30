@@ -2,29 +2,34 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <title>Data Dashboard</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <title>Data Dashboard</title>
   </head>
   <body>
     <header class="header-laboratoria">
       <img class="logo-laboratoria"src="assets/images/logo-laboratoria.svg" alt="laboratoria's logo">
-      <i class="fa fa-bars fa-2x icon-hamburger" aria-hidden="true"></i>
+      <i id="icon-hamburger" class="fa fa-bars fa-2x icon-hamburger" aria-hidden="true"></i>
     </header>
     <nav class="nav-bar">
-        <h2>santiago de chile 2017 - II</h2>
-        <i class="fa fa-caret-down fa-2x" aria-hidden="true"></i>
-        <ul>
-          <li>overview</li>
-          <button  id="overview-btn" type="button" name="button">overview</button>
-          <button  id="students-btn" type="button" name="button">students</button>
-          <li ></li>
-          <li>teachers</li>
-        </ul>
+      <!-- Sedes -->
+      <select id="headquarters" class="font-size">
+        <option value="">Sede</option>
+      </select>
+      <!-- Generaciones -->
+      <select id="generation" class="font-size">
+        <option value="">Generación</option>
+      </select>
+      <div>
+        <button id="overview-btn" class="tab">general</button>
+        <button id="students-btn" class="tab">estudiantes</button>
+        <button id="teachers-btn" class="tab">profesores</button>
+      </div>
     </nav>
+   <section id="sections">
+     <div id="students"></div>
+     <div id="overview"></div>
     <section>
-      <div id="students"></div>
-      <div id="overview"></div>
       <section class="first-section">
         <div class="div-enrollment">
           <h3>enrollment</h3>
@@ -76,6 +81,13 @@
     <section>
       <section class="second-section">
         <h3>tech skills</h3>
+        <!-- <form action="">
+          <select name="" id="">
+            <option value=""></option>
+          </select>
+        </form>-->
+        <!--<input type="text" placeholder="overall (cumulative)">
+        <i class="fa fa-caret-down" aria-hidden="true"></i>-->
         <input type="text" placeholder="overall (cumulative)">
         <i class="fa fa-caret-down" aria-hidden="true"></i>
         <summary>
@@ -155,8 +167,10 @@
               </figure>
             </div>
       </section>
+    </section>
+   </section>
       <footer>
-
+        <!--holaa-->
       </footer>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
