@@ -66,6 +66,10 @@ ul li{
   margin: 8px 0;
 }
 
+.sub-menu li {
+  cursor: pointer;
+}
+
 .container {
   width: 1300px;
   margin: auto;
