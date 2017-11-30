@@ -281,7 +281,7 @@ main {
 .photos-girls div {
   background-color: #f2d185;
   padding: 20px;
-  margin: 50px;
+  margin: 21px;
   margin-right: 107px;
   float: right;
   display: block;
@@ -291,10 +291,8 @@ main {
 .photos-girls div div {
   width: 109px;
   height: 84px;
-  /* margin-top: -25px; */
   background-color: #fde6bf;
   padding: 17px;
-  padding-top: -89px;
   float: right;
   margin: 24px;
   margin-top: 0px;
@@ -302,11 +300,16 @@ main {
 
 .photos-girls span {
   padding: 10px;
-  /* display: inline; */
-  /* position: relative; */
   float: right;
   font-size: 25px;
   padding-right: 84px;
   padding-top: 9px;
   padding-left: 66px;
+}
+
+aside {
+width: 63px;
+height: 90px;
+padding: 46px;
+font-size: 19px;
 }
