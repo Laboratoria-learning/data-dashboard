@@ -18,14 +18,16 @@
       </section>
       <section class="container-tabs">
         <ul>
-          <li><button type="button" name="button" data-selected-tab="tabOverView" class="tab-overview">Overview</button></li>
-          <li><button type="button" name="button" data-selected-tab="tabStudents" class="tab-students">Students</button></li>
-          <li><button type="button" name="button" data-selected-tab="tabTeacher" class="tab-teachers">Teachers</button></li>
+          <li><button type="button" name="button" data-selected-tab="tabOverView" class="tab">Overview</button></li>
+          <li><button type="button" name="button" data-selected-tab="tabStudents" class="tab">Students</button></li>
+          <li><button type="button" name="button" data-selected-tab="tabTeacher" class="tab">Teachers</button></li>
         </ul>
 
       </section>
       <section class="container-tabs-info">
         <div class="">
+
+
           <article id="overview" class="display-none">
             <section class="container-one">
               <section class="enrollment box-medium-size">
@@ -142,43 +144,47 @@
           Sede
         </p>
         <ul>
-          <li class="text-uppercase country display-none" id="chile">Chile</li>
+          <li class="text-uppercase country" id='chile'>Chile</li>
             <ul class="display-none">
               <li class="city">Santiago de Chile</li>
-                <label><input type="radio" name="cbox"> 2017-2</label><br>
-                <label><input type="radio" name="cbox"> 2017-1</label><br>
-                <label><input type="checkbox" id="cbox"> 2016-2</label><br>
-                <label><input type="checkbox" id="cbox"> 2016-1</label><br>
-                <label><input type="checkbox" id="cbox"> 2015-2</label><br>
+                <label><input type="radio" name ="generation" class="cbox-ch" value = "2017-2">2017-2</label><br>
+                <label><input type="radio" name ="generation" class="cbox-ch" value = "2017-1">2017-1</label><br>
+                <label><input type="radio" name ="generation" class="cbox-ch" value = "2016-2">2016-2</label><br>
+                <label><input type="radio" name ="generation" class="cbox-ch" value = "2016-1">2016-1</label><br>
+                <label><input type="radio" name ="generation" class="cbox-ch" value = "2015-2">2015-2</label><br>
+
+
             </ul>
 
-          <li class="text-uppercase country display-none" id="mexico">México</li>
+          <li class="text-uppercase country" id='mexico'>México</li>
             <ul class="display-none">
               <li class="city">Ciudad de México</li>
-                <label><input type="checkbox" id="cbox"> 2017-2</label><br>
-                <label><input type="checkbox" id="cbox"> 2017-1</label><br>
-                <label><input type="checkbox" id="cbox"> 2016-2</label><br>
-                <label><input type="checkbox" id="cbox"> 2016-1</label><br>
-                <label><input type="checkbox" id="cbox"> 2015-2</label><br>
+                <label><input type="radio" name ="generation" class="cbox-me" value="2017-1">2017-1</label><br>
+                <label><input type="radio" name ="generation" class="cbox-me" value="2016-2">2016-2</label><br>
+                <label><input type="radio" name ="generation" class="cbox-me" value="2016-1">2016-1</label><br>
+                <label><input type="radio" name ="generation" class="cbox-me" value="2015-2">2015-2</label><br>
+
+
+
             </ul>
-          <li class="text-uppercase country display-none" id="peru">Perú</li>
+          <li class="text-uppercase country" id="peru">Perú</li>
             <ul class="display-none">
               <li class="city">Arequipa</li>
-                <label><input type="checkbox" id="cbox"> 2017-2</label><br>
-                <label><input type="checkbox" id="cbox"> 2017-1</label><br>
-                <label><input type="checkbox" id="cbox"> 2016-2</label><br>
-                <label><input type="checkbox" id="cbox"> 2016-1</label><br>
-                <label><input type="checkbox" id="cbox"> 2015-2</label><br>
-                <label><input type="checkbox" id="cbox"> 2015-1</label><br>
-                <label><input type="checkbox" id="cbox"> 2014-2</label><br>
+                <label><input type="radio" name ="generation" class="cbox-ar" value="2017-2">2017-2</label><br>
+                <label><input type="radio" name ="generation" class="cbox-ar" value="2017-1">2017-1</label><br>
+                <label><input type="radio" name ="generation" class="cbox-ar" value="2016-2">2016-2</label><br>
+                <label><input type="radio" name ="generation" class="cbox-ar" value="2016-1">2016-1</label><br>
+                <label><input type="radio" name ="generation" class="cbox-ar" value="2015-2">2015-2</label><br>
+                <label><input type="radio" name ="generation" class="cbox-ar" value="2015-1">2015-1</label><br>
+                <label><input type="radio" name ="generation" class="cbox-ar" value="2014-2">2014-2</label><br>
               <li class="city">Lima</li>
-                <label><input type="checkbox" id="cbox"> 2017-2</label><br>
-                <label><input type="checkbox" id="cbox"> 2017-1</label><br>
-                <label><input type="checkbox" id="cbox"> 2016-2</label><br>
-                <label><input type="checkbox" id="cbox"> 2016-1</label><br>
-                <label><input type="checkbox" id="cbox"> 2015-2</label><br>
-                <label><input type="checkbox" id="cbox"> 2015-1</label><br>
-                <label><input type="checkbox" id="cbox"> 2014-2</label><br>
+                <label><input type="radio" name = "generation" class="cbox-lm" value="2017-2">2017-2</label><br>
+                <label><input type="radio" name = "generation" class="cbox-lm" value="2017-1">2017-1</label><br>
+                <label><input type="radio" name = "generation" class="cbox-lm" value="2016-2">2016-2</label><br>
+                <label><input type="radio" name = "generation" class="cbox-lm" value="2016-1">2016-1</label><br>
+                <label><input type="radio" name = "generation" class="cbox-lm" value="2015-2">2015-2</label><br>
+                <label><input type="radio" name = "generation" class="cbox-lm" value="2015-1">2015-1</label><br>
+                <label><input type="radio" name = "generation" class="cbox-lm" value="2014-2">2014-2</label><br>
             </ul>
         </ul>
       </div>
