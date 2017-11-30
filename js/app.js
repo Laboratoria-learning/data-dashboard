@@ -27,6 +27,7 @@ var promotersBox = document.getElementById('promoters-box');
 var passiveBox = document.getElementById('passive-box');
 var detractorsBox = document.getElementById('detractors-box');
 var satisfationBox = document.getElementById('satisfation-box');
+var jediRatingBox = document.getElementById('jedi-rating-box');
 var region;
 var promotion;
 var POINTMAX = 2100;
@@ -46,6 +47,7 @@ window.addEventListener('load', function() {
   showMain(region, promotion);
   cumulativeNps(region,promotion);
   studentsSatisfation(region, promotion);
+  jediRating(region, promotion);
 });
 
 function showAllRegions() {
@@ -81,6 +83,7 @@ function optionslim172() {
   showTotalStudents(region, promotion);
   cumulativeNps(region,promotion);
   studentsSatisfation(region, promotion);
+  jediRating(region, promotion);
   // showOverGoal(region, promotion);
 }
 
@@ -95,6 +98,7 @@ function optionslim171() {
   showTotalStudents(region, promotion);
   cumulativeNps(region,promotion);
   studentsSatisfation(region, promotion);
+  jediRating(region, promotion)
   // showOverGoal(region, promotion);
 }
 function optionslim162() {
@@ -216,6 +220,20 @@ function studentsSatisfation(region, promotion){
   satisfationBox.textContent = total;
 }
 
+function jediRating(region, promotion){
+  var ratings = data[region][promotion]['ratings'];
+  var array = [];
+  var total = 0;
+  for(var i=0; i<ratings.length; i++){
+    array[i] = ratings[i]['jedi'];
+  }
+  for(var i=0; i<array.length; i++){
+    total = total + array[i];
+  }
+  total = (total / array.length);
+  total = total.toFixed(1);
+  jediRatingBox.textContent = total;
+}
 /*************************GRAFICOS************/
 function drawTotalStudents(current, deserted) {
   google.charts.load('current', {'packages':['corechart']});
