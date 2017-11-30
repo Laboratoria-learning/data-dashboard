@@ -2,6 +2,7 @@ window.addEventListener('load', function(event) {
   var displayFilter = document.getElementById('fa-sort-desc');
   var displayFilterTwo = document.getElementById('fa-sort-desc2');
   var displayFilterThree = document.getElementById('fa-sort-desc3');
+  var checkedSite = document.getElementById('checkbox-site');
 
   displayFilter.addEventListener('click', function(event) {
     var checkBoxSite = document.getElementById('checkbox-site');
@@ -72,12 +73,36 @@ window.addEventListener('load', function(event) {
       inactiveLimaStudents2016ii ++;
     }
   }
+  var enrolledLimaStudents2016ii = activeLimaStudents2016ii + inactiveLimaStudents2016ii;
+  var desertionLimaStudents2016ii = Math.floor((inactiveLimaStudents2016ii * 100) / (enrolledLimaStudents2016ii)) + '%';
+  // pendientes casos Lima2017-1 y Lima2017-2
+
+  // La cantidad de estudiantes que superan la meta de puntos en promedio de todos los sprints cursados. La meta de puntos es 70% del total de puntos en HSE y en tech.
+  // Se declara una variable de un array vacio para que ahi se ingrese mediante push el numero total de alumnas que pasaron el 70% de todos los sprints
+  var scoreLimaStudents2016ii = [];
+  // declaramos una varible de contador para que guarde el numero de estudiantes que pasaron
+  var pastScoreLimaStudents2016ii = 0;
+
+  for (var i = 0; i < limaStudents2016ii.length;i++) {
+    // ingresando a los sprints para obtener las notas tech y hse
+    for (var j = 0; j < limaStudents2016ii[i]['sprints'].length; j++) {
+      var sprintScoreLimaStudents2016ii = (limaStudents2016ii[i]['sprints'][j]['score']['tech'] + limaStudents2016ii[i]['sprints'][j]['score']['hse']);
+      if (sprintScoreLimaStudents2016ii >= 2100) {
+        pastScoreLimaStudents2016ii ++;
+      }
+    }
+  }
+
+  checkedSite.addEventListener('change', function(event) {
+    if (checkedSite === lim2016 - ii) {
+
+    }
+  });
 });
 
 // var shortCut = data['LIM']['2016-2']['students'];
 // console.log(shortCut.length);
 // Puedes hacer uso de la base de datos a través de la variable `data`
-console.log(data);
 
 /* event tab*/
 var mostrarOcultar = function(e) {
@@ -115,12 +140,12 @@ var cargarPagina = function() {
   for (var i = 0; i < elementosTab.length; i++) {
     elementosTab[i].addEventListener('click', mostrarOcultar);
   }
-};    
+};
 cargarPagina();
+
+
 // console.log(data['LIM']['2016-2']['students'][0]['sprints'][0]['score']['tech']);
 // console.log(data);
-
-//
-var shortCut = data['LIM']['2016-2']['students'];
-console.log(shortCut.length);
+// var shortCut = data['LIM']['2016-2']['students'];
+// console.log(shortCut.length);
 // console.log(shortCut);
