@@ -15,20 +15,19 @@ body {
 }
 /*Header*/
 .containerHeader {
-    border: 1px solid red;
     height: 250px;
 }
 .laboratoriaNav { /*first Nav: container*/
     height: 40%;
     width: 100%;
     background-color: #ffffff;
-    border: 3px solid blue;
 }
-.logoLaboratoria {
+.imgLogo {
     float: left;
     margin-left: 50%;
     transform: translateX(-50%);
-    padding: 25px;
+    width: 20%;
+    height: 40%;
 }
 .iconoMenu {
     float: right;
@@ -39,7 +38,6 @@ body {
     height: 60%;
     width: 100%;
     background-color: #e1e1e1;
-    border: 3px solid yellow;
 }
 .menuSede{
     padding: 15px;
@@ -60,10 +58,19 @@ body {
     padding: 10px;
     font-weight: bolder;
 }
+.tab {
+    border:none;
+    outline: 0px;
+    font-size: 20px;
+}
+.tab:hover {
+    padding: 1px;
+    background-color: #ffc107;
+    border-radius: 5px;
+}
  /*Main*/
 .containerMain {
     height: 2300px;
-    border: 2px solid skyblue;
 }
 .statisticalDataTitle { /*all titles of row */
     font-size: 21px;
@@ -89,7 +96,6 @@ body {
     height: 16%;
     width: 27%;
     background-color: #ffffff;
-    outline: 1px solid yellow;
     float: left;
     margin: 70px 5px 0 40px;
     transform: translateX(10%)
@@ -153,26 +159,22 @@ body {
     height: 25%;
     width: 87%;
     background-color: #ffffff;
-    outline: 1px solid yellow;
     float: left;
     margin: 70px 0 0 80px;
 }
 .containerImagesSecondRow {
-    border: 2px solid orchid;
     width: 100%;
     height: 440px;
     margin-top: 80px;
     padding: 12px;
 }
 .imageSecondRowLeft img { /*left square*/
-    border: 2px solid red;
     width: 62%;
     height: 100%;
     float: left;
     margin: 15px 0 5px 5px;
 }
 .imageSecondRowRigth img{ /*rigth circle image*/
-    border: 2px solid blue;
     width: 32%;
     height:60%;
     float: left;
@@ -211,7 +213,6 @@ body {
     height: 25%;
     width: 87%;
     background-color: #ffffff;
-    outline: 1px solid yellow;
     float: left;
     margin: 70px 0 0 80px;
 }
@@ -234,7 +235,6 @@ body {
     height: 16%;
     width: 27%;
     background-color: #ffffff;
-    outline: 1px solid yellow;
     float: left;
     margin: 70px 5px 0 40px;
     transform: translateX(10%)
@@ -284,7 +284,7 @@ body {
     background-color: #ffffff;
     width: 37%;
     height: 30%;
-    margin:20px 0 0 100px;
+    margin:20px 0 0 80px;
     float: left;
 }
 .mainCoursesTitle {
@@ -314,7 +314,7 @@ body {
     background-color: #ffffff;
     border-radius: 5px;
     float: left;
-    margin:20px 0 0 50px;
+    margin:20px 0 0 30px;
     width: 50%;
     padding: 9px;
     box-shadow: 2px 2px 5px #999;
@@ -323,7 +323,7 @@ body {
     background-color: #ffffff;
     width: 50%;
     padding: 5px;
-    margin:40px 0 0 50px;
+    margin:40px 0 0 30px;
     float: left;   
     box-shadow: 2px 2px 5px #999;
 }
