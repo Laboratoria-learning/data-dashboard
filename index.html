@@ -29,11 +29,11 @@
         <div class="title" >Sede</div>
       </div>
       <div class="box-list">
-        <input class="sede" type="radio" name="gender" value="LIM" > LIMA
+        <input class="sede" type="radio" name="gender" value="LIM" checked > LIMA
         <hr>
       </div>
       <form id="form-lim">
-        <div class="sub-boxList"><input class="promo prom-lim" type="radio" name="gender" value="2016-2"> 2016-II</div>
+        <div class="sub-boxList"><input class="promo prom-lim" type="radio" name="gender" value="2016-2" checked> 2016-II</div>
         <div class="sub-boxList"><input class="promo prom-lim" type="radio" name="gender" value="2017-1">  2017-I</div>
         <div class="sub-boxList"><input class="promo prom-lim" type="radio" name="gender" value="2017-2"> 2017-II</div>
       </form>
@@ -78,7 +78,10 @@
       
     <section class="stats">
       <!--Estadisticas -->
-      
+      <select name="" id="tech-sprints">
+        
+      </select>
+
       <div class="sub-box">
         <h2>Enrollment</h2>
         <div class="sub-box-content">
@@ -100,7 +103,7 @@
         </div>
         <div class="sub-box-content">
           <span id="students-tar-per"></span>
-          <span class="box-text">% of total <span id="total-act">(135)</span> </span>
+          <span class="box-text">% of total <span id="total-tar"></span> </span>
         </div>
         <!--Aca va el grafico-->
       </div>
@@ -131,5 +134,7 @@
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
     <script src="./js/app.js"></script>
+    <!--Todos los charts-->
+    <script src="js/charts.js"></script>
   </body>
 </html>
