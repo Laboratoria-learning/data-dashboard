@@ -688,7 +688,7 @@ function drawLifeSkill(meet, noMeet) {
     ['Tech Skill', 'Number Student'],
     ['student that meet the target', meet],
     ['student that do not meet the target', noMeet],
-  ]);
+  ])
   var options = {
     'width': 600,
     'height': 400};
@@ -697,7 +697,7 @@ function drawLifeSkill(meet, noMeet) {
   chart.draw(data, options);
 }
 
-function drawPromoter(num1, num2 , num3, num4) {
+function drawPromoter(num1, num2, num3, num4) {
   var data = google.visualization.arrayToDataTable([
     ['Element', '#', { role: 'annotation' } ],
     ['Sprint1', num1, 'sprin1' ],
