@@ -1,16 +1,12 @@
 /* Iniciamos extrayendo los datos de las sedes */
-// debugger;
+debugger;
 
 window.addEventListener('load', function() {
   var containerSedes = document.getElementById('container-sedes');
   containerSedes.addEventListener('click', function() {
     var sedes = document.getElementById('container-generations');
-    
-    /* Variables del total de alumnas, total de desercion y activas */
-    // var total = 0;
-    // var totalDesertion = 0;
-    // var totalActive = 0;
 
+    /* Creando la lista de las sedes */
     for (var i = 0; i < Object.keys(data).length; i++) {
       var containerList = document.createElement('ul');
       containerList.className = 'container-list';
@@ -22,8 +18,7 @@ window.addEventListener('load', function() {
       containerList.appendChild(list);
       sedes.appendChild(containerList);
 
-
-      /*
+      /* Creando la lista de las generaciones */
       for (var a = 0; a < Object.keys(data[Object.keys(data)[i]]).length; a++) {
         var containerListGenerations = document.createElement('ul');
         containerListGenerations.className = 'container-generations';
@@ -36,61 +31,62 @@ window.addEventListener('load', function() {
         containerListGenerations.appendChild(listGenerations);
         list.appendChild(containerListGenerations);
 
-
-        // console.log(data[Object.keys(data)[i]]);  
-
-        /* Usamos esta formula para obtener el total de alumnas */ 
-      /*  total = total + (Object.values((Object.values(Object.values(data)[i]))[a])[0].length);
-
-        for (var b = 0; b < Object.values((Object.values(Object.values(data)[i]))[a])[0].length; b++) {
-          if (Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[2]) {
-            totalActive = totalActive + 1;
-          } else {
-            totalDesertion = totalDesertion + 1;
-          }
-        }
-
+        /* Este evento trae la data del total de alumnas, total de desercion y activas  */  
         listGenerations.addEventListener('click', function() {
-          var firstContainer = document.getElementById('first-container');
-
-          var totalStudents = document.createElement('div');
-          var paragraphStudent = document.createElement('p');
-          var textStudent = document.createTextNode('Total Students ' + total);
-
-          var desertion = document.createElement('div');
-          var paragraphDesertion = document.createElement('p');
-          var textDesertion = document.createTextNode('Desertion ' + totalDesertion);
-
-          var approvedStudents = document.createElement('div');
-          var paragraphApproved = document.createElement('p');
-          var textApproved = document.createTextNode('Approved Students ' + totalActive);
-
-          paragraphStudent.appendChild(textStudent);
-          totalStudents.appendChild(paragraphStudent);
-          firstContainer.appendChild(totalStudents);
-
-          paragraphDesertion.appendChild(textDesertion);
-          desertion.appendChild(paragraphDesertion);
-          firstContainer.appendChild(desertion);
-
-          paragraphApproved.appendChild(textApproved);
-          approvedStudents.appendChild(paragraphApproved);
-          firstContainer.appendChild(approvedStudents);
-        }); 
-      }*/
-    }  
-
+          var secondContainer = document.getElementById('second-container');
+          
+          /* Variables del total de alumnas, total de desercion y activas */
+          var totalDesertion = 0;
+          var totalActive = 0; 
+          for (var i = 0; i < Object.keys(data).length; i++) {
+            for (var a = 0; a < Object.keys(data[Object.keys(data)[i]]).length; a++) {
+              total = (Object.values((Object.values(Object.values(data)[i]))[a])[0].length);
+              var totalStudents = document.createElement('div');
+              var paragraphStudent = document.createElement('p');
+              var textStudent = document.createTextNode('Total Students ' + total);  
+                                         
+              paragraphStudent.appendChild(textStudent);
+              totalStudents.appendChild(paragraphStudent);
+              secondContainer.appendChild(totalStudents);
+        
+              for (var b = 0; b < Object.values((Object.values(Object.values(data)[i]))[a])[0].length; b++) {
+                if (Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[2]) {
+                  totalActive = totalActive + 1;
+                } else {
+                  totalDesertion = totalDesertion + 1;
+                }
+              }  
+              var approvedStudents = document.createElement('div');
+              var paragraphApproved = document.createElement('p');
+              var textApproved = document.createTextNode('Approved Students ' + totalActive);
+      
+              var desertion = document.createElement('div');
+              var paragraphDesertion = document.createElement('p');
+              var textDesertion = document.createTextNode('Desertion Students ' + totalDesertion);
+                                    
+              paragraphDesertion.appendChild(textDesertion);
+              desertion.appendChild(paragraphDesertion);
+              secondContainer.appendChild(desertion);
+      
+              paragraphApproved.appendChild(textApproved);
+              approvedStudents.appendChild(paragraphApproved);
+              secondContainer.appendChild(approvedStudents);
+            }
+          }
+        });
+      }
+    }
     if (sedes.classList.contains('hide')) {
       sedes.classList.remove('hide');
       sedes.classList.add('show');
     } else {
-      sedes.innerHTML = '';        
+      sedes.textContent = '';        
       sedes.classList.remove('show');
       sedes.classList.add('hide');
-    }
-  });
+    }  
+  }); 
 }); 
-
+ 
 /*
 var sum = 0;
 for (var i = 0; i < Object.keys(data).length; i++) {
