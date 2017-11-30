@@ -1,6 +1,8 @@
 // creando ...
 window.addEventListener('load', function() {
   var overview = document.getElementById('general');
+  // agregando sedes
+  
   // enrollment
   var enrollment = document.createElement('div');
   var enrollOne = document.createElement('div');
@@ -112,7 +114,7 @@ window.addEventListener('load', function() {
   titleTS2.innerText = 'percentoftotal';
   var textTS = document.createElement('span');
   textTS.innerText = '% Of TOTAL';
- // agregando clases 
+ // agregando clases
   techS.appendChild(techSkills);
   techSkills.appendChild(titleTS);
   techSkills.appendChild(comboTS);
@@ -135,7 +137,6 @@ window.addEventListener('load', function() {
   comboTS.setAttribute('class', 'comboStyle');
   metTarget.setAttribute('class', 'metTargetStyle');
   totalTS.setAttribute('class', 'totalTSStyle');
-  
   // funcion para sacar la cantidad actual activos de estudiantes por sede
   function currentStudents(sede, gene) {
     var count = 0;
@@ -245,10 +246,10 @@ window.addEventListener('load', function() {
       var allPromoter = 0;
       for (var p = 0; p < array.length; p++) {
         allPromoter += array[p];
-      } 
+      }
        var totalPromoter = allPromoter / ratigns.length;
        return totalPromoter + ' % Promoter';
-    } 
+    }
     // funcion para los pasives
     function passivePercent(sede, gene){
       var sede = data[sede];
@@ -287,27 +288,6 @@ window.addEventListener('load', function() {
          var totalDetractor = allDetractor / ratigns.length;
          return totalDetractor + ' % Detractor';
     }
-    // al seleccionar uno de las opciones por sprint para TECH
-    function techStudent(sede, gene){
-      var sede = data[sede];
-      var generation = sede[gene];
-      var student = generation.students;
-      var cTechOne = 0;
-
-      for (var i = 0; i < student.length; i++){
-        var sprint = student[i].sprints.length;
-        if (student[i].active === true){
-
-          for (var j = 0; j < sprint; j++){
-            if (student[i].sprint[j].number === 1){
-              var points = student[i].sprint[j].score.tech;
-              
-            }
-          }
-        }
-      }
-    }
-
 });
 // Puedes hacer uso de la base de datos a través de la variable `data`
 console.log(data);
