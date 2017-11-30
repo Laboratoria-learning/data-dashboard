@@ -302,7 +302,7 @@ nav .fa-bars{
 .container-select-grafy{
   width: 600px;
   height: 400px;
-  left:70%;
+  left:50%;
   transform: translateX(-50%);
   position: relative;
 }

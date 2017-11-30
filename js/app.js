@@ -69,7 +69,10 @@ function changeTitle() {
     var sprint2Teacher = data['LIM']['2016-2']['ratings'][1]['teacher'];
     var sprint1Jedi = data['LIM']['2016-2']['ratings'][0]['jedi'];
     var sprint2Jedi = data['LIM']['2016-2']['ratings'][1]['jedi'];
+    // var sprint1Achi = sprintAchiviment('LIM','2016-2',0);
+    // var sprint2Achi = sprintAchiviment('LIM','2016-2',1);
     drawPromoter(sprint1, sprint2, 0, 0);
+    // drawAchiviement(sprint1Achi,sprint2Achi,0,0);
     drawTeacher(sprint1Teacher, sprint2Teacher, 0, 0);
     drawJedi(sprint1Jedi, sprint2Jedi, 0, 0);
     break;
@@ -711,6 +714,23 @@ function drawPromoter(num1, num2 , num3, num4) {
   chart.draw(data, google.charts.Bar.convertOptions(options));
 }
 
+function drawAchiviement(num1,num2,num3,num4) {
+  var data = google.visualization.arrayToDataTable([
+        ['Element', '#', { role: 'annotation' } ],
+        ['Sprint1', num1, 'sprin1' ],
+        ['Sprint2', num2, 'sprint2' ],
+        ['Sprint3', num3, 'sprint3' ],
+        ['Sprint4', num4, 'sprint4' ],
+      ]);
+    
+      var options = {
+        title: '# of promoters for sprint',
+        'width': 300,
+        'height': 230};
+      var chart = new google.charts.Bar(document.getElementById('grafy-promoter'));
+      chart.draw(data, google.charts.Bar.convertOptions(options));
+}
+
 function drawTeacher(num1, num2, num3, num4) {
   var data = google.visualization.arrayToDataTable([
     ['Element', '#', { role: 'annotation' } ],
@@ -796,9 +816,25 @@ function search(sede, year, student) {
   }
   if (cont === studentLength) {
     nameStudent.textContent = 'nombre no encontrado';
-    alert('no encontrado');
+    alert('Alumna no encontrada');
   }
 }
+
+// function sprintAchiviment(sede, year, numSprint) {
+//   debugger;
+//   var sumTotal = 0;
+//   var studentCant = data[sede][year]['students'].length;
+//   for (var i = 0;i < studentCant ; i++) {
+//     var tech = data[sede][year]['students'][i]['sprints'][numSprint]['score']['tech'];
+//     var hse = data[sede][year]['students'][i]['sprints'][numSprint]['score']['hse'];
+//     var percentTech = (tech * 100) / 1800;
+//     var percentHse = (hse * 100) / 1200;
+//     if (percentTech >= 70 && percentHse >= 70) {
+//       sumTotal++;
+//     } 
+//   }
+//   return sumTotal;
+// }
 
 window.onload = function() {
   elementTab[0].addEventListener('click', show);
