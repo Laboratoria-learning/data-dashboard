@@ -93,12 +93,12 @@ span, input, i, p {
 }
 
 .filter {
-  width: 25%;
+  width: 20%;
   padding: 10px;
 }
 
 .sub-container {
-  width: 70%;
+  width: 80%;
   border-radius: 10px;
   overflow: auto;
   padding: 10px;
@@ -106,15 +106,16 @@ span, input, i, p {
 
 .student-inf {
     background-color: #fff;
-    margin: 5px;
-    width: 98%;
+    margin: 4px;
+    width: 32%;
     border-radius: 10px;
     padding: 10px;
+    float: left;
 }
 
 .student-inf  p{
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: bold;
     display: block;
 }
 
@@ -122,6 +123,27 @@ span, input, i, p {
     width: 120px;
     height: 170px;
 }
+
+.student-det {
+    float: right;
+    width: 40%;
+    height: 170px;
+}
+
+.student-det .student-tech, .student-det .student-hse{
+  font-size: 0.8em;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 15px;
+  background-color: #f7b617;
+  color: white;
+}
+
+.student-tech span, .student-hse span{
+  font-size: 2em;
+}
+
 
 .fa, .li-menu {
   padding: 10px;
