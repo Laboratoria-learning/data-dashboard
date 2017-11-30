@@ -9,10 +9,6 @@
      color : #2b2b2b;
  }
  
- body{
-    padding-left: 75px;
-    padding-right: 75px;
- }
 
  body{
      padding-right: 75px;
@@ -123,3 +119,47 @@ main {
  display: inline-block;
 }
 
+/*Clases para los KPIS*/
+.kpi{
+    background-color: #ffffff;
+    padding:10px;
+    display: inline-block;
+    width: 30%;
+    outline: solid 1px red;
+}
+
+.options{
+    outline: solid 1px blue; 
+}
+
+.kpiGray{
+    padding:10px;
+    background: #f7f7f7;
+    display: inline-block;
+    
+    margin:5px;
+    width: 45%;
+}
+.green{
+    color: green;
+    font-weight: bold;
+    text-align: center;
+    
+}
+.smallest{
+    font-size: 10px;
+    text-align: center;
+}
+
+.black{
+    color:black;
+    font-weight: bold;
+    text-align: center;
+    
+}
+.red{
+    color:red;
+    font-weight: bold;
+    text-align: center;
+    
+}
