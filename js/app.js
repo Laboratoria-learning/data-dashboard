@@ -1,19 +1,5 @@
 console.log(data);
 
-// Función que devuelve alumans que pasan promedio de puntajes y el porcentaje que representan.
-
-function achievement(sede,generation){
-  var count = 0;
-  var numberRatings = data[sede][generation]['ratings'];
-  for (var i = 0; i < numberRatings.length; i++) {
-    var ratingStudent = numberRatings[i]['student']['supera'];
-    count = count + ratingStudent;
-}
-  totalStudent = countActive;
-  totalSupera = parseInt((countActive*count)/100);
-// console.log('Las alumnas que superan el puntaje promedio son: ' + totalSupera + ' Y representan el: ' + count + '%');
-}
-
 var sedeSelected = document.getElementById('select-sede');
 var generationSelected = document.getElementById('select-generation');
 var sede = '';
@@ -106,7 +92,7 @@ function inscription(event) {
     evaluationJedi.setAttribute('class', 'number');
 
     // función que devuelve promedio NPS 
-    
+
     function nps(){
       ratings = data[sede][gen].ratings;
       for (var i = 0; i < ratings.length; i++) {
@@ -119,6 +105,28 @@ function inscription(event) {
     var npsElement = document.getElementById('nps');
     npsElement.textContent =  nps();
     npsElement.setAttribute('class', 'number');
+
+    // función que devuelve la cantidad de estudiantes que superan la meta de puntos en promedio de todos los sprints
+
+    var studentsActive = 0;
+    var tech = {};
+    function achievement(){
+      students = data[sede][gen].students;
+      for(var i = 0; i < students.length; i++){
+        if(students[i].active){
+          for (var j = 0; j < students[i]['sprints'].length; j++){
+            var sum = students[i]['sprints'][j]['score']['tech'] + students[i]['sprints'][j]['score']['hse'];
+            // console.log(students[i]['sprints'][j]['score']['tech']);
+            // console.log(students[i]['sprints'][j]['score']['hse']);
+            console.log(sum);
+          }
+        }
+      }
+    }
+
+    achievement();
   };
+
+
 
 
