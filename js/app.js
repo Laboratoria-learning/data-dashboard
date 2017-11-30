@@ -236,12 +236,18 @@ window.addEventListener('load', function() {
       img.style.width = '100%';
       img.style.height = '100%';
 
-      var imgContainer = document.createElement('div')
+      var imgContainer = document.createElement('div') // contenedor de imagen
       imgContainer.appendChild(img);
       profilePic.appendChild(imgContainer);
       imgContainer.style.width = '205px';
       imgContainer.style.height = '205px';
+      imgContainer.style.display = 'inline-block';
       //imgContainer.appendChild(fullName);
+      var nameContainer = document.createElement('p'); // contenedor de nombre
+      nameContainer.textContent = fullName;
+      profilePic.appendChild(nameContainer);
+      //nameContainer.style.display = 'inline-block';
+
     }
 
   };
