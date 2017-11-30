@@ -61,6 +61,7 @@ function paintOptions(option, previous) {
 }
 function showMain(region, promotion) {
   showTotalStudents(region, promotion);
+  showOverGoal(region, promotion);
 }
 function optionsLima() {
   paintOptions(lima, previous);
@@ -129,36 +130,38 @@ function showTotalStudents(region, promotion) {
   
   
 }
-/*
+
 function showOverGoal(region, promotion) {
   var students = data[region][promotion]['students'];
   var nsprint;
   var hse;
   var tech;
   var scoresTotal;
-  var count=0;
-  var sprintTotal=[];
+  var countS1=0;
+  var countS2=0;
+  var countS3=0;
+  var countS4=0;
 
   for (var i = 0; i < students.length; i++) {
     if (students[i]['active']) {
       var sprint = students[i]['sprints'];
       for (var j = 0; j < sprint.length;j++) {
         nsprint = sprint[j]['number'];
+         
         hse = sprint[j]['score']['hse'];
         tech = sprint[j]['score']['tech'];
         scoresTotal = hse+tech;
         if(scoresTotal>=2100) {
-          sprintTotal[i][j]=scoresTotal;
+        
           console.log("nsprint"+nsprint);
           console.log(scoresTotal);  
-          console.log("sprintTotal[i][j]"+sprintTotal[i][j]);
         }      
       }
     }
     
   }
   console.log(count);
-} */
+}
 /* Función para */
 function cumulativeNps(region,promotion) {
   
