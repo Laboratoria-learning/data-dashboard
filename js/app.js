@@ -26,6 +26,7 @@ var cumulativeNpsBox = document.getElementById('cumulative-nps-box');
 var promotersBox = document.getElementById('promoters-box');
 var passiveBox = document.getElementById('passive-box');
 var detractorsBox = document.getElementById('detractors-box');
+var satisfationBox = document.getElementById('satisfation-box');
 var region;
 var promotion;
 var POINTMAX = 2100;
@@ -44,6 +45,7 @@ window.addEventListener('load', function() {
   promotion = lim172.dataset.promotion;
   showMain(region, promotion);
   cumulativeNps(region,promotion);
+  studentsSatisfation(region, promotion);
 });
 
 function showAllRegions() {
@@ -78,6 +80,7 @@ function optionslim172() {
   showMain(region, promotion);
   showTotalStudents(region, promotion);
   cumulativeNps(region,promotion);
+  studentsSatisfation(region, promotion);
   // showOverGoal(region, promotion);
 }
 
@@ -91,6 +94,7 @@ function optionslim171() {
   showMain(region, promotion);
   showTotalStudents(region, promotion);
   cumulativeNps(region,promotion);
+  studentsSatisfation(region, promotion);
   // showOverGoal(region, promotion);
 }
 function optionslim162() {
@@ -198,6 +202,19 @@ function showOverGoal(region, promotion) {
 } */
 /* Función para */
 
+function studentsSatisfation(region, promotion){
+  var ratings = data[region][promotion]['ratings'];
+  var cumple =[];
+  var  total = 0;
+  for(var i=0; i<ratings.length; i++){
+    cumple[i] = ratings[i]['student']['cumple'];
+  }
+  for(var i=0; i<cumple.length; i++){
+    total = total + cumple[i];
+  }
+  total = parseInt(total / cumple.length);
+  satisfationBox.textContent = total;
+}
 
 /*************************GRAFICOS************/
 function drawTotalStudents(current, deserted) {
