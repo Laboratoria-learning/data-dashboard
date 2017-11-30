@@ -9,12 +9,13 @@
    background:#F7F7F7;
  }
  /*logo-laboratoria*/
- img{
-
+.logo{
+  background-color: #F7F7F7;
    width: 85.5em;
    height: 5em;
    position: fixed;
    padding-left: 12em;
+   z-index: 1;
 
 
 
@@ -25,6 +26,7 @@
    position: fixed;
    width: 72%;
    top:5em;
+   z-index: 1;
 
   }
 
@@ -89,6 +91,11 @@ a:hover{
   color:#fff;
   margin-top: 10px;
 }
+.fa.fa-search{
+  color : #000;
+  margin-left: 5px;
+}
+/*usuario*/
 .profile{
    background-color: #000;
    left: 8%;
@@ -162,7 +169,7 @@ margin-left: 10px;
 margin-top: 10px;
 
 }
-h2{
+.sub-text{
   margin-top: 10px;
   width:320px;
   padding-left:30px;
@@ -255,7 +262,7 @@ select{
   display: block;
 }
 /*estudiantes */
-.students{outline: 1px solid red;
+.students{
   height: 75%;
   position: absolute;
   left: 28%;
@@ -282,19 +289,47 @@ h3{
   height: 20px;
   background:none;
   margin-top: 20px;
+  border:1px solid #FFC107;
 }
-
+.btn:hover{
+  background-color: #FFC107;
+}
 /*buscador*/
 .bar-search{
   background-color: #fff;
-  width: 400px;
+  width: 600px;
   height: 50px;
   display: inline-block;
   margin-left: 20px;
+  margin-top: 70px;
 }
 .container-students{
   background-color: #fff;
-  width: 600px;
-  height: 100px;
-  margin-left: 350px;
+  width: 550px;
+  line-height: 100%;
+  padding-left: 10px;
+  padding-top: 10px;
+  margin-left: 330px;
+  display: inline-block;
+}
+.single-student{
+
+  display: inline-block;
+  width: 100%;
+
+}
+img{
+  padding: 15px 15px ;
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.container-students h2{
+  margin-top: 30px;
+  display: inline-block;
+  font-family: 'Quicksand', sans-serif;
+
+
 }
