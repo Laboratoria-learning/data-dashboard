@@ -22,19 +22,7 @@
       <!--icono de user-->
       <i class="fa fa-user-circle" aria-hidden="true"></i>
     </div>
-    <!--usuario-->
-    <section class="profile">
-      <div>
-        <div class="section">
-          <i class="fa fa-user-circle" aria-hidden="true"></i>
-          <span>ANNA DURAND</span>
-        </div>
-        <div class="section">Add student</div>
-        <div class="section">Remove student</div>
-        <div class="section">Add sprint</div>
-        <div class="section"></div>
-      </div>
-    </section>
+
     <!--Fila de Sedes y Promos-->
     <section class="list">
       <div>
@@ -75,6 +63,25 @@
         <div class="sub-boxList"><input class="promo prom-cdmx" type="radio" name="gender" value="2017-2"> 2017-II</div>
       </form>
     </section>
+    <!--usuario-->
+    <section >
+      <div class="profile">
+        <div class="section name">
+          <i class="fa fa-user" aria-hidden="true"></i>
+          <span class="section-text"> ANNA DURAND</span>
+        </div>
+        <div class="section ">
+          <span class="section-text">Add student</span>
+        </div>
+        <div class="section">
+          <span class="section-text">Remove student</span>
+        </div>
+        <div class="section">
+          <span class="section-text">Add sprint</span>
+        </div>
+
+      </div>
+    </section>
     <nav>
     <!--crear la lista desordenada-->
       <ul>
@@ -94,11 +101,11 @@
       <div class="sub-box">
         <h2>Enrollment</h2>
         <div class="sub-box-content">
-          <span id="total-act"></span>
+          <span class="containerStyle" id="total-act"></span>
           <span class="box-text"># students currently enrolled</span>
         </div>
         <div class="sub-box-content">
-          <span id="dropout"></span>
+          <span class="containerStyle" id="dropout"></span>
           <span class="box-text">% dropout</span>
         </div>
         <div id="chart_div"></div>
@@ -107,11 +114,11 @@
       <div class="sub-box">
         <h2>Achievement</h2>
         <div class="sub-box-content">
-          <span id="students-tar"></span>
+          <span class="containerStyle" id="students-tar"></span>
           <span class="box-text"># students that meet the target</span>
         </div>
         <div class="sub-box-content">
-          <span id="students-tar-per"></span>
+          <span class="containerStyle color" id="students-tar-per"></span>
           <span class="box-text">% of total <span id="total-tar"></span> </span>
         </div>
         <!--Aca va el grafico-->
@@ -120,15 +127,15 @@
       <div class="sub-box">
         <h2>Net Promoter Score</h2>
         <div class="sub-box-content">
-          <span id="net-score"></span>
+          <span class="containerStyle color" id="net-score"></span>
           <span class="box-text">% cumulative nps</span>
         </div>
         <div class="sub-box-content">
-          <span id="promoters"></span>
+          <span class="containerStyle sub-containerStyle" id="promoters"></span>
           <span class="box-text text-1">Promoters</span>
-          <span id="passive"></span>
+          <span class="containerStyle sub-containerStyle" id="passive"></span>
           <span class="box-text text-1">Passive</span>
-          <span id="detractors"></span>
+          <span class="containerStyle sub-containerStyle" id="detractors"></span>
           <span class="box-text text-1">Detractors</span>
         </div>
         <!--Aca va el grafico-->
@@ -139,12 +146,14 @@
         
         </select>
         <div class="sub-box-content">
-          <span id="tech-skills"></span>
+          <span class="containerStyle" id="tech-skills"></span>
           <span class="box-text"># Students that meet the target</span>
         </div>
         <div class="sub-box-content">
           <span id="students-tar-tech"></span>
           <span class="box-text">% of total <span id="total-act"></span> </span>
+          <span class="containerStyle color" id="students-tar"></span>
+          <span class="box-text">% of total <span id="total-act">(135)</span> </span>
         </div>
         <!--Aca va el grafico-->
         </div>
@@ -154,11 +163,12 @@
         
           </select>
           <div class="sub-box-content">
-            <span id="life-skills"></span>
+            <span class="containerStyle" id="life-skills"></span>
             <span class="box-text"># Overall class average</span>
           </div>
           <div class="sub-box-content">
             <span id="students-tar-hse"></span>
+            <span class="containerStyle color" id="students-tar"></span>
             <span class="box-text">#Of students that meet the target</span>
           </div>
           <!--Aca va el grafico-->
@@ -166,7 +176,7 @@
          <div class="sub-box">
            <h2>Student Satisfaction</h2>
            <div class="sub-box-content content-2">
-             <span id="student-satisfaction"></span>
+             <span class="containerStyle" id="student-satisfaction"></span>
              <span class="box-text text-2">%Meeting or exceeding expextations (cumulative)</span>
            </div>
            <!--Aca va el grafico-->
@@ -174,7 +184,7 @@
            <div class="sub-box">
              <h2>Teacher Rating</h2>
              <div class="sub-box-content content-2">
-               <span id="teacher-rating"></span>
+               <span class="containerStyle" id="teacher-rating"></span>
                <span class="box-text">Overall teacher rating (cumulative)</span>
              </div>
              <!--Aca va el grafico-->
@@ -182,7 +192,7 @@
              <div class="sub-box">
                <h2>Jedi Master Rating</h2>
                <div class="sub-box-content content-2">
-                 <span id="JediMaster-rating"></span>
+                 <span class="containerStyle color" id="JediMaster-rating"></span>
                  <span class="box-text">Overall Jedi rating (cumulative)</span>
                </div>
                <!--Aca va el grafico-->
