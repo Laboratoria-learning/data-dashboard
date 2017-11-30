@@ -27,6 +27,7 @@ function viewSections(event) {
 function loadPage() {
   listbox.style.display = 'none';
   teacher.style.display = 'none';
+  students.style.display = 'none';
   var tabs = document.getElementsByClassName('tab');
   for (i = 0; i < tabs.length; i++) {
     tabs[i].addEventListener('click', viewSections);

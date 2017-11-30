@@ -5,7 +5,8 @@
   padding: 0;
   margin: 0;
   font-family: 'Quicksand', sans-serif;
-  box-sizing: border-box;  
+  box-sizing: border-box;
+  background: #f7f7f7;
 }
 div{
   display: inline-block;
@@ -52,6 +53,7 @@ nav {
   font-size: 24px;
   font-weight: bold;
   margin-right: 35px;
+  background: none;
 }
 
 .option-text:hover {
@@ -62,4 +64,26 @@ nav {
 
 #teachers {
   text-align: center;
+}
+
+.container {
+  outline: 1px solid black;
+  box-sizing: border-box;
+  width: 1300x;
+
+}
+
+.cont-1 {
+  outline: 1px solid green;
+  box-sizing: border-box;
+  display: inline-block;
+  transform: translateY(-160px);
+  width: 400px;
+}
+
+.cont-2 {
+  outline: 1px solid orange;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 800px;
 }
