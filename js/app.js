@@ -280,8 +280,28 @@ function satisfaccionEstudiantes(sede, generacion) {
   var supera = [];
   var cumple = [];
   var noCumple = [];
+  var totalExcede = 0;
 
   for (var i = 0; i < rating.length; i++) {
-    
+    if (rating[i].student.supera) {
+      supera.push(rating[i].student.supera);
+    } 
+    if (rating[i].student.cumple) {
+      cumple.push(rating[i].student.cumple);
+    }
+    if (rating[i].student['no-cumple']) {
+      noCumple.push(rating[i].student.noCumple);
+    }
   }
+
+  for (var i = 0; i < supera.length; i++) {
+    totalExcede = totalExcede + supera[i] + cumple[i];
+  }
+
+  var porcentajeSupera = totalExcede / supera.length;
+  
+  var studentSatisfaction = document.getElementById('studentSatisfaction');
+  studentSatisfaction.innerHTML = Math.round(porcentajeSupera) + '<br>' + '% MEETING OR EXCEEDING EXPECTATIONS(CUMULATIVE)';
 }
+
+console.log(satisfaccionEstudiantes('LIM', '2016-2'));
