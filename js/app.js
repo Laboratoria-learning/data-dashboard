@@ -30,27 +30,29 @@ var enrolled = inactiveAq62 + activeAq62;
 // ver el total que pasaron el 70% (del total de puntos de hse y tecnico)
 countPastTarget = 0;
 aqp62notasArr = [];
+var contador = 0;
 for (var i = 0; i < studentsAq62.length; i++) {
+  if (contador !== 0) {
+    aqp62notasArr.push(contador);
+  } else {
+  }
+  contador = 0;
   for (var j = 0; j < studentsAq62[i]['sprints'].length; j++) {
     var notaSprint = (studentsAq62[i]['sprints'][j]['score']['tech']) + (studentsAq62[i]['sprints'][j]['score']['hse']);
-    aqp62notasArr.push(notaSprint);
+    contador += notaSprint;
   }
 }
-// lsta con todas las notas de las 15 alumnas y sus 4 sprints
-console.log(aqp62notasArr);
 
-// obteniendo nota promedio de una alumna en sus cuatro sprint (optimisarx1000000)
-aqp62notasPromArr = [];
-var alumn1 = aqp62notasArr.slice(0, 4);
-var nota1 = 0;
-for (var i = 0 ; i < alumn1.length; i++) {
-  nota1 += alumn1[i];
+for (var notas = 0; notas < aqp62notasArr.length; notas++) {
+  promedio = (aqp62notasArr[notas]) / 4;
+  // console.log(promedio);
+  if (promedio > 2100)
+    countPastTarget++;
 }
-nota1prom = nota1 / 4;
-aqp62notasPromArr.push(nota1prom);
-
+// lsta con todas las notas promedio de las 15 alumnas
+// console.log(aqp62notasArr);
 // alumnas que pasaron el 70% en porcenraje (falta obtener countPastTarget)
-var countPastTargetPorc = Math.round((countPastTarget * 100) / (studentsAq62.length * 4));
+var countPastTargetPorc = Math.round((countPastTarget * 100) / (studentsAq62.length)) + '%';
 
 // nps
 var promAq62ratng = promAq62.ratings;
@@ -122,16 +124,28 @@ var enrolledAq71 = inactiveAq71 + activeAq71;
 // ver el total que pasaron el 70% (del total de puntos de hse y tecnico)
 countPastTargetAqp71 = 0;
 aqp71notasArr = [];
+var contadorAqp71 = 0;
 for (var i = 0; i < studentsAq71.length; i++) {
+  if (contadorAqp71 !== 0) {
+    aqp71notasArr.push(contadorAqp71);
+  } else {
+  }
+  contadorAqp71 = 0;
   for (var j = 0; j < studentsAq71[i]['sprints'].length; j++) {
     var notaSprintAqp71 = (studentsAq71[i]['sprints'][j]['score']['tech']) + (studentsAq71[i]['sprints'][j]['score']['hse']);
-    aqp71notasArr.push(notaSprintAqp71);
+    contadorAqp71 += notaSprintAqp71;
   }
+}
+for (var notasAqp71 = 0; notasAqp71 < aqp71notasArr.length; notasAqp71++) {
+  promedioAqp71 = (aqp71notasArr[notasAqp71]) / 3;
+  console.log(promedioAqp71);
+  if (promedioAqp71 > 2100)
+    countPastTargetAqp71++;
 }
 // lsta con todas las notas de las 15 alumnas y sus 3 sprints
 console.log(aqp71notasArr);
 // alumnas que pasaron el 70% en porcenraje (falta obtener countPastTargetAqp71)
-var countPastTargetPorcAqp71 = Math.round((countPastTargetAqp71 * 100) / (studentsAq71.length * 4));
+var countPastTargetPorcAqp71 = Math.round((countPastTargetAqp71 * 100) / (studentsAq71.length)) + '%';
 
 // nps
 var promAq71ratng = promAq71.ratings;
@@ -209,11 +223,11 @@ selectSede.addEventListener('change', function(event) {
 
 var studentsPage = document.getElementById('students');
 studentsPage.addEventListener('click', function(event) {
-  document.getElementById('content').setAttribute('class','disappear');
-  document.getElementById('content-two').setAttribute('class','appear');
+  document.getElementById('content').setAttribute('class', 'disappear');
+  document.getElementById('content-two').setAttribute('class', 'appear');
 });
 var overview = document.getElementById('overview');
-overview.addEventListener('click',function(event) {
-  document.getElementById('content').setAttribute('class','appear');
-  document.getElementById('content-two').setAttribute('class','disappear');
+overview.addEventListener('click', function(event) {
+  document.getElementById('content').setAttribute('class', 'appear');
+  document.getElementById('content-two').setAttribute('class', 'disappear');
 });
