@@ -1,3 +1,4 @@
+
 /*
  * Funcionalidad de tu producto
  */
@@ -6,12 +7,19 @@
 /*var selectData = document.getElementById('select-data');
 var content = document.getElementById('number').innher*/
 
-var SEDE = Object.key(data)
-for (var i=0;i<=SEDE.length;i++)
+var ARRSEDE = Object.keys(data);
+var SEDE;
+for (var i=0;i<ARRSEDE.length;i++)
 {
-  SEDE[i]
+  SEDE=ARRSEDE[i];
 }
+console.log(SEDE);
+console.log(ARRSEDE);
 
+for (var j=0; j<ARRSEDE.length; j++)
+{
+  
+}
 /*Opcion que accede a el numero de alumnas de AQP*/
 var objetoAQP = data.AQP;
 var ageGeneracion = objetoAQP['2016-2'];
