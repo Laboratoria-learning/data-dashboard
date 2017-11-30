@@ -1,25 +1,22 @@
 # Data Dashboard
 
-* **Track:** _Common Core_
-* **Curso:** _Creando tu primer sitio web interactivo_
-* **Unidad:** _Producto final_
+## Producto Final : Data Dashboard
 
-***
+* El presente trabajo esta enfocado en poder proporcionar informacion recabada a lo largo de las generaciones de egresadas en Laboratoria desde el inicio de sus primeras graduadas.
+* Las Training Managers (TMs) hacen un gran trabajo al analizar la mayor cantidad de datos posibles respecto al desempeño de las estudiantes para apoyarlas en su aprendizaje. Para revisar esta data, las TMs, normalmente, tienen que revisar muchos documentos de excel (Google Spreadsheets) que están localizados en distintas carpetas y ubicaciones. Muchas veces pierden tiempo localizando estos documentos y ejecutando fórmulas para obtener los datos que necesitan.
 
-## Flujo de trabajo
 
-1. Debes realizar un [**fork**](https://gist.github.com/ivandevp/1de47ae69a5e139a6622d78c882e1f74)
-   de este repositorio.
 
-2. Luego deberás **clonar** tu fork en tu máquina. Recuerda que el comando a usar
-   es `git clone` y su estructura normalmente se ve así:
 
-   ```bash
-   git clone https://github.com/<nombre-de-usuario>/freelancer.git
-   ```
+## Desarrollo:
 
-3. Cuando hayas terminado tu producto, envía un Pull Request a este repositorio
-   (puedes solicitar apoyo de tus profes para este paso).
+1. El trabajo incorpora el diseño de maquetación con estructuras basicas empleadas a
+tales como HTMLY CSS.
 
-> Nota: No olvides que es una buena práctica describir tu proyecto en este
-> archivo `README.md` y también desplegar tu web a Github Pages :smiley:.
+2. Crearemos diversar funcionalidades que permitiran un mejor desarrollo e integracion de la informacion.
+
+3. Emplearemos la teoria desarrollada en clase tales como el manejo del DOM,
+BOM ,crearemos eventos que permitiran un mayor flujo de la información.
+4. El principal objetivo es integrar los datos academicos de las alumnas de Laboratoria.
+
+![Con titulo](assets/images/image.png)
