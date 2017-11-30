@@ -86,7 +86,7 @@ window.addEventListener('load', function() {
             
             var nodo = nodosOption [d];
             console.log(nodo);
-            if (nodo.value = ) {
+            if (nodo.value = j) {
               nameshow.textContent = nameSede + ' ' + nameProm;
             }
 
