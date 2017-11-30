@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-    <!-- <link rel="icon" type="image/png" href="link"> --> <!--para agregar icono -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
@@ -14,67 +13,119 @@
       <img src="assets/images/logo_laboratoria.png" alt="Logo Laboratoria">
       <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
     </header>
+    <!-- Inicio - Sección para seleccionar sede y generación -->
     <section>
-      <!-- Base de datos -->
-      <select class="select" id="select-sede">
+      <select class="select-sede" id="select-sede">
         <option value="0">Selecciona una sede </option>
-        <option class="sede" value="AQP"> Arequipa</option>
-        <option class="sede" value="CDMX"> Ciudad de México</option>
-        <option class="sede" value="LIM"> Lima</option>
-        <option class="sede" value="SCL"> Santiago de Chile</option>
+        <option class="sede" value="AQP">Arequipa</option>
+        <option class="sede" value="CDMX">Ciudad de México</option>
+        <option class="sede" value="LIM">Lima</option>
+        <option class="sede" value="SCL">Santiago de Chile</option>
       </select>
-      <select class="select" id="select-generation">
+      <select class="select-gen" id="select-generation">
         <option value="0">Selecciona una promoción </option>
-          <option class="promo" value="2016-2"> 2016-II</option>
-          <option class="promo" value="2017-1"> 2017-I</option>
-          <option class="promo" value="2017-2"> 2017-II</option>
+        <option class="promo" value="2016-2">2016-2</option>
+        <option class="promo" value="2017-1">2017-1</option>
+        <option class="promo" value="2017-2">2017-2</option>
       </select>
     </section>
+    <!-- Fin - Sección para seleccionar sede y generación -->
 
+    <!-- Inicio - Sección alumnas inscritas -->
+    <article class="box-container">
+      <h2>INSCRIPCION</h2>
+      <div class="box">
+      <span id="numberRegistered"></span>
+        <p>N° ESTUDIANTES INSCRITAS</p>
+      </div>
+      <div class="box">
+        <span id="numberDesert"></span>
+        <p>% ESTUDIANTES DESERTADAS</p>
+        <img class="imagen" src="assets/images/bar-graph.png" alt="estudiantes inscritas">
+      </div>
+    </article>
+    <!-- Fin - Sección alumnas inscritas -->
+    
+    <!-- Inicio - Sección alumnas logran pasar promedio -->
+    <article class="box-container">
+      <h2>LOGROS</h2>
+      <div class="box">
+        <p>N° de estudiantes que superan la meta de puntos en promedio de todos los sprints cursados
+          <br> EL OBJETIVO</p>
+        <img class="imagen" src="assets/images/graph.png" alt="estudiantes que pasan puntaje mínimo">
+      </div>
+      <div class="box">
+        <p>% DEL TOTAL</p>
+      </div>
+    </article>
+    <!-- Fin - Sección alumnas logran pasar promedio -->
 
-    <section class="information">
-      <div class="higher-lower">
-        <div class="small-box">
-          <h2>Enrollment</h2>
-            <div class="super-small"></div>
-            <div class="super-small"></div>
-        </div>
-        <div class="small-box">
-          <h2>Archievement</h2>
-            <div class="super-small"></div>
-            <div class="super-small"></div>
-        </div>
-        <div class="small-box">
-          <h2>Net Promoter Score</h2>
-          <div class="super-small"></div>
-          <div class="super-small"></div>
+    <!-- Inicio - Sección promedio NPS -->
+    <article class="box-container third">
+    <h2>
+      PUNTAJE NETO DEL PROMOTOR - NET PROMOTER SCORE (NPS)</h2>
+      <div class="box">
+        <p>% ACUMULATIVO NPS</p>
+        <img class="imagen" src="assets/images/graph.png" alt="nts">
+      </div>
+    </article>
+    <!-- Fin - Sección promedio NPS -->
+
+    <!-- Inicio - Sección habilidades técnicas -->
+    <article class="skills">
+      <h2>HABILIDADES TÉCNICAS</h2>
+      <div class="box">
+        <p>N° ESTUDIANTES QUE CUMPLIERON
+          <br>CON EL OBJETIVO</p>
+      </div>
+      <div class="box">
+        <p>% DEL TOTAL ()</p>
+      </div>
+      <img class="big-imagen" src="assets/images/rectangular-graphic.png" alt="habilidades técnicas">
+      <img class="circle" src="assets/images/circle-graphic.png" alt="habilidades técnicas">
+    </article>
+    <!-- Fin - Sección habilidades técnicas -->
+
+    <!-- Inicio - Sección habilidades Sociales -->
+    <article class="skills">
+      <h2>HABILIDADES SOCIALES</h2>
+      <div class="box">
+        <p>N° PROMEDIO GENERAL
+          <br>DE LA CLASE</p>
+      </div>
+      <div class="box">
+        <p>N° ESTUDIANTES QUE CUMPLIERON
+          CON EL OBJETIVO</p>
+      </div>
+      <img class="big-imagen" src="assets/images/rectangular-graphic.png" alt="habilidades sociales">
+      <img class="circle" src="assets/images/circle-graphic.png" alt="habilidades sociales">
+    </article>
+    <!-- Fin - Sección habilidades Sociales -->
+
+    <section>
+      <div class="box-container">
+        <h2>SATISFACCIÓN DEL ESTUDIANTE</h2>
+        <div class="box">
+          <p>% ESTUDIANTES SATISFECHAS</p>
+          <img class="imagen" src="assets/images/graph.png" alt="Estudiantes satisfechas">
         </div>
       </div>
-      <div class="skill-tec">
-          <h2>Tech Skills</h2>
-          <div class="super-small-2"></div>
-          <div class="super-small-2"></div>
-      </div>
-      <div class="skill-hse">
-        <h2>Life Skills</h2>
-          <div class="super-small-2"></div>
-          <div class="super-small-2"></div>
-      </div>
-      <div class="higher-lower">
-        <div class="small-box">
-          <h2>Student Satisfaction</h2>
-          <div class="super-small"></div>
+      <div class="box-container">
+        <h2>EVALUACIÓN DE MAESTROS</h2>
+        <div class="box">
+          <p>CALIFICACIÓN GENERAL DE MAESTROS</p>
+          <img class="imagen" src="assets/images/graph.png" alt="Evaluación maestros">
         </div>
-        <div class="small-box">
-          <h2>Teacher Rating</h2>
-          <div class="super-small"></div>
-        </div>
-        <div class="small-box">
-          <h2>Jedi master Rating</h2>
-          <div class="super-small"></div>
+      </div>
+      <div class="box-container fourth">
+        <h2>EVALUACIÓN DE JEDI MASTER</h2>
+        <div class="box">
+          <p>CALIFICACIÓN GENERAL DE JEDI</p>
+          <img class="imagen" src="assets/images/graph.png" alt="Evaluación Jedi">  
         </div>
       </div>
     </section>
+
 
     <script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
