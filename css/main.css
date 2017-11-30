@@ -159,7 +159,7 @@ article {
 
 .squares {
   width: 161px;
-  height: 67px;
+  height: 87px;
   display: inline-block;
   padding: 10px;
   float: left;
@@ -169,6 +169,10 @@ article {
   background-color: #F7F7F7;
 }
 
+span {
+  font-size: 24px;
+  font-weight: 900;
+}
 .left {
   position: relative;
   bottom: 28px;
