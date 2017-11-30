@@ -3,8 +3,41 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link rel="stylesheet" href="css/main.css">
+
   </head>
   <body>
+
+    <div id="formulario">
+      <form id="form1" onsubmit="return display" action="post">
+
+
+    <select name="city">
+          <option value="displayselecteed">--SELECCIONE--</option>
+            <optgroup label="AREQUIPA">
+               <option value="sub">2016-2</option>
+               <option value="sub">2017-1</option>
+            </optgroup>
+
+            <optgroup label="CHILE">
+               <option value="sub">2017-1</option>
+               <option value="sub">2017-2</option>
+             </optgroup>
+
+            <optgroup label="LIMA">
+               <option value="sub">2016-2</option>
+               <option value="sub">2017-1</option>
+               <option value="sub">2017-2</option>
+            </optgroup>
+
+            <optgroup label="MEXICO">
+              <option value="sub">2016-2</option>
+              <option value="sub">2017-1</option>
+              <option value="sub">2017-2</option>
+            </optgroup>
+    </select>
+      </form>
+    </div>
 
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
