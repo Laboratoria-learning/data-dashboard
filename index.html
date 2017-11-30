@@ -24,14 +24,22 @@
       </ul>
     </section>
 
-    <section class="student container">    
-    <section class="student">
+    <section class="student container">
       <div class="new-student">
         <p>Add Student<i class="fa fa-plus right" aria-hidden="true"></i></p>
       </div>
       <form class="filter inline">
-        <label for="sede-lima" class="sede">Lima: </label>
-        <input type="radio" name="sede" id="sede-lima">
+        <span class="sede">Lima: </span>
+        <select class="generacion" name="">
+          <option value="">Gerenation</option>
+          <option value="LIM2015-1">2015 - I</option>
+          <option value="LIM2015-2">2015 - II</option>
+          <option value="LIM2016-1">2016 - I</option>
+          <option value="LIM2016-2">2016 - II</option>
+          <option value="LIM2017-1">2017 - I</option>
+          <option value="LIM2017-2">2017 - II</option>
+        </select>
+        <span class="sede">Arequipa: </span>
         <select class="generacion" name="">
           <option value="">Gerenation</option>
           <option value="first-15">2015 - I</option>
@@ -41,8 +49,7 @@
           <option value="first-17">2017 - I</option>
           <option value="second-17">2017 - II</option>
         </select>
-        <label for="sede-aqp" class="sede">Arequipa: </label>
-        <input type="radio" name="sede" id="sede-aqp">
+        <span class="sede">Santiago de Chile: </span>
         <select class="generacion" name="">
           <option value="">Gerenation</option>
           <option value="first-15">2015 - I</option>
@@ -52,8 +59,7 @@
           <option value="first-17">2017 - I</option>
           <option value="second-17">2017 - II</option>
         </select>
-        <label for="sede-sch" class="sede">Santiago de Chile: </label>
-        <input type="radio" name="sede" id="sede-sch">
+        <span class="sede">Ciudad de Mexico: </span>
         <select class="generacion" name="">
           <option value="">Gerenation</option>
           <option value="first-15">2015 - I</option>
@@ -63,19 +69,7 @@
           <option value="first-17">2017 - I</option>
           <option value="second-17">2017 - II</option>
         </select>
-        <label for="sede-df" class="sede">Ciudad de Mexico: </label>
-        <input type="radio" name="sede" id="sede-df">
-        <select class="generacion" name="">
-          <option value="">Gerenation</option>
-          <option value="first-15">2015 - I</option>
-          <option value="second-15">2015 - II</option>
-          <option value="first-16">2016 - I</option>
-          <option value="second-16">2016 - II</option>
-          <option value="first-17">2017 - I</option>
-          <option value="second-17">2017 - II</option>
-        </select>
-        <label for="sede-g" class="sede">Guadalajara: </label>
-        <input type="radio" name="sede" id="sede-g">
+        <span class="sede">Guadalajara: </span>
         <select class="generacion" name="">
           <option value="">Gerenation</option>
           <option value="first-15">2015 - I</option>
@@ -86,7 +80,7 @@
           <option value="second-17">2017 - II</option>
         </select>
     </form>
-    <div id="coders-container"></div>
+    <div id="coders-container" class="sub-container right"></div>
     </section>		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->

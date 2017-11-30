@@ -1,6 +1,3 @@
-/*
- * Funcionalidad de tu producto
- */
 var studentsContainer = document.getElementById('coders-container');
 var selectGenerationLima = document.getElementsByClassName('generacion')[0];
 var selectGenerationAqp = document.getElementsByClassName('generacion')[1];
@@ -9,69 +6,40 @@ var selectGenerationDf = document.getElementsByClassName('generacion')[3];
 var selectGenerationG = document.getElementsByClassName('generacion')[4];
 var subImagesContainer = null;
 
-
-window.addEventListener('load', function() {  
-  var listMenu = document.querySelectorAll('.general-menu');
-  for (var i = 0; i < listMenu.length; i++) {
-    listMenu[i].addEventListener('click', showMenu);
-  }
-  
-  function showMenu(event) {
-    console.log(event.target);
-  }
-});
-
-// constantes
-var FIRST15 = 'first-15';
-var SECOND15 = 'second-15';
-var FIRST16 = 'first-16';
-var SECOND16 = 'second-16';
-var FIRST17 = 'first-17';
-var SECOND17 = 'second-17';
-
 selectGenerationLima.addEventListener('change', selectionGeneration);
 selectGenerationAqp.addEventListener('change', selectionGeneration);
 selectGenerationSch.addEventListener('change', selectionGeneration);
 selectGenerationDf.addEventListener('change', selectionGeneration);
 selectGenerationG.addEventListener('change', selectionGeneration);
 
-var df;
-
-showAll();
-
-
 function selectionGeneration(event) {
-  switch (true) {
-  case event.target.value === '':
-    showAll();
-    break;
-  case event.target.value === 'first-15':
-    addImages(datos, FIRST15);
-    break;
-  case event.target.value === 'second-15':
-    addImages(datos, SECOND15);
-    break;
-  case event.target.value === 'first-16':
-    addImages(datos, FIRST16);
-    break;
-  case event.target.value === 'second-16':
-    addImages(datos, SECOND16);
-    break;
-  case event.target.value === 'first-17':
-    addImages(datos, FIRST15);
-    break;
-  case event.target.value === 'second-17':
-    addImages(datos, SECOND15);
-    break;
+  var filtro = event.target.value;
+  cargarCoders(filtro.substr(0, 3), filtro.substr(3, 6));
+}
+
+function cargarCoders(ciudad, periodo) {
+  for (var i = 0 ; i < data[ciudad][periodo].students.length; i++) {
+    var estudiante = document.createElement('div');
+    var infStuden = document.createElement('p');
+    var photoStudent = document.createElement('img');
+
+    photoStudent.classList.add('student-img');
+    estudiante.setAttribute('class', 'student-inf');
+
+    photoStudent.src = data[ciudad][periodo].students[i].photo;
+    infStuden.textContent = data[ciudad][periodo].students[i].name;
+    photoStudent.textContent = data[ciudad][periodo].students[i].photo;
+
+    estudiante.appendChild(infStuden);
+    estudiante.appendChild(photoStudent);
+    studentsContainer.appendChild(estudiante);
   }
 }
 
-function addImages() {
-  for (var key in data) {
-    console.log(arrayProductoInd[key]);
-  }
+function techSkills() {
+  var techPoints;
 }
 
-function showAll() {
+function lifeSkills() {
 
 }
