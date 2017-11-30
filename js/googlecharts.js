@@ -32,6 +32,36 @@ function drawChartTotalStudentsAQP() {
   chartTotalStudentsAQP.draw(viewTotalStudentsAQP, optionsTotalStudentsAQP);
 }
 
+/* -------NPS por generación:--------------- */
+
+google.charts.setOnLoadCallback(drawChartNPSAQP20162);
+function drawChartNPSAQP20162() {
+  var dataNPSAQP20162 = google.visualization.arrayToDataTable([
+    ['Calificación NPS', 'Total', { role: 'style' } ],
+    ['Promoters', npsPromotersAQP20162, 'blue'],
+    ['Passives', npsPassivesAQP20162, 'green'],
+    ['Detractors', npsDetractorsAQP20162, 'red'],
+  ]);
+
+  var viewNPSAQP20162 = new google.visualization.DataView(dataNPSAQP20162);
+  viewNPSAQP20162.setColumns([0, 1,
+    { calc: 'stringify',
+      sourceColumn: 1,
+      type: 'string',
+      role: 'annotation' },
+    2]);
+
+  var optionsNPSAQP20162 = {
+    title: 'Calificación NPS GEN 2016-2',
+    width: 300,
+    height: 200,
+    bar: {groupWidth: '95%'},
+    legend: { position: 'none' },
+  };
+  var chartNPSAQP20162 = new google.visualization.ColumnChart(document.getElementById('columnchart1NPS'));
+  chartNPSAQP20162.draw(viewNPSAQP20162, optionsNPSAQP20162);
+}
+
 /* ****SEDE CDMX**** */
 /* -------Total de alumnas por generacion:--------------- */
 google.charts.setOnLoadCallback(drawChartTotalStudentsCDMX);
@@ -55,8 +85,8 @@ function drawChartTotalStudentsCDMX() {
 
   var optionsTotalStudentsCDMX = {
     title: 'Total alumnas matriculadas y desertoras por generación',
-    width: 600,
-    height: 400,
+    width: 300,
+    height: 200,
     bar: {groupWidth: '95%'},
     legend: { position: 'none' },
   };
@@ -88,8 +118,8 @@ function drawChartTotalStudentsLIM() {
 
   var optionsTotalStudentsLIM = {
     title: 'Total alumnas matriculadas y desertoras por generación',
-    width: 600,
-    height: 400,
+    width: 300,
+    height: 200,
     bar: {groupWidth: '95%'},
     legend: { position: 'none' },
   };
@@ -121,8 +151,8 @@ function drawChartTotalStudentsSCL() {
 
   var optionsTotalStudentsSCL = {
     title: 'Total alumnas matriculadas y desertoras por generación',
-    width: 600,
-    height: 400,
+    width: 300,
+    height: 200,
     bar: {groupWidth: '95%'},
     legend: { position: 'none' },
   };

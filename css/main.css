@@ -11,6 +11,7 @@ body {
 /*css menu display*/
 .menuDisplay ul {
   background-color: #E1E1E1;
+  z-index: +300;
 }
 .menuDisplay li{
   border: 30px;
@@ -31,7 +32,7 @@ body {
 .hide {
   display: none;
 }
-.show{
+.showMenuShow {
   display: block;
 }
 /*---------------------*/
@@ -150,7 +151,7 @@ section {
   margin-top: 10px;
 }
 
-.chartGrafic1{
+.chartGrafic{
   position: relative;
   right: 300px;
   z-index: -10;
