@@ -36,11 +36,13 @@ window.addEventListener('load', function() {
     });
   });
   /* Fin de los Selects */
-  var btndash = document.getElementById('btndash');
   /* Carga de datos predeterminados */
   enveroment('LIM', '2017-2');
   ratingTeachers('LIM', '2017-2');
   ratingJedi('LIM', '2017-2');
+  studentSatisfation('LIM', '2017-2');
+
+  var btndash = document.getElementById('btndash');
   /* Evento al hacer click al boton */
   btndash.addEventListener('click', function() {
     /* Enveroment Static*/
@@ -48,6 +50,7 @@ window.addEventListener('load', function() {
     /* Promedio de puntuacion Teacher */
     ratingTeachers(sede, generacion);
     ratingJedi(sede, generacion);
+    studentSatisfation(sede,generacion);
   });
 });
 /* Funciones */
@@ -86,6 +89,7 @@ function ratingTeachers(sede, generacion) {
   var textRatingT = document.createTextNode(averageTeacher);
   spanRatingT.appendChild(textRatingT);
 }
+// Funcion que obtiene el promedio de la puntuacion de los jedis
 function ratingJedi(sede, generacion) {
   var ratingJedi = 0;
   var countRatingJ = data[sede][generacion].ratings.length;
@@ -101,4 +105,15 @@ function ratingJedi(sede, generacion) {
   var textRatingJ = document.createTextNode(averageJedi);
   spanRatingJ.appendChild(textRatingJ);
 }
+function studentSatisfation(sede,generacion) {
+  var count = data[sede][generacion].ratings.length - 1;
+  var sum = 0;
+  for (var i = 0;i < data[sede][generacion].ratings.length;i++) { 
+    // Acumula los puntajes de los jedis
+    sum+=data[sede][generacion].ratings[i].nps.promoters;
+    
+  }
+  console.log(sum);
+}
+
 
