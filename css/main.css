@@ -1,0 +1,109 @@
+/*SETEAR NUESTROS ARCHIVOS: SEA IGUAL PARA TODOS LOS NAVEGADORES*/
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+/* CLASES REUTILIZABLES*/
+/* nuevo*/
+.select-sprint {/* Etiqueta select(filtros para tech skills y life skills)*/
+  font-size: 14px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  border-bottom: 3px solid rgb(255, 165, 0);
+}
+.tech-skills, .life-skills {/* div de los contenedores TECH SKILLS Y LIFE SKILLS*/
+  display: inline-block;
+  vertical-align: middle;
+  margin:5px;
+  margin-left: 20px;
+  width: 45%;
+  position: relative;
+  bottom: 50px;
+}
+.filter-skills {/* div del contenedor de los filtros de TECH SKILLS Y LIFE SKILLS*/
+  display: inline-block;
+  position:relative;
+  bottom:70px;
+  left:110px;
+}
+.value-skills {/* div que contienen los valores de TECH Y LIFE SKILLS*/
+  position: relative;
+  bottom: 130px;
+}
+/* ESTILOS AL BODY*/
+body {
+  width: 100%;
+  background: #A4A4A4 ;
+}
+/* ESTILOS AL HEADER*/
+header{
+ width: 20%;
+ margin: 15px auto;
+}
+/* Estilos a la barra de menu**/
+#navbar{
+ margin-top: 15px;
+ padding: 20px;
+ background-color: white;
+}
+/* Estilos al filtro de la barra de menu*/
+select{
+  outline: none;
+  border: none;
+  font-size: 20px;
+  margin-left: 10px;
+}
+/* ESTILOS A SECTION DE CLASE "DISPLAY NONE"*/
+section.display-none {
+ display: none;
+}
+section.container {
+  width: 85%;
+  height: 100;
+  margin: 100px 0  0 108px;
+  padding: 100px 45px;/* nuevo*/
+  background-color: rgb(220, 220, 220);
+}
+section.container div.container {
+  margin:10px 60px;
+  text-align: center;
+  /*float: left;*/
+}
+section.container div.container  div.indicators-container {
+  width: 31.3%;
+  display: inline-block;
+  margin: 10px;
+  background-color: #fff;
+}
+section.container div div div.text, section.container div.skills div.text {
+  margin: 20px;
+  font-weight: 700;
+  font-size: 20px;
+}
+section.container div div div.value, section.container div.skills div.value {
+ margin: 10px;
+ display: inline-block;
+ width: 43%;
+ padding: 10px;
+ background-color: rgb(220, 220, 220);
+ font-size: 15px;
+ border-radius: 10px;
+}
+section.container div.skills {
+ margin:30px 67px;
+ background-color: #fff;
+ padding: 10px;
+ padding-bottom: 0;
+ width: 88,5%;
+}
+section.container div.skills div.text {
+  width: 15%;
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+section.container div.skills div.value {
+  width: 25%;
+  margin: 10px 21px;
+}
