@@ -280,8 +280,75 @@ function satisfaccionEstudiantes(sede, generacion) {
   var supera = [];
   var cumple = [];
   var noCumple = [];
+  var totalExcede = 0;
 
   for (var i = 0; i < rating.length; i++) {
-    
+    if (rating[i].student.supera) {
+      supera.push(rating[i].student.supera);
+    } 
+    if (rating[i].student.cumple) {
+      cumple.push(rating[i].student.cumple);
+    }
+    if (rating[i].student['no-cumple']) {
+      noCumple.push(rating[i].student.noCumple);
+    }
   }
+
+  for (var i = 0; i < supera.length; i++) {
+    totalExcede = totalExcede + supera[i] + cumple[i];
+  }
+
+  var porcentajeSupera = totalExcede / supera.length;
+  
+  var studentSatisfaction = document.getElementById('studentSatisfaction');
+  studentSatisfaction.innerHTML = Math.round(porcentajeSupera) + '<br>' + '% MEETING OR EXCEEDING EXPECTATIONS(CUMULATIVE)';
 }
+
+console.log(satisfaccionEstudiantes('LIM', '2016-2'));
+
+/** ************* TEACHER RATING ************ */
+
+function calificacionMaestros(sede, generacion) {
+  var rating = data[sede][generacion]['ratings'];
+  var calificacion = [];
+  var sumCalificacion = 0;
+
+  for (var i = 0; i < rating.length; i++) {
+    calificacion.push(rating[i].teacher);
+  }
+  
+  for (var i = 0; i < calificacion.length; i++) {
+    sumCalificacion = sumCalificacion + calificacion[i];
+  }
+
+  var calificacionGeneralTeacher = sumCalificacion / calificacion.length;
+
+  var overallTeacher = document.getElementById('calificactionGeneral');
+  overallTeacher.innerHTML = calificacionGeneralTeacher + '<br>' + 'OVERALL TEACHER RATING(CUMULATIVE)';
+}
+
+console.log(calificacionMaestros('LIM', '2016-2'));
+
+
+/** ************* JEDI RATING ************ */
+
+function calificacionJedi(sede, generacion) {
+  var rating = data[sede][generacion]['ratings'];
+  var calificacion = [];
+  var sumCalificacion = 0;
+
+  for (var i = 0; i < rating.length; i++) {
+    calificacion.push(rating[i].jedi);
+  }
+  
+  for (var i = 0; i < calificacion.length; i++) {
+    sumCalificacion = sumCalificacion + calificacion[i];
+  }
+
+  var calificacionGeneralJedi = sumCalificacion / calificacion.length;
+
+  var overallJedi = document.getElementById('calificactionGeneralJedi');
+  overallJedi.innerHTML = calificacionGeneralJedi.toFixed(1) + '<br>' + 'OVERALL JEDI RATING(CUMULATIVE)';
+}
+
+console.log(calificacionJedi('LIM', '2016-2'));
