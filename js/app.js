@@ -36,9 +36,11 @@ window.addEventListener('load', function() {
 
   var PLACE = '';
   var CODE = '';
+  var SPRINT = '';
   var students = {};
   var placeFilter = document.querySelector('.place-filter');
   var codeFilter = document.querySelector('.code-filter');
+  var sprintFilter = document.querySelector('.sprint-filter');
 
   codeFilter.addEventListener('change', showNumber);
   function showNumber(event) {
@@ -121,13 +123,35 @@ function studentPercentagePassed(place, code) {
   for (var j = 0 ; j < array.length;j++) {
     sum += array[j];
   }
-  return sum / array.length;
+  return (sum / array.length);
 }
 // funcion que calcula el numero de personas que representa  el porcentaje de las que superan la meta en ambos cursos:
 function studentPassed(place, code) {
   var result = (studentPercentagePassed(PLACE, CODE) * totalActive(PLACE, CODE, 'active')) / 100;
   return result;
+
 }
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+function drawChart() {
+  // Create the data table.
+  var passed = document.getElementById("passed").textContent;
+  var noPassed = document.getElementById("noPassed").textContent;
+  var data = new google.visualization.DataTable();
+  data.addColumn('string', 'passed');
+  data.addColumn('number', 'resultado');
+  data.addRows([
+    ['Passed', parseInt(passed)],
+    ['No Passed', parseInt(noPassed)],
+  ]);
+  // Set chart options
+  var options = {'width':450,
+                'height':150};
+  // Instantiate and draw our chart, passing in some options.
+  var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+  chart.draw(data, options);
+}
+google.charts.setOnLoadCallback(drawChart);
 
 // funcion que saca el promedio de los puntajes de los jedi-master   (todos los sprints)
 
