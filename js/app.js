@@ -33,9 +33,41 @@ window.addEventListener('load', function(event) {
     } else classCheckBoxHse.style.display = 'none';
   });
 
-//   creando contenedor para informacion de las alumnas
+  // solucionando primer ennunciado
+  // declarando variables generales
+  var siteLim = data['LIM'];
+  var siteAqp = data['AQP'];
+  var siteChile = data['SCL'];
+  var siteCdmx = data['CDMX'];
+
+  // CASO LIMA
+  // obteniendo numero de poblacion estudiantil
+
+  var limaProm2016ii = siteLim['2016-2'];
+  var limaProm2017i = siteLim['2017-1'];
+  var limaProm2017ii = siteLim['2017-2'];
+
+  console.log(limaProm2016ii.students.length); // 35
+  console.log(limaProm2017i.students.length); // 17
+  console.log(limaProm2017ii.students.length); // 14
+
+  // obteniendo procentaje de estudiantes de deserción de estudiantes por sede y generacion
+
+  var limaStudents2016ii = limaProm2016ii.students;
+  var limaStudents2017i = limaProm2017i.students;
+  var limaStudents2017ii = limaProm2017i.students;
+
+  // Caso Lima2016-2
+
+  for (var i = 0; i < shortCut.length;i++) {
+    if (1) {
+      console.log(shortCut[i]['active']);
+    }
+  }
 });
 
+// var shortCut = data['LIM']['2016-2']['students'];
+// console.log(shortCut.length);
 // Puedes hacer uso de la base de datos a través de la variable `data`
 console.log(data);
 
@@ -83,9 +115,4 @@ cargarPagina();
 //
 var shortCut = data['LIM']['2016-2']['students'];
 console.log(shortCut.length);
-for (var i = 0; i < shortCut.length;i++) {
-  if (i == 7) {
-    console.log(shortCut[i]['name']);
-  }
-}
 // console.log(shortCut);
