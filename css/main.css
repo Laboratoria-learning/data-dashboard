@@ -60,6 +60,7 @@ a {
     color: #000;
     font-weight: bold;
     font-size: 1.3rem;
+    
 }
 
 a:hover { /*cambiar el background del texto*/
@@ -150,7 +151,6 @@ p {
     margin: 60px;
 }
 /*-------------------------------------*/
-
 /*--.....SECTION STUDENTS....*/
 .container1 {
     outline: 1px solid purple;
@@ -160,7 +160,6 @@ p {
 nav ul {
     outline: 1 px solid black;
     list-style: none;
-    display:  inline-block;
 }
 
 .navcontainer a {
@@ -177,7 +176,6 @@ nav ul {
     outline: 1px solid black;
     width: 13px;
     height: 13px;
-    display: inline-block;
     margin-right: 15px;
     text-align: none ;
 }
@@ -214,8 +212,6 @@ h2 {
     width: 60%;
     margin-right: 60px;
     float: right;
-   
-    
 }
 .input {
     outline: 1px solid blue;
