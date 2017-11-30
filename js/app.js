@@ -98,6 +98,8 @@ function selectSede () {
       createStudents();
       drawSeriesChart();
       drawLineColors();
+      drawLineColorsPromoter();
+      drawChartTech();
     })
   }
 } 
@@ -123,6 +125,8 @@ function selectPromo() {
       createStudents();
       drawSeriesChart();
       drawLineColors();
+      drawLineColorsPromoter();
+      drawChartTech();
     })
   }
 }
@@ -254,6 +258,7 @@ function techSkills () {
   techSprintNote.textContent = techBigger;
   number = techBigger/(enrollment().act+enrollment().inac)*100;
   techSprintPer.textContent = Math.round(number * 10 ) /10 + ' %';
+  return Math.round(number * 10 ) /10 ;
 }
 
 techSkills();
