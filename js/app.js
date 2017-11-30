@@ -324,7 +324,31 @@ function calificacionMaestros(sede, generacion) {
   var calificacionGeneralTeacher = sumCalificacion / calificacion.length;
 
   var overallTeacher = document.getElementById('calificactionGeneral');
-  overallTeacher.innerHTML = Math.round(overallTeacher) + '<br>' + 'OVERALL TEACHER RATING(CUMULATIVE)';
+  overallTeacher.innerHTML = calificacionGeneralTeacher + '<br>' + 'OVERALL TEACHER RATING(CUMULATIVE)';
 }
 
 console.log(calificacionMaestros('LIM', '2016-2'));
+
+
+/** ************* JEDI RATING ************ */
+
+function calificacionJedi(sede, generacion) {
+  var rating = data[sede][generacion]['ratings'];
+  var calificacion = [];
+  var sumCalificacion = 0;
+
+  for (var i = 0; i < rating.length; i++) {
+    calificacion.push(rating[i].jedi);
+  }
+  
+  for (var i = 0; i < calificacion.length; i++) {
+    sumCalificacion = sumCalificacion + calificacion[i];
+  }
+
+  var calificacionGeneralJedi = sumCalificacion / calificacion.length;
+
+  var overallJedi = document.getElementById('calificactionGeneralJedi');
+  overallJedi.innerHTML = calificacionGeneralJedi.toFixed(1) + '<br>' + 'OVERALL JEDI RATING(CUMULATIVE)';
+}
+
+console.log(calificacionJedi('LIM', '2016-2'));
