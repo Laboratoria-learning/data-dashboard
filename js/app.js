@@ -1,5 +1,5 @@
 // agregar el evento load
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
   var selection = document.getElementById('selection');
   // console.log(selection);
   var contenidoSede = document.getElementById('contenido-sede');
@@ -27,19 +27,18 @@ window.addEventListener('load', function() {
 
   var scoresJedi = document.getElementById('scores-jedi');
 
-  function mostrarInfo() {
-  };
+  selection.addEventListener('change', mostrarInfo);
 
-  selection.addEventListener('change', function(e) {
-  //  console.log(e.target.value);
-    var value = e.target.value; 
+  function mostrarInfo() {
+    //  console.log(e.target.value);
+    var value = selection.value;
     var aux = value.split('-');
     var sedeName = aux.shift();
     // console.log(sedeName);
     var generation = aux.join('-');
 
     var generationData = data[sedeName][generation];
-    console.log(generationData);
+
     var totalStudents = generationData.students.length;
     // Datos de estudiantes inscritas
     var div = document.createElement('div');
@@ -56,7 +55,7 @@ window.addEventListener('load', function() {
     generationData.students.forEach(function(student) {
       // console.log(student);
       if (student.active === false) {
-        counter ++;
+        counter++;
       }
     });
 
@@ -64,22 +63,45 @@ window.addEventListener('load', function() {
     var parrafo = document.createElement('p');
     parrafo.textContent = '% estudiantes desertoras';
     div.appendChild(parrafo);
+    div.classList.add('description');
     // Datos de estudiantes que desartaron
     studentsDeserted.textContent = Math.floor((counter * 100) / totalStudents) + '%';
     studentsDeserted.appendChild(div);
 
-    // var studentsTarget = 0;
-    // for (var i = 0; i < generationData.students.length; i++) {
-    //   var tech = generationData.students[i].score.tech;
-    //   var hse = generationData.students[i].score.hse;
-    //   var sumTechHse = tech + hse;
-    //   studentsTarget += sumTechHse;
-    // }
-    // (studentsTarget)
+    var studentsTarget = 0;
+    generationData.students.forEach(function(student) {
+      var cantidadDeSprints = student.sprints.length;
+      var total = 0;
+      student.sprints.forEach(function (sprint) {
+        total += (sprint.score.tech + sprint.score.hse);
+      });
+      var promedio = total / cantidadDeSprints;
+      if (promedio >= 2100) {
+        studentsTarget++;
+      }
+    });
+    var div = document.createElement('div');
+    var parrafo = document.createElement('p');
+    parrafo.textContent = '# estudiantes que superan la meta';
+    div.appendChild(parrafo);
+    div.classList.add('description')
+    studentsApproved.textContent = studentsTarget;
+    studentsApproved.appendChild(div);
+
+    var div = document.createElement('div');
+    var parrafo = document.createElement('p');
+    parrafo.textContent = '% total';
+    div.appendChild(parrafo);
+    div.classList.add('description');
+
+    var porcentajePasaron = Math.floor((studentsTarget * 100) / generationData.students.length);
+    totalApproved.textContent = porcentajePasaron + '%';
+    totalApproved.appendChild(div);
+
     // [Promoters] = [Respuestas 9 o 10] / [Total respuestas] * 100
     // [Passive] = [Respuestas 7 u 8] / [Total respuestas] * 100
     // [Detractors] = [Respuestas entre 1 y 6] / [Total respuestas] * 100
-    
+
     // [NPS] = [Promoters] - [Detractors]
     var result = 0;
     for (var i = 0; i < generationData.ratings.length; i++) {
@@ -92,9 +114,9 @@ window.addEventListener('load', function() {
     var parrafo = document.createElement('p');
     parrafo.textContent = '% de nps';
     div.appendChild(parrafo);
+    div.classList.add('description');
     averageNps.textContent = Math.floor(((result / generationData.ratings.length) * 100) / 100) + '%';
     averageNps.appendChild(div);
-    console.log(generationData.ratings.length);
 
     // El porcentaje de estudiantes satisfechas con la experiencia de Laboratoria.
     var totalStudent = 0;
@@ -114,8 +136,8 @@ window.addEventListener('load', function() {
       totalRatingTeacher += teacher;
     }
     scoresTeacher.textContent = totalRatingTeacher / generationData.ratings.length;
-  });
- 
+  };
+
   // agregar el evento click a todos los tabs
   for (var i = 0; i < tabs.length; i++) {
     // y dentro del click para cada tab
@@ -129,11 +151,15 @@ window.addEventListener('load', function() {
         // quitar la clase active a todos los contents
         contents[k].classList.remove('active');
       }
-      
+
       // agregar la clase active solo a este tab que se le dio click
       event.target.classList.add('active');
       // agregar la clase active solo al content correspondiente (data-content
       contents[event.target.dataset.content].classList.add('active');
     });
   }
+
+  mostrarInfo();
+  tabs[0].classList.add('active');
+  contents[0].classList.add('active');
 });
