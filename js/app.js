@@ -383,6 +383,7 @@ function showStudentData(e) {
   var textSedeSelected = document.getElementById('sedeSelect').textContent;
   var textGenerSelected = document.getElementById('generSelect').textContent;
   var sa = data[textSedeSelected][textGenerSelected]['students'];
+if (textSedeSelected && textGenerSelected) { // add if 	
   for (var j = 0;j < sa.length;j++) {
     if (sa[j]['active'] === true) {
       // var ss = data[textSedeSelected][textGenerSelected]["students"][j]["sprints"];
@@ -420,6 +421,13 @@ function showStudentData(e) {
     sectionStudents.appendChild(divStudent);
     console.log(sa[j]['name'] + 'porcentaje de sprint tech: ' + porcentajeTech + 'Porcentaje de sprint hse: ' + porcentajeHse);
   }
+
+} else {
+    alert('Por favor seleccione una Sede y su generación');
+  }		
+//} else {
+ //   alert('Por favor seleccione una Sede y su generación');
+ // }	
 }
 
 
