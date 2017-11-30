@@ -9,6 +9,15 @@ var localSantiago = data['SCL'];
 // aqp62 ---> arequipa 2016-2
 var promAq62 = localArequipa['2016-2'];
 var studentsAq62 = promAq62.students;
+// -------------------------------------------------------------------------
+var nameListstudentsAq62 = '';
+for (var i = 0; i < studentsAq62.length; i++) {
+  nameAq62 = studentsAq62[i]['name'] + '/n';
+  nameListstudentsAq62 += nameAq62;
+}
+console.log(nameListstudentsAq62);
+// -------------------------------------------------------------------------
+
 // estudiantes activas
 var activeAq62 = 0;
 // estudiantes inactivas
