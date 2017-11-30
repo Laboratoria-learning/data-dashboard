@@ -212,3 +212,8 @@ studentsPage.addEventListener('click', function(event) {
   document.getElementById('content').setAttribute('class','disappear');
   document.getElementById('content-two').setAttribute('class','appear');
 });
+var overview = document.getElementById('overview');
+overview.addEventListener('click',function(event) {
+  document.getElementById('content').setAttribute('class','appear');
+  document.getElementById('content-two').setAttribute('class','disappear');
+});
