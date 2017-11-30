@@ -193,7 +193,9 @@ for (i = 0; i < promAq71ratng.length; i++) {
 var scoreJedisTotalAqp71 = (scoreJedisAqp71 / 3).toFixed(1);
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------
-
+window.addEventListener('load',function(){
+  document.getElementById('white').setAttribute('class','disappear');
+})
 var selectSede = document.getElementById('sedes');
 selectSede.addEventListener('change', function(event) {
   if (event.target.value === 'aqp62') {
@@ -223,11 +225,42 @@ selectSede.addEventListener('change', function(event) {
 
 var studentsPage = document.getElementById('students');
 studentsPage.addEventListener('click', function(event) {
-  document.getElementById('content').setAttribute('class', 'disappear');
-  document.getElementById('content-two').setAttribute('class', 'appear');
+  document.getElementById('content').setAttribute('class','disappear');
+  document.getElementById('content-two').setAttribute('class','appear');
+  document.getElementById('white').setAttribute('class','disappear');
+  document.getElementById('orangeline').setAttribute('class','margin-left');
+  document.getElementById('students').setAttribute('class','cursor-change');
 });
+studentsPage.addEventListener('mouseover', function(event) {
+  document.getElementById('students').setAttribute('class','cursor-hand');
+});
+
 var overview = document.getElementById('overview');
 overview.addEventListener('click', function(event) {
   document.getElementById('content').setAttribute('class', 'appear');
   document.getElementById('content-two').setAttribute('class', 'disappear');
+  document.getElementById('white').setAttribute('class','disappear');
+  document.getElementById('orangeline').setAttribute('class','margin-none');
+});
+
+overview.addEventListener('mouseover', function(event) {
+  document.getElementById('overview').setAttribute('class','cursor-hand');
+});
+
+var menuhamburger = document.getElementById("button");
+menuhamburger.addEventListener('click', function(event) {
+  document.getElementById('all-content').setAttribute('class','disappear');
+  document.getElementById('white').setAttribute('class','appear');
+});
+white.addEventListener('click', function(event) {
+  document.getElementById('all-content').setAttribute('class','appear');
+  document.getElementById('white').setAttribute('class','disappear');
+});
+
+button.addEventListener('mouseover', function(event) {
+  document.getElementById('button').setAttribute('class','cursor-hand');
+});
+
+white.addEventListener('mouseover', function(event) {
+  document.getElementById('white').setAttribute('class','cursor-hand');
 });

@@ -54,7 +54,7 @@
   background:rgb(247,182,23);
   border: none;
 }
-
+/*Overview*/
 #content {
   margin: 41px 93px 111px 93px;
 }
@@ -81,7 +81,6 @@
   width: 301px;
   height: 176px;
 }
-
 .color-red {
   color: rgb(237,119,119);
 }
@@ -96,7 +95,6 @@
   height: 326px;
   float: right;
 }
-
 .tech-skills {
   height: 500px;
   margin-bottom: 77px;
@@ -155,18 +153,10 @@
 #pastel-red {
   color: rgb(234,81,81);
 }
+/*Students*/
 #content-two {
   margin: 40px 56px 58px 88px ;
   overflow: auto;
-}
-.disappear {
-  display: none;
-}
-.hidden {
-  visibility: hidden;
-}
-.appear {
-  visibility: visible;
 }
 .specialization {
   background: #fff;
@@ -175,7 +165,6 @@
   padding: 14px;
   display: inline-block;
   float: left;
-
 }
 .specialization p {
   font-weight: 900;
@@ -192,7 +181,7 @@
   border: 1px solid rgb(247,182,23);
   border-radius: 5px;
 }
-.specialization i:hover {
+#radiusquare {
   color: rgb(247,182,23);
   background: rgb(247,182,23);
 }
@@ -275,11 +264,10 @@ padding: 5px 15px;
   font-size: 19px;
 }
 /*Menu Hamburguesa*/
-.white {
-  background: #fff;
+#white {
+  background-color: #fff;
   width: 100%;
   height:1000px;
-  display: none;
 }
 .menu {
   background: rgb(43,43,43);
@@ -325,4 +313,23 @@ padding: 5px 15px;
 }
 .font-s-four {
   font-size: 8px;
+}
+/*Clases agregadas con javascript*/
+.disappear {
+  display: none;
+}
+.hidden {
+  visibility: hidden;
+}
+.appear {
+  visibility: visible;
+}
+.margin-left {
+  margin-left: 127px;
+}
+.margin-none {
+  margin-left: 0;
+}
+.cursor-hand {
+  cursor: pointer;
 }

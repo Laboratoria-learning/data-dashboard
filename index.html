@@ -8,10 +8,11 @@
     <title>Data Dashboard</title>
   </head>
   <body>
+    <div id="all-content">
     <header>
       <div class="header">
         <img src="assets/images/logo-laboratoria.svg">
-        <button type="button" name="menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+        <button id="button"type="button" name="menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
       </div>
     </header>
     <!-- Menu de navegacion -->
@@ -35,7 +36,7 @@
           <li id="students">STUDENTS</li>
           <li>TEACHERS</li>
         </ul>
-        <hr>
+        <hr id="orangeline">
       </div>
     </nav>
     <!-- Overview -->
@@ -166,6 +167,7 @@
 
       </div>
     </div>
+
       <!-- Students -->
       <div id="content-two" class="hidden">
 
@@ -174,7 +176,7 @@
         <ul>
           <li><i class="fa fa-square" aria-hidden="true"></i> Javascript</li>
           <li><i class="fa fa-square" aria-hidden="true"></i> UX design</li>
-          <li><i class="fa fa-square" aria-hidden="true"></i> Front end Designer</li>
+          <li><i id="radiusquare"class="fa fa-square" aria-hidden="true"></i> Front end Designer</li>
         </ul>
       </div>
 
@@ -216,8 +218,10 @@
       </div>
 
     </div>
+<!-- Final de "all-content" -->
+    </div>
     <!-- Menu hamburguesa -->
-    <div class="white">
+    <div id="white">
       <div class="menu">
         <img src="assets/images/student.jpg" alt="">
         <p>ANNA DURAND <i class="fa fa-caret-down" aria-hidden="true"></i></p>
