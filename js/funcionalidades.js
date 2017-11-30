@@ -219,3 +219,33 @@ function overcomeGoalHse(sede, generacion, sprint) {
   porcentaje = (meta / superanMeta.length) * 100;
   return porcentaje;
 }
+
+// Section: Students
+/* Data de la Estudiante #3 Sede AQP*/
+var sprints = data.AQP["2016-2"].students[3].sprints;
+var maxTech = 1800;
+var maxHse = 1200;
+var sumScoreTech = 0;
+var sumScoreHse = 0;
+
+for(var i = 0; i < sprints.length; i++){
+  var tech = sprints[i].score["tech"];
+  sumScoreTech += tech;
+  var hse = sprints[i].score["hse"];
+  sumScoreHse += hse;
+
+  var promTech = Math.round(sumScoreTech/4);
+  var promHse = Math.round(sumScoreHse/4);
+
+  var percentTech = Math.round(promTech * 100 / maxTech);
+  var percentHse = Math.round(promHse * 100 / maxHse);
+}
+console.log(percentTech);
+
+var techSkills = document.getElementById('tech');
+
+techSkills.textContent = 'TECH SKILLS: ' + percentTech + '%';
+
+var lifeSkills = document.getElementById('hse');
+
+lifeSkills.textContent = 'LIFE SKILLS: ' + percentHse + '%';
