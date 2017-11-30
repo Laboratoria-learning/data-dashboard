@@ -1,3 +1,6 @@
+
+
+
 //CREANDO VARIABLES GLOBALES, INCLUYEN LOS ARRAYS POR SEDE
   // Lima
   var lim20162 = document.getElementById('lim-2016-2');
@@ -34,24 +37,28 @@
   // MENU DESPLEGABLE POR SEDES //
   var lima = document.getElementById('countries').children[0];
   lima.addEventListener('click', function(event) {
+    event.preventDefault();
     var city = document.getElementById('countries').children[0].children[1];
     city.classList.toggle('hide');
   });
 
   var arequipa = document.getElementById('countries').children[1];
   arequipa.addEventListener('click', function(event) {
+    event.preventDefault();
     var city = document.getElementById('countries').children[1].children[1];
     city.classList.toggle('hide');
   });
 
   var santiago = document.getElementById('countries').children[2];
   santiago.addEventListener('click', function(event) {
+    event.preventDefault();
     var city = document.getElementById('countries').children[2].children[1];
     city.classList.toggle('hide');
   });
 
   var mexicoDf = document.getElementById('countries').children[3];
   mexicoDf.addEventListener('click', function(event) {
+    event.preventDefault();
     var city = document.getElementById('countries').children[3].children[1];
     city.classList.toggle('hide');
   });
@@ -61,7 +68,7 @@
 
   //MOSTRANDO EL TOTAL DE ALUMNAS INSCRITAS Y DESERTADAS
   lim20162.addEventListener('click', callSede);
-  function callSede() {
+  function callSede() { 
     var totalAlumn = lim20162.length;
     var numEnrollment = document.getElementById('numEnro');
     var desert = document.getElementById('desert');
@@ -97,7 +104,7 @@
         ['Desertoras', desertStudents],
       ]);
       var options = {'title': 'Total de Alumnas :' + totalAlumn,
-        'width': 300,
+        'width': 400,
         'height': 300};
       var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
       chart.draw(data, options);
