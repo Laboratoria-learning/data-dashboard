@@ -56,7 +56,7 @@ span:hover{
 }
 /*****************************/
 .enrollments,.achievement,.net  {
-  width: 300px;
+  width: 350px;
   height: 300px;
   background: rgb(230, 196, 196);
   display: inline-block;
@@ -65,9 +65,7 @@ span:hover{
 }
 
 .dates {
-  width: 120px;
-  height: 60px;
-   /* sacar height */
+  width: 120px;   
   background-color: white;
   display: inline-block;
   margin-left: 5%;
@@ -94,9 +92,7 @@ h3{
   margin-top: 2%;
 }
 .dates-student{
-  width: 120px;
-  height: 60px;
-   /* sacar height */
+  width: 120px; 
   background-color: white;
   display: inline-block;
   margin-left: 5%;
