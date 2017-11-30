@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Barlow', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -35,7 +35,15 @@ header {
 .box-nav2 {
   position: absolute;
   right: 50px;
-  top: 30px;
+  top: 15px;
+}
+
+.box-nav2 img {
+  width: 6em;
+  height: 6em;
+  border-radius: 50%;
+  padding: 0.1em;
+  border: 1px solid #f7b617;
 }
 
 .box-nav2 ul li {
@@ -53,31 +61,70 @@ header {
   color: #f7b617;
 }
 
-/*Main*/
-.box-filter {
-  background-color: #e1e1e1;
+.fa-bell-o:hover {
+  color: #f7b617;
 }
 
+/*Main*/
+.box-filter {
+  background-color: #4C4743;
+  color: #ffffff;
+  box-shadow: 0px 5px 4px #c4c4c4;
+}
+
+/* Estilos select filer */
 .select-filter {
  margin-left: 100px;
  padding: 30px 0;
 }
 
- #promo-filter {
-  font-size: 1.5em;
-  background-color: #e1e1e1;
-  border: none;
- }
+#promo-filter {
+font-size: 1.5em;
+background-color: #4C4743;
+border: 2px solid #f7b617;
+border-radius: 3px;
+color: #ffffff;
+font-weight: 300;
+font-size: 1.2em;
+padding: 0.25em;
+}
+
+#promo-filter:hover {
+ background-color: #f7b617;
+ color: #4C4743;
+ font-weight: 400;
+}
+
+#promo-filter:focus{
+ outline: none;
+}
+
+#promo-filter option {
+ background-color: #4C4743;
+ color: #ffffff;
+ font-weight: 300;
+}
+
+#promo-filter option:focus {
+  outline: none;
+}
+
 
 .tabs {
   margin-left: 100px;
   padding-bottom: 15px;
+  font-weight: 300;
 }
 
 .tabs li {
   display: inline-block;
   font-size: 1.3em;
-  font-weight: bold;
+  border-right: 2px solid #f7b617;
+  padding-right: 1em;
+}
+
+.tabs li:hover {
+  color: #f7b617;
 }
 
 .tabs li:nth-child(2) {
@@ -85,34 +132,63 @@ header {
 }
 
 /*Graphics section*/
+.container-graphics {
+  overflow: auto;
+}
+
 .big-graphic {
   background-color: #fff;
   height: 500px;
   margin: 60px auto;
   width: 1000px;
+  box-shadow: 4px 4px 4px #c4c4c4;
 }
 
 .big-graphic span {
   display: inline-block;
   font-size: 1.5em;
-  font-weight: bold;
+  font-weight: 600;
   padding: 20px;
+}
+
+.big-graphic .box1, .box2 {
+  background-color: #f7b617;
+  display: inline-block;
+  margin: 20px;
+  text-align: center;
+  vertical-align: top;
+  width: 180px;
+  height: 150px;
+  padding: 0.8em;
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px #aaa8a8;
 }
 
 .select-skills {
   border: none;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #f7b617;
   display: inline-block;
   font-size: 1.1em;
+  padding: 0.4em;
+  border-radius: 3px;
+  font-weight: 300;
+}
+
+.select-skills:hover {
+  background-color: #4C4743;
+  color: #ffffff;
 }
 
 .small-graphic {
   background-color: #fff;
-  display: inline-block;
-  height: 370px;
+  float: left;
+  height: 400px;
   margin: 60px auto;
   vertical-align: top;
-  width: 390px;
+  width: 32%;
+  box-shadow: 4px 4px 4px #c4c4c4;
+  margin-right: 1%;
+  overflow: auto;
 }
 
 .small-graphic span {
@@ -121,40 +197,62 @@ header {
   padding: 20px;
 }
 
-.box1, .box2, .box3 {
-  background-color: #f7f7f7;
-  display: inline-block;
-  height: 60px;
-  margin: 20px;
+.container-small-boxes {
+  padding: 1em;
+}
+.small-graphic-boxes {
+  background-color: #f7b617;
+  float: left;
   text-align: center;
   vertical-align: top;
-  width: 150px;
+  width: 40%;
+  height: 150px;
+  padding: 0.8em;
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px #aaa8a8;
+  margin-right: 1em;
 }
 
-.box1 p:first-child {
-  font-size: 1.5em;
-  font-weight: bold;
-  height: 30px;;
+.textDate {
+  font-size: 3.4em;
+  font-weight: 300;
+  border-bottom: 1px solid #ffff;
+  width: 2.7em;
+  height: 1.2em;
 }
 
-.box1 p:last-child {
-  font-size: 0.7em;
-  height: 30px;;
+/*.box1 p:last-child {
+  font-size: 1em;
+  padding-top: 1em;
 }
 
 .box2 p:first-child {
-  font-size: 1.5em;
-  font-weight: bold;
-  height: 30px;;
+  font-size: 1em;
+  padding-top: 1em;
+}
+
+.box2 {
+  background-color: #ED6C44;
 }
 
 .box2 p:last-child {
   font-size: 0.7em;
   height: 30px;;
+}*/
+
+/*.box3 p {
+  font-size: 1em;
+}*/
+
+.texTbox {
+  font-size: .8em;
+  padding-top: 1em;
 }
 
-.box3 p {
-  font-size: 1em;
+.number-boxes {
+  font-size: 3.5em;
+  font-weight: 300;
+  border-bottom: 1px solid #ffffff;
 }
 
 /*Menu section*/
@@ -165,13 +263,54 @@ header {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
   overflow-x: hidden;
   padding-top: 60px;
   transition: 0.5s;
-  background-color: #2b2b2b;
+  background-color: rgba(43, 43, 43, 0.98);
   color: #fff;
 }
+
+.menu .user {
+  padding-left: 1em;
+}
+
+.user .welcome {
+  font-weight: 300;
+  font-size: 1em;
+  padding: 0.5em 0 0.5em 0;
+}
+
+.menu .user hr {
+  width: 70%;
+  border: 0.7px solid #f7b617;
+}
+
+.menu figure {
+  display: inline-block;
+  margin-top: 1.5em;
+  margin-bottom:1.5em;
+}
+
+.menu img {
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  padding: 0.1em;
+  border: 1px solid #f7b617;
+  display: inline-block;
+}
+
+#user-information {
+  vertical-align: top;
+  font-size: 0.8em;
+  line-height: 2em;
+}
+
+#user-information p:last-child {
+  color: #f7b617;
+}
+
+
 
 .closebtn {
   position: absolute;
@@ -198,8 +337,8 @@ header {
 
 .setting {
   padding: 20px;
-  border-bottom: 1px solid #fff;
-  border-top: 1px solid #fff;
+  border-bottom: 0.3px solid #fff;
+  border-top: 0.3px solid #fff;
 }
 
 .setting a {
@@ -207,8 +346,8 @@ header {
   color: #fff;
 }
 
-.setting a:hover {
-  color: #f7b617;
+.setting:hover {
+  background-color: #f7b617;
 }
 
 /*---------> Gaby agrega clases <---------*/
@@ -222,10 +361,10 @@ header {
 
 /*---------> clases para seccion students <---------*/
 .container-students {
-  background: white;
+  background: #f5eded;
   width: 90%;
   margin: 0 auto;
-  outline: 1px solid red;
+  /*outline: 1px solid red;*/
   overflow: auto;
   padding: 1em;
 }
@@ -233,9 +372,17 @@ header {
 .specialization {
   float: left;
   vertical-align: top;
-  background-color: lightgray;
+  background-color: #ffffff;
   width: 30%;
   padding: 1em;
+  box-shadow: 2px 2px 2px #aaa8a8;
+}
+
+.specialization h4 {
+  font-weight: 700;
+  margin-bottom: 1em;
+  font-size: 1.2em;
+  color: #4C4743;
 }
 
 .student-hide {
@@ -254,20 +401,44 @@ header {
   vertical-align: top;
   width: 35%;
   text-align: center;
+  font-weight: 700;
+  font-size: 1.2em;
+  color: #4C4743;
 }
 
 .profile-student {
   margin-bottom: 2em;
-  background-color: #b1b0ab;
+  background-color: #ffffff;
   padding: 1em;
   overflow: auto;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px #aaa8a8;
 }
 
 .box-tech {
-  background-color: #ec9513;
-  display: inline-block;
+  background-color: #FFB230;
+  float: left;
   vertical-align: top;
-  height: 4em;
-  width: 20%;
-  padding-right: 0.5em;
+  height: 5em;
+  margin-right: 2%;
+  width: 19%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 1px 2px 1px #949292;
+}
+
+.box-life {
+  background-color: #ED6C44;
+  float: left;
+  vertical-align: top;
+  height: 5em;
+  width: 19%;
+  border-radius: 4px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 1px 2px 1px #949292;
 }

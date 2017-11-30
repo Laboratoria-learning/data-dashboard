@@ -5,6 +5,7 @@
     <title>Data Dashboard</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,500,700" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -18,9 +19,7 @@
         </ul>
       </nav>
       <nav class="box-nav2">
-        <ul>
-          <li><i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
-        </ul>
+        <img src="assets/images/ale.png" alt="ale">
       </nav>
     </header>
     <main>
@@ -57,7 +56,7 @@
       </section>
       <section class="container-graphics" id="section-overview">
         <!-- TECH SKILLS -->
-        <div class="big-graphic">
+        <div class="big-graphic tech-skills">
           <div>
             <span>TECH SKILLS</span>
             <select name="overall" id="overall-tech" class="select-skills">
@@ -70,14 +69,14 @@
               </optgroup>
             </select>
           </div>
-          <div>
+          <div class="boxes-big-graphics">
             <div class="box1">
-              <p id="students-tech"></p>
-              <p># STUDENTS THAT MEET THE TARGET</p>
+              <p id="students-tech" class="textDate">90</p>
+              <p class="texTbox"># STUDENTS THAT MEET THE TARGET</p>
             </div>
             <div class="box2">
-              <p id="percent-tech"></p>
-              <p>% OF TOTAL</p>
+              <p id="percent-tech" class="textDate"></p>
+              <p class="texTbox">% OF TOTAL</p>
             </div>
           </div>
           <div class="graphic"></div>
@@ -96,14 +95,14 @@
               </optgroup>
             </select>
           </div>
-          <div>
+          <div class="boxes-big-graphics">
             <div class="box1">
-              <p id="overall-life"></p>
-              <p># OVERALL CLASS AVERAGE</p>
+              <p id="overall-life" class="textDate"></p>
+              <p class="texTbox"># OVERALL CLASS AVERAGE</p>
             </div>
             <div class="box2">
-              <p></p>
-              <p># OF STUDENTS THAT MEET THE TARGET</p>
+              <p class="textDate"></p>
+              <p class="texTbox"># OF STUDENTS THAT MEET THE TARGET</p>
             </div>
           </div>
           <div class="graphic"></div>
@@ -111,13 +110,13 @@
         <!-- ENROLLMENT -->
         <div class="small-graphic">
           <span>ENROLLMENT</span>
-          <div>
-            <div class="box1">
-              <P id="box-enrollment"></P>
-              <P># STUDENTS CURRENTLY ENROLLED</P>
+          <div class="container-small-boxes">
+            <div class="small-graphic-boxes">
+              <P id="box-enrollment" class="textDate"></P>
+              <P class="texTbox"># STUDENTS CURRENTLY ENROLLED</P>
             </div>
-            <div class="box2">
-              <P id="dropout-percent"></P>
+            <div class="small-graphic-boxes">
+              <P id="dropout-percent" class="textDate"></P>
               <P>% DROPOUT</P>
             </div>
           </div>
@@ -126,14 +125,14 @@
         <!-- ACHIEVEMENT -->
         <div class="small-graphic">
           <span>ACHIEVEMENT</span>
-          <div>
-            <div class="box1">
-              <p id="box-achievement"></p>
+          <div class="container-small-boxes">
+            <div class="small-graphic-boxes">
+              <p id="box-achievement" class="textDate"></p>
               <p># STUDENTS THAT MEET THE TARGET</p>
             </div>
-            <div class="box2">
-              <P id="percent-achievement"></P>
-              <P id="total-achievement">% OF TOTAL ()</P>
+            <div class="small-graphic-boxes">
+              <P id="percent-achievement" class="textDate"></P>
+              <P id="total-achievement" class="texTbox">% OF TOTAL ()</P>
             </div>
           </div>
           <div class="graphic"></div>
@@ -141,12 +140,12 @@
         <!-- NET PROMOTER SCORE -->
         <div class="small-graphic">
           <span>NET PROMOTER SCORE (NPS)</span>
-          <div>
-            <div class="box1">
-              <p id="cumulative-nps"></p>
-              <p>% CUMULATIVE NPS</p>
+          <div class="container-small-boxes">
+            <div class="small-graphic-boxes">
+              <p id="cumulative-nps" class="textDate"></p>
+              <p class="texTbox">% CUMULATIVE NPS</p>
             </div>
-            <div class="box3">
+            <div class="small-graphic-boxes">
               <p id="promoters"></p>
               <p id="passive"></p>
               <p id="detractor"></p>
@@ -157,27 +156,33 @@
         <!-- STUDENT SATISFACTION -->
         <div class="small-graphic">
           <span>STUDENT SATISFACTION</span>
-          <div class="box1">
-            <p id="student-satisf"></p>
-            <p>% MEETING OR EXCEEDING EXPETATIONS (CUMULATIVE)</p>
+          <div class="container-small-boxes">
+            <div class="small-graphic-boxes">
+              <p id="student-satisf" class="textDate"></p>
+              <p class="texTbox">% MEETING OR EXCEEDING EXPETATIONS (CUMULATIVE)</p>
+            </div>
           </div>
           <div class="graphic"></div>
         </div>
         <!-- TEACHER RATING -->
         <div class="small-graphic">
           <span>TEACHER RATING</span>
-          <div class="box1">
-            <P id="teacher-rating"></P>
-            <P>OVERALL TEACHER RATING (CUMULATIVE)</P>
+          <div class="container-small-boxes">
+            <div class="small-graphic-boxes">
+              <P id="teacher-rating" class="textDate"></P>
+              <P class="texTbox">OVERALL TEACHER RATING (CUMULATIVE)</P>
+            </div>
           </div>
           <div class="graphic"></div>
         </div>
         <!-- JEDI MASTER RATING -->
         <div class="small-graphic">
           <span>JEDI MASTER RATING</span>
-          <div class="box1">
-            <P id="jedi-rating"></P>
-            <P>OVERALL JEDI RATING (CUMULATIVE)</P>
+          <div class="container-small-boxes">
+            <div class="small-graphic-boxes">
+              <P id="jedi-rating" class="textDate"></P>
+              <P class="texTbox">OVERALL JEDI RATING (CUMULATIVE)</P>
+            </div>
           </div>
           <div class="graphic"></div>
         </div>
@@ -185,12 +190,15 @@
       <!--Inicio de Menu que aparece y desaparece-->
       <section class="menu" id="animated-menu">
         <div class="user">
-            <a href="javascript:void(0)" class="closebtn" id="close-animated-menu">&times;</a>
-          <div><i class="fa fa-user-circle-o fa-4x" aria-hidden="true"></i></div>
-          <div>
-            <p>Nombre</p>
-            <p>Puesto que ocupa</p>
+          <hr>
+          <p class="welcome">Welcome Alejandra</p>
+          <hr>
+          <a href="javascript:void(0)" class="closebtn" id="close-animated-menu">&times;</a>
+          <figure><img src="assets/images/ale.png" alt="ale"></figure>
+          <div id="user-information">
+            <p>Trainer manager</p>
             <p>Último acceso</p>
+            <p>Viernes 30 Nov. 2017</p>
           </div>
         </div>
         <div class="setting"><a href="#">Configuración</a></div>
