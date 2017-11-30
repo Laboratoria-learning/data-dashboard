@@ -1,59 +1,87 @@
+*{
 
-<<<<<<< HEAD
-header{
+  margin:0;
+}
+ header{
+   height: 100px;
+   width: 90%;
+ }
+ img{
+   width: 20%;
+   margin: auto;
+   display: block;
+ }
+.bars{
+float: right;
+font-size: 40px;
+/*outline: 1px solid red;*/
+position: relative;
+top:-80px;
 
+ }
+ul{
+  list-style: none;
 }
 
-header img{
-  width: 20%;
+.disabled-menu{
+display: none;
 }
 
-.selectors{
-  background-color: #e1e1e1;
-  height: 70px;
+
+.enabled-menu{
+display: block;
 }
 
-#selection{
+.section-gray{
+/*outline:1px solid red;*/
+height: 80px;
+background-color: #e2e4e6;
+}
+.selections{
   border: none;
+  background-color: #e2e4e6;
   margin-left: 100px;
   margin-top: 10px;
-  height: 30px;
-  width: 160px;
+  font-size: 20px;
+}
+.container-subtitle{
+  overflow: auto;
+  margin-left: 80px;
+  margin-top: 20px;
+}
+.subtitle{
+  float: left;
+  margin-left: 20px;
+}
+.results{
+  background-color: #f7f7f7;
+  /*outline:1px solid red;*/
+  height: 900px;
+}
+.container{
+margin-left: 80px;
+}
+.container .box{
+  outline:1px solid red;
+  height: 300px;
+  width: 300px;
+  background-color: #ffffff;
+  float: left;
+  margin-left: 30px;
+  margin-top: 30px;
 }
 
-=======
->>>>>>> seccion2
-/*
- * Estilos de tu proyecto
- */
-
-* {
-    margin: 0;
-    padding: 0;
+#total-students{
+  height: 70px;
+  width: 120px;
+  background-color: #e2e4e6;
 }
 
-#section2 {
-    display: inline-block;
-    background-color: rgb(203, 203, 238);
-    width: 100%;
-    height: 200px;
-}
-
-.active {
-    position: absolute;
-    left: 5%;
-    display: inline-block;
-    width: 100px;
-    height: 100px;   
-}
-.sprint{
- position: absolute;
- left: 25%;
- display: inline-block;
- width: 100%;
- height: 100px; 
-}
-.grafic{
-width: 300px;
-height: auto;
+/*estilo a las cajas de la seccion nps*/
+.total-nps, .seccion-nps {
+  height: 70px;
+  width: 120px;
+  background-color: #e2e4e6;
+  float: left;
+  margin-left: 20px;
 }

@@ -1,185 +1,59 @@
-<<<<<<< HEAD
-
 window.addEventListener('load', function() {
+  /* funcion para mostrar las alumas por sede-generacion*/
   var selection = document.getElementById('selection');
-  var container = document.getElementById('container');
-  selection.addEventListener('change', showsGeneration);
-  var sedeArequipa = data.AQP;
-  var count = 0;
+  var containerStudents = document.getElementById('total-students');
+  var totalNps = document.getElementById('total-nps');
+  selection.addEventListener('change', showGenerations);
+  function showGenerations(event) {
+    /* seleccionando cada option de lista despegable*/
+    var options = selection.value;
+    /* se convierte a un array para obtener la data de sede y generaciones*/
+    var array = options.split('-');/* [lima,2017,2]*/
+    console.log(array);
+    /* obteniendo la generacion*/
+    var array1 = array.splice(1, 2);
+    console.log(array1);
+    /* uniendo los dos elementos de la generacion*/
+    var generation = array1[0] + '-' + array1[1];
+    /* obteniendo la sede*/
+    var site = array.splice(0, 1);
+    console.log(site);
+    /* obteniendo datos por sede-generacion*/
+    var siteGeneration = data[site][generation];
+    console.log(siteGeneration);
+    /* analizando el total de estudiantes*/
+    var totalStudents = siteGeneration.students.length;
+    containerStudents.innerHTML = '# de studiantes inscritos' + '</br>' + totalStudents;
+    /* analizando el NPS*/
+    var result = 0;
+    /* recorriendo el elemento ratings para obtner el nps*/
+    for (i = 0; i < siteGeneration.ratings.length;i++) {
+      var promoters = siteGeneration.ratings[i].nps.promoters;
+      var passive = siteGeneration.ratings[i].nps.passive;
+      var detractors = siteGeneration.ratings[i].nps.detractors;
+      result = result + (promoters - detractors);
+      /* console.log(result)*/
+      var percentage = ((result / siteGeneration.ratings.length) * 100) / 100 ;
+      /* considerando solo dos decimales */
+      percentage.toFixed(2) + ' % ';
+      /* console.log(percentage);*/
+    }
+    /* incorporando el porcentaje del nps*/
+    totalNps.innerHTML = '% NPS' + '<br>' + percentage ;
+    /* analizando el */
+  }
 
-  function showsGeneration(event) {
-    /* sede arequipa*/
-    if (selection.value === 'AQP-2016-2') {
-      var generationAqp1 = data.AQP['2016-2']['students'];
-      for (var i = 0; i < generationAqp1.length; i++) {
-        if (generationAqp1[i].active === true) {
-          count++;
-          container.innerHTML = count;
-        }
-      }
-    }
-    if (selection.value === 'AQP-2017-1') {
-      var generationAqp2 = data.AQP['2017-1']['students'];
-      for (var i = 0; i < generationAqp2.length; i++) {
-        if (generationAqp2[i].active === true) {
-          count++;
-          container.innerHTML = count;
-        }
-      }
-    }
-    /* por cada generacion de mexico*/
-    if (selection.value === 'CDMX-2017-1') {
-      var generationCdmx1 = data.CDMX['2017-1']['students'];
-      for (var i = 0; i < generationCdmx1.length; i++) {
-        if (generationCdmx1[i].active === true) {
-          count++;
-          container.innerHTML = count;
-        }
-      }
-    }
-    if (selection.value === 'CDMX-2017-2') {
-      var generationCdmx2 = data.CDMX['2017-2']['students'];
-      for (var i = 0; i < generationCdmx2.length; i++) {
-        if (generationCdmx2[i].active === true) {
-          count++;
-          container.innerHTML = count;
-        }
-      }
-    }
-    if (selection.value === 'LIM-2016-2') {
-      var generationLim1 = data.LIM['2016-2']['students'];
-      for (var i = 0; i < generationLim1.length; i++) {
-        if (generationLim1[i].active === true) {
-          count++;
-          container.innerHTML = count;
-        }
-      }
-    }
-    if (selection.value === 'LIM-2017-1') {
-      var generationLim2 = data.LIM['2017-1']['students'];
-      for (var i = 0; i < generationLim2.length; i++) {
-        if (generationLim2[i].active === true) {
-          count++;
-          container.innerHTML = count;
-        }
-      }
+  /* menu derecho*/
+  var bars = document.getElementById('bars');
+  bars.addEventListener('click', showMenu);
+  function showMenu(event) {
+    var options = document.getElementById('options-menu');
+    if (options.classList.contains('disabled-menu')) {
+      options.classList.remove('disabled-menu');
+      options.classList.add('enabled-menu');
+    } else {
+      options.classList.remove('enabled-menu');
+      options.classList.add('disabled-menu');
     }
   }
- });
-=======
-window.addEventListener('load', function () {
-    var cont = document.getElementById('container');
-    var contStudents = document.getElementById('students');
-    var count = 0;
-
-    var active1 = data.AQP["2016-2"]["students"];
-    for (var i = 0; i < active1.length; i++) {
-        if (active1[i].active === false) {
-            count++;
-        }
-    };
-    var active2 = data.AQP["2017-1"]["students"];
-    for (var i = 0; i < active2.length; i++) {
-        if (active2[i].active === false) {
-            count++;
-        }
-    };
-    var active3 = data.CDMX["2017-1"]["students"];
-    for (var i = 0; i < active3.length; i++) {
-        if (active3[i].active === false) {
-            count++;
-        }
-    };
-    var active4 = data.CDMX["2017-1"]["students"];
-    for (var i = 0; i < active4.length; i++) {
-        if (active4[i].active === false) {
-            count++;
-        }
-    };
-    var active5 = data.LIM["2016-2"]["students"];
-    for (var i = 0; i < active5.length; i++) {
-        if (active5[i].active === false) {
-            count++;
-        }
-    };
-    var active6 = data.LIM["2017-1"]["students"];
-    for (var i = 0; i < active6.length; i++) {
-        if (active6[i].active === false) {
-            count++;
-        }
-    };
-    var active7 = data.LIM["2017-2"]["students"];
-    for (var i = 0; i < active7.length; i++) {
-        if (active7[i].active === false) {
-            count++;
-        }
-    };
-    var active8 = data.SCL["2016-2"]["students"];
-    for (var i = 0; i < active8.length; i++) {
-        if (active8[i].active === false) {
-            count++;
-        }
-    };
-    var active9 = data.SCL["2017-1"]["students"];
-    for (var i = 0; i < active9.length; i++) {
-        if (active9[i].active === false) {
-            count++;
-        }
-    };
-    var active10 = data.SCL["2017-2"]["students"];
-    for (var i = 0; i < active10.length; i++) {
-        if (active10[i].active === false) {
-            count++;
-                    }
-    };
-    var aqp2016 = data.AQP["2016-2"].students.length; 
-    var aqp2017 = data.AQP["2017-1"].students.length;
-    var cdmx20171 = data.CDMX["2017-1"].students.length;
-    var cdmx20172 = data.CDMX["2017-2"].students.length;
-    var lim20162 = data.LIM["2016-2"].students.length;
-    var lim20171 = data.LIM["2017-1"].students.length;
-    var lim20172 = data.LIM["2017-2"].students.length;
-    var scl20162 = data.SCL["2016-2"].students.length;
-    var scl20171 = data.SCL["2017-1"].students.length;
-    var scl20172 = data.SCL["2017-2"].students.length;
-    var contStudentsRet = document.createElement('div');
-    contStudentsRet.classList = 'active';
-    var txtdates = document.createElement('H3');
-    txtdates.textContent = 'Desercion Total';
-    var dates = document.createElement('H1');
-    dates.textContent = ((count * 100) / (aqp2016 + aqp2017 + cdmx20171 + cdmx20172 + lim20162 + lim20171 + lim20172 + scl20162 + scl20171 + scl20172)).toFixed(2) + '% ';
-    contStudentsRet.appendChild(txtdates);
-    contStudentsRet.appendChild(dates);
-    cont.appendChild(contStudentsRet);
-
-
-//3er filtro
-
- //   var actual = data.AQP["2016-2"]["students"];  
-   
-    for (var i = 0; i < active1.length; i++) {
-        for (var j = 0; j < active1[i]['sprints'].length; j++) {
-            var sprintNote = active1[i]['sprints'][j]['score']['tech'] + active1[i]['sprints'][j]['score']['hse'];
-            //console.log(notas);
-            countSprints=0;
-            if (sprintNote >= 2330) {
-                countSprints++;
-                var notesprom = sprintNote;
-                var name = active1[i]['name'];
-                var sprint = active1[i]['sprints'][j]['number'];
-                console.log(notesprom + name + sprint);
-                //creando variables
-
-                var contFilter3 = document.createElement('div');
-                contFilter3.classList = 'sprint';
-                var sectionFilter3 = document.createElement('section');
-                var optionFilter3 = document.createElement('textarea');
-                optionFilter3.textContent= name + sprint;
-                contFilter3.appendChild(optionFilter3);
-                cont.appendChild(contFilter3);
-
-            }           
-        }  
-    };
 });
->>>>>>> seccion2
