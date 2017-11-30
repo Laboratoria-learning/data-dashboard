@@ -150,7 +150,13 @@ section {
   margin-top: 10px;
 }
 
+.chartGrafic1{
+  position: relative;
+  right: 300px;
+  z-index: -10;
+}
+
 .show{
   position: absolute;
-  z-index: +1;
+  z-index: +100;
 }
