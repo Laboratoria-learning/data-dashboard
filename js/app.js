@@ -1664,6 +1664,38 @@ listSedes.addEventListener('click', function(event) {
     scoreJedi.textContent = scoreJediLim20162;
     event.preventDefault();
   });
+    lima20172.addEventListener('click', function(event) {
+    title.innerHTML = 'LIMA 2017 II';
+    listCity.classList.add('hide');
+    var totalStudents = document.getElementById('totalStudents');
+    totalStudents.textContent = totalstudentsLim20172;
+    var detractors = document.getElementById('detractors');
+    detractors.textContent = detractorsLim20172 + '%';
+    detractors.classList.add('fontStrong');
+    var stuContar = document.getElementById('stuContar');
+    stuContar.textContent = stuContarLim20172;
+    var prctstuContar = document.getElementById('prctstuContar');
+    prctstuContar.textContent = prctstuContarLim20172 + '%';
+    prctstuContar.classList.add('fontStrong');
+    var totalStd = document.getElementById('totalStd');
+    totalStd.textContent = totalstudentsLim20172;
+    var npstotal = document.getElementById('npstotal');
+    npstotal.textContent = npstotalLim20172 + '%';
+    npstotal.classList.add('fontStrong');
+    var npsTotalPromoters = document.getElementById('npsTotalPromoters');
+    npsTotalPromoters.textContent = npsTotalPromotersLim20172 + ' % Promoters';
+    var npsTotalPasive = document.getElementById('npsTotalPasive');
+    npsTotalPasive.textContent = npsTotalPasiveLim20172 + ' % Pasive';
+    var npsTotalDetractors = document.getElementById('npsTotalDetractors');
+    npsTotalDetractors.textContent = npsTotalDetractorsLim20172 + ' % Detractors';
+    var totalSatisfation = document.getElementById('totalSatisfation');
+    totalSatisfation.textContent = totalSatisfationLim20172;
+    var scoreTeacher = document.getElementById('scoreTeacher');
+    scoreTeacher.textContent = scoreTeacherLim20172;
+    var scoreJedi = document.getElementById('scoreJedi');
+    scoreJedi.textContent = scoreJediLim20172;
+    event.preventDefault();
+  });
 });
 /* evento para la section students*/
 window.addEventListener('load', function() {
