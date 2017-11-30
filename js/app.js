@@ -2,15 +2,11 @@
 window.addEventListener('load', function() {
   var overview = document.getElementById('general');
   // agregando sedes
-  var sedeSelect = document.getElementById('location');
-  var sede = 'LIM';
-  function sedeS() {
-    sedeSelect.addEventListener('change', function(){
-      sede = event.target.value;
-      console.log(sede);
-    });
-  }
- sedeS();
+  /* var sede;
+  var gene;
+  gene.addEventListener('change', function() {
+    
+  });*/
   // enrollment
   var enrollment = document.createElement('div');
   var enrollOne = document.createElement('div');
@@ -19,12 +15,12 @@ window.addEventListener('load', function() {
   var allStudents = document.createElement('h2');
   // agrega la cantidad de estudiantes activos por sede y generacion
   // pero falta jalarlo de manera mas generica
-  allStudents.innerText = currentStudents(sede, '2016-2');
+  allStudents.innerText = currentStudents('LIM', '2016-2');
   var textAS = document.createElement('span');
   textAS.innerText = '# STUDENTS CURRENTLY ENROLLED';
   var enrollTwo = document.createElement('div');
   var dropout = document.createElement('h2');
-  dropout.innerText = dropoutAll(sede, '2016-2');
+  dropout.innerText = dropoutAll('LIM', '2016-2');
   var textDrop = document.createElement('span');
   textDrop.innerText = '% DROPOUT';
   // agregando al enrollment
@@ -250,55 +246,55 @@ window.addEventListener('load', function() {
       var total = ratigns[i].nps.promoters + ratigns[i].nps.passive + ratigns[i].nps.detractors;
       var promoters = ((ratigns[i].nps.promoters) / total) * 100;
       array.push(promoters);
- }
-      var allPromoter = 0;
-      for (var p = 0; p < array.length; p++) {
-        allPromoter += array[p];
-      }
-       var totalPromoter = allPromoter / ratigns.length;
-       return totalPromoter + ' % Promoter';
     }
-    // funcion para los pasives
-    function passivePercent(sede, gene){
-      var sede = data[sede];
-      var generation = sede[gene];
-      var ratigns = generation.ratings;
-      var cants = ratigns.length;
-      var array = [];
-      for (var i = 0; i < cants; i++) {
-        var total = ratigns[i].nps.promoters + ratigns[i].nps.passive + ratigns[i].nps.detractors;
-        var passive = ((ratigns[i].nps.passive) / total) * 100;
-        array.push(passive);
-   }
-        var allPassive = 0;
-        for (var p = 0; p < array.length; p++) {
-          allPassive += array[p];
-        }
-         var totalPassive = allPassive / ratigns.length;
-         return totalPassive + ' % Passive';
+    var allPromoter = 0;
+    for (var p = 0; p < array.length; p++) {
+      allPromoter += array[p];
     }
-    // funcion para los detractors
-    function detractorPercent(sede, gene){
-      var sede = data[sede];
-      var generation = sede[gene];
-      var ratigns = generation.ratings;
-      var cants = ratigns.length;
-      var array = [];
-      for (var i = 0; i < cants; i++) {
-        var total = ratigns[i].nps.promoters + ratigns[i].nps.passive + ratigns[i].nps.detractors;
-        var detractor = ((ratigns[i].nps.detractors) / total) * 100;
-        array.push(detractor);
-   }
-        var allDetractor = 0;
-        for (var p = 0; p < array.length; p++) {
-          allDetractor += array[p];
-        }
-         var totalDetractor = allDetractor / ratigns.length;
-         return totalDetractor + ' % Detractor';
+    var totalPromoter = allPromoter / ratigns.length;
+    return totalPromoter + ' % Promoter';
+  }
+  // funcion para los pasives
+  function passivePercent(sede, gene) {
+    var sede = data[sede];
+    var generation = sede[gene];
+    var ratigns = generation.ratings;
+    var cants = ratigns.length;
+    var array = [];
+    for (var i = 0; i < cants; i++) {
+      var total = ratigns[i].nps.promoters + ratigns[i].nps.passive + ratigns[i].nps.detractors;
+      var passive = ((ratigns[i].nps.passive) / total) * 100;
+      array.push(passive);
     }
+    var allPassive = 0;
+    for (var p = 0; p < array.length; p++) {
+      allPassive += array[p];
+    }
+    var totalPassive = allPassive / ratigns.length;
+    return totalPassive + ' % Passive';
+  }
+  // funcion para los detractors
+  function detractorPercent(sede, gene) {
+    var sede = data[sede];
+    var generation = sede[gene];
+    var ratigns = generation.ratings;
+    var cants = ratigns.length;
+    var array = [];
+    for (var i = 0; i < cants; i++) {
+      var total = ratigns[i].nps.promoters + ratigns[i].nps.passive + ratigns[i].nps.detractors;
+      var detractor = ((ratigns[i].nps.detractors) / total) * 100;
+      array.push(detractor);
+    }
+    var allDetractor = 0;
+    for (var p = 0; p < array.length; p++) {
+      allDetractor += array[p];
+    }
+    var totalDetractor = allDetractor / ratigns.length;
+    return totalDetractor + ' % Detractor';
+  }
 
-    // al seleccionar uno de las opciones por sprint para TECH
-    /*
+  // al seleccionar uno de las opciones por sprint para TECH
+  /*
     function techStudent(sede, gene){
       var sede = data[sede];
       var generation = sede[gene];
