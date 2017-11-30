@@ -1,14 +1,225 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Dashboard</title>
-  </head>
-  <body>
 
-		<!-- Base de datos -->
-		<script src="./js/data.js"></script>
-		<!-- Aquí va tus archivos JS -->
-    <script src="./js/app.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Data Dashboard</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" href="assets/images/letter.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <img class="img1" src="assets/images/logo-laboratoria.svg" alt="laboratoria">
+      <!-- <ul>
+        <li>
+          <i class="icon fa fa-bars" aria-hidden="true"></i>
+        </li>
+      </ul> -->
+    </nav>
+  </header>
+  <section class="firstSection">
+    <div>
+      <div>
+        <h1 class="inline"> Elige una Sede </h1>
+      </div>
+      <div class="styleBox">
+        <select name="sede">
+          <option value="Arequipa">Arequipa</option>
+          <option value="lima">Lima</option>
+          <option value="Santiago">Santiago</option>
+          <option value="Ciudad">Ciudad de México</option>
+        </select>
+        <select name="promocion">
+          <option value="20172">2017 - II</option>
+          <option value="20171">2017 - I</option>
+          <option value="20162">2016 - II</option>
+          <option value="20161">2016 - I</option>
+        </select>
+      </div>
+    </div>
+    <div class="options">
+      <h5 class="inline optionsStyle">OVERVIEW</h5>
+      <h5 class="inline optionsStyle">STUDENTS</h5>
+      <h5 class="inline optionsStyle">TEACHERS</h5>
+    </div>
+  </section>
+  <section>
+    <div>
+      <div class="firstBox">
+        <div class="firstTitles">
+          <h3>ENROLLMENT</h3>
+          <div class="text">
+            <h4>120</h4>
+            <h6 class="sizeLetter">#STUDENTS CURRENTLY
+              <br>ENROLLED</h6>
+          </div>
+          <div class="text2">
+            <h4 class="red">20%</h4>
+            <h6 class="sizeLetter">%DROPOUT</h6>
+          </div>
+        </div>
+        <img class="img2" src="assets/images/bar-graph.png" alt="">
+      </div>
+      <div class="secondBox">
+        <div class="firstTitles">
+          <h3>ACHIEVEMENT</h3>
+          <div class="text">
+            <h4>105</h4>
+            <h6 class="sizeLetter">#STUDENTS THAT MEET
+              <br>THE TARGET</h6>
+          </div>
+          <div class="text2">
+            <h4 class="green">78%
+              <i class="fa fa-sort-asc" aria-hidden="true"></i>
+            </h4>
+            <h6 class="sizeLetter">% OF TOTAL(135)</h6>
+          </div>
+        </div>
+        <img class="img2" src="assets/images/graph.png" alt="">
+      </div>
+      <div class="thirdBox">
+        <div class="firstTitles">
+          <h3>NET PROMETER SCORE</h3>
+          <div class="text">
+            <h4 class="green">78%
+              <i class="fa fa-sort-asc" aria-hidden="true"></i>
+            </h4>
+            <h6 class="sizeLetter">% CUMULATIVE NPS</h6>
+          </div>
+          <div class="text2">
+            <h4 class="altura sizeLetter">
+              60% Promoters
+              <br> 30% Passive
+              <br> 10% Detractors
+            </h4>
+          </div>
+        </div>
+        <img class="img2" src="assets/images/graph2.png" alt="">
+      </div>
+    </div>
+  </section>
+  <section>
+    <h3 class="space">TECH SKILLS</h3>
+    <div class="styleBox2">
+      <select name="curses">
+        <option value="common core">Common Core</option>
+        <option value="sprint">Sprint 1:Create interative</option>
+        <option value="sprint">Sprint 2:Create interative</option>
+        <option value="sprint">Sprint 3:Create interative</option>
+        <option value="sprint">Sprint 4:Create interative</option>
+      </select>
+      <select name="curses">
+        <option value="common core">Java Script</option>
+        <option value="sprint">Sprint 1:Create interative</option>
+        <option value="sprint">Sprint 2:Create interative</option>
+        <option value="sprint">Sprint 3:Create interative</option>
+        <option value="sprint">Sprint 4:Create interative</option>
+      </select>
+      <select name="curses">
+        <option value="common core">UX Design</option>
+        <option value="sprint">Sprint 1:Create interative</option>
+        <option value="sprint">Sprint 2:Create interative</option>
+        <option value="sprint">Sprint 3:Create interative</option>
+        <option value="sprint">Sprint 4:Create interative</option>
+      </select>
+    </div>
+  </section>
+  <section>
+    <div>
+      <div class="text3 firstTitles minBoxes">
+        <h4>120</h4>
+        <h6 class="sizeLetter">#STUDENTS CURRENTLY
+          <br>ENROLLED</h6>
+      </div>
+      <div class="text4  firstTitles minBoxes">
+        <h4 class="green">78%
+          <i class="fa fa-sort-asc" aria-hidden="true"></i>
+        </h4>
+        <h6 class="sizeLetter">% CUMULATIVE NPS</h6>
+      </div>
+    </div>
+    <div>
+      <figure class="barras model1">
+        <img src="assets/images/rectangular-graphic.png" alt="">
+      </figure>
+      <figure class="circle model2">
+        <img src="assets/images/circle-graphic.png" alt="">
+        <h5>#STUDENTS THAT MEET THE TARGET</h5>
+        <h5>#STUDENTS THAT DONT MEET THE TARGET</h5>
+      </figure>
+    </div>
+  </section>
+  <section>
+    <div>
+      <div class="text3 firstTitles minBoxes">
+        <h4>120</h4>
+        <h6 class="sizeLetter">#STUDENTS CURRENTLY
+          <br>ENROLLED</h6>
+      </div>
+      <div class="text4  firstTitles minBoxes">
+        <h4 class="green">78%
+          <i class="fa fa-sort-asc" aria-hidden="true"></i>
+        </h4>
+        <h6 class="sizeLetter">% CUMULATIVE NPS</h6>
+      </div>
+    </div>
+    <div>
+      <figure class="barras model1">
+        <img src="assets/images/rectangular-graphic.png" alt="">
+      </figure>
+      <figure class="circle model2">
+        <img src="assets/images/circle-graphic.png" alt="">
+        <h5>#STUDENTS THAT MEET THE TARGET</h5>
+        <h5>#STUDENTS THAT DONT MEET THE TARGET</h5>
+      </figure>
+    </div>
+  </section>
+  <section>
+    <div>
+      <div class="firstBox">
+        <div class="firstTitles">
+          <h3>STUDENT SATISFACTION</h3>
+          <div class="text">
+            <h4>140</h4>
+            <h6 class="sizeLetter">#STUDENTS CURRENTLY
+              <br>ENROLLED</h6>
+          </div>
+        </div>
+        <img class="img2" src="assets/images/graph.png" alt="">
+      </div>
+      <div class="secondBox">
+        <div class="firstTitles">
+          <h3>TEACHER RATING</h3>
+          <div class="text">
+            <h4>4.2</h4>
+            <h6 class="sizeLetter">OVERALL TEACHER RATING
+              <br>(CUMULATIVE)</h6>
+          </div>
+        </div>
+        <img class="img2" src="assets/images/graph.png" alt="">
+      </div>
+      <div class="thirdBox">
+        <div class="firstTitles">
+          <h3>JEDI MASTER RATING</h3>
+          <div class="text">
+            <h4 class="green">50
+              <i class="fa fa-sort-asc" aria-hidden="true"></i>
+            </h4>
+            <h6 class="sizeLetter">OVERALL JEDI RATING
+              <br>(CUMULATIVE)</h6>
+          </div>
+        </div>
+        <img class="img2" src="assets/images/graph2.png" alt="">
+      </div>
+  </section>
+
+  <!-- Base de datos -->
+  <script src="./js/data.js"></script>
+  <!-- Aquí va tus archivos JS -->
+  <script src="./js/app.js"></script>
+</body>
+
 </html>
