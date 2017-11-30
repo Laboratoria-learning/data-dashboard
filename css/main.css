@@ -5,6 +5,15 @@
     box-sizing: border-box;
 }
 
+li{
+    list-style: none;
+    padding-left: 10px;
+}
+
+div{
+    padding: 15px;
+}
+
 /*agregando estilos a header*/
 header{
     width: 100%;

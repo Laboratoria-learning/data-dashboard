@@ -13,6 +13,7 @@ console.log(genArequipaObject);
 
 
 var container = document.getElementById('container');
+var container2 = document.getElementById('container2');
 
 window.addEventListener('load', function() {
   var selectSede = document.getElementById('sede');
@@ -22,18 +23,22 @@ window.addEventListener('load', function() {
   selectSede.addEventListener('change', function() {
     switch (true) {
     case event.target.value === 'lima':
+      container.textContent = '';
       console.log(data[sede[2]]);
       chooseSede = 2; // chooseSede cambia a 2 porque es la posicion en el array sede que tiene lima
       break;
     case event.target.value === 'arequipa':
+      container.textContent = '';
       console.log(data[sede[0]]); 
       chooseSede = 0; // choose cambia a 0 por su posicion en el array sede
       break;
     case event.target.value === 'chile':
+      container.textContent = '';
       console.log(data[sede[3]]);
       chooseSede = 3; // choose cambia a 3 por su posicion en el array sede
       break;
     case event.target.value === 'mexico':
+      container.textContent = '';
       console.log(data[sede[1]]); // choose cambia a 1 por su posicion en el array sede
       chooseSede = 1;
       break;
@@ -86,13 +91,36 @@ function showGeneration(obj) { // nos va a mostrar la cantidad de estudiantes ac
   var pStudentsDeserter = document.createElement('p');
   pStudentsDeserter.textContent = 'ESTUDIANTES DESERTORAS:' + (obj['students'].length - acumulStudentsActive) + ' desertoras'; // mueustra las desertoras
   divStudents.appendChild(pStudentsDeserter);
-}
+
+  google.charts.load('current', {'packages': ['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Estudiantes');
+    data.addColumn('number', 'cantidad');
+    data.addRows([
+      ['Activas', acumulStudentsActive],
+      ['Desertoras', obj['students'].length - acumulStudentsActive],
+    ]);
+
+    var options = {
+      title: 'CANTIDAD DE ESTUDIANTES',
+      'width': 700,
+      'height': 500
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('charts-pie'));
+
+    chart.draw(data, options);
+  }
+};
 
 function showMetas(obj) {
   var tech = (1800 * 70) / 100;// calcula el 70% (1800) 1260
   var hse = (1200 * 70) / 100;// clacula el 70% (1200) 840
   var divMetas = document.createElement('div');
-  container.appendChild(divMetas);
+  container2.appendChild(divMetas);
   var acumSprint1Tech = 0; // variables para guardar las alumnas que superan el 70%
   var acumSprint1Hse = 0;
   var acumSprint2Tech = 0;
@@ -105,7 +133,7 @@ function showMetas(obj) {
   for (var j = 0; j < obj['students'].length; j++) {// recorre el array con las estudiantes
     var sprintByStudents = obj['students'][j]['sprints']; // contiene un array con los sprint de cada estidiante
     for (var k = 0; k < sprintByStudents.length; k++) {// recorre el array con los sprint
-      // console.log(obj['students'][j]['sprints'][k]);
+      console.log(obj['students'][j]['sprints'][k]);
       var scoreStudents = obj['students'][j]['sprints'][k]['score']; // ingresa al score para poder tomar los puntos
       switch (true) {
       case k === 0: // verifica que sea verdad (cuando k es cero se trata del primer sprint)
@@ -150,46 +178,83 @@ function showMetas(obj) {
   var pPromGeneral = document.createElement('p'); // crea el p que almacenara el promedio general
   pPromGeneral.textContent = 'PROMEDIO DE ESTUDIANTES QUE SUPERARON LA META: ' + promGeneral + ' Estudiantes (' + parseInt((promGeneral * 100) / studentsCant) + ' %)';
   divMetas.appendChild(pPromGeneral);
-  console.log(sumTech);
-  console.log(sumHse);
-  
-  if (acumSprint1Tech !== 0 && acumSprint1Hse !== 0) { // comprueba que tenga ese sprint
-    var pTech1 = document.createElement('p');
-    var pHse1 = document.createElement('p');
-    pTech1.textContent = 'SPRINT 1 - SUPERAN EL 70% EN TECNICO: ' + acumSprint1Tech + ' Estudiantes (' + parseInt((acumSprint1Tech * 100) / studentsCant) + ' %)';
-    pHse1.textContent = 'SPRINT 1 - SUPERAN EL 70% EN HSE: ' + acumSprint1Hse + ' Estudiantes (' + parseInt((acumSprint1Hse * 100) / studentsCant) + ' %)';
-    divMetas.appendChild(pTech1);
-    divMetas.appendChild(pHse1);
+  // console.log(sumTech);
+  // console.log(sumHse);
+  if (acumSprint1Tech !== 0 || acumSprint1Hse !== 0) { // comprueba que tenga ese sprint
+    var ulSprint1Prom = document.createElement('ul');
+    var liTech1 = document.createElement('li');
+    var liHse1 = document.createElement('li');
+    ulSprint1Prom.textContent = 'SPRINT 1:';
+    liTech1.textContent = 'Superan el 70% en Técnico: ' + acumSprint1Tech + ' Estudiantes (' + parseInt((acumSprint1Tech * 100) / studentsCant) + ' %)';
+    liHse1.textContent = 'Superan el 70% en Hse: ' + acumSprint1Hse + ' Estudiantes (' + parseInt((acumSprint1Hse * 100) / studentsCant) + ' %)';
+    divMetas.appendChild(ulSprint1Prom);
+    ulSprint1Prom.appendChild(liTech1);
+    ulSprint1Prom.appendChild(liHse1);
   };
-  if (acumSprint2Tech !== 0 && acumSprint2Hse !== 0) {
-    var pTech2 = document.createElement('p');
-    var pHse2 = document.createElement('p');
-    pTech2.textContent = 'SPRINT 2 - SUPERAN EL 70% EN TECNICO: ' + acumSprint2Tech + ' Estudiantes (' + parseInt((acumSprint2Tech * 100) / studentsCant) + ' %)';
-    pHse2.textContent = 'SPRINT 2 - SUPERAN EL 70% EN HSE: ' + acumSprint2Hse + ' Estudiantes (' + parseInt((acumSprint2Hse * 100) / studentsCant) + ' %)';
-    divMetas.appendChild(pTech2);
-    divMetas.appendChild(pHse2);
+  if (acumSprint2Tech !== 0 || acumSprint2Hse !== 0) {
+    var ulSprint2Prom = document.createElement('ul');
+    var liTech2 = document.createElement('li');
+    var liHse2 = document.createElement('li');
+    ulSprint2Prom.textContent = 'SPRINT 2:';
+    liTech2.textContent = 'Superan el 70% en Técnico: ' + acumSprint2Tech + ' Estudiantes (' + parseInt((acumSprint2Tech * 100) / studentsCant) + ' %)';
+    liHse2.textContent = 'Superan el 70% en Hse: ' + acumSprint2Hse + ' Estudiantes (' + parseInt((acumSprint2Hse * 100) / studentsCant) + ' %)';
+    divMetas.appendChild(ulSprint2Prom);
+    ulSprint2Prom.appendChild(liTech2);
+    ulSprint2Prom.appendChild(liHse2);
   };
-  if (acumSprint3Tech !== 0 && acumSprint3Hse !== 0) {
-    var pTech3 = document.createElement('p');
-    var pHse3 = document.createElement('p');
-    pTech3.textContent = 'SPRINT 3 - SUPERAN EL 70% EN TECNICO: ' + acumSprint3Tech + ' Estudiantes (' + parseInt((acumSprint3Tech * 100) / studentsCant) + ' %)';
-    pHse3.textContent = 'SPRINT 3 - SUPERAN EL 70% EN HSE: ' + acumSprint3Hse + ' Estudiantes (' + parseInt((acumSprint3Hse * 100) / studentsCant) + ' %)';
-    divMetas.appendChild(pTech3);
-    divMetas.appendChild(pHse3);
+  if (acumSprint3Tech !== 0 || acumSprint3Hse !== 0) {
+    var ulSprint3Prom = document.createElement('ul');
+    var liTech3 = document.createElement('li');
+    var liHse3 = document.createElement('li');
+    ulSprint3Prom.textContent = 'SPRINT 3:';
+    liTech3.textContent = 'Superan el 70% en Técnico: ' + acumSprint3Tech + ' Estudiantes (' + parseInt((acumSprint3Tech * 100) / studentsCant) + ' %)';
+    liHse3.textContent = 'Superan el 70% en Hse: ' + acumSprint3Hse + ' Estudiantes (' + parseInt((acumSprint3Hse * 100) / studentsCant) + ' %)';
+    divMetas.appendChild(ulSprint3Prom);
+    divMetas.appendChild(liTech3);
+    divMetas.appendChild(liHse3);
   };
-  if (acumSprint4Tech !== 0 && acumSprint4Hse !== 0) {
-    var pTech4 = document.createElement('p');
-    var pHse4 = document.createElement('p');
-    pTech4.textContent = 'SPRINT 4 - SUPERAN EL 70% EN TECNICO: ' + acumSprint4Tech + ' Estudiantes (' + parseInt((acumSprint4Tech * 100) / studentsCant) + ' %)';
-    pHse4.textContent = 'SPRINT 4 - SUPERAN EL 70% EN HSE: ' + acumSprint4Hse + ' Estudiantes (' + parseInt((acumSprint4Hse * 100) / studentsCant) + ' %)';
-    divMetas.appendChild(pTech4);
-    divMetas.appendChild(pHse4);
+  if (acumSprint4Tech !== 0 || acumSprint4Hse !== 0) {
+    var ulSprint4Prom = document.createElement('ul');
+    var liTech4 = document.createElement('li');
+    var liHse4 = document.createElement('li');
+    ulSprint4Prom.textContent = 'SPRINT 4:';
+    liTech4.textContent = 'Superan el 70% en Técnico: ' + acumSprint4Tech + ' Estudiantes (' + parseInt((acumSprint4Tech * 100) / studentsCant) + ' %)';
+    liHse4.textContent = 'Superan el 70% en Hse: ' + acumSprint4Hse + ' Estudiantes (' + parseInt((acumSprint4Hse * 100) / studentsCant) + ' %)';
+    divMetas.appendChild(ulSprint4Prom);
+    divMetas.appendChild(liTech4);
+    divMetas.appendChild(liHse4);
+  };
+
+  google.charts.load('current', {'packages': ['bar']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['SPRINT', 'Tech', 'Hse'],
+      ['1', acumSprint1Tech, acumSprint1Hse],
+      ['2', acumSprint2Tech, acumSprint2Hse],
+      ['3', acumSprint3Tech, acumSprint3Hse],
+      ['4', acumSprint4Tech, acumSprint4Hse]
+    ]);
+
+    var options = {
+      width: 1200,
+      chart: {
+        title: 'ESTUDIANTES QUE SUPERAN EL 70%',
+        subtitle: 'Cantidad de estudiantes con mas de 70% en Tech y Hse',
+      },
+      bars: 'horizontal' // Required for Material Bar Charts.
+    };
+
+    var chart = new google.charts.Bar(document.getElementById('charts-bar'));
+
+    chart.draw(data, google.charts.Bar.convertOptions(options));
   };
 };
 
 function showRatings(obj) {
   var divRatings = document.createElement('div'); // creamos un div que contenga kos datos
-  container.appendChild(divRatings);
+  container3.appendChild(divRatings);
   var sumNps = 0;
   for (var j = 0; j < obj['ratings'].length; j++) { // recorre el array ratings
     // console.log(obj['ratings'][j]['student']); // me da un objeto que contiene los keys de cumple o no
@@ -201,10 +266,10 @@ function showRatings(obj) {
     divRatings.appendChild(ulStudentsPoints);  
     // Creamos un li para almacenar el promedio de la puntuacion de los profesores
     var liTeacherPoints = document.createElement('li');
-    liTeacherPoints.textContent = 'Puntuación promedio de l@s profesores : ' + obj['ratings'][j]['teacher'] + '%';
+    liTeacherPoints.textContent = 'Puntuación promedio de l@s profesores : ' + obj['ratings'][j]['teacher'];
     ulStudentsPoints.appendChild(liTeacherPoints);
     var liJediPoints = document.createElement('li');
-    liJediPoints.textContent = 'Puntuación promedio de l@s jedis : ' + obj['ratings'][j]['jedi'] + '%';
+    liJediPoints.textContent = 'Puntuación promedio de l@s jedis : ' + obj['ratings'][j]['jedi'];
     ulStudentsPoints.appendChild(liJediPoints);
     var nps = obj['ratings'][j]['nps'];
     var npsPromedioBySprint = nps['promoters'] - nps['detractors'];
@@ -213,5 +278,37 @@ function showRatings(obj) {
   var promFinalNps = parseInt(sumNps / obj['ratings'].length);
   var pNpsFinal = document.createElement('p');
   pNpsFinal.textContent = 'NPS promedio: ' + promFinalNps + '%';
-  container.insertBefore(pNpsFinal, divRatings);
+  container3.insertBefore(pNpsFinal, divRatings);
+
+  
+  var jediPoints1 = obj['ratings'][0]['jedi'];
+  var teacherPoints1 = obj['ratings'][0]['teacher'];
+  var jediPoints2 = obj['ratings'][1]['jedi'];
+  var teacherPoints2 = obj['ratings'][1]['teacher'];
+  var jediPoints3 = obj['ratings'][2]['jedi'];
+  var teacherPoints3 = obj['ratings'][2]['teacher'];
+  var jediPoints4 = obj['ratings'][3]['jedi'];
+  var teacherPoints4 = obj['ratings'][3]['teacher'];
+  google.charts.load('current', {'packages': ['bar']});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Sprint', 'Puntuación Yedis', 'Puntuación Profesores'],
+      [1, jediPoints1, teacherPoints1],
+      [2, jediPoints2, teacherPoints2],
+      [3, jediPoints3, teacherPoints3],
+      [4, jediPoints4, teacherPoints4]
+    ]);
+
+    var options = {
+      chart: {
+        title: 'Puntuación Yedis y Profesores',
+        subtitle: 'Puntuación 1 - 5',
+      }
+    };
+
+    var chart = new google.charts.Bar(document.getElementById('charts-column'));
+
+    chart.draw(data, google.charts.Bar.convertOptions(options));
+  }
 };
