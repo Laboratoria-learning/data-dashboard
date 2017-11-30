@@ -102,11 +102,7 @@ function begin() {
       document.getElementById('dropout').textContent = Math.round((dropoutStudents / students.length) * 100) * 10 / 10 + '%';
       document.getElementById('overcome-avrg').textContent = overcomeStudents;
       document.getElementById('overcome-percent').textContent = Math.round((overcomeStudents / currentStudents) * 100) * 10 / 10 + '%';
-<<<<<<< HEAD
-      document.getElementById('tech-target-avrg').textContent = techTargetAvrg;
-=======
       document.getElementById('tech-target-avrg').textContent = Math.round(techTargetAvrg);
->>>>>>> 034a6adce4dbc6582570392a3fe406123ae6f8cb
       document.getElementById('hse-target-avrg').textContent = Math.round(hseTargetAvrg);
     }
   }
@@ -134,7 +130,8 @@ function begin() {
     var reachExp = ratings[selectSprint.value - 1].student.cumple + ratings[selectSprint.value - 1].student.supera;
     document.getElementById('satisfaction-percent').textContent = reachExp + '%';
   }
-// Grafico
+
+  // Grafico
   var sede1 = data['AQP']['2017-1']['students'].length;
   var sede2 = data['AQP']['2016-2']['students'].length;
   google.charts.load('current', { 'packages': ['corechart'] });
@@ -151,8 +148,7 @@ function begin() {
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
     chart.draw(data, options);
-}
-
+  }
 };
 
 function openPage(evnt, opt) {
