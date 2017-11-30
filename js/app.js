@@ -86,7 +86,7 @@ function optionslim172() {
   studentsSatisfation(region, promotion);
   teacherRating(region, promotion);
   jediRating(region, promotion);
-  // showOverGoal(region, promotion);
+  showOverGoal(region, promotion);
 }
 
 function optionslim171() {
@@ -143,7 +143,6 @@ function showTotalStudents(region, promotion) {
     }
   }
   drawTotalStudents(current, deserted);
-
   numberBoxStudents.textContent = current;
   numberBoxStudents.classList.toggle('number-box-int');
   studentsDropout.textContent = parseFloat(deserted / (current + deserted) * 100).toFixed(0) + '%';
@@ -178,7 +177,7 @@ function cumulativeNps(region, promotion) {
     totalPassive = totalPromoters + arrayPassive[i];
     totalNps = totalNps + arrayNps[i];
   }
-  
+
   totalNps = parseInt(totalNps / arrayNps.length) + '%';
   totalPromoters = parseInt(totalPromoters / arrayPromoters.length) + '%';
   totalDetractors = parseInt(totalDetractors / arrayDetractors.length) + '%';
@@ -189,8 +188,8 @@ function cumulativeNps(region, promotion) {
   promotersBox.textContent = totalPromoters;
   detractorsBox.textContent = totalDetractors;
   passiveBox.textContent = totalPassive;
-  
-  
+
+
   if (arrayNps.length === 2) {
     s1 = arrayNps[0];
     s2 = arrayNps[1];
@@ -200,7 +199,7 @@ function cumulativeNps(region, promotion) {
     s3 = arrayNps[2];
     s4 = arrayNps[3];
   }
-  
+
   drawNetPromoter(s1, s2, s3, s4);
 }
 
@@ -209,6 +208,7 @@ function showOverGoal(region, promotion) {
   var nsprint;
   var hse;
   var tech;
+  var count = 0;
   var scoresTotal;
   var countS1 = 0;
   var countS2 = 0;
@@ -220,14 +220,14 @@ function showOverGoal(region, promotion) {
       var sprint = students[i]['sprints'];
       for (var j = 0; j < sprint.length;j++) {
         nsprint = sprint[j]['number'];
-         
+
         hse = sprint[j]['score']['hse'];
         tech = sprint[j]['score']['tech'];
         scoresTotal = hse + tech;
-        if (scoresTotal >= 2100) {        
+        if (scoresTotal >= 2100) {
           console.log('nsprint' + nsprint);
-          console.log(scoresTotal);  
-        }      
+          console.log(scoresTotal);
+        }
       }
     }
   }
@@ -251,7 +251,7 @@ function studentsSatisfation(region, promotion) {
   }
   total = parseInt(total / cumple.length);
   satisfationBox.textContent = total;
-  
+
   if (cumple.length === 2) {
     s1 = cumple[0];
     s2 = cumple[1];
@@ -275,7 +275,7 @@ function teacherRating(region, promotion) {
   var totalTeacherRating = 0;
 
   for (var i = 0; i < ratings.length; i++) {
-    arrayteacherRating[i] = ratings[i]['teacher'];    
+    arrayteacherRating[i] = ratings[i]['teacher'];
   }
   for (var i = 0; i < arrayteacherRating.length; i++) {
     totalTeacherRating = totalTeacherRating + arrayteacherRating[i];
@@ -342,6 +342,7 @@ function jediRating(region, promotion) {
   jediRatingBox.textContent = total;
 }
 /*************************GRAFICOS************/
+
 function drawTotalStudents(current, deserted) {
   google.charts.load('current', {'packages':['corechart']});
   google.charts.setOnLoadCallback(drawChart);
@@ -377,7 +378,7 @@ function drawNetPromoter(s1, s2, s3, s4) {
     ]);
     var options = {
       hAxis: {
-        title: 'SPRINT' 
+        title: 'SPRINT'
       },
     };
     var chart = new google.visualization.LineChart(document.getElementById('chart_div_nps'));
@@ -385,7 +386,7 @@ function drawNetPromoter(s1, s2, s3, s4) {
   }
 }
 
-function drawStudentSatisfation(s1, s2, s3, s4) { 
+function drawStudentSatisfation(s1, s2, s3, s4) {
   google.charts.load('current', {packages: ['corechart']});
   google.charts.setOnLoadCallback(drawChart);
   function drawChart() {
@@ -416,7 +417,7 @@ function drawStudentSatisfation(s1, s2, s3, s4) {
   }
 }
 
-function drawTeacherRating(s1, s2, s3, s4) { 
+function drawTeacherRating(s1, s2, s3, s4) {
   google.charts.load('current', {packages: ['corechart']});
   google.charts.setOnLoadCallback(drawChart);
   function drawChart() {
@@ -447,7 +448,7 @@ function drawTeacherRating(s1, s2, s3, s4) {
   }
 }
 
-function drawJediRatings(s1, s2, s3, s4) { 
+function drawJediRatings(s1, s2, s3, s4) {
   google.charts.load('current', {packages: ['corechart']});
   google.charts.setOnLoadCallback(drawChart);
   function drawChart() {
