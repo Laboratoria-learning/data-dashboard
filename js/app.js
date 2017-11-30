@@ -13,6 +13,17 @@ window.addEventListener('load', function() {
   /* function studentsLaboratoria(sede, generacion) { 
   }  
   studentsLaboratoria('Lima', '2017-II');*/
+  student.addEventListener('click', elige);
+  function elige() {
+    container1.style.display = 'block';
+    overcon.style.display = 'none';
+  }
+  overview.addEventListener('click', over);
+  function over() {
+    overcon.style.display = 'block';
+    container1.style.display = 'none';
+  }
+
   lima.addEventListener('select', container);
   function container() {
     
@@ -30,21 +41,8 @@ window.addEventListener('load', function() {
         // console.log(points);
       } else {
             
-        
       }
     }
-  }
-
-
-  student.addEventListener('click', elige);
-  function elige() {
-    container1.style.display = 'block';
-    overcon.style.display = 'none';
-  }
-  overview.addEventListener('click', over);
-  function over() {
-    overcon.style.display = 'block';
-    container1.style.display = 'none';
   }
   /* menu.addEventListener('click',icono);
   function icono() {
