@@ -136,6 +136,16 @@ header section {
     padding: 3px;
 }
 
+.first-section .list-sedes {
+    width: 15%;
+    display: inline-block;
+    background-color: #f7b617;
+    color: #333333;
+    font-weight: 700;
+    margin: 0px 50px;
+    border-radius: 5px;
+}
+
 .list-sedes .hide {
     list-style: none;
 }
@@ -165,12 +175,7 @@ header section {
     margin-left: 17%;
 }
 
-<<<<<<< HEAD
-.grafhic .grafhic-prueba {
-    outline: 1px solid green;
-=======
 .grafhic .grafhic-data {
     width: 100%;
     display: inline-block;
->>>>>>> e78d5773657a62018b07ff57c4e252e37cff754f
 }
