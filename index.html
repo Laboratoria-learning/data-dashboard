@@ -22,7 +22,7 @@
                     <option value="" disabled="disabled">________________</option>
                     <option value="lim2016II">2016-II</option>
                     <option value="lim2017I">2017-I</option>
-                    <option value="lim2017II">2017-II</option>
+                    <option value="lim2017II" selected>2017-II</option>
                     <option value="" disabled="disabled">Arequipa</option>
                     <option value="" disabled="disabled">________________</option>
                     <option value="are2016II">2016-II</option>
@@ -35,7 +35,7 @@
                     <option value="" disabled="disabled">Ciudad de Mexico</option>
                     <option value="" disabled="disabled">________________</option>
                     <option value="mex2017I">2017-I</option>
-                    <option value="mex2017II" selected>2017-II</option>
+                    <option value="mex2017II">2017-II</option>
                   </select>
             </div>
           </div>
@@ -135,10 +135,13 @@
                       </div>
                     </form>
                 </div>
-                <input id="first" type="text" name="search" value="">
+                <form action="">
+                    <input id="first" type="text" name="search" value="">
+                    <button id="buscar">Buscar</button>
+                </form>
                 <div class="img-container" id="img-container">
                   <img src="assets/images/lab.png" alt="laboratoria">
-                  <h1>DIANA NAVARRO</h1>
+                  <h1 id="name-student">DIANA NAVARRO</h1>
                   <br>
                   <p id="front">Frontend Developer</p>
                   <br>
