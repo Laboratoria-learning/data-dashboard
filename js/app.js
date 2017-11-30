@@ -102,8 +102,8 @@ function begin() {
       document.getElementById('dropout').textContent = Math.round((dropoutStudents / students.length) * 100) * 10 / 10 + '%';
       document.getElementById('overcome-avrg').textContent = overcomeStudents;
       document.getElementById('overcome-percent').textContent = Math.round((overcomeStudents / currentStudents) * 100) * 10 / 10 + '%';
-      document.getElementById('tech-target-avrg').textContent = techTargetAvrg;
-      document.getElementById('hse-target-avrg').textContent = hseTargetAvrg;
+      document.getElementById('tech-target-avrg').textContent = Math.round(techTargetAvrg);
+      document.getElementById('hse-target-avrg').textContent = Math.round(hseTargetAvrg);
     }
   }
 
