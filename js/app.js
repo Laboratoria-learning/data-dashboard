@@ -101,11 +101,23 @@ function begin() {
       document.getElementById('tech-target-avrg').textContent = Math.round(techTargetAvrg);
       document.getElementById('hse-target-avrg').textContent = Math.round(hseTargetAvrg);
       
+      // Promedoi NPS
       var ratings = data[selectLocal.value][selectPromo.value].ratings;
       var sumNps = 0;
+      var sumProm = 0;
+      var sumPass = 0;
+      var sumDet = 0;
       for (var i = 0; i < sprints; i++) {
+        sumProm += ratings[i].nps.promoters;
+        sumPass += ratings[i].nps.passive;
+        sumDet += ratings[i].nps.detractors;
         sumNps += ratings[i].nps.promoters - ratings[i].nps.detractors;
       }
+      // Mostrar datos en el documento
+      document.getElementById('promoters').textContent = Math.round(sumProm / sprints) + '%';
+      document.getElementById('passive').textContent = Math.round(sumPass / sprints) + '%';
+      document.getElementById('detractors').textContent = Math.round(sumDet / sprints) + '%';
+
       document.getElementById('nps').textContent = sumNps / sprints + '%';
     }
   }
@@ -125,7 +137,7 @@ function begin() {
     }
     document.getElementById('tech-target-sprint').textContent = techTarget;
     document.getElementById('hse-target-sprint').textContent = hseTarget;
-
+    // Alumnas satisfechas con Exp laboratoria
     var ratings = data[selectLocal.value][selectPromo.value].ratings;
     document.getElementById('teachers-avrg').textContent = ratings[selectSprint.value - 1].teacher;
     document.getElementById('jedi-avrg').textContent = ratings[selectSprint.value - 1].jedi;
