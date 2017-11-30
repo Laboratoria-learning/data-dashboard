@@ -1,3 +1,90 @@
 /*
  * Estilos de tu proyecto
- */
+*/
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  box-sizing: border-box;
+  background: #f7f7f7;
+}
+div{
+  display: inline-block;
+  margin:2%;
+}
+header {
+  padding: 7px;
+  text-align: center;
+}
+
+
+#logo {
+  width: 200px;
+}
+
+#icon {
+  color: #2c3e50;
+  font-size: 30px;
+  float: right;
+  margin-top: 21px;
+  transform: translateX(-80px);
+}
+
+#icon:hover {
+  color: gray;
+  cursor: pointer;
+}
+
+nav {
+  padding: 21px;
+  background: DarkGray;
+}
+
+#listbox {
+  border-radius: 7px;
+  box-sizing: border-box;
+  display: block;
+  font-size: 21px;
+  margin: 21px 0px 21px 21px;
+  outline: none;
+}
+
+.option-text {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 35px;
+  background: none;
+}
+
+.option-text:hover {
+  color: #fff;
+  border-bottom: 4px solid #ffc107;
+  cursor: pointer;
+}
+
+#teachers {
+  text-align: center;
+}
+
+.container {
+  box-sizing: border-box;
+  width: 1300x;
+
+}
+
+.cont-1 {
+  background: #ffffff;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 17px;
+  transform: translateY(-160px);
+  width: 400px;
+}
+
+.cont-2 {
+  background: #ffffff;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 17px;
+  width: 800px;
+}

@@ -3,12 +3,99 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">    
+    <link rel="stylesheet" href="assets/icons/icomoon/style.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <header>
+      <img id="logo" src="assets/images/logo-laboratoria.svg" alt="logo-laboratoria">
+      <span id= "icon" class="icon-menu"></span>
+    </header>
+    <nav>
+      <span class="option-text tab" data-tag="first">OVERVIEW</span>
+      <span class="option-text tab" data-tag="second">STUDENTS</span>
+      <span class="option-text tab" data-tag="third">TEACHER</span>
 
+      <select id="listbox">
+        <option value="">Sede-Generación</option>
+        <optgroup label="Arequipa">
+          <option value="2016-2" data-sede="AQP">2016-II</option>
+          <option value="2017-1" data-sede="AQP">2017-I</option>
+        </optgroup>
+        <optgroup label="Lima">
+          <option value="2016-2" data-sede="LIM">2016-II</option>
+          <option value="2017-1" data-sede="LIM">2017-I</option>
+          <option value="2017-2" data-sede="LIM">2017-II</option>
+        </optgroup>
+        <optgroup label="México">
+          <option value="2017-1" data-sede="CDMX">2017-I</option>
+          <option value="2017-2" data-sede="CDMX">2017-II</option>
+        </optgroup>
+        <optgroup label="Santiago de Chile">
+          <option value="2016-2" data-sede="SCL">2016-II</option>
+          <option value="2017-1" data-sede="SCL">2017-I</option>
+          <option value="2017-2" data-sede="SCL">2017-II</option>
+        </optgroup>
+      </select>      
+    </nav>
+
+    <section id="graphics">
+        <div id="enrollment"></div>
+        <!--Div that will hold the pie chart-->
+        
+        <div id='draw-estadoEstudiantes'></div>
+        <div id= 'meta-sprint'></div>
+        <div id= 'draw-satisfacion'></div>
+        <div id= 'draw-scoreTeacher'></div>
+        <div id= 'draw-scoreJedi'></div>
+        <div id= 'draw-nps'></div>
+        <div id= 'draw-puntajeTecnico'></div>
+        <div id= 'draw-puntajeHse'></div>
+        
+
+    </section>
+
+    <section class= "container" id="students">
+      <div class="cont-1" id="students">
+        <h3>ESPECIALIZACIONES</h3>
+        <input type="checkbox" id="cbox1" value="first_checkbox">Javascript</input><br>
+        <input type="checkbox" id="cbox2" value="second_checkbox">UX Designer</input><br>
+        <input type="checkbox" id="cbox2" value="second_checkbox">Front-End Developer</input>
+      </div>
+
+      <div class="cont-2" id="students">
+        <h3>Gretchen Gerhts</h3>
+        <p>UX DESIGNER</p>
+        <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAkzAAAAJDQ1YTA1MjkxLTM3MmMtNDAyOC05N2VhLWQxMDdiZDgyNDM5Mg.jpg" alt="coder-1">
+        <div id="tech">
+        
+        </div>
+        <div id="hse">
+        
+        </div>
+        <div>
+          ENGLISH: INTERMEDIATE
+        </div>
+      </div>
+
+    </section>
+
+    <section id="teachers">
+      <img src="assets/images/img.jpg" alt="en-construcción">
+    </section>
+
+   
+
+     
+     
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
-    <script src="./js/app.js"></script>
+    <script src="js/graficas.js"></script>
+    <script src="js/funcionalidades.js"></script>
+    
   </body>
 </html>
