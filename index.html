@@ -136,39 +136,31 @@
         <!--Cajas-->
         <div class="container-box">
             <div class="box-total">
-                <h3>141</h3>
+                <h3 id="total-students">0</h3>
                 <p>Total Alumnas</p>
             </div>
             <div class="box-desertaron">
-                <h3>15</h3>
+                <h3 id="total-desertaron">0</h3>
                 <p>Deserción</p>
             </div>
             <div class="box-proceso">
-                <h3>126</h3>
+                <h3 id="process">0</h3>
                 <p>En Proceso</p>
             </div>
             <!--Derecha-->
             <div class="box-puntaje">
-                <h3>80%</h3>
+                <h3 id="promedio">80%</h3>
                 <p>Puntaje Promedio</p>
             </div>
             <div class="box-media">
-                <h3>108</h3>
+                <h3 id="media-alcanzada">108</h3>
                 <p>Media alcanzada</p>
             </div>
             <div class="box-nomedia">
-                <h3>18</h3>
+                <h3 id="media-no-alcanzada">18</h3>
                 <p>Media no alcanzada</p>
             </div>
         </div>
-
-        <!--Graficos-->
-        <div class="graphic">
-            <section>
-                <div id="donucharts"></div>
-            </section>
-        </div>
-        <!--Main Content-->
 
         <!-- Sub-menu -->
         <nav class="reponav">
@@ -181,7 +173,12 @@
         <!-- Graficos -->
 
         <section class="content">
-            <div id="grafico" class="tab-content"></div>
+            <div id="grafico" class="tab-content">
+                <div class="graphics-content">
+                    <canvas id="line-chart" style="height:200px;width: content-box;"></canvas>
+                    <canvas id="pie-chart" style="height:200px;width: content-box;"></canvas>
+                </div>
+            </div>
 
             <!-- Alumnas -->
             <div id="alumnas" class="tab-content">
@@ -223,9 +220,8 @@
 </div>
 
 <!-- Aquí va tus archivos JS -->
+<script type="text/javascript" src="js/Chart.min.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
-<!--libreria-->
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-
+<script type="text/javascript" src="js/graphic.js"></script>
 </body>
 </html>

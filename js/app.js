@@ -11,6 +11,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     var tabs = document.getElementsByClassName("tab-links");
 
+    // Load combo box with LIM data
+    getPromotionBySeat("LIM");
+
     select.addEventListener('change', function () {
        getStudents(selectSeat, this.options[this.selectedIndex].value);
     });
@@ -49,6 +52,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
             divContent.removeChild(divContent.childNodes[i]);
         }
 
+        var totalStudents = document.getElementById("total-students");
+        totalStudents.innerText = students.length;
+
+        var desertion = 0;
         for (var j = 0; j < students.length; j++) {
             var student = students[j];
             var clone = divToClone.cloneNode(true);
@@ -59,7 +66,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
             clone.style.display = "block";
             divContent.appendChild(clone);
             console.log(clone);
+            if (!student["active"]) {
+                desertion++;
+            }
         }
+
+        var totalDesertion = document.getElementById("total-desertaron");
+        totalDesertion.innerText = desertion;
+
+        var inProcess = document.getElementById("process");
+        console.log(totalStudents);
+        console.log(desertion);
+        console.log(totalStudents - desertion);
+        inProcess.innerText = parseInt(students.length) - parseInt(desertion);
     }
 
     function showTab(evt, tabName) {
