@@ -43,5 +43,5 @@ Lograr:
 
 Developers web:
 
-* L. Vanessa colqui Santos.
-* Victoria Lung.
+* L. Vanessa Colqui Santos.
+* Victoria Lung Hinostroza
