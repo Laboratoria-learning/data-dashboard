@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Data Dashboard</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -14,83 +15,86 @@
     </figure>
   </header>
   <!-- Seleccionar sede -->
-  <select id="selection">
+  <div class="content-header">
+    <select id="selection" class="selection">
 
-    <option value="LIM-2016-2">Lima 2016 - II</option>
-    <option value="LIM-2017-1">Lima 2017 - I</option>
-    <option value="LIM-2017-2" selected="true">Lima 2017 - II</option>
+      <option value="LIM-2016-2">Lima 2016 - II</option>
+      <option value="LIM-2017-1">Lima 2017 - I</option>
+      <option value="LIM-2017-2" selected="true">Lima 2017 - II</option>
 
-    <option value="AQP-2016-2">Arequipa 2016-II</option>
-    <option value="AQP-2017-1">Arequipa 2017-I</option>
+      <option value="AQP-2016-2">Arequipa 2016 - II</option>
+      <option value="AQP-2017-1">Arequipa 2017 - I</option>
 
-    <option value="CDMX-2017-1">Ciudad de Mexico 2017-I</option>
-    <option value="CDMX-2017-2">Ciudad de Mexico 2017-II</option>
+      <option value="CDMX-2017-1">Ciudad de Mexico 2017 - I</option>
+      <option value="CDMX-2017-2">Ciudad de Mexico 2017 - II</option>
 
-    <option value="SCL-2016-2">Santiago de Chile 2016-II</option>
-    <option value="SCL-2017-1">Santiago de Chile 2017-I</option>
-    <option value="SCL-2017-2">Santiago de Chile 2017-II</option>
-  </select>
+      <option value="SCL-2016-2">Santiago de Chile 2016 - II</option>
+      <option value="SCL-2017-1">Santiago de Chile 2017 - I</option>
+      <option value="SCL-2017-2">Santiago de Chile 2017 - II</option>
+
+    </select>
+    
+    <div class="box-tabs">
+      <div class="tab" data-content="0">Overview</div>
+      <div class="tab" data-content="1">Students</div>
+      <div class="tab" data-content="2">Teacher</div>
+    </div>
+  </div>
 
   <section id="contenido-sede">
     <div class="container">
-      <div class="box-tabs">
-        <div class="tab" data-content="0">Overview</div>
-        <div class="tab" data-content="1">Students</div>
-        <div class="tab" data-content="2">Teacher</div>
-      </div>
       <div class="box-contents">
-        <div class="container">
-          <div class="content">
-            <div class="row">
-              <div class="col">
-                <div class="box">
-                  <h1>Inscritas</h1>
-                  <div id="students-inscribed" class="cajita">#</div>
-                  <div id="students-deserted" class="cajita">%</div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="box">
-                  <h1>Logrado</h1>
-                  <div id="students-approved" class="cajita">#</div>
-                  <div id="total-approved" class="cajita">%</div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="box">
-                  <h1>Net Promoter Score</h1>
-                  <div id="average" class="cajita">%</div>
-                </div>
+        <div class="content">
+          <div class="row">
+            <div class="col">
+              <div class="box">
+                <h1>Enrollment</h1>
+                <div id="students-inscribed" class="cajita">#</div>
+                <div id="students-deserted" class="cajita">%</div>
               </div>
             </div>
-            <div class="section tech">
-              <h1>Tech</h1>
-              <div id="approved-tech" class="cajita">#</div>
-              <div id="average-tech" class="cajita">%</div>
-            </div>
-            <div class="section hse">
-              <h1>Hse</h1>
-              <div id="approved-hse" class="cajita">#</div>
-              <div id="average-hse" class="cajita">%</div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="box">
-                  <h1>Estudiantes satisfechas</h1>
-                  <div id="average-satisfied" class="cajita">#</div>
-                </div>
+            <div class="col">
+              <div class="box">
+                <h1>Achievement</h1>
+                <div id="students-approved" class="cajita">#</div>
+                <div id="total-approved" class="cajita">%</div>
               </div>
-              <div class="col">
-                <div class="box">
-                  <h1>Calificación del teacher</h1>
-                  <div id="scores-teacher"  class="cajita number">#</div>
-                </div>
+            </div>
+            <div class="col">
+              <div class="box">
+                <h1>Net Promoter Score</h1>
+                <div id="average" class="cajita">%</div>
+                <div id="average" class="cajita description">60% Promoters <br> 30% Passive <br> 10% Detractors</div>
               </div>
-              <div class="col">
-                <div class="box">
-                  <h1>Calificación jedi master</h1>
-                  <div id="scores-jedi" class="cajita porcentaje">%</div>
-                </div>
+            </div>
+          </div>
+          <div class="section tech">
+            <h1>Tech</h1>
+            <div id="approved-tech" class="cajita">#</div>
+            <div id="average-tech" class="cajita">%</div>
+          </div>
+          <div class="section hse">
+            <h1>Hse</h1>
+            <div id="approved-hse" class="cajita">#</div>
+            <div id="average-hse" class="cajita">%</div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="box">
+                <h1>Student satisfaction</h1>
+                <div id="average-satisfied" class="cajita">#</div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="box">
+                <h1>Teacher rating</h1>
+                <div id="scores-teacher"  class="cajita number">#</div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="box">
+                <h1>Jedi master rating</h1>
+                <div id="scores-jedi" class="cajita porcentaje">%</div>
               </div>
             </div>
           </div>

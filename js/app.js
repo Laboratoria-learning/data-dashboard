@@ -1,9 +1,7 @@
-// agregar el evento load
-window.addEventListener('load', function () {
+window.addEventListener('load', function() {
   var selection = document.getElementById('selection');
-  // console.log(selection);
   var contenidoSede = document.getElementById('contenido-sede');
-  // console.log(contenidoSede);
+  
   var tabs = document.getElementsByClassName('tab');
   var contents = document.getElementsByClassName('content');
 
@@ -67,27 +65,67 @@ window.addEventListener('load', function () {
     // Datos de estudiantes que desartaron
     studentsDeserted.textContent = Math.floor((counter * 100) / totalStudents) + '%';
     studentsDeserted.appendChild(div);
-
+    
     var studentsTarget = 0;
+    var totalStudentsTech = 0;
+    var totalStudentsHse = 0;
     generationData.students.forEach(function(student) {
       var cantidadDeSprints = student.sprints.length;
       var total = 0;
-      student.sprints.forEach(function (sprint) {
+      var totalTech = 0;
+      var totalHse = 0;
+      student.sprints.forEach(function(sprint) {
         total += (sprint.score.tech + sprint.score.hse);
+        var tech = sprint.score.tech;
+        totalTech += tech;
+        var hse = sprint.score.hse;
+        totalHse += hse;
       });
       var promedio = total / cantidadDeSprints;
       if (promedio >= 2100) {
         studentsTarget++;
       }
+      var promedioTech = totalTech / cantidadDeSprints;
+      if (promedioTech >= 1260) {
+        totalStudentsTech ++;
+      }
+      var promedioHse = totalHse / cantidadDeSprints;
+      if (promedioHse >= 840) {
+        totalStudentsHse ++;
+      }
     });
+    // Pasaron la meta tech
+    var div = document.createElement('div');
+    var parrafo = document.createElement('p');
+    parrafo.textContent = '# estudiantes que pasan la meta tech';
+    div.appendChild(parrafo);
+    div.classList.add('description');
+
+    approvedTech.textContent = totalStudentsTech;
+    approvedTech.appendChild(div);
+
+    // Pasaron la meta hse
+    var div = document.createElement('div');
+    var parrafo = document.createElement('p');
+    parrafo.textContent = '# estudiantes que pasan la meta hse';
+    div.appendChild(parrafo);
+    div.classList.add('description');
+
+    approvedHse.textContent = totalStudentsHse;
+    approvedHse.appendChild(div);
+
+
+    // Pasaron la meta total 
     var div = document.createElement('div');
     var parrafo = document.createElement('p');
     parrafo.textContent = '# estudiantes que superan la meta';
     div.appendChild(parrafo);
-    div.classList.add('description')
+    div.classList.add('description');
+
     studentsApproved.textContent = studentsTarget;
     studentsApproved.appendChild(div);
 
+    // El porcentaje total 
     var div = document.createElement('div');
     var parrafo = document.createElement('p');
     parrafo.textContent = '% total';
@@ -126,16 +164,43 @@ window.addEventListener('load', function () {
       var totalSatis = cumple + supera;
       totalStudent += totalSatis;
     }
+    var div = document.createElement('div');
+    var parrafo = document.createElement('p');
+    parrafo.textContent = '% estudiantes satisfechas';
+    div.appendChild(parrafo);
+    div.classList.add('description');
 
     averageSatisfied.textContent = Math.floor(((totalStudent / generationData.ratings.length) * 100) / 100) + '%';
-    // console.log (totalStudent);
+    averageSatisfied.appendChild(div);
 
     var totalRatingTeacher = 0;
     for (var i = 0; i < generationData.ratings.length; i++) {
       var teacher = generationData.ratings[i].teacher;
       totalRatingTeacher += teacher;
     }
-    scoresTeacher.textContent = totalRatingTeacher / generationData.ratings.length;
+
+    var div = document.createElement('div');
+    var parrafo = document.createElement('p');
+    parrafo.textContent = 'puntuación a l@s profesores';
+    div.appendChild(parrafo);
+    div.classList.add('description');
+    
+    scoresTeacher.textContent = (totalRatingTeacher / generationData.ratings.length).toFixed(2);
+    scoresTeacher.appendChild(div);
+
+    var totalRatingJedi = 0;
+    generationData.ratings.forEach(function(rating) {
+      var jedi = rating.jedi;
+      totalRatingJedi += jedi;
+    });
+    var div = document.createElement('div');
+    var parrafo = document.createElement('p');
+    parrafo.textContent = 'puntuación a l@s jedi masters';
+    div.appendChild(parrafo);
+    div.classList.add('description');
+
+    scoresJedi.textContent = (totalRatingJedi / generationData.ratings.length).toFixed(2);
+    scoresJedi.appendChild(div);
   };
 
   // agregar el evento click a todos los tabs

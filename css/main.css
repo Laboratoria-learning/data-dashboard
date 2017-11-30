@@ -6,20 +6,37 @@
 
 body {
   background-color: #f7f7f7;
-  font-family: arial;
+  font-family: 'Lato', sans-serif;
 }
 
 img {
   width: 100%;
 } 
 
+header {
+  background-color: #fff;
+}
+
 header .logo {
   margin: auto;
   width: 250px;
 }
 
+.content-header {
+  background-color: #e1e1e1;
+  padding-left: 33px;
+}
+.selection {
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 20px 0;
+  outline: none;
+  text-transform: uppercase;
+}
+
 .container {
-  /* background-color: rgba(0, 0, 0, .6); */
   margin: auto;
   max-width: 1200px;
   padding-left: 20px;
@@ -54,22 +71,26 @@ header .logo {
   background-color: #fff;
   min-height: 250px; 
 }
-
+#students-deserted {
+  color: red;
+}
 .cajita {
   background-color: #e1e1e1;
   float: left;
-  /* font-size: 20px; */
-  /* font-weight: bold; */
+  font-size: 20px;
+  font-weight: bold;
   margin: 23px;
-  height: 70px;
+  height: 80px;
   padding: 10px;
   text-align: center;
   width: 140px;
 }
 
 .description {
-  font-size: 16px;
-  color: red;
+  color: #939393;
+  font-size: 10px;
+  padding: 10px 0;
+  text-transform: uppercase;
 }
 
 .section {
@@ -79,8 +100,9 @@ header .logo {
 }
 
 h1 {
-  font-size: 18px;
-  /* margin: 25px 0 0 20px; */
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px 0 0 20px;
   text-transform: uppercase;
 }
 h2 {
@@ -89,20 +111,23 @@ h2 {
 }
 
 .box-tabs {
+  font-weight: bold;
   overflow: auto;
+  text-transform: uppercase;
 }
 
 .tab {
   float: left;
   cursor: pointer;
-  margin-left: 5px;
+  margin-right: 20px;
   height: 48px;
+  padding-top: 14px;
+  text-align: center;
   width: 100px;
 }
 
 .tab.active {
   border-bottom: 4px solid #f7b617;
-  /* background-color: #fff; */
 }
 
 .content {
