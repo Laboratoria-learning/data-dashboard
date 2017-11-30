@@ -1,9 +1,6 @@
-/*ul{
-  display: none;
-  padding: 0;
+*{
+  text-align: center;
 }
-*/
-
 #list_sedes{
   text-align: center;
   width: 20%;
@@ -14,15 +11,19 @@
   width: 100%;
   background-color: #19BA76;
 }
-
-.list_active{
-  display: block;
+.sede{
+  font-size: 18px;
 }
-
-.generations_hiden {
+.hiden {
   display: none;
 }
-
-.generations_show {
+.show {
   display: block;
+}
+.generation{
+  display: block;
+  font-size: 16px;
+}
+h3{
+  font-size: 20px;
 }
