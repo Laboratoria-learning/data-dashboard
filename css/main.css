@@ -1,3 +1,292 @@
 /*
  * Estilos de tu proyecto
  */
+body{
+    font-family: 'PT Sans', sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display:inline-block;
+}
+
+.context {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 20px;
+}
+.bod1{
+  margin-top: 30px;
+  display: inline-block;
+  width: 1200px;
+}
+.logo {
+    width: 200px;
+    position: absolute;
+    left: 42%;
+ }
+ #btn {
+     width: 40px;
+     margin-left: 87%;
+     margin-top: 8px;
+     background-color: #fff;
+ }
+
+ #menu-princ{
+     width: 60%;
+     margin-left: 20%;
+     text-align: center;
+ }
+
+ .menu-list{
+     list-style: none;
+     padding-top: 40px;
+     padding-left: 0;
+ }
+
+.menu-bar:hover{
+     background-color: lightgrey;
+ }
+
+ .menuLink {
+     text-decoration: none;
+     color: black;
+ }
+
+ .menuLink:hover {
+     color: #fff;
+ }
+
+ .menu {
+     display: block;
+ }
+
+ .disabled-menu{
+     display: none;
+ }
+
+ .information{
+     padding-left: 80px;
+     padding-top: 20px;
+     background-color: #E8E8E7;
+
+ }
+
+ .header{
+     margin-top: 5px;
+     margin-left: 70px;
+     font-size: 35px;;
+ }
+
+.option{
+     margin: 10px;
+     font-size:20px;
+     list-style: none;
+ }
+
+.list-option{
+  padding: 0px;
+}
+
+.list-option li{
+    list-style: none;
+    display: inline-block;
+    background-color:
+}
+
+select{
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  font-weight:600;
+  height: 30px;
+  padding: 5px;
+  width: 250px;
+  outline:0px;
+}
+.located{
+  font-size: 18px;
+  font-weight:600;
+}
+input{
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  font-weight:600;
+  height: 30px;
+  padding: 5px;
+  width: 150px;
+  outline:0px;
+}
+.content-all{
+    margin-left: 100px;
+    width: 1367px;
+    background-color: #F6F6F6;
+}
+.content{
+    background-color: #F6F6F6;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-left: 5px;
+    margin-right: 60px;
+    padding-right: 50px;
+}
+.content-1{
+    display: inline-block;
+    width: 400px;
+    margin-right: 15px;
+}
+.first-box{
+    width: 400px;
+    background-color: #fff;
+    margin-right: 10px;
+}
+.second-box{
+    width: 400px;
+    background-color: #fff;
+    display: inline-block;
+    margin-right: 15px;
+}
+.third-box{
+    width: 400px;
+    background-color: #fff;
+    display: inline-block;
+}
+.tit-box{
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.img-box1{
+    width: 350px;
+    height: 206px;
+    padding-left: 20px;
+}
+.container-box{
+  display: inline-block;
+  width: 400px;
+  text-align: center;
+  overflow: hidden;
+}
+.content-section{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin:0;
+}
+.box1{
+    display: inline-block;
+    width: 180px;
+    background-color: #F6F6F6;
+}
+ .container-enrolled{
+     display: inline-block;
+ }
+ .box2{
+     display: inline-block;
+     width: 180px;
+     height: 65px;
+     background-color: #F6F6F6;
+     float: right;
+     margin-right: 12px;
+     padding-top: 15px;
+ }
+ .container-deserte{
+     display: inline-block;
+ }
+.students-currenly{
+    display: inline-block;
+    width: 130px;
+    font-size: 12px;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 5px;
+}
+.students-currenly-up{
+    display: inline-block;
+    width: 130px;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+.dropout{
+    display: block;
+    font-size: 12px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+.tech{
+   background-color: #fff;
+   padding-left: 50px;
+   padding-top: 25px;
+   margin-top: 60px;
+   font-size: 18px;
+   font-weight: 600;
+   width: 500px;
+   height: 500px;
+}
+.p{
+   margin-bottom: 0;
+}
+.content-box2{
+   display: inline-block;
+   width: 370px;
+   height: 75px;
+}
+.rectangular{
+   margin-top: 30px;
+   width: 630px;
+   height: 350px
+}
+.circle{
+   width: 300px;
+   bottom: 100px;
+   left: 130px;
+}
+.students{
+   display: inline-block;
+   left: 60%;
+   top: 90%;
+}
+.list-student{
+  width: 300px;
+  height: 150px;
+  background-color: #ffffff;
+  padding: 25px;
+  display: inline-block;
+}
+.link{
+  display: block;
+  text-align: left;
+  text-decoration: none;
+  color:#000;
+  margin-top: 10px;
+}
+.titleSpec{
+  text-align: left;
+  font-weight: bold;
+}
+.search{
+  width: 600px;
+  height: 25px;
+  background-color: #fff;
+  display: inline-block;
+  margin-left: 10px;
+}
+.list2{
+  margin: auto;
+  width: 1100px;;
+  display: inline-block;
+  text-align: center;
+}
+.box-image{
+  width: 800px;
+  background-color: #fff;
+  height: 100px;
+  display: inline-block;
+}

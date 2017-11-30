@@ -2,10 +2,153 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
     <title>Data Dashboard</title>
   </head>
   <body>
-
+      <div class="context">
+       <div class="logos"><img class="logo" src="assets/images/logo-laboratoria.svg" alt="logo-laboratoria"> </div>
+       <div>
+         <button id="btn">
+           <hr><hr><hr>
+         </button>
+         <nav id="menu-princ" class="disabled-menu">
+           <ul class="menu-list">
+            <li class="menu-bar"><a class="menuLink" href="#">ANNA DURAND</a></li>
+            <li class="menu-bar"><a class="menuLink"href="#">Add strudent</a></li>
+            <li class="menu-bar"><a class="menuLink"href="#">Remove student</a></li>
+            <li class="menu-bar"><a class="menuLink"href="#">Add sprint</a></li>
+           </ul>
+          </nav>
+       </div>
+       <div class="bod1">
+         <div class="information">
+            <select name="selection-located" id="selection-located">
+                <option  value="4">ELIGE UNA SEDE</option>
+                <option value="lim" id="lim" class="located">LIMA</option>
+                <option value="2016-II" id="generation">2016-II</option>
+                <option value="2017-I"id="generation">2017-I</option>
+                <option value="2017-II"id="generation">2017-II</option>
+                <option value="aqp"id="aqp"class="located">AREQUIPA</option>
+                <option value="aqp-2016-II"id="generation">2016-II</option>
+                <option value="aqp-2017-I"id="generation">2017-I</option>
+                <option value="cl" id="cl"class="located">SANTIAGO DE CHILE</option>
+                <option value="2016-II"id="generation">2016-II</option>
+                <option value="2017-I"id="generation">2017-I</option>
+                <option value="2017-II"id="generation">2017-II</option>
+                <option value="cdmx"id="cdmx"class="located">CIUDAD DE MEXICO</option>
+                <option value="2016-II"id="generation">2016-II</option>
+                <option value="2017-I"id="generation">2017-I</option>
+                <option value="2017-II"id="generation">2017-II</option>
+            </select>
+         <section class="options">
+           <ul class="list-option">
+             <li><input type="button" name="button-bar" data-tab-seleccionado="OVERVIEW" class="tab" value="OVERVIEW"></input></li>
+             <li><input type="button" name="button-bar" data-tab-seleccionado="STUDENTS" class="tab" value="STUDENTS"></input></li>
+             <li><input type="button" name="button-bar" data-tab-seleccionado="TEACHERS" class="tab" value="TEACHERS"></input></li>
+           </ul>
+         </section>
+        </div>
+       </div>
+     </div>
+     <section class="content-section">
+       <div class="content-all">
+         <article class="content" id="OVERVIEW">
+          <div class="first-file">
+           <div class="content-1">
+             <div class="first-box">
+               <div class="tit-box">ENROLLMENT</div>
+               <div class="container-box">
+                 <div class="box1">
+                   <div id="container-enrolled" class="students-currenly-up" ><strong>20</strong></div>
+                   <span class="students-currenly">#STUDENTS CURRENTLY ENROLLED</span>
+                 </div>
+                 <div class="box2">
+                   <div id="container-deserte"></div>
+                   <span class="dropout">% DROPOUT</span>
+                 </div>
+               </div>
+               <div class="img-box1"><img src="assets/images/bar-graph.png" alt="bargraph" class="img-box1"></div>
+             </div>
+           </div>
+             <div class="second-box">
+               <div class="tit-box">ACHIEVEMENT</div>
+               <div class="container-box">
+                 <div class="box1">
+                    <div id="point" class="students-currenly-up" ><strong>105</strong></div>
+                    <span class="students-currenly">#STUDENTS THAT MEET THE TARGET</span>
+                  </div>
+                  <div class="box2">
+                    <div id="container-deserte"></div>
+                    <span class="dropout">% OF TOTAL</span>
+                  </div>
+               </div>
+               <div class="img-box1"><img src="assets/images/graph.png" alt="graph" class="img-box1"></div>
+             </div>
+             <div class="third-box">
+                <div class="tit-box">NET PROMOTER SCORE</div>
+                <div class="container-box">
+                  <div class="box1">
+                      <div id="container-enrolled" class="students-currenly-up" ><strong>78%</strong></div>
+                      <span class="students-currenly">% CUMULATIVE NPS</span>
+                    </div>
+                    <div class="box2">
+                      <div id="container-deserte"></div>
+                      <span class="dropout">60 % Promoters <br>10 % Detractors</span>
+                    </div>
+                </div>
+                <div class="img-box1"><img src="assets/images/graph2.jpg" alt="graph" class="img-box1"></div>
+              </div>
+          </div>
+          <div class="second-file">
+            <div class="tech">
+                <p><strong>TECH SKILLS</strong></p>
+                <div class="box-enrolled">
+                    <div id="container-enrolled" class="students-currenly-up" ><strong>20</strong></div>
+                    <span class="students-currenly">#STUDENTS CURRENTLY ENROLLED</span>
+                  </div>
+                  <div class="box-deserte">
+                    <div id="container-deserte"></div>
+                    <span class="dropout">% DROPOUT</span>
+                  </div>
+            </div>
+            <div class="img-box2"><img src="assets/images/rectangular-graphic.png" alt="rectangular"></div>
+          </div>
+         </article>
+         <article class="content" id="STUDENTS">
+           <div class="list2">
+             <div class="list-student">
+               <div class="titleSpec">SPECIALIZACION :</div>
+               <a class="link" href="#">Javascript</a>
+               <a class="link" href="#">UX Design</a>
+               <a class="link" href="#">Front end Designer</a>
+             </div>
+             <div class="search">
+               <input type="text" name="" value="">
+               <div class="box-image"></div>
+             </div>
+           </div>
+        </article>
+         <article class="content" id="TEACHERS"><div class="content-3">yasssssLorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat velit commodi cupiditate quibusdam nihil blanditiis? Delectus sunt voluptatum ullam in blanditiis sint ratione nihil tempora hic mollitia, aliquam recusandae doloribus.</div></article>
+         <div class="second-file">
+          <div class="tech">
+              <p><strong>TECH SKILLS</strong></p>
+               <div class="content-box2">
+                <div class="box-enrolled">
+                    <div id="container-enrolled" class="students-currenly-up" ><strong>20</strong></div>
+                    <span class="students-currenly">#STUDENTS CURRENTLY ENROLLED</span>
+                  </div>
+                  <div class="box-deserte">
+                    <div id="container-deserte" class="container-deserte">72%</div>
+                    <span class="dropout">% DROPOUT</span>
+                  </div>
+                </div>
+                <div class="img-box2"><img src="assets/images/rectangular-graphic.png" alt="rectangular" class="rectangular"> <img src="assets/images/circle-graphic.png" alt="circle" class="circle"><div class="students"><span>#STUDENTS THAT MEET THE TARGET <br>#STUDENTS THAT DON'T MEET THE TARGET</span></div></div>
+          </div>
+       </div>
+     </section>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
