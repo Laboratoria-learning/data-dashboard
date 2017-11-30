@@ -89,7 +89,9 @@ a:hover{
   height: 100%;
   position: fixed;
   top: 0em;
+  z-index: 1;
 }
+
 /*Estilos a la Fila de Sedes */
 .list{
   height: 100%;
@@ -99,6 +101,8 @@ a:hover{
   left: 8%;
   top: 0em;
   box-shadow:5px 0px 5px #EDEDED;
+  z-index: 1;
+  background-color: #fff;
 }
 .box-list{
   margin-left: 1em;
@@ -113,11 +117,74 @@ a:hover{
 hr{
   border: 1px solid orange;
 }
-
+  /* Estadisticas */
 .stats{
-    height: 60%;
-    width: 1300px;
+    height: 75%;
+    width: 4000px;
     position: absolute;
     left: 28%;
     top: 10em;
 }
+.sub-box{
+ background-color: #fff;
+ width: 400px;
+ height: 90%;
+display: inline-block;
+float: left;
+margin-left: 10px;
+margin-top: 10px;
+
+}
+h2{
+  margin-top: 10px;
+  width:325px;
+  padding-left:30px;
+}
+.sub-box-content{
+  background-color:#EFEFEF;
+  width: 40%;
+  height:22%;
+  float: left;
+  margin-top: 30px;
+  margin-left: 20px;
+
+}
+
+.box-text{
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 55px;
+  width: 90%;
+  height: 40%;
+
+}
+
+/*Primera estadistica*/
+#chart_div{
+  width:100%;
+  height: 250px;
+  margin-top:33%;
+}
+/*Tercera estadistica*/
+.text-1{
+  margin-left: 60px;
+  margin-top: 5px;
+  width: 50%;
+  height: 25%;
+}
+
+/*Sexta estadistica*/
+.content-2{
+  background-color:#EFEFEF;
+  width: 65%;
+  height:22%;
+  float: left;
+  margin-top: 30px;
+  margin-left: 40px;
+}
+.text-2{
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 55px;
+  width: 90%;
+  height: 40%;}

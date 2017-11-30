@@ -22,7 +22,19 @@
       <!--icono de user-->
       <i class="fa fa-user-circle" aria-hidden="true"></i>
     </div>
-
+    <!--usuario-->
+    <section class="profile">
+      <div>
+        <div class="section">
+          <i class="fa fa-user-circle" aria-hidden="true"></i>
+          <span>ANNA DURAND</span>
+        </div>
+        <div class="section">Add student</div>
+        <div class="section">Remove student</div>
+        <div class="section">Add sprint</div>
+        <div class="section"></div>
+      </div>
+    </section>
     <!--Fila de Sedes y Promos-->
     <section class="list">
       <div>
@@ -74,13 +86,15 @@
         <!--icono de barra-->
       </ul>
     </nav>
-  
-      
+
+
     <section class="stats">
       <!--Estadisticas -->
+
       <select name="" id="tech-sprints">
         
       </select>
+
 
       <div class="sub-box">
         <h2>Enrollment</h2>
@@ -92,7 +106,7 @@
           <span id="dropout"></span>
           <span class="box-text">% dropout</span>
         </div>
-        <div id="chart_div" style="width: 700px; height: 400px;"></div>  
+        <div id="chart_div"></div>
       </div>
 
       <div class="sub-box">
@@ -116,16 +130,62 @@
         </div>
         <div class="sub-box-content">
           <span id="promoters"></span>
-          <span class="box-text">Promoters</span>
+          <span class="box-text text-1">Promoters</span>
           <span id="passive"></span>
-          <span class="box-text">Passive</span>
+          <span class="box-text text-1">Passive</span>
           <span id="detractors"></span>
-          <span class="box-text">Detractors</span>
+          <span class="box-text text-1">Detractors</span>
         </div>
         <!--Aca va el grafico-->
       </div>
-       
-        
+      <div class="sub-box">
+        <h2>Tech Skills</h2>
+        <div class="sub-box-content">
+          <span id="tech-skills"></span>
+          <span class="box-text"># Students that meet the target</span>
+        </div>
+        <div class="sub-box-content">
+          <span id="students-tar"></span>
+          <span class="box-text">% of total <span id="total-act">(135)</span> </span>
+        </div>
+        <!--Aca va el grafico-->
+        </div>
+        <div class="sub-box">
+          <h2>Life Skills</h2>
+          <div class="sub-box-content">
+            <span id="life-skills"></span>
+            <span class="box-text"># Overall class average</span>
+          </div>
+          <div class="sub-box-content">
+            <span id="students-tar"></span>
+            <span class="box-text">#Of students that meet the target</span>
+          </div>
+          <!--Aca va el grafico-->
+         </div>
+         <div class="sub-box">
+           <h2>Student Satisfaction</h2>
+           <div class="sub-box-content content-2">
+             <span id="student-satisfaction"></span>
+             <span class="box-text text-2">%Meeting or exceeding expextations (cumulative)</span>
+           </div>
+           <!--Aca va el grafico-->
+           </div>
+           <div class="sub-box">
+             <h2>Teacher Rating</h2>
+             <div class="sub-box-content content-2">
+               <span id="teacher-rating"></span>
+               <span class="box-text">Overall teacher rating (cumulative)</span>
+             </div>
+             <!--Aca va el grafico-->
+             </div>
+             <div class="sub-box">
+               <h2>Jedi Master Rating</h2>
+               <div class="sub-box-content content-2">
+                 <span id="JediMaster-rating"></span>
+                 <span class="box-text">Overall Jedi rating (cumulative)</span>
+               </div>
+               <!--Aca va el grafico-->
+               </div>
     </section>
 
     <!-- Google charts -->
