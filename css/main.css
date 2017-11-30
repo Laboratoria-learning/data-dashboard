@@ -1,421 +1,140 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-body {
-  background-color: #f7f7f7;
-  font-size: 18px;
-}
-
-header {
-  background: white;
-  width: 100%;
-  margin: 0 auto;
-  height: 17%;
-  overflow: hidden;
-}
-
-.start {
-  margin: 20px 5px;
-  float: left;
-}
-
-.user {
-  margin: 20px 10px;
-  float: right;
-}
-
-.logo {
-  width: 17%;
-  margin: 0 30%;
-}
-
-.logo img {
-  width: 100%;
-  
-}
-
-.user li,
-.box-main li {
-  list-style:none;
-  display: inline-block;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-}
-
-.box-header {
-  display: inline-block;
-}
-.bars:hover,
-.user .icons:hover {
-  background: #ffc107; 
-  transition: 0.3s;
-}
-
-.search {
-  padding: 6px;
-  border-radius: 3px;
-  background: #ecebeb;
-  margin-left: 5px;
-}
-
-.search input {
-  border: none;
-  background: none;
-  font-size: 13px;
-  line-height: 19px;
-  width: 200px;
-  outline: none;
-}
-
-.search:hover {
-  background: #dfdede;
-  transition: 0.3s;
-}
-
-.icons{
-  color: #575D69;
-  background-color: #f7b617;
-  border-radius: 3px;
-  margin-left: 10px; 
-  padding: 8px;
-  font-size: 22px;
-}
-
-.icons-search {
-  font-size: 22px;
-  color: #575D69; 
-  padding: 5px;
-}
-
-/*jymma*/
-.idioma {
-  position: relative;
-  top: -25px;
-  left: 60px;
-}
-
-.ale{
-  border-radius: 100%;
-  width: 65px;
-  height: 65px;
-  float: right;
-  margin-right: 20px;
-  margin-top: 10px;
-}
-
-.flag{
-width: 25px;
-height: 15px;
-  float: left;
-  margin-right: 5px;
-}
-
-/***************************************************************/
-.navegacion{
+.contst {
+width: 700px;
+height: 160px;
 position: absolute;
-top: 12%;
-left: 0;
-width: 0%;
-height: 88vh;
-background: rgba(0,0,0,.0);
+top: 40px;
+left: 80px;
+}
+#studentname{
+	font-size: 25px;
+	margin-top:10px;
+	position: relative;
+	margin-left: 220px;
+}
+#studentpic{
+	position: absolute;
 }
 
-.navegacion ul{
-width: 300px;
-height: 100%;
-background: #fff;
-list-style: none;
-position: absolute;
-top: 0;
-left: -300px;
-transition: left .3s;
+.box{
+
+	background-color: rgb(238, 204, 10);
+	width: 350px;
+	height: 140px;
+	position: absolute;
+	left:180px;	
+	border-radius: 5px;
+	margin-top: 20px;
 }
-
-.title-menu{
-padding: 20px;
-background: #ffc107;
-color: #fff;
-text-align: center;
-}
-
-.navegacion .menu a{
-display: block;
-padding: 20px;
-border-bottom: 1px solid #C6D0DA;
-color: #575D69;
-}
-
-.navegacion .menu a:hover{
-  background: #e6e6e6;
-  transition: 0.3s;
-}
-/*****menu de sedes***********************/
-
-.box-menu {
-  margin: 10px 20px;
-  width: 174px; 
-  display: inline-block;
-}
-
-.sedes {
-  text-align: center;
-}
-
-.menu-sedes li a {
-  padding: 15px 5px;
-  display: block;
-  background-color: #ffc107;
-  color: black;
-}
-
-.menu-sedes li a:hover {
-  background-color: #e0e0e0;
-  transition: 0.3s;
-}
-
-.menu-sedes li ul {
-  display: none ;
-  position: absolute;
-  min-width: 170px;
-}
-
-/* .menu-sedes >li {
-  float: left;
-} */
-
-.menu-sedes li:hover > ul {
-  display: block;
-  transition: 0.3s;
-}
-
-.menu-sedes li ul li{
-  position: relative; 
-}
-
-.menu-sedes li ul li ul{
-  right: -170px; 
-  top:  0px;
-}
-
-/*****************estilos tabs***************************/
-.tab {
-  background-color: #ffc107;
-  padding: 15px; 
-  cursor: pointer;
-}
-
-.box-button {
-  display: inline-block;
-  margin-left: 60%;
-}
-
-.box-information {
-  width: 100%;
-  height: 100vh;
-  padding: 20px;
-  text-align: justify;
-  background-color: #333333;
-  color: white;
-}
-
-.tab:hover {
-  background: #e0e0e0;
-  border-bottom: 5px solid #ffc107; 
-  transition: 0.3s;
-}
-
-.container-section {
-  overflow: hidden;
-}
-
-/***********************************************************************************jymma************************/
-main{
-  position: absolute;
-  z-index:-1;
-}
-
-/*Contenedor Título*/
-.title-container {
-	width: 100%;
-	margin-top: 50px;
-  margin-left: 100px;
-}
-
-/*Título*/
-.title {
-	font-size: 35px;
-	padding-bottom: 10px;
-	text-transform: uppercase;
-	display: inline-block;
-  margin-top: 20px;
-}
-
-.subtitle {
-	color: #FFC107;
-	font-size: 35px;
-	font-weight: 500;
-	padding-bottom: 10px;
-	text-transform: uppercase;
-  display: inline-block;
-  margin-top:90px;
-  position: relative;
-  margin-left: 10px;
-}
-
-/*Containers*/
-.container {
-	background-color: #ededed;
-	min-width: 26%;
-	border-radius: 4px;
-	float: left;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
-}
-
-/*Inscripción*/
-.enrollment {
-  max-width: 26%;
-  height: 338px;
-  padding: 20px;
-  margin: 10px 0px;
-  margin-left: 100px;
-}
-
-
-.enrollment-title {
+p{
 	font-size: 20px;
-	padding-bottom: 10px;
-	text-transform: uppercase;
+}
+.sprint1 {
+width: 155px;
+height: 90px;
+left: 53px;
+border-radius: 5px;
+position: absolute;
 }
 
-.enrollment-info {
-	background-color: #FFF;
-	border-radius: 4px;
-  min-height: 73px;
-  padding: 9px
+.sprint2 {
+position: absolute;
+margin-left: 400px;
+border-radius: 5px;
 }
 
-.total-enrollment {
-	text-align: center;
-  font-weight: bold;
-  color: #ffc107;
-  font-size: 23px;
-  padding-bottom: 5px;
-  padding-top: 5px;
-}
 
-.text-enrollment {
-	font-size: 11px;
-  text-transform: uppercase;
-  font-weight: 500;
-  color: black;
-  text-align: center;
-}
+.contst2 {
+  width: 700px;
+	height: 160px;
+	position: absolute;
+	top: 250px;
+	left: 80px;
 
-/*FLotar Izquierda*/
-.izq {
-	float: left;
 }
+	
+.contst3 {
+	width: 700px;
+	height: 160px;
+	position: absolute;
+	top: 480px;
+	left: 80px;
 
-/*Flotar Derecha*/
-.der {
-	float: right;
 }
-
-.red {
-	color: Crimson;
+.contst4 {
+  width: 700px;
+	height: 160px;
+	position: relative;
+	left: 700px;
+	margin-top:20px;
+	top: 40px;
 }
+	
+.contst5 {
+	width: 700px;
+	height: 160px;
+	position: absolute;
+	left: 700px;
+	padding:60px;
+	top: 200px;
 
-/*Contenedor de Pocentajes por Sprint*/
-.achievement {
-	min-width: 29%;
-	height: 338px;
-  padding: 20px;
-  margin: 10px 20px;
-  margin-left: 35px;
 }
-
-.blue {
-	color: blue;
+.contst6 {
+	width: 700px;
+	height: 160px;
+	position: absolute;
+	left: 700px;
+	padding: 60px;
+	top: 450px;
 }
+img{
+	width: 20%;
+	height: 70%;
 
-/*Promote Container*/
-.promote {
-	min-width: 22%;
-  height: 338px;
-  padding: 20px;
-  margin: 10px 0px;
-  margin-left: 35px;
 }
-
-.alignleft {
-	text-align: left;
-	padding-bottom: 8px;
+.box2{
+	background-color: rgb(238, 204, 10);
+	width: 350px;
+	height: 140px;
+	position: absolute;
+	left:180px;	
+	border-radius: 5px;
+	margin-top: 10px;
 }
-
-/*Gráfico Inscripción*/
-.enrollment-graph {
-	background-image: url(../assets/images/bar-graph.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-	width: 294px;
-  height: 226px;
-  margin-top: 89px;
-  margin-left: px;
+.box3{
+	background-color: rgb(238, 204, 10);
+	width: 350px;
+	height: 140px;
+	position: absolute;
+	left:200px;	
+	border-radius: 5px;
+	margin-top: 20px;
 }
-
-/*Gráfico Achievement*/
-.achievement-graph {
-	background-image: url(../assets/images/circle-graphic.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-	width: 200px;
-  height: 200px;
-  margin-top: 89px;
-  margin-left: 60px;
+.box4{
+	background-color: rgb(238, 204, 10);
+	width: 350px;
+	height: 140px;
+	position: absolute;
+	left:250px;	
+	border-radius: 5px;
+	margin-top: 20px;
 }
-
-/*Gráfico Promote*/
-.promote-graph {
-	background-image: url(../assets/images/graph.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-	width: 252px;
-  height: 226px;
-	margin-top: 114px;
+.box5{
+	background-color: rgb(238, 204, 10);
+	width: 350px;
+	height: 140px;
+	position: absolute;
+	left:250px;	
+	border-radius: 5px;
+	margin-top: 20px;
 }
+.box6{
+	background-color: rgb(238, 204, 10);
+	width: 350px;
+	height: 140px;
+	position: absolute;
+	left:250px;	
+	border-radius: 5px;
+	margin-top: 20px;
 
-/*Contenedor Tech*/
-.tech {
- 	margin-left: 180px;
- 	margin-top: 17px;
- 	min-width: 900px;
- 	padding: 20px;
 }
-
-/*Gráficos Tech*/
-.tech-graph {
-	background-image: url(../assets/images/rectangular-graphic.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-  width: 600px;
-  height: 300px;
-  margin-top: 60px;
-  float: right;
-  margin-left: 30px;
-}
-
-/*margin*/
-.marg {
-	margin-right: 20px;
-}
-
-/**************************************jymma*****************************/
