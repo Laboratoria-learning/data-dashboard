@@ -94,55 +94,6 @@ window.addEventListener('load', function() {
           containerParagraph[1].appendChild(numberApproved);
         });
       }
-      /* Este evento trae la data del total de alumnas, total de desercion y activas */ 
-      var generations = document.getElementsByClassName('generations');
-      for (var a = 0; a < generations.length; a++) {
-        generations[a].addEventListener('click', function() {
-          var secondContainer = document.getElementById('second-container');
-          var containerParagraph = document.getElementsByClassName('container-paragraph');
-                
-          var totalDesertion = 0;
-          var totalActive = 0; 
-          for (var i = 0; i < Object.keys(data).length; i++) {
-            for (var a = 0; a < Object.keys(data[Object.keys(data)[i]]).length; a++) {
-              total = (Object.values((Object.values(Object.values(data)[i]))[a])[0].length);
-              var numberStudent = document.createElement('p');
-              numberStudent.className = 'number';
-              var textNumberStudent = document.createTextNode(total);  
-                                               
-              numberStudent.appendChild(textNumberStudent);
-              containerParagraph[0].appendChild(numberStudent);
-              
-              for (var b = 0; b < Object.values((Object.values(Object.values(data)[i]))[a])[0].length; b++) {
-                if (Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[2]) {
-                  totalActive = totalActive + 1;
-                } else {
-                  totalDesertion = totalDesertion + 1;
-                }
-              }  
-              var numberApproved = document.createElement('p');
-              numberApproved.className = 'number';
-              var numberApprovedStudent = document.createTextNode(totalActive);  
-            
-              var numberDesertion = document.createElement('p');
-              numberDesertion.className = 'number';
-              var numberDesertionStudent = document.createTextNode(totalDesertion); 
-              numberDesertion.appendChild(numberDesertionStudent);
-              containerParagraph[1].appendChild(numberDesertion);
-              numberApproved.appendChild(numberApprovedStudent);
-              containerParagraph[2].appendChild(numberApproved);
-            }
-          }
-          if (sedes.classList.contains('hide')) {
-            sedes.classList.remove('hide');
-            sedes.classList.add('show');
-          } else {
-            sedes.textContent = '';        
-            sedes.classList.remove('show');
-            sedes.classList.add('hide');
-          } 
-        });
-      }
     }
     if (sedes.classList.contains('hide')) {
       sedes.classList.remove('hide');
@@ -162,9 +113,9 @@ function drawChart() {
 
   var data = google.visualization.arrayToDataTable([
     ['Sedes', 'Total de alumnas'],
-    ['Arequipa',     30],
-    ['Santiago de Chile',      95],
-    ['Ciudad de México',  70],
+    ['Arequipa', 30],
+    ['Santiago de Chile', 95],
+    ['Ciudad de México', 70],
     ['Lima', 66],
   ]);
 
@@ -176,14 +127,14 @@ function drawChart() {
 
   chart.draw(data, options);
 
-  google.charts.load("current", {packages:["corechart"]});
+  google.charts.load('current', {packages:['corechart']});
   google.charts.setOnLoadCallback(drawChart);
   function drawChart() {
     var data = google.visualization.arrayToDataTable([
       ['Desercion', 'Total y porcentaje'],
-      ['Arequipa',     51],
-      ['Santiago de Chile',      27],
-      ['Ciudad de México',  18],
+      ['Arequipa', 51],
+      ['Santiago de Chile', 27],
+      ['Ciudad de México', 18],
       ['Lima', 59],
     ]);
 
@@ -195,6 +146,4 @@ function drawChart() {
     var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
     chart.draw(data, options);
   };
-
-
 };
