@@ -55,7 +55,13 @@ function changeTitle() {
     drawCurrently(attend, 35 - attend);
     var sprint1 = data['LIM']['2016-2']['ratings'][0]['nps']['promoters'];
     var sprint2 = data['LIM']['2016-2']['ratings'][1]['nps']['promoters'];
+    var sprint1Teacher = data['LIM']['2016-2']['ratings'][0]['teacher'];
+    var sprint2Teacher = data['LIM']['2016-2']['ratings'][1]['teacher'];
+    var sprint1Jedi = data['LIM']['2016-2']['ratings'][0]['jedi'];
+    var sprint2Jedi = data['LIM']['2016-2']['ratings'][1]['jedi'];
     drawPromoter(sprint1, sprint2, 0, 0);
+    drawTeacher(sprint1Teacher, sprint2Teacher, 0, 0);
+    drawJedi(sprint1Jedi,sprint2Jedi,0,0);
     break;
   case 'lim2017I':
     titleSelector.textContent = 'Lima 2017-I';
@@ -71,7 +77,17 @@ function changeTitle() {
     var sprint2 = data['LIM']['2017-1']['ratings'][1]['nps']['promoters'];
     var sprint3 = data['LIM']['2017-1']['ratings'][2]['nps']['promoters'];
     var sprint4 = data['LIM']['2017-1']['ratings'][3]['nps']['promoters'];
-    drawPromoter(sprint1, sprint2, sprint3, sprint4);
+    var sprint1Teacher = data['LIM']['2017-1']['ratings'][0]['teacher'];
+    var sprint2Teacher = data['LIM']['2017-1']['ratings'][1]['teacher'];
+    var sprint3Teacher = data['LIM']['2017-1']['ratings'][2]['teacher'];
+    var sprint4Teacher = data['LIM']['2017-1']['ratings'][3]['teacher'];
+    var sprint1Jedi = data['LIM']['2017-1']['ratings'][0]['jedi'];
+    var sprint2Jedi = data['LIM']['2017-1']['ratings'][1]['jedi'];
+    var sprint3Jedi = data['LIM']['2017-1']['ratings'][2]['jedi'];
+    var sprint4Jedi = data['LIM']['2017-1']['ratings'][3]['jedi'];
+    drawPromoter(sprint1, sprint2, sprint3r, sprint4);
+    drawTeacher(sprint1Teacher,sprint2Teacher,sprint3Teacher,sprint4Teacher);
+    drawJedi(sprint1Jedi,sprint2Jedi,sprint3Jedi,sprint4Jedi);
     break;
   case 'lim2017II':
     titleSelector.textContent = 'Lima 2017-II';
@@ -84,8 +100,14 @@ function changeTitle() {
     var attend = parseInt(calculateCurrently('LIM', 14, '2017-2'));
     var sprint1 = data['LIM']['2017-2']['ratings'][0]['nps']['promoters'];
     var sprint2 = data['LIM']['2017-2']['ratings'][1]['nps']['promoters'];
+    var sprint1Teacher = data['LIM']['2017-2']['ratings'][0]['teacher'];
+    var sprint2Teacher = data['LIM']['2017-2']['ratings'][1]['teacher'];
+    var sprint1Jedi = data['LIM']['2017-2']['ratings'][0]['jedi'];
+    var sprint2Jedi = data['LIM']['2017-2']['ratings'][1]['jedi'];
     drawPromoter(sprint1, sprint2, 0, 0);
     drawCurrently(attend, 14 - attend);
+    drawTeacher(sprint1Teacher,sprint2Teacher, 0, 0);
+    drawJedi(sprint1Jedi,sprint2Jedi, 0, 0);
     break;
   case 'are2016II':
     titleSelector.textContent = 'Arequipa 2016-II';
@@ -100,8 +122,18 @@ function changeTitle() {
     var sprint2 = data['AQP']['2016-2']['ratings'][1]['nps']['promoters'];
     var sprint3 = data['AQP']['2016-2']['ratings'][2]['nps']['promoters'];
     var sprint4 = data['AQP']['2016-2']['ratings'][3]['nps']['promoters'];
+    var sprint1Teacher = data['AQP']['2016-2']['ratings'][0]['teacher'];
+    var sprint2Teacher = data['AQP']['2016-2']['ratings'][1]['teacher'];
+    var sprint3Teacher = data['AQP']['2016-2']['ratings'][2]['teacher'];
+    var sprint4Teacher = data['AQP']['2016-2']['ratings'][3]['teacher'];
+    var sprint1Jedi = data['AQP']['2016-2']['ratings'][0]['jedi'];
+    var sprint2Jedi = data['AQP']['2016-2']['ratings'][1]['jedi'];
+    var sprint3Jedi = data['AQP']['2016-2']['ratings'][2]['jedi'];
+    var sprint4Jedi = data['AQP']['2016-2']['ratings'][3]['jedi'];
     drawCurrently(attend, 15 - attend);
     drawPromoter(sprint1, sprint2, sprint3, sprint4);
+    drawTeacher(sprint1Teacher,sprint2Teacher,sprint3Teacher,sprint4Teacher);
+    drawJedi(sprint1Jedi,sprint2Jedi,sprint3Jedi,sprint4Jedi);
     break;
   case 'are2017I':
     titleSelector.textContent = 'Arequipa 2017-I';
@@ -115,8 +147,16 @@ function changeTitle() {
     var sprint1 = data['AQP']['2017-1']['ratings'][0]['nps']['promoters'];
     var sprint2 = data['AQP']['2017-1']['ratings'][1]['nps']['promoters'];
     var sprint3 = data['AQP']['2017-1']['ratings'][2]['nps']['promoters'];
+    var sprint1Teacher = data['AQP']['2017-1']['ratings'][0]['teacher'];
+    var sprint2Teacher = data['AQP']['2017-1']['ratings'][1]['teacher'];
+    var sprint3Teacher = data['AQP']['2017-1']['ratings'][2]['teacher'];
+    var sprint1Jedi = data['AQP']['2017-1']['ratings'][0]['jedi'];
+    var sprint2Jedi = data['AQP']['2017-1']['ratings'][1]['jedi'];
+    var sprint3Jedi = data['AQP']['2017-1']['ratings'][2]['jedi'];
     drawCurrently(attend, 15 - attend);
     drawPromoter(sprint1, sprint2, sprint3, 0);
+    drawTeacher(sprint1Teacher,sprint2Teacher,sprint3Teacher,0);
+    drawJedi(sprint1Jedi,sprint2Jedi,sprint3Jedi,0);
     break;
   case 'chi2016II':
     titleSelector.textContent = 'Chile 2016-II';
@@ -131,8 +171,13 @@ function changeTitle() {
     var sprint2 = data['SCL']['2016-2']['ratings'][1]['nps']['promoters'];
     var sprint3 = data['SCL']['2016-2']['ratings'][2]['nps']['promoters'];
     var sprint4 = data['SCL']['2016-2']['ratings'][3]['nps']['promoters'];
+    var sprint1Jedi = data['SCL']['2016-2']['ratings'][0]['jedi'];
+    var sprint2Jedi = data['SCL']['2016-2']['ratings'][1]['jedi'];
+    var sprint3Jedi = data['SCL']['2016-2']['ratings'][2]['jedi'];
+    var sprint4Jedi = data['SCL']['2016-2']['ratings'][3]['jedi'];
     drawCurrently(attend, 11 - attend);
     drawPromoter(sprint1, sprint2, sprint3, sprint4);
+    drawJedi(sprint1Jedi,sprint2Jedi,sprint3Jedi,sprint4Jedi);
     break;
   case 'chi2017I':
     titleSelector.textContent = 'Chile 2017-I';
@@ -146,8 +191,16 @@ function changeTitle() {
     var sprint1 = data['SCL']['2017-1']['ratings'][0]['nps']['promoters'];
     var sprint2 = data['SCL']['2017-1']['ratings'][1]['nps']['promoters'];
     var sprint3 = data['SCL']['2017-1']['ratings'][2]['nps']['promoters'];
+    var sprint1Teacher = data['SCL']['2017-1']['ratings'][0]['teacher'];
+    var sprint2Teacher = data['SCL']['2017-1']['ratings'][1]['teacher'];
+    var sprint3Teacher = data['SCL']['2017-1']['ratings'][0]['teacher'];
+    var sprint1Jedi = data['SCL']['2017-1']['ratings'][0]['jedi'];
+    var sprint2Jedi = data['SCL']['2017-1']['ratings'][1]['jedi'];
+    var sprint3Jedi = data['SCL']['2017-1']['ratings'][2]['jedi'];
     drawCurrently(attend, 23 - attend);
     drawPromoter(sprint1, sprint2, sprint3, 0);
+    drawTeacher(sprint1Teacher,sprint2Teacher,sprint3Teacher,0);
+    drawJedi(sprint1Jedi,sprint2Jedi,sprint3Jedi, 0);
     break;
   case 'chi2017II':
     titleSelector.textContent = 'Chile 2017-II';
@@ -160,8 +213,14 @@ function changeTitle() {
     var attend = parseInt(calculateCurrently('SCL', 59, '2017-2'));
     var sprint1 = data['SCL']['2017-2']['ratings'][0]['nps']['promoters'];
     var sprint2 = data['SCL']['2017-2']['ratings'][1]['nps']['promoters'];
+    var sprint1Teacher = data['SCL']['2017-2']['ratings'][0]['teacher'];
+    var sprint2Teacher = data['SCL']['2017-2']['ratings'][1]['teacher'];
+    var sprint1Jedi = data['SCL']['2017-2']['ratings'][0]['jedi'];
+    var sprint2Jedi = data['SCL']['2017-2']['ratings'][1]['jedi'];
     drawPromoter(sprint1, sprint2, 0, 0);
     drawCurrently(attend, 59 - attend);
+    drawTeacher(sprint1Teacher, sprint2Teacher, 0, 0);
+    drawJedi(sprint1Jedi,sprint2Jedi, 0, 0);
     break;
   case 'mex2017I':
     titleSelector.textContent = 'Mexico 2017-I';
@@ -175,8 +234,16 @@ function changeTitle() {
     var sprint1 = data['CDMX']['2017-1']['ratings'][0]['nps']['promoters'];
     var sprint2 = data['CDMX']['2017-1']['ratings'][1]['nps']['promoters'];
     var sprint3 = data['CDMX']['2017-1']['ratings'][2]['nps']['promoters'];
+    var sprint1Teacher = data['CDMX']['2017-1']['ratings'][0]['teacher'];
+    var sprint2Teacher = data['CDMX']['2017-1']['ratings'][1]['teacher'];
+    var sprint3Teacher = data['CDMX']['2017-1']['ratings'][0]['teacher'];
+    var sprint1Jedi = data['CDMX']['2017-1']['ratings'][0]['jedi'];
+    var sprint2Jedi = data['CDMX']['2017-1']['ratings'][1]['jedi'];
+    var sprint3Jedi = data['CDMX']['2017-1']['ratings'][2]['jedi'];
     drawPromoter(sprint1, sprint2, sprint3, 0);
     drawCurrently(attend, 24 - attend);
+    drawTeacher(sprint1Teacher,sprint2Teacher,sprint3Teacher, 0);
+    drawJedi(sprint1Jedi,sprint2Jedi,sprint3Jedi, 0);
     break;
   case 'mex2017II':
     titleSelector.textContent = 'Mexico 2017-II';
@@ -189,8 +256,14 @@ function changeTitle() {
     var attend = parseInt(calculateCurrently('CDMX', 46, '2017-2'));
     var sprint1 = data['CDMX']['2017-2']['ratings'][0]['nps']['promoters'];
     var sprint2 = data['CDMX']['2017-2']['ratings'][1]['nps']['promoters'];
+    var sprint1Teacher = data['CDMX']['2017-2']['ratings'][0]['teacher'];
+    var sprint2Teacher = data['CDMX']['2017-2']['ratings'][1]['teacher'];
+    var sprint1Jedi = data['CDMX']['2017-2']['ratings'][0]['jedi'];
+    var sprint2Jedi = data['CDMX']['2017-2']['ratings'][1]['jedi'];
     drawPromoter(sprint1, sprint2, 0, 0);
     drawCurrently(attend, 46 - attend);
+    drawTeacher(sprint1Teacher,sprint2Teacher, 0, 0);
+    drawJedi(sprint1Jedi,sprint2Jedi);
     break;
   }
 }
@@ -290,36 +363,57 @@ function calculateAchievement(sede, year) {
 
 function TechSkill() {
   var valueSelector = comboBox.value;
+  var grafyMeet;
   switch (valueSelector) {
   case 'lim2016II':
     calculateTech('LIM', '2016-2', 2);
+    grafyMeet = calculateTech('LIM', '2016-2', 2);
+    drawTechSkill(grafyMeet, 35 - grafyMeet);
     break;
   case 'lim2017I':
     calculateTech('LIM', '2017-1', 4);
+    grafyMeet = calculateTech('LIM', '2017-1', 4);
+    drawTechSkill(grafyMeet, 17 - grafyMeet);
     break;
   case 'lim2017II':
     calculateTech('LIM', '2017-2', 2); 
+    grafyMeet = calculateTech('LIM', '2017-2', 2);
+    drawTechSkill(grafyMeet, 14 - grafyMeet);
     break;
   case 'are2016II':
     calculateTech('AQP', '2016-2', 4);
+    grafyMeet = calculateTech('AQP', '2016-2', 4);
+    drawTechSkill(grafyMeet, 15 - grafyMeet);
     break;
   case 'are2017I':
     calculateTech('AQP', '2017-1', 3); 
+    grafyMeet = calculateTech('AQP', '2017-1', 3);
+    drawTechSkill(grafyMeet, 15 - grafyMeet); 
     break;
   case 'chi2016II':
     calculateTech('SCL', '2016-2', 4);  
+    grafyMeet = calculateTech('SCL', '2016-2', 4);
+    drawTechSkill(grafyMeet, 11 - grafyMeet);  
     break;
   case 'chi2017I':
-    calculateTech('SCL', '2017-1', 3);  
+    calculateTech('SCL', '2017-1', 3); 
+    grafyMeet = calculateTech('SCL', '2017-1', 3);
+    drawTechSkill(grafyMeet, 23 - grafyMeet);
     break;
   case 'chi2017II':
     calculateTech('SCL', '2017-2', 2);
+    grafyMeet = calculateTech('SCL', '2017-2', 2);
+    drawTechSkill(grafyMeet, 61 - grafyMeet);
     break;
   case 'mex2017I':
     calculateTech('CDMX', '2017-1', 3);
+    grafyMeet = calculateTech('CDMX', '2017-1', 3);
+    drawTechSkill(grafyMeet, 24 - grafyMeet);
     break;
   case 'mex2017II':
-    calculateTech('CDMX', '2017-2', 2);  
+    calculateTech('CDMX', '2017-2', 2);
+    grafyMeet = calculateTech('CDMX', '2017-2', 2);
+    drawTechSkill(grafyMeet, 46 - grafyMeet);
     break;
   }
 }
@@ -379,6 +473,7 @@ function calculateTech(sede, year, numSprint) {
     percentSprint = ((sumSprintOne * 100) / cantEstudents).toFixed(0);
     studentCurrentlySkill.innerHTML = '<b>' + sumSprintOne + '</b>' + '<br> # students that meet the target';
     totalSkill.innerHTML = '<b>' + percentSprint + '</b>' + '<br> % of total (' + cantEstudents + ')';
+    return sumSprintOne;
     break;
   case 'sprint2':
     var sumSprintTwo = 0;
@@ -394,6 +489,7 @@ function calculateTech(sede, year, numSprint) {
     percentSprint = ((sumSprintTwo * 100) / cantEstudents).toFixed(0);
     studentCurrentlySkill.innerHTML = '<b>' + sumSprintTwo + '</b>' + '<br> # students that meet the target';
     totalSkill.innerHTML = '<b>' + percentSprint + '</b>' + '<br> % of total (' + cantEstudents + ')';
+    return sumSprintTwo;
     break;  
   case 'sprint3':
     if (numSprint > 2) {
@@ -410,6 +506,7 @@ function calculateTech(sede, year, numSprint) {
       percentSprint = ((sumSprintThree * 100) / cantEstudents).toFixed(0);
       studentCurrentlySkill.innerHTML = '<b>' + sumSprintThree + '</b>' + '<br> # students that meet the target';
       totalSkill.innerHTML = '<b>' + percentSprint + '</b>' + '<br> % of total (' + cantEstudents + ')';
+      return sumSprintThree;
     } else {
       totalSkill.innerHTML = '';
       studentCurrentlySkill.innerHTML = '';
@@ -431,6 +528,7 @@ function calculateTech(sede, year, numSprint) {
       percentSprint = ((sumSprintFour * 100) / cantEstudents).toFixed(0);
       studentCurrentlySkill.innerHTML = '<b>' + sumSprintFour + '</b>' + '<br> # students that meet the target';
       totalSkill.innerHTML = '<b>' + percentSprint + '</b>' + '<br> % of total (' + cantEstudents + ')';
+      return sumSprintFour;
     } else {
       totalSkill.innerHTML = '';
       studentCurrentlySkill.innerHTML = '';
@@ -534,6 +632,20 @@ function drawCurrently(attend, noAttend) {
   chart.draw(data, options);
 }
 
+function drawTechSkill(meet, noMeet) {
+  var data = google.visualization.arrayToDataTable([
+    ['Tech Skill', 'Number Student'],
+    ['student that meet the target', meet],
+    ['student that do not meet the target', noMeet],
+  ]);
+  var options = {
+    'width': 600,
+    'height': 400};
+
+  var chart = new google.visualization.PieChart(document.getElementById('grafy-tech'));
+  chart.draw(data, options);
+
+}
 function drawPromoter(num1, num2 , num3, num4) {  
   var data = google.visualization.arrayToDataTable([
     ['Element', '#', { role: 'annotation' } ],
@@ -548,6 +660,40 @@ function drawPromoter(num1, num2 , num3, num4) {
     'width': 300,
     'height': 230};
   var chart = new google.charts.Bar(document.getElementById('grafy-promoter'));
+  chart.draw(data, google.charts.Bar.convertOptions(options));
+}
+
+function drawTeacher(num1, num2, num3, num4) {
+  var data = google.visualization.arrayToDataTable([
+    ['Element', '#', { role: 'annotation' } ],
+    ['Sprint1', num1, 'sprin1' ],
+    ['Sprint2', num2, 'sprint2' ],
+    ['Sprint3', num3, 'sprint3' ],
+    ['Sprint4', num4, 'sprint4' ],
+  ]);
+
+  var options = {
+    title: 'Teacher score by sprint',
+    'width': 300,
+    'height': 200};
+  var chart = new google.charts.Bar(document.getElementById('grafy-teacher'));
+  chart.draw(data, google.charts.Bar.convertOptions(options));
+}
+
+function drawJedi(num1, num2, num3, num4) {
+  var data = google.visualization.arrayToDataTable([
+    ['Element', '#', { role: 'annotation' } ],
+    ['Sprint1', num1, 'sprin1' ],
+    ['Sprint2', num2, 'sprint2' ],
+    ['Sprint3', num3, 'sprint3' ],
+    ['Sprint4', num4, 'sprint4' ],
+  ]);
+
+  var options = {
+    title: 'Jedi Master score by sprint',
+    'width': 300,
+    'height': 200};
+  var chart = new google.charts.Bar(document.getElementById('grafy-jedi'));
   chart.draw(data, google.charts.Bar.convertOptions(options));
 }
 
