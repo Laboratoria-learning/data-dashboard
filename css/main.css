@@ -92,6 +92,7 @@
     margin: 5px;
     margin-top: 20px;
     background:#f7f7f7;
+    text-align: center;
  }
 
  .skill{
@@ -116,10 +117,6 @@
 
  .inline-block{
      display: inline-block;
- }
-
- .skill p{
-     font-size: 20px;
  }
 
  .none{
@@ -264,6 +261,7 @@
     font-size: 20px;
   }
 
+<<<<<<< HEAD
   #img-container .remove{
   display:inline-block;
   background-color:#f7b617;
@@ -280,9 +278,11 @@
   position: relative; */
 }
 
+=======
+>>>>>>> ebf7e8536b47d68bf6a708a1dbe834afe5ab27d7
 .container-grafy{
   width: 300px;
-  height: 200px;
+  height: 230px;
   left:50%;
   transform: translateX(-50%);
   position: relative;
