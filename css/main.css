@@ -1,3 +1,290 @@
 /*
  * Estilos de tu proyecto
  */
+/* Se utiliza un selector universal para 
+remover cualquier estilo anterior de los elementos  */
+* {
+	border: none;
+	font-family: 'Roboto', sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+
+.container {
+	width: 100%;
+	height: 65px;
+	/* background-color: #ffc107; */
+	color: #333333;
+	font-size: 16px;
+	text-align: center;
+	vertical-align: middle;
+	/* padding-left: 24px; */
+	/* padding-right: 24px; */
+	line-height: 1.71429;
+	outline: 1px solid #EBEBEB;
+}
+
+.container img {
+    width: 200px;
+    height: 65px;
+    margin-left: 39%;
+    float: left;
+    align-self: center;
+}
+#menu{
+	width: 300px;
+	position: absolute;
+	right: 20px;
+	text-transform: uppercase;
+	color: #000;
+	
+	
+}
+#menu ul li a:hover {
+	color: #FAB133;
+}
+#menu ul li{
+    background: none;
+    display: inline-block;
+    font-weight: 800;
+
+}
+
+#unete{
+    margin-right: 22px;
+}
+#menu ul{
+	margin-top: 18px;
+    margin-left: 145px;
+
+}
+
+.bars{
+    display: inline-block;
+    padding: 10px;
+    margin-top: 9px;
+}
+input{
+	width: 162px;
+	height: 22px;
+	background-color: #FFF;
+	border-radius: 6px;
+	border: 1px solid #EBEBEB;
+	display: inline-block;
+	
+	
+}
+.busqueda i{
+	margin-right: 20px;
+
+}
+.busqueda{
+	margin-right: 0px;
+	display: inline-block;
+	margin-top: 10px;
+}
+
+.superior{
+text-align: center;
+    padding: 20px;
+    background-color: grey;
+}
+.imagenes{
+    width: 220px;
+    height: 90px;
+    background-color: #FAA818;
+    border-radius: 15px;
+   font-size: 22px;
+   display: inline-block;
+   margin-left: 15px;
+
+}
+.imagenes i{
+    width: 65px;
+    height: 65px;
+    font-size: 50px;
+    float: left;
+    align-self: center;
+    padding: 12px;
+    padding-top: 13px;
+}
+
+.imagenes p{
+	text-align: center;
+    padding: 10px;
+}
+
+
+.graficoss{
+	text-align: center;
+
+
+}
+.content{
+	text-align: center;
+}
+
+.content img{
+	display: inline-block;
+	margin: 40px;
+} 
+
+.container .fa{
+	color: #EBEBEB;
+}
+/*inicio del Footer*/
+footer{
+	background-color: #333333;
+	width:100%;
+	height:300px;
+	position: absolute;
+}
+/*Iconos*/
+.redes-sociales{
+	text-align: center;
+}    
+.redes-sociales .icons h3{
+	color: #F7B617;
+	padding: 30px;
+	text-transform: uppercase;
+}
+.redes-sociales a{
+	float: left;
+    width: 100px;
+
+}
+.icons{
+	display: inline-block;
+	margin:30px;
+}
+
+.redes-sociales a i{
+    font-size: 40px;
+    color: #FFF;
+    padding: 20px;
+}
+
+.redes-sociales a i:hover{
+	color: #F7B617 ;
+}
+.copyright{
+    color: #FFF;
+    font-size: 15px;
+}
+
+/* Menu */
+
+nav {
+	width: 150px;
+	text-align: center;
+}
+.Mexico{
+	position: absolute;
+    left: 432px;
+    top: 272px;
+}
+.Mexico img{
+    width: 100px;
+    height: 100px;
+    margin-left: 148px;
+    margin-bottom: -115px;
+}
+
+.Arequipa{
+    position: absolute;
+    left: 464px;
+    top: 402px;
+}
+.Arequipa img{
+    width: 150px;
+    height: 100px;
+    margin-left: 149px;
+    margin-bottom: -121px;
+}
+.Lima{
+	position: absolute;
+    left: 905px;
+    top: 374px;
+}
+.Lima img{
+width: 150px;
+    height: 100px;
+    margin-left: -302px;
+    margin-bottom: -105px;
+}
+.Santiago{
+    position: absolute;
+    left: 924px;
+    top: 483px;
+}
+.Santiago img{
+    width: 150px;
+    height: 100px;
+    margin-left: -298px;
+    margin-bottom: -121px;
+}
+
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	line-height: 30px;
+}
+li{
+	background: grey;
+
+}
+a{
+	display: block;
+	text-decoration: none;
+	color: #000;
+}
+a:active{
+	background:#333;
+	color: #FFF; 
+}
+ul li:first-child{
+	background: #f9a91a;
+	
+}
+
+ul li:first-child a:hover {
+	color:#000;
+	
+}
+ul li:first-child a:active {
+	color:#FFF;
+	
+}
+
+
+
+.graficos{
+	text-align: center;
+	background-color: #F7F7F7;
+}
+
+#piechart{
+	display: inline-block;
+    margin: 30px;
+
+}
+#chart_div{
+	display: inline-block;
+    margin: 30px;
+}
+
+#donut_single{
+	display: inline-block;
+    margin: 30px;
+}
+#curve_chart{
+	display: inline-block;
+    margin: 30px;
+}
+
+#curve_chart2{
+	display: inline-block;
+    margin: 30px;
+}
+

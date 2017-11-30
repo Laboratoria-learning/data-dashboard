@@ -1,25 +1,41 @@
-# Data Dashboard
+# Data-Dashboard
 
-* **Track:** _Common Core_
-* **Curso:** _Creando tu primer sitio web interactivo_
-* **Unidad:** _Producto final_
+* **Sprint:** _Número 02 =D_
+
+* **Unidad:** _Creando Interacción con JavaScript_
+
 
 ***
 
-## Flujo de trabajo
 
-1. Debes realizar un [**fork**](https://gist.github.com/ivandevp/1de47ae69a5e139a6622d78c882e1f74)
-   de este repositorio.
+## Objetivo
 
-2. Luego deberás **clonar** tu fork en tu máquina. Recuerda que el comando a usar
-   es `git clone` y su estructura normalmente se ve así:
+El reto consistió en realizar un **Data-Dashboard** para laboratoria:
 
-   ```bash
-   git clone https://github.com/<nombre-de-usuario>/freelancer.git
-   ```
+## Consideraciones
 
-3. Cuando hayas terminado tu producto, envía un Pull Request a este repositorio
-   (puedes solicitar apoyo de tus profes para este paso).
+* El proyecto está compuesto por una serie de archivos entre los cuales se
+encuentra el archivo base `index.html` el cual está enlazado con el
+stylesheet (CSS).
 
-> Nota: No olvides que es una buena práctica describir tu proyecto en este
-> archivo `README.md` y también desplegar tu web a Github Pages :smiley:.
+* Dentro de la carpeta `css` se encuentra el archivo `style.css` donde están 
+ubicados los estilos contemplados dentro del proyecto.
+
+* Las imágenes empleadas se encuentran dentro de la carpeta `img`.
+
+* Los iconos empleados se encuentran dentro de las carpetas `icomoon`y
+las fuentes dentro de`font-awesome-4.7.0`.
+
+## A tener en cuenta
+
+El diseño o maquetado de la página web se encuentra distribuido de la siguiente
+manera:
+
+* Un header que se encuentra en la parte superior
+de la página.
+
+* Un Section que contiene el mapa junto con la data.
+
+* Un footer con las direcciones de las redes sociales.
+
+
