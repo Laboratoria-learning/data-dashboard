@@ -274,6 +274,29 @@ padding: 5px 15px;
   text-align: right;
   font-size: 19px;
 }
+/*Menu Hamburguesa*/
+.white {
+  background: #fff;
+  width: 100%;
+  height:1000px;
+  display: none;
+}
+.menu {
+  background: rgb(43,43,43);
+  color: #fff;
+  height: 1000px;
+  width: 297px;
+  font-size: 18px;
+  font-weight: 800;
+  margin-left: 461px;
+  line-height: 60px;
+  padding: 11px;
+}
+.menu img {
+  height: 78px;
+  width: 73px;
+  margin-left: 100px;
+}
 
 /*CLASES REUTILIZABLES*/
 .background-w {
