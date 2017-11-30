@@ -2,13 +2,14 @@
   font-family: 'Roboto', sans-serif;
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
   background-color: #f3f3f3;
-}*/
+}
 /* Header style */
-header{
+
+header {
   display: flex;
   margin-top: 20;
   height: 80px;
@@ -19,6 +20,7 @@ header i {
   color: #383838;
   position: relative;
   left: 500px;
+  top: 10px;
 }
 
 header img{
@@ -162,4 +164,11 @@ p {
   position: relative;
   left: 400px;
   margin-top: 156px;
+}
+
+/* class styles with javascript */
+
+.number {
+  color: #ffc107;
+  font-weight: 700;
 }

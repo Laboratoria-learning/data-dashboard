@@ -3,9 +3,11 @@
  */
 
 // Puedes hacer uso de la base de datos a través de la variable `data`
+
 console.log(data);
 
 // función que devuelve alumnas en total, alumnas activas, alumnas retiradas y porcentaje de retiradas.
+
 var total;
 var countActive = 0;
 var countInActive = 0;
@@ -31,6 +33,7 @@ countStudentActive('AQP', '2016-2', 'students');
 
 
 // Función que devuelve alumans qye pasan promedio de puntajes y el porcentaje que representan.
+
 function achievement(sede,generation){
   var count = 0;
   var numberRatings = data[sede][generation]['ratings'];
@@ -72,7 +75,7 @@ function satisfaction(sede,generation){
     }
     satisfaction('AQP','2016-2');
 
-// funciones 
+// función que devuelve cantidad de alumna por sede y generación.
 
 var sedeSelected = document.getElementById('select-sede');
 var generationSelected = document.getElementById('select-generation');
@@ -91,15 +94,26 @@ function inscription(event) {
 
   var numberRegistered = document.getElementById('numberRegistered');
   numberRegistered.textContent = students.length;
+  numberRegistered.setAttribute('class', 'number');
+  
+  var percent = (studentsDeserted * 100)/students.length;
+  
+  var studentsDeserted = 0;
 
-  for(var i = 0; i<students.length;i++){
-      console.log(students[i].active);
-    }
-
-  // var percentDesert = parseInt((studenDesert * 100)/students.length);
-
-  // var numberDesert = document.getElementById('numberDesert');
-  // numberDesert.textContent = percentDesert;
+  // función que devuelve el porcentaje de alumnas desertadas
+  
+  function percentDeserted(){
+    for(var i = 0; i<students.length;i++){
+      if (students[i].active === false){
+        studentsDeserted++;
+      } 
+    }  
+    var percent = parseInt((studentsDeserted*100)/students.length);
+    return percent;
+  }
+  var numberDesert = document.getElementById('numberDesert');
+  numberDesert.textContent = percentDeserted();  
+  numberDesert.setAttribute('class', 'number');
 };
 
 //función para  verificar el porcentaje de estudiantes satisfechas con la experiencia de Laboratoria.
