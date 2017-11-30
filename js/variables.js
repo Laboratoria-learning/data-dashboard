@@ -50,7 +50,7 @@ console.log('suma de puntos de jedi total sprints 20162: ' + pointsPerSprintJedi
 var averagePointsJediAQP20162 = pointsPerSprintJediAQP20162 / 4;
 console.log('promedio de puntos de jedi en todos los sprints 20162: ' + averagePointsJediAQP20162);
 // NPS //
-var npsAQP20162 = ((data.AQP['2016-2'].ratings[0].nps.promoters - data.AQP['2016-2'].ratings[0].nps.detractors) + (data.AQP['2016-2'].ratings[1].nps.promoters - data.AQP['2016-2'].ratings[1].nps.detractors) + (data.AQP['2016-2'].ratings[2].nps.promoters - data.AQP['2016-2'].ratings[2].nps.detractors) + (data.AQP['2016-2'].ratings[3].nps.promoters - data.AQP['2016-2'].ratings[3].nps.detractors)) / 4;
+var npsAQP20162 = (((data.AQP['2016-2'].ratings[0].nps.promoters - data.AQP['2016-2'].ratings[0].nps.detractors) + (data.AQP['2016-2'].ratings[1].nps.promoters - data.AQP['2016-2'].ratings[1].nps.detractors) + (data.AQP['2016-2'].ratings[2].nps.promoters - data.AQP['2016-2'].ratings[2].nps.detractors) + (data.AQP['2016-2'].ratings[3].nps.promoters - data.AQP['2016-2'].ratings[3].nps.detractors)) / 4) + '%';
 console.log('suma de nps 20162: ' + npsAQP20162);
 
 /* *****2017-1***** */
@@ -89,7 +89,7 @@ console.log('suma de puntos de jedi total sprints 20171: ' + pointsPerSprintJedi
 var averagePointsJediAQP20171 = pointsPerSprintJediAQP20171 / 3;
 console.log('promedio de puntos de jedi en todos los sprints 20171: ' + averagePointsJediAQP20171);
 // NPS //
-var npsAQP20171 = ((data.AQP['2017-1'].ratings[0].nps.promoters - data.AQP['2017-1'].ratings[0].nps.detractors) + (data.AQP['2017-1'].ratings[1].nps.promoters - data.AQP['2017-1'].ratings[1].nps.detractors) + (data.AQP['2017-1'].ratings[2].nps.promoters - data.AQP['2017-1'].ratings[2].nps.detractors)) / 3;
+var npsAQP20171 = (((data.AQP['2017-1'].ratings[0].nps.promoters - data.AQP['2017-1'].ratings[0].nps.detractors) + (data.AQP['2017-1'].ratings[1].nps.promoters - data.AQP['2017-1'].ratings[1].nps.detractors) + (data.AQP['2017-1'].ratings[2].nps.promoters - data.AQP['2017-1'].ratings[2].nps.detractors)) / 3) + '%';
 console.log('suma de nps 20171: ' + npsAQP20171);
 
 /* -------El total de estudiantes por sede:---------------------- */
@@ -141,7 +141,7 @@ console.log('suma de puntos de jedis total sprints 20171: ' + pointsPerSprintJed
 var averagePointsJedisCDMX20171 = pointsPerSprintJedisCDMX20171 / 3;
 console.log('promedio de puntos de jedis en todos los sprints 20171: ' + averagePointsJedisCDMX20171);
 // NPS //
-var npsCDMX20171 = ((data.CDMX['2017-1'].ratings[0].nps.promoters - data.CDMX['2017-1'].ratings[0].nps.detractors) + (data.CDMX['2017-1'].ratings[1].nps.promoters - data.CDMX['2017-1'].ratings[1].nps.detractors)) / 2;
+var npsCDMX20171 = (((data.CDMX['2017-1'].ratings[0].nps.promoters - data.CDMX['2017-1'].ratings[0].nps.detractors) + (data.CDMX['2017-1'].ratings[1].nps.promoters - data.CDMX['2017-1'].ratings[1].nps.detractors)) / 2) + '%';
 console.log('suma de nps 20171: ' + npsCDMX20171);
 
 /* *****2017-2***** */
@@ -180,7 +180,7 @@ console.log('suma de puntos de jedis total sprints 20172: ' + pointsPerSprintJed
 var averagePointsJedisCDMX20172 = pointsPerSprintJedisCDMX20172 / 2;
 console.log('promedio de puntos de jedis en todos los sprints 20172: ' + averagePointsJedisCDMX20172);
 // NPS //
-var npsCDMX20172 = ((data.CDMX['2017-2'].ratings[0].nps.promoters - data.CDMX['2017-2'].ratings[0].nps.detractors) + (data.CDMX['2017-2'].ratings[1].nps.promoters - data.CDMX['2017-2'].ratings[1].nps.detractors)) / 2;
+var npsCDMX20172 = (((data.CDMX['2017-2'].ratings[0].nps.promoters - data.CDMX['2017-2'].ratings[0].nps.detractors) + (data.CDMX['2017-2'].ratings[1].nps.promoters - data.CDMX['2017-2'].ratings[1].nps.detractors)) / 2) + '%';
 console.log('suma de nps 20172: ' + npsCDMX20172);
 
 /* ------- El total de estudiantes por sede:---------------------- */
@@ -231,7 +231,7 @@ console.log('suma de puntos de jedis total sprints 20162: ' + pointsPerSprintJed
 var averagePointsJedisLIM20162 = pointsPerSprintJedisLIM20162 / 2;
 console.log('promedio de puntos de jedis en todos los sprints 20162: ' + averagePointsJedisLIM20162);
 // NPS //
-var npsLIM20162 = ((data.LIM['2016-2'].ratings[0].nps.promoters - data.LIM['2016-2'].ratings[0].nps.detractors) + (data.LIM['2016-2'].ratings[1].nps.promoters - data.LIM['2016-2'].ratings[1].nps.detractors)) / 2;
+var npsLIM20162 = (((data.LIM['2016-2'].ratings[0].nps.promoters - data.LIM['2016-2'].ratings[0].nps.detractors) + (data.LIM['2016-2'].ratings[1].nps.promoters - data.LIM['2016-2'].ratings[1].nps.detractors)) / 2) + '%';
 console.log('suma de nps 20162: ' + npsLIM20162);
 
 /* *****2017-1***** */
@@ -270,7 +270,7 @@ console.log('suma de puntos de jedis total sprints 20171: ' + pointsPerSprintJed
 var averagePointsJedisLIM20171 = pointsPerSprintJedisLIM20171 / 4;
 console.log('promedio de puntos de jedis en todos los sprints 20171: ' + averagePointsJedisLIM20171);
 // NPS //
-var npsLIM20171 = ((data.LIM['2017-1'].ratings[0].nps.promoters - data.LIM['2017-1'].ratings[0].nps.detractors) + (data.LIM['2017-1'].ratings[1].nps.promoters - data.LIM['2017-1'].ratings[1].nps.detractors) + (data.LIM['2017-1'].ratings[2].nps.promoters - data.LIM['2017-1'].ratings[2].nps.detractors) + (data.LIM['2017-1'].ratings[3].nps.promoters - data.LIM['2017-1'].ratings[3].nps.detractors)) / 4;
+var npsLIM20171 = (((data.LIM['2017-1'].ratings[0].nps.promoters - data.LIM['2017-1'].ratings[0].nps.detractors) + (data.LIM['2017-1'].ratings[1].nps.promoters - data.LIM['2017-1'].ratings[1].nps.detractors) + (data.LIM['2017-1'].ratings[2].nps.promoters - data.LIM['2017-1'].ratings[2].nps.detractors) + (data.LIM['2017-1'].ratings[3].nps.promoters - data.LIM['2017-1'].ratings[3].nps.detractors)) / 4) + '%';
 console.log('suma de nps 20171: ' + npsLIM20171);
 
 /* *****2017-2***** */
@@ -309,7 +309,7 @@ console.log('suma de puntos de jedis total sprints 20172: ' + pointsPerSprintJed
 var averagePointsJedisLIM20172 = pointsPerSprintJedisLIM20172 / 2;
 console.log('promedio de puntos de jedis en todos los sprints 20172: ' + averagePointsJedisLIM20172);
 // NPS //
-var npsLIM20172 = ((data.LIM['2017-2'].ratings[0].nps.promoters - data.LIM['2017-2'].ratings[0].nps.detractors) + (data.LIM['2017-2'].ratings[1].nps.promoters - data.LIM['2017-2'].ratings[1].nps.detractors)) / 2;
+var npsLIM20172 = (((data.LIM['2017-2'].ratings[0].nps.promoters - data.LIM['2017-2'].ratings[0].nps.detractors) + (data.LIM['2017-2'].ratings[1].nps.promoters - data.LIM['2017-2'].ratings[1].nps.detractors)) / 2) + '%';
 console.log('suma de nps 20172: ' + npsLIM20172);
 
 /* -------Por sede:---------------------- */
@@ -360,7 +360,7 @@ console.log('suma de puntos de jedis total sprints 20162: ' + pointsPerSprintJed
 var averagePointsJedisSCL20162 = pointsPerSprintJedisSCL20162 / 4;
 console.log('promedio de puntos de jedis en todos los sprints 20162: ' + averagePointsJedisSCL20162);
 // NPS //
-var npsSCL20162 = ((data.SCL['2016-2'].ratings[0].nps.promoters - data.SCL['2016-2'].ratings[0].nps.detractors) + (data.SCL['2016-2'].ratings[1].nps.promoters - data.SCL['2016-2'].ratings[1].nps.detractors) + (data.SCL['2016-2'].ratings[2].nps.promoters - data.SCL['2016-2'].ratings[2].nps.detractors) + (data.SCL['2016-2'].ratings[3].nps.promoters - data.SCL['2016-2'].ratings[3].nps.detractors)) / 4;
+var npsSCL20162 = (((data.SCL['2016-2'].ratings[0].nps.promoters - data.SCL['2016-2'].ratings[0].nps.detractors) + (data.SCL['2016-2'].ratings[1].nps.promoters - data.SCL['2016-2'].ratings[1].nps.detractors) + (data.SCL['2016-2'].ratings[2].nps.promoters - data.SCL['2016-2'].ratings[2].nps.detractors) + (data.SCL['2016-2'].ratings[3].nps.promoters - data.SCL['2016-2'].ratings[3].nps.detractors)) / 4) + '%';
 console.log('suma de nps 20162: ' + npsSCL20162);
 
 /* *****2017-1***** */
@@ -399,7 +399,7 @@ console.log('suma de puntos de jedis total sprints 20171: ' + pointsPerSprintJed
 var averagePointsJedisSCL20171 = pointsPerSprintJedisSCL20171 / 3;
 console.log('promedio de puntos de jedis en todos los sprints 20171: ' + averagePointsJedisSCL20171);
 // NPS //
-var npsSCL20171 = ((data.SCL['2017-1'].ratings[0].nps.promoters - data.SCL['2017-1'].ratings[0].nps.detractors) + (data.SCL['2017-1'].ratings[1].nps.promoters - data.SCL['2017-1'].ratings[1].nps.detractors) + (data.SCL['2017-1'].ratings[2].nps.promoters - data.SCL['2017-1'].ratings[2].nps.detractors)) / 3;
+var npsSCL20171 = (((data.SCL['2017-1'].ratings[0].nps.promoters - data.SCL['2017-1'].ratings[0].nps.detractors) + (data.SCL['2017-1'].ratings[1].nps.promoters - data.SCL['2017-1'].ratings[1].nps.detractors) + (data.SCL['2017-1'].ratings[2].nps.promoters - data.SCL['2017-1'].ratings[2].nps.detractors)) / 3) + '%';
 console.log('suma de nps 20171: ' + npsSCL20171);
 
 /* *****2017-2***** */
@@ -438,7 +438,7 @@ console.log('suma de puntos de jedis total sprints 20172: ' + pointsPerSprintJed
 var averagePointsJedisSCL20172 = pointsPerSprintJedisSCL20172 / 2;
 console.log('promedio de puntos de jedi en todos los sprints 20172: ' + averagePointsJedisSCL20172);
 // NPS //
-var npsSCL20172 = ((data.SCL['2017-2'].ratings[0].nps.promoters - data.SCL['2017-2'].ratings[0].nps.detractors) + (data.SCL['2017-2'].ratings[1].nps.promoters - data.SCL['2017-2'].ratings[1].nps.detractors)) / 2;
+var npsSCL20172 = (((data.SCL['2017-2'].ratings[0].nps.promoters - data.SCL['2017-2'].ratings[0].nps.detractors) + (data.SCL['2017-2'].ratings[1].nps.promoters - data.SCL['2017-2'].ratings[1].nps.detractors)) / 2) + '%';
 console.log('suma de nps 20172: ' + npsSCL20172);
 
 /* -------Por sede:---------------------- */
