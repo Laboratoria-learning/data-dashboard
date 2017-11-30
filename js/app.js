@@ -15,30 +15,35 @@ window.addEventListener('load', function() {
   var generations = document.querySelectorAll('.generation');
   // console.log(generations); // (10) [a.generation, a.generation, a.generation, a.generation, a.generation, a.generation, a.generation, a.generation, a.generation, a.generation]
 
+  var sedes = document.querySelectorAll('.sede');
+  // console.log(sedes); // [a.sede =arequipa, a.sede =mexico, a.sede = lima, a.sede = chile] // lista de nodos
 
   sedeGeneration.addEventListener('click', showListSedes);
   function showListSedes(event) {
     listSedes.classList.toggle('show');
   };
 
-  var sedes = document.querySelectorAll('.sede');
-  // console.log(sedes); // [a.sede =arequipa, a.sede =mexico, a.sede = lima, a.sede = chile] // lista de nodos
   for (var i = 0; i < sedes.length; i++) {
     sedes[i].addEventListener('click', function(event) {
       // console.log(event.target); //  <a href="#" class="sede" data-sede ="AQP">Arequipa</a>
       var sede = event.target.dataset.sede;
+      console.log(sede); // AQP
+      // console.log(typeof sede); // string
 
-      for (var i = 0; i < listGenerations.length; i++) {
-        listGenerations[i].addEventListener('click', function(event) {
+      for (var j = 0; j < listGenerations.length; j++) {
+        listGenerations[j].addEventListener('click', function(event) {
           // sconsole.log(event.target);
 
-          var generation = event.target.textContent;
-          // console.log(generation);// 2016-2
+          var generation = event.target.dataset.generation;
+          console.log(generation);// 2016-2
           var students = data[sede][generation].students.length ;
+          alert('el número de estudiantes de la sede ' + sede + ' y de la generación ' + generation + ' es: ' + students);
+          /*
           // creando div que almacenará el cuadro estradístico
           var chartDiv = document.createElement('div');
           chartDiv.textContent = students;
           console.log(chartDiv);
+          */
         });
       }
     });

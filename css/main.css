@@ -1,3 +1,8 @@
+
+body{
+  margin: 0;
+  text-align: center;
+}
 *{
   text-align: center;
   font-family: 'Armata', sans-serif;
@@ -16,13 +21,22 @@ a{
   border-radius: 5px;
   border: 0;
   font-weight: 600;
+  margin-bottom: 7px;
 }
-
+.listgeneration{
+  text-align: center;
+}
 .sede{
+  padding: 5px;
   width: 200px;
   font-size: 18px;
-  background-color: white;
+  background-color: #727171;
   color: #000000;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.sede:active{
+  background-color: green;
 }
 a .sede{
   background-color:#FFA500 ;
@@ -34,6 +48,8 @@ a .sede{
   display: block;
 }
 .generation{
-  display: block;
+  width: 100px;
+ background-color: #D0D0D0;
+  display:block;
   font-size: 16px;
 }
