@@ -82,7 +82,7 @@ nav .fa-bars{
 
 .square{
    width: 370px;
-   height: 350px;
+   height: 400px;
    /* outline: 1px solid red;  */
    display: inline-block;
    margin: 10px;
@@ -121,6 +121,14 @@ nav .fa-bars{
    background: #f7f7f7;
 }
 
+.container-big .text1{
+  display:inline-block;
+  background-color: #f7b617;
+  padding:10px;
+  margin:0 60px 0 60px;
+ border-radius: 5px;
+
+}
 .inline-block{
     display: inline-block;
 }
@@ -285,7 +293,6 @@ nav .fa-bars{
   left:50%;
   transform: translateX(-50%);
   position: relative;
-  outline:1px solid blue;
 }
 
 .red{
@@ -298,5 +305,4 @@ nav .fa-bars{
   left:70%;
   transform: translateX(-50%);
   position: relative;
-  outline:1px solid green;
 }
