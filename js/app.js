@@ -49,43 +49,62 @@ function begin() {
     }
   }
 
-  // Para contar actuales y retiradas  :)
   function studentsOverview(event) {
     if (event.target === selectLocal || event.target === selectPromo || event.target === selectSprint) {
-      var students = data[selectLocal.value][selectPromo.value]['students'];      
+      var students = data[selectLocal.value][selectPromo.value].students;
+      var sprints = data[selectLocal.value][selectPromo.value].ratings.length;
       var currentStudents = 0;
       var dropoutStudents = 0;
-      var targetOverview = 0;
-      var scoreTechTotal = 0;
-      var scoreHSETotal = 0;
+      var overcomeStudents = 0;
 
+      // Meta de puntos Tech 1260
+      // Meta de punstos HSE 840
+
+      // Contar actuales y retiradas
       for (var i = 0; i < students.length; i++) {
         if (students[i]['active'] === true) {
           // Acumular estudiantes activas
           currentStudents++;
-          // Recorre sprints de dicha estudiante
-          for (var j = 0; j < selectSprint.options.length; j++) {
-            // Puntajes en el sprint
-            scoreTech = students[i].sprints[j].score.tech; //1260
-            scoreHSE = students[i].sprints[j].score.hse; //840
-            if (scoreTech >= 1260)
-            return console.log(scoreTech + ' ' + scoreHSE);
-            // if (students[i].sprints[j].score)
+          // Para tener promedios
+          var techSum = 0;
+          var hseSum = 0;
+          // Sacar promedio de tech y hse
+          for (var j = 0; j < sprints; j++) {
+            techSum += students[i].sprints[j].score.tech;
+            hseSum += students[i].sprints[j].score.hse;
+          }
+          var techAvrg = Math.floor(techSum / sprints);
+          console.log(techAvrg);
+          var hseAvrg = Math.floor(hseSum / sprints);
+          console.log(hseAvrg);
+          if (techAvrg > 1260 && hseAvrg > 840) {
+            overcomeStudents++;
           }
         } else {
           dropoutStudents++;
         }
       }
+
+      // Mostrar los datos en documnto
       document.getElementById('current-students').textContent = currentStudents;
       document.getElementById('dropout').textContent = Math.round((dropoutStudents / students.length) * 100) * 10 / 10 + '%';
-      
-      // return console.log(currentStudents + ' + ' + dropoutStudents + ' = ' + students.length);
+      document.getElementById('overcome-avrg').textContent = overcomeStudents;
+      document.getElementById('overcome-percent').textContent = Math.round((overcomeStudents / currentStudents) * 100) * 10 / 10 + '%';
     }
   }
 
   // studentsCount('LIM', '2016-2');
   // studentsCount('CDMX', '2017-1');
 };
+
+// Superan expectativas exp Laboratoria
+var ratings = data[selectLocal.value][selectPromo.value].ratings;
+var overcome = 0;
+// Promedio superan la meta de puntos
+for (var i = 0; i < ratings.length; i++) {
+  overcome += ratings[i].student.supera;
+}
+
 
 // Grafico
 var sede1 = data['AQP']['2017-1']['students']['active'];
