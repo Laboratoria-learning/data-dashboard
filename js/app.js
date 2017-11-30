@@ -75,7 +75,7 @@ function ratingTeachers(sede, generacion) {
     ratingTeacher += data[sede][generacion].ratings[i].teacher;
   }
   var averageTeacher = (ratingTeacher / countRatingT).toFixed(1);
-  // inserta data de cantidad a los elementos
+  // inserta data a los elementos
   var spanRatingT = document.getElementById('t-rating-overview');
   var textRatingT = document.createTextNode(averageTeacher);
   spanRatingT.appendChild(textRatingT);
@@ -83,16 +83,16 @@ function ratingTeachers(sede, generacion) {
 function ratingJedi(sede, generacion) {
   var ratingJedi = 0;
   var countRatingJ = data[sede][generacion].ratings.length;
+  // Recorremos el array ratings 
   for (var j = 0;j < data[sede][generacion].ratings.length;j++) { 
-    console.log('--------');
-    console.log(data[sede][generacion].ratings[j].jedi);
+    // Acumula los puntajes de los jedis
     ratingJedi += data[sede][generacion].ratings[j].jedi;
   }
   // Declaro variable que almacene el promedio y con  función toFixed() poder limitar el número de decimales a través de su parámetr
   var averageJedi = (ratingJedi / countRatingJ).toFixed(1);
-
-  // inserta data de cantidad a los elementos
+  // inserta data a los elementos
   var spanRatingJ = document.getElementById('j-rating-overview');
   var textRatingJ = document.createTextNode(averageJedi);
   spanRatingJ.appendChild(textRatingJ);
 }
+
