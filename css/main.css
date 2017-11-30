@@ -60,13 +60,15 @@ nav {
     background: #e1e1e1;
     width: 395px;
     height: 49px;
-    margin-left: 41px;
+    margin-left: 75px;
     margin-top: 12px;
 }
 .tabs {
     display: inline-flex;
     list-style: none;
     position: relative;
+    margin: 10px;
+    padding: 0;
 }
 .tabBtn {
     text-decoration: none;
@@ -75,6 +77,7 @@ nav {
     color: black;
     float: left;
     font-size: 22px;
+    font-weight: 500;   
     padding: 4px;
 }
 .overview-tab {
@@ -103,9 +106,9 @@ nav {
     font-size: 10.5px;
     font-weight: 500;
     line-height: 1.8;
-    margin-left: 14px; 
-    margin-top: 61px;
     text-align: center;
+    margin-left: 14px; 
+    margin-top: 31px;
     width: 146px;
     height: 60px;
 }
@@ -129,12 +132,13 @@ nav {
     display: inline-block;
     font-size: 10.5px;
     font-weight: 500;
-    line-height: 9px1.5;
+    line-height: 2.5;
+    text-align: center;
     margin: 1.5px;
     width: 197px;
     height: 60px;
     margin-left: 26px;
-    margin-top: 66px;
+    margin-top: 26px;
 }
 .initial {
     margin-left: 20px; 
@@ -153,54 +157,75 @@ nav {
 .graphic2 {
     display: inline-flex;
     position: relative;
-    top: 90px;
+    height: 316px;
+    width: 611px;
+    top: 20px;
     left: 26px;
+}
+.graphic3 {
+    display: inline-flex;
+    position: relative;
+    height: 329px;
+    width: 403px;
+    left: 26px;
+    top: 20px;
+}
+h2 {
+    text-align: left;
+    margin-left: 22px;
+    margin-top: 20px;
+}
+.rectangle h2 {
+    text-align: left;
+    width: 300px;
+    bottom: 30px;  
 }
 .info-container {
     background-color: #e1e1e1;
     width: 100%;
 }
-
 .specialization {
     background-color: white;
     display: block;
-    height: 159px;
+    height: 190px;
     width: 358px;
-    padding: 20px 30px 10px 10px;
+    padding: 2px 25px 2px 45px;
     font-size: 20px;
     line-height: 1.5;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-right: 10px;
     margin-left: 80px;
+    margin-bottom: 15px;
 }
-
+.form1 {
+    padding-bottom: 15px;
+}
 .students-profile {
-    outline: 1px solid red;
     background-color: white;
     position: relative;
     float: left;
     left: 400px;
     bottom: 154px;
-    height: 50px;
+    height: 39px;
     width: 735px;
 }
 .search{
     width: 735px;
-    height: 41px;
+    height: 39px;
     float: right;
 }
 .students-info {
-    outline: 1px solid violet;
     background-color: #ffffff;
     height: 189px;
     width: 737px;
     position: relative;
     float: left;
+    margin: 12px;
     left: 400px;
     bottom: 124px;
 }
 .photo {
-    outline: 1px solid orange; 
+    background-color: #e1e1e1; 
     display: inline-flex;
     position: relative;
     height: 150px;
@@ -209,7 +234,6 @@ nav {
     top: 20px;
 }
 .average {
-    outline: 1px solid green;
     background-color: #e1e1e1;
     display: inline-flex;
     position: relative;
@@ -220,3 +244,4 @@ nav {
     margin: 5px;
     margin-top: 17px;
 }
+
