@@ -4,12 +4,12 @@ window.addEventListener('load', function() {
   listado.addEventListener('change', function() {
     var sede = listado.options[listado.selectedIndex].getAttribute('data-sede');
     var generacion = listado.value;
-
+    
     
     google.charts.load('current', {'packages': ['corechart']});
    
     // Establece una llamada que se ejecuta cuando la API es cargada.
-    google.charts.setOnLoadCallback(drawChart1);
+    google.charts.setOnLoadCallback(drawEstadoEstudiante);
     google.charts.setOnLoadCallback(drawChart2);
     google.charts.setOnLoadCallback(drawChart3);
     google.charts.setOnLoadCallback(drawChart4);
@@ -20,7 +20,7 @@ window.addEventListener('load', function() {
     google.charts.setOnLoadCallback(drawChart9);
    
     
-    function drawChart1() {
+    function drawEstadoEstudiante() {
       // Crea los datos del gráfico.
       var data = new google.visualization.DataTable();
       data.addColumn('string', 'Topping');
@@ -34,7 +34,7 @@ window.addEventListener('load', function() {
         'height': 400,
         'is3D': true
       };
-      var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+      var chart = new google.visualization.PieChart(document.getElementById('draw-estadoEstudiantes'));
       chart.draw(data, options);
     }
     

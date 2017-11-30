@@ -4,15 +4,18 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Quicksand', sans-serif;  
+  font-family: 'Quicksand', sans-serif;
+  box-sizing: border-box;  
 }
 div{
   display: inline-block;
+  margin:2%;
 }
 header {
   padding: 7px;
   text-align: center;
 }
+
 
 #logo {
   width: 200px;

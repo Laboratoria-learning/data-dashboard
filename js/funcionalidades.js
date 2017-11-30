@@ -75,13 +75,8 @@ function estadoDeObjetivoAlcanzado(sede, generacion, sprint) {
   arrayEstadoPuntajeSprint.push(cantidadObjetivoNoAlcanzado);
   return arrayEstadoPuntajeSprint;
 }
-console.log(estadoDeObjetivoAlcanzado('AQP', '2016-2', 1));
 
-
-function estadoMetaAlcanzadPorSprints(sede, generacion) {
-  var contadorMetaPorSprints = 0;
-}
-
+/* devuelve un array con todas las notas de los 4 sprint de todas las alumnas por sede/generacion*/
 function notasTodosSprint(sede, generacion) {
   var alumnas = data[sede][generacion]['students'];
   var notasSprintArray0 = [];
@@ -98,6 +93,26 @@ function notasTodosSprint(sede, generacion) {
   TotalArray = [notasSprintArray0, notasSprintArray1, notasSprintArray2, notasSprintArray3];
   return TotalArray;
 }
+ notasTodosSprint('AQP', '2016-2');
+/* devuelve un array que contiene la cantidad de alumnas que superaron la meta por generación en todos los sprints*/
+function contadorMetaPorSprint(sede, generacion) {
+  var arrayNotasGen = notasTodosSprint(sede, generacion);
+  var cantAlumnas = data[sede][generacion]['students'].length;
+  var arrayMetaAlcanzadSprint = [];
+  var baseMinima = 2100;
+
+  for (i = 0; i < arrayNotasGen.length; i++) {
+    var contador = 0;
+    for (j = 0; j < cantAlumnas; j++) {
+      if (arrayNotasGen[i][j] > baseMinima) {
+        contador = contador + 1;
+      }
+    }
+    arrayMetaAlcanzadSprint.push(contador); 
+  }
+  return arrayMetaAlcanzadSprint;
+}
+// console.log(contadorM)
 // funcionalidad para NPS
 function nps(sede, generacion) {
   var arrayRating = data[sede][generacion]['ratings'];
