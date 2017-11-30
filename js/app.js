@@ -2,7 +2,7 @@
 window.addEventListener('load', function() {
   // variable que almacena  el texto junto de sede y generacion, el cual se muestra en la pantalla
   var sedeGeneration = document.getElementById('sede_generation');
-  // console.log(sedeGeneration); // <a href="#" id="sede_generation">LIMA 2017-2</a>
+  // console.log(sedeGeneration); // <a href="#" id="sede_generation">NUESTRAS SEDES</a>
 
   // variable que almacena la lista de sedes
   var listSedes = document.getElementById('listSedes');
@@ -27,15 +27,21 @@ window.addEventListener('load', function() {
     sedes[i].addEventListener('click', function(event) {
       // console.log(event.target); //  <a href="#" class="sede" data-sede ="AQP">Arequipa</a>
       var sede = event.target.dataset.sede;
-      // console.log(sede); // AQP
+
 
       for (var i = 0; i < listGenerations.length; i++) {
         listGenerations[i].addEventListener('click', function(event) {
           // sconsole.log(event.target);
+          // creando div que almacenará el cuadro estradístico
+          var chartDiv = document.createElement('div');
+          chartDiv.textContent = ' VAR AGREGAR CUADRO AQUI ';
+        
+
+
           var generation = event.target.textContent;
           // console.log(generation);// 2016-2
           var students = data[sede][generation].students.length ;
-          // console.log(students);// 15
+          console.log(students);// 15
           alert('el número de estudiantes de la sede ' + sede + ' y de la generación ' + generation + ' es: ' + students);
         });
       }
