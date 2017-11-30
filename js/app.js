@@ -51,10 +51,11 @@ function changeTitle() {
     calculateJediMasterRating('LIM', 2, '2016-2');
     calculateStudentSatisfaccion('LIM', 1, '2016-2', 35);
     calculateAchievement('LIM', '2016-2');
-    comboBoxTech.addEventListener('change', TechSkill);
     var attend = parseInt(calculateCurrently('LIM', 35, '2016-2'));
     drawCurrently(attend, 35 - attend);
-    drawPromoter();
+    var sprint1 = data['LIM']['2016-2']['ratings'][0]['nps']['promoters'];
+    var sprint2 = data['LIM']['2016-2']['ratings'][1]['nps']['promoters'];
+    drawPromoter(sprint1, sprint2, 0, 0);
     break;
   case 'lim2017I':
     titleSelector.textContent = 'Lima 2017-I';
@@ -66,6 +67,11 @@ function changeTitle() {
     calculateAchievement('LIM', '2017-1');
     var attend = parseInt(calculateCurrently('LIM', 17, '2017-1'));
     drawCurrently(attend, 17 - attend);
+    var sprint1 = data['LIM']['2017-1']['ratings'][0]['nps']['promoters'];
+    var sprint2 = data['LIM']['2017-1']['ratings'][1]['nps']['promoters'];
+    var sprint3 = data['LIM']['2017-1']['ratings'][2]['nps']['promoters'];
+    var sprint4 = data['LIM']['2017-1']['ratings'][3]['nps']['promoters'];
+    drawPromoter(sprint1, sprint2, sprint3, sprint4);
     break;
   case 'lim2017II':
     titleSelector.textContent = 'Lima 2017-II';
@@ -76,6 +82,9 @@ function changeTitle() {
     calculateStudentSatisfaccion('LIM', 1, '2017-2', 14);
     calculateAchievement('LIM', '2017-2');
     var attend = parseInt(calculateCurrently('LIM', 14, '2017-2'));
+    var sprint1 = data['LIM']['2017-2']['ratings'][0]['nps']['promoters'];
+    var sprint2 = data['LIM']['2017-2']['ratings'][1]['nps']['promoters'];
+    drawPromoter(sprint1, sprint2, 0, 0);
     drawCurrently(attend, 14 - attend);
     break;
   case 'are2016II':
@@ -87,7 +96,12 @@ function changeTitle() {
     calculateStudentSatisfaccion('AQP', 3, '2016-2', 15);
     calculateAchievement('AQP', '2016-2');
     var attend = parseInt(calculateCurrently('AQP', 15, '2016-2'));
+    var sprint1 = data['AQP']['2016-2']['ratings'][0]['nps']['promoters'];
+    var sprint2 = data['AQP']['2016-2']['ratings'][1]['nps']['promoters'];
+    var sprint3 = data['AQP']['2016-2']['ratings'][2]['nps']['promoters'];
+    var sprint4 = data['AQP']['2016-2']['ratings'][3]['nps']['promoters'];
     drawCurrently(attend, 15 - attend);
+    drawPromoter(sprint1, sprint2, sprint3, sprint4);
     break;
   case 'are2017I':
     titleSelector.textContent = 'Arequipa 2017-I';
@@ -98,7 +112,11 @@ function changeTitle() {
     calculateStudentSatisfaccion('AQP', 2, '2017-1', 15);
     calculateAchievement('AQP', '2017-1');
     var attend = parseInt(calculateCurrently('AQP', 15, '2017-1'));
+    var sprint1 = data['AQP']['2017-1']['ratings'][0]['nps']['promoters'];
+    var sprint2 = data['AQP']['2017-1']['ratings'][1]['nps']['promoters'];
+    var sprint3 = data['AQP']['2017-1']['ratings'][2]['nps']['promoters'];
     drawCurrently(attend, 15 - attend);
+    drawPromoter(sprint1, sprint2, sprint3, 0);
     break;
   case 'chi2016II':
     titleSelector.textContent = 'Chile 2016-II';
@@ -109,7 +127,12 @@ function changeTitle() {
     calculateStudentSatisfaccion('SCL', 3, '2016-2', 11);
     calculateAchievement('SCL', '2016-2');
     var attend = parseInt(calculateCurrently('SCL', 11, '2016-2'));
+    var sprint1 = data['SCL']['2016-2']['ratings'][0]['nps']['promoters'];
+    var sprint2 = data['SCL']['2016-2']['ratings'][1]['nps']['promoters'];
+    var sprint3 = data['SCL']['2016-2']['ratings'][2]['nps']['promoters'];
+    var sprint4 = data['SCL']['2016-2']['ratings'][3]['nps']['promoters'];
     drawCurrently(attend, 11 - attend);
+    drawPromoter(sprint1, sprint2, sprint3, sprint4);
     break;
   case 'chi2017I':
     titleSelector.textContent = 'Chile 2017-I';
@@ -120,7 +143,11 @@ function changeTitle() {
     calculateStudentSatisfaccion('SCL', 2, '2017-1', 23);
     calculateAchievement('SCL', '2017-1');
     var attend = parseInt(calculateCurrently('SCL', 23, '2017-1'));
+    var sprint1 = data['SCL']['2017-1']['ratings'][0]['nps']['promoters'];
+    var sprint2 = data['SCL']['2017-1']['ratings'][1]['nps']['promoters'];
+    var sprint3 = data['SCL']['2017-1']['ratings'][2]['nps']['promoters'];
     drawCurrently(attend, 23 - attend);
+    drawPromoter(sprint1, sprint2, sprint3, 0);
     break;
   case 'chi2017II':
     titleSelector.textContent = 'Chile 2017-II';
@@ -131,6 +158,9 @@ function changeTitle() {
     calculateStudentSatisfaccion('SCL', 1, '2017-2', 59);
     calculateAchievement('SCL', '2017-2');
     var attend = parseInt(calculateCurrently('SCL', 59, '2017-2'));
+    var sprint1 = data['SCL']['2017-2']['ratings'][0]['nps']['promoters'];
+    var sprint2 = data['SCL']['2017-2']['ratings'][1]['nps']['promoters'];
+    drawPromoter(sprint1, sprint2, 0, 0);
     drawCurrently(attend, 59 - attend);
     break;
   case 'mex2017I':
@@ -142,6 +172,10 @@ function changeTitle() {
     calculateStudentSatisfaccion('CDMX', 2, '2017-1', 24);
     calculateAchievement('CDMX', '2017-1');
     var attend = parseInt(calculateCurrently('CDMX', 24, '2017-1'));
+    var sprint1 = data['CDMX']['2017-1']['ratings'][0]['nps']['promoters'];
+    var sprint2 = data['CDMX']['2017-1']['ratings'][1]['nps']['promoters'];
+    var sprint3 = data['CDMX']['2017-1']['ratings'][2]['nps']['promoters'];
+    drawPromoter(sprint1, sprint2, sprint3, 0);
     drawCurrently(attend, 24 - attend);
     break;
   case 'mex2017II':
@@ -153,6 +187,9 @@ function changeTitle() {
     calculateStudentSatisfaccion('CDMX', 1, '2017-2', 46);
     calculateAchievement('CDMX', '2017-2');
     var attend = parseInt(calculateCurrently('CDMX', 46, '2017-2'));
+    var sprint1 = data['CDMX']['2017-2']['ratings'][0]['nps']['promoters'];
+    var sprint2 = data['CDMX']['2017-2']['ratings'][1]['nps']['promoters'];
+    drawPromoter(sprint1, sprint2, 0, 0);
     drawCurrently(attend, 46 - attend);
     break;
   }
@@ -267,22 +304,22 @@ function TechSkill() {
     calculateTech('AQP', '2016-2', 4);
     break;
   case 'are2017I':
-    calculateHse('AQP', '2017-2', 3); 
+    calculateTech('AQP', '2017-1', 3); 
     break;
   case 'chi2016II':
-    calculateHse('SCL', '2016-2', 4);  
+    calculateTech('SCL', '2016-2', 4);  
     break;
   case 'chi2017I':
-    calculateHse('SCL', '2017-1', 3);  
+    calculateTech('SCL', '2017-1', 3);  
     break;
   case 'chi2017II':
-    calculateHse('SCL', '2017-2', 2);
+    calculateTech('SCL', '2017-2', 2);
     break;
   case 'mex2017I':
-    calculateHse('CDMX', '2017-1', 3);
+    calculateTech('CDMX', '2017-1', 3);
     break;
   case 'mex2017II':
-    calculateHse('CDMX', '2017-2', 2);  
+    calculateTech('CDMX', '2017-2', 2);  
     break;
   }
 }
@@ -303,7 +340,7 @@ function lifeSkill() {
     calculateHse('AQP', '2016-2', 4);
     break;
   case 'are2017I':
-    calculateHse('AQP', '2017-2', 3); 
+    calculateHse('AQP', '2017-1', 3); 
     break;
   case 'chi2016II':
     calculateHse('SCL', '2016-2', 4);  
@@ -491,24 +528,25 @@ function drawCurrently(attend, noAttend) {
   ]);
   var options = {
     'width': 300,
-    'height': 200};
+    'height': 230};
 
   var chart = new google.visualization.PieChart(document.getElementById('grafy-enrollment'));
   chart.draw(data, options);
 }
 
-function drawPromoter() {
+function drawPromoter(num1, num2 , num3, num4) {  
   var data = google.visualization.arrayToDataTable([
-    ['Element', 'Density', { role: 'annotation' } ],
-    ['Copper', 8.94, 'Cu' ],
-    ['Silver', 10.49, 'Ag' ],
-    ['Gold', 19.30, 'Au' ],
-    ['Goldh', 0, 'Au' ],
+    ['Element', '#', { role: 'annotation' } ],
+    ['Sprint1', num1, 'sprin1' ],
+    ['Sprint2', num2, 'sprint2' ],
+    ['Sprint3', num3, 'sprint3' ],
+    ['Sprint4', num4, 'sprint4' ],
   ]);
 
   var options = {
+    title: '# of promoters for sprint',
     'width': 300,
-    'height': 200};
+    'height': 230};
   var chart = new google.charts.Bar(document.getElementById('grafy-promoter'));
   chart.draw(data, google.charts.Bar.convertOptions(options));
 }
