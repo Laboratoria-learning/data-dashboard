@@ -15,16 +15,16 @@ select.addEventListener('change', function(){
 // Evento para las tabs: overview, students y teacher
 var showHide = function(e) {
   var tabs = e.target.dataset.selecttab;
-  if (tabs === 'overview') {
-    var overContent = document.getElementById('overview-tab');
-    // mostrar info de overview
-   overContent.style.display = 'block';
-    // ocultar students y teachers
-  } else if (tabs === 'students') {
-    var studentsTab = document.getElementById('students-tab');
-   studentsTab.style.display = 'block';
-    // mostrar students
- 
+  var div1 = document.getElementById('overview-tab');
+  var div2 = document.getElementById('students-tab');
+  if(tabs === 'overview') {
+    div2.style.display = 'none';
+    div1.style.display = 'block';
+  } else if(tabs === 'students'){
+    div2.style.display = 'block';
+    div1.style.display = 'none';
+  } else {
+    div1.style.display = 'block';
   }
 };
 
@@ -111,7 +111,7 @@ function logroMetas(sede, generacion, sprint) {
   var studentsTarget = studentsOverTarget.length;
   console.log('no llegaron a la meta: ' + '\t' + studentsDownTarget.length);
   var porcentajeAchievement = Math.round(porcentajeLogroMetas) + '%';
-  var totalStudents = '% OF TOTAL THE (' + (studentsOverTarget.length + studentsDownTarget.length) + ')';
+  var totalStudents = '% OF TOTAL (' + (studentsOverTarget.length + studentsDownTarget.length) + ')';
 
   var studentsMeetTarget = document.getElementById('studentTarget');
   studentsMeetTarget.innerHTML = studentsTarget + '<br>' + '# STUDENTS THE MEET THE TARGET';
@@ -156,9 +156,9 @@ function puntajePromotor(sede, generacion) {
   porcentajeDetractors = totalDetractors * 100 / (totalPromoters + totalDetractors + totalPassive);
   porcentajePassive = totalPassive * 100 / (totalPromoters + totalDetractors + totalPassive);
 
-  var promoters = (porcentajePromotors + '%' + '\t' + 'porcentaje de promoters');
-  var detractors = (porcentajeDetractors + '%' + '\t' + 'porcentaje de detractors');
-  var passive = (porcentajePassive + '%' + '\t' + 'porcentaje de passive');
+  var promoters = (porcentajePromotors + '%' + '\t' + 'PROMOTER');
+  var detractors = (porcentajeDetractors + '%' + '\t' + 'DETRACTORS');
+  var passive = (porcentajePassive + '%' + '\t' + 'PASSIVE');
 
   var porcentajeIndividual = document.getElementById('porcentajeVarios');
   porcentajeIndividual.innerHTML = promoters + '<br>' + passive + '<br>' + detractors;
@@ -210,7 +210,7 @@ function logroMetasTech(sede, generacion, sprint) {
   promedioNotaTech = totalPuntajeTech / puntajesTech.length;
 
   var promedioTech = document.getElementById('promedioTech');
-  promedioTech.innerHTML = Math.round(promedioNotaTech) + '<br>' + 'average score';
+  promedioTech.innerHTML = Math.round(promedioNotaTech) + '<br>' + 'AVERAGE SCORE';
   
   var porcentajeLogroMetasTech = (studentsOverTarget.length * 100) / (studentsOverTarget.length + studentsDownTarget.length);
   
@@ -221,7 +221,7 @@ function logroMetasTech(sede, generacion, sprint) {
   console.log('no llegaron a la meta Tech: ' + '\t' + studentsDownTarget.length);
 
   var porcentajeTargetTech = porcentajeLogroMetasTech + '%';
-  var totalTech = '% del total (' + (studentsOverTarget.length + studentsDownTarget.length) + ')';
+  var totalTech = '% OF TOTAL (' + (studentsOverTarget.length + studentsDownTarget.length) + ')';
 
   var porcentajeTargetTechShow = document.getElementById('porcentajeTargetTech');
   porcentajeTargetTechShow.innerHTML = porcentajeTargetTech + '<br>' + totalTech;  
@@ -262,17 +262,17 @@ function logroMetasLife(sede, generacion, sprint) {
   promedioNotaHse = totalPuntajeHse / puntajesHse.length;
   
   var promedioHse = document.getElementById('promedioHse');
-  promedioHse.innerHTML = Math.round(promedioNotaHse) + '<br>' + 'average score';
+  promedioHse.innerHTML = Math.round(promedioNotaHse) + '<br>' + 'AVERAGE SCORE';
 
   var porcentajeLogroMetasLife = (studentsOverTarget.length * 100) / (studentsOverTarget.length + studentsDownTarget.length);
   
   var targetHse = studentsOverTarget.length;
   var targetHseShow = document.getElementById('targetHse');
   targetHseShow.innerHTML = targetHse + '<br>' + 'STUDENT THE MEET THE TARGET';
-  console.log('no llegaron a la meta hse: ' + '\t' + studentsDownTarget.length);
+  console.log('NO LLEGARON A LA META HSE: ' + '\t' + studentsDownTarget.length);
   
   var porcentajeTargetHse = Math.round(porcentajeLogroMetasLife) + '%';
-  var totalHse = '% del total (' + (studentsOverTarget.length + studentsDownTarget.length) + ')';
+  var totalHse = '% OF TOTAL (' + (studentsOverTarget.length + studentsDownTarget.length) + ')';
 
   var porcentajeTargetHseShow = document.getElementById('porcentajeTargetHse');
   porcentajeTargetHseShow.innerHTML = porcentajeTargetHse + '<br>' + totalHse;

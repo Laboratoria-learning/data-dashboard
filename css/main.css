@@ -10,7 +10,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 26px;
-    
+    background-color: #f7f7f7;
 }
 header {
     height: 201px;
@@ -80,11 +80,13 @@ nav {
 .overview-tab {
     display: none;
     background-color: #f7f7f7;
-
+}
+.students-tab {
+    display: none;
+    background-color: #f7f7f7;
 }
 .container1 {
     display: inline-flex;
-    
     width: 100%;
     height: 433px;
     margin-left: 85px;
@@ -98,9 +100,9 @@ nav {
 .data1 {
     background-color: #f7f7f7;
     display: inline-block;
-    font-size: 10px;
+    font-size: 10.5px;
     font-weight: 500;
-    line-height: 9px;
+    line-height: 1.8;
     margin-left: 14px; 
     margin-top: 61px;
     text-align: center;
@@ -125,18 +127,17 @@ nav {
 .data2 {
     background-color: #f7f7f7;
     display: inline-block;
-    font-size: 10px;
+    font-size: 10.5px;
     font-weight: 500;
-    line-height: 9px;
-    margin: 4.5px;
+    line-height: 9px1.5;
+    margin: 1.5px;
     width: 197px;
     height: 60px;
     margin-left: 26px;
     margin-top: 66px;
 }
 .initial {
-    margin-left: 20px;
-    
+    margin-left: 20px; 
 }
 .last-position {
     margin-bottom: 123px;
@@ -159,11 +160,8 @@ nav {
     background-color: #e1e1e1;
     width: 100%;
 }
-.students-tab {
-    display: none;
-}
+
 .specialization {
-    outline: 1px solid green;
     background-color: white;
     display: block;
     height: 159px;
@@ -176,12 +174,13 @@ nav {
     margin-left: 80px;
 }
 
-.students-data {
+.students-profile {
     outline: 1px solid red;
     background-color: white;
     position: relative;
     float: left;
     left: 400px;
+    bottom: 154px;
     height: 50px;
     width: 735px;
 }
@@ -190,4 +189,34 @@ nav {
     height: 41px;
     float: right;
 }
-
+.students-info {
+    outline: 1px solid violet;
+    background-color: #ffffff;
+    height: 189px;
+    width: 737px;
+    position: relative;
+    float: left;
+    left: 400px;
+    bottom: 124px;
+}
+.photo {
+    outline: 1px solid orange; 
+    display: inline-flex;
+    position: relative;
+    height: 150px;
+    width: 150px;
+    left: 20px;
+    top: 20px;
+}
+.average {
+    outline: 1px solid green;
+    background-color: #e1e1e1;
+    display: inline-flex;
+    position: relative;
+    left: 300px;
+    bottom: 73px;
+    height: 58px;
+    width: 74px;
+    margin: 5px;
+    margin-top: 17px;
+}
