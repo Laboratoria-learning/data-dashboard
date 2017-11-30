@@ -54,6 +54,21 @@ window.addEventListener('load', function() {
 
     var jediMasterRatings = document.querySelector('.jedi-master-ratings');
     jediMasterRatings.textContent = jediMasterPoints(PLACE, CODE);
+
+    var sede = document.getElementById('sede');
+    if (PLACE==="LIM") {
+      sede.textContent="SEDE LIMA";
+    }
+    else if (PLACE==="AQP") {
+      sede.textContent="SEDE AREQUIPA";
+    }
+    else if (PLACE==="CDMX") {
+      sede.textContent="SEDE MEXICO";
+    }
+    else if (PLACE==="SCL") {
+      sede.textContent="SEDE CHILE";
+    }
+  
   }
 });
 
