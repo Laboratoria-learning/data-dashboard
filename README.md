@@ -31,7 +31,7 @@ Con esa información y con la base de datos que nos facilitaron pudimos crear es
 
 ### Dashboard propuesto
 #### Dashboard N° 1
-![Sin titulo](assets/docs/dashboard-sketch.JPG)
+![Sin titulo](assets/docs/dashboard-sketch.jpg)
 En este dashboard, se encuentra lo siguiente:
 1.  dfsdfh
 
