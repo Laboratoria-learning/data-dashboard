@@ -162,11 +162,11 @@ a{
   margin-top: 60.89px;
   margin-left: 252px;
 }
-.container-sprints{
+.sprint-box{
   width: 100%;
-  border-bottom: 2px solid rgb(255,193,7);
   position: fixed;
   background-color: #FFF;
+  z-index: 1000;
 }
 .sprints{
 text-align: justify;

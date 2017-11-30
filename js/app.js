@@ -48,6 +48,7 @@ window.addEventListener('load', function() {
   cumulativeNps(region,promotion);
   studentsSatisfation(region, promotion);
   jediRating(region, promotion);
+  showOverGoal(region, promotion)
 });
 
 function showAllRegions() {
@@ -84,7 +85,7 @@ function optionslim172() {
   cumulativeNps(region,promotion);
   studentsSatisfation(region, promotion);
   jediRating(region, promotion);
-  // showOverGoal(region, promotion);
+  showOverGoal(region, promotion);
 }
 
 function optionslim171() {
@@ -134,7 +135,6 @@ function showTotalStudents(region, promotion) {
     }
   }
   drawTotalStudents(current, deserted);
-
   numberBoxStudents.textContent = current;
   numberBoxStudents.classList.toggle('number-box-int');
   studentsDropout.textContent = parseFloat(deserted/(current + deserted)*100).toFixed(0) + '%';
@@ -176,35 +176,34 @@ detractorsBox.textContent = totalDetractors;
 passiveBox.textContent = totalPassive;
 drawNetPromoter();
 }
-/*
+
 function showOverGoal(region, promotion) {
   var students = data[region][promotion]['students'];
   var nsprint;
   var hse;
   var tech;
+  var count = 0;
   var scoresTotal;
-  var count=0;
+  var sprint1 = [];
+  var sprint2 = [];
+  var sprint3 = [];
+  var sprint4 = [];
   var sprintTotal=[];
   for (var i = 0; i < students.length; i++) {
     if (students[i]['active']) {
       var sprint = students[i]['sprints'];
-      for (var j = 0; j < sprint.length;j++) {
-        nsprint = sprint[j]['number'];
-        hse = sprint[j]['score']['hse'];
-        tech = sprint[j]['score']['tech'];
-        scoresTotal = hse+tech;
-        if(scoresTotal>=2100) {
-          sprintTotal[i][j]=scoresTotal;
-          console.log("nsprint"+nsprint);
-          console.log(scoresTotal);
-          console.log("sprintTotal[i][j]"+sprintTotal[i][j]);
-        }
-      }
+      /*sprint1.push(students[i]['sprints'][0]['score']['tech'] + students[i]['sprints'][0]['score']['hse']);
+      sprint2.push(students[i]['sprints'][1]['score']['tech'] + students[i]['sprints'][1]['score']['hse']);
+      sprint3.push(students[i]['sprints'][2]['score']['tech'] + students[i]['sprints'][2]['score']['hse']);
+      sprint4.push(students[i]['sprints'][3]['score']['tech'] + students[i]['sprints'][3]['score']['hse']);*/
+       }
+       if(students[i]['sprints'][0]['score']['tech'] + students[i]['sprints'][0]['score']['hse'] >= 2100){
+         count = count + 1;
+         console.log(count);
+       }
     }
-
   }
-  console.log(count);
-} */
+
 /* Función para */
 
 function studentsSatisfation(region, promotion){
@@ -236,6 +235,7 @@ function jediRating(region, promotion){
   jediRatingBox.textContent = total;
 }
 /*************************GRAFICOS************/
+
 function drawTotalStudents(current, deserted) {
   google.charts.load('current', {'packages':['corechart']});
   google.charts.setOnLoadCallback(drawChart);
