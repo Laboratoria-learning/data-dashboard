@@ -48,12 +48,16 @@
     }
 
     i.icon2 {
-      font-size: 50px;
+      font-size: 40px;
     }
 
     .options {
       letter-spacing: 10px;
       margin: 15px 0;
+    }
+
+    .optionsStyle {
+      border-bottom: 5px solid #FFC107;
     }
 
     .firstBox {
@@ -397,6 +401,27 @@
       width: 200px;
       height: 380px;
       padding: 50px;
+    }
+    .styleBox select{
+      border: none;
+      background-color: #FFC107;
+      border-radius: 5px;
+      width: 150px;
+      height: 40px;
+      padding: 5px;
+      font-size: 20px;
+      margin:  15px 30px 0px 0px;
+    }
+
+    .styleBox2 select{
+      border: none;
+      background-color: #FFC107;
+      border-radius: 5px;
+      width: 280px;
+      height: 40px;
+      padding: 5px;
+      font-size: 20px;
+      margin:  20px 0 30px 50px;
     }
 
   
