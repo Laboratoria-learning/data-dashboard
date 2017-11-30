@@ -12,7 +12,7 @@ Integrantes del squad 8BM:
 
 -Nataly Cortez
 
-## Informacion que debe proporcionar en el programa:
+## Informacion que debe proporcionar el programa:
 
 1.El total de estudiantes presentes por sede y generación.
 2.El porcentaje de deserción de estudiantes.
