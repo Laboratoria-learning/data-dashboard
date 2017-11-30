@@ -3,12 +3,164 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
   </head>
   <body>
+    <header>
+      <figure class="box-header">
+        <img class="logo-header" src="assets/images/logo-laboratoria.svg" alt="logo laboratoria">
+      </figure>
+      <!--Falta agregar icono menu -->
+    </header>
+    <div class="filters-container">
+      <ul class="filters">
+        <span class="span">OVERVIEW</span>
+        <span class="span">STUDENTS</span>
+        <span class="span">TEACHERS</span>
+      </ul>
 
+    <!---html menu display -->
+    <nav class="menuDisplay">
+      <ul>
+        <li class="submenu">SEDE & GENERACION
+          <ul class="hide choose">
+            <option>AREQUIPA</option>
+              <li id='AQP20162'>2016-2</li>
+              <li id='AQP20171' >2017-1</li>
+            <option>CIUDAD DE MEXICO</option>
+              <li id='CDMX20171'>2017-1</li>
+              <li id='CDMX20172'>2017-2</li>
+            <option>LIMA</option>
+              <li id='LIM20162'>2016-2</li>
+              <li id='LIM20171'>2017-1</li>
+              <li id='LIM20172'>2017-2</li>
+            <option>SANTIAGO DE CHILE</option>
+              <li id='SCL20162'>2016-2</li>
+              <li id='SCL20171'>2017-1</li>
+              <li id='SCL20172'>2017-2</li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+    <div id=cambioDiv class="cambioDiv"></div>
+    <!-- -->
+    <section>
+      <div class="container1">
+        <div class="Total-students">
+          <h2 class="Enrollment">ENROLLMENT</h2>
+          <div class="subcontainer">
+            <div id='enrollmentDiv1' class="dataContainer"></div>
+            <div id='enrollmentDiv2' class="dataContainer"></div>
+          </div>
+          <div class="graphContent">
+          <div id="columnchart1Values" class="chartGrafic" style="width: 900px; height: 300px;"></div>
+          <div id="columnchart2Values" class="chartGrafic"  style="width: 900px; height: 300px;"></div>
+          <div id="columnchart3Values" class="chartGrafic"  style="width: 900px; height: 300px;"></div>
+          <div id="columnchart4Values" class="chartGrafic"  style="width: 900px; height: 300px;"></div>
+          </div>
+        </div>
+        <div class="Total-students modif">
+          <h2 class="Enrollment">ACHIEVEMENT</h2>
+          <div class="subcontainer">
+            <div id="achievement1" class="dataContainer"></div>
+            <div id="achievement2" class="dataContainer"></div>
+          </div>
+          <div class="graphContent">
+            <img src="assets/images/graph.png" alt="grafico">
+          </div>
+        </div>
+        <div class="Total-students">
+          <h2 class="Enrollment">NET PROMOTER SCORE</h2>
+          <div class="subcontainer">
+            <div id="nps1" class="dataContainer"></div>
+            <div id="nps2" class="dataContainer"></div>
+          </div>
+          <div class="graphContent">
+              <div id="columnchart1NPS" class="chartGrafic1" style="width: 900px; height: 300px;"></div>
+              <div id="columnchart2NPS" class="chartGrafic1" style="width: 900px; height: 300px;"></div>
+              <div id="columnchart3NPS" class="chartGrafic1" style="width: 900px; height: 300px;"></div>
+              <div id="columnchart4NPS" class="chartGrafic1" style="width: 900px; height: 300px;"></div>
+              <div id="columnchart5NPS" class="chartGrafic1" style="width: 900px; height: 300px;"></div>
+              <div id="columnchart6NPS" class="chartGrafic1" style="width: 900px; height: 300px;"></div>
+              <div id="columnchart7NPS" class="chartGrafic1" style="width: 900px; height: 300px;"></div>
+              <div id="columnchart8NPS" class="chartGrafic1" style="width: 900px; height: 300px;"></div>
+              <div id="columnchart9NPS" class="chartGrafic1" style="width: 900px; height: 300px;"></div>
+              <div id="columnchart10NPS" class="chartGrafic1" style="width: 900px; height: 300px;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="container2">
+        <br>
+        <h2 class="tech">TECH SKILLS</h2>
+        <div class="secondcontainer">
+          <div id="tech1" class="dtContainer"></div>
+          <div id="tech2"class="dtContainer"></div>
+        </div>
+        <div class="grafContainer">
+          <div class="gfContainer1">
+            <img src="assets/images/rectangular-graphic.png" alt="grafico">
+          </div>
+          <div class="gfContainer2">
+            <img src="assets/images/circle-graphic.png" alt="grafico">
+          </div>
+
+        </div>
+      </div>
+      <div class="container2">
+          <br>
+          <h2 class="tech">LIFE SKILLS</h2>
+          <div class="secondcontainer">
+            <div id="life1" class="dtContainer"></div>
+            <div id="life2" class="dtContainer"></div>
+          </div>
+          <div class="grafContainer">
+            <div class="gfContainer1">
+              <img src="assets/images/rectangular-graphic.png" alt="grafico">
+            </div>
+            <div class="gfContainer2">
+              <img src="assets/images/circle-graphic.png" alt="grafico">
+            </div>
+          </div>
+      </div>
+      <div class="container4">
+        <div class="Total-students">
+          <h2 class="Enrollment">STUDENT SATISFACTION</h2>
+          <div class="subcontainer">
+            <div id="studentSatisfaction"class="dataContainer"></div>
+          </div>
+          <div class="graphContent">
+            <img src="assets/images/graph.png" alt="grafico">
+          </div>
+        </div>
+        <div class="Total-students">
+          <h2 class="Enrollment">TEACHER RATING</h2>
+          <div class="subcontainer">
+            <div id="teacherRating" class="dataContainer"></div>
+          </div>
+          <div class="graphContent">
+            <img src="assets/images/graph.png" alt="grafico">
+          </div>
+        </div>
+        <div class="Total-students">
+          <h2 class="Enrollment">JEDI MASTER RATING</h2>
+          <div class="subcontainer">
+            <div id="jediMAster" class="dataContainer"></div>
+          </div>
+          <div class="graphContent">
+            <img src="assets/images/graph.png" alt="grafico">
+          </div>
+          </div>
+      </div>
+    </section>
+    <!-- google charts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="./js/googlecharts.js"></script>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
-    <script src="./js/app.js"></script>
+    <script src="./js/variables.js"></script>
+    <script src="./js/eventos.js"></script>
   </body>
 </html>

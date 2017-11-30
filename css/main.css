@@ -1,3 +1,167 @@
-/*
- * Estilos de tu proyecto
- */
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.logo-header {
+  width: 200px;
+  margin-left: 42%;
+}
+
+/*css menu display*/
+.menuDisplay ul {
+  background-color: #E1E1E1;
+  z-index: +300;
+}
+.menuDisplay li{
+  border: 30px;
+  padding: 10px 15px;
+  display: inline-block;
+}
+.menuDisplay ul ul{
+  top: 200px; /*list de menu*/
+  position: absolute;
+}
+.menuDisplay .choose li{
+  display: block;
+}
+.menuDisplay li:hover {
+  background-color: rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+.hide {
+  display: none;
+}
+.showMenuShow {
+  display: block;
+}
+/*---------------------*/
+
+ .filters-container {
+   background-color:#E1E1E1;
+   width: 100%;
+   height: 100px;
+ }
+  .filters {
+   list-style: none;
+   margin: 0;
+   padding-left: 80px;
+ }
+
+ .span {
+   font-size: 28px;
+   margin-left: 20px;
+ }
+
+section {
+  background-color: #F7F7F7;
+  padding-bottom: 90px;
+}
+
+.container1 {
+  margin: 0 100px;
+}
+
+.container4 {
+  margin: 0 100px;
+}
+
+.Total-students {
+  background-color: white;
+  display: inline-block;
+  margin-top: 60px;
+  margin-left: 10px;
+  width: 370px;
+  height: 400px;
+}
+
+.modif{
+  padding-top: : 200px;
+}
+
+.Enrollment {
+  margin-left: 20px;
+}
+
+.subcontainer {
+  margin-left: 20px;
+  width: 330px;
+  height: 100px;
+}
+
+.dataContainer {
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 10px;
+  background-color: #F7F7F7;
+  width: 150px;
+  height: 80px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.graphContent {
+
+  width: 313px;
+  height: 200px;
+  margin-left: 30px;
+}
+
+.container2 {
+  margin: 20px 100px 0 110px;
+  background-color: white;
+  height: 610px;
+}
+
+.tech {
+  margin-left: 20px;
+}
+
+.secondcontainer {
+  margin-left: 20px;
+  width: 380px;
+  height: 100px;
+}
+
+.dtContainer {
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 10px;
+  background-color: #F7F7F7;
+  width: 170px;
+  height: 80px;
+}
+
+.grafContainer {
+  width: 1140px;
+  height: 400px;
+}
+
+.gfContainer1 {
+
+  display: inline-block;
+  width: 650px;
+  height: 375px;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.gfContainer2 {
+  
+  display: inline-block;
+  width: 390px;
+  height: 375px;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+.chartGrafic{
+  position: absolute;
+  right: 300px;
+}
+.show{
+  position: absolute;
+  z-index: +100;
+}
+.chartGrafic1 {
+  position: absolute;
+}
