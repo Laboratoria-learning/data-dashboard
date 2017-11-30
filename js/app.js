@@ -1,7 +1,6 @@
 /*
  * Funcionalidad de tu producto
  */
-
 // Puedes hacer uso de la base de datos a través de la variable `data`
 
 var sede = data.LIM;
@@ -133,8 +132,8 @@ function percentDropout(sede, bootcamp) {
 
 /*Cantidad de Alumnas que pasan el 70% de los sprint*/
 function studentsMeetTarget(sede, bootcamp){
-	for (var i = 0; i < city[route].students.length; i++) {
-		for (var j = 0; j < city[route].ratings.length; j++) {
+	for (var i = 0; i < sede[bootcamp].students.length; i++) {
+		for (var j = 0; j < sede[bootcamp].ratings.length; j++) {
 			if (sede[bootcamp].students[i].active == true) {
 				var tech = [];
 				tech.push(sede[boolean].students[i].sprints[j].score.tech);
@@ -164,13 +163,3 @@ function stadistics(sede, bootcamp) {
 }
 
 //console.log(data);
-
-
-
-}
-
-
-
-
-
-
