@@ -15,9 +15,6 @@ window.addEventListener('load', function() {
     if (event.target.getAttribute('value') === 'teachers') {
       hideForTeachers.classList.remove('show');
       hideForTeachers.classList.add('hide');
-      //    containerTeachers.classList.remove('show');
-      //  containerTeachers.classList.add('hide');
-      console.log('hola');
     } else if (event.target.getAttribute('value') === 'overview')
     // containerOverview.classList.add('show')
       hideForTeachers.classList.remove('hide');
@@ -28,33 +25,85 @@ window.addEventListener('load', function() {
   var codeFilter = document.querySelector('.code-filter');
   var sprintFilter = document.querySelector('sprint-filter');
   var placeFilter = document.querySelector('placeFilter');
-//  codeFilter.addEventListener('select', )
+  //  codeFilter.addEventListener('select', )
+
+  // evento para los filtros:
+
+  var PLACE = '';
+  var CODE = '';
+  var students = {};
+  var placeFilter = document.querySelector('.place-filter');
+  var codeFilter = document.querySelector('.code-filter');
+
+  codeFilter.addEventListener('change', showNumber);
+  function showNumber(event) {
+    PLACE = placeFilter.value;
+    CODE = this.value;
+    students = data[PLACE][CODE]['students'];
+
+    var enrollmentStudents = document.querySelector('.enrollment-students');
+    enrollmentStudents.textContent = totalActive(PLACE, CODE, 'active');
+
+    var teacherRatings = document.querySelector('.teacher-ratings');
+    teacherRatings.textContent = TeachersPoints(PLACE, CODE);
+
+    var jediMasterRatings = document.querySelector('.jedi-master-ratings');
+    jediMasterRatings.textContent = jediMasterPoints(PLACE, CODE);
+  }
 });
 
 
 function totalActive(place, code, activeOrNotActive) {
-  var listOfCodes = data[place];
-  var promocion = listOfCodes[code];
-  var students = promocion.students;
   var isActive = 0;
   var isNotActive = 0;
-  // var result=0
-  for (var i = 0 ; i < students.length; i++) {
-    if (students[i].active === true && activeOrNotActive === 'active') {
-      //  isActive++;
+  for (var i = 0 ; i < data[place][code].students.length; i++) {
+    if (data[place][code].students[i].active === true && activeOrNotActive === 'active') {
       isActive++;
-    } else if (students[i].active === false && activeOrNotActive === 'notActive') {
-      // isNotActive++;
+    } else if (data[place][code].students[i].active === false && activeOrNotActive === 'notActive') {
       isNotActive++;
     }
   }
-  // return  result
   if (activeOrNotActive === 'active') {
     return isActive;
   } else if (activeOrNotActive === 'notActive') {
     return isNotActive;
   }
 }
+
+// funcion que saca el promedio de los puntajes de los profesores   (todos los sprints)
+function TeachersPoints(place, code) {
+  var listOfCodes = data[place];
+  // var arrayPrueba= []
+  var sum = 0;
+  var promocion = listOfCodes[code];
+  var students = promocion.students;
+  var ratings = promocion.ratings;
+  for (var i = 0 ; i < ratings.length ; i++) {
+  // arrayPrueba.push(ratings[i].teacher)  ;
+    sum += ratings[i].teacher;
+  }
+  var average = sum / ratings.length;
+  return average;
+}
+
+// funcion que saca el promedio de los puntajes de los jedi-master   (todos los sprints)
+
+function jediMasterPoints(place, code) {
+  var listOfCodes = data[place];
+  var arrayPrueba = [];
+  var sum = 0;
+  var promocion = listOfCodes[code];
+  var students = promocion.students;
+  var ratings = promocion.ratings;
+  for (var i = 0 ; i < ratings.length ; i++) {
+    // arrayPrueba.push(ratings[i].jedi)  ;
+    sum += ratings[i].jedi;
+  }
+  var average = sum / ratings.length;
+  return average;
+// return arrayPrueba
+}
+/*
 // sacand el total de estudiantes activas y no activas
 totalActive('LIM', '2017-1', 'notActive') + totalActive('LIM', '2017-1', 'active');
 console.log(totalActive('AQP', '2016-2', 'active') + totalActive('AQP', '2016-2', 'notActive'));// PROMOCION 2016-2;
@@ -191,3 +240,4 @@ function npsOfSprints(place, code) {
   }
   return sum / anwersContainer.length;
 }
+*/
