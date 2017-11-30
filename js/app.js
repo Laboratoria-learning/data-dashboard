@@ -106,7 +106,7 @@ function begin() {
       for (var i = 0; i < sprints; i++) {
         sumNps += ratings[i].nps.promoters - ratings[i].nps.detractors;
       }
-      console.log(sumNps / sprints);
+      document.getElementById('nps').textContent = sumNps / sprints + '%';
     }
   }
 
