@@ -13,6 +13,11 @@ body {
   background-color: #F0EFEF;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .logo {
   height: 77px;
   /* text-align: center; */
@@ -143,7 +148,7 @@ section {
 
 article {
   width: 373px;
-  height: 362px;
+  height: 400px;
   padding: 20px;
   display: inline-block;
   background-color: #FFFFFF;
@@ -154,11 +159,13 @@ article {
 
 .squares {
   width: 161px;
-  height: 61px;
+  height: 67px;
   display: inline-block;
   padding: 10px;
   float: left;
+  margin-bottom: 8px;
   margin-right: 5px;
+  margin-top: 8px;
   background-color: #F7F7F7;
 }
 
@@ -262,4 +269,44 @@ p {
 
 main {
   display: inline-block;
+}
+
+.photos-girls img {
+  width: 200px;
+  margin: 0px;
+  height: 200px;
+  float: left;
+}
+
+.photos-girls div {
+  background-color: #f2d185;
+  padding: 20px;
+  margin: 50px;
+  margin-right: 107px;
+  float: right;
+  display: block;
+  width: 656px;
+}
+
+.photos-girls div div {
+  width: 109px;
+  height: 84px;
+  /* margin-top: -25px; */
+  background-color: #fde6bf;
+  padding: 17px;
+  padding-top: -89px;
+  float: right;
+  margin: 24px;
+  margin-top: 0px;
+}
+
+.photos-girls span {
+  padding: 10px;
+  /* display: inline; */
+  /* position: relative; */
+  float: right;
+  font-size: 25px;
+  padding-right: 84px;
+  padding-top: 9px;
+  padding-left: 66px;
 }
