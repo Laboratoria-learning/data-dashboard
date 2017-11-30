@@ -89,6 +89,6 @@ Poner en practica los temas revisados en clase de laboratoria(positioning) sob r
 + Markdown(README)
 + Hoja y papel para hacer el sketch
 
-![Texto alternativo](assets\images\sketch1.jpg)
+![Texto alternativo](assets/images/sketch1.jpg)
 
-![Texto alternativo](assets\images\sketch2.jpg)
+![Texto alternativo](assets/images/sketch2.jpg)
