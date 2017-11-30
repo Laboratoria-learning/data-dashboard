@@ -4,9 +4,11 @@
 console.log(data);
 // guardamos los nombres de las sedes
 var dataNameSedes = Object.keys(data);
+// console.log(dataNameSedes);
 
 // guardamos los valores las sedes
 var valuesofData = Object.values(data);
+// console.log(valuesofData);
 // console.log(valuesofData);
 
 // Nos aseguramos que la página cargue correctamente:
@@ -23,7 +25,7 @@ window.addEventListener('load', function() {
     // le asignamos el valor del labol del grupo, de acuerdo al nombre extraido de data.js de cada sede
     optgroupsedes.label = dataNameSedes[i];
     optgroupsedes.id = 'optgroupsede' + i;
-
+    // console.log(dataNameSedes[i]);
     // le asignamos cada sede a la lista de sedes
     selectionSede.appendChild(optgroupsedes);
     // guardamos las promociones por sede
@@ -31,6 +33,7 @@ window.addEventListener('load', function() {
     // console.log(promsforSede);
     // guardamos los valores de los promociones
     var valuesofPromsforSede = Object.values(valuesofData[i]);
+    // console.log(valuesofData[i]);
     // console.log(valuesofPromsforSede);
 
     // var nameSede = (searchInArray(dataNameSedes, dataNameSedes[i]));
@@ -38,7 +41,9 @@ window.addEventListener('load', function() {
     var nameSede = document.getElementById('optgroupsede' + i).label;
 
     // Recorremos las promociones
-    for (var j = 0; j < promsforSede.length; j++) {
+    var arrayNumberStudentsActiveforSede = [];
+      
+    for (var j = 0; j < valuesofPromsforSede.length; j++) {
       // Creamos un elemento para mostrar las promociones
       var optionproms = document.createElement('option');
       // le asignamos el valor a mostrar
@@ -46,34 +51,42 @@ window.addEventListener('load', function() {
       optionproms.id = 'optionproms' + j;
       // le asignamos donde lo va a mostrar
       optgroupsedes.appendChild(optionproms); 
-        
+  
       // var nameProm = searchInArray(promsforSede, promsforSede[j]); 
       var nameProm = document.getElementById('optionproms' + j).label;  
       
-      // console.log(nameProm); 
-      // console.log(data[nameSede][nameProm]);
+      var numberOfStudentsforProm = valuesofPromsforSede[j].students.length;
+      // console.log(numberOfStudentsforProm);
+      var numberStudentsActiveforProm = serchStudentsActive(valuesofPromsforSede[j].students);
+      var numberStudentsInactiveforProm = numberOfStudentsforProm - numberStudentsActiveforProm;
+      // console.log(numberStudentsActiveforProm);
+     
+      arrayNumberStudentsActiveforSede.push(numberStudentsActiveforProm);
 
+      // Porcentaje de alumnas activas por promoción
+      var percentSatudentsActiveforProm = Math.round((numberStudentsActiveforProm * 100) / numberOfStudentsforProm);
+      // Porcentaje de alumnas inactivas por promoción
+      var percentSatudentsIntiveforProm = Math.round((numberStudentsInactiveforProm * 100) / numberOfStudentsforProm);
+      
+      // console.log(numberOfStudentsforProm);
+      
       // nameProm.addEventListener('change', function(event) {
       //   switch (true) {
 
       //   }
       // });
     }
+    // total de studiantes por sede;
+    var numberOfStudentsforSede = activeforSede(arrayNumberStudentsActiveforSede);
+    // console.log(numberOfStudentsforSede);
   }
   /* FIN DE CÓDIGO MOSTRAR SEDES Y PROMOCIONES */
-
-  // var nameSede = 'AREQUIPA';
-  // var nameProm = '2016-II';
-  // var dataforSede = getValueforkey(data, nameSede);  
-  // console.log(dataforSede);
-  // var dataforProm = getValueforkey(dataforSede, nameProm);
-  // console.log(dataforProm);
-  // console.log(dataforSede[nameProm]);
+  
+  /* ACCEDER A LAS NOTAS DE LAS ESTUDIANTES*/
   
 
-  /* CÓDIGO PARA EXTRAER DATA*/
-
-
+  /* FIN ACCEDER*/
+  
   /* CODIGO PESTAÑAS*/
   var show = function(e) {
     var tabSeleccionado = e.target.dataset.tabSeleccionado;
@@ -111,8 +124,6 @@ window.addEventListener('load', function() {
   };
   chargePage();
 /* FIN CODIGO PESTAÑAS*/
-
-
 });
 
 
@@ -151,4 +162,27 @@ function getValueforkey(obj, key) {
     result = valueofkey;
   }  
   return result;
+}
+
+// para buscar estudiantes activas
+function serchStudentsActive(studentsList) {
+  var result = 0;
+  for (var k = 0; k < studentsList.length; k++) {
+    if (studentsList[k].active === true) {
+      result++;
+    }
+  }
+  // console.log(result);
+  return result;
+}
+
+
+// para buscar el total de acttivas por prom
+function activeforSede(array) {
+  /* PARA RECORRER EL ARRAY DEL NUMERO DE ESTUDIANTES ACTIVAS*/
+  var sum = 0;
+  for (var s = 0; s < array.length; s++) {
+    sum += array[s];
+  }
+  return sum;
 }
