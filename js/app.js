@@ -13,7 +13,10 @@ divPercentAchievement = document.getElementById('percent-achievement');
 divStudentsAchievement = document.getElementById('students-achievement');
 divKpiEnrollment = document.getElementById('kpi-enrollment');
 divKpiDropout = document.getElementById('kpi-dropout');
-divIstStudent=document.getElementById('ist-student');
+divIstStudent = document.getElementById('ist-student');
+divAverageTeacher = document.getElementById('average-teacher');
+divAverageJedi = document.getElementById('average-jedi');
+
 // Puedes hacer uso de la base de datos a través de la variable `data`
 
 
@@ -81,7 +84,6 @@ window.addEventListener('load', function(event) {
   }
 
   function showMenu(event) {
-    console.log(optionSprint.options);
     // Eliminar todos los elementos del select - sprint
     optionSprint.innerHTML = '';
 
@@ -116,7 +118,7 @@ window.addEventListener('load', function(event) {
   
       divPercentAchievement.innerHTML = parseFloat((str['ratings'][event.target.value]['student']['cumple'] + str['ratings'][event.target.value]['student']['supera']) * 100 / totalStudentsAchievement).toFixed(0) + ' %';
       
-      console.log(str['ratings'].length);
+   
       // Realizamos el gráfico de ACHIEVEMENT      
       google.charts.load('current', {'packages': ['corechart']});
 
@@ -151,8 +153,13 @@ window.addEventListener('load', function(event) {
       divPromoters.innerHTML = promoters + '% Promoters ';
       divPassive.innerHTML = passive + '% Passive';
       divDetractors.innerHTML = detractors + '% Detractores';
+
       // Insertamos la satisfacción de los estudiantes
-      divIstStudent.innerHTML=promoters;
+      totPromoters = 0;
+      for (i = 0;i < str['ratings'].length;i++) {
+        totPromoters = totPromoters + str['ratings'][i]['nps']['promoters'];
+      }
+      divIstStudent.innerHTML = parseFloat(totPromoters / str['ratings'].length).toFixed(0);
 
       // Realizamos el gráfico de NPS      
       google.charts.load('current', {'packages': ['corechart']});
@@ -182,28 +189,94 @@ window.addEventListener('load', function(event) {
       // Realizamos el gráfico de la satisfacción de los estudiantes     
       google.charts.load('current', {'packages': ['corechart']});
       
-  google.charts.setOnLoadCallback(drawChartIstStudents);
+      google.charts.setOnLoadCallback(drawChartIstStudents);
       
           
-  function drawChartIstStudents() {
-    // create the data table
-    var data = new google.visualization.DataTable();
-    data.addColumn('string', 'S');
-    data.addColumn('number', 'IST');
-    for (i = 0;i < str['ratings'].length;i++) {
-      data.addRows([
-        ['S' + str['ratings'][i]['sprint'], str['ratings'][i]['nps']['promoters']],
+      function drawChartIstStudents() {
+        // create the data table
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'S');
+        data.addColumn('number', 'IST');
+        for (i = 0;i < str['ratings'].length;i++) {
+          data.addRows([
+            ['S' + str['ratings'][i]['sprint'], str['ratings'][i]['nps']['promoters']],
              
              
-      ]);
-    }
+          ]);
+        }
               
               
-    var options = {'title': 'Current student satisfaction'};        
-    var chart = new google.visualization.LineChart(document.getElementById('ist-chart'));
-    chart.draw(data, options);
-  }
-      // Llenando datos del ENROLLMENT
+        var options = {'title': 'Current student satisfaction'};        
+        var chart = new google.visualization.LineChart(document.getElementById('ist-chart'));
+        chart.draw(data, options);
+      }
+      // Calculamos el teacher rating
+      totTeacherRating = 0;
+      for (i = 0;i < str['ratings'].length;i++) {
+        console.log(str['ratings'][i]['teacher']);
+        totTeacherRating = totTeacherRating + str['ratings'][i]['teacher'];
+      }
+      divAverageTeacher.innerHTML = parseFloat(totTeacherRating / str['ratings'].length).toFixed(1);
+
+      // Realizamos el gráfico del promedio de los teachers     
+      google.charts.load('current', {'packages': ['corechart']});
+   
+      google.charts.setOnLoadCallback(drawChartAverageTeacher);
+   
+       
+      function drawChartAverageTeacher() {
+        // create the data table
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'S');
+        data.addColumn('number', 'Average');
+        for (i = 0;i < str['ratings'].length;i++) {
+          data.addRows([
+            ['S' + str['ratings'][i]['sprint'], str['ratings'][i]['teacher']],
+          
+          
+          ]);
+        }
+           
+           
+        var options = {'title': 'Current rating teacher'};        
+        var chart = new google.visualization.LineChart(document.getElementById('acum-average-teacher'));
+        chart.draw(data, options);
+      }
+      // Calculamos el jedi master rating
+      totJediRating = 0;
+      for (i = 0;i < str['ratings'].length;i++) {
+        console.log(str['ratings'][i]['jedi']);
+        totJediRating = totJediRating + str['ratings'][i]['jedi'];
+      }
+      divAverageJedi.innerHTML = parseFloat(totJediRating / str['ratings'].length).toFixed(1);
+
+      // Realizamos el gráfico del promedio de los jedis    
+      google.charts.load('current', {'packages': ['corechart']});
+
+      google.charts.setOnLoadCallback(drawChartAverageJedi);
+
+    
+      function drawChartAverageJedi() {
+        // create the data table
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'S');
+        data.addColumn('number', 'Average');
+        for (i = 0;i < str['ratings'].length;i++) {
+          data.addRows([
+            ['S' + str['ratings'][i]['sprint'], str['ratings'][i]['jedi']],
+       
+       
+          ]);
+        }
+        
+        
+        var options = {'title': 'Current rating jedi'};        
+        var chart = new google.visualization.LineChart(document.getElementById('acum-average-jedi'));
+        chart.draw(data, options);
+      }
+
+
+      // Calculamos datos del ENROLLMENT
       var countEnrolled = 0;
       var countDropped = 0;
 
@@ -217,9 +290,7 @@ window.addEventListener('load', function(event) {
       }
       divKpiEnrollment.innerHTML = countEnrolled;
       divKpiDropout.innerHTML = parseFloat(countDropped / (countEnrolled + countDropped) * 100).toFixed(0) + ' %';
-      console.log(data['LIM']['2016-2']['students']);
-      console.log(countEnrolled);
-      console.log(countDropped);
+      
 
       // Realizamos el gráfico de deserción - enrollment
       google.charts.load('current', {'packages': ['corechart']});
@@ -241,40 +312,11 @@ window.addEventListener('load', function(event) {
 
         chart.draw(data, options);
       }
-      
-
-      
-
-
-
-
     });
   }
 
  
 /*
- console.log(data['LIM']['2016-2']['ratings'][0]); // sprint 1 
-  console.log(data['LIM']['2016-2']['ratings'][1]); // sprint 2 
-  
-console.log(data['LIM']['2016-2']['students']);
-console.log(data['LIM']['2016-2']['students'][0])
-console.log(data['LIM']['2016-2']['students'][0]['name']);
-console.log(data['LIM']['2016-2']['students'][0]['sprints']);
-console.log(data['LIM']['2016-2']['students'][0]['sprints'][0]);
-console.log(data['LIM']['2016-2']['students'][0]['sprints'][0]['number']);
-console.log(data['LIM']['2016-2']['students'][0]['sprints'][0]['score']);
-console.log(data['LIM']['2016-2']['students'][0]['sprints'][0]['score']['tech']);
-console.log(data['LIM']['2016-2']['students'][0]['sprints'][0]['score']['hse']);
- 
-  /*
-  console.log(data['AQP']);
-  console.log(data['AQP']['2016-2'])
-  console.log(data['AQP']['2016-2']['ratings'])
-  console.log(data['AQP']['2016-2']['ratings'][0]) //sprint
-  console.log(data['AQP']['2016-2']['ratings'][0]['jedi']) //puntaje dl jedi
-  console.log(data['AQP']['2016-2']['ratings'][0]['nps']) //nps
-  console.log(data['AQP']['2016-2']['ratings'][0]['nps']['promoters'])
-  console.log(data);*/
+ Aca el load*/
 });
-// // Puedes hacer uso de la base de datos a través de la variable `data`
-// console.log(data);
+
