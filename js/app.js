@@ -428,13 +428,8 @@ window.addEventListener('load', function() {
               100 - dropout(sede, generation),
             ],
             backgroundColor: [
-<<<<<<< HEAD
-              '#FF0000',  
-              '#58D68D',          
-=======
                '#FF0000',  
               '#58D68D',              
->>>>>>> 645f9216e0960a6781171f5315a860ae33038f87
             ]
           }],
           labels: [
@@ -479,13 +474,8 @@ window.addEventListener('load', function() {
               100 - ((studentAchievement(sede, generation) / totalStudentActive(sede, generation)) * 100).toFixed(1),
             ],
             backgroundColor: [
-<<<<<<< HEAD
-              '#58D68D',
-              '#FF0000',              
-=======
              '#58D68D',
              '#FF0000',              
->>>>>>> 645f9216e0960a6781171f5315a860ae33038f87
             ]
           }],
           labels: [
@@ -534,11 +524,7 @@ window.addEventListener('load', function() {
             backgroundColor: [
               '#58D68D',
               '#F1C40F',
-<<<<<<< HEAD
-              '#FF0000',              
-=======
               '#FF0000',            
->>>>>>> 645f9216e0960a6781171f5315a860ae33038f87
             ]
           }],
           labels: [
