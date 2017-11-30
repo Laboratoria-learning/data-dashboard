@@ -24,6 +24,9 @@ var nps1 = document.getElementById('nps1');
 var nps2 = document.getElementById('nps2');
 var teacherRating = document.getElementById('teacherRating');
 var jediMAster = document.getElementById('jediMAster');
+var achievement1 = document.getElementById('achievement1');
+var achievement2 = document.getElementById('achievement2');
+
 // Generaciones en el menu desplegable
 var aqp20162 = document.getElementById('AQP20162');
 var aqp20171 = document.getElementById('AQP20171');
@@ -46,6 +49,8 @@ function faqp20162() {
   jediMAster.textContent = averagePointsJediAQP20162;
   columnchart1Values.classList.add('show');
   columnchart1NPS.classList.add('show');
+  achievement1.textContent = '20';
+  achievement2.textContent = '5';
 }
 function faqp20171() {
   enrollmentDiv1.textContent = numEstudentsAQP20171;
@@ -56,6 +61,8 @@ function faqp20171() {
   jediMAster.textContent = averagePointsJediAQP20171;
   columnchart1Values.classList.add('show');
   columnchart2NPS.classList.add('show');
+  achievement1.textContent = '20';
+  achievement2.textContent = '5';
 }
 function fcdmx20171() {
   enrollmentDiv1.textContent = numEstudentsCDMX20171;
@@ -66,6 +73,8 @@ function fcdmx20171() {
   jediMAster.textContent = averagePointsJedisCDMX20171;
   columnchart2Values.classList.add('show');
   columnchart3NPS.classList.add('show');
+  achievement1.textContent = '20';
+  achievement2.textContent = '5';
 }
 function fcdmx20172() {
   enrollmentDiv1.textContent = numEstudentsCDMX20172;
@@ -76,6 +85,8 @@ function fcdmx20172() {
   jediMAster.textContent = averagePointsJedisCDMX20172;
   columnchart2Values.classList.add('show');
   columnchart4NPS.classList.add('show');
+  achievement1.textContent = '20';
+  achievement2.textContent = '5';
 }
 function flim20162() {
   enrollmentDiv1.textContent = numEstudentsLIM20162;
@@ -86,6 +97,8 @@ function flim20162() {
   jediMAster.textContent = averagePointsJedisLIM20162;
   columnchart3Values.classList.add('show');
   columnchart5NPS.classList.add('show');
+  achievement1.textContent = '20';
+  achievement2.textContent = '5';
 }
 function flim20171() {
   enrollmentDiv1.textContent = numEstudentsLIM20171;
@@ -96,6 +109,8 @@ function flim20171() {
   jediMAster.textContent = averagePointsJedisLIM20171;
   columnchart3Values.classList.add('show');
   columnchart6NPS.classList.add('show');
+  achievement1.textContent = '20';
+  achievement2.textContent = '5';
 }
 function flim20172() {
   enrollmentDiv1.textContent = numEstudentsLIM20172;
@@ -106,6 +121,8 @@ function flim20172() {
   jediMAster.textContent = averagePointsJedisLIM20172;
   columnchart3Values.classList.add('show');
   columnchart7NPS.classList.add('show');
+  achievement1.textContent = '20';
+  achievement2.textContent = '5';
 }
 function fscl20162() {
   enrollmentDiv1.textContent = numEstudentsSCL20162;
@@ -116,6 +133,8 @@ function fscl20162() {
   jediMAster.textContent = averagePointsJedisSCL20162;
   columnchart4Values.classList.add('show');
   columnchart8NPS.classList.add('show');
+  achievement1.textContent = '20';
+  achievement2.textContent = '5';
 }
 function fscl20171() {
   enrollmentDiv1.textContent = numEstudentsSCL20171;
@@ -126,6 +145,8 @@ function fscl20171() {
   jediMAster.textContent = averagePointsJedisSCL20171;
   columnchart4Values.classList.add('show');
   columnchart9NPS.classList.add('show');
+  achievement1.textContent = '20';
+  achievement2.textContent = '5';
 }
 function fscl20172() {
   enrollmentDiv1.textContent = numEstudentsSCL20172;
@@ -136,6 +157,8 @@ function fscl20172() {
   jediMAster.textContent = averagePointsJedisSCL20172;
   columnchart4Values.classList.add('show');
   columnchart10NPS.classList.add('show');
+  achievement1.textContent = '20';
+  achievement2.textContent = '5';
 }
 // eventos Generaciones en el menu desplegable
 aqp20162 .addEventListener('click', faqp20162);
