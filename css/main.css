@@ -39,11 +39,6 @@
   margin-top: 20px;
 }
 
-.results {
-  width: 75%;
-  height: 100%;
-}
-
 .container {
   width: 75%;
   margin: 0 5%;
@@ -144,7 +139,6 @@ span, input, i, p {
   font-size: 2em;
 }
 
-
 .fa, .li-menu {
   padding: 10px;
   height: 30px;
@@ -168,9 +162,13 @@ span, input, i, p {
   display: block;
 }
 
-nav:hover {
-  background: rgba(212, 212, 209, 0.6);
-  width: 15%;
+.canvas-reports {
+  width:25%;
+}
+
+.chart {
+  width: '100px';
+  height: '50px';
 }
 
 /* .list {
