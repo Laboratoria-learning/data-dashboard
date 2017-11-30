@@ -1,4 +1,26 @@
+// Load google charts-satisfied-students
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
 
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Sprint', 'Satisfied',],
+  ['S1 ',30],
+  ['S2', 20],
+  ['S3', 50],
+  ['S4', 60],
+  ['S5', 70]
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = { 'width':325, 'height':170};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.LineChart(document.getElementById('satisfied-chart'));
+  chart.draw(data, options);
+}
+//funcion de los tabs de main section
 var showHide = function(e) {
     var tabSelected = e.target.dataset.tabSelected;
     var overview = document.getElementById('container-overview');
