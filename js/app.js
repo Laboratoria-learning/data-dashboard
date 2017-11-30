@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Puedes hacer uso de la base de datos a través de la variable `data`
 console.log(data);
 
@@ -93,3 +94,10 @@ function notaHse(sede, generation) {
 }
 
 // notaHse('AQP', '2016-2')
+=======
+/*
+ * Funcionalidad de tu producto
+ */
+// Puedes hacer uso de la base de datos a través de la variable `data`
+
+>>>>>>> 263cebead4823cba1069cb2e9d0660d78bc74d4f
