@@ -40,10 +40,11 @@ var studentSatisfac = document.getElementById('student-satisfaction');
 var teacherRated = document.getElementById('teacher-rating');
 
 //Jedi Rated 
-var jediRated = document.getElementById('JediMaster-rating')
+var jediRated = document.getElementById('JediMaster-rating');
 
 //Eventos del nav
-var navStudents = document.getElementById('estudiantes')
+var navStudents = document.getElementById('estudiantes');
+var containerStudents = document.getElementsByClassName('container-students')[0];
 
 //Sedes 
 //AQP, CDMX, LIM, SCL
@@ -87,6 +88,7 @@ function selectSede () {
       studentSatisfaction();
       teacherRating();
       jediMaster();
+      createStudents();
       drawSeriesChart();
     })
   }
@@ -110,6 +112,7 @@ function selectPromo() {
       studentSatisfaction(); 
       teacherRating();
       jediMaster();
+      createStudents();
       drawSeriesChart();
     })
   }
@@ -404,6 +407,8 @@ function sprintsNoteHse(sp1b, sp1l, sp2b, sp2l, sp3b, sp3l, sp4b, sp4l) {
   }
 }
 
+//Estudiantes
+
 function navClick() {
   navStudents.addEventListener('click',function(evento) {
     evento.preventDefault();
@@ -411,7 +416,31 @@ function navClick() {
     document.getElementsByClassName('students')[0].classList.add('mostrar');
     document.getElementsByClassName('students')[0].classList.remove('ocultar');
   })
-}navClick();
+}
+navClick();
+
+//Crear studiantes
+function createStudents() {
+  while (containerStudents.firstChild) {
+    containerStudents.removeChild(containerStudents.firstChild);
+  }
+  for (var i = 0; i < dataStudents[sede][promo].students.length; i++) {
+    var singleStudent = document.createElement('div');
+    var studentImage = document.createElement('img');
+    var studentName = document.createElement('h2');
+    var containerTechSkills = document.createElement('div');
+    var containerSoftSkills = document.createElement('div');
+    var teckSkillsSingle = document.createElement('span');
+    var softSkillsSingle = document.createElement('span');
+    containerStudents.appendChild(singleStudent);
+    singleStudent.classList.add('single-student');
+    studentImage.src = dataStudents[sede][promo].students[i].photo;
+    studentName.textContent = dataStudents[sede][promo].students[i].name;
+    singleStudent.appendChild(studentImage);
+    singleStudent.appendChild(studentName);
+  }
+}
+createStudents();
 
 // Puedes hacer uso de la base de datos a través de la variable `data`
 console.log(dataStudents);
