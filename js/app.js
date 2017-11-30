@@ -205,6 +205,4 @@ selectSede.addEventListener('change', function(event) {
     document.getElementById('scoret').innerHTML = scoreTeachersTotalAqp71;
     document.getElementById('scorej').innerHTML = scoreJedisTotalAqp71;
   }
-
-
 });
