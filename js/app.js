@@ -24,49 +24,167 @@ function create() {
   switch (sede) {
   case 'LIMA2016-II':
     var estudiantelim1 = (data['LIM']['2016-2']['students'].length);
+    var totalStudentlim1 = data['LIM']['2016-2']['students'];
       console.log(document.getElementById('one').innerHTML =  estudiantelim1  + " # estudents currentl enrrolled" );
-      var totalStudentlim1 = data['LIM']['2016-2']['students'];
-      porcentaje();
+      /* Añadiendo NPS */
+      var ratings = data['LIM']['2016-2']['ratings'][0];
+      var promoters = ratings['nps']['promoters'];
+      var passive = ratings['nps']['passive'];
+      var detractors = ratings['nps']['detractors'];
+      var npsTotal = promoters - detractors;
+
+      console.log(document.getElementById('five').innerHTML = (npsTotal) + " %");
+
+      console.log(document.getElementById('six-1').innerHTML = (promoters) + "%" + "promoters");
+      console.log(document.getElementById('six-2').innerHTML = (passive) + "%" + "passives");
+      console.log(document.getElementById('six-3').innerHTML = (detractors) + "%" + "detractors");
       break;
   case 'LIMA2017-I':
   var estudiantelim2 = (data['LIM']['2017-1']['students'].length);
   var totalStudentlim2 = data['LIM']['2017-1']['students'];
   console.log( document.getElementById('one').innerHTML = estudiantelim2);
+  /* Añadiendo NPS*/
+  var ratings = data['LIM']['2017-1']['ratings'][0];
+  var promoters = ratings['nps']['promoters'];
+  var passive = ratings['nps']['passive'];
+  var detractors = ratings['nps']['detractors'];
+  var npsTotal = promoters - detractors;
+
+  console.log(document.getElementById('five').innerHTML = (npsTotal) + " %");
+
+  console.log(document.getElementById('six-1').innerHTML = (promoters) + "%" + "promoters");
+  console.log(document.getElementById('six-2').innerHTML = (passive) + "%" + "passives");
+  console.log(document.getElementById('six-3').innerHTML = (detractors) + "%" + "detractors");
       break;
   case 'LIMA2017-II':
-  var  estudiantelim3 = (data["LIM"]["2017-1"]["students"].length);
+  var  estudiantelim3 = (data["LIM"]["2017-2"]["students"].length);
   console.log( document.getElementById('one').innerHTML = estudiantelim3);
+  /* Añadiendo NPS*/
+  var ratings = data['LIM']['2017-2']['ratings'][0];
+  var promoters = ratings['nps']['promoters'];
+  var passive = ratings['nps']['passive'];
+  var detractors = ratings['nps']['detractors'];
+  var npsTotal = promoters - detractors;
+
+  console.log(document.getElementById('five').innerHTML = (npsTotal) + " %");
+
+  console.log(document.getElementById('six-1').innerHTML = (promoters) + "%" + "promoters");
+  console.log(document.getElementById('six-2').innerHTML = (passive) + "%" + "passives");
+  console.log(document.getElementById('six-3').innerHTML = (detractors) + "%" + "detractors");
       break;
   case 'AREQUIPA2016-II':
   var  estudiantelim4 = (data["AQP"]["2016-2"]["students"].length);
   console.log( document.getElementById('one').innerHTML = estudiantelim4);
   var totalStudentAQP1 = data["AQP"]["2016-2"]["students"];
-  porcentaje();
+  /* Añadiendo NPS */
+  /* Añadiendo NPS*/
+  var ratings = data['AQP']['2016-2']['ratings'][0];
+  var promoters = ratings['nps']['promoters'];
+  var passive = ratings['nps']['passive'];
+  var detractors = ratings['nps']['detractors'];
+  var npsTotal = promoters - detractors;
+
+  console.log(document.getElementById('five').innerHTML = (npsTotal) + " %");
+
+  console.log(document.getElementById('six-1').innerHTML = (promoters) + "%" + "promoters");
+  console.log(document.getElementById('six-2').innerHTML = (passive) + "%" + "passives");
+  console.log(document.getElementById('six-3').innerHTML = (detractors) + "%" + "detractors");
        break;
   case 'AREQUIPA2017-I':
   var  estudiantelim5 = (data["AQP"]["2017-1"]["students"].length);
   console.log( document.getElementById('one').innerHTML = estudiantelim5);
+  /* Añadiendo NPS*/
+  var ratings = data['AQP']['2017-1']['ratings'][0];
+  var promoters = ratings['nps']['promoters'];
+  var passive = ratings['nps']['passive'];
+  var detractors = ratings['nps']['detractors'];
+  var npsTotal = promoters - detractors;
+
+  console.log(document.getElementById('five').innerHTML = (npsTotal) + " %");
+
+  console.log(document.getElementById('six-1').innerHTML = (promoters) + "%" + "promoters");
+  console.log(document.getElementById('six-2').innerHTML = (passive) + "%" + "passives");
+  console.log(document.getElementById('six-3').innerHTML = (detractors) + "%" + "detractors");
       break;
   case 'SantiagodeChile2016-II':
-  var  estudiantelim6 = (data["SCL"]["2017-1"]["students"].length);
+  var  estudiantelim6 = (data["SCL"]["2016-2"]["students"].length);
   console.log( document.getElementById('one').innerHTML = estudiantelim6);
+  /* Añadiendo NPS*/
+  var ratings = data['SCL']['2016-2']['ratings'][0];
+  var promoters = ratings['nps']['promoters'];
+  var passive = ratings['nps']['passive'];
+  var detractors = ratings['nps']['detractors'];
+  var npsTotal = promoters - detractors;
+
+  console.log(document.getElementById('five').innerHTML = (npsTotal) + " %");
+
+  console.log(document.getElementById('six-1').innerHTML = (promoters) + "%" + "promoters");
+  console.log(document.getElementById('six-2').innerHTML = (passive) + "%" + "passives");
+  console.log(document.getElementById('six-3').innerHTML = (detractors) + "%" + "detractors");
       break;
   case 'SantiagodeChile2017-I':
   var  estudiantelim7 = (data["SCL"]["2017-1"]["students"].length);
   console.log( document.getElementById('one').innerHTML = estudiantelim7);
+  /* Añadiendo NPS*/
+  var ratings = data['SCL']['2017-1']['ratings'][0];
+  var promoters = ratings['nps']['promoters'];
+  var passive = ratings['nps']['passive'];
+  var detractors = ratings['nps']['detractors'];
+  var npsTotal = promoters - detractors;
+
+  console.log(document.getElementById('five').innerHTML = (npsTotal) + " %");
+
+  console.log(document.getElementById('six-1').innerHTML = (promoters) + "%" + "promoters");
+  console.log(document.getElementById('six-2').innerHTML = (passive) + "%" + "passives");
+  console.log(document.getElementById('six-3').innerHTML = (detractors) + "%" + "detractors");
       break;
   case 'SantiagodeChile2017-II':
   var  estudiantelim8 = (data["SCL"]["2017-2"]["students"].length);
   console.log( document.getElementById('one').innerHTML = estudiantelim8);
+  /* Añadiendo NPS*/
+  var ratings = data['SCL']['2017-2']['ratings'][0];
+  var promoters = ratings['nps']['promoters'];
+  var passive = ratings['nps']['passive'];
+  var detractors = ratings['nps']['detractors'];
+  var npsTotal = promoters - detractors;
+
+  console.log(document.getElementById('five').innerHTML = (npsTotal) + " %");
+
+  console.log(document.getElementById('six-1').innerHTML = (promoters) + "%" + "promoters");
+  console.log(document.getElementById('six-2').innerHTML = (passive) + "%" + "passives");
+  console.log(document.getElementById('six-3').innerHTML = (detractors) + "%" + "detractors");
       break;
   case 'CiudaddeMexico2017-I':
   var  estudiantelim9 = (data["CDMX"]["2017-1"]["students"].length);
   console.log( document.getElementById('one').innerHTML = estudiantelim9);
+  /* Añadiendo NPS*/
+  var ratings = data['CDMX']['2017-1']['ratings'][0];
+  var promoters = ratings['nps']['promoters'];
+  var passive = ratings['nps']['passive'];
+  var detractors = ratings['nps']['detractors'];
+  var npsTotal = promoters - detractors;
+
+  console.log(document.getElementById('five').innerHTML = (npsTotal) + " %");
+
+  console.log(document.getElementById('six-1').innerHTML = (promoters) + "%" + "promoters");
+  console.log(document.getElementById('six-2').innerHTML = (passive) + "%" + "passives");
+  console.log(document.getElementById('six-3').innerHTML = (detractors) + "%" + "detractors");
      break;
   case 'CiudaddeMexico2017-II':
   var  estudiantelim10 = (data["CDMX"]["2017-2"]["students"].length);
   console.log( document.getElementById('one').innerHTML = estudiantelim10);
-  porcentaje();
+  /* Añadiendo NPS*/
+  var ratings = data['CDMX']['2017-2']['ratings'][0];
+  var promoters = ratings['nps']['promoters'];
+  var passive = ratings['nps']['passive'];
+  var detractors = ratings['nps']['detractors'];
+  var npsTotal = promoters - detractors;
+
+  console.log(document.getElementById('five').innerHTML = (npsTotal) + " %");
+
+  console.log(document.getElementById('six-1').innerHTML = (promoters) + "%" + "promoters");
+  console.log(document.getElementById('six-2').innerHTML = (passive) + "%" + "passives");
+  console.log(document.getElementById('six-3').innerHTML = (detractors) + "%" + "detractors");
     break;
   default:
       alert('seleccione una opcion');
@@ -86,6 +204,20 @@ for (var i = 0; i<totalStudentAQP1.length;i++){
     console.log(document.getElementById('two').innerHTML = (inactiveStudentAQP1.length/estudiantelim4)*100 + "%" );
 }
 
+  function nps() {
+    // var ratings = data['AQP']['2016-2']['ratings'][0];
+    var promotersAQP = ratings['nps']['promoters'];
+    var passiveAQP = ratings['nps']['passive'];
+    var detractorsAQP = ratings['nps']['detractors'];
+    var npsTotal = promotersAQP - detractorsAQP;
+
+    console.log(document.getElementById('five').innerHTML = (npsTotal) + " %");
+
+    console.log(document.getElementById('six-1').innerHTML = (promotersAQP) + "%" + "promoters");
+    console.log(document.getElementById('six-2').innerHTML = (passiveAQP) + "%" + "passives");
+    console.log(document.getElementById('six-3').innerHTML = (detractorsAQP) + "%" + "detractors");
+
+}
 
 }
 
