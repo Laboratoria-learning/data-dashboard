@@ -40,7 +40,6 @@ a {
 #logo-laboratoria {
   background-color: #fff;
   padding: 10px 0;
-  border-right: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0;
 }
 
@@ -102,6 +101,7 @@ header {
   color: #b9b9b9;
   height: 72px;
   box-shadow: 0px 5px 15px #b9b9b9;
+  border-left: 1px solid #e0e0e0;
   position: relative;
   z-index: 10;
 }
@@ -215,7 +215,6 @@ select:hover {
 
 #overview .big-box {
   width: 47.5%;
-  /* text-align: left; */
 }
 
 #overview .big-box div {
@@ -224,10 +223,13 @@ select:hover {
   box-shadow: none;
 }
 
+#overview .single .info {
+  width: 100%;
+}
+
 #overview pre {
   display: block;
   font-size: 3em;
-  /* text-align: center; */
   margin: 10px auto;
   color: #ffc107;
 }
