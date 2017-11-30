@@ -132,7 +132,7 @@ window.addEventListener('load', function() {
   textTS.innerText = '% Of TOTAL';
  // agregando clases
   techS.appendChild(techSection);
-  techSection.appendChild(techSkills)
+  techSection.appendChild(techSkills);
   techSkills.appendChild(titleTS);
   techSkills.appendChild(comboTS);
   comboTS.appendChild(OP1);
@@ -296,9 +296,6 @@ window.addEventListener('load', function() {
     }
     var totalDetractor = allDetractor / ratigns.length;
     return totalDetractor + ' % Detractor';
-  }
-  function lifeSkills() {
-    
   }
 });
 // Puedes hacer uso de la base de datos a través de la variable `data`
