@@ -30,10 +30,37 @@ window.addEventListener('load', function() {
   function icono() {
   opcionMenu.style.display = 'block';
   }*/
-
-
-  
-
   
  /* btnmenu.addEventListener('click', showMenu);
   function showMenu() { 
+    if (menu.classList.contains('disabled-menu')) { 
+      menu.classList.add('enabled-menu'); 
+      menu.classList.remove('disabled-menu');
+    } else {
+      
+      menu.classList.add('disabled-menu');
+      menu.classList.remove('enabled-menu');
+    }
+  }*/
+  
+  
+ 
+   // overview.style.display = 'none';
+  /* menu.addEventListener('click', option);
+  function option() {
+      alert('hola');
+    if (opcionMenu.classList.contains('disabled-menu')) {
+      opcionMenu.classList.add('enabled-menu');
+      opcionMenu.classList.remove('disabled-menu');   
+    } else {
+      opcionMenu.classList.add('disabled-menu');
+      opcionMenu.classList.remove('enabled-menu');
+    }
+  }*/
+
+
+});
+
+     
+// Puedes hacer uso de la base de datos a través de la variable `data`
+console.log(data);
