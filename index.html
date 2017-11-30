@@ -17,15 +17,17 @@
       <div class="div-nav">
        <div class="choose-sede-generation">
             <select id="optgroupt" class="optgroupt">
-              <option value="">Seleccione una sede</option>
-              <option id="sedeLim" value="LIM">LIMA</option>
+              <option id="sedeLim" value="LIM" selected>LIMA</option>
               <option id="sedeAqp" value="AQP">AREQUIPA</option>
               <option id="sedeCdmx" value="CDMX">CIUDAD DE MÉXICO</option>
-              <option id="sedeSlc" value="SLC">SATIAGO DE CHILE</option>
+              <option id="sedeSlc" value="SCL">SANTIAGO DE CHILE</option>
             </select>
-            <h3 id="title" class="title">LIMA 2017 - II</h3>
+            <h3 id="title" class="title">LIMA</h3><h5 id="title-gen" class="title-gen">2017-2</h5>
             <!--<div id="generation" class="generation display-none">-->
             <div id="divgeneration" class="divgeneration"></div>
+            <select id="generation" class="generations">
+              <option value="0" selected>Elige una generación...</option>
+            </select>
             </div>
        </div>
       </div>
@@ -158,6 +160,9 @@
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
     <script src="./js/app.js"></script>
+    <!--<script src="./js/datos.js"></script>-->
   </body>
 </html>
+
+
 

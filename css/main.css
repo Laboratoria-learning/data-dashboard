@@ -60,12 +60,22 @@ nav{
  
 }
 
-.choose-sede-generation h3{
-   display:inline-block;
-  position:absolute;
-  left:550px;
-  top:15px;
-    width:  300px;
+.title{
+    //display:inline-block;
+    position:absolute;
+    left:410px;
+    top:15px;
+    width: 500px;
+    text-align:center;
+}
+
+.title-gen{
+    //display:inline-block;
+    position:absolute;
+    left:400px;
+    top:50px;
+    width:300px;
+    text-align:right;
 }
 
 .optgroupt{
@@ -92,6 +102,10 @@ nav{
     margin-top:1em;
     background:white;
     cursor:pointer;
+}
+
+.html-select{
+
 }
 
 .menu-nav{

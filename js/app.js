@@ -2,44 +2,119 @@ window.addEventListener('load', function(event){
     
         var chooseGeneration = document.querySelector('.choose-sede-generation');
         var optgroupt =document.getElementById('optgroupt');
-        var generation = document.getElementById('generation');
         var enrollment = document.getElementById('enrollment');
+        var generation = document.getElementById('generation');
         var divgeneration = document.getElementById('divgeneration');
-    
-      
+        var title = document.getElementById('title');
+        var titleGen = document.getElementById('title-gen');
+        
         optgroupt.addEventListener('change', function(event){
-          
-                var generationSelected = document.createElement('select');
-                generationSelected.setAttribute('id', 'generation');
-                generationSelected.setAttribute('onchange', 'generation(this.value)');
-          
-                var listGeneration = document.createElement('option');
-                listGeneration.setAttribute('value', '0');
-                listGeneration.classList.add('generations');
-                var generationsText = document.createTextNode('Choose another generation:');
-                listGeneration.appendChild(generationsText);
-                generationSelected.appendChild(listGeneration);
     
-                for(var i = 0; i < Object.keys(data).length; i++){
-                    if(event.target.value === Object.keys(data)[i]){
-                        for(var j = 0; j < Object.keys(data[Object.keys(data)[i]]).length; j++){
+            console.dir(event.target.value);//cada vez que escoja una opción, me arrojará su valor:AQP,LIM,CDMX,SLC.
+            var sede = event.target.value;
+    
+                if (sede === 'AQP') {
+                    title.textContent='';
+                    title.textContent='AREQUIPA';
+                }
+    
+                if (sede ==='SCL') {
+                    title.textContent='';
+                    title.textContent='SANTIAGO DE CHILE';
+                }
+    
+                if (sede ==='LIM') {
+                    title.textContent='';
+                    title.textContent='LIMA';
+                }
+    
+                if (sede === 'CDMX') {
+                    title.textContent='';
+                    title.textContent='CIUDAD DE MEXICO';
+                }
+            //var arraySedes = Object.keys(data);["AQP", "CDMX", "LIM", "SCL"]
+    
+            //generation.setAttribute('onchange', 'generation(this.value)');
+    
+            console.log(Object.keys(data[sede])); 
+            console.log(     Object.keys(data[sede])[0]          );       
+    
+            
+            for(var i = 0; i <= Object.keys(data).length; i++){
+                if(event.target.value === Object.keys(data)[i]){
+                   // for(var j = 0; j < Object.keys(data[Object.keys(data)[i]]).length; j++){
+                    for(var j = 0; j < Object.keys(data[sede]).length; j++){
     
                             var otherlistGeneration = document.createElement('option');
                             otherlistGeneration.classList.add('generations');
-                            otherlistGeneration.setAttribute('value', Object.keys(data[Object.keys(data)[i]])[j].value);
-                            var textGeneration = document.createTextNode(Object.keys(data[Object.keys(data)[i]])[j]);
+                            var textGeneration = document.createTextNode(Object.keys(data[sede])[j]);//Object.keys(data[sede])
                             otherlistGeneration.appendChild(textGeneration);
-                            generationSelected.appendChild(otherlistGeneration);
-                            divgeneration.appendChild(generationSelected); 
-                        }
-                   // 
-                } 
-                //
+                            generation.appendChild(otherlistGeneration); 
+    
+                    }
+                }            
+            } 
+            /*************************************************************************/
+            generation.addEventListener('change', function(event){   
+                titleGen.textContent = event.target.value;
+    
+                console.log(Object.keys(data));//devuelve ["AQP", "CDMX", "LIM", "SCL"]
+                console.log(sede);// me devuelve el nombre de la sede elegida en el anterior evento.
+                console.log(Object.keys(data[sede]));//devuelve ["2016-2", "2017-1"] (sede:representa la propiedad del objeto data elegido en el anterior evento)
+                //console.log(event.target.value)
+               
+                
+                for (var item in data){
+                    if(item === sede){
+                        var dataSede= {};
+                        dataSede = data[item];
+                    }
+    
                 }
-             
-        });
+                console.log(dataSede);//me devuelve el contenido de la sede elegida: {2016-2: {…}, 2017-1: {…}, 2017-2: {…}}
+                //debugger
+                for(var i in dataSede){
+                    if(i === event.target.value){
+                        var dataAlumns = {};
+                        dataAlumns = dataSede[i].students;
+                    }
+                }
+                console.log(dataAlumns)//tengo a todos los estudiantes de la sede y generación elegida en un array
+               
+                debugger
+                var cont=0;
+                for(var k = 0; k<dataAlumns.length;k++){
+                  if(dataAlumns[k].active === false)                   
+                            cont++;
+                }
+                console.log(cont);//número de alumnos inactivos
+              //alumno[0].active
+                /*for(var items in contentDataGeneration){           
+                    var dataStudents = items;
+                    var contentDataStudents = contentDataGeneration[items];
+                }
+                console.log(dataStudents);
+                console.log(contentDataStudents);
+    */
+    
+                
+            });
     
     
+    
+    
+    });
+    
+                        //var test = "2017-2";
+                       /* if(Object.keys(data[sede])[j]==="2017-2"){
+                            arra.unshift(Object.keys(data[sede])[j]);
+                         }else if(Object.keys(data[sede])[j]==="2017-1"){
+                             arra.push(Object.keys(data[sede])[j]);
+                         }else {
+                             arra.push(Object.keys(data[sede])[j]);
+                         }*/
+        
+        
        /* for(var i = 0; i < Object.keys(data).length; i++){
             if(event.target.value === Object.keys(data)[i]){
                 for(var j = 0; j < Object.keys(data[Object.keys(data)[i]]).length; j++){
@@ -81,7 +156,9 @@ window.addEventListener('load', function(event){
      
     
     //debugger
+    console.log(data);
     console.log(Object.keys(data));//["AQP", "CDMX", "LIM", "SCL"]
+    console.log(Object.values(data));
     console.log(Object.keys(data)[0]);
     console.log(Object.values(data).length);//[{…}, {…}, {…}, {…}]
     console.log(Object.values(data)[0]);
@@ -92,16 +169,7 @@ window.addEventListener('load', function(event){
     console.log(Object.keys(Object.values(data)[0]))
     console.log(Object.keys(Object.values(data)[0]).length);
     //console.log(Object.keys(Object.keys(data)));
-    var sedes=Object.keys(data);
-    var array = [];
-    //debugger
-    for(var i =0; i<Object.keys(data).length;i++){
-        
-        for(var j =0; j< Object.keys(Object.keys(data)[i]).length;j++){
-           console.log(array.push(Object.keys(Object.values(data)[j])));
-        }
-      
-    }
+    
     
       /*
       var nuevo = data.LIM["2017-2"].students;
@@ -138,4 +206,3 @@ window.addEventListener('load', function(event){
       */
       
       // Puedes hacer uso de la base de datos a través de la variable `data`
-
