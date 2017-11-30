@@ -60,3 +60,17 @@ function nps(sede,generation){
 }
 
 nps('AQP', '2016-2');
+
+//función para  verificar el porcentaje de estudiantes satisfechas con la experiencia de Laboratoria.
+
+function satisfaction(sede,generation){
+  var count = 0;
+  var numberRatings = data[sede][generation]['ratings'];
+  for (var i = 0; i < numberRatings.length; i++) {
+    var promoterStudent = numberRatings[i]['nps']['promoters'];
+   count = count + promoterStudent;
+   var averagePromoters=parseInt(count/numberRatings.length)
+    }
+    console.log(averagePromoters);
+    }
+    satisfaction('AQP','2016-2');
