@@ -340,14 +340,10 @@ margin-top: 100px;
 }
 
 /*Gráfico Achievement*/
-.achievement-graph {
-	background-image: url(../assets/images/circle-graphic.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-	width: 200px;
-  height: 200px;
-  margin-top: 89px;
-  margin-left: 60px;
+
+#achievement-graph {
+  margin-left: 25px;
+  margin-top: 100px;
 }
 
 /*Gráfico Promote*/
