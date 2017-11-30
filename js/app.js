@@ -35,38 +35,44 @@ window.addEventListener('load', function() {
       generacion = generations.value;
     });
   });
-
-
   /* Fin de los Selects */
   var btndash = document.getElementById('btndash');
+  /* Carga de datos predeterminados */
+  enveroment('LIM', '2017-2');
+  ratingTeachers('LIM', '2017-2');
+  ratingJedi('LIM', '2017-2');
+  /* Evento al hacer click al boton */
   btndash.addEventListener('click', function() {
     /* Enveroment Static*/
-    var cantidad = data[sede][generacion].students.length;
-    var acum = 0;
-    var acumtrue = 0;
-    for (var i = 0; i < cantidad;i++) {
-      if (data[sede][generacion].students[i].active == false) {
-        acum++;
-      } else {
-        acumtrue++;
-      }
-    }
-    var dropout = (acum / cantidad) * 100;
-    var dropoutPercentaje = (Math.round(dropout) + '%');
-    // inserta data de cantidad a los elementos
-    var spanCount = document.getElementById('count-overview');
-    var textCount = document.createTextNode(cantidad);
-    spanCount.appendChild(textCount);
-    // inserta data de desercion a los elementos
-    var spanPercentaje = document.getElementById('percentaje-overview');
-    var textPercentaje = document.createTextNode(dropoutPercentaje);
-    spanPercentaje.appendChild(textPercentaje);
+    enveroment(sede, generacion);
     /* Promedio de puntuacion Teacher */
     ratingTeachers(sede, generacion);
-    ratingJedi(sede,generacion);
+    ratingJedi(sede, generacion);
   });
 });
-
+/* Funciones */
+function enveroment(sede, generacion) {
+  var cantidad = data[sede][generacion].students.length;
+  var acum = 0;
+  var acumtrue = 0;
+  for (var i = 0; i < cantidad;i++) {
+    if (data[sede][generacion].students[i].active == false) {
+      acum++;
+    } else {
+      acumtrue++;
+    }
+  }
+  var dropout = (acum / cantidad) * 100;
+  var dropoutPercentaje = (Math.round(dropout) + '%');
+  // inserta data de cantidad a los elementos
+  var spanCount = document.getElementById('count-overview');
+  var textCount = document.createTextNode(cantidad);
+  spanCount.appendChild(textCount);
+  // inserta data de desercion a los elementos
+  var spanPercentaje = document.getElementById('percentaje-overview');
+  var textPercentaje = document.createTextNode(dropoutPercentaje);
+  spanPercentaje.appendChild(textPercentaje);
+}
 // Funcion que obtiene el promedio de la puntuacion de los teachers
 function ratingTeachers(sede, generacion) {
   var ratingTeacher = 0;
