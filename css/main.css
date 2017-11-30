@@ -63,6 +63,14 @@ header div {
  margin-left: 20px;
 }
 
+/*Añadiendo estilo al titulo */
+#title1{
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
 .home {
  margin-top: 120px;
  margin-bottom: 30px;
