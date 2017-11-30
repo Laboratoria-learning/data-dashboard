@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Data Dashboard</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
     <script src="https://www.gstatic.com/charts/loader.js"></script>
   </head>
   <body>
@@ -16,29 +17,29 @@
     <nav>
       <div class="menuDos">
         <select id="filtro" name="filtro">
-          <optgroup id="lima" label="Lima">
-            <option id="0" value="0">2016-2</option>
-            <option id="1" value="1">2017-1</option>
-            <option id="2" value="2">2017-2</option>
+          <optgroup label="Lima">
+            <option value="0"><span>Lima</span> 2016-2</option>
+            <option value="1"><span>Lima</span> 2017-1</option>
+            <option value="2"><span>Lima</span> 2017-2</option>
           </optgroup>
           <optgroup label="Arequipa">
-            <option id="3" value="3">2016-2</option>
-            <option id="4" value="4">2017-1</option>
+            <option value="3"><span>Arequipa</span> 2016-2</option>
+            <option value="4"><span>Arequipa</span> 2017-1</option>
           </optgroup>
           <optgroup label="Chile">
-            <option id="5" value="5">2016-2</option>
-            <option id="6" value="6">2017-1</option>
-            <option id="7" value="7">2017-2</option>
+            <option value="5"><span>Chile</span> 2016-2</option>
+            <option value="6"><span>Chile</span> 2017-1</option>
+            <option value="7"><span>Chile</span> 2017-2</option>
           </optgroup>
           <optgroup label="Mexico">
-            <option id="8" value="8">2017-1</option>
-            <option id="9" value="9">2017-2</option>
+            <option value="8"><span>Mexico</span> 2017-1</option>
+            <option value="9"><span>Mexico</span> 2017-2</option>
           </optgroup>
 		    </select>
         <ul>
-          <li id="overview">overview</li>
-          <li id="students">students</li>
-          <li>teachers</li>
+          <li id="overview">overview <hr class="disabled"> </li>
+          <li id="students">students <hr class="disabled"> </li>
+          <li>teachers <hr class="disabled"> </li>
         </ul>
       </div>
     </nav>
@@ -46,52 +47,91 @@
   <main id="paginaView" class="enabled">
     <section>
       <div class="container">
+        <h1>ENROLLMENT</h1>
         <div id="top_x_div" class="box-barras"></div>
         <div class="caja">
-          <span id="total">t</span>
+          <span id="total"></span>
+          <p># Alumnas Activas</p>
         </div>
         <div class="caja">
           <span id="porcentaje"></span>
+          <p>% Desercion</p>
         </div>
       </div>
       <div class="container">
-        <div id="meta" class="caja"></div>
+        <h1>ACHIEVEMENT</h1>
+        <div class="caja">
+          <span id="meta"></span>
+          <p># Lograron la meta</p>
+        </div>
         <div class="caja"></div>
         <img src="assets\images\graph.png" alt="">
+        <div id="curve_chart" style="width: 900px; height: 500px"></div>
       </div>
       <div class="container">
-        <div class="caja"></div>
-        <div class="caja"></div>
+        <h1>NET PROMOTOTER SCORE</h1>
+        <div class="caja">
+          <span id="nps"></span>
+          <p>% acumulativo NPS</p>
+        </div>
+        <div class="caja">
+          <span id="nps-porciento"></span>
+        </div>
         <img src="assets\images\graph.png" alt="">
       </div>
     </section>
-    <section>
+    <section class="box-circle">
+      <div class="list-tech">
+        <span>TECH SKILLS</span>
+        <select class="" name="">
+          <option value="">COMMON CORE</option>
+          <option value="">JAVASCRIPT</option>
+          <option value="">UX DESIGN</option>
+        </select>
+      </div>
+      <div class="caja">
+        <span></span>
+      </div>
       <img src="assets\images\rectangular-graphic.png" alt="">
-      <div id="chart_div"></div>
+      <div class="grafico-circular" id="chart_div"></div>
     </section>
-    <section>
+    <section class="box-circle">
+      <div class="list-tech">
+        <span>LIFE SKILLS</span>
+        <select class="" name="">
+          <option value="">HSE</option>
+          <option value="">JAVASCRIPT</option>
+          <option value="">UX DESIGN</option>
+        </select>
+      </div>
+      <div class="caja">
+        <span></span>
+      </div>
       <img src="assets\images\rectangular-graphic.png" alt="">
-      <img src="assets\images\circle-graphic.png" alt="">
+      <div class="grafico-circular" id="chart_div2"></div>
     </section>
     <section>
       <div class="container">
         <h1>STUDENT SATISFACTION</h1>
         <div class="caja">
-
+          <span id="box-expectativa"></span>
+          <p>% Student Satisfaction</p>
         </div>
         <img src="assets\images\graph.png" alt="">
       </div>
       <div class="container">
         <h1>TEACHER RATING</h1>
-        <div id="box-teacher" class="caja">
-
+        <div class="caja">
+          <span id="box-teacher"></span>
+          <p>Promedio Profesor</p>
         </div>
         <img src="assets\images\graph.png" alt="">
       </div>
       <div class="container">
         <h1>JEDI MASTER RATING</h1>
-        <div id="box-jedi" class="caja">
-
+        <div class="caja">
+          <span id="box-jedi"></span>
+          <p>Promedio Jedi</p>
         </div>
         <img src="assets\images\graph.png" alt="">
       </div>
