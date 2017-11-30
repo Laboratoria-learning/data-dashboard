@@ -19,7 +19,16 @@ window.addEventListener('load', function() {
       /* this.classList.add('red');*/
     }
   }
-// -creando funcion para el total de estudiantes activos y desactivos-porcentaje de total de desertores
+
+  var selection = document.getElementById('select');
+  var options = document.getElementById('options');
+  selection.addEventListener('click', selectSedeGen);
+
+  function selectSedeGen() {
+    options.classList.toggle('hiden');
+  }
+
+  // -creando funcion para el total de estudiantes activos y desactivos-porcentaje de total de desertores
   function students(sede, generation, students) {
     var studentAct = 0;
     var studentInac = 0;
@@ -38,8 +47,8 @@ window.addEventListener('load', function() {
     var porcentaje = Math.round((studentInac * 100) / total);
 
     console.log('hay ' + total);
-    console.log(' Las alumnas activas son: ' + studentAct);
-    console.log(' las alumnas retiradas son: ' + studentInac);
+    console.log('Las alumnas activas son: ' + studentAct);
+    console.log('las alumnas retiradas son: ' + studentInac);
     console.log('Las alumnas retiratas representan el ' + porcentaje + ' %');
   }
 
@@ -47,12 +56,8 @@ window.addEventListener('load', function() {
 
   var box1 = document.getElementById('box1');
   var total = document.createElement('h2');
-  total.innerText = dropoutAll('LIM', '2016-2');
-Añadir comentario Contraer
-
-
-
-
+  box1.appendChild(total);
+  total.textContent = students('AQP', '2016-2', 'students');
 
   toggleTab(tabs);
 });
