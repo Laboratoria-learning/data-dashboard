@@ -247,10 +247,54 @@ select{
   margin-top: 20px;
   width: 80%;
   height: 35%;}
-
+/*config de especializacion students*/
 .ocultar{
   display: none;
 }
 .mostrar{
   display: block;
+}
+/*estudiantes */
+.students{outline: 1px solid red;
+  height: 75%;
+  position: absolute;
+  left: 28%;
+  top: 10em;;
+}
+/*especializacion*/
+.box-container{
+  background-color: #fff;
+  width: 300px;
+  height: 200px;
+  margin-top: 10px;
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: top;
+}
+h3{
+  padding-top: 10px;
+  width:320px;
+  padding-left:30px;
+}
+.btn{
+  margin-left: 10px;
+  width: 15px;
+  height: 20px;
+  background:none;
+  margin-top: 20px;
+}
+
+/*buscador*/
+.bar-search{
+  background-color: #fff;
+  width: 400px;
+  height: 50px;
+  display: inline-block;
+  margin-left: 20px;
+}
+.container-students{
+  background-color: #fff;
+  width: 600px;
+  height: 100px;
+  margin-left: 350px;
 }
