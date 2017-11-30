@@ -215,7 +215,7 @@ function create() {
     var total = teacheone + teachetwo + teachetree + teachefour;
     var promedio = total / 4;
     document.getElementById('jedi').innerHTML = promedio;
-
+    
 
     break;
   case 'SantiagodeChile2017-I':
@@ -342,7 +342,11 @@ function create() {
     break;
   default:
     alert('seleccione una opcion');
-  }    
+  }  
+  function satisfaccion(){
+      
+  }
+  
 }
 
 function select() {
