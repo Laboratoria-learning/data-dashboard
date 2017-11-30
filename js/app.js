@@ -13,6 +13,7 @@ divPercentAchievement = document.getElementById('percent-achievement');
 divStudentsAchievement = document.getElementById('students-achievement');
 divKpiEnrollment = document.getElementById('kpi-enrollment');
 divKpiDropout = document.getElementById('kpi-dropout');
+divIstStudent=document.getElementById('ist-student');
 // Puedes hacer uso de la base de datos a través de la variable `data`
 
 
@@ -136,7 +137,7 @@ window.addEventListener('load', function(event) {
         }
         
         
-        var options = {'title': 'Achievement actual'};        
+        var options = {'title': 'Current Achievement'};        
         var chart = new google.visualization.LineChart(document.getElementById('achievement-chart'));
         chart.draw(data, options);
       }
@@ -150,31 +151,58 @@ window.addEventListener('load', function(event) {
       divPromoters.innerHTML = promoters + '% Promoters ';
       divPassive.innerHTML = passive + '% Passive';
       divDetractors.innerHTML = detractors + '% Detractores';
+      // Insertamos la satisfacción de los estudiantes
+      divIstStudent.innerHTML=promoters;
 
-          // Realizamos el gráfico de NPS      
-          google.charts.load('current', {'packages': ['corechart']});
+      // Realizamos el gráfico de NPS      
+      google.charts.load('current', {'packages': ['corechart']});
           
-                google.charts.setOnLoadCallback(drawChartNPS);
+      google.charts.setOnLoadCallback(drawChartNPS);
           
               
-                function drawChartNPS() {
-                  // create the data table
-                  var data = new google.visualization.DataTable();
-                  data.addColumn('string', 'S');
-                  data.addColumn('number', 'NPS');
-                  for (i = 0;i < str['ratings'].length;i++) {
-                    data.addRows([
-                      ['S' + str['ratings'][i]['sprint'], str['ratings'][i]['nps']['promoters'] - str['ratings'][i]['nps']['detractors']],
+      function drawChartNPS() {
+        // create the data table
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'S');
+        data.addColumn('number', 'NPS');
+        for (i = 0;i < str['ratings'].length;i++) {
+          data.addRows([
+            ['S' + str['ratings'][i]['sprint'], str['ratings'][i]['nps']['promoters'] - str['ratings'][i]['nps']['detractors']],
                  
                  
-                    ]);
-                  }
+          ]);
+        }
                   
                   
-                  var options = {'title': 'NPS actual'};        
-                  var chart = new google.visualization.LineChart(document.getElementById('nps-chart'));
-                  chart.draw(data, options);
-                }
+        var options = {'title': 'Current NPS'};        
+        var chart = new google.visualization.LineChart(document.getElementById('nps-chart'));
+        chart.draw(data, options);
+      }
+
+      // Realizamos el gráfico de la satisfacción de los estudiantes     
+      google.charts.load('current', {'packages': ['corechart']});
+      
+  google.charts.setOnLoadCallback(drawChartIstStudents);
+      
+          
+  function drawChartIstStudents() {
+    // create the data table
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'S');
+    data.addColumn('number', 'IST');
+    for (i = 0;i < str['ratings'].length;i++) {
+      data.addRows([
+        ['S' + str['ratings'][i]['sprint'], str['ratings'][i]['nps']['promoters']],
+             
+             
+      ]);
+    }
+              
+              
+    var options = {'title': 'Current student satisfaction'};        
+    var chart = new google.visualization.LineChart(document.getElementById('ist-chart'));
+    chart.draw(data, options);
+  }
       // Llenando datos del ENROLLMENT
       var countEnrolled = 0;
       var countDropped = 0;
@@ -213,6 +241,13 @@ window.addEventListener('load', function(event) {
 
         chart.draw(data, options);
       }
+      
+
+      
+
+
+
+
     });
   }
 

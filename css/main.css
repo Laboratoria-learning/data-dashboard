@@ -126,6 +126,7 @@ main {
     display: inline-block;
     width: 30%;
     outline: solid 1px red;
+    margin:10px;
 }
 
 .options{
