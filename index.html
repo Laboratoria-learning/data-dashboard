@@ -19,26 +19,26 @@
                         <li><a href="#">Agregar Sprint</a></li>
                       </ul>
                     </nav>
-                    <!-- buscador 
+                    <!-- buscador-->
                     <span class="box-header search">
                       <input type="text" placeholder="search">
                       <a href="#" class="icons-search">
                       <i class="fa fa-search fa-rotate-90"></i>
                       </a>
                     </span>
-                    -->
+                    
                 </div>
                 <figure class="box-header logo">
                   <a href="index.html"><img src="assets/images/logo-laboratoria.svg" alt="logo"></a> 
                 </figure>
-                <!-- iconos de mensaje y notificaciones
+                <!-- iconos de mensaje y notificaciones-->
                 <div class="box-header user">
                   <ul>
                       <li><a class="icons" href="#"><span class="fa fa-envelope-o"></span></a></li>
                       <li><a class="icons" href="#"><span class="fa fa-bell-o"></span></a></li>
                   </ul>
                 </div>
-                -->
+                
                 <!--Sección idioma  -->
                 <select  class='idioma' name="language">
                     <option value="value1" selected>Español</option>
@@ -53,27 +53,28 @@
                         <ul>
                           <li><a href="#"><img class="flag" src="assets\images\peru.png" alt="">Arequipa</a>
                             <ul>
-                              <li><a href="#">2016-2</a></li>
-                              <li><a href="#">2017-1</a></li>
+                              <li><a id="areq20162" href="#">2016-2</a></li>
+                              <li><a id="areq20171" href="#">2017-1</a></li>
                             </ul>
                           </li>
                           <li><a href="#"><img class="flag" src="assets\images\peru1.png" alt="">Lima</a>
                             <ul>
-                              <li><a href="#">2016-2</a></li>
-                              <li><a href="#">2017-1</a></li>
+                              <li><a id="lim20162"href="#">2016-2</a></li>
+                              <li><a id="lim20171"href="#">2017-1</a></li>
+                              <li><a id="lim20172"href="#">2017-2</a></li>
                             </ul>
                           </li>
                           <li><a href="#"><img class="flag" src="assets\images\mexico.png" alt="">Ciudad de México</a>
                             <ul>
-                              <li><a href="#">2017-1</a></li>
-                              <li><a href="#">2017-2</a></li>
+                              <li><a id="cdm20171"href="#">2017-1</a></li>
+                              <li><a id="cdm20172"href="#">2017-2</a></li>
                             </ul>
                           </li>
                           <li><a href="#"><img class="flag" src="assets\images\chile.png" alt="">Santiago de Chile</a>
                             <ul>
-                              <li><a href="#">2016-2</a></li>
-                              <li><a href="#">2017-1</a></li>
-                              <li><a href="#">2017-2</a></li>
+                              <li><a id="sdc20162"href="#">2016-2</a></li>
+                              <li><a id="sdc20171"href="#">2017-1</a></li>
+                              <li><a id="sdc20172"href="#">2017-2</a></li>
                             </ul>
                           </li>
                         </ul> 
@@ -86,13 +87,13 @@
                   <a class="tab" data-selection="tree">Profesores</a>
               </div>
           </section>
+          <div class="localizacion">
+            <img class="flag" src="assets\images\peru.png" alt="flag x  peru">
+            <span>Lima - 2017-2 </span>
+          </div>
           <section class="box-information">
               <div class="first hide">
-                  <!--Sección Título -->
-                  <div class="title-container">
-                    <h1 class="title">Lima</h1>
-                    <h2 class="subtitle">2017-2</h2>
-                  </div>
+                
                   <!-- Inscripción -->
                   <div class="enrollment container">
                     <h1 class="enrollment-title">Enrollment</h1>
@@ -173,6 +174,7 @@
         <script src="./js/data.js"></script>
         <!-- Aquí va tus archivos JS -->
         <script src="./js/app.js"></script>
+        <script type="text/javascript" src="js/Chart.bundle.min.js"></script>
     
       </body>
     </html>
