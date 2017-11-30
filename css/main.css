@@ -11,10 +11,10 @@
  /*logo-laboratoria*/
 .logo{
   background-color: #F7F7F7;
-   width: 85.5em;
-   height: 5em;
+   width: 72%;
+   height: 10%;
    position: fixed;
-   padding-left: 12em;
+   padding-left: 30%;
    z-index: 1;
 
 
@@ -65,6 +65,10 @@ a:hover{
   background: #2C3E50;
   color: #fff;
 }
+a:active{
+  background:#FFD65B;
+  transition-duration: 0.01s;
+}
 /*Estilos iconos*/
 .fa{
   font-size: 35px;
@@ -94,6 +98,8 @@ a:hover{
 .fa.fa-search{
   color : #000;
   margin-left: 5px;
+  font-size: 20px;
+  padding:15px 15px;
 }
 /*usuario*/
 .profile{
@@ -154,7 +160,7 @@ hr{
   /* Estadisticas */
 .stats{
     height: 75%;
-    width: 4000px;
+    width: 3550px;
     position: absolute;
     left: 28%;
     top: 10em;
@@ -165,8 +171,8 @@ hr{
  height: 90%;
 display: inline-block;
 float: left;
-margin-left: 10px;
-margin-top: 10px;
+margin: 20px 20px;
+box-shadow: 5px 5px 10px #888888;
 
 }
 .sub-text{
@@ -206,7 +212,9 @@ select{
   border: 0;
   border-bottom: 2px solid #FFD65B;
   color: #000;
-
+}
+select:focus{
+outline:none;
 }
 /*Primera estadistica*/
 .containerStyle{
@@ -257,9 +265,11 @@ select{
 /*config de especializacion students*/
 .ocultar{
   display: none;
+
 }
 .mostrar{
   display: block;
+
 }
 /*estudiantes */
 .students{
@@ -293,11 +303,13 @@ h3{
 }
 .btn:hover{
   background-color: #FFC107;
+transition-duration: 1s;
 }
+
 /*buscador*/
 .bar-search{
   background-color: #fff;
-  width: 600px;
+  width: 60%;
   height: 50px;
   display: inline-block;
   margin-left: 20px;
@@ -338,7 +350,7 @@ img{
 }
 .container-tech  {
   background-color:#EFEFEF;
-  width: 100px;
+  width: 160px;
   height: 50px;
   float: left;
   margin-top: 10px;
@@ -347,7 +359,7 @@ img{
 .container-soft {
   background-color:#EFEFEF;
   float: left;
-  width: 100px;
+  width: 160px;
   height: 50px;
   margin-top: 10px;
   margin-left: 5px;
@@ -358,10 +370,13 @@ img{
   font-size: 20px;
   width: 80%;
   padding-left: 20px;
+  font-weight: bolder;
 }
 .container-tech span::after{
   content: "TECH SKILLS";
   font-size: 12px;
+  font-weight: lighter;
+  padding-left: 5px;
 }
 .container-soft span {
   display: inline-block;
@@ -369,8 +384,16 @@ img{
   font-size: 20px;
   width: 80%;
   padding-left: 20px;
+  font-weight: bolder;
 }
 .container-soft span::after{
   content: "SOFT SKILLS";
   font-size: 12px;
+  font-weight: lighter;
+  padding-left: 5px;
+}
+.nav-select{
+  border-bottom: 5px solid #FFC107;
+  background-color: inherit;
+
 }
