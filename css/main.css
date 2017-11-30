@@ -123,13 +123,25 @@ header section {
 
 .first-section .list-sedes {
     width: 15%;
-    margin-top: 8px;
+    display: inline-block;
     background-color: #f7b617;
     color: #333333;
     font-weight: 700;
-    padding: 8px;
     margin: 0px 50px;
     border-radius: 5px;
+}
+
+.list-sedes .cont-sedes {
+    list-style: none;
+    padding: 3px;
+}
+
+.list-sedes .hide {
+    list-style: none;
+}
+
+.list-sedes ul {
+    margin: 8px;
 }
 
 .first-section .container-paragraph {
