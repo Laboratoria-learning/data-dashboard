@@ -2,6 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+    </script>
     <title>Data Dashboard</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -62,10 +68,10 @@
             <select name="overall" id="overall-tech" class="select-skills">
               <optgroup label="COMMON CORE">
                 <option value="" hidden>overall (cumulative)</option>
-                <option value="sp1">Sprint 1: Create an interactive site</option>
-                <option value="sp2">Sprint 2: Create an interactive site</option>
-                <option value="sp3">Sprint 3: Create an interactive site</option>
-                <option value="sp4">Sprint 4: Create an interactive site</option>
+                <option value="0">Sprint 1: Create an interactive site</option>
+                <option value="1">Sprint 2: Create an interactive site</option>
+                <option value="2">Sprint 3: Create an interactive site</option>
+                <option value="3">Sprint 4: Create an interactive site</option>
               </optgroup>
             </select>
           </div>
@@ -76,7 +82,7 @@
             </div>
             <div class="box2">
               <p id="percent-tech" class="textDate"></p>
-              <p class="texTbox">% OF TOTAL</p>
+              <p id="change-info-tech" class="texTbox">% OF TOTAL</p>
             </div>
           </div>
           <div class="graphic"></div>
@@ -88,21 +94,21 @@
             <select name="overall" id="overall-life" class="select-skills">
               <optgroup label="HSE">
                 <option value="" hidden>overall (cumulative)</option>
-                <option value="sp1">Sprint 1: Create an interactive site</option>
-                <option value="sp2">Sprint 2: Create an interactive site</option>
-                <option value="sp3">Sprint 3: Create an interactive site</option>
-                <option value="sp4">Sprint 4: Create an interactive site</option>
+                <option value="0">Sprint 1: Create an interactive site</option>
+                <option value="1">Sprint 2: Create an interactive site</option>
+                <option value="2">Sprint 3: Create an interactive site</option>
+                <option value="3">Sprint 4: Create an interactive site</option>
               </optgroup>
             </select>
           </div>
           <div class="boxes-big-graphics">
             <div class="box1">
-              <p id="overall-life" class="textDate"></p>
-              <p class="texTbox"># OVERALL CLASS AVERAGE</p>
+              <p id="students-life" class="textDate"></p>
+              <p class="texTbox"># STUDENTS THAT MEET THE TARGET</p>
             </div>
             <div class="box2">
-              <p class="textDate"></p>
-              <p class="texTbox"># OF STUDENTS THAT MEET THE TARGET</p>
+              <p id="percent-life" class="textDate"></p>
+              <p id="change-info-life" class="texTbox">% OF TOTAL</p>
             </div>
           </div>
           <div class="graphic"></div>
@@ -120,7 +126,7 @@
               <P>% DROPOUT</P>
             </div>
           </div>
-          <div class="graphic"></div>
+          <div class="graphic" id="enrollment-chart"></div>
         </div>
         <!-- ACHIEVEMENT -->
         <div class="small-graphic">
@@ -151,7 +157,7 @@
               <p id="detractor"></p>
             </div>
           </div>
-          <div class="graphic"></div>
+          <div class="graphic" id="nps-chart"></div>
         </div>
         <!-- STUDENT SATISFACTION -->
         <div class="small-graphic">
@@ -162,7 +168,7 @@
               <p class="texTbox">% MEETING OR EXCEEDING EXPETATIONS (CUMULATIVE)</p>
             </div>
           </div>
-          <div class="graphic"></div>
+          <div class="graphic" id="satisfaction-chart"></div>
         </div>
         <!-- TEACHER RATING -->
         <div class="small-graphic">
@@ -173,7 +179,7 @@
               <P class="texTbox">OVERALL TEACHER RATING (CUMULATIVE)</P>
             </div>
           </div>
-          <div class="graphic"></div>
+          <div class="graphic" id="teacher-chart"></div>
         </div>
         <!-- JEDI MASTER RATING -->
         <div class="small-graphic">
@@ -184,7 +190,7 @@
               <P class="texTbox">OVERALL JEDI RATING (CUMULATIVE)</P>
             </div>
           </div>
-          <div class="graphic"></div>
+          <div class="graphic" id="jedi-chart"></div>
         </div>
       </section>
       <!--Inicio de Menu que aparece y desaparece-->
