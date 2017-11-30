@@ -30,7 +30,14 @@ i:hover {
  color: white;
  background-color: rgb(190, 190, 190);
 }
-
+.boxOne{
+  float: left;
+  width: 100%;
+  margin-left: 50px;
+}
+.boxTwo{
+  float: left;
+}
 header .fa {
     margin-top: 30px;
     float: right;
@@ -38,8 +45,10 @@ header .fa {
     }
 
 /*sección mainBarr*/
-#mainBarr{
+.mainBarr{
   background-color: #e1e1e1;
+  width: 100%;
+  height: 150px;
 }
 #sede {
   height: 60px;
@@ -85,16 +94,18 @@ li {
  #general {
    background-color: #e6ecf0;
    height: 450px;
+   float: left;
+   width: 100%;
  }
 
 
  .enrollmentClass {
-   margin-top: 40px;
+   margin-top: 20px;
    margin-left: 80px;
    background-color: #fff;
    box-sizing: border-box;
    padding: 20px;
-   display: inline-block;
+   float: left;
    width: 350px;
    height: 300px;
    text-align: center;
@@ -102,13 +113,14 @@ li {
 
 .enrollOne {
   background-color: #e6ecf0;
-  display: inline-block;
+  float: left;
   font-size: 20px;
   width: 140px;
   height: 60px;
   font-size: 10px;
   text-align: center;
   margin-top: 15px;
+  margin-right: 10px;
  }
 
 .enrollTwo {
@@ -124,7 +136,7 @@ li {
 
 .achievementClass {
   margin-top: 20px;
-  margin-left: 80px;
+  margin-left: 20px;
   background-color: #fff;
   box-sizing: border-box;
   float: left;
@@ -162,12 +174,12 @@ li {
 
 .promoterClass {
   float: right;
-  margin-top: 40px;
-  margin-right: 40px;
+  margin-top: 20px;
+  margin-left: 20px;
   background-color: #fff;
   box-sizing: border-box;
   padding: 20px;
-  display: inline-block;
+  float: left;
   width: 350px;
   height: 300px;
   text-align: center;
@@ -200,18 +212,22 @@ li {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/*seccion 2 Tech Skills*/*
+/*seccion 2 Tech Skills*/
 
 #techS {
- margin-left: 50px;
+ width: 50%;
+ clear: both;
  background-color: #e6ecf0;
  box-sizing: border-box;
  height: 400px;
- width: 900px;
+ }
+ .sectionTech {
+ padding: 10px;
+ background-color: white;
  }
 
 .metTargetStyle{
-  background-color: #e6ecf0;
+  background-color: #ffffff;
   float: left;
   width: 200px;
   height: 100px;
@@ -220,29 +236,31 @@ li {
   margin-right: 10px;
   margin-top: 15px;
   padding: 5px;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 }
 .totalTSStyle {
-border: 1px solid red;
 background-color: #e6ecf0;
 float: left;
 width: 200px;
-height: 100px;
+height: auto;
 font-size: 11px;
 text-align: center;
 margin-right: 10px;
 margin-top: 15px;
 padding: 5px;
-border: 1px solid red;
+/*border: 1px solid red;*/
 
 }
 .comboStyle {
     float: left;
-
+    margin: 50px;
+    border: none;
+    clear: both;
 }
 .techSkillStyle {
- border: 1px solid red;
+ /*border: 1px solid red;*/
  box-sizing: border-box;
+ width: auto;
  }
 
 /*seccion lifeSkills */
