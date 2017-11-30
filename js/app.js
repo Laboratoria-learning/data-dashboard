@@ -30,7 +30,7 @@ window.addEventListener('load', function(event) {
   
   var showHide = function(e) {
     var tabSelector = e.target.dataset.tabSelector;
-    var overviews = document.getElementById('options');
+    var overviews = document.getElementById('overview');
     var students = document.getElementById('students');
     var teachers = document.getElementById('teachers');
 
@@ -39,17 +39,17 @@ window.addEventListener('load', function(event) {
       students.style.display = 'none';
       teachers.style.display = 'none';
       // mostrar overviews
-      options.style.display = 'block';
+      overview.style.display = 'block';
     } else if (tabSelector === 'tabStudents') {
       // ocultar overviews y teacher
-      options.style.display = 'none';
+      overview.style.display = 'none';
       teachers.style.display = 'none';
       // mostrar students
       students.style.display = 'block';
     } else if (tabSelector === 'tabTeachers') {
       // mostrar overviews y students
       students.style.display = 'none';
-      options.style.display = 'none';
+      overview.style.display = 'none';
       // mostrar students
       teachers.style.display = 'block';
     }
@@ -312,7 +312,7 @@ window.addEventListener('load', function(event) {
             totSprints = totSprints + str['students'][i]['sprints'].length;
                        
             // Obteniendo los que han superado la meta tech
-            console.log('SPRINT' + parseInt(str['students'][i]['sprints'][j]['number'] - 1));
+            
             if (parseInt(str['students'][i]['sprints'][j]['score']['tech']) >= 1260 && parseInt(str['students'][i]['sprints'][j]['number'] - 1) === optionSprint.value) {
               data.addRows([
                 ['S' + str['students'][i]['sprint'], str['students'][i]['sprints'][j]['score']['tech']],

@@ -126,6 +126,7 @@ main {
     position: absolute;
     z-index: 1000;
     padding-left: 20px;
+    top:100px;
 }
 
 .menuName{
