@@ -85,7 +85,7 @@ function addImages() {
 }
 
 function showAll() {
-  
+
 }
 
 // for (var i = 0; i < data[branch][generation]['students'].length; i++) {
@@ -242,12 +242,16 @@ function showAll() {
 
     var generationSelection = newarr[0];
     var branchSelection = newarr[1];
-    var numEnrollment = enrollment(branchSelection, generationSelection, true);
     var studentCurrently = document.querySelector('#student-currently');
-    var parragraf = document.createElement('p');
-    parragraf.textContent = numEnrollment;
-    studentCurrently.appendChild(parragraf);
-    studentCurrently.insertBefore(parragraf,studentCurrently.children[0]);
+   var numEnrollment = enrollment(branchSelection, generationSelection, true);
+   studentCurrently.children[0].textContent= numEnrollment;
+    //
+    // var numEnrollment = enrollment(branchSelection, generationSelection, true);
+    // var studentCurrently = document.querySelector('#student-currently');
+    // var parragraf = document.createElement('p');
+    // parragraf.textContent = numEnrollment;
+    // studentCurrently.appendChild(parragraf);
+    // studentCurrently.insertBefore(parragraf,studentCurrently.children[0]);
 
     var percentageStudentDropout = 0;
     var studentDropount = document.querySelector('#student-dropount');
@@ -285,4 +289,3 @@ function showAll() {
     }
   }
   valueRadioButton();
-});
