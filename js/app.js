@@ -1,43 +1,8 @@
 // /*
 //  * Funcionalidad de tu producto
 //  */
+// // Puedes hacer uso de la base de datos a través de la variable `data
 
-<<<<<<< HEAD
-// // Puedes hacer uso de la base de datos a través de la variable `data`
-// window.onload = function() {
-// }
-// var sede = getElementsByClassName('sede');
-
-// var selectProm= document.getElementsByClassName('promocion')
-// var selectSprint= document.getElementsByClassName('sprint')
-// console.log(data['AQP']['2017-1']['students'].length);
-
-// var sede1 = data['AQP']['2017-1']['students']['active'];
-// var sede2 = data['AQP']['2016-2']['students'];
-// google.charts.load('current', {'packages':['corechart']});
-// google.charts.setOnLoadCallback(drawChart);
-
-// function drawChart() {
-
-//   var data = google.visualization.arrayToDataTable([
-//     ['Generacion','Porcentaje'],
-//     ['2017', sede1],
-//     ['2016', sede2]]);
-
-//   var options = {
-//     title: 'Alumnas'
-//   };
-//   var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-//   chart.draw(data, options);
-// }     
-// var retiradas = data['AQP']['2017-1']['students'] 
-// function begin () {
-//   var selectSede= document.getElementsByClassName('sede');
-//   var selectProm= document.getElementsByClassName('promocion')
-//   var selectSprint= document.getElementsByClassName('sprint')
-// }
-=======
 // Puedes hacer uso de la base de datos a través de la variable `data`
 window.addEventListener('load', begin);
 
@@ -131,8 +96,22 @@ function begin() {
 
   // studentsCount('LIM', '2016-2');
   // studentsCount('CDMX', '2017-1');
+
+  function openPage(evnt, opt) {
+    var i, tabContent, menus;
+    tabContent = document.getElementsByClassName('tabContent');
+    for (i = 0; i < tabContent.length; i++) {
+      tabContent[i].style.display = 'none';
+    }
+    menus = document.getElementsByClassName('menus');
+    for (i = 0; i < menus.length; i++) {
+      menus[i].className = menus[i].className.replace('active', '');
+    }
+    document.getElementById(opt).style.display = 'block';
+    evnt.currentTarget.className += 'active';
+  }
+  document.getElementById('default').click();
 };
->>>>>>> b0616beaf1c1594ef85219069b9828d5f5f565a5
 
 // Superan expectativas exp Laboratoria
 var ratings = data[selectLocal.value][selectPromo.value].ratings;
@@ -155,37 +134,6 @@ var sede2 = data['AQP']['2016-2']['students'];
 //     ['2017', sede1],
 //     ['2016', sede2]]);
 
-<<<<<<< HEAD
-// console.log(data.AQP['2016-2'].students[1].active);
-
-
-function openPage(evnt, opt) {
-  var i, tabContent, menus;
-  tabContent = document.getElementsByClassName('tabContent');
-  for (i = 0; i < tabContent.length; i++) {
-    tabContent[i].style.display = 'none';
-}
-  menus = document.getElementsByClassName('menus');
-  for (i = 0; i < menus.length; i++) {
-    menus[i].className = menus[i].className.replace('active', '');  
-}    
-  document.getElementById(opt).style.display = 'block';
-  evnt.currentTarget.className += 'active';
-}
-  document.getElementById('default').click();
-
-
-
-
-
-
-
-
-
-
-
-
-=======
 //   var options = { title: 'Alumnas' };
 
 //   var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -193,4 +141,3 @@ function openPage(evnt, opt) {
 //   chart.draw(data, options);
 // }
 // fin grafico
->>>>>>> b0616beaf1c1594ef85219069b9828d5f5f565a5
