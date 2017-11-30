@@ -1,4 +1,3 @@
-
 window.addEventListener('load', function() {
   // ------------> Funcionalidad Menú <-------------------------
   var openAnimatedMenu = document.getElementById('open-animated-menu');
@@ -23,9 +22,9 @@ window.addEventListener('load', function() {
     var city = select.value; // AQP SCL CDMX LIM
     var prom = select.options[select.selectedIndex].dataset.year; // 2016-2, 2017-1, etc.
     var totalStudents = data[city][prom].students.length; // Cantidad total de estudiantes por sede y promoción
+    var arrayStudents = data[city][prom].students;
 
     // ------------> ENROLLMENT <-----------------
-    var arrayStudents = data[city][prom].students;
     // recorre la longitud de las estudiantes y muestra a las que desertaron en porcentaje
     var dropout = 0;
     for (var i = 0; i < arrayStudents.length; i++) {
