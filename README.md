@@ -39,90 +39,27 @@
 
   2.1 *Primera Parte*
 
-  Creo la estructura html, para hacerlo más factible lo divido en secciones, la primera de ellas es el header, luego siguen las demás secciones donde se encuentran texto y las gráficas, por lo que las acomodé con divs
-  Por lo que hasta el momento obtengo esto:
+  Primero realizamos la estructura html, para hacerlo más factible lo divididimos en tres secciones, la primera de ellas es el header(donde se encuentra el logo y el ícono), luego tenemos la parte principal donde se encuentran los selectores que podrán ser manejados por los TMs dependiendo a la información a la que quieran acceder(filtrar), agrupamos la siguiente información en articulos , agregamos los textos corrspondientes a las funciones pedidas a su vez añadimos las imágenes de gráficas.
 
+   En la siguiente imagen se muestra solo la estructura html:
 
-  ![primera parte](assets/images/estructura_html.png)
+  ![Primera_parte](assets/images/estructura_html.png)
 
 
   2.2 *Segunda Parte*
 
-   Básicamente voy acomodando la información con css por lo que comienzo con el header, y luego con las 4 secciones y me queda de esta forma:
+  Básicamente en esta parte ordenamos la información con css por lo que comienzo con el header (logo más ícono centrados),en la siguiente sección se encuentran los selectores al cual se le da color,tamaño,etc.En la tercera sección como ya están nombrados por sus respectivas clases hacemos los cambios necesarios como margen para la alineación, el color: blanco para los article y color tipo gris para los box y hasta el momento obtenemos lo siguiente:
 
-  ![estilos](assets/images/estilos.png)
+  ![estilos_css](assets/images/estilos_css.png)
+
 
   2.1.3 *Tercera Sección*
 
-
-
-
-  2.2
-
-  2.2.1
-
-
-  2.2.2
-
-  2.2.3
-
-
-
-
-  2.2.4
-
+  En esta parte nos encargaremos de ingresar las funciones pedidas en javascript y proximamente hacerlas funcionar
+  
 
 
 3) __INTEGRANTES:__
 
 * Flor Mily Quispe Yura
-* Alejandra
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
--------------------------------------------------------------------------------
-# Data Dashboard
-
-* **Track:** _Common Core_
-* **Curso:** _Creando tu primer sitio web interactivo_
-* **Unidad:** _Producto final_
-
-***
-
-## Flujo de trabajo
-
-1. Debes realizar un [**fork**](https://gist.github.com/ivandevp/1de47ae69a5e139a6622d78c882e1f74)
-   de este repositorio.
-
-2. Luego deberás **clonar** tu fork en tu máquina. Recuerda que el comando a usar
-   es `git clone` y su estructura normalmente se ve así:
-
-   ```bash
-   git clone https://github.com/<nombre-de-usuario>/freelancer.git
-   ```
-
-3. Cuando hayas terminado tu producto, envía un Pull Request a este repositorio
-   (puedes solicitar apoyo de tus profes para este paso).
-
-> Nota: No olvides que es una buena práctica describir tu proyecto en este
-> archivo `README.md` y también desplegar tu web a Github Pages :smiley:.
+* Alejandra Cabrera

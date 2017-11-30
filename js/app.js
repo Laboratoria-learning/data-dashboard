@@ -60,6 +60,17 @@ function nps(sede,generation){
 }
 
 nps('AQP', '2016-2');
+function satisfaction(sede,generation){
+  var count = 0;
+  var numberRatings = data[sede][generation]['ratings'];
+  for (var i = 0; i < numberRatings.length; i++) {
+    var promoterStudent = numberRatings[i]['nps']['promoters'];
+   count = count + promoterStudent;
+   var averagePromoters=parseInt(count/numberRatings.length)
+    }
+    console.log(averagePromoters);
+    }
+    satisfaction('AQP','2016-2');
 
 // funciones 
 
@@ -81,14 +92,16 @@ function inscription(event) {
   var numberRegistered = document.getElementById('numberRegistered');
   numberRegistered.textContent = students.length;
 
-  // for(var i = 0; i<students.length;i++){
-  //   if(students[i].active === false){
-  //     studenDesert++;
-  //   }
-  // }
+  for(var i = 0; i<students.length;i++){
+      console.log(students[i].active);
+    }
 
   // var percentDesert = parseInt((studenDesert * 100)/students.length);
 
   // var numberDesert = document.getElementById('numberDesert');
   // numberDesert.textContent = percentDesert;
 };
+
+//función para  verificar el porcentaje de estudiantes satisfechas con la experiencia de Laboratoria.
+
+
