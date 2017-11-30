@@ -81,6 +81,13 @@ a:hover{
   left: 1em;
   position: absolute;
   bottom: 15px;
+  color:#fff;
+}
+.fa.fa-user{
+  padding-right: 20px;
+  margin-left: 8%;
+  color:#fff;
+  margin-top: 10px;
 }
 /* Section del Home*/
 .sub-container{
@@ -91,7 +98,28 @@ a:hover{
   top: 0em;
   z-index: 1;
 }
+/*usuario*/
+.profile{
+  background-color: #000;
+  left: 8%;
+  width: 20%;
+  height: 100%;
+  position: fixed;
 
+}
+.section{
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  width: 100%;
+  height: 15%;
+  color:#fff;
+  text-align: center;
+
+}
+.section-text{
+  display: inline-block;
+  margin-top: 10%;
+}
 /*Estilos a la Fila de Sedes */
 .list{
   height: 100%;
@@ -101,7 +129,7 @@ a:hover{
   left: 8%;
   top: 0em;
   box-shadow:5px 0px 5px #EDEDED;
-  z-index: 1;
+  z-index: 5;
   background-color: #fff;
 }
 .box-list{
@@ -153,38 +181,60 @@ h2{
 .box-text{
   display: inline-block;
   margin-left: 10px;
-  margin-top: 55px;
+  margin-top: 10%;
   width: 90%;
-  height: 40%;
+  height: 35%;
+  font-size: 12px;
+  text-align: center;
 
 }
+.containerStyle{
+  margin-left: 43%;
+  font-size: 25px;
+  font-weight: bolder;
 
+}
+.color{
+  color: #68AD1C;
+}
 /*Primera estadistica*/
 #chart_div{
   width:100%;
   height: 250px;
   margin-top:33%;
 }
+#dropout{
+  color:red;
+}
+
 /*Tercera estadistica*/
 .text-1{
-  margin-left: 60px;
-  margin-top: 5px;
-  width: 50%;
-  height: 25%;
+  margin-left: 27px;
+  margin-top: 1px;
+  width: 35%;
+  height: 22%;
+}
+.sub-containerStyle{
+  margin-left: 23px;
+  font-size: 12px;
+  font-weight: bolder;
 }
 
 /*Sexta estadistica*/
 .content-2{
   background-color:#EFEFEF;
-  width: 65%;
-  height:22%;
+  width: 64%;
+  height:20%;
   float: left;
   margin-top: 30px;
   margin-left: 40px;
+
 }
+
 .text-2{
   display: inline-block;
-  margin-left: 10px;
-  margin-top: 55px;
-  width: 90%;
-  height: 40%;}
+  margin-left: 15px;
+  margin-top: 20px;
+  width: 80%;
+  height: 35%;
+}
