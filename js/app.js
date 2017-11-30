@@ -19,33 +19,33 @@ function inscription(event) {
   var numberRegistered = document.getElementById('numberRegistered');
   numberRegistered.textContent = students.length;
   numberRegistered.setAttribute('class', 'number');
-  
   var percent = (studentsDeserted * 100)/students.length;
-  
   var studentsDeserted = 0;
 
   // función que devuelve el porcentaje de alumnas desertadas
 
-  function percentDeserted(){
-    for(var i = 0; i<students.length;i++){
-      if (students[i].active === false){
+  function percentDeserted() {
+    for (var i = 0; i < students.length; i++) {
+      if (students[i].active === false) {
         studentsDeserted++;
-      } 
-    }  
+      }
+    }
+
     var percent = parseInt((studentsDeserted*100)/students.length);
     return percent;
   }
+
   var numberDesert = document.getElementById('numberDesert');
-  numberDesert.textContent = percentDeserted();  
+  numberDesert.textContent = percentDeserted();
   numberDesert.setAttribute('class', 'number');
 
   // función que devuelve porcentaje de satisfacción de las alumnas
 
   var sumPercent = 0;
-  function satisfied (){
+  function satisfied() {
     ratings = data[sede][gen].ratings;
-    for(var i = 0;i < ratings.length; i++){
-      sumPercent= sumPercent + ratings[i]['nps']['promoters'];
+    for (var i = 0; i < ratings.length; i++) {
+      sumPercent = sumPercent + ratings[i]['nps']['promoters'];
     }
 
     var averageSatisfied = sumPercent/ratings.length
@@ -58,10 +58,10 @@ function inscription(event) {
   var sumEvaTeacher = 0;
   var sumEvaJedi = 0;
   var sumSub = 0;
-  
+
   // función que devuelve el promedio de la evaluación de los maestros
 
-  function averageTeacher(){
+  function averageTeacher() {
     ratings = data[sede][gen].ratings;
     for (var i = 0; i < ratings.length; i++) {
       sumEvaTeacher = sumEvaTeacher + ratings[i]['teacher'];
@@ -70,14 +70,14 @@ function inscription(event) {
     var averageEvaluation = sumEvaTeacher/ratings.length;
     return averageEvaluation.toFixed(1);
   }
-  
+
   var evaluationTeacher = document.getElementById('eva-teacher');
   evaluationTeacher.textContent = averageTeacher();
   evaluationTeacher.setAttribute('class', 'number');
-  
+
   // función que devuelve el promedio de la evaluación de los jedi master
 
-  function averageJedi(){
+  function averageJedi() {
     ratings = data[sede][gen].ratings;
     for (var i = 0; i < ratings.length; i++) {
       sumEvaJedi = sumEvaJedi + ratings[i]['jedi'];
@@ -85,26 +85,26 @@ function inscription(event) {
 
     var averageEvaluation = sumEvaJedi / ratings.length;
     return averageEvaluation.toFixed(1);
+  }
+
+  var evaluationJedi = document.getElementById('eva-jedi');
+  evaluationJedi.textContent = averageJedi();
+  evaluationJedi.setAttribute('class', 'number');
+
+  // función que devuelve promedio NPS
+
+  function nps() {
+    ratings = data[sede][gen].ratings;
+    for (var i = 0; i < ratings.length; i++) {
+      var subtraction = ratings[i]['nps']['promoters'] - ratings[i]['nps']['detractors'];
+      sumSub = sumSub + subtraction;
     }
-
-    var evaluationJedi = document.getElementById('eva-jedi');
-    evaluationJedi.textContent = averageJedi();
-    evaluationJedi.setAttribute('class', 'number');
-
-    // función que devuelve promedio NPS 
-
-    function nps(){
-      ratings = data[sede][gen].ratings;
-      for (var i = 0; i < ratings.length; i++) {
-        var subtraction = ratings[i]['nps']['promoters'] - ratings[i]['nps']['detractors'];
-        sumSub = sumSub + subtraction;
-      }
-      var result = sumSub/ratings.length;
-      return result;
-    }
-    var npsElement = document.getElementById('nps');
-    npsElement.textContent =  nps();
-    npsElement.setAttribute('class', 'number');
+    var result = sumSub/ratings.length;
+    return result;
+  }
+  var npsElement = document.getElementById('nps');
+  npsElement.textContent =  nps();
+  npsElement.setAttribute('class', 'number');
 
     // función que devuelve la cantidad de estudiantes que superan la meta de puntos en promedio de todos los sprints
 
@@ -130,7 +130,3 @@ function inscription(event) {
 
     achievement();
   };
-
-
-
-
