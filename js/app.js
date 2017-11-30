@@ -1,29 +1,52 @@
-/* Dropdwon de menu */
+/* DROPDOWN DE MENU */
 window.addEventListener('load', function(event) {
+  var menu = document.querySelector('.menu');
   var country = document.querySelectorAll('.country');
   var countryChile = document.querySelector('#chile');
   var countryPeru = document.querySelector('#peru');
   var countryMexico = document.querySelector('#mexico');
-
+  function showMenu(event) {
+    for (var i = 0; i < country.length; i++) {
+      country[i].classList.toggle('display-none');
+    }
+  }
   function showCountry(event) {
   // console.log(event.target.nextElementSibling);
     event.target.nextElementSibling.classList.toggle('display-none');
   }
+  menu.addEventListener('click', showMenu);
   countryChile.addEventListener('click', showCountry);
   countryPeru.addEventListener('click', showCountry);
   countryMexico.addEventListener('click', showCountry);
 });
 
-/* Tabs */
-var tabs = document.querySelectorAll('.tab');
-var overview = document.querySelector('#overview');
-var students = document.querySelector('#students');
-var teachers = document.querySelector('#teachers');
+/* TABS */
+var tabOverview = document.querySelector('.tab-overview');
+var tabStudents = document.querySelector('.tab-students');
+var tabTeachers = document.querySelector('.tab-teachers');
+var overviewSection = document.querySelector('#overview');
+var studentsSection = document.querySelector('#students');
+var teachersSection = document.querySelector('#teachers');
 
-function showTabs(event) {
-  console.log(event.target);
+function showTab1(event) {
+  overviewSection.classList.toggle('display-none');
+  studentsSection.style.displayNone;
+  teachersSection.style.displayNone;
 }
-overview.addEventListener('click', showTabs);
+function showTab2(event) {
+  studentsSection.classList.toggle('display-none');
+  overviewSection.style.displayNone;
+  teachersSection.style.displayNone;
+}
+function showTab3(event) {
+  teachersSection.classList.toggle('display-none');
+  overviewSection.style.displayNone;
+  studentsSection.style.displayNone;
+}
+
+tabOverview.addEventListener('click', showTab1);
+tabStudents.addEventListener('click', showTab2);
+tabTeachers.addEventListener('click', showTab3);
 // var tab = document.querySelectorAll('.tab');
 //
 //
