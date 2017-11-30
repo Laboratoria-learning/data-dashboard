@@ -2,6 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+    </script>
     <title>Data Dashboard</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -121,7 +127,7 @@
               <P>% DROPOUT</P>
             </div>
           </div>
-          <div class="graphic"></div>
+          <div class="graphic" id="enrollment-chart"></div>
         </div>
         <!-- ACHIEVEMENT -->
         <div class="small-graphic">
@@ -152,7 +158,7 @@
               <p id="detractor"></p>
             </div>
           </div>
-          <div class="graphic"></div>
+          <div class="graphic" id="nps-chart"></div>
         </div>
         <!-- STUDENT SATISFACTION -->
         <div class="small-graphic">
@@ -161,7 +167,7 @@
             <p id="student-satisf"></p>
             <p>% MEETING OR EXCEEDING EXPETATIONS (CUMULATIVE)</p>
           </div>
-          <div class="graphic"></div>
+          <div class="graphic" id="satisfaction-chart"></div>
         </div>
         <!-- TEACHER RATING -->
         <div class="small-graphic">
@@ -170,7 +176,7 @@
             <P id="teacher-rating"></P>
             <P>OVERALL TEACHER RATING (CUMULATIVE)</P>
           </div>
-          <div class="graphic"></div>
+          <div class="graphic" id="teacher-chart"></div>
         </div>
         <!-- JEDI MASTER RATING -->
         <div class="small-graphic">
@@ -179,7 +185,7 @@
             <P id="jedi-rating"></P>
             <P>OVERALL JEDI RATING (CUMULATIVE)</P>
           </div>
-          <div class="graphic"></div>
+          <div class="graphic" id="jedi-chart"></div>
         </div>
       </section>
       <!--Inicio de Menu que aparece y desaparece-->

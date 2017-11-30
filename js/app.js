@@ -42,6 +42,97 @@ window.addEventListener('load', function() {
     var dropoutPorcentaje = document.getElementById('dropout-percent');
     dropoutPorcentaje.textContent = dropout;
 
+    // ------------------------- CHARTS AQP 2016-II ------------------------------
+// ------- Jedi Chart ---------
+function drawChart() {
+  var data = new google.visualization.DataTable();
+  data.addColumn('string', 'logro');
+  data.addColumn('number', 'puntaje');
+  data.addRows([
+    ['Puntaje No Otorgado', 0.97],
+    ['Puntaje Otorgado Promedio', 4.03],
+  ]);
+  
+  var options = {'title': 'Rating otorgado por las alumnas a sus Jedi Master',
+    'width': 500,
+    'height': 300,
+    'is3D': true};
+  
+  var chart = new google.visualization.PieChart(document.getElementById('jedi-chart'));
+  chart.draw(data, options);
+
+  // -------------- Teacher Chart -------------
+  var data2 = new google.visualization.DataTable();
+  data2.addColumn('string', 'logro');
+  data2.addColumn('number', 'puntaje');
+  data2.addRows([
+    ['Puntaje No Otorgado', 1.4],
+    ['Puntaje Otorgado Promedio', 3.6],
+  ]);
+
+  var options2 = {'title': 'Rating otorgado por las alumnas a sus junior y master teachers',
+    'width': 500,
+    'height': 300,
+    'is3D': true};
+
+  var chart2 = new google.visualization.PieChart(document.getElementById('teacher-chart'));
+  chart2.draw(data2, options2);
+
+  // -------------- Student Satisfaction Chart -------------
+  var data3 = new google.visualization.DataTable();
+  data3.addColumn('string', 'logro');
+  data3.addColumn('number', 'puntaje');
+  data3.addRows([
+    ['No cumple expectativa', 12.25],
+    ['Supera y Cumple Expectativa', 87.75],
+  ]);
+
+  var options3 = {'title': 'Rating otorgado por las alumnas a sus junior y master teachers',
+    'width': 500,
+    'height': 300,
+    'is3D': true};
+
+  var chart3 = new google.visualization.PieChart(document.getElementById('satisfaction-chart'));
+  chart3.draw(data3, options3);
+
+  // -------------- NPS Chart -------------
+  var data4 = new google.visualization.DataTable();
+  data4.addColumn('string', 'logro');
+  data4.addColumn('number', 'puntaje');
+  data4.addRows([
+    ['Detractors', 1.54],
+    ['Passives', 2.21],
+    ['Promoters', 11.25]
+  ]);
+
+  var options4 = {'title': 'Rating otorgado por las alumnas a sus junior y master teachers',
+    'width': 500,
+    'height': 300,
+    'is3D': true};
+
+  var chart4 = new google.visualization.PieChart(document.getElementById('nps-chart'));
+  chart4.draw(data4, options4);
+
+  // -------------- Enrollment Chart -------------
+  var data5 = new google.visualization.DataTable();
+  data5.addColumn('string', 'name');
+  data5.addColumn('number', 'students');
+  data5.addRows([
+    ['Desertoras', parseInt(dropout)],
+    ['Asistiendo a clases', 7],
+  ]);
+
+  var options5 = {'title': 'Rating otorgado por las alumnas a sus junior y master teachers',
+    'width': 500,
+    'height': 300,
+    'is3D': true};
+
+  var chart5 = new google.visualization.PieChart(document.getElementById('enrollment-chart'));
+  chart5.draw(data5, options5);
+}
+// Set a callback to run when the Google Visualization API is loaded.
+google.charts.setOnLoadCallback(drawChart);
+
     // ------------> ACHIEVEMENT <--------------------
     
     // data['AQP']['2016-2']['students'][0]['sprints'][0]['score'] // {tech: 1213, hse: 854}
@@ -109,77 +200,63 @@ window.addEventListener('load', function() {
 
       studentSatisf.textContent = (cumple + supera).toFixed(2);
     }
-    // ------------> TECH SKILLS  <-----------------
-    var studentsTech = document.getElementById('students-tech');
-    var percentTech = document.getElementById('percent-tech');
-    var tech = 0 / totalStudents * 100;
-    // data.AQP["2016-2"].students[0].sprints[0].score.tech (ruta a buscar)
-    // totalStudents
-    for (i = 0; i < arrayStudents.length; i++) { // 15
-      for (j = 0; j < arrayStudents[i]['sprints'].length; j++) { // 4
-        if (arrayStudents[i]['sprints'][j]['score']['tech'] >= 1800) {
-          tech += (arrayStudents[i]['sprints'][j]['score']['tech']) / arrayStudents[i]['sprints'].length;
-        }
-        // tech += arrayStudents[i]['sprints'][j]['score']['tech']; 
-        percentTech.textContent = tech;
-      }
-    }
-
-    // ------------> Crea función para generar lista de estudiantes <-----------------
-    var studentsTab = document.getElementById('studentsTab');
-    var container = document.getElementById('students-hidden');
-    studentsTab.addEventListener('click', showSectionStudents);
-
-    var sectionOverview = document.getElementById('section-overview');
-    var sectionStudents = document.getElementById('section-students');
-
-    function showSectionStudents(event) {
-      console.log(select.value);
-      container.innerHTML = "";
-      sectionOverview.classList.add('hide');
-      sectionStudents.classList.remove('hide');
-
-      for (var i = 0; i < arrayStudents.length; i++) {
-        // crear un div para almacenar el perfil de la estudiante
-        var profilestudent = document.createElement('div');
-        profilestudent.classList.add('profile-student');
-        container.appendChild(profilestudent);
-
-        // crear la imagen para la foto de perfil de la estudiante
-        var imgprofile = document.createElement('img');
-        imgprofile.setAttribute('src', arrayStudents[i].photo);
-        imgprofile.classList.add('img-student');
-        profilestudent.appendChild(imgprofile);
-
-        // agregar nombre de la estudiante
-        var studentName = document.createElement('p');
-        studentName.textContent = arrayStudents[i].name;
-        studentName.classList.add('name-student');
-        profilestudent.appendChild(studentName);
-        sectionStudents.appendChild(container);
-
-        // agregar box-tech-skill student
-        var boxTech = document.createElement('div');
-        var percentTech = document.createElement('p');
-        var techSkill = document.createElement('p');
-        techSkill.textContent = 'TECH SKILLS';
-        boxTech.classList.add('box-tech');
-        boxTech.appendChild(percentTech);
-        boxTech.appendChild(techSkill);
-        profilestudent.appendChild(boxTech);
-
-        // agregar box-life-skill student
-        var boxLife = document.createElement('div');
-        var percentLife = document.createElement('p');
-        var lifeSkill = document.createElement('p');
-        lifeSkill.textContent = 'LIFE SKILLS';
-        boxLife.classList.add('box-tech');
-        boxLife.appendChild(percentLife);
-        boxLife.appendChild(lifeSkill);
-        profilestudent.appendChild(boxLife);
-      }
-    }
-    sectionStudents.classList.add('hide');
-    sectionOverview.classList.remove('hide');
   }
+
+  // ------------> Crea función para generar lista de estudiantes <-----------------
+  var studentsTab = document.getElementById('studentsTab');
+  var container = document.getElementById('students-hidden');
+  studentsTab.addEventListener('click', showSectionStudents);
+
+  var sectionOverview = document.getElementById('section-overview');
+  var sectionStudents = document.getElementById('section-students');
+
+  function showSectionStudents(event) {
+    console.log(select.value);
+    container.innerHTML = '';
+    sectionOverview.classList.add('hide');
+    sectionStudents.classList.remove('hide');
+    // Me muestra ERROR EN LINEA 128 (no reconoce arrayStudents)
+    for (var i = 0; i < arrayStudents.length; i++) {
+      // crear un div para almacenar el perfil de la estudiante
+      var profilestudent = document.createElement('div');
+      profilestudent.classList.add('profile-student');
+      container.appendChild(profilestudent);
+
+      // crear la imagen para la foto de perfil de la estudiante
+      var imgprofile = document.createElement('img');
+      imgprofile.setAttribute('src', arrayStudents[i].photo);
+      imgprofile.classList.add('img-student');
+      profilestudent.appendChild(imgprofile);
+
+      // agregar nombre de la estudiante
+      var studentName = document.createElement('p');
+      studentName.textContent = arrayStudents[i].name;
+      studentName.classList.add('name-student');
+      profilestudent.appendChild(studentName);
+      sectionStudents.appendChild(container);
+
+      // agregar box-tech-skill student
+      var boxTech = document.createElement('div');
+      var percentTech = document.createElement('p');
+      var techSkill = document.createElement('p');
+      techSkill.textContent = 'TECH SKILLS';
+      boxTech.classList.add('box-tech');
+      boxTech.appendChild(percentTech);
+      boxTech.appendChild(techSkill);
+      profilestudent.appendChild(boxTech);
+
+      // agregar box-life-skill student
+      var boxLife = document.createElement('div');
+      var percentLife = document.createElement('p');
+      var lifeSkill = document.createElement('p');
+      lifeSkill.textContent = 'LIFE SKILLS';
+      boxLife.classList.add('box-tech');
+      boxLife.appendChild(percentLife);
+      boxLife.appendChild(lifeSkill);
+      profilestudent.appendChild(boxLife);
+    }
+  }
+  sectionStudents.classList.add('hide');
+  sectionOverview.classList.remove('hide');
 });
+
