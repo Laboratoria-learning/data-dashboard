@@ -26,6 +26,15 @@ Es crear un web interactiva, de complejidad media, que muestre los datos y el pe
 * La puntuación promedio de l@s profesores.
 * La puntuación promedio de l@s jedi masters.
 
+***
+### Sketch
+
+![Data-Dashboard](assets/images/2.JPG) 
+
+![Data-Dashboard](assets/images/3.JPG) 
+
+### Producto Final
+
 ![Data-Dashboard](assets/images/pf-Data-Dashboard.png) 
 
 - Dentro de la carpeta `assets` se encuentra la carpeta `images` donde encuentra todas las imágenes necesarias para completar el producto final.
