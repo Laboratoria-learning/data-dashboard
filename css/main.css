@@ -150,11 +150,9 @@ section {
   margin-left: 30px;
   margin-top: 10px;
 }
-
 .chartGrafic{
-  position: relative;
+  position: absolute;
   right: 300px;
-  z-index: -10;
 }
 .show{
   position: absolute;
