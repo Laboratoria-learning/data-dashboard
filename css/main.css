@@ -22,7 +22,7 @@
     background-color: white;
     text-align: center;
     width: 30%;
-    height: 300px;
+    height: auto;
     display: inline-block;
     margin: 10px;
 }
