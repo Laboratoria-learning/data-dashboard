@@ -13,6 +13,7 @@
       </figure>
       <!--Falta agregar icono menu -->
     </header>
+
     <div class="filters-container">
       <ul class="filters">
         <span class="span">OVERVIEW</span>
@@ -20,12 +21,29 @@
         <span class="span">TEACHERS</span>
       </ul>
     </div>
+    <!---html menu display --->
+          <nav class="menuDisplay">
+            <ul>
+                <li class="submenu">SEDE & GENERACION
+                <ul class="hide choose">
+                  <option>AREQUIPA</option>
+                  <li id='AQP20162'>2016-2</li>
+                  <li id='AQP20171' >2017-1</li>
+                  <option>MEXICO</option>
+                  <li id='CDMX20171'>2017-1</li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div id=cambioDiv class="cambioDiv">
+          </div>
+    <!------------------------------->
     <section>
       <div class="container1">
         <div class="Total-students">
           <h2 class="Enrollment">ENROLLMENT</h2>
           <div class="subcontainer">
-            <div class="dataContainer"></div>
+            <div id='divEnrollment'class="dataContainer"></div>
             <div class="dataContainer"></div>
           </div>
           <div class="graphContent"></div>
@@ -99,8 +117,6 @@
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
     <script src="./js/variables.js"></script>
-    <!-- Google charts -->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="./js/googlecharts.js"></script>
+    <script src="./js/eventos.js"></script>
   </body>
 </html>

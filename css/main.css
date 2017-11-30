@@ -1,22 +1,33 @@
-/*
- * Estilos de tu proyecto
- */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto Condensed', sans-serif;
+/*css menu display*/
+
+.menuDisplay ul {
+  background-color: #CE852A;
+  list-style: none;
+}
+.menuDisplay li{
+  border: 30px;
+  padding: 10px 15px;
+  display: inline-block;
+}
+.menuDisplay ul ul{
+  top: 700px; /*list de menu*/
+  position: absolute;
+}
+.menuDisplay .choose li{
+  display: block;
 }
 
- .box.header {
-   display: inline-block;
- }
- .logo-header {
-   height: 200;
-   width: 180px;
-   position: absolute;
-   left: 43.3%;
-   top: 10px;
- }
+.menuDisplay li:hover {
+  background-color: rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+.hide {
+  display: none;
+}
+.show{
+  display: block;
+}
+/*---------------------*/
 
  .filters-container {
    background-color:#E1E1E1;

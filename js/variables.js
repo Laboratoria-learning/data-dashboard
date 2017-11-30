@@ -437,6 +437,7 @@ console.log('suma de puntos de jedis total sprints 20172: ' + pointsPerSprintJed
 // Promedio de las puntuaciones de los jedis 2017-2 //
 var averagePointsJedisSCL20172 = pointsPerSprintJedisSCL20172 / 2;
 console.log('promedio de puntos de jedi en todos los sprints 20172: ' + averagePointsJedisSCL20172);
+
 // NPS //
 var npsSCL20172 = (((data.SCL['2017-2'].ratings[0].nps.promoters - data.SCL['2017-2'].ratings[0].nps.detractors) + (data.SCL['2017-2'].ratings[1].nps.promoters - data.SCL['2017-2'].ratings[1].nps.detractors)) / 2) + '%';
 console.log('suma de nps 20172: ' + npsSCL20172);
