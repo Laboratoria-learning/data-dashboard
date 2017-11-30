@@ -161,6 +161,7 @@ window.addEventListener('load', function() {
     // [Detractors] = [Respuestas entre 1 y 6] / [Total respuestas] * 100
 
     // [NPS] = [Promoters] - [Detractors]
+    
     var result = 0;
     for (var i = 0; i < generationData.ratings.length; i++) {
       var promoters = generationData.ratings[i].nps.promoters;
