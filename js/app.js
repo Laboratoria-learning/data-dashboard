@@ -1,11 +1,12 @@
 
  // Funcionalidad de tu producto
+ var localArequipa = data['AQP'];
 var localCdmx = data['CDMX'];
 var localLim = data['LIM'];
 var localSantiago = data['SCL'];
-var localArequipa = data['AQP'];
 
 
+// aqp62 ---> arequipa 2016-2
 var promAq62 = localArequipa['2016-2'];
 var studentsAq62 = promAq62.students;
 // estudiantes activas
@@ -27,7 +28,7 @@ var desertion = Math.floor((inactiveAq62 * 100) / (inactiveAq62 + activeAq62)) +
 var enrolled = inactiveAq62 + activeAq62;
 
 // ver el total que pasaron el 70% (del otal de puntos de hse y tecnico)
-countPastTarget = 0
+countPastTarget = 0;
 aqp62notasArr = [];
 for (var i = 0; i < studentsAq62.length; i++) {
   for (var j = 0; j < studentsAq62[i]['sprints'].length; j++) {
@@ -64,13 +65,12 @@ for (var i = 0; i < promAq62ratng.length; i++) {
   npsDetractors += promAq62ratng[i]['nps']['detractors'];
   npsCantTotal = (npsPromoter + npsPassive + npsDetractors);
 
-  npsPromotersPerc = (npsPromoter * 100) / npsCantTotal ;
-  npsPassivePerc = (npsPassive * 100) / npsCantTotal;
-  npsDetractorsPerc = (npsDetractors * 100) / npsCantTotal;
+  npsPromotersPerc = Math.round((npsPromoter * 100) / npsCantTotal) ;
+  npsPassivePerc = Math.round((npsPassive * 100) / npsCantTotal);
+  npsDetractorsPerc = Math.round((npsDetractors * 100) / npsCantTotal);
 
   npsTotal = Math.round(npsPromotersPerc - npsDetractorsPerc) + '%';
 }
-
 
 
 
