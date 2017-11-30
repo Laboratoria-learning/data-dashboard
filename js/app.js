@@ -36,6 +36,8 @@ window.addEventListener('load', function() {
           var generation = event.target.dataset.generation;
           console.log('la generación es: ' + generation);// 2016-2
           // console.log(typeof generation); //string
+
+          var students = data[sede][generation].students;
           var totalstudents = data[sede][generation].students.length ;
           // console.log(data[sede][generation].ratings.length);
 
@@ -98,26 +100,41 @@ window.addEventListener('load', function() {
           };
           console.log('cantidad de estudiantes que superan la meta puntos tecnicos de todos los sprint: ' + studentsSuperan);
 
-          // cantidad y el porcentaje que representa el total de estudiantes que superan la meta de puntos tecnicos en promedio y por sprint de tech
-          var studentsSuperanTech = 0;
-          for (i = 0; i < data[sede][generation]['students'].length; i++) {
-            if (data[sede][generation]['students'][i]['sprints'][0]['score']['tech'] > 1260) {
-              studentsSuperanTech ++;
-            } else {
-              studentsSuperanTech = studentsSuperanTech;
-            }
-          };
-          console.log('cantidad de estudiantes que superan la meta de puntos tecnicos en promedio y en el primer sprint : ' + studentsSuperanTech);
+          //  ingresando a cada sprint
+           /*var score = students[i1].sprints;
+           // # de estudiantes que pasaron el 70% en Tech y Hse
+           var scoreHse = '';
+           for (var i2 = 0; i2 < score.length; i1++) {
+             if (score[i2].hse > 840 && score[i2].tech > 1260) {
+               var studentsHighScore = score[i2].hse.length;
+               console.log(studentsHighScore);
+             };
+           };
+         };*/
 
-          var studentsSuperanTech = 0;
+          /*var studentsSuperanTech = 0;
           for (i = 0; i < data[sede][generation]['students'].length; i++) {
-            if (data[sede][generation]['students'][i]['sprints'][1]['score']['tech'] > 1260) {
-              studentsSuperanTech ++;
-            } else {
-              studentsSuperanTech = studentsSuperanTech;
-            }
-          };
-          console.log('cantidad de  estudiantes que superan la meta de puntos tecnicos en promedio y e el segundo sprint: ' + studentsSuperanTech);
+            console.log(data[sede][generation]['students'][i]['sprints']);
+            for (j = 0; j < data[sede][generation]['students'][i]['sprints'].length; j++){
+              if(data[sede][generation]['students'][i]['sprints'][j]['score']['tech'].length !== 0 && data[sede][generation]['students'][i]['sprints'][j]['score']['tech'].length > 1260) {
+               studentsSuperanTech ++;
+               }
+              }
+          };*/
+
+          // cantidad y el porcentaje que representa el total de estudiantes que superan la meta de puntos tecnicos en promedio y por sprint de tech
+
+           //if (data[sede][generation]['students'][i]['sprints'][0]['score']['tech'] > 1260 &&  ) {
+            //  studentsSuperanTech ++;
+          //} else {
+            //  studentsSuperanTech = studentsSuperanTech;
+            //}
+          });
+          //console.log('cantidad de estudiantes que superan la meta de puntos tecnicos en promedio y en el primer sprint : ' + studentsSuperanTech);
+
+
+
+          /*console.log('cantidad de  estudiantes que superan la meta de puntos tecnicos en promedio y e el segundo sprint: ' + studentsSuperanTech);
 
           var studentsSuperanTech = 0;
           for (i = 0; i < data[sede][generation]['students'].length; i++) {
@@ -138,9 +155,10 @@ window.addEventListener('load', function() {
             }
           };
           console.log('cantidad de estudiantes que superan la meta de puntos tecnicos en promedio y en el cuarto sprint: ' + studentsSuperanTech);
+          */
 
           // cantidad y el porcentaje que representa el total de estudiantes que superan la meta de puntos tecnicos en promedio y por sprint de hse
-          var studentsSuperanHse = 0;
+          /*var studentsSuperanHse = 0;
           for (i = 0; i < data[sede][generation]['students'].length; i++) {
             if (data[sede][generation]['students'][i]['sprints'][0]['score']['hse'] > 840) {
               studentsSuperanHse ++;
@@ -179,8 +197,67 @@ window.addEventListener('load', function() {
             }
           };
           console.log('cantidad de estudiantes que superan la meta de puntos HSE en promedio y en el cuarto sprint: ' + studentsSuperanHse);
-        });
-      }
-    });
-  }
-});
+
+          // hallando la cantidad todal de estudiantes ACTIVAS por generación
+          console.log(students[0]['active']);
+        /*  console.log(totalstudents[1]);*/
+        /*
+          var activeStudents = 0;
+          for (var i1 = 0; i1 < students.length; i1++) {
+            if (students[i1]['active']) {
+               activeStudents++;
+             };*/
+             //console.log(activeStudents);
+
+            // hallando la cantidad todal de estudiantes INACTIVAS por generacion
+           /*var inactiveStudents = totalstudents - activeStudents;
+           console.log('activas: ' + activeStudents);
+            console.log('inactivas: ' + inactiveStudents);
+            //var scoreHse = students[i1].sprints;
+          };*/
+
+
+
+
+
+
+          // creando div que almacenará el # de estudiates
+          /*var studentsDiv = document.createElement('div');
+          studentsDiv.textContent = totalstudents;
+          console.log(studentsDiv);
+
+          // creando div que almacenará el # de estudiates INACTIVAS
+          var inactiveStudentsDiv = document.createElement('div');
+          inactiveStudents.textContent = inactiveStudents;
+          console.log(inactiveStudentsDiv);
+          */
+        };
+      })
+    };
+  })
+
+/*
+var students = data[sede][generation].students ;
+          var studentAcount = students.length;
+
+          // hallando la cantidad todal de estudiantes ACTIVAS por generación
+          var activeStudents = 0;
+          for (var i1 = 0; i1 < totalstudents; i1++) {
+            if (students[i1].active === true) {
+              var activeStudents = (activeStudents + 1);
+            };
+            // hallando la cantidad todal de estudiantes INACTIVAS por generacion
+            var inactiveStudents = totalstudents - activeStudents;
+            console.log(inactiveStudents);
+            var scoreHse = students[i1].sprints;
+
+          };
+          // creando div que almacenará el # de estudiates
+          var studentsDiv = document.createElement('div');
+          studentsDiv.textContent = totalstudents;
+          console.log(studentsDiv);
+          // creando div que almacenará el # de estudiates INACTIVAS
+          var inactiveStudentsDiv = document.createElement('div');
+          inactiveStudents.textContent = inactiveStudents;
+          console.log(inactiveStudentsDiv);
+*/
