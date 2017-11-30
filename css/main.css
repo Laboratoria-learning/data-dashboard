@@ -1,13 +1,23 @@
-
-/*
- * Estilos de tu proyecto
- */
-
 * {
     margin: 0;
     padding: 0;
 }
+header img{
+  width: 20%;
+}
 
+.selectors{
+  background-color: #e1e1e1;
+  height: 70px;
+}
+
+#selection{
+  border: none;
+  margin-left: 100px;
+  margin-top: 10px;
+  height: 30px;
+  width: 160px;
+}
 #section2 {
     display: inline-block;
     background-color: rgb(203, 203, 238);
@@ -32,4 +42,27 @@
 .grafic{
 width: 300px;
 height: auto;
+}
+/*3era pregunta*/
+.points{
+position: absolute;
+left:25%;
+width: 50px;
+height: 50px;
+background-color: red;
+}
+
+.pointsListEstudents{
+position: absolute;
+left:45%;
+width: 100px;
+height: 50px;
+background-color: red;
+}
+.pointsEstudentsPrc {
+  position: absolute;
+  left: 65%;
+  width: 100px;
+  height: 50px;
+  background-color: red;
 }

@@ -1,4 +1,10 @@
-window.addEventListener('load', function () {
+//window.addEventListener('load', function() {
+
+var selectPoints = document.getElementById('studentsPoints');
+selectPoints.addEventListener('click', showPoints);
+
+
+//almacenando porcentaje de los estudiantes
     var cont = document.getElementById('container');
     var contStudents = document.getElementById('students');
     var count = 0;
@@ -61,9 +67,9 @@ window.addEventListener('load', function () {
     for (var i = 0; i < active10.length; i++) {
         if (active10[i].active === false) {
             count++;
-                    }
+        }
     };
-    var aqp2016 = data.AQP["2016-2"].students.length; 
+    var aqp2016 = data.AQP["2016-2"].students.length;
     var aqp2017 = data.AQP["2017-1"].students.length;
     var cdmx20171 = data.CDMX["2017-1"].students.length;
     var cdmx20172 = data.CDMX["2017-2"].students.length;
@@ -86,30 +92,190 @@ window.addEventListener('load', function () {
 
 //3er filtro
 
- //   var actual = data.AQP["2016-2"]["students"];  
-   
-    for (var i = 0; i < active1.length; i++) {
-        for (var j = 0; j < active1[i]['sprints'].length; j++) {
-            var sprintNote = active1[i]['sprints'][j]['score']['tech'] + active1[i]['sprints'][j]['score']['hse'];
-            //console.log(notas);
-            countSprints=0;
+//   var actual = data.AQP["2016-2"]["students"];  
+
+
+function showPoints() {
+   var countSprints = 0;
+     if (selectPoints.value === 'arequipa162') {
+         for (var i = 0; i < active1.length; i++) {
+            for (var j = 0; j < active1[i]['sprints'].length; j++) {
+             //   var sprintNote = active1[i]['sprints'][j]['score']['tech'] + active1[i]['sprints'][j]['score']['hse'];             
+                if (active1[i]['sprints'][j]['score']['tech'] >= 1260 && active1[i]['sprints'][j]['score']['hse'] >= 840) {
+                    countSprints++;
+                     var contPoints = document.createElement('textarea');
+                    contPoints.classList = 'points';
+                    contPoints.textContent = countSprints;
+                    contStudents.appendChild(contPoints);
+                    
+                    contPoints.addEventListener('click', function(){
+                        if(contPoints.value){
+                            for (var i = 0; i < active1.length; i++) {
+                                for (var j = 0; j < active1[i]['sprints'].length; j++) {
+                                    if (active1[i]['sprints'][j]['score']['tech'] >= 1260 && active1[i]['sprints'][j]['score']['hse'] >= 840) {
+                                       countSprints++;
+                                        var listStudentsPoints = document.createElement('textarea');
+                                        listStudentsPoints.classList = 'pointsListEstudents';
+                                        listStudentsPoints.textContent = (countSprints/100);
+                                        contStudents.appendChild(listStudentsPoints);
+                             };
+                             };                            
+                             };
+
+                         };
+                    });
+
+                }
+            }
+        }
+         countSprints = '';
+    }
+   if (selectPoints.value === 'arequipa171') {
+       for (var i = 0; i < active2.length; i++) {
+           for (var j = 0; j < active2[i]['sprints'].length; j++) {
+               var sprintNote = active2[i]['sprints'][j]['score']['tech'] + active2[i]['sprints'][j]['score']['hse'];
+               if (sprintNote >= 2330) {
+                   countSprints++;
+                   var contPoints = document.createElement('textarea');
+                   contPoints.classList = 'points';
+                   contPoints.textContent = countSprints;
+                   contStudents.appendChild(contPoints);
+         }
+         }
+         }
+         countSprints = '';
+         }
+if (selectPoints.value === 'mexico171') {
+    for (var i = 0; i < active3.length; i++) {
+        for (var j = 0; j < active3[i]['sprints'].length; j++) {
+            var sprintNote = active3[i]['sprints'][j]['score']['tech'] + active3[i]['sprints'][j]['score']['hse'];
             if (sprintNote >= 2330) {
                 countSprints++;
-                var notesprom = sprintNote;
-                var name = active1[i]['name'];
-                var sprint = active1[i]['sprints'][j]['number'];
-                console.log(notesprom + name + sprint);
-                //creando variables
+                var contPoints = document.createElement('textarea');
+                contPoints.classList = 'points';
+                contPoints.textContent = countSprints;
+                contStudents.appendChild(contPoints);
+            }
+        }
+    }
+    countSprints = '';
+}
+   if (selectPoints.value === 'mexico172') {
+       for (var i = 0; i < active4.length; i++) {
+           for (var j = 0; j < active4[i]['sprints'].length; j++) {
+               var sprintNote = active4[i]['sprints'][j]['score']['tech'] + active4[i]['sprints'][j]['score']['hse'];
+               if (sprintNote >= 2330) {
+                   countSprints++;
+                   var contPoints = document.createElement('textarea');
+                   contPoints.classList = 'points';
+                   contPoints.textContent = countSprints;
+                   contStudents.appendChild(contPoints);
+               }
+           }
+       }
+       countSprints = '';
+   }
+ if (selectPoints.value === 'lima162') {
+     for (var i = 0; i < active5.length; i++) {
+         for (var j = 0; j < active5[i]['sprints'].length; j++) {
+             var sprintNote = active5[i]['sprints'][j]['score']['tech'] + active5[i]['sprints'][j]['score']['hse'];
+             if (sprintNote >= 2330) {
+                 countSprints++;
+                 var contPoints = document.createElement('textarea');
+                 contPoints.classList = 'points';
+                 contPoints.textContent = countSprints;
+                 contStudents.appendChild(contPoints);
+             }
+         }
+     }
+     countSprints = '';
+ }
+  if (selectPoints.value === 'lima171') {
+      for (var i = 0; i < active6.length; i++) {
+          for (var j = 0; j < active6[i]['sprints'].length; j++) {
+              var sprintNote = active6[i]['sprints'][j]['score']['tech'] + active6[i]['sprints'][j]['score']['hse'];
+              if (sprintNote >= 2330) {
+                  countSprints++;
+                  var contPoints = document.createElement('textarea');
+                  contPoints.classList = 'points';
+                  contPoints.textContent = countSprints;
+                  contStudents.appendChild(contPoints);
+              }
+          }
+      }
+      countSprints = '';
+  }
+   if (selectPoints.value === 'lima172') {
+       for (var i = 0; i < active7.length; i++) {
+           for (var j = 0; j < active7[i]['sprints'].length; j++) {
+               var sprintNote = active7[i]['sprints'][j]['score']['tech'] + active7[i]['sprints'][j]['score']['hse'];
+               if (sprintNote >= 2330) {
+                   countSprints++;
+                   var contPoints = document.createElement('textarea');
+                   contPoints.classList = 'points';
+                   contPoints.textContent = countSprints;
+                   contStudents.appendChild(contPoints);
+               }
+           }
+       }
+       countSprints = '';
+   }
+ if (selectPoints.value === 'chile171') {
+     for (var i = 0; i < active8.length; i++) {
+         for (var j = 0; j < active8[i]['sprints'].length; j++) {
+             var sprintNote = active8[i]['sprints'][j]['score']['tech'] + active8[i]['sprints'][j]['score']['hse'];
+             if (sprintNote >= 2330) {
+                 countSprints++;
+                 var contPoints = document.createElement('textarea');
+                 contPoints.classList = 'points';
+                 contPoints.textContent = countSprints;
+                 contStudents.appendChild(contPoints);
+             }
+         }
+     }
+     countSprints = '';
+ }
+ if (selectPoints.value === 'chile172') {
+     for (var i = 0; i < active9.length; i++) {
+         for (var j = 0; j < active9[i]['sprints'].length; j++) {
+             var sprintNote = active9[i]['sprints'][j]['score']['tech'] + active9[i]['sprints'][j]['score']['hse'];
+             if (sprintNote >= 2330) {
+                 countSprints++;
+                 var contPoints = document.createElement('textarea');
+                 contPoints.classList = 'points';
+                 contPoints.textContent = countSprints;
+                 contStudents.appendChild(contPoints);
+             }
+         }
+     }
+     countSprints = '';
+ }
 
-                var contFilter3 = document.createElement('div');
-                contFilter3.classList = 'sprint';
-                var sectionFilter3 = document.createElement('section');
-                var optionFilter3 = document.createElement('textarea');
-                optionFilter3.textContent= name + sprint;
-                contFilter3.appendChild(optionFilter3);
-                cont.appendChild(contFilter3);
 
-            }           
-        }  
-    };
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+};
+//});
+  
+    
+    
+  
+
+
