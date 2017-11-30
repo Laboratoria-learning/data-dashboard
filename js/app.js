@@ -3,7 +3,8 @@
  */
 
 // Puedes hacer uso de la base de datos a través de la variable `data`
-// console.log(data);
+// console.log(data['AQP']['2016-2']['students'][1]['name']);
+
 var list = document.getElementsByTagName('ul')[0].children;
 var elementTab = document.getElementsByClassName('tab');
 var containerOverview = document.getElementById('container-overview');
@@ -24,6 +25,9 @@ var totalSkill = document.getElementById('total-skill');
 var comboBoxHse = document.getElementById('combo-box-hse');
 var overallClass = document.getElementById('overall-class');
 var studentTargetOverall = document.getElementById('student-target-overall');
+var first = document.getElementById('first');
+var buscar = document.getElementById('buscar');
+var nameStudent = document.getElementById('name-student');
 function show(event) {
   var tabSelection = event.target.dataset.tabSelection;
   if (tabSelection === 'overview') {
@@ -91,7 +95,7 @@ function changeTitle() {
     var sprint2Jedi = data['LIM']['2017-1']['ratings'][1]['jedi'];
     var sprint3Jedi = data['LIM']['2017-1']['ratings'][2]['jedi'];
     var sprint4Jedi = data['LIM']['2017-1']['ratings'][3]['jedi'];
-    drawPromoter(sprint1, sprint2, sprint3r, sprint4);
+    drawPromoter(sprint1, sprint2, sprint3, sprint4);
     drawTeacher(sprint1Teacher, sprint2Teacher,sprint3Teacher,sprint4Teacher);
     drawJedi(sprint1Jedi, sprint2Jedi, sprint3Jedi,sprint4Jedi);
     break;
@@ -741,6 +745,61 @@ function drawJedi(num1, num2, num3, num4) {
   chart.draw(data, google.charts.Bar.convertOptions(options));
 }
 
+function searchStudent() {
+  var studentName = first.value;
+  var sede = comboBox.value;
+  switch (sede) {
+  case 'lim2016II':
+    search('LIM', '2016-2', studentName);
+    break;
+  case 'lim2017I':
+    search('LIM', '2017-1', studentName);
+    break;
+  case 'lim2017II':  
+    search('LIM', '2017-2', studentName);
+    break;
+  case 'are2016II':
+    search('AQP', '2016-1', studentName);   
+    break;
+  case 'are2017I':
+    search('AQP', '2017-1', studentName);    
+    break;
+  case 'chi2016II':
+    search('SCL', '2016-2', studentName);   
+    break;
+  case 'chi2017I':
+    search('SCL', '2017-1', studentName);    
+    break;
+  case 'chi2017II':
+    search('SCL', '2017-2', studentName);    
+    break;
+  case 'mex2017I':
+    search('CDMX', '2017-1', studentName);    
+    break;
+  case 'mex2017II':
+    search('CDMX', '2017-2', studentName);    
+    break;
+  }
+}
+
+function search(sede, year, student) {
+  debugger;
+  var cont = 0;
+  var studentLength = data[sede][year]['students'].length;
+  for (var i = 0; i < studentLength;i++) {
+    if (student === data[sede][year]['students'][i]['name']) {
+      nameStudent.textContent = student;
+      i = studentLength;
+    } else {
+      cont++;
+    }
+  }
+  if (cont === studentLength) {
+    nameStudent.textContent = 'nombre no encontrado';
+    alert('no encontrado');
+  }
+}
+
 window.onload = function() {
   elementTab[0].addEventListener('click', show);
   elementTab[1].addEventListener('click', show);
@@ -748,4 +807,5 @@ window.onload = function() {
   comboBox.addEventListener('change', changeTitle);
   comboBoxTech.addEventListener('change', TechSkill);
   comboBoxHse.addEventListener('change', lifeSkill);
+  buscar.addEventListener('click', searchStudent);
 };

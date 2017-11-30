@@ -231,7 +231,7 @@ nav .fa-bars{
     box-shadow: 5px 5px 0px #ccc;
     position:absolute;
     right:72px;
-    top: 100px;
+    top: 150px;
   }
   #img-container img{
     height: 20%;
@@ -305,4 +305,16 @@ nav .fa-bars{
   left:70%;
   transform: translateX(-50%);
   position: relative;
+}
+
+#buscar{
+    position: relative;
+    left: 68%;
+    bottom: 30px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    background: #f7b617;
+    padding: 10px;
+    cursor: pointer;
 }
