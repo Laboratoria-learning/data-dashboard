@@ -4,10 +4,12 @@ function activeStudents(sede) {
   var contadorActivas = 0;
   var lasede = data[sede];
   var contadorDesercion = 0;
+  var arrayActivaPorGen = [];
   for (var gene in lasede) {
-    contadorActivas += estadoEstudiante(sede, gene)[0];
+    contadorActivas = estadoEstudiante(sede, gene)[0];
+    arrayActivaPorGen.push(contadorActivas);
   }
-  return contadorActivas;
+  return arrayActivaPorGen;
 }
   
 /* funcion que retorna un array, con información sobre la cantidad de estudiantes activas y la cantidad de
@@ -28,8 +30,9 @@ function estadoEstudiante(sede, generacion) {
   Array.push(desiertas);
   return Array;// [presentes,desiertas]
 }
-// console.log(studentsActivs('AQP','2016-2'));
-// console.log(activeStudents('LIM'));
+// console.log(estadoEstudiante('AQP','2016-2')[0]);
+// console.log(estadoEstudiante('AQP','2016-2')[1]);
+
 
 /* funcion que retorna el porcentaje de desiertos por sede y generación*/
 function PorcentajeDesiertos(sede, generacion) {
@@ -48,44 +51,52 @@ function PorcentajePresentes(sede, generacion) {
 // console.log(PorcentajeDesiertos('AQP', '2016-2'));
 // console.log(PorcentajePresentes('AQP', '2016-2'));
 
-/* aaaa*/
-function cantidadPromedioSuperado(sede, generacion) {
-  var arrayStudentGene = data[sede][generacion]['students'];
-  var longArrayStudentGene = data[sede][generacion]['students'].length;
-  var promedioBase = (1200 + 1800);
-  for (i = 0; i < longArrayStudentGene;i++) {
-    var sprints = arrayStudentGene[i]['sprints'];
-    for (j = 0 ; i < sprints.length; i++) {
-      var score = arrayStudentGene[i]['sprints'][j]['score'];
-      var notaObtenida = score.tech + score.hse;
+/* evalua la cantidad de alumnas que han superado  70% del puntaje esperado por sede/generacion/sprint*/
+function estadoDeObjetivoAlcanzado(sede, generacion, sprint) {
+  var arrayAlumnas = data[sede][generacion]['students'];
+  var scoreAlumnas; 
+  var notaAlumna = 0;
+  // var notasAlumnasSprint = [];
+  var cantidadObjetivoAlcanzado = 0 ;
+  var cantidadObjetivoNoAlcanzado = 0;
+  var objetivoMinimo = 2100;
+  var arrayEstadoPuntajeSprint = [];
+  for (i = 0 ; i < arrayAlumnas.length ; i++) {
+    scoreAlumnas = arrayAlumnas[i]['sprints'][ sprint - 1]['score'];
+    notaAlumna = scoreAlumnas.hse + scoreAlumnas.tech;
+    // notasAlumnasSprint.push(notaAlumna);
+    if (notaAlumna > objetivoMinimo) {
+      cantidadObjetivoAlcanzado++;
+    } else {
+      cantidadObjetivoNoAlcanzado++;
     }
   }
+  arrayEstadoPuntajeSprint.push(cantidadObjetivoAlcanzado);
+  arrayEstadoPuntajeSprint.push(cantidadObjetivoNoAlcanzado);
+  return arrayEstadoPuntajeSprint;
 }
-// console.log(estadoEstudiante('AQP','2016-2')[0]);
-// console.log(estadoEstudiante('AQP','2016-2')[1]);
+console.log(estadoDeObjetivoAlcanzado('AQP', '2016-2', 1));
 
-google.charts.load('current', {'packages': ['corechart']});
 
-// Establece una llamada que se ejecuta cuando la API es cargada.
-google.charts.setOnLoadCallback(drawChart);
-
-// Dibuja el gráfico
-function drawChart() {
-  // Crea los datos del gráfico.
-  var data = new google.visualization.DataTable();
-  data.addColumn('string', 'Topping');
-  data.addColumn('number', 'Slices');
-  data.addRows([
-    ['Activas', estadoEstudiante('SCL', '2016-2')[0]],
-    ['Desertoras', estadoEstudiante('SCL', '2016-2')[1]],
-  
-  ]);
-
-  // Establece opciones del gráfico
-  var options = {'title': 'Inscritas',
-    'width': 400,
-    'height': 300};
-                
-  var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-  chart.draw(data, options);
+function estadoMetaAlcanzadPorSprints(sede, generacion) {
+  var contadorMetaPorSprints = 0;
 }
+
+function notasTodosSprint(sede, generacion) {
+  var alumnas = data[sede][generacion]['students'];
+  var notasSprintArray0 = [];
+  var notasSprintArray1 = [];
+  var notasSprintArray2 = [];
+  var notasSprintArray3 = [];
+  var TotalArray = [];
+  for (var i in alumnas) {
+    notasSprintArray0.push(alumnas[i]['sprints'][0]['score'].tech + alumnas[i]['sprints'][0]['score'].hse);
+    notasSprintArray1.push(alumnas[i]['sprints'][1]['score'].tech + alumnas[i]['sprints'][1]['score'].hse);
+    notasSprintArray2.push(alumnas[i]['sprints'][2]['score'].tech + alumnas[i]['sprints'][2]['score'].hse);
+    notasSprintArray3.push(alumnas[i]['sprints'][3]['score'].tech + alumnas[i]['sprints'][3]['score'].hse);
+  }
+  TotalArray = [notasSprintArray0, notasSprintArray1, notasSprintArray2, notasSprintArray3];
+  return TotalArray;
+}
+// console.log(notasSprint('AQP','2016-2'));
+
