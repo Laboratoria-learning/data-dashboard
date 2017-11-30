@@ -28,21 +28,17 @@ window.addEventListener('load', function() {
       // console.log(event.target); //  <a href="#" class="sede" data-sede ="AQP">Arequipa</a>
       var sede = event.target.dataset.sede;
 
-
       for (var i = 0; i < listGenerations.length; i++) {
         listGenerations[i].addEventListener('click', function(event) {
           // sconsole.log(event.target);
-          // creando div que almacenará el cuadro estradístico
-          var chartDiv = document.createElement('div');
-          chartDiv.textContent = ' VAR AGREGAR CUADRO AQUI ';
-        
-
 
           var generation = event.target.textContent;
           // console.log(generation);// 2016-2
           var students = data[sede][generation].students.length ;
-          console.log(students);// 15
-          alert('el número de estudiantes de la sede ' + sede + ' y de la generación ' + generation + ' es: ' + students);
+          // creando div que almacenará el cuadro estradístico
+          var chartDiv = document.createElement('div');
+          chartDiv.textContent = students;
+          console.log(chartDiv);
         });
       }
     });
