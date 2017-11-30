@@ -158,11 +158,11 @@ window.addEventListener('load', function(event) {
           title: 'Enrollment actual'
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        var chart = new google.visualization.PieChart(document.getElementById('enrollment-chart'));
 
         chart.draw(data, options);
       }
-      //drawChart(countEnrolled, countDropped);
+      
     });
   }
 
