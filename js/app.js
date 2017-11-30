@@ -1,6 +1,7 @@
 window.addEventListener('load', begin);
 /*  Funciones*/
-
+var perfectTech = 1800;
+var perfectHse = 1200;
 /*  Total de estudiantes por generacion según su sede*/
 function totalStudents(place, generation) {
   var totalStudents = data[place][generation].students.length;
@@ -18,13 +19,26 @@ function numDesert(place, generation, totalAlumns) {
   return desertion;
 };
 
-/*  Total de puntos Tech o HSE por Sprint de cada estudiante*/
+/*  Total de puntos Tech o HSE de TODOS los sprints por estudiante*/
 function totalPointsPerStudent(place, generation, curse, numberStudent) {
   var totalPoints = 0;
   for (var i = 0; i < data[place][generation].students[numberStudent].sprints.length; i++) {
     totalPoints += data[place][generation].students[numberStudent].sprints[i].score[curse];
   }
   return totalPoints;
+};
+
+/* Función para obtener la cantidad de alumnas que superaron la meta por sprint*/
+function pointsPerSprint(place, generation, curse, numberSprint, perfectScore) {
+  var totalStudents = 0;
+  for (var i = 0; i < data[place][generation].students.length; i++) {
+    if (data[place][generation].students[i].sprints.length === 0) {
+      totalStudents + 0;
+    } else if (convertApercentage(data[place][generation].students[i].sprints[numberSprint].score[curse], perfectScore) >= 70) {
+      totalStudents ++;
+    }
+  }
+  return totalStudents;
 };
 
 /*  Función para convertir a porcentaje por Todos los Sprints*/
@@ -44,7 +58,7 @@ function numberStudentsExceededAndBelowGoalPercentage(sede, generation) {
   var exceededGoal = 0;
   var belowGoal = 0;
   for (var i = 0; i < data[sede][generation].students.length; i++) {
-    if ((convertApercentagePerAllSprints(totalPointsPerStudent(sede, generation, 'tech', i), 1800) + convertApercentagePerAllSprints(totalPointsPerStudent(sede, generation, 'hse', i), 1200)) / 2 >= 70) {
+    if ((convertApercentagePerAllSprints(totalPointsPerStudent(sede, generation, 'tech', i), perfectTech) + convertApercentagePerAllSprints(totalPointsPerStudent(sede, generation, 'hse', i), perfectHse)) / 2 >= 70) {
       exceededGoal ++ ;
     } else {
       belowGoal ++;
@@ -210,6 +224,33 @@ function begin() {
     };
 
     function addDataForGeneration(generationOption) {
+      /* agregando sprints de acuerdo a la generacion*/
+      var overGoalTech = document.getElementById('over-goal-tech');
+      var overGoalTechPercentage = document.getElementById('over-goal-tech-percentage');
+      var overGoalHse = document.getElementById('over-goal-hse');
+      var overGoalHsePercentage = document.getElementById('over-goal-hse-percentage');
+      var sprintsSelect = document.getElementById('sprints');
+      var textSprint = document.getElementById('text-sprint');
+      var dataSprint = data[sede][generationOption].students[0].sprints.length;
+      sprintsSelect.textContent = '';
+      overGoalTech.textContent = ' - ';
+      overGoalTechPercentage.textContent = '-';
+      overGoalHse.textContent = '-';
+      overGoalHsePercentage.textContent = '-';
+      sprintsSelect.appendChild(textSprint);
+      for (var i = 1 ; i <= dataSprint; i++) {
+        var optionSprint = document.createElement('option');
+        optionSprint.setAttribute('value', i);
+        optionSprint.textContent = 'Sprint ' + i;
+        sprintsSelect.appendChild(optionSprint);
+      }
+      /* Agregando datos por sprint*/
+      sprintsSelect.onchange = function(event) {
+        overGoalTech.textContent = pointsPerSprint(sede, generationOption, 'tech', event.target.value, perfectTech);
+        overGoalTechPercentage.textContent = convertApercentage(pointsPerSprint(sede, generationOption, 'tech', event.target.value, perfectTech), totalStudents(sede, generationOption));
+        overGoalHse.textContent = pointsPerSprint(sede, generationOption, 'hse', event.target.value, perfectHse);
+        overGoalTechPercentage.textContent = convertApercentage(pointsPerSprint(sede, generationOption, 'hse', event.target.value, perfectHse), totalStudents(sede, generationOption));
+      };
       /*  Número de estudiantes que lograron alcanzar la meta*/
       var numExceedeGoal = document.getElementById('num-exceede-goal');
       numExceedeGoal.textContent = numberStudentsExceededAndBelowGoalPercentage(sede, generationOption);
@@ -234,6 +275,6 @@ function begin() {
       /*  Porcentaje de desercion de estudiantes*/
       var desert = document.getElementById('desert-percentage');
       desert.textContent = convertApercentage(numDesert(sede, generationOption, totalStudents(sede, generationOption)), totalStudents(sede, generationOption));
-    }
+    };
   };
 };

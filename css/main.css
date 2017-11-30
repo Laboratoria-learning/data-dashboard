@@ -56,7 +56,7 @@ header {
 #menuD ul {
   display: none; /* Hace que todo este bloque desaparezca*/
   list-style: none;
-  margin-right: 868px;
+  margin-right: 960px;
   min-width: 40px;
   position: fixed;
   right: 15px;
@@ -282,12 +282,93 @@ p{
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 414px;
+  position: relative;
   width: 500px;
 }
 
 .studentPhoto img {
   height: 200px;
   width: 200px;
+}
+
+.studentName {
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 8px 0 8px 40px;
+}
+
+.studentScores {
+  width: 150px;
+  position: absolute;
+  right: 85px;
+  top: 57px;
+  background-color: white;
+  outline: 2px solid black;
+}
+
+.techScore {
+  outline: 1px solid black;
+  width: 150px;
+  height: 50px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.techScore p {
+  padding-top: 15px;
+  text-transform: uppercase;
+}
+
+.lifeScore {
+  outline: 1px solid black;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+}
+
+.lifeScore p {
+  padding-top: 15px;
+  text-transform: uppercase;
+}
+
+.studentName {
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 8px 0 8px 40px;
+}
+
+.studentScores {
+  width: 150px;
+  position: absolute;
+  right: 85px;
+  top: 57px;
+  background-color: white;
+  outline: 2px solid black;
+}
+
+.techScore {
+  outline: 1px solid black;
+  width: 150px;
+  height: 50px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.techScore p {
+  padding-top: 15px;
+  text-transform: uppercase;
+}
+
+.lifeScore {
+  outline: 1px solid black;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+}
+
+.lifeScore p {
+  padding-top: 15px;
+  text-transform: uppercase;
 }
 
 /* ESTILOS DE LA TERCERA PESTAÑA PROFESORES*/
