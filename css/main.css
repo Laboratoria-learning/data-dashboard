@@ -138,6 +138,7 @@ header section {
 
 .first-section .list-sedes {
     width: 15%;
+    height: 40px;
     display: inline-block;
     background-color: #f7b617;
     color: #333333;
@@ -152,7 +153,19 @@ header section {
 
 .list-sedes ul {
     margin: 8px;
+    list-style: none;
+    height: 30px;
 }
+
+.list-sedes ul li {
+    width: 150px;
+}
+
+/* .show {
+    background-color: white;
+    float: left;
+    z-index: 1000;
+} */
 
 .first-section .container-paragraph {
     display: inline-block;
