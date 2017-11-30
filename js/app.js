@@ -67,17 +67,35 @@ for (var i = 0;i < tabs.length;i++) {
 var studentsInfoMainBox = document.querySelector('.students-info');
 
 function createImage(name, photo) {
-  for (var i = 0; i < data[branch][generation]['students'].length; i++) {
+  var pictureFigEle = document.createElement('figure');
+  var pictureImgEle = document.createElement('img');
+  pictureImgEle.setAttribute('src', data[branch][generation]['students'][i]['photo']); // foto de generation
+  pictureImgEle.setAttribute('alt', data[branch][generation]['students'][i]['name']);
+  studentsInfoMainBox.appendChild(pictureImgEle);
+}
 
-    ;
-    var pictureFigEle = document.createElement('figure');
-    studentsInfoMainBox.appendChild(pictureFigEle);
-    var pictureImgEle = document.createElement('img');
-    pictureImgEle.setAttribute('src', data[branch][generation]['students'][i]['photo']); // foto de generation
-    pictureImgEle.setAttribute('alt', data[branch][generation]['students'][i]['name']);
-    studentsInfoMainBox.appendChild(pictureImgEle)
+function addAllImages(generation, branch) {
+  for (var i = 0; i < data[branch].length; i++) {
+    createImage(data[branch][i], branch);
   }
 }
+
+function addImages() {
+
+}
+
+function showAll() {
+  
+}
+
+// for (var i = 0; i < data[branch][generation]['students'].length; i++) {
+//   var pictureFigEle = document.createElement('figure');
+//   studentsInfoMainBox.appendChild(pictureFigEle);
+//   var pictureImgEle = document.createElement('img');
+//   pictureImgEle.setAttribute('src', data[branch][generation]['students'][i]['photo']); // foto de generation
+//   pictureImgEle.setAttribute('alt', data[branch][generation]['students'][i]['name']);
+//   studentsInfoMainBox.appendChild(pictureImgEle);
+//   console.log(pictureImgEle.getAttribute());
 
 // function addFiguresBox {
 //
