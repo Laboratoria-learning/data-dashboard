@@ -93,25 +93,22 @@ function begin() {
       document.getElementById('overcome-percent').textContent = Math.round((overcomeStudents / currentStudents) * 100) * 10 / 10 + '%';
     }
   }
-
-  // studentsCount('LIM', '2016-2');
-  // studentsCount('CDMX', '2017-1');
-
-  function openPage(evnt, opt) {
-    var i, tabContent, menus;
-    tabContent = document.getElementsByClassName('tabContent');
-    for (i = 0; i < tabContent.length; i++) {
-      tabContent[i].style.display = 'none';
-    }
-    menus = document.getElementsByClassName('menus');
-    for (i = 0; i < menus.length; i++) {
-      menus[i].className = menus[i].className.replace('active', '');
-    }
-    document.getElementById(opt).style.display = 'block';
-    evnt.currentTarget.className += 'active';
-  }
-  document.getElementById('default').click();
 };
+
+function openPage(evnt, opt) {
+  var i, tabContent, menus;
+  tabContent = document.getElementsByClassName('tabContent');
+  for (i = 0; i < tabContent.length; i++) {
+    tabContent[i].style.display = 'none';
+  }
+  menus = document.getElementsByClassName('menus');
+  for (i = 0; i < menus.length; i++) {
+    menus[i].className = menus[i].className.replace('active', '');
+  }
+  document.getElementById(opt).style.display = 'block';
+  evnt.currentTarget.className += 'active';
+}
+document.getElementById('default').click();
 
 // Superan expectativas exp Laboratoria
 var ratings = data[selectLocal.value][selectPromo.value].ratings;

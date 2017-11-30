@@ -57,7 +57,12 @@
         </select>
       </div>
 
-      <section id="container">
+      <div class="content">
+        <button class="menus" onclick="openPage(event, 'overview')" id="default">OVERVIEW</button>
+        <button class="menus" onclick="openPage(event, 'students')">STUDENTS</button>
+      </div>
+
+      <section id="container" class="tabContent">
         <section id="overview">
             <div id="enrollment-overview">
               <pre class="icon-users"></pre>
