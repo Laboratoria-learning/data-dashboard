@@ -152,11 +152,6 @@ p {
 /*-------------------------------------*/
 
 /*--.....SECTION STUDENTS....*/
-
-/*section {
-    outline: 2px solid red;
-    width: 100%; 
-}*/
 .container1 {
     outline: 1px solid purple;
     padding-top: 220px;
@@ -166,13 +161,13 @@ nav ul {
     outline: 1 px solid black;
     list-style: none;
     display:  inline-block;
-    
-
 }
+
 .navcontainer a {
     outline: 1px solid red;
     text-decoration: none;
 }
+
 .navcontainer {
     outline: 1px solid black;
     
