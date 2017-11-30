@@ -103,6 +103,8 @@ window.addEventListener('load', function() {
     var optionSatisfactionS3 = document.createElement('option');
     var optionSatisfactionS4 = document.createElement('option');
     var boxPercentageStudentSat = document.createElement('div');
+    var boxCanvas6 = document.createElement('div');
+    var canvasSatisf = document.createElement('canvas');
 
     // contenedores TECH
     var boxStudentTech = document.createElement('div');
@@ -115,7 +117,9 @@ window.addEventListener('load', function() {
     var optionTechS4 = document.createElement('option');
     var boxPercentageStudentTech = document.createElement('div');
     var boxNumberStudentTech = document.createElement('div');
-    
+    var boxCanvas4 = document.createElement('div');
+    var canvasTech = document.createElement('canvas');
+
 
     // contenedores HSE
     var boxStudentHse = document.createElement('div');
@@ -128,7 +132,8 @@ window.addEventListener('load', function() {
     var optionHseS4 = document.createElement('option');
     var boxPercentageStudentHse = document.createElement('div');
     var boxNumberStudentHse = document.createElement('div');
-   
+    var boxCanvas5 = document.createElement('div');
+    var canvasHSE = document.createElement('canvas');
 
     // Contenedores  Teacher
     var boxTeacher = document.createElement('div');
@@ -140,6 +145,8 @@ window.addEventListener('load', function() {
     var optionTeacherS3 = document.createElement('option');
     var optionTeacherS4 = document.createElement('option');
     var boxPercentageTeacher = document.createElement('div');
+    var boxTeach7 = document.createElement('div');
+    var canvasTeacher = document.createElement('canvas');
 
     // Contenedores Jedi
     var boxJedi = document.createElement('div');
@@ -151,6 +158,8 @@ window.addEventListener('load', function() {
     var optionJediS3 = document.createElement('option');
     var optionJediS4 = document.createElement('option');
     var boxPercentageJedi = document.createElement('div');
+    var boxJedi8 = document.createElement('div');
+    var canvasJedi = document.createElement('canvas');
 
 
     // elementos que contienen información de Enrollment
@@ -248,6 +257,8 @@ window.addEventListener('load', function() {
     selectTech.appendChild(optionTechS2);
     selectTech.appendChild(optionTechS3);
     selectTech.appendChild(optionTechS4);
+    boxStudentTech.appendChild(boxCanvas4);
+    boxCanvas4.appendChild(canvasTech);
 
     // insertando elementos a contenedor HSE
     boxStudentHse.appendChild(titleStudentHse);
@@ -264,6 +275,9 @@ window.addEventListener('load', function() {
     selectHse.appendChild(optionHseS2);
     selectHse.appendChild(optionHseS3);
     selectHse.appendChild(optionHseS4);
+    boxStudentHse.appendChild(boxCanvas5);
+    boxCanvas5.appendChild(canvasHSE);
+
 
     // insertando elementos a contenedor Student Satisfaction
     boxStudentSatisfaction.appendChild(titleStudentSatisfaction);
@@ -276,6 +290,8 @@ window.addEventListener('load', function() {
     selectSatisfaction.appendChild(optionSatisfactionS2);
     selectSatisfaction.appendChild(optionSatisfactionS3);
     selectSatisfaction.appendChild(optionSatisfactionS4);
+    boxStudentSatisfaction.appendChild(boxCanvas6);
+    boxCanvas6.appendChild(canvasSatisf);
 
     // insertando elementos a contenedor Teacher
     boxTeacher.appendChild(titleTeacher);
@@ -288,6 +304,8 @@ window.addEventListener('load', function() {
     selectTeacher.appendChild(optionTeacherS2);
     selectTeacher.appendChild(optionTeacherS3);
     selectTeacher.appendChild(optionTeacherS4);
+    boxTeacher.appendChild(boxTeach7);
+    boxTeach7.appendChild(canvasTeacher);
 
     // insertando elementos a contenedor Jedi
     boxJedi.appendChild(titleJedi);
@@ -300,6 +318,9 @@ window.addEventListener('load', function() {
     selectJedi.appendChild(optionJediS2);
     selectJedi.appendChild(optionJediS3);
     selectJedi.appendChild(optionJediS4);
+     boxJedi.appendChild(boxJedi8);
+    boxJedi8.appendChild(canvasJedi);
+
 
     // insertando elementos a contenedores Generales
     boxInfoGeneral.appendChild(boxEnrollment);
@@ -520,10 +541,46 @@ window.addEventListener('load', function() {
     // insertando información en TECH
     titleStudentTech.textContent = 'Tech Skills';
     optionTech.textContent = 'Seleccione Sprint';
+    boxCanvas4.setAttribute('id', 'canvas-container4');
+    canvasTech.setAttribute('id', 'chart4');
+    canvasTech.classList.add('canvas');
+    optionTech.textContent = 'Seleccione Sprint';
     optionTechS1.textContent = 'Sprint 1';
     optionTechS2.textContent = 'Sprint 2';
     optionTechS3.textContent = 'Sprint 3';
     optionTechS4.textContent = 'Sprint 4';
+     $(document).ready(function () {
+      var datos4 = {
+          type: "bar",
+          data: {
+              datasets: [{
+                  data: [
+                    ((studentsTech(sede, generation)[0] / totalStudentActive(sede, generation)) * 100).toFixed(1),
+                    ((studentsTech(sede, generation)[1] / totalStudentActive(sede, generation)) * 100).toFixed(1),
+                    ((studentsTech(sede, generation)[2] / totalStudentActive(sede, generation)) * 100).toFixed(1),
+                    ((studentsTech(sede, generation)[3] / totalStudentActive(sede, generation)) * 100).toFixed(1),
+                                     ],
+                  backgroundColor: [
+                      "#f7464A ",
+                      "#46BFBD ",
+                      "#F8BFAD ", 
+                      "#46DOAE ",             
+                  ]
+              }],
+              labels: [
+                  "Sprint1",
+                  "Sprint2",
+                  "Sprint3",
+                  "Sprint4",
+                             ]
+          },
+          options: {
+              reponsive: true,
+          }
+      };
+      var canvas4 = document.getElementById("chart4").getContext('2d');
+      window.pie = new Chart(canvas4, datos4);
+   });
 
     // atributos atributos TECH
     optionTechS1.setAttribute('value', 'sprint1');
@@ -617,11 +674,47 @@ window.addEventListener('load', function() {
 
     // insertando información en HSE
     titleStudentHse.textContent = 'Life Skills';
+    boxCanvas5.classList.add('box-canvas');
+    boxCanvas5.setAttribute('id', 'canvas-container5');
+    canvasHSE.setAttribute('id', 'chart5');
+    canvasHSE.classList.add('canvas');
     optionHse.textContent = 'Seleccione Sprint';
     optionHseS1.textContent = 'Sprint 1';
     optionHseS2.textContent = 'Sprint 2';
     optionHseS3.textContent = 'Sprint 3';
     optionHseS4.textContent = 'Sprint 4';
+     $(document).ready(function () {
+      var datos5 = {
+          type: "bar",
+          data: {
+              datasets: [{
+                  data: [
+                    (studentsHse(sede, generation)[0] / totalStudentActive(sede, generation)) * 100 ,
+                    (studentsHse(sede, generation)[1] / totalStudentActive(sede, generation)) * 100 ,
+                    (studentsHse(sede, generation)[2] / totalStudentActive(sede, generation)) * 100 ,
+                    (studentsHse(sede, generation)[3] / totalStudentActive(sede, generation)) * 100 ,
+                                     ],
+                  backgroundColor: [
+                      "#f7464A ",
+                      "#46BFBD ",
+                      "#F8BFAD ", 
+                      "#46DOAE ",             
+                  ]
+              }],
+              labels: [
+                  "Sprint1",
+                  "Sprint2",
+                  "Sprint3",
+                  "Sprint4",
+                             ]
+          },
+          options: {
+              reponsive: true,
+          }
+      };
+      var canvas5 = document.getElementById("chart5").getContext('2d');
+      window.pie = new Chart(canvas5, datos5);
+   });
 
     // atributos atributos HSE
     optionHseS1.setAttribute('value', 'sprint1');
@@ -700,11 +793,48 @@ window.addEventListener('load', function() {
 
     // insertando información en Student Satisfactioon
     titleStudentSatisfaction.textContent = 'Student Satisfaction';
+    boxCanvas6.classList.add('box-canvas');
+    boxCanvas6.setAttribute('id', 'canvas-container6');
+    canvasSatisf.setAttribute('id', 'chart6');
+    canvasSatisf.classList.add('canvas');
     optionSatisfaction.textContent = 'Seleccione Sprint';
     optionSatisfactionS1.textContent = 'Sprint 1';
     optionSatisfactionS2.textContent = 'Sprint 2';
     optionSatisfactionS3.textContent = 'Sprint 3';
     optionSatisfactionS4.textContent = 'Sprint 4';
+     $(document).ready(function () {
+      var datos6 = {
+          type: "line",
+          data: {
+              datasets: [{
+                  data: [
+                    studentSatisfaction(sede, generation)[0] ,
+                    studentSatisfaction(sede, generation)[1] ,
+                    studentSatisfaction(sede, generation)[2] ,
+                    studentSatisfaction(sede, generation)[3] ,
+                                     ],
+                  backgroundColor: [
+                      "#f7464A ",
+                      "#46BFBD ",
+                      "#F8BFAD ", 
+                      "#46DOAE ",             
+                  ]
+              }],
+              labels: [
+                  "Sprint1",
+                  "Sprint2",
+                  "Sprint3",
+                  "Sprint4",
+                             ]
+          },
+          options: {
+              reponsive: true,
+          }
+      };
+      var canvas6 = document.getElementById("chart6").getContext('2d');
+      window.pie = new Chart(canvas6, datos6);
+   });
+
 
     // atributos Student Satisafaction
     optionSatisfactionS1.setAttribute('value', 'sprint1');
@@ -737,11 +867,45 @@ window.addEventListener('load', function() {
     
     // insertando información en Teacher
     titleTeacher.textContent = 'Teacher Rating';
+    boxTeach7.classList.add('box-canvas');
+    boxTeach7.setAttribute('id', 'canvas-container7');
+    canvasTeacher.setAttribute('id', 'chart7');
+    canvasTeacher.classList.add('canvas');
     optionTeacher.textContent = 'Seleccione Sprint';
     optionTeacherS1.textContent = 'Sprint 1';
     optionTeacherS2.textContent = 'Sprint 2';
     optionTeacherS3.textContent = 'Sprint 3';
     optionTeacherS4.textContent = 'Sprint 4';
+     $(document).ready(function () {
+      var datos7 = {
+          type: "line",
+          data: {
+              datasets: [{
+                  data: [
+                    teacherRating(sede, generation)[0],
+                    teacherRating(sede, generation)[1],
+                    teacherRating(sede, generation)[2],
+                    teacherRating(sede, generation)[3],
+                                     ],
+                  backgroundColor: [
+                      "#f7464A ",
+                      "#46BFBD ",              
+                  ]
+              }],
+              labels: [
+                "Sprint1",
+                "Sprint2",
+                "Sprint3",
+                "Sprint4",
+                             ]
+          },
+          options: {
+              reponsive: true,
+          }
+      };
+      var canvas7 = document.getElementById("chart7").getContext('2d');
+      window.pie = new Chart(canvas7, datos7);
+   });
     
     // atributos teacher
     optionTeacherS1.setAttribute('value', 'sprint1');
@@ -774,11 +938,47 @@ window.addEventListener('load', function() {
 
     // insertando información en Jedi
     titleJedi.textContent = 'Jedi Master Rating';
+    boxJedi8.classList.add('box-canvas');
+    boxJedi8.setAttribute('id', 'canvas-container8');
+    canvasJedi.setAttribute('id', 'chart8');
+    canvasJedi.classList.add('canvas');
     optionJedi.textContent = 'Seleccione Sprint';
     optionJediS1.textContent = 'Sprint 1';
     optionJediS2.textContent = 'Sprint 2';
     optionJediS3.textContent = 'Sprint 3';
     optionJediS4.textContent = 'Sprint 4';
+    $(document).ready(function () {
+      var datos8 = {
+          type: "line",
+          data: {
+              datasets: [{
+                  data: [
+                    jediRating(sede, generation)[0],
+                    jediRating(sede, generation)[1],
+                    jediRating(sede, generation)[2],
+                    jediRating(sede, generation)[3],
+                                     ],
+                  backgroundColor: [
+                      "#f7464A ",
+                      "#46BFBD ",  
+                      "#GF35F4 ",
+                      "#3DG4TD ",               
+                  ]
+              }],
+              labels: [
+                "Sprint1",
+                "Sprint2",
+                "Sprint3",
+                "Sprint4",
+                             ]
+          },
+          options: {
+              reponsive: true,
+          }
+      };
+      var canvas8 = document.getElementById("chart8").getContext('2d');
+      window.pie = new Chart(canvas8, datos8);
+   });
     
     // atributos Jedi
     optionJediS1.setAttribute('value', 'sprint1');
