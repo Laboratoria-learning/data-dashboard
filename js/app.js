@@ -94,14 +94,13 @@ window.addEventListener('load', function(event) {
 
   var percentPastScoreLimaStudents2016ii = Math.floor(pastScoreLimaStudents2016ii)
 
-
   checkedSite.addEventListener('change', function(event) {
     console.log(event.target);
     if (checkedSite === 'lim2016 - ii') {
       getElementById('numDataNumber').innerHtml = enrolledLimaStudents2016ii;
       getElementById('numDataDropout').innerHtml = desertionLimaStudents2016ii;
-      getElementById('numDataAchievement').innerHtml =pastScoreLimaStudents2016ii;
-    }
+      getElementById('numDataAchievement').innerHtml = pastScoreLimaStudents2016ii;
+    };
   });
 });
 
