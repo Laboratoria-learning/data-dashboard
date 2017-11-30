@@ -88,15 +88,15 @@ text-transform: uppercase;
  }
 
  .enrollmentClass {
- background-color:#fff;
- box-sizing: border-box;
- display: inline-block;
- width: 350px;
- height: 300px;
- padding: 20px;
- border-top: 40px;
- margin-left: 40px;
- text-align: center;
+   margin-top: 40px;
+   margin-left: 80px;
+   background-color: #fff;
+   box-sizing: border-box;
+   padding: 20px;
+   display: inline-block;
+   width: 350px;
+   height: 300px;
+   text-align: center;
  }
 
 .enrollOne {
@@ -122,10 +122,11 @@ text-transform: uppercase;
 }
 
 .achievementClass {
-  margin-top: 40px;
+  margin-top: 20px;
   margin-left: 80px;
   background-color: #fff;
   box-sizing: border-box;
+  float: left;
   padding: 20px;
   display: inline-block;
   width: 350px;
@@ -137,27 +138,25 @@ text-transform: uppercase;
   font-weight: bolder;
 }
 .achiOne {
-  padding: 5px;
   background-color: #e6ecf0;
-  font-size: 10px;
+  float: left;
+  width: 140px;
   height: 60px;
-  width : 140px;
-  display: inline-block;
+  font-size: 11px;
   text-align: center;
+  margin-right: 10px;
   margin-top: 15px;
-
   }
 
 .achiTwo {
-  padding: 5px;
-  background-color:#e6ecf0;
-  font-size: 11px;
+  background-color: #e6ecf0;
+  float: left;
+  width: 140px;
   height: 60px;
-  width : 140px;
-  display: inline-block;
-  margin-left: 10px;
+  font-size: 11px;
+  text-align: center;
+  margin-right: 10px;
   margin-top: 15px;
-
 }
 
 .promoterClass {
@@ -174,23 +173,24 @@ text-transform: uppercase;
 }
 
 .pOneClass {
-  background-color:#e6ecf0;
-  padding: 5px;
-  font-size: 11px;
+  background-color: #e6ecf0;
+  float: left;
+  width: 140px;
   height: 60px;
-  width : 140px;
-  display: inline-block;
+  font-size: 11px;
+  text-align: center;
+  margin-right: 10px;
   margin-top: 15px;
 }
 
 .pTwoClass {
-  background-color:#e6ecf0;
-  padding: 5px;
-  font-size: 11px;
+  background-color: #e6ecf0;
+  float: left;
+  width: 140px;
   height: 60px;
-  width : 140px;
-  display: inline-block;
-  margin-left: 10px;
+  font-size: 11px;
+  text-align: center;
+  margin-right: 10px;
   margin-top: 15px;
 }
 
@@ -202,18 +202,37 @@ text-transform: uppercase;
 /*seccion 2 Tech Skills*/*
 
 #techS {
-  border: 1px solid red;
-margin-left: 40px;
+ border: 1px solid red;
+ margin-left: 50px;
  background-color: #fff;
  box-sizing: border-box;
- height: 650px;
+ height: 400px;
  width: 900px;
  }
+
 .metTargetStyle{
+  background-color: #e6ecf0;
+  float: left;
+  width: 200px;
+  height: 100px;
+  font-size: 11px;
+  text-align: center;
+  margin-right: 10px;
+  margin-top: 15px;
   padding: 5px;
   border: 1px solid red;
 }
 .totalTSStyle {
+border: 1px solid red;
+background-color: #e6ecf0;
+float: left;
+width: 200px;
+height: 100px;
+font-size: 11px;
+text-align: center;
+margin-right: 10px;
+margin-top: 15px;
+padding: 5px;
 border: 1px solid red;
 
 }
