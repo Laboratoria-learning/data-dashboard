@@ -94,7 +94,10 @@ div.block {
      background: #d6d8d3bb;
      display:inline-block;
      height: 49px;
-     width:100px;
+     width:120px;
+     font-size:19px;
+     padding: 7px;
+     text-align: center;
  }
 
 img {
