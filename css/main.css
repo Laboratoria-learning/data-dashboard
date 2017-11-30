@@ -303,6 +303,7 @@ h3{
   margin-left: 20px;
   margin-top: 70px;
 }
+/*lista de students*/
 .container-students{
   background-color: #fff;
   width: 550px;
@@ -324,12 +325,44 @@ img{
   height: 150px;
   display: inline-block;
   vertical-align: top;
+  float: left;
+
 }
 
 .container-students h2{
+  width: 350px;
   margin-top: 30px;
   display: inline-block;
+  float: left;
   font-family: 'Quicksand', sans-serif;
-
-
+}
+.container-tech  {
+  background-color:#EFEFEF;
+  width: 100px;
+  height: 50px;
+  float: left;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+.container-soft {
+  background-color:#EFEFEF;
+  float: left;
+  width: 100px;
+  height: 50px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+.container-tech span{
+  display: inline-block;
+  margin: 20px 0px;
+  font-size: 20px;
+  width: 80%;
+  padding-left: 20px;
+}
+.container-soft span {
+  display: inline-block;
+  margin: 20px 0px;
+  font-size: 20px;
+  width: 80%;
+  padding-left: 20px;
 }
