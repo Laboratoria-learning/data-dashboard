@@ -213,28 +213,35 @@ select:hover {
   overflow: hidden;
 }
 
+#overview .big-box {
+  width: 47.5%;
+  /* text-align: left; */
+}
+
+#overview .big-box div {
+  float: left;
+  width: 48%;
+  box-shadow: none;
+}
+
 #overview pre {
   display: block;
   font-size: 3em;
-  text-align: center;
+  /* text-align: center; */
   margin: 10px auto;
   color: #ffc107;
 }
 
-/* #overview div:nth-child(2n) {
-  margin-right: 0;
-} */
-
-#overview .data {
+#overview .info {
   box-shadow: none;
   width: 48%;
 }
 
-.data span {
+.info span {
   font-size: 2.5em;
   font-weight: 600;
 }
 
-.data h5 {
+.info h5 {
   font-weight: 200;
 }
