@@ -57,7 +57,7 @@ function create() {
   console.log(document.getElementById('six-3').innerHTML = (detractors) + "%" + "detractors");
       break;
   case 'LIMA2017-II':
-  var  estudiantelim3 = (data["LIM"]["2017-2"]["students"].length);
+  var  estudiantelim3 = (data["LIM"]["2017-1"]["students"].length);
   console.log( document.getElementById('one').innerHTML = estudiantelim3);
   /* Añadiendo NPS*/
   var ratings = data['LIM']['2017-2']['ratings'][0];
