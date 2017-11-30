@@ -60,6 +60,12 @@ h1 {
   margin: 20px 0px 20px 0;
 }
 
+ul li{
+  list-style: none;
+  font-size: 12px;
+  margin: 8px 0;
+}
+
 .container {
   width: 1300px;
   margin: auto;
@@ -158,4 +164,45 @@ i.icon {
 
 .tech-skills {
   width: 100%;
+}
+
+.menu {
+  position: relative;
+}
+
+.content-menu {
+  background-color: white;
+  position: absolute;
+  top: 60px;
+  left: 112px;
+  width: 334px;
+  padding: 26px;
+  z-index: 1000;
+}
+
+ul p {
+  border-bottom: 2px solid #ffca00;
+  display: inline-block;
+  width: 200px;
+}
+
+.sub-menu {
+  margin: 10px 20px;
+}
+
+.menu .sub-option {
+  color: gray;
+}
+
+.place {
+  padding-bottom: 5px;
+}
+
+.tech-skills .content-menu {
+  width: 258px;
+  left: 80px;
+}
+
+.hidden {
+  display: none;
 }
