@@ -20,8 +20,8 @@
     </header>
     <section>
         <div class="section-1">
-            <h3 class="capital-letter">Lima 2017 - II</h3>
-            <span><a href=""><i class="fa fa-caret-down  fa-3x" aria-hidden="true"></i></a></span>
+            <h3 id="title" class="capital-letter">Lima 2017 - II</h3>
+            <span><a id="listSedes"href=""><i class="fa fa-caret-down  fa-3x" aria-hidden="true"></i></a></span>
             <div>
                 <h5 class="capital-letter"><a href="">overview</a></h5>
                 <h5 class="capital-letter"><a href="">students</a></h5>
@@ -35,11 +35,11 @@
                 <h6 class="capital-letter">enrollment</h6>
                 <div class="box-container-data">
                     <div class="box-data">
-                        <span>120</span>
+                        <span id="totalStudents">120</span>
                         <p class="capital-letter"># students currently enrolled</p>
                     </div>
                     <div class="box-data">
-                        <span>20%</span>
+                        <span id="detractors">20%</span>
                         <p class="capital-letter">% dropout</p>
                     </div>
                 </div>
@@ -51,12 +51,12 @@
                     <h6 class="capital-letter">achievement</h6>
                     <div class="box-container-data">
                         <div class="box-data">
-                            <span>105</span>
+                            <span  id="stuContar">105</span>
                             <p class="capital-letter"># students that meet de target</p>
                         </div>
                         <div class="box-data">
-                            <span>78% <i class="fa fa-caret-up" aria-hidden="true"></i></span>
-                            <p class="capital-letter">% of total (135)</p>
+                            <span id="prctstuContar">78% <i class="fa fa-caret-up" aria-hidden="true"></i></span>
+                            <p class="capital-letter">% of total <span id ="totalStd">(135)</span></p>
                         </div>
                     </div>
                     <figure>
@@ -93,7 +93,7 @@
               <option value="sprint-3">sprint 3</option>
               <option value="sprint-4">sprint 4</option>
           </select>
-      
+
 
       <div class="cuadrado">
         <div class="box-sprint">
@@ -114,7 +114,7 @@
        </div>
 
        <div class="fondo">
-       <h3 class="subtitle">LIFE SKILLS 
+       <h3 class="subtitle">LIFE SKILLS
         <select id ="select" title="overaL (Cumulative)">
           <option value="sprint-1">sprint 1</option>
           <option value="sprint-2">sprint 2</option>
@@ -141,7 +141,7 @@
         </div>
         </div>
 
-    
+
     <section class="section-5">
         <div class="section-5">
             <div class="box-evaluation">
@@ -176,12 +176,12 @@
             </div>
         </div>
     </section>
-    <div class="list-city">
+    <div id ="listCity" class="list-city">
         <ul>
             <li class="capital-letter">lima</li>
-            <li class="capital-letter"><a href=""></a>2016 ii</li>
-            <li class="capital-letter"><a href=""></a>2017 i</li>
-            <li class="capital-letter"><a href=""></a>2017 ii</li>
+            <li class="capital-letter"><a id ="lima20162"href=""></a>2016 ii</li>
+            <li class="capital-letter"><a id ="lima20171"href=""></a>2017 i</li>
+            <li class="capital-letter"><a id ="lima20172"href=""></a>2017 ii</li>
         </ul>
         <ul>
             <li class="capital-letter">arequipa</li>
@@ -246,11 +246,11 @@
                 </div>
               </div>
               <div id="add-Names">
-      
+
               </div>
             </div>
           </section>
-      
+
     <!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->

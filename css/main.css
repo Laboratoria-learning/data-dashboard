@@ -157,13 +157,16 @@ header {
     font-size: 10px;
 }
 .list-city {
-    padding:10px;
-    width:200px;
+    padding:20px 10px 20px;
+    width:300px;
     background:#ffffff;
-    height:450px;
-    display: block;
+    height:550px;
+    display: none;
     text-align: left;
 }
+.list-city ul {
+     padding: 5px 40px;
+ }
 .list-city ul li {
     list-style: none;
     line-height: 30px;
@@ -368,3 +371,17 @@ height: auto;
     margin-right: 5px;
     background:white;
   }
+  /* Clase para eventos-Claudia*/
+.listPosition {
+    position: absolute;
+    top: 180px;
+    left: 180px ;
+    z-index: 100;
+    display: inline-block;
+}
+.hide {
+    display:none;
+}
+.fontStrong {
+    font-weight: 900;
+}
