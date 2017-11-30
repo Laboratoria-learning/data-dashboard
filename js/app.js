@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Iniciamos extrayendo los datos de las sedes */
 // debugger;
 
@@ -142,3 +143,8 @@ for (var c = 0; c < Object.values(Object.values((Object.values(Object.values(dat
   if(totalSum[c] >= 2400) {
     
   } */
+=======
+// for (var i = 0; i < Object.keys(data).length; i++) {
+//   console.log(data[Object.keys(data)[i]]); 
+//  }
+>>>>>>> 40e2205a3a8f3f6d259845f3ee55d694ea42e0c2
