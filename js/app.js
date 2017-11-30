@@ -45,7 +45,6 @@ function studentsExceedGoal (){
     var arrayStudents = data[sede][generation]['students'];
     for(i = 0; arrayStudents.length; i++){
       if(arrayStudents[i]['sprints'])
-
     }
  
 }
@@ -54,11 +53,15 @@ function studentsExceedGoal (){
 //data.AQP["2016-2"]['ratings'][0]['jedi']
 function averageJediMasters (sede,generation){
   var averageScoreJedi = data[sede][generation]['ratings'];
+  var ScoreJedi = 0;  
   for (i = 0; i < averageScoreJedi.length; i++) {
     if (averageScoreJedi[i]['jedi']) {
-
+      ScoreJedi += 1;
     }
   }
+  return ScoreJedi;
 }
+averageJediMasters('AQP','2016-2')
+
 
 })
