@@ -9,27 +9,28 @@ var contentOverview = document.getElementById('contentOverview');// lo que quier
 var students = document.getElementById('tab-students');// lo que quiero hacer click
 var contentStudents = document.getElementById('contentStudents');// lo que quiero que aparezca
 
-function estudentcont () {
+function estudentcont() {
   contentOverview.style.display = 'none';
   contentStudents.style.display = 'block';
 }
- function overcont () {
+function overcont() {
   contentOverview.style.display = 'block';
-
 };
 
 function create() {
   var sede = document.getElementById('sede').value;
   document.getElementById('text').innerHTML = sede ;
 
-
-switch(sede) {
+  switch (sede) {
   case 'LIMA2016-II':
-  var estudiantelim1 = (data["LIM"]["2016-2"]["students"].length);
-  console.log( document.getElementById('one').innerHTML =  estudiantelim1  + " # estudents currentl enrrolled" );  
+    var estudiantelim1 = (data['LIM']['2016-2']['students'].length);
+      console.log(document.getElementById('one').innerHTML =  estudiantelim1  + " # estudents currentl enrrolled" );
+      var totalStudentlim1 = data['LIM']['2016-2']['students'];
+      porcentaje();
       break;
   case 'LIMA2017-I':
-  var  estudiantelim2 = (data["LIM"]["2017-1"]["students"].length);
+  var estudiantelim2 = (data['LIM']['2017-1']['students'].length);
+  var totalStudentlim2 = data['LIM']['2017-1']['students'];
   console.log( document.getElementById('one').innerHTML = estudiantelim2);
       break;
   case 'LIMA2017-II':
@@ -39,6 +40,8 @@ switch(sede) {
   case 'AREQUIPA2016-II':
   var  estudiantelim4 = (data["AQP"]["2016-2"]["students"].length);
   console.log( document.getElementById('one').innerHTML = estudiantelim4);
+  var totalStudentAQP1 = data["AQP"]["2016-2"]["students"];
+  porcentaje();
        break;
   case 'AREQUIPA2017-I':
   var  estudiantelim5 = (data["AQP"]["2017-1"]["students"].length);
@@ -69,13 +72,19 @@ switch(sede) {
       alert('seleccione una opcion');
 }
 
+  function porcentaje() {
 
+var activeStudentAQP1 = [];
+var inactiveStudentAQP1 = [];
+for (var i = 0; i<totalStudentAQP1.length;i++){
 
- function porcentaje(){
-
-      alert('gb');
+      if(totalStudentAQP1[i].active === true){
+        activeStudentAQP1.push(i);
+      }else{
+		inactiveStudentAQP1.push(i);}
+    }
+    console.log(document.getElementById('two').innerHTML = (inactiveStudentAQP1.length/estudiantelim4)*100 + "%" );
 }
-
 
 
 }
