@@ -6,7 +6,7 @@ var select = document.getElementById('select');
 var enrollment = document.getElementById('enrollment');
 var info = data;
 
-select.addEventListener('change', function(event){
+select.addEventListener('change', function(){
   if(select.value === 'Ciudad de México') {
 
   }
@@ -18,15 +18,13 @@ var showHide = function(e) {
   if (tabs === 'overview') {
     var overContent = document.getElementById('overview-tab');
     // mostrar info de overview
-    var changeOne = overContent.style.display = 'block';
-    changeOne.toggle('overview-tab');
+   overContent.style.display = 'block';
     // ocultar students y teachers
   } else if (tabs === 'students') {
     var studentsTab = document.getElementById('students-tab');
-    var changeTwo = studentsTab.style.display = 'block';
+   studentsTab.style.display = 'block';
     // mostrar students
-    changeTwo.toggle('students-tab');
-    
+ 
   }
 };
 
