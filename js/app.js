@@ -107,6 +107,7 @@ function create() {
   console.log(document.getElementById('six-3').innerHTML = (detractors) + "%" + "detractors");
       break;
   case 'SantiagodeChile2016-II':
+<<<<<<< HEAD
   var  estudiantelim6 = (data["SCL"]["2016-2"]["students"].length);
   console.log( document.getElementById('one').innerHTML = estudiantelim6);
   /* Añadiendo NPS*/
@@ -122,6 +123,42 @@ function create() {
   console.log(document.getElementById('six-2').innerHTML = (passive) + "%" + "passives");
   console.log(document.getElementById('six-3').innerHTML = (detractors) + "%" + "detractors");
       break;
+=======
+    var estudiantelim6 = (data['SCL']['2016-2']['students'].length);
+    console.log(document.getElementById('one').innerHTML = estudiantelim6);
+    // creando desercion
+    var totalStudent = data['SCL']['2016-2']['students'];
+    var activeStudent = [];
+    var inactiveStudent = [];
+    for (var i = 0; i < totalStudent.length; i++) {
+      if (totalStudent[i].active === true) {
+        activeStudent.push(i);
+      } else {
+        inactiveStudent.push(i);
+      }
+    }
+    
+    document.getElementById('two').innerHTML = (inactiveStudent.length / estudiantelim6) * 100 + '%';
+    // creando promedio de los profesores
+    var teacheone = data['SCL']['2016-2']['ratings'][0]['teacher'];
+    var teachetwo = data['SCL']['2016-2']['ratings'][1]['teacher'];
+    var teachetree = data['SCL']['2016-2']['ratings'][2]['teacher'];
+    var teachefour = data['SCL']['2016-2']['ratings'][3]['teacher'];
+    var total = teacheone + teachetwo + teachetree + teachefour;
+    var promedio = total / 4;
+    document.getElementById('teacher').innerHTML = promedio;
+    // creando promedio de los jedis
+    var teacheone = data['SCL']['2016-2']['ratings'][0]['jedi'];
+    var teachetwo = data['SCL']['2016-2']['ratings'][1]['jedi'];
+    var teachetree = data['SCL']['2016-2']['ratings'][2]['jedi'];
+    var teachefour = data['SCL']['2016-2']['ratings'][3]['jedi'];
+    var total = teacheone + teachetwo + teachetree + teachefour;
+    var promedio = total / 4;
+    document.getElementById('jedi').innerHTML = promedio;
+    
+
+    break;
+>>>>>>> abe8ed5fb9097c6aee96d616a0e3054a15fc6d04
   case 'SantiagodeChile2017-I':
   var  estudiantelim7 = (data["SCL"]["2017-1"]["students"].length);
   console.log( document.getElementById('one').innerHTML = estudiantelim7);
@@ -187,6 +224,7 @@ function create() {
   console.log(document.getElementById('six-3').innerHTML = (detractors) + "%" + "detractors");
     break;
   default:
+<<<<<<< HEAD
       alert('seleccione una opcion');
 }
 
@@ -219,6 +257,14 @@ for (var i = 0; i<totalStudentAQP1.length;i++){
 
 }
 
+=======
+    alert('seleccione una opcion');
+  }  
+  function satisfaccion(){
+      
+  }
+  
+>>>>>>> abe8ed5fb9097c6aee96d616a0e3054a15fc6d04
 }
 
 function select() {
