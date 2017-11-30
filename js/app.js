@@ -22,6 +22,8 @@ function studentSedes(sede, generation) {
 }
 // studentSedes('AQP', '2016-2');
 
+/** *****************************************************************************/
+
 // funcion que me dice las metas 'achievement'
 
 function achievement(sede, generation) {
@@ -56,5 +58,54 @@ function achievement(sede, generation) {
   return goals;
 }
 // achievement('AQP', '2016-2')
+
+/** *****************************************************************************/
+// El Net Promoter Score (NPS) promedio de los sprints cursados
+function netPromoterScore(sede, generation) {
+  var ratings = data[sede][generation]['ratings'];
+  var array = [];
+  for (var i = 0 ; i < ratings.length;i++) {
+    var promoters = ratings[i]['nps']['promoters'];
+    var detractors = ratings[i]['nps']['detractors'];
+    var passive = ratings[i]['nps']['passive'];
+    array[i] = promoters - detractors;
+    var nps = (promoters - detractors);
+  }
+  document.getElementById('nps').innerHTML = nps;
+  document.getElementById('promoters').innerHTML = promoters + '% promoters';
+  document.getElementById('passive').innerHTML = passive + '% passive';
+  document.getElementById('detractors').innerHTML = detractors + '% detractors';
+  return array;
+}
+
+/** *****************************************************************************/
+
+// La cantidad y el porcentaje que representa el total de estudiantes que superan la meta de puntos de HSE en promedio y por sprint.
+function notaHse(sede, generation, sprints) {
+
+  var studentsGoalTechBySprint = [];
+  var studentsGoalTech = 0;
+  for (var i = 0; i < ratings.length; i++) {
+    studentsGoalTechBySprint[i] = 0;
+  }
+  for (var i = 0; i < enrolled;) {
+    if (choiceProm['students'][i]['active'] === true) {
+      var sprints = choiceProm['students'][i]['sprints'];
+      var goalTechBySprint = 0;        
+      for (var j = 0; j < sprints.length; j++) {
+        var scoreTech = sprints[j]['score']['tech'];
+        goalTechBySprint += scoreTech; 
+        if (scoreTech >= 1260) {
+          studentsGoalTechBySprint[j]++;
+        }
+        if (goalTechBySprint >= 1260 * sprints.length) {
+          studentsGoalTech++;
+        }      
+      }
+    }
+    i++;
+  }
+  var targetTechPercentage = Math.round((studentsGoalTech * 100) / (studentsActive));
+}
 
 

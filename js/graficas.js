@@ -14,6 +14,7 @@ window.addEventListener('load', function() {
     google.charts.load('current', {'packages': ['corechart']});
     google.charts.setOnLoadCallback(drawChartEnrollment);
     google.charts.setOnLoadCallback(drawChartAchievement);
+    google.charts.setOnLoadCallback(drawNetPromoterScore);
     // 1era gráfica de alumnas inscritas
     function drawChartEnrollment() {
       var data = new google.visualization.DataTable();
@@ -33,19 +34,40 @@ window.addEventListener('load', function() {
     }
 
     function drawChartAchievement() {
-      var data = new google.visualization.DataTable();
-      data.addColumn('string', 'Topping');
-      data.addColumn('number', 'Cantidad');
-      data.addRows([
+      var data = google.visualization.arrayToDataTable([
+        ['sprints', 'rendimiento %'],
         ['S1', achievement(sede, generation)[0]],
         ['S2', achievement(sede, generation)[1]],
         ['S3', achievement(sede, generation)[2]],
-        ['S4', achievement(sede, generation)[3]],
+        ['S4', achievement(sede, generation)[3]]
       ]);
-      var options = {'title': 'ACHIEVEMENT',
-        'width': 250,
-        'height': 150};
-      var chart = new google.visualization.PieChart(document.getElementById('achievement-graph'));
+      var options = {
+        title: 'Achievement',
+        seriesType: 'bars',
+        series: {5: {type: 'line'}}
+      };
+
+      var chart = new google.visualization.ComboChart(document.getElementById('achievement-graph'));
+      chart.draw(data, options);
+    }
+    
+    
+    function drawNetPromoterScore() {
+      var data = google.visualization.arrayToDataTable([
+        ['sprints', 'nps %'],
+        ['S1', netPromoterScore(sede, generation)[0]],
+        ['S2', netPromoterScore(sede, generation)[1]],
+        ['S3', netPromoterScore(sede, generation)[2]],
+        ['S4', netPromoterScore(sede, generation)[3]]
+      ]);
+    
+      var options = {
+        title: 'Net Promoter Score',
+        seriesType: 'bars',
+        series: {5: {type: 'line'}}
+      };
+    
+      var chart = new google.visualization.ComboChart(document.getElementById('promote-graph'));
       chart.draw(data, options);
     }
   });

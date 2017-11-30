@@ -253,12 +253,17 @@ color: #575D69;
 }
 
 /*Inscripción*/
-.enrollment {
-  max-width: 26%;
-  height: 338px;
-  padding: 20px;
-  margin: 10px 0px;
-  margin-left: 100px;
+.box-grafico {
+  width: 30%;
+  height: 400px;
+  padding: 15px;
+  margin-left: 40px;
+}
+
+.caja {
+  width: 47%;
+  height: 90px;
+  text-align: center;
 }
 
 
@@ -307,25 +312,9 @@ color: #575D69;
 }
 
 /*Contenedor de Pocentajes por Sprint*/
-.achievement {
-	min-width: 29%;
-	height: 338px;
-  padding: 20px;
-  margin: 10px 20px;
-  margin-left: 35px;
-}
 
 .blue {
 	color: blue;
-}
-
-/*Promote Container*/
-.promote {
-	min-width: 22%;
-  height: 338px;
-  padding: 20px;
-  margin: 10px 0px;
-  margin-left: 35px;
 }
 
 .alignleft {
@@ -333,27 +322,14 @@ color: #575D69;
 	padding-bottom: 8px;
 }
 
-/*Gráfico Inscripción*/
-#enrollment-graph {
-margin-left: 25px;
-margin-top: 100px;
-}
-
-/*Gráfico Achievement*/
-
-#achievement-graph {
-  margin-left: 25px;
+/*Gráfico*/
+#enrollment-graph,
+#achievement-graph,
+#promote-graph{
+  width: 85%;
+  margin-left: 15px;
   margin-top: 100px;
-}
-
-/*Gráfico Promote*/
-.promote-graph {
-	background-image: url(../assets/images/graph.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-	width: 252px;
-  height: 226px;
-	margin-top: 114px;
+  z-index: -2;
 }
 
 /*Contenedor Tech*/
