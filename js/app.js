@@ -2,11 +2,11 @@
 window.addEventListener('load', function() {
   var overview = document.getElementById('general');
   // agregando sedes
-  var sede;
+  /* var sede;
   var gene;
   gene.addEventListener('change', function() {
     
-  });
+  });*/
   // enrollment
   var enrollment = document.createElement('div');
   var enrollOne = document.createElement('div');
@@ -15,12 +15,12 @@ window.addEventListener('load', function() {
   var allStudents = document.createElement('h2');
   // agrega la cantidad de estudiantes activos por sede y generacion
   // pero falta jalarlo de manera mas generica
-  allStudents.innerText = currentStudents(sede, '2016-2');
+  allStudents.innerText = currentStudents('LIM', '2016-2');
   var textAS = document.createElement('span');
   textAS.innerText = '# STUDENTS CURRENTLY ENROLLED';
   var enrollTwo = document.createElement('div');
   var dropout = document.createElement('h2');
-  dropout.innerText = dropoutAll(sede, '2016-2');
+  dropout.innerText = dropoutAll('LIM', '2016-2');
   var textDrop = document.createElement('span');
   textDrop.innerText = '% DROPOUT';
   // agregando al enrollment
@@ -293,8 +293,8 @@ window.addEventListener('load', function() {
     return totalDetractor + ' % Detractor';
   }
 
-    // al seleccionar uno de las opciones por sprint para TECH
-    /*
+  // al seleccionar uno de las opciones por sprint para TECH
+  /*
     function techStudent(sede, gene){
       var sede = data[sede];
       var generation = sede[gene];
