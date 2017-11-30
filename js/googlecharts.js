@@ -2,6 +2,7 @@ google.charts.load('current', {packages: ['corechart']});
 
 /* ****SEDE AREQUIPA**** */
 /* -------Total de alumnas por generacion:--------------- */
+
 google.charts.setOnLoadCallback(drawChartTotalStudentsAQP);
 function drawChartTotalStudentsAQP() {
   var dataTotalStudentsAQP = google.visualization.arrayToDataTable([
@@ -41,7 +42,7 @@ function drawChartTotalStudentsCDMX() {
     ['Gen 2017-1', numdesertedCDMX20171, 'red'],
     ['Gen 2017-2', numEstudentsCDMX20172, 'blue'],
     ['Gen 2017-2', numdesertedCDMX20172, 'red'],
-    
+
   ]);
 
   var viewTotalStudentsCDMX = new google.visualization.DataView(dataTotalStudentsCDMX);

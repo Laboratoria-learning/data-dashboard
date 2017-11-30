@@ -37,6 +37,7 @@ var scl20172 = document.getElementById('SCL20172');
 function faqp20162() {
   enrollmentDiv1.textContent = numEstudentsAQP20162;
   enrollmentDiv2.textContent = percDesertedAQP20162;
+
   teacherRating.textContent = averagePointsTeachersAQP20162;
   jediMAster.textContent = averagePointsJediAQP20162;
 }
