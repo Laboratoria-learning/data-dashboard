@@ -29,9 +29,9 @@ Es crear un web interactiva, de complejidad media, que muestre los datos y el pe
 ***
 ### Sketch
 
-![Data-Dashboard](assets/images/2.JPG) 
+![Data-Dashboard](assets/images/2.jpg) 
 
-![Data-Dashboard](assets/images/3.JPG) 
+![Data-Dashboard](assets/images/3.jpg) 
 
 ### Producto Final
 
