@@ -1,11 +1,12 @@
-/*
- * Estilos de tu proyecto
- */
  * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ }
+
+ body {
+   background-color: #f7f7f7;
  }
 
  .navbar {
@@ -57,13 +58,14 @@
 
 .filter {
   background-color: #fff;
+  border-radius: 10px;
 }
 
 .new-student {
   width: 100%;
   font-size: 40px;
   margin-top: 10px;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
   background-color: #f7b617;
   border-radius: 10px;
   padding: 10px;
@@ -72,6 +74,7 @@
 .new-student p {
   width: 85%;
   font-size: 40px;
+  font-weight: 400;
 }
 
 .new-student i {
@@ -80,28 +83,60 @@
   text-align: center;
 }
 
-span, input, i, p, label {
+span, input, i, p {
   display: inline-block;
 }
 
-.filter label {
-  width: 70%;
-}
-
 .filter {
-  width: 25%;
+  width: 20%;
   padding: 10px;
 }
 
-.filter input[type="radio"] {
-  /*display: none;*/
-  width: 20px;
-  height: 20px;
-  padding: 5px;
+.sub-container {
+  width: 80%;
+  border-radius: 10px;
+  overflow: auto;
+  padding: 10px;
 }
 
-.filter .radio label {
-  color: #f7b617;
+.student-inf {
+    background-color: #fff;
+    margin: 4px;
+    width: 32%;
+    border-radius: 10px;
+    padding: 10px;
+    float: left;
+}
+
+.student-inf  p{
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+}
+
+.student-img {
+    width: 120px;
+    height: 170px;
+}
+
+.student-det {
+    float: right;
+    width: 40%;
+    height: 170px;
+}
+
+.student-det .student-tech, .student-det .student-hse{
+  font-size: 0.8em;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 15px;
+  background-color: #f7b617;
+  color: white;
+}
+
+.student-tech span, .student-hse span{
+  font-size: 2em;
 }
 
 .fa, .li-menu {
@@ -135,3 +170,7 @@ span, input, i, p, label {
   width: '100px';
   height: '50px';
 }
+
+/* .list {
+  display: none;
+} */
