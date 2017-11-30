@@ -90,7 +90,6 @@ section .principal{
 /*PRIMER DIV DEL SECTION BAR-CONTAINER*/
 .principal:nth-child(1){
     padding: 20px;
-    outline: 1px solid orange;
 }
 .principal .lista{
     /*outline: 1px solid red;*/
@@ -156,4 +155,514 @@ section .principal{
 .text-align-center{
     text-align: center;
     border-radius: 5px;
+}
+
+/*------------------------------------------------------------------------------*/
+
+/*
+ * Estilos de tu proyecto
+ */
+ *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Montserrat';
+ }
+header{
+    width: auto;
+    border-width: 0;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    height: 89px;
+}
+nav{
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+}
+.logo{
+ 
+     width: auto;
+     margin: 0 auto;
+     height: 89px;
+ }
+.background-color {
+	background-color: #ffc107;
+	border-radius: 5px;
+}
+.a-logo img{
+    width: 100%;
+    height: 100%;
+}
+.bar-lab{
+    width: 40px;
+    height: 40px;
+    z-index: 101;
+    /* border: 2px solid #f7b617; */
+    position: absolute;
+    right: 0;
+    top:25%;
+    text-align: center;
+
+}
+.container {
+	background-color: #e1e1e1;
+}
+.bar-lab a{
+    color:#333333;
+    text-align: center;
+}
+.bar{
+    background-color: #e1e1e1;
+	height: 80px;
+}
+section{
+    width: 100%;
+    margin: auto;
+    background-color: #F7F7F7;
+}
+
+<<<<<<< HEAD
+/*========================================================================================================================*/
+/*---Anny---*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+}
+
+.icon-square {
+	color: #ffc107;
+	display: inline-block;
+	font-size: 20px;
+}
+.skills-menu {
+	display: inline-block;
+	margin-left: 10px;
+}
+.topic {
+	padding: 6px;
+	margin: 4px 5px;
+}
+.dropdown {
+	margin-left: 95px;
+	
+	margin-top: 30px;
+	background-color: #fff;
+	cursor: pointer;
+	z-index: 50;
+}
+.space {
+	padding-left: 20px;
+    padding-right: 15px;
+}
+.hide {
+	display: none;
+}
+
+.dropbtn {
+	width: auto;
+	font-size: 30px;
+	background-color: #e1e1e1;
+	z-index: 50;
+}
+.option-menu {
+	display: inline-block;
+}
+.laboratoria-place {
+	border-bottom: 2px solid #ffc107;
+	width: 180px;
+}
+.block {
+	display: block;
+}
+.place {
+	border-bottom: 2px solid #ffc107;
+	margin-bottom: 18px;
+	padding-bottom: 10px;
+	margin-top: 20px;
+}
+.generation {
+	margin-left: 6px;
+}
+.menu-form {
+	margin: 12px 0;
+	width: 120px;
+	
+}
+.bar label {
+	display: block;
+}
+.bar .place-div {
+	display: block;
+}
+.menuLabel {
+	background-color: #e1e1e1;
+	outline: none;
+	padding: 8px;
+	border: 0;
+	font-size: 25px;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+
+.container-list {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container-list input {
+  position: absolute;
+  opacity: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+
+.container-list:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container-list input:checked ~ .checkmark {
+  background-color: #ffc107;
+}
+.container {
+	padding-top: 15px;
+}
+
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container-list input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container-list .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.container-list {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container-list input {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container-list:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container-list input:checked ~ .checkmark {
+  background-color: #ffc107;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container_list input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-list .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.show {
+	display: block;
+}
+button {
+	cursor: pointer;
+}
+
+section .principal{
+    width: 80%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+/*PRIMER DIV DEL SECTION BAR-CONTAINER*/
+.principal {
+	margin-left: 80px;
+}
+.principal:nth-child(1){
+    padding: 0px;
+}
+.lista {
+	background-color: #e1e1e1;
+}
+.principal .lista{
+    /*outline: 1px solid red;*/
+}
+/*SEGUNDO DIV DEL SECTION BAR-CONTAINER*/
+.lista li{
+    /*outline: 1PX solid aqua;*/
+    display: inline-block;
+    padding: 0px;
+    margin-left: 10px;
+    list-style: none;
+}
+.lista li a{
+    display: block;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1em;
+    color: black;
+    text-decoration: none;
+}
+.lista li:hover{
+    border-bottom: 5px solid #EFB415;
+}
+
+/*Estilos para la seccion overview*/
+.overview-one,.overview-two{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px; 
+}
+.container-tab div{
+    background-color: white;
+    display: inline-block;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.specialization {
+	background-color: #fff;
+	display: inline-block;
+	padding: 20px 180px 20px 20px;
+	margin: 40px;
+	position: absolute;
+}
+.profile {
+	
+	display: inline-block;
+	margin: 40px 20px 20px 480px;
+	padding: 20px;
+	height: auto;
+}
+.icon-search {
+	background-color: #fff;
+	outline: none;
+	border-radius: 5px;
+	border: none;
+	font-size: 20px;
+	color: grey;
+	padding: 8px;
+}
+.profile-input {
+	background-color: #fff;
+	outline: none;
+	border-radius: 5px;
+	border: none;
+	width: 700px;
+	height: 30px;
+	font-size: 20px;
+	color: grey;
+}
+.profile-form {
+	background-color: #fff;
+	outline: none;
+	border-radius: 5px;
+	border: none;
+	height: 33px;
+}
+.student-profile {
+	padding-top: 30px;
+	
+}
+.photo {
+	position: absolute;
+}
+.photo-profile {
+	width: 180px;
+	height: 180px;
+	display: inline-block;
+}
+.lab-student {
+	background-color: #fff;
+	padding: 20px;
+	height: 220px;
+}
+.content-profile, .content-number, .photo {
+	display: inline-block;
+}
+.content-number {
+	position: absolute;
+	padding: 6px 6px 6px 25px;
+	height: auto;
+	/*outline: 1px solid blue;*/
+}
+.content-profile {
+	margin-left: 190px;
+}
+.skills-menu {
+	text-transform: capitalize;
+}
+.tech-skills, .life-skills, .english-skills {
+	display: inline-block;
+	background-color: #e1e1e1;
+	padding: 6px;
+	margin: 3px;
+	position: relative;
+	text-align: center;
+}
+.career {
+	margin-bottom: 50px;
+	text-transform: capitalize;
+}
+.specialization-title {
+	text-transform: uppercase;
+}
+.skills {
+	background-color: #f1f1f1;
+	display: inline-block;
+	margin: 5px;
+	font-size: 14px;
+	text-transform: capitalize;
+	padding: 4px;
+}
+.name {
+	text-transform: uppercase;
+}
+.icon-triangle-right {
+	margin-left: 8px;
+	color: #000;
+}
+.skills-points {
+	font-size: 8px;
+	text-transform: uppercase;
+}
+.description {
+	font-size: 13px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.topic {
+	cursor: pointer;
+}
+.go {
+	margin-top: 115px;
+	margin-left: 130px;
+	color: grey;
+}
+.look-a {
+	color: #000;
+}
+#teachers {
+	text-align: center;
+}
+
+.skills-stadistic {
+	margin: 40px;
+	padding: 30px;
+}
+
+>>>>>>> 434d3b5cecd278f4dfd4ded19a13c8dce4d1eeff
+.dropbtn {
+   
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+	background-color: #f1f1f1;
 }

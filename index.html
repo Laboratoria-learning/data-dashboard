@@ -32,15 +32,28 @@
         </select>
         <input type="button" id="btndash" class="btn-higher" value="Dashboard">
       </div>
-      <div class="principal">
+        
+        
+        
+        
+    </section>
+    
+    
+    <section>
+    <div class="container">
+    <div class="principal">
         <ul class="lista">
-          <li><a href="#">overview</a></li>
-          <li><a href="#">students</a></li>
-          <li><a href="#">teachers</a></li>
+          <li class="button-container"><button class="menuLabel"type="button" name="button" data-tab-selected='tabOverview'>overview</button></li>
+          <li class="button-container"><button class="menuLabel" type="button" name="button" data-tab-selected='tabStudents'>students</button></li>
+          <li class="button-container"><button class="menuLabel"type="button" name="button" data-tab-selected='tabTeachers'>teachers</button></li>
         </ul>
       </div>
-    </section>
-    <section class="container">
+	  </div>
+	  
+	  <div class="tabs">
+	  	<article id="overview" class="show">
+	  	
+	  	<section class="container">
       <section class="overview-one">
         <div class="data-overview">
          <div class="title-overview">ENROLLMENT</div>
@@ -112,6 +125,86 @@
         </section>
 
     </section>
+	  	
+	  	 <div class="skills-stadistic">
+	  	 	<div class="skills-stadistic-numbers">
+	  	 	   <div class="tech-skills">
+	  	 	   	  <h2 class="tech-skills-title">tech skills</h2>
+	  	 	   	  <select class="tech-skills-select">
+  	 	   	        <option class="tech-skills-options">overall (cumulative)</option>
+	  	 	   	    <option id="sprint-one-skills" class="tech-skills-options">sprint one</option>
+	  	 	   	    <option class="tech-skills-options">sprint two</option>	
+	  	 	   	    <option class="tech-skills-options">sprint three</option>	
+	  	 	   	    <option class="tech-skills-options">sprint four</option>		
+	  	 	   	  </select>
+	  	 	   </div>
+	  	 	   <div class="skills-stadistic-data">
+	  	 	       <div class="meet-target">
+	  	 	       	<h2 id="average-tech" class="meet-target-number">90</h2>
+	  	 	       	<p class="meet-target-description"># students that meet that target</p>
+	  	 	       </div>
+	  	 	   	   <div class="meet-target-percent">
+	  	 	   	   	<h2 class="meet-target-percent-number">62</h2>
+	  	 	       	<p class="meet-target-percent-description">% of total (135)</p>
+	  	 	   	   </div>
+	  	 	   </div>
+	  	 	</div>
+	  	 	<div class="skills-graphic">
+	  	 		<img class="skills-photo"src="" alt=""><img class="skills-photo2" src="" alt="">
+	  	 	</div>
+	  	 </div>
+	  	</article>
+	  	<article id="students" class="hide">
+	  		<div class="specialization">
+	  		    <h2 class="specialization-title">specialization:</h2>
+	  			<div id="topic-1" class="javascript topic"><span id="square-1" class="icon-square"></span><p class="skills-menu">javascript</p></div>
+	  			<div id="topic-2" class="uxDesign topic"><span id="square-2" class="icon-square"></span><p class="skills-menu">UX design</p></div>
+	  			<div id="topic-3" class="frontEnd topic"><span id="square-3" class="icon-square"></span><p class="skills-menu">front end designer</p></div>
+	  		</div>
+	  		<div id="information" class="profile">
+	  		   <div class="searcher">
+	  			<form  class="profile-form">
+	  				<button class="icon-search"></button><input class="profile-input"type="text">
+	  			</form>
+	  		   </div>
+	  		   <div class="student-profile">
+	  		   	    <div class="lab-student">
+	  		   	    	<div class="photo">
+	  		   	    		<img class="photo-profile" src="assets/images/coder.png" alt="profile-photo">
+	  		   	    	</div>
+	  		   	    	<div class="content-profile">
+	  		   	    		<h2 class="name">nombre apellido</h2>
+	  		   	    		<p class="career">frontend developer</p>
+	  		   	    		<div class="skills">javascript</div><div class="skills">api</div><div class="skills">jquery</div>
+	  		   	    	</div>
+	  		   	    	<div class="content-number">
+	  		   	    		<div class="tech-skills">
+	  		   	    			<h3 class="description">100%</h3>
+	  		   	    			<p class="skills-points">tech skills</p>
+	  		   	    		</div>
+	  		   	    		<div class="life-skills">
+	  		   	    			<h3 class="description">100%</h3>
+	  		   	    			<p class="skills-points">life skills</p>
+	  		   	    		</div>
+	  		   	    		<div class="english-skills">
+	  		   	    			<h3 class="description">avanzado</h3>
+	  		   	    			<p class="skills-points">english skills</p>
+	  		   	    		</div>
+	  		   	    		<div class="go">
+	  		   	    		<a class="look-a" href="#">ver perfil<span class="icon-triangle-right"></span></a>
+	  		   	    		</div>
+	  		   	    	</div>
+	  		   	    </div>
+	  		   </div>
+	  		</div>
+	  	</article>
+	  	<article id="teachers" class="hide">
+	  		<img class="empty" src="assets/images/nothing.png">
+	  	</article>
+	  </div>
+	  </section>
+	  
+	   
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
