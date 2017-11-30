@@ -40,8 +40,9 @@ Lograr:
 
 ![paginaUno](assets/images/paginaUno.png)
 ![pagina6](assets/images/pagina6.png)
+![paginaUno-sede](assets/images/paginaUno-sede.png)
 
 Developers web:
 
-* L. Vanessa colqui Santos.
-* Victoria Lung.
+* L. Vanessa Colqui Santos.
+* Victoria Lung Hinostroza
