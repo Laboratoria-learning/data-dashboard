@@ -79,7 +79,7 @@ header section {
 
 .name-student input {
     width: 100%;
-    background: #e2e4e6;
+    background: #fff;
     padding: 7px;
     border-radius: 10px;
     color: #333333;
@@ -121,7 +121,7 @@ header section {
     filter: drop-shadow(2px 2px 5px #999);
 }
 
-.first-section .list-sedes {
+.first-section .container-sedes {
     width: 15%;
     display: inline-block;
     background-color: #f7b617;
@@ -165,7 +165,12 @@ header section {
     margin-left: 17%;
 }
 
+<<<<<<< HEAD
+.grafhic .grafhic-prueba {
+    outline: 1px solid green;
+=======
 .grafhic .grafhic-data {
     width: 100%;
     display: inline-block;
+>>>>>>> e78d5773657a62018b07ff57c4e252e37cff754f
 }
