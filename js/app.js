@@ -7,6 +7,10 @@
 /*var selectData = document.getElementById('select-data');
 var content = document.getElementById('number').innher*/
 
+
+
+
+
 var ARRSEDE = Object.keys(data);
 var SEDE;
 for (var i=0;i<ARRSEDE.length;i++)
@@ -16,10 +20,7 @@ for (var i=0;i<ARRSEDE.length;i++)
 console.log(SEDE);
 console.log(ARRSEDE);
 
-for (var j=0; j<ARRSEDE.length; j++)
-{
-  
-}
+
 /*Opcion que accede a el numero de alumnas de AQP*/
 var objetoAQP = data.AQP;
 var ageGeneracion = objetoAQP['2016-2'];
@@ -38,12 +39,14 @@ sedes['saqp'] = []
 sedes['ssdl'] = []
 sedes['scmx'] = []
 
-var dataSelect = document.getElementById('select-data');
-dataSelect.addEventListener('change', dataBase);
+var dataSelect = document.getElementById('lim2016II');
+dataSelect.addEventListener('click',function() {
+  var lima2016 = document.getElementById(lim2016II);
+  lima2016 = student.length;
+  document.getElementById('aactiv').appendChild(lima2016);
+});
 
-function dataBase(event) {
 
-}
 
 
 
