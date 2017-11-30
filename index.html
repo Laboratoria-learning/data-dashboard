@@ -23,7 +23,7 @@
     <nav class="menu">
       <div class="container">
         <div class="menu-principal" id="menu-principal">
-          <h1 class="title">SANTIAGO DE CHILE 2017-II</h1>
+          <h1 class="title" id="title-menu">LIMA 2017-II</h1>
           <i class="icon fa fa-caret-down" aria-hidden="true"></i>
         </div>
         <div class="submenu">
@@ -37,25 +37,25 @@
           <form name="option-generation">
             <div>
               <p>Lima</p><br>
-              <input type="radio" name="option" value="2016-2" data-place="LIM"><label>2016-2</label> 
-              <input type="radio" name="option" value="2017-1" data-place="LIM"><label>2017-1</label> 
-              <input type="radio" name="option" value="2017-2" data-place="LIM"><label>2017</label>
+              <input type="radio" name="option" value="2016-2" data-place="LIM" data-name="LIMA"><label>2016-2</label> 
+              <input type="radio" name="option" value="2017-1" data-place="LIM" data-name="LIMA"><label>2017-1</label> 
+              <input type="radio" name="option" value="2017-2" data-place="LIM" checked data-name="LIMA"><label>2017-2</label>
             </div>
             <div>
               <p>Arequipa</p><br>
-              <input type="radio" name="option" value="2016-2" data-place="AQP"><label>2016-II</label> 
-              <input type="radio" name="option" value="2017-1" data-place="AQP"><label>2016-I</label>
+              <input type="radio" name="option" value="2016-2" data-place="AQP" data-name="AREQUIPA"><label>2016-II</label> 
+              <input type="radio" name="option" value="2017-1" data-place="AQP" data-name="AREQUIPA"><label>2016-I</label>
             </div>
             <div>
               <p>Santiago de Chile</p><br>
-              <input type="radio" name="option" value="2016-2" data-place="SCL"><label>2016-II</label>
-              <input type="radio" name="option" value="2017-1" data-place="SCL"><label>2017-I</label> 
-              <input type="radio" name="option" value="2017-2" data-place="SCL"><label>2017-II</label>
+              <input type="radio" name="option" value="2016-2" data-place="SCL" data-name="SANTIAGO DE CHILE"><label>2016-II</label>
+              <input type="radio" name="option" value="2017-1" data-place="SCL" data-name="SANTIAGO DE CHILE"><label>2017-I</label> 
+              <input type="radio" name="option" value="2017-2" data-place="SCL" data-name="SANTIAGO DE CHILE"><label>2017-II</label>
             </div>
             <div>
               <p>Ciudad de México</p><br>
-              <input type="radio" name="option" value="2017-1" data-place="CDMX"><label>2017-I</label>
-              <input type="radio" name="option" value="2017-2" data-place="CDMX"><label>2017-II</label>
+              <input type="radio" name="option" value="2017-1" data-place="CDMX" data-name="CIUDAD DE MÉXICO"><label>2017-I</label>
+              <input type="radio" name="option" value="2017-2" data-place="CDMX" data-name="CIUDAD DE MÉXICO"><label>2017-II</label>
             </div>
           </form>
         </ul>
@@ -70,7 +70,7 @@
               <div class="content-data space-between">
                 <div class="data">
                   <span class="num" id="students-currently">0</span>
-                  <span class="text">#</span>
+                  <span class="text"># STUDENTS CURRENTLY ENROLLED</span>
                 </div>
                 <div class="data">
                   <span class="num red">20%</span>
@@ -191,7 +191,7 @@
             <h3>STUDENT SATISFACTION</h3>
             <div class="content-data space-between">
               <div class="data">
-                <span class="num">140</span>
+                <span class="num" id="student-satisfaction">140</span>
                 <span class="text">% MEETING OR EXCEEDNIG EXPECTATIONS (CUMULATIVE)</span>
               </div>
             </div>
@@ -200,7 +200,7 @@
             <h3>TEACHER RATING</h3>
             <div class="content-data space-between">
               <div class="data">
-                <span class="num">4.2</span>
+                <span class="num" id="teacher-rating">4.2</span>
                 <span class="text"># STUDENTS CURRENTLY ENROLLET</span>
               </div>
             </div>
@@ -210,7 +210,7 @@
             <div class="content-data space-between">
               <div class="data">
                 <div class="content-center">
-                  <span class="num green">50</span>
+                  <span class="num green" id="jedi-rating">50</span>
                   <i class="icon green fa fa-caret-up" aria-hidden="true"></i>
                 </div>
                 <span class="text">% CUMULATIVE NPS</span>
