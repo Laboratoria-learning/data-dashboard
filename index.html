@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <title>Data Dashboard</title>
@@ -8,7 +7,6 @@
   <link rel="stylesheet" href="fonts/style.css">
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 </head>
-
 <body>
   <header class="header-container">
     <figure>
@@ -17,18 +15,16 @@
     <!-- <div> -->
     <span id="span" class="icon-bars"></span>
     <ul class="hide list item-list">
-      <li class="name"> <img class="student" src="assets/images/student.jpg" alt="estudiante">Lorena Valverde</li>
-      <li>ADD STUDENT</li>
-      <li>REMOVE STUDENT</li>
-      <li>ADD SPRINT</li>
+      <li class="name"> <img class="student" src="assets/images/student.jpg" alt="estudiante">Longui Valverde</li>
+      <li>Add student</li>
+      <li>Remove student</li>
+      <li>Add sprint</li>
     </ul>
-
     <!-- </div> -->
   </header>
   <section>
     <!-- <form> -->
     <div class="form">
-
     </div>
         <select class="select-left" id="select-sede">
               <option value="0">Selecciona una sede </option>
@@ -49,7 +45,7 @@
   <nav>
     <ul class="global">
       <li class="menu-global">GENERAL</li>
-      <li class="menu-global">STUDENTS</li>
+      <li id="boton"class="menu-global">STUDENTS</li>
     </ul>
   </nav>
   <article class="left">
@@ -88,10 +84,8 @@
       </ul>
     </div>
   </article>
-
   <!-- <article class="tech-habilities"> -->
   <article class="tech-habilities">
-
     <h2>HABILIDADES TECNICAS</h2>
     <!-- <form> -->
     <div class="form">
@@ -151,22 +145,27 @@
               <div class="div-left">
                     <h2>INDICE DE SATISFACCION</h2>
                     <div class="squares">
-                         <p>% ESTUDIANTES SATISFECHAS</p>
+                      <span id="percentSatisfaction"> </span>
+                         <p>ESTUDIANTES SATISFECHAS</p>
                     </div>
               </div>
               <div class="div-center">
                     <h2>EVALUACION DEL PROFESOR</h2>
                     <div class="squares">
+                      <span id="totalPointsTeacher"></span>
                          <p>CALIFICACION GENERAL</p>
                     </div>
               </div>
               <div class="div-right">
                     <h2>EVALUACION JEDI MASTER</h2>
-                    <div class="squares">
+                    <div  class="squares">
+                      <span id="totalPointsJedi" ></span>
                          <p>CALIFICACION GENERAL</p>
                     </div>
               </div>
         </main>
+        <div id="container-img">
+        </div>
         <!-- </main> -->
         <!-- Base de datos -->
         <script src="./js/data.js"></script>
