@@ -58,7 +58,7 @@ window.addEventListener('load', function(event) {
   var limaStudents2017i = limaProm2017i.students;
   var activeLimaStudents2017i = 0;
   var inactiveLimaStudents2017i = 0;
-  var limaStudents2017ii = limaProm2017i.students;
+  var limaStudents2017ii = limaProm2017ii.students;
   var activeLimaStudents2017ii = 0;
   var inactiveLimaStudents2017ii = 0;
 
@@ -94,6 +94,34 @@ window.addEventListener('load', function(event) {
 
   var percentPastScoreLimaStudents2016ii = Math.floor(pastScoreLimaStudents2016ii)
 
+  // Caso Lima2017-2
+
+  for (var i = 0; i < limaStudents2017ii.length;i++) {
+    if (limaStudents2017ii[i]['active'] === true) {
+      activeLimaStudents2017ii ++;
+    } else {
+      inactiveLimaStudents2017ii ++;
+    }
+  }
+  var enrolledLimaStudents2017ii = activeLimaStudents2017ii + inactiveLimaStudents2017ii;
+  console.log(enrolledLimaStudents2017ii);
+  var desertionLimaStudents2017ii = Math.floor((inactiveLimaStudents2017ii * 100) / (enrolledLimaStudents2017ii)) + '%';
+  // La cantidad de estudiantes que superan la meta de puntos en promedio de todos los sprints cursados. La meta de puntos es 70% del total de puntos en HSE y en tech.
+  // Se declara una variable de un array vacio para que ahi se ingrese mediante push el numero total de alumnas que pasaron el 70% de todos los sprints
+  // declaramos una varible de contador para que guarde el numero de estudiantes que pasaron
+  var pastScoreLimaStudents2017ii = 0;
+
+  for (var i = 0; i < limaStudents2017ii.length;i++) {
+    // ingresando a los sprints para obtener las notas tech y hse
+    for (var j = 0; j < limaStudents2017ii[i]['sprints'].length; j++) {
+      var sprintScoreLimaStudents2017ii = (limaStudents2016ii[i]['sprints'][j]['score']['tech'] + limaStudents2017ii[i]['sprints'][j]['score']['hse']);
+      if (sprintScoreLimaStudents2017ii >= 2100) {
+        pastScoreLimaStudents2017ii ++;
+      }
+    }
+  }
+
+  var percentPastScoreLimaStudents2017ii = Math.floor(pastScoreLimaStudents2017ii)
 
   checkedSite.addEventListener('change', function(event) {
     console.log(event.target);
@@ -101,9 +129,17 @@ window.addEventListener('load', function(event) {
       getElementById('numDataNumber').innerHtml = enrolledLimaStudents2016ii;
       getElementById('numDataDropout').innerHtml = desertionLimaStudents2016ii;
       getElementById('numDataAchievement').innerHtml =pastScoreLimaStudents2016ii;
+    } else if (checkedSite === 'lim2017 - ii') {
+      getElementById('numDataNumber').innerHtml = enrolledLimaStudents2017ii;
+      getElementById('numDataDropout').innerHtml = desertionLimaStudents2017ii;
+      getElementById('numDataAchievement').innerHtml =pastScoreLimaStudents2017ii;
     }
+    
   });
 });
+
+
+
 
 // var shortCut = data['LIM']['2016-2']['students'];
 // console.log(shortCut.length);
