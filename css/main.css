@@ -161,7 +161,7 @@
   #container form input{
     margin: 10px;
   }
-  /*
+
   #formulario input[type="checkbox"]{
     display:none;
   }
@@ -173,7 +173,7 @@
     font-size: 1em;
     border-radius: 3px;
     cursor:pointer;
-    /*-webkit-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.35s ease;
   }
@@ -199,7 +199,7 @@
   #formulario input[type="checkbox"]:checked + label:before{
     display:none;
   }
-  */
+
   #first{
     padding:10px;
     box-shadow: 5px 5px 0px #ccc;
@@ -261,6 +261,25 @@
     font-size: 20px;
   }
 
+<<<<<<< HEAD
+  #img-container .remove{
+  display:inline-block;
+  background-color:#f7b617;
+  color: #fff;
+  margin-top: 30px;
+  padding: 0 10px 0 10px;
+}
+
+#grafy-enrollment{
+  /* width: 300px;
+  height: 250px;
+  left:50%;
+  transform: translateX(-50%);
+  position: relative; */
+}
+
+=======
+>>>>>>> ebf7e8536b47d68bf6a708a1dbe834afe5ab27d7
 .container-grafy{
   width: 300px;
   height: 230px;
@@ -273,6 +292,8 @@
 .red{
   color: red;
 }
+<<<<<<< HEAD
+=======
 
 .container-select-grafy{
   width: 600px;
@@ -282,3 +303,4 @@
   position: relative;
   outline:1px solid green;
 }
+>>>>>>> 91e6e68e77864e5d22aa10576122ab5df340f722

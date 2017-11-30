@@ -1,3 +1,25 @@
+/*
+ * Funcionalidad de tu producto
+ */
+
+// Puedes hacer uso de la base de datos a través de la variable `data`
+
+// console.log(data['SCL']);
+// console.log(data['AQP']['2016-2']['students'][1]['active']);
+// console.log(data['AQP']['2016-2']['ratings'][1]['nps']['promoters']);
+// console.log(data['AQP']['2016-2']['ratings'][2]['teacher']);
+// console.log(data['AQP']['2016-2']['ratings'][0]['jedi']);
+// cambiar pestañas
+// console.log(data['AQP']['2016-2']['rating'][0]['student']['cumple']);
+// console.log(data['AQP']['2016-2']['students'][1]['name']);
+// var nombre
+// var returnCurrently
+// for(var i =0;i<15;i++){
+//   if(nombre === data['AQP']['2016-2']['students'][i]['name'])
+//   {
+//    resul.tex
+//   }
+// }
 var list = document.getElementsByTagName('ul')[0].children;
 var elementTab = document.getElementsByClassName('tab');
 var containerOverview = document.getElementById('container-overview');
@@ -9,15 +31,6 @@ var cumulativeNps = document.getElementById('cumulative-nps');
 var percentage = document.getElementById('percentage');
 var teacherRating = document.getElementById('teacher-rating');
 var jediMasterRating = document.getElementById('jedi-master-rating');
-var studentSatisfaction = document.getElementById('student-satisfaction');
-var studentTarget = document.getElementById('student-target');
-var total = document.getElementById('total');
-var comboBoxTech = document.getElementById('combo-box-tech');
-var studentCurrentlySkill = document.getElementById('student-currently-skill');
-var totalSkill = document.getElementById('total-skill');
-var comboBoxHse = document.getElementById('combo-box-hse');
-var overallClass = document.getElementById('overall-class');
-var studentTargetOverall = document.getElementById('student-target-overall');
 function show(event) {
   var tabSelection = event.target.dataset.tabSelection;
   if (tabSelection === 'overview') {
@@ -41,7 +54,8 @@ function show(event) {
 function changeTitle() {
   var titleSelector = document.getElementById('title-selector');
   var valueSelector = comboBox.value;
-  // var returnCurrently;
+
+  var returnCurrently;
   switch (valueSelector) {
   case 'lim2016II':
     titleSelector.textContent = 'Lima 2016-II';
@@ -49,19 +63,9 @@ function changeTitle() {
     calculatePromoter('LIM', 2, '2016-2');
     calculateTeacherRating('LIM', 2, '2016-2');
     calculateJediMasterRating('LIM', 2, '2016-2');
-    calculateStudentSatisfaccion('LIM', 1, '2016-2', 35);
-    calculateAchievement('LIM', '2016-2');
     var attend = parseInt(calculateCurrently('LIM', 35, '2016-2'));
     drawCurrently(attend, 35 - attend);
-    var sprint1 = data['LIM']['2016-2']['ratings'][0]['nps']['promoters'];
-    var sprint2 = data['LIM']['2016-2']['ratings'][1]['nps']['promoters'];
-    var sprint1Teacher = data['LIM']['2016-2']['ratings'][0]['teacher'];
-    var sprint2Teacher = data['LIM']['2016-2']['ratings'][1]['teacher'];
-    var sprint1Jedi = data['LIM']['2016-2']['ratings'][0]['jedi'];
-    var sprint2Jedi = data['LIM']['2016-2']['ratings'][1]['jedi'];
-    drawPromoter(sprint1, sprint2, 0, 0);
-    drawTeacher(sprint1Teacher, sprint2Teacher, 0, 0);
-    drawJedi(sprint1Jedi,sprint2Jedi,0,0);
+    drawPromoter();
     break;
   case 'lim2017I':
     titleSelector.textContent = 'Lima 2017-I';
@@ -69,25 +73,8 @@ function changeTitle() {
     calculatePromoter('LIM', 4, '2017-1');
     calculateTeacherRating('LIM', 4, '2017-1');
     calculateJediMasterRating('LIM', 4, '2017-1');
-    calculateStudentSatisfaccion('LIM', 3, '2017-1', 17);
-    calculateAchievement('LIM', '2017-1');
     var attend = parseInt(calculateCurrently('LIM', 17, '2017-1'));
     drawCurrently(attend, 17 - attend);
-    var sprint1 = data['LIM']['2017-1']['ratings'][0]['nps']['promoters'];
-    var sprint2 = data['LIM']['2017-1']['ratings'][1]['nps']['promoters'];
-    var sprint3 = data['LIM']['2017-1']['ratings'][2]['nps']['promoters'];
-    var sprint4 = data['LIM']['2017-1']['ratings'][3]['nps']['promoters'];
-    var sprint1Teacher = data['LIM']['2017-1']['ratings'][0]['teacher'];
-    var sprint2Teacher = data['LIM']['2017-1']['ratings'][1]['teacher'];
-    var sprint3Teacher = data['LIM']['2017-1']['ratings'][2]['teacher'];
-    var sprint4Teacher = data['LIM']['2017-1']['ratings'][3]['teacher'];
-    var sprint1Jedi = data['LIM']['2017-1']['ratings'][0]['jedi'];
-    var sprint2Jedi = data['LIM']['2017-1']['ratings'][1]['jedi'];
-    var sprint3Jedi = data['LIM']['2017-1']['ratings'][2]['jedi'];
-    var sprint4Jedi = data['LIM']['2017-1']['ratings'][3]['jedi'];
-    drawPromoter(sprint1, sprint2, sprint3r, sprint4);
-    drawTeacher(sprint1Teacher,sprint2Teacher,sprint3Teacher,sprint4Teacher);
-    drawJedi(sprint1Jedi,sprint2Jedi,sprint3Jedi,sprint4Jedi);
     break;
   case 'lim2017II':
     titleSelector.textContent = 'Lima 2017-II';
@@ -95,19 +82,13 @@ function changeTitle() {
     calculatePromoter('LIM', 2, '2017-2');
     calculateTeacherRating('LIM', 2, '2017-2');
     calculateJediMasterRating('LIM', 2, '2017-2');
-    calculateStudentSatisfaccion('LIM', 1, '2017-2', 14);
-    calculateAchievement('LIM', '2017-2');
     var attend = parseInt(calculateCurrently('LIM', 14, '2017-2'));
-    var sprint1 = data['LIM']['2017-2']['ratings'][0]['nps']['promoters'];
-    var sprint2 = data['LIM']['2017-2']['ratings'][1]['nps']['promoters'];
-    var sprint1Teacher = data['LIM']['2017-2']['ratings'][0]['teacher'];
-    var sprint2Teacher = data['LIM']['2017-2']['ratings'][1]['teacher'];
-    var sprint1Jedi = data['LIM']['2017-2']['ratings'][0]['jedi'];
-    var sprint2Jedi = data['LIM']['2017-2']['ratings'][1]['jedi'];
-    drawPromoter(sprint1, sprint2, 0, 0);
     drawCurrently(attend, 14 - attend);
+<<<<<<< HEAD
     drawTeacher(sprint1Teacher, sprint2Teacher, 0, 0);
     drawJedi(sprint1Jedi, sprint2Jedi, 0, 0);
+=======
+>>>>>>> a4c1ffb8b7af937c9299180c3d200da1b4dc13c1
     break;
   case 'are2016II':
     titleSelector.textContent = 'Arequipa 2016-II';
@@ -115,48 +96,17 @@ function changeTitle() {
     calculatePromoter('AQP', 4, '2016-2');
     calculateTeacherRating('AQP', 4, '2016-2');
     calculateJediMasterRating('AQP', 4, '2016-2');
-    calculateStudentSatisfaccion('AQP', 3, '2016-2', 15);
-    calculateAchievement('AQP', '2016-2');
     var attend = parseInt(calculateCurrently('AQP', 15, '2016-2'));
-    var sprint1 = data['AQP']['2016-2']['ratings'][0]['nps']['promoters'];
-    var sprint2 = data['AQP']['2016-2']['ratings'][1]['nps']['promoters'];
-    var sprint3 = data['AQP']['2016-2']['ratings'][2]['nps']['promoters'];
-    var sprint4 = data['AQP']['2016-2']['ratings'][3]['nps']['promoters'];
-    var sprint1Teacher = data['AQP']['2016-2']['ratings'][0]['teacher'];
-    var sprint2Teacher = data['AQP']['2016-2']['ratings'][1]['teacher'];
-    var sprint3Teacher = data['AQP']['2016-2']['ratings'][2]['teacher'];
-    var sprint4Teacher = data['AQP']['2016-2']['ratings'][3]['teacher'];
-    var sprint1Jedi = data['AQP']['2016-2']['ratings'][0]['jedi'];
-    var sprint2Jedi = data['AQP']['2016-2']['ratings'][1]['jedi'];
-    var sprint3Jedi = data['AQP']['2016-2']['ratings'][2]['jedi'];
-    var sprint4Jedi = data['AQP']['2016-2']['ratings'][3]['jedi'];
     drawCurrently(attend, 15 - attend);
-    drawPromoter(sprint1, sprint2, sprint3, sprint4);
-    drawTeacher(sprint1Teacher,sprint2Teacher,sprint3Teacher,sprint4Teacher);
-    drawJedi(sprint1Jedi,sprint2Jedi,sprint3Jedi,sprint4Jedi);
     break;
   case 'are2017I':
     titleSelector.textContent = 'Arequipa 2017-I';
     calculateCurrently('AQP', 15, '2017-1');
     calculatePromoter('AQP', 3, '2017-1');
     calculateTeacherRating('AQP', 3, '2017-1');
-    calculateJediMasterRating('AQP', 3, '2017-1');
-    calculateStudentSatisfaccion('AQP', 2, '2017-1', 15);
-    calculateAchievement('AQP', '2017-1');
+    calculateJediMasterRating('LIM', 4, '2017-1');
     var attend = parseInt(calculateCurrently('AQP', 15, '2017-1'));
-    var sprint1 = data['AQP']['2017-1']['ratings'][0]['nps']['promoters'];
-    var sprint2 = data['AQP']['2017-1']['ratings'][1]['nps']['promoters'];
-    var sprint3 = data['AQP']['2017-1']['ratings'][2]['nps']['promoters'];
-    var sprint1Teacher = data['AQP']['2017-1']['ratings'][0]['teacher'];
-    var sprint2Teacher = data['AQP']['2017-1']['ratings'][1]['teacher'];
-    var sprint3Teacher = data['AQP']['2017-1']['ratings'][2]['teacher'];
-    var sprint1Jedi = data['AQP']['2017-1']['ratings'][0]['jedi'];
-    var sprint2Jedi = data['AQP']['2017-1']['ratings'][1]['jedi'];
-    var sprint3Jedi = data['AQP']['2017-1']['ratings'][2]['jedi'];
     drawCurrently(attend, 15 - attend);
-    drawPromoter(sprint1, sprint2, sprint3, 0);
-    drawTeacher(sprint1Teacher,sprint2Teacher,sprint3Teacher,0);
-    drawJedi(sprint1Jedi,sprint2Jedi,sprint3Jedi,0);
     break;
   case 'chi2016II':
     titleSelector.textContent = 'Chile 2016-II';
@@ -164,20 +114,8 @@ function changeTitle() {
     calculatePromoter('SCL', 4, '2016-2');
     calculateTeacherRating('SCL', 4, '2016-2');
     calculateJediMasterRating('SCL', 4, '2016-2');
-    calculateStudentSatisfaccion('SCL', 3, '2016-2', 11);
-    calculateAchievement('SCL', '2016-2');
     var attend = parseInt(calculateCurrently('SCL', 11, '2016-2'));
-    var sprint1 = data['SCL']['2016-2']['ratings'][0]['nps']['promoters'];
-    var sprint2 = data['SCL']['2016-2']['ratings'][1]['nps']['promoters'];
-    var sprint3 = data['SCL']['2016-2']['ratings'][2]['nps']['promoters'];
-    var sprint4 = data['SCL']['2016-2']['ratings'][3]['nps']['promoters'];
-    var sprint1Jedi = data['SCL']['2016-2']['ratings'][0]['jedi'];
-    var sprint2Jedi = data['SCL']['2016-2']['ratings'][1]['jedi'];
-    var sprint3Jedi = data['SCL']['2016-2']['ratings'][2]['jedi'];
-    var sprint4Jedi = data['SCL']['2016-2']['ratings'][3]['jedi'];
     drawCurrently(attend, 11 - attend);
-    drawPromoter(sprint1, sprint2, sprint3, sprint4);
-    drawJedi(sprint1Jedi,sprint2Jedi,sprint3Jedi,sprint4Jedi);
     break;
   case 'chi2017I':
     titleSelector.textContent = 'Chile 2017-I';
@@ -185,42 +123,17 @@ function changeTitle() {
     calculatePromoter('SCL', 3, '2017-1');
     calculateTeacherRating('SCL', 3, '2017-1');
     calculateJediMasterRating('SCL', 3, '2017-1');
-    calculateStudentSatisfaccion('SCL', 2, '2017-1', 23);
-    calculateAchievement('SCL', '2017-1');
     var attend = parseInt(calculateCurrently('SCL', 23, '2017-1'));
-    var sprint1 = data['SCL']['2017-1']['ratings'][0]['nps']['promoters'];
-    var sprint2 = data['SCL']['2017-1']['ratings'][1]['nps']['promoters'];
-    var sprint3 = data['SCL']['2017-1']['ratings'][2]['nps']['promoters'];
-    var sprint1Teacher = data['SCL']['2017-1']['ratings'][0]['teacher'];
-    var sprint2Teacher = data['SCL']['2017-1']['ratings'][1]['teacher'];
-    var sprint3Teacher = data['SCL']['2017-1']['ratings'][0]['teacher'];
-    var sprint1Jedi = data['SCL']['2017-1']['ratings'][0]['jedi'];
-    var sprint2Jedi = data['SCL']['2017-1']['ratings'][1]['jedi'];
-    var sprint3Jedi = data['SCL']['2017-1']['ratings'][2]['jedi'];
     drawCurrently(attend, 23 - attend);
-    drawPromoter(sprint1, sprint2, sprint3, 0);
-    drawTeacher(sprint1Teacher,sprint2Teacher,sprint3Teacher,0);
-    drawJedi(sprint1Jedi,sprint2Jedi,sprint3Jedi, 0);
     break;
   case 'chi2017II':
     titleSelector.textContent = 'Chile 2017-II';
-    calculateCurrently('SCL', 59, '2017-2');
+    calculateCurrently('SCL', 61, '2017-2');
     calculatePromoter('SCL', 2, '2017-2');
     calculateTeacherRating('SCL', 2, '2017-2');
     calculateJediMasterRating('SCL', 2, '2017-2');
-    calculateStudentSatisfaccion('SCL', 1, '2017-2', 59);
-    calculateAchievement('SCL', '2017-2');
-    var attend = parseInt(calculateCurrently('SCL', 59, '2017-2'));
-    var sprint1 = data['SCL']['2017-2']['ratings'][0]['nps']['promoters'];
-    var sprint2 = data['SCL']['2017-2']['ratings'][1]['nps']['promoters'];
-    var sprint1Teacher = data['SCL']['2017-2']['ratings'][0]['teacher'];
-    var sprint2Teacher = data['SCL']['2017-2']['ratings'][1]['teacher'];
-    var sprint1Jedi = data['SCL']['2017-2']['ratings'][0]['jedi'];
-    var sprint2Jedi = data['SCL']['2017-2']['ratings'][1]['jedi'];
-    drawPromoter(sprint1, sprint2, 0, 0);
-    drawCurrently(attend, 59 - attend);
-    drawTeacher(sprint1Teacher, sprint2Teacher, 0, 0);
-    drawJedi(sprint1Jedi,sprint2Jedi, 0, 0);
+    var attend = parseInt(calculateCurrently('SCL', 61, '2017-2'));
+    drawCurrently(attend, 61 - attend);
     break;
   case 'mex2017I':
     titleSelector.textContent = 'Mexico 2017-I';
@@ -228,22 +141,8 @@ function changeTitle() {
     calculatePromoter('CDMX', 3, '2017-1');
     calculateTeacherRating('CDMX', 3, '2017-1');
     calculateJediMasterRating('CDMX', 3, '2017-1');
-    calculateStudentSatisfaccion('CDMX', 2, '2017-1', 24);
-    calculateAchievement('CDMX', '2017-1');
     var attend = parseInt(calculateCurrently('CDMX', 24, '2017-1'));
-    var sprint1 = data['CDMX']['2017-1']['ratings'][0]['nps']['promoters'];
-    var sprint2 = data['CDMX']['2017-1']['ratings'][1]['nps']['promoters'];
-    var sprint3 = data['CDMX']['2017-1']['ratings'][2]['nps']['promoters'];
-    var sprint1Teacher = data['CDMX']['2017-1']['ratings'][0]['teacher'];
-    var sprint2Teacher = data['CDMX']['2017-1']['ratings'][1]['teacher'];
-    var sprint3Teacher = data['CDMX']['2017-1']['ratings'][0]['teacher'];
-    var sprint1Jedi = data['CDMX']['2017-1']['ratings'][0]['jedi'];
-    var sprint2Jedi = data['CDMX']['2017-1']['ratings'][1]['jedi'];
-    var sprint3Jedi = data['CDMX']['2017-1']['ratings'][2]['jedi'];
-    drawPromoter(sprint1, sprint2, sprint3, 0);
     drawCurrently(attend, 24 - attend);
-    drawTeacher(sprint1Teacher,sprint2Teacher,sprint3Teacher, 0);
-    drawJedi(sprint1Jedi,sprint2Jedi,sprint3Jedi, 0);
     break;
   case 'mex2017II':
     titleSelector.textContent = 'Mexico 2017-II';
@@ -251,19 +150,8 @@ function changeTitle() {
     calculatePromoter('CDMX', 2, '2017-2');
     calculateTeacherRating('CDMX', 2, '2017-2');
     calculateJediMasterRating('CDMX', 2, '2017-2');
-    calculateStudentSatisfaccion('CDMX', 1, '2017-2', 46);
-    calculateAchievement('CDMX', '2017-2');
     var attend = parseInt(calculateCurrently('CDMX', 46, '2017-2'));
-    var sprint1 = data['CDMX']['2017-2']['ratings'][0]['nps']['promoters'];
-    var sprint2 = data['CDMX']['2017-2']['ratings'][1]['nps']['promoters'];
-    var sprint1Teacher = data['CDMX']['2017-2']['ratings'][0]['teacher'];
-    var sprint2Teacher = data['CDMX']['2017-2']['ratings'][1]['teacher'];
-    var sprint1Jedi = data['CDMX']['2017-2']['ratings'][0]['jedi'];
-    var sprint2Jedi = data['CDMX']['2017-2']['ratings'][1]['jedi'];
-    drawPromoter(sprint1, sprint2, 0, 0);
     drawCurrently(attend, 46 - attend);
-    drawTeacher(sprint1Teacher,sprint2Teacher, 0, 0);
-    drawJedi(sprint1Jedi,sprint2Jedi);
     break;
   }
 }
@@ -276,7 +164,7 @@ function calculateCurrently(sede, numEstudents, year) {
       cont++;
     }
   }
-  studentCurrently.innerHTML = '<b>' + numEstudents + '</b>' + ' <br> students currently enrolled';
+  studentCurrently.innerHTML = '<b>' + numEstudents + '</b>' + ' students currently enrolled';
   dropout.textContent = ((100 * (numEstudents - cont)) / numEstudents).toFixed(0) + ' % dropout';
   return cont;
 }
@@ -310,6 +198,7 @@ function calculateJediMasterRating(sede, numSprint, year) {
   jediMasterRating.innerHTML = '<b>' + (sumJedi / numSprint).toFixed(2) + '</b>' + '<br> overall teacher rating <br> (cumulative)';
 }
 
+<<<<<<< HEAD
 function calculateStudentSatisfaccion(sede, numEndSprint, year, totalEstudent) {
   var meet = data[sede][year]['ratings'][numEndSprint]['student']['cumple'];
   var beats = data[sede][year]['ratings'][numEndSprint]['student']['supera'];
@@ -641,6 +530,10 @@ function calculateHse(sede, year, numSprint) {
     } 
     break;    
   }
+=======
+function calculateStudentSatisfaccion(sede, numEndSprint, year) {
+
+>>>>>>> a4c1ffb8b7af937c9299180c3d200da1b4dc13c1
 }
 
 function drawCurrently(attend, noAttend) {
@@ -651,12 +544,13 @@ function drawCurrently(attend, noAttend) {
   ]);
   var options = {
     'width': 300,
-    'height': 230};
+    'height': 200};
 
   var chart = new google.visualization.PieChart(document.getElementById('grafy-enrollment'));
   chart.draw(data, options);
 }
 
+<<<<<<< HEAD
 function drawTechSkill(meet, noMeet) {
   var data = google.visualization.arrayToDataTable([
     ['Tech Skill', 'Number Student'],
@@ -718,21 +612,22 @@ function drawTeacher(num1, num2, num3, num4) {
   var chart = new google.charts.Bar(document.getElementById('grafy-teacher'));
   chart.draw(data, google.charts.Bar.convertOptions(options));
 }
+=======
+>>>>>>> a4c1ffb8b7af937c9299180c3d200da1b4dc13c1
 
-function drawJedi(num1, num2, num3, num4) {
+function drawPromoter() {
   var data = google.visualization.arrayToDataTable([
-    ['Element', '#', { role: 'annotation' } ],
-    ['Sprint1', num1, 'sprin1' ],
-    ['Sprint2', num2, 'sprint2' ],
-    ['Sprint3', num3, 'sprint3' ],
-    ['Sprint4', num4, 'sprint4' ],
+    ['Element', 'Density', { role: 'annotation' } ],
+    ['Copper', 8.94, 'Cu' ],
+    ['Silver', 10.49, 'Ag' ],
+    ['Gold', 19.30, 'Au' ],
+    ['Goldh', 0, 'Au' ],
   ]);
 
   var options = {
-    title: 'Jedi Master score by sprint',
     'width': 300,
     'height': 200};
-  var chart = new google.charts.Bar(document.getElementById('grafy-jedi'));
+  var chart = new google.charts.Bar(document.getElementById('grafy-promoter'));
   chart.draw(data, google.charts.Bar.convertOptions(options));
 }
 
@@ -741,7 +636,4 @@ window.onload = function() {
   elementTab[1].addEventListener('click', show);
   containesStudents.classList.add('none');
   comboBox.addEventListener('change', changeTitle);
-  comboBoxTech.addEventListener('change', TechSkill);
-  comboBoxHse.addEventListener('change', lifeSkill);
 };
-
