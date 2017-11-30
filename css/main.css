@@ -123,11 +123,10 @@ p {
 }
 .firts {
   margin-top: 60px;
-  background: #F3E9E7;
+ 
   width: 377px;
   height: 272px;
-  padding-left: 20px;
-  padding-top: 10px;
+  
   box-sizing: border-box;
 }
 .one{
@@ -177,9 +176,7 @@ p {
   margin-top: 60px;
   width: 574px;
   height: 302px;
-  background: #F3E9E7;
-  padding-left: 20px;
-  padding-top: 10px;
+ 
   box-sizing: border-box;
 }
 .position {
@@ -205,22 +202,11 @@ a:hover {
 a:active {
   text-decoration: underline;
 }
-/*Diseñando las imagenes de estadistica*/
-.img img{
-  width: 234px;
-  height: 134px;
-}
+
+
 .info{
   background: #E8DEDC;
   width: 180px;
   display: inline-block;
   margin: 1%;
-}
-.right {
-  width: 100px;
-}
-
-.img2 img{
-  width: 234px;
-  height: 134px;
 }
