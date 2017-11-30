@@ -39,7 +39,6 @@ nav{
     width:100%;
     height:8em;
     background-color:#e1e1e1;
-    outline:1px solid red;
 }
 
 .div-nav{
@@ -86,7 +85,6 @@ nav{
 }
 
 .divgeneration{
-    outline:1px solid black;
     position:absolute;
     left:1000px;
     top:40px;
@@ -142,17 +140,17 @@ nav{
 }
 
 .boxes-top{
-    width:23em;
+    width:28%;
     height:22.5em;
     float:left; 
     padding:1.3em;
     background-color:#fff;
-    margin-right:1.3em;
+    margin: 1em;
 }
 
 .boxes-top-content{
     background-color: #f7f7f7;
-    width:9.5em;
+    width:8.3em;
     height:4em;
     padding:0.6em;
     text-align:center;
@@ -173,7 +171,7 @@ nav{
 }
 
 .boxes-top-graphic img{
-    width:100%;
+    width:90%;
 }
  /************medio**************/
 
@@ -182,7 +180,7 @@ nav{
     padding:1em 2.5em;
     background-color:#fff;
     clear:both;
-    outline:1px solid black; 
+    margin: 10px 0 35px 0;
  }
 
 .boxes-medium h4{
@@ -230,7 +228,7 @@ nav{
 }
 
 .graphic-bar img{
-    width:100%;
+    width:70%;
 }
 
 .graphic-circle{

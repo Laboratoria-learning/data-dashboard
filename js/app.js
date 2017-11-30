@@ -1,4 +1,3 @@
-
 window.addEventListener('load', function(event){
     
         var chooseGeneration = document.querySelector('.choose-sede-generation');
@@ -98,10 +97,14 @@ window.addEventListener('load', function(event){
                 var uHse;
                 var contCalc = 0;
                 var contInactive=0;
+                //var contTech = [];
+                //var contHse = [];
+                //var prob = 0;
                 for (var k = 0; k < dataAlumns.length; k++) {
                     if(dataAlumns[k].active === false) {
                         contInactive++;
                     }
+    
                     //console.log(contInactive);//número de alumnos inactivos por sede elegida
                     //console.log(dataAlumns[k]);//me muestra cada objeto alumno
                     /***********empezando los calculos cuando el alumno está activo******************************/
@@ -123,6 +126,7 @@ window.addEventListener('load', function(event){
            
                         qTech = sumTech/dataAlumns[k].sprints.length;//me muestra el promedio de las notas tech (sumTech/#sprints llevados)
                         uHse = sumHse/dataAlumns[k].sprints.length;//me muestra el promedio de las notas hse (sumHse/#sprints llevados)
+    
     
     
                         console.log(qTech);//promedio de tech(de c/alumno)
@@ -150,8 +154,42 @@ window.addEventListener('load', function(event){
                 console.log(contGoal);//número de estudiantes que pasaron el mínimo requerido en ambos skills
                 var retired = ((datesGen.students.length)*100).toFixed(1);
                 var studentAchievement = ((contGoal/datesGen.students.length)*100).toFixed(1);
-                console.log(studentAchievement);
-                console.log(retired);     
+                var neoTech =((contTech/dataAlumns.length)*100).toFixed(1);
+                var neoSkills = ((contHse/dataAlumns.length)*100).toFixed(1);
+                
+                    /**añade alumnos totales**/
+                    var enrollment = document.getElementById('enrollment');
+                    enrollment.textContent = '';
+                    enrollment.textContent = dataAlumns.length;
+                    var retiredAlumn = document.getElementById('retiredAlumn');
+                    retiredAlumn.textContent = '';
+                    retiredAlumn.textContent = retired;
+                    var countAchievement = document.getElementById('countAchievement');
+                    countAchievement.textContent = '';
+                    countAchievement.textContent = contGoal;
+                    var percentageAchievement = document.getElementById('percentageAchievement');
+                    percentageAchievement.textContent = '';
+                    percentageAchievement.textContent = studentAchievement;
+                    var countSkills = document.getElementById('countSkills');
+                    countSkills.textContent = '';
+                    countSkills.textContent = contTech;
+                    var totalStudents = document.getElementById('totalStudentsTech');
+                    totalStudents.textContent = '';
+                    totalStudents.textContent = dataAlumns.length;
+                    var percentageStudentsPass = document.getElementById('percentageStudentsTech');
+                    percentageStudentsPass.textContent = '';
+                    percentageStudentsPass.textContent = neoTech;
+                    var countHse = document.getElementById('countHse');
+                    countHse.textContent = '';
+                    countHse.textContent = contHse;
+                    var totalStudentsHse = document.getElementById('totalStudentsHse');
+                    totalStudentsHse.textContent = '';
+                    totalStudentsHse.textContent = dataAlumns.length;
+                    var percentageStudentsHse = document.getElementById('percentageStudentsHse');
+                    percentageStudentsHse.textContent = '';
+                    percentageStudentsHse.textContent = neoSkills;
+                    
+    
             });
     //});
     
@@ -193,3 +231,4 @@ window.addEventListener('load', function(event){
     
      
     });
+    
