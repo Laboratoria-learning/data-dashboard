@@ -33,20 +33,22 @@ console.log(detractorsAqp20162);/* para la data */
 // La cantidad de estudiantes que superan la meta de puntos en promedio de todos los sprints cursados. La meta de puntos es 70% del total de puntos en HSE y en tech.
 var SumScoreSprintHseAqp20162 = 0;
 var SumScoreSprintTechAqp20162 = 0;
-var stuContar = 0;
+var stuContarAqp20162 = 0;
 for (var i = 0; i < data.AQP['2016-2'].students.length ; i++) {
   for (var j = 0; j < data.AQP['2016-2'].students[i].sprints.length ; j++) {
     var stuScoreHse = data.AQP['2016-2'].students[i].sprints[j].score.hse;
-    var stuScoreTech =data.AQP['2016-2'].students[i].sprints[j].score.tech;
+    var stuScoreTech = data.AQP['2016-2'].students[i].sprints[j].score.tech;
     SumScoreSprintHseAqp20162 += stuScoreHse;
     SumScoreSprintTechAqp20162 += stuScoreTech;
   } if (SumScoreSprintHseAqp20162 >= 3360 && SumScoreSprintTechAqp20162 >= 5040) {
-    stuContar += 1;
+    stuContarAqp20162 += 1;
   }
   SumScoreSprintHseAqp20162 = 0;
   SumScoreSprintTechAqp20162 = 0;
 }
-console.log(stuContar);/* para la data */
+console.log(stuContarAqp20162);
+var prctstuContarAqp20162 = ((stuContarAqp20162 / totalstudentsAqp20162) * 100).toFixed(2);
+console.log(prctstuContarAqp20162);/* para la data */
 // El Net Promoter Score (NPS) promedio de los sprints cursados. El NPS se calcula en base a la encuesta que las estudiantes responden al respecto de la recomendación que darían de Laboratoria, bajo la siguiente fórmula:
 
 var totalNpsSprintAqp20162 = 0;
@@ -192,7 +194,7 @@ console.log(detractorsAqp20171);/* para la data */
 // La cantidad de estudiantes que superan la meta de puntos en promedio de todos los sprints cursados. La meta de puntos es 70% del total de puntos en HSE y en tech.
 var SumScoreSprintHseAqp20171 = 0;
 var SumScoreSprintTechAqp20171 = 0;
-var stuContar = 0;
+var stuContarAqp20171 = 0;
 for (var i = 0; i < data.AQP['2017-1'].students.length ; i++) {
   for (var j = 0; j < data.AQP['2017-1'].students[i].sprints.length ; j++) {
     var stuScoreHse = data.AQP['2017-1'].students[i].sprints[j].score.hse;
@@ -200,12 +202,14 @@ for (var i = 0; i < data.AQP['2017-1'].students.length ; i++) {
     SumScoreSprintHseAqp20171 += stuScoreHse;
     SumScoreSprintTechAqp20171 += stuScoreTech;
   } if (SumScoreSprintHseAqp20171 >= 2520 && SumScoreSprintTechAqp20171 >= 3780) {
-    stuContar += 1;
+    stuContarAqp20171 += 1;
   }
   SumScoreSprintHseAqp20171 = 0;
   SumScoreSprintTechAqp20171 = 0;
 }
-console.log(stuContar);/* para la data */
+console.log(stuContarAqp20171);
+var prctstuContarAqp20171 = ((stuContarAqp20171 / totalstudentsAqp20171) * 100).toFixed(2);
+console.log(prctstuContarAqp20171);/* para la data */
 // El Net Promoter Score (NPS) promedio de los sprints cursados. El NPS se calcula en base a la encuesta que las estudiantes responden al respecto de la recomendación que darían de Laboratoria, bajo la siguiente fórmula:
 
 var totalNpsSprintAqp20171 = 0;
@@ -351,7 +355,7 @@ console.log(detractorsCdmx20171);/* para la data */
 // La cantidad de estudiantes que superan la meta de puntos en promedio de todos los sprints cursados. La meta de puntos es 70% del total de puntos en HSE y en tech.
 var SumScoreSprintHseCdmx20171 = 0;
 var SumScoreSprintTechCdmx20171 = 0;
-var stuContar = 0;
+var stuContarCdmx20171 = 0;
 for (var i = 0; i < data.CDMX['2017-1'].students.length ; i++) {
   for (var j = 0; j < data.CDMX['2017-1'].students[i].sprints.length ; j++) {
     var stuScoreHse = data.CDMX['2017-1'].students[i].sprints[j].score.hse;
@@ -359,12 +363,14 @@ for (var i = 0; i < data.CDMX['2017-1'].students.length ; i++) {
     SumScoreSprintHseCdmx20171 += stuScoreHse;
     SumScoreSprintTechCdmx20171 += stuScoreTech;
   } if (SumScoreSprintHseCdmx20171 >= 2520 && SumScoreSprintTechCdmx20171 >= 3780) {
-    stuContar += 1;
+    stuContarCdmx20171 += 1;
   }
   SumScoreSprintHseCdmx20171 = 0;
   SumScoreSprintTechCdmx20171 = 0;
 }
-console.log(stuContar);/* para la data */
+console.log(stuContarCdmx20171);
+var prctstuContarCdmx20171 = ((stuContarCdmx20171 / totalstudentsCdmx20171) * 100).toFixed(2);
+console.log(prctstuContarCdmx20171); /* para la data */
 // El Net Promoter Score (NPS) promedio de los sprints cursados. El NPS se calcula en base a la encuesta que las estudiantes responden al respecto de la recomendación que darían de Laboratoria, bajo la siguiente fórmula:
 
 var totalNpsSprintCdmx20171 = 0;
@@ -510,7 +516,7 @@ console.log(detractorsCdmx20172);/* para la data */
 // La cantidad de estudiantes que superan la meta de puntos en promedio de todos los sprints cursados. La meta de puntos es 70% del total de puntos en HSE y en tech.
 var SumScoreSprintHseCdmx20172 = 0;
 var SumScoreSprintTechCdmx20172 = 0;
-var stuContar = 0;
+var stuContarCdmx20172 = 0;
 for (var i = 0; i < data.CDMX['2017-2'].students.length ; i++) {
   for (var j = 0; j < data.CDMX['2017-2'].students[i].sprints.length ; j++) {
     var stuScoreHse = data.CDMX['2017-2'].students[i].sprints[j].score.hse;
@@ -518,12 +524,14 @@ for (var i = 0; i < data.CDMX['2017-2'].students.length ; i++) {
     SumScoreSprintHseCdmx20172 += stuScoreHse;
     SumScoreSprintTechCdmx20172 += stuScoreTech;
   } if (SumScoreSprintHseCdmx20172 >= 1680 && SumScoreSprintTechCdmx20172 >= 2520) {
-    stuContar += 1;
+    stuContarCdmx20172 += 1;
   }
   SumScoreSprintHseCdmx20172 = 0;
   SumScoreSprintTechCdmx20172 = 0;
 }
-console.log(stuContar);/* para la data */
+console.log(stuContarCdmx20172);
+var prctstuContarCdmx20172 = ((stuContarCdmx20172 / totalstudentsCdmx20172) * 100).toFixed(2);
+console.log(prctstuContarCdmx20172);/* para la data */
 // El Net Promoter Score (NPS) promedio de los sprints cursados. El NPS se calcula en base a la encuesta que las estudiantes responden al respecto de la recomendación que darían de Laboratoria, bajo la siguiente fórmula:
 
 var totalNpsSprintCdmx20172 = 0;
@@ -683,8 +691,8 @@ for (var i = 0; i < data.LIM['2016-2'].students.length ; i++) {
   SumScoreSprintTechLim20162 = 0;
 }
 console.log(stuContarLim20162);/* para la data */
-var prctstuContarLim2016 = ((stuContarLim20162 / totalstudentsLim20162) * 100).toFixed(2);
-console.log(prctstuContarLim2016); /* para la data */
+var prctstuContarLim20162 = ((stuContarLim20162 / totalstudentsLim20162) * 100).toFixed(2);
+console.log(prctstuContarLim20162); /* para la data */
 // El Net Promoter Score (NPS) promedio de los sprints cursados. El NPS se calcula en base a la encuesta que las estudiantes responden al respecto de la recomendación que darían de Laboratoria, bajo la siguiente fórmula:
 
 var totalNpsSprintLim20162 = 0;
@@ -830,7 +838,7 @@ console.log(detractorsLim20171);/* para la data */
 // La cantidad de estudiantes que superan la meta de puntos en promedio de todos los sprints cursados. La meta de puntos es 70% del total de puntos en HSE y en tech.
 var SumScoreSprintHseLim20171 = 0;
 var SumScoreSprintTechLim20171 = 0;
-var stuContar = 0;
+var stuContarLim20171 = 0;
 for (var i = 0; i < data.LIM['2017-1'].students.length ; i++) {
   for (var j = 0; j < data.LIM['2017-1'].students[i].sprints.length ; j++) {
     var stuScoreHse = data.LIM['2017-1'].students[i].sprints[j].score.hse;
@@ -838,12 +846,14 @@ for (var i = 0; i < data.LIM['2017-1'].students.length ; i++) {
     SumScoreSprintHseLim20171 += stuScoreHse;
     SumScoreSprintTechLim20171 += stuScoreTech;
   } if (SumScoreSprintHseLim20171 >= 3360 && SumScoreSprintTechLim20171 >= 5040) {
-    stuContar += 1;
+    stuContarLim20171 += 1;
   }
   SumScoreSprintHseLim20171 = 0;
   SumScoreSprintTechLim20171 = 0;
 }
-console.log(stuContar);/* para la data */
+console.log(stuContarLim20171);
+var prctstuContarLim20171 = ((stuContarLim20171 / totalstudentsLim20171) * 100).toFixed(2);
+console.log(prctstuContarLim20171);/* para la data */
 // El Net Promoter Score (NPS) promedio de los sprints cursados. El NPS se calcula en base a la encuesta que las estudiantes responden al respecto de la recomendación que darían de Laboratoria, bajo la siguiente fórmula:
 
 var totalNpsSprintLim20171 = 0;
@@ -989,7 +999,7 @@ console.log(detractorsLim20172);/* para la data */
 // La cantidad de estudiantes que superan la meta de puntos en promedio de todos los sprints cursados. La meta de puntos es 70% del total de puntos en HSE y en tech.
 var SumScoreSprintHseLim20172 = 0;
 var SumScoreSprintTechLim20172 = 0;
-var stuContar = 0;
+var stuContarLim20172 = 0;
 for (var i = 0; i < data.LIM['2017-2'].students.length ; i++) {
   for (var j = 0; j < data.LIM['2017-2'].students[i].sprints.length ; j++) {
     var stuScoreHse = data.LIM['2017-2'].students[i].sprints[j].score.hse;
@@ -997,12 +1007,14 @@ for (var i = 0; i < data.LIM['2017-2'].students.length ; i++) {
     SumScoreSprintHseLim20172 += stuScoreHse;
     SumScoreSprintTechLim20172 += stuScoreTech;
   } if (SumScoreSprintHseLim20172 >= 1680 && SumScoreSprintTechLim20172 >= 2520) {
-    stuContar += 1;
+    stuContarLim20172 += 1;
   }
   SumScoreSprintHseLim20172 = 0;
   SumScoreSprintTechLim20172 = 0;
 }
-console.log(stuContar);/* para la data */
+console.log(stuContarLim20172);
+var prctstuContarLim20172 = ((stuContarLim20172 / totalstudentsLim20172) * 100).toFixed(2);
+console.log(prctstuContarLim20172);/* para la data */
 // El Net Promoter Score (NPS) promedio de los sprints cursados. El NPS se calcula en base a la encuesta que las estudiantes responden al respecto de la recomendación que darían de Laboratoria, bajo la siguiente fórmula:
 
 var totalNpsSprintLim20172 = 0;
@@ -1148,20 +1160,22 @@ console.log(detractorsScl20162);/* para la data */
 // La cantidad de estudiantes que superan la meta de puntos en promedio de todos los sprints cursados. La meta de puntos es 70% del total de puntos en HSE y en tech.
 var SumScoreSprintHseScl20162 = 0;
 var SumScoreSprintTechScl20162 = 0;
-var stuContar = 0;
+var stuContarScl20162 = 0;
 for (var i = 0; i < data.SCL['2016-2'].students.length ; i++) {
   for (var j = 0; j < data.SCL['2016-2'].students[i].sprints.length ; j++) {
     var stuScoreHse = data.SCL['2016-2'].students[i].sprints[j].score.hse;
-    var stuScoreTech =data.SCL['2016-2'].students[i].sprints[j].score.tech;
+    var stuScoreTech = data.SCL['2016-2'].students[i].sprints[j].score.tech;
     SumScoreSprintHseScl20162 += stuScoreHse;
     SumScoreSprintTechScl20162 += stuScoreTech;
   } if (SumScoreSprintHseScl20162 >= 3360 && SumScoreSprintTechScl20162 >= 5040) {
-    stuContar += 1;
+    stuContarScl20162 += 1;
   }
   SumScoreSprintHseScl20162 = 0;
   SumScoreSprintTechScl20162 = 0;
 }
-console.log(stuContar);/* para la data */
+console.log(stuContarScl20162);
+var prctstuContarScl20162 = ((stuContarScl20162 / totalstudentsScl20162) * 100).toFixed(2);
+console.log(prctstuContarScl20162);/* para la data */
 // El Net Promoter Score (NPS) promedio de los sprints cursados. El NPS se calcula en base a la encuesta que las estudiantes responden al respecto de la recomendación que darían de Laboratoria, bajo la siguiente fórmula:
 
 var totalNpsSprintScl20162 = 0;
@@ -1308,7 +1322,7 @@ console.log(detractorsScl20171);/* para la data */
 // La cantidad de estudiantes que superan la meta de puntos en promedio de todos los sprints cursados. La meta de puntos es 70% del total de puntos en HSE y en tech.
 var SumScoreSprintHseScl20171 = 0;
 var SumScoreSprintTechScl20171 = 0;
-var stuContar = 0;
+var stuContarScl20171 = 0;
 for (var i = 0; i < data.SCL['2017-1'].students.length ; i++) {
   for (var j = 0; j < data.SCL['2017-1'].students[i].sprints.length ; j++) {
     var stuScoreHse = data.SCL['2017-1'].students[i].sprints[j].score.hse;
@@ -1316,12 +1330,14 @@ for (var i = 0; i < data.SCL['2017-1'].students.length ; i++) {
     SumScoreSprintHseScl20171 += stuScoreHse;
     SumScoreSprintTechScl20171 += stuScoreTech;
   } if (SumScoreSprintHseScl20171 >= 2520 && SumScoreSprintTechScl20171 >= 3780) {
-    stuContar += 1;
+    stuContarScl20171 += 1;
   }
   SumScoreSprintHseScl20171 = 0;
   SumScoreSprintTechScl20171 = 0;
 }
-console.log(stuContar);/* para la data */
+console.log(stuContarScl20171);
+var prctstuContarScl20171 = ((stuContarScl20171 / totalstudentsScl20171) * 100).toFixed(2);
+console.log(prctstuContarScl20171);/* para la data */
 // El Net Promoter Score (NPS) promedio de los sprints cursados. El NPS se calcula en base a la encuesta que las estudiantes responden al respecto de la recomendación que darían de Laboratoria, bajo la siguiente fórmula:
 
 var totalNpsSprintScl20171 = 0;
@@ -1333,7 +1349,7 @@ for (var i = 0; i < data.SCL['2017-1'].ratings.length ; i++) {
 }
 var npstotalScl20171 = (totalNpsSprintScl20171 / 3).toFixed(2);;
 console.log(npstotalScl20171);/* para la data */
-// para los porcentajes promoters - pasive y detractors  
+// para los porcentajes promoters - pasive y detractors
 var totalPromotersScl20171 = 0;
 for (var i = 0; i < data.SCL['2017-1'].ratings.length ; i++) {
   var raitingspNpsromoters = data.SCL['2017-1'].ratings[i].nps.promoters;
@@ -1467,8 +1483,8 @@ console.log(detractorsScl20172);/* para la data */
 // La cantidad de estudiantes que superan la meta de puntos en promedio de todos los sprints cursados. La meta de puntos es 70% del total de puntos en HSE y en tech.
 var SumScoreSprintHseScl20172 = 0;
 var SumScoreSprintTechScl20172 = 0;
-var stuContar = 0;
-console.log(data.SCL['2017-2'].students[0].sprints)
+var stuContarScl20172 = 0;
+console.log(data.SCL['2017-2'].students[0].sprints);
 
 for (var i = 0; i < data.SCL['2017-2'].students.length ; i++) {
   for (var j = 0; j < data.SCL['2017-2'].students[i].sprints.length ; j++) {
@@ -1477,12 +1493,14 @@ for (var i = 0; i < data.SCL['2017-2'].students.length ; i++) {
     SumScoreSprintHseScl20172 += stuScoreHse;
     SumScoreSprintTechScl20172 += stuScoreTech;
   } if (SumScoreSprintHseScl20172 >= 1680 && SumScoreSprintTechScl20172 >= 2520) {
-    stuContar += 1;
+    stuContarScl20172 += 1;
   }
   SumScoreSprintHseScl20172 = 0;
   SumScoreSprintTechScl20172 = 0;
 }
-console.log(stuContar);/* para la data */
+console.log(stuContarScl20172);
+var prctstuContarScl20172 = ((stuContarScl20172 / totalstudentsScl20172) * 100).toFixed(2);
+console.log(prctstuContarScl20172);/* para la data */
 // El Net Promoter Score (NPS) promedio de los sprints cursados. El NPS se calcula en base a la encuesta que las estudiantes responden al respecto de la recomendación que darían de Laboratoria, bajo la siguiente fórmula:
 
 var totalNpsSprintScl20172 = 0;
@@ -1625,50 +1643,28 @@ listSedes.addEventListener('click', function(event) {
     var stuContar = document.getElementById('stuContar');
     stuContar.textContent = stuContarLim20162;
     var prctstuContar = document.getElementById('prctstuContar');
-    prctstuContar.textContent = prctstuContarLim2016 + '%';
+    prctstuContar.textContent = prctstuContarLim20162 + '%';
     prctstuContar.classList.add('fontStrong');
     var totalStd = document.getElementById('totalStd');
     totalStd.textContent = totalstudentsLim20162;
-
+    var npstotal = document.getElementById('npstotal');
+    npstotal.textContent = npstotalLim20162 + '%';
+    npstotal.classList.add('fontStrong');
+    var npsTotalPromoters = document.getElementById('npsTotalPromoters');
+    npsTotalPromoters.textContent = npsTotalPromotersLim20162 + ' % Promoters';
+    var npsTotalPasive = document.getElementById('npsTotalPasive');
+    npsTotalPasive.textContent = npsTotalPasiveLim20162 + ' % Pasive';
+    var npsTotalDetractors = document.getElementById('npsTotalDetractors');
+    npsTotalDetractors.textContent = npsTotalDetractorsLim20162 + ' % Detractors';
+    var totalSatisfation = document.getElementById('totalSatisfation');
+    totalSatisfation.textContent = totalSatisfationLim20162;
+    var scoreTeacher = document.getElementById('scoreTeacher');
+    scoreTeacher.textContent = scoreTeacherLim20162;
+    var scoreJedi = document.getElementById('scoreJedi');
+    scoreJedi.textContent = scoreJediLim20162;
     event.preventDefault();
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* evento para la section students*/
 window.addEventListener('load', function() {
   var anchorStudents = document.getElementById('anchor-students');
@@ -1678,7 +1674,7 @@ window.addEventListener('load', function() {
 
   anchorOverview.addEventListener('click', function() {
     var overview = document.getElementById('overview');
-    overview.removeAttribute('class', 'style-none');   
+    overview.removeAttribute('class', 'style-none');
   });
   console.log(data);
   anchorStudents.addEventListener('click', function(event) {
@@ -1761,7 +1757,7 @@ window.addEventListener('load', function() {
     // EVENTO PARA AREQUIPA 2017-1
     for (i = 0; i < data.AQP['2017-1'].students.length; i++) {
       var columRight = document.getElementById('colum-right');
-      
+
       var addStudent = document.createElement('div');
       addStudent.setAttribute('class', 'students-skills');
       var nameStudent = document.createElement('h1');
@@ -2411,4 +2407,3 @@ window.addEventListener('load', function() {
     }
   });
 });
-
