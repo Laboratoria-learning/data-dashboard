@@ -186,5 +186,46 @@ a:active {
   margin-top: 10px;
   margin-left: 10px;
   position: relative;
-  bottom: 60px;
+  bottom: 80px;
+}
+
+.note {
+  background-color: #f7f7f7;
+  font-size: 20px;
+  margin-right: 27px;
+  margin-top: 15px;
+  padding: 5px;
+  box-sizing: border-box;
+  font-weight: bold;
+  transform: translateX(-100%);
+}
+
+.skill {
+  font-size: 12px;
+  /*position: relative;
+  top: 25px;
+  left: 60px;*/
+  background-color: #f7f7f7;
+}
+
+.skillT {
+  position: relative;
+  top: 25px;
+  left: 10px;
+}
+
+.skillH {
+  position: absolute;
+  top: 52px;
+  right: 105px;
+}
+
+.skillE {
+  position: absolute;
+  top: 52px;
+  right: 1px;
+}
+
+.noteM {
+  margin-right: 17px;
 }
