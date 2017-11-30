@@ -128,6 +128,7 @@ window.addEventListener('load', function(event) {
       google.charts.load('current', {'packages': ['corechart']});
 
       google.charts.setOnLoadCallback(drawChartEnrollment);
+      // Funcionalidad de los tabs Overviews, Students y Teachers
 
     
       function drawChartEnrollment() {
@@ -328,58 +329,56 @@ window.addEventListener('load', function(event) {
         chart.draw(data, options);
       }
 
-   // Calculamos los life skills por sprint 
-   var totLifeSkill = 0;
-   var totSprints = 0;
-   for (i = 0;i < str['students'].length;i++) {
-     for (j = 0;j < str['students'][i]['sprints'].length;j++) {
-       totSprints = totSprints + str['students'][i]['sprints'].length;
+      // Calculamos los life skills por sprint 
+      var totLifeSkill = 0;
+      var totSprints = 0;
+      for (i = 0;i < str['students'].length;i++) {
+        for (j = 0;j < str['students'][i]['sprints'].length;j++) {
+          totSprints = totSprints + str['students'][i]['sprints'].length;
           
-       // Obteniendo los que han superado la meta tech
-       if (parseInt(str['students'][i]['sprints'][j]['score']['hse']) >= 840) {
-        totLifeSkill = totLifeSkill + 1;
-       }
-     }
-   }
+          // Obteniendo los que han superado la meta tech
+          if (parseInt(str['students'][i]['sprints'][j]['score']['hse']) >= 840) {
+            totLifeSkill = totLifeSkill + 1;
+          }
+        }
+      }
 
-   divLifeSkillQuantity.innerHTML = totLifeSkill;
-   divLifeSkillPercent.innerHTML = parseFloat(totLifeSkill / totSprints * 100).toFixed(0);
+      divLifeSkillQuantity.innerHTML = totLifeSkill;
+      divLifeSkillPercent.innerHTML = parseFloat(totLifeSkill / totSprints * 100).toFixed(0);
 
-   // Realizamos el gráfico de la cantidad de alumnos que superaron x sprint   
-   google.charts.load('current', {'packages': ['corechart']});
+      // Realizamos el gráfico de la cantidad de alumnos que superaron x sprint   
+      google.charts.load('current', {'packages': ['corechart']});
        
-   google.charts.setOnLoadCallback(drawCharLifeSkill);
+      google.charts.setOnLoadCallback(drawCharLifeSkill);
        
            
-   function drawCharLifeSkill() {
-     // create the data table
-     var data = new google.visualization.DataTable();
-     data.addColumn('string', 'S');
-     data.addColumn('number', 'Average HSE Skill');
+      function drawCharLifeSkill() {
+        // create the data table
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'S');
+        data.addColumn('number', 'Average HSE Skill');
               
-     for (i = 0;i < str['students'].length;i++) {
-       for (j = 0;j < str['students'][i]['sprints'].length;j++) {
-         totSprints = totSprints + str['students'][i]['sprints'].length;
+        for (i = 0;i < str['students'].length;i++) {
+          for (j = 0;j < str['students'][i]['sprints'].length;j++) {
+            totSprints = totSprints + str['students'][i]['sprints'].length;
                     
-         // Obteniendo los que han superado la meta hse
+            // Obteniendo los que han superado la meta hse
          
-         if (parseInt(str['students'][i]['sprints'][j]['score']['hse']) >= 840 && parseInt(str['students'][i]['sprints'][j]['number'] - 1) === optionSprint.value) {
-           data.addRows([
-             ['S' + str['students'][i]['sprint'], str['students'][i]['sprints'][j]['score']['hse']],
+            if (parseInt(str['students'][i]['sprints'][j]['score']['hse']) >= 840 && parseInt(str['students'][i]['sprints'][j]['number'] - 1) === optionSprint.value) {
+              data.addRows([
+                ['S' + str['students'][i]['sprint'], str['students'][i]['sprints'][j]['score']['hse']],
                   
                   
-           ]);
-         }
-       }
-     }
+              ]);
+            }
+          }
+        }
                
                
-     var options = {'title': 'Current average life skill'};        
-     var chart = new google.visualization.LineChart(document.getElementById('life-chart'));
-     chart.draw(data, options);
-   }
-
-
+        var options = {'title': 'Current average life skill'};        
+        var chart = new google.visualization.LineChart(document.getElementById('life-chart'));
+        chart.draw(data, options);
+      }
 
 
       // Calculamos datos del ENROLLMENT
@@ -422,7 +421,6 @@ window.addEventListener('load', function(event) {
   }
 
  
-/*
- Aca el load*/
+
 });
 
