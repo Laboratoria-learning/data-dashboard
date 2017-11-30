@@ -174,6 +174,7 @@ cumulativeNpsBox.classList.add('number-box-int');
 promotersBox.textContent = totalPromoters;
 detractorsBox.textContent = totalDetractors;
 passiveBox.textContent = totalPassive;
+drawNetPromoter();
 }
 /*
 function showOverGoal(region, promotion) {
@@ -253,4 +254,27 @@ function drawTotalStudents(current, deserted) {
     var chart = new google.visualization.PieChart(document.getElementById('chart_div_enrollment'));
     chart.draw(dataTest, options);
   }
+}
+
+
+function drawNetPromoter(s1, s2, s3, s4) {
+  google.charts.load('current', {packages: ['corechart', 'line']});
+  google.charts.setOnLoadCallback(drawBasic);
+  function drawBasic() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('number', 'X');
+    data.addColumn('number', 'NPS');
+    data.addRows([
+        [0, 0],   [1, 10],  [2, 23],  [3, 17],  [4, 18]
+      ]);
+      var options = {
+        hAxis: {
+          title: 'SPRINT'
+        },
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('chart_div_nps'));
+
+      chart.draw(data, options);
+    }
 }
