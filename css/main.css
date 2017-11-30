@@ -155,6 +155,116 @@
 #pastel-red {
   color: rgb(234,81,81);
 }
+.content-two {
+  margin: 40px 56px 58px 88px ;
+  overflow: auto;
+}
+.specialization {
+  background: #fff;
+  height: 149px;
+  width: 349px;
+  padding: 14px;
+  display: inline-block;
+  float: left;
+
+}
+.specialization p {
+  font-weight: 900;
+  margin-bottom: 16px;
+  font-size: 21px;
+}
+.specialization ul {
+  font-size: 19px;
+  line-height: 29px;
+  list-style: none;
+}
+.specialization i {
+  color: #fff;
+  border: 1px solid rgb(247,182,23);
+  border-radius: 5px;
+}
+.specialization i:hover {
+  color: rgb(247,182,23);
+  background: rgb(247,182,23);
+}
+.search-box {
+  background: #fff;
+  display: inline-block;
+  float: right;
+  height:45px;
+  width:810px;
+  overflow: auto;
+  margin-bottom: 30px;
+  border-bottom: 3px solid rgba(200,200,200,0.3);
+  border-right: 3px solid rgba(200,200,200,0.3);
+}
+.search-box i {
+  font-size: 20px;
+  margin-left: 13px;
+  color: rgb(200,200,200);
+}
+.search-box input {
+  height: 40px;
+  width: 730px;
+  border: none;
+  outline: none;
+}
+.students-information {
+  height: 190px;
+  width: 810px;
+  background: #fff;
+  border-bottom: 3px solid rgba(200,200,200,0.3);
+  border-right: 3px solid rgba(200,200,200,0.3);
+  float: right;
+  padding: 19px;
+  display: inline-block;
+  overflow: auto;
+}
+.students-information img {
+  width: 147px;
+  height: 147px;
+  margin-right: 22px;
+  float: left;
+}
+.p-information {
+  float: left;
+}
+.name {
+  font-size: 28px;
+  font-weight: 900;
+}
+.students-information ul {
+  list-style: none;
+  margin-top: 20px;
+}
+.students-information li {
+display: inline-block;
+margin-right: 13px;
+background: rgb(225,225,225);
+color: rgb(120,120,120);
+font-size: 12px;
+padding: 5px 15px;
+}
+.square-skills {
+  float: right;
+  font-size: 12px;
+  text-align: center;
+}
+.size-big {
+  font-size: 18px;
+  font-weight: 900;
+}
+.tle-skills {
+  background: rgb(225,225,225);
+  display: inline-block;
+  margin-right: 5px;
+  padding: 10px 5px;;
+  margin-bottom: 66px;
+}
+.view {
+  text-align: right;
+  font-size: 19px;
+}
 
 /*CLASES REUTILIZABLES*/
 .background-w {
