@@ -98,6 +98,7 @@ function showMetas(obj) {
   var acumSprint3Hse = 0;
   var acumSprint4Tech = 0;
   var acumSprint4Hse = 0;
+  var studentsCant = obj['students'].length;
   for (var j = 0; j < obj['students'].length; j++) {// recorre el array con las estudiantes
     var sprintByStudents = obj['students'][j]['sprints']; // contiene un array con los sprint de cada estidiante
     for (var k = 0; k < sprintByStudents.length; k++) {// recorre el array con los sprint
@@ -136,38 +137,46 @@ function showMetas(obj) {
           acumSprint4Hse = acumSprint4Hse + 1;
         };
         break;
-      }
+      };
     };
   };
+
+  var sumTech = (acumSprint1Tech + acumSprint2Tech + acumSprint3Tech + acumSprint4Tech) / sprintByStudents.length;
+  var sumHse = (acumSprint1Hse + acumSprint2Hse + acumSprint3Hse + acumSprint4Hse) / sprintByStudents.length;
+  var promGeneral = parseInt((sumTech + sumHse) / 2);
+  var pPromGeneral = document.createElement('p');
+  pPromGeneral.textContent = 'PROMEDIO DE ESTUDIANTES QUE SUPERARON LA META: ' + promGeneral + ' (' + ((promGeneral * 100) / studentsCant) + ' %)';
+  divMetas.appendChild(pPromGeneral);
+  
   if (acumSprint1Tech !== 0 && acumSprint1Hse !== 0) {
     var pTech1 = document.createElement('p');
     var pHse1 = document.createElement('p');
-    pTech1.textContent = 'SPRINT 1 - SUPERAN EL 70% EN TECNICO: ' + acumSprint1Tech;
-    pHse1.textContent = 'SPRINT 1 - SUPERAN EL 70% EN HSE: ' + acumSprint1Hse;
+    pTech1.textContent = 'SPRINT 1 - SUPERAN EL 70% EN TECNICO: ' + acumSprint1Tech + ' (' + parseInt((acumSprint1Tech * 100) / studentsCant) + ' %)';
+    pHse1.textContent = 'SPRINT 1 - SUPERAN EL 70% EN HSE: ' + acumSprint1Hse + ' (' + parseInt((acumSprint1Hse * 100) / studentsCant) + ' %)';
     divMetas.appendChild(pTech1);
     divMetas.appendChild(pHse1);
   };
   if (acumSprint2Tech !== 0 && acumSprint2Hse !== 0) {
     var pTech2 = document.createElement('p');
     var pHse2 = document.createElement('p');
-    pTech2.textContent = 'SPRINT 2 - SUPERAN EL 70% EN TECNICO: ' + acumSprint2Tech;
-    pHse2.textContent = 'SPRINT 2 - SUPERAN EL 70% EN HSE: ' + acumSprint2Hse;
+    pTech2.textContent = 'SPRINT 2 - SUPERAN EL 70% EN TECNICO: ' + acumSprint2Tech + ' (' + parseInt((acumSprint2Tech * 100) / studentsCant) + ' %)';
+    pHse2.textContent = 'SPRINT 2 - SUPERAN EL 70% EN HSE: ' + acumSprint2Hse + ' (' + parseInt((acumSprint2Hse * 100) / studentsCant) + ' %)';
     divMetas.appendChild(pTech2);
     divMetas.appendChild(pHse2);
   };
   if (acumSprint3Tech !== 0 && acumSprint3Hse !== 0) {
     var pTech3 = document.createElement('p');
     var pHse3 = document.createElement('p');
-    pTech3.textContent = 'SPRINT 3 - SUPERAN EL 70% EN TECNICO: ' + acumSprint3Tech;
-    pHse3.textContent = 'SPRINT 3 - SUPERAN EL 70% EN HSE: ' + acumSprint3Hse;
+    pTech3.textContent = 'SPRINT 3 - SUPERAN EL 70% EN TECNICO: ' + acumSprint3Tech + ' (' + parseInt((acumSprint3Tech * 100) / studentsCant) + ' %)';
+    pHse3.textContent = 'SPRINT 3 - SUPERAN EL 70% EN HSE: ' + acumSprint3Hse + ' (' + parseInt((acumSprint3Hse * 100) / studentsCant) + ' %)';
     divMetas.appendChild(pTech3);
     divMetas.appendChild(pHse3);
   };
   if (acumSprint4Tech !== 0 && acumSprint4Hse !== 0) {
     var pTech4 = document.createElement('p');
     var pHse4 = document.createElement('p');
-    pTech4.textContent = 'SPRINT 4 - SUPERAN EL 70% EN TECNICO: ' + acumSprint4Tech;
-    pHse4.textContent = 'SPRINT 4 - SUPERAN EL 70% EN HSE: ' + acumSprint4Hse;
+    pTech4.textContent = 'SPRINT 4 - SUPERAN EL 70% EN TECNICO: ' + acumSprint4Tech + ' (' + parseInt((acumSprint4Tech * 100) / studentsCant) + ' %)';
+    pHse4.textContent = 'SPRINT 4 - SUPERAN EL 70% EN HSE: ' + acumSprint4Hse + ' (' + parseInt((acumSprint4Hse * 100) / studentsCant) + ' %)';
     divMetas.appendChild(pTech4);
     divMetas.appendChild(pHse4);
   };
