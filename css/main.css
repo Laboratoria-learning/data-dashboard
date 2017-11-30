@@ -228,10 +228,6 @@ select:hover {
   width: 97%;
 }
 
-#overview .info {
-  margin: 10px 0;
-}
-
 #overview pre {
   display: block;
   font-size: 3em;
@@ -243,7 +239,11 @@ select:hover {
   box-shadow: none;
   width: 48%;
   padding: 2%;
-  margin: 0;
+  margin: 10px 0;
+}
+
+#overview .info.single {
+  width: 100%;
 }
 
 #overview span {
