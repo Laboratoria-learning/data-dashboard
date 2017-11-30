@@ -187,3 +187,15 @@ h3{
   height: 150px;
   width: 100%;
 }
+#container-skills{
+  margin-top: 5%;
+}
+
+.tech-one,.tech-two {
+ width: 150px;
+ height: 50px;
+ background:rgb(209, 209, 150);
+ margin-left: 10%;
+ margin-top: 2%;
+ display: inline-block;
+}
