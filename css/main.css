@@ -147,15 +147,3 @@ header section {
     color: #333333;
     font-size: 15px;
 }
-
-.grafhic {
-    background-color: transparent;
-    outline: 1px solid yellow;
-    width: 80%;
-    margin-left: 17%;
-}
-
-.grafhic .grafhic-1 {
-    background: -webkit-linear-gradient(left, rgba(30,82,72,1) 0%, rgba(90,131,127,1) 32%, rgba(159,187,191,1) 69%, rgba(213,231,241,1) 98%);
-    width: 30%;
-}
