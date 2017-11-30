@@ -34,36 +34,30 @@
       </div>
       <div class="content-menu hidden" id="content-menu">
         <ul>
-          <li value='LIM'>
-            <p class="place">LIMA</p> 
-            <ul class="sub-menu">
-              <li value='2016-2' class="sub-option">2016-2</li>
-              <li value='2017-1' class="sub-option">2017-1</li>
-              <li value='2017-2' class="sub-option">2017-2</li>
-            </ul>
-          </li>
-          <li value='AQP'>
-            <p class="place">AREQUIPA</p>
-            <ul class="sub-menu">
-              <li value='2016-2' class="sub-option">2016-2</li>
-              <li value='2017-1' class="sub-option">2016-2</li>
-            </ul>
-          </li>
-          <li value='CDMX'>
-            <p class="place">MEXICO</p>
-            <ul class="sub-menu">
-              <li value='2017-1' class="sub-option">2017-1</li>
-              <li value='2017-2' class="sub-option">2017-2</li>
-            </ul>
-          </li>
-          <li value='SCL'>
-            <p class="place">CHILE</p>
-            <ul class="sub-menu">
-              <li value='2016-2' class="sub-option">2016-2</li>
-              <li value='2017-1' class="sub-option">2017-1</li>
-              <li value='2017-2' class="sub-option">2017-2</li>
-            </ul>
-          </li>
+          <form name="option-generation">
+            <div>
+              <p>Lima</p><br>
+              <input type="radio" name="option" value="2016-2" data-place="LIM"><label>2016-2</label> 
+              <input type="radio" name="option" value="2017-1" data-place="LIM"><label>2017-1</label> 
+              <input type="radio" name="option" value="2017-2" data-place="LIM"><label>2017</label>
+            </div>
+            <div>
+              <p>Arequipa</p><br>
+              <input type="radio" name="option" value="2016-2" data-place="AQP"><label>2016-II</label> 
+              <input type="radio" name="option" value="2017-1" data-place="AQP"><label>2016-I</label>
+            </div>
+            <div>
+              <p>Santiago de Chile</p><br>
+              <input type="radio" name="option" value="2016-2" data-place="SCL"><label>2016-II</label>
+              <input type="radio" name="option" value="2017-1" data-place="SCL"><label>2017-I</label> 
+              <input type="radio" name="option" value="2017-2" data-place="SCL"><label>2017-II</label>
+            </div>
+            <div>
+              <p>Ciudad de México</p><br>
+              <input type="radio" name="option" value="2017-1" data-place="CDMX"><label>2017-I</label>
+              <input type="radio" name="option" value="2017-2" data-place="CDMX"><label>2017-II</label>
+            </div>
+          </form>
         </ul>
       </div>
     </nav>
@@ -75,8 +69,8 @@
               <h3>ENROLLMENT</h3>
               <div class="content-data space-between">
                 <div class="data">
-                  <span class="num">120 </span>
-                  <span class="text"># STUDENTS CURRENTLY ENROLLET</span>
+                  <span class="num" id="students-currently">0</span>
+                  <span class="text">#</span>
                 </div>
                 <div class="data">
                   <span class="num red">20%</span>
