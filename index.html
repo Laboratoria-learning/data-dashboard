@@ -9,6 +9,7 @@
       google.charts.load('current', {'packages':['corechart']});
     </script>
     <title>Data Dashboard</title>
+    <link rel="icon" href="assets/icons/icon_head.ico">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,500,700" rel="stylesheet">
@@ -204,7 +205,8 @@
           <div id="user-information">
             <p>Trainer manager</p>
             <p>Último acceso</p>
-            <p>Viernes 30 Nov. 2017</p>
+            <p id="last-day"></p>
+            <p id="last-hour"></p>
           </div>
         </div>
         <div class="setting"><a href="#">Configuración</a></div>
@@ -226,6 +228,8 @@
         </div>
       </section>
     </main>
+    <!-- Librería moment.js -->
+    <script type="text/javascript" src="js/vendors/moment.js"></script>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->

@@ -6,6 +6,10 @@ window.addEventListener('load', function() {
   openAnimatedMenu.addEventListener('click', openMenu);
   function openMenu() {
     document.getElementById('animated-menu').style.width = '250px';
+    var lastDay = document.getElementById('last-day');
+    var lastHour = document.getElementById('last-hour');
+    lastDay.textContent = moment().format('MMMM Do YYYY');
+    lastHour.textContent = moment().format('h:mm:ss a');
   }
 
   closeAnimatedMenu.addEventListener('click', closeMenu);
@@ -83,7 +87,7 @@ window.addEventListener('load', function() {
     teacherRating.textContent = overallTeacherRating.toFixed(1);
 
     // ----------------> NPS <----------------
-    // CREANDO VARIABLES
+    // Creando variables
     var npsProm = document.getElementById('promoters');
     var npsPass = document.getElementById('passive');
     var npsDetr = document.getElementById('detractor');
@@ -218,8 +222,8 @@ window.addEventListener('load', function() {
     }
     selectLife.value = '';
 
-    // ------------------------- CHARTS AQP 2016-II ------------------------------
-    // ------- Jedi Chart ---------
+    // ----------------> CHARTS <----------------
+    // ----------------> Jedi Chart <----------------
     function drawChart() {
       var data = new google.visualization.DataTable();
       data.addColumn('string', 'logro');
@@ -235,7 +239,7 @@ window.addEventListener('load', function() {
       var chart = new google.visualization.PieChart(document.getElementById('jedi-chart'));
       chart.draw(data, options);
 
-      // -------------- Teacher Chart -------------
+      // ----------------> Teacher Chart <----------------
       var data2 = new google.visualization.DataTable();
       data2.addColumn('string', 'logro');
       data2.addColumn('number', 'puntaje');
@@ -252,7 +256,7 @@ window.addEventListener('load', function() {
       var chart2 = new google.visualization.PieChart(document.getElementById('teacher-chart'));
       chart2.draw(data2, options2);
 
-      // -------------- Student Satisfaction Chart -------------
+      // ----------------> Student Satisfaction Chart <----------------
       var data3 = new google.visualization.DataTable();
       data3.addColumn('string', 'logro');
       data3.addColumn('number', 'puntaje');
@@ -269,14 +273,14 @@ window.addEventListener('load', function() {
       var chart3 = new google.visualization.PieChart(document.getElementById('satisfaction-chart'));
       chart3.draw(data3, options3);
 
-      // -------------- NPS Chart -------------
+      // ----------------> NPS Chart <----------------
       var data4 = new google.visualization.DataTable();
       data4.addColumn('string', 'logro');
       data4.addColumn('number', 'puntaje');
       data4.addRows([
-        ['Detractors', detractors/100*totalStudents],
-        ['Passives', passives/100*totalStudents],
-        ['Promoters', promoters/100*totalStudents]
+        ['Detractors', detractors / 100 * totalStudents],
+        ['Passives', passives / 100 * totalStudents],
+        ['Promoters', promoters / 100 * totalStudents]
       ]);
 
       var options4 = {'title': 'Recomendarias LABORATORIA a otras personas',
@@ -287,7 +291,7 @@ window.addEventListener('load', function() {
       var chart4 = new google.visualization.PieChart(document.getElementById('nps-chart'));
       chart4.draw(data4, options4);
 
-      // -------------- Enrollment Chart -------------
+      // ----------------> Enrollment Chart <----------------
       var data5 = new google.visualization.DataTable();
       data5.addColumn('string', 'name');
       data5.addColumn('number', 'students');
@@ -304,7 +308,7 @@ window.addEventListener('load', function() {
       var chart5 = new google.visualization.PieChart(document.getElementById('enrollment-chart'));
       chart5.draw(data5, options5);
 
-      // -------------- Achievement Chart -------------
+      // ----------------> Achievement Chart <----------------
       var data6 = new google.visualization.DataTable();
       data6.addColumn('string', 'name');
       data6.addColumn('number', 'students');
@@ -321,7 +325,7 @@ window.addEventListener('load', function() {
       var chart6 = new google.visualization.PieChart(document.getElementById('achiv-chart'));
       chart6.draw(data6, options6);
     }
-    // Set a callback to run when the Google Visualization API is loaded.
+    // Set a callback to run when the Google Visualization API is loaded
     google.charts.setOnLoadCallback(drawChart);
 
     // ----------------> Crea función para generar lista de estudiantes <----------------
@@ -338,25 +342,25 @@ window.addEventListener('load', function() {
       sectionStudents.classList.remove('hide');
 
       for (var i = 0; i < arrayStudents.length; i++) {
-        // crear un div para almacenar el perfil de la estudiante
+        // Creando un div para almacenar el perfil de la estudiante
         var profilestudent = document.createElement('div');
         profilestudent.classList.add('profile-student');
         container.appendChild(profilestudent);
 
-        // crear la imagen para la foto de perfil de la estudiante
+        // Creando la imagen para la foto de perfil de la estudiante
         var imgprofile = document.createElement('img');
         imgprofile.setAttribute('src', arrayStudents[i].photo);
         imgprofile.classList.add('img-student');
         profilestudent.appendChild(imgprofile);
 
-        // agregar nombre de la estudiante
+        // Agregando nombre de la estudiante
         var studentName = document.createElement('p');
         studentName.textContent = arrayStudents[i].name.toUpperCase();
         studentName.classList.add('name-student');
         profilestudent.appendChild(studentName);
         sectionStudents.appendChild(container);
 
-        // agregar box-tech-skill student
+        // Agregando box-tech-skill student
         var boxTech = document.createElement('div');
         var percentTech = document.createElement('p');
         var techSkill = document.createElement('p');
@@ -367,7 +371,7 @@ window.addEventListener('load', function() {
         boxTech.appendChild(techSkill);
         profilestudent.appendChild(boxTech);
 
-        // agregar box-life-skill student
+        // Agregando box-life-skill student
         var boxLife = document.createElement('div');
         var percentLife = document.createElement('p');
         var lifeSkill = document.createElement('p');
