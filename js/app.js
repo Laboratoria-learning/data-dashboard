@@ -1,39 +1,6 @@
 window.addEventListener('load', function(event) {
-  var displayFilter = document.getElementById('menuPrincipal');
-  var displayFilterTwo = document.getElementById('fa-sort-desc2');
-  var displayFilterThree = document.getElementById('fa-sort-desc3');
   var checkedSite = document.getElementById('checkbox-site');
   var teacherRating = document.getElementById('numDataFourthRow');
-
-  displayFilter.addEventListener('click', function(event) {
-    var checkBoxSite = document.getElementById('checkbox-site');
-    var classCheckBoxSite = document.getElementsByClassName('checkbox-site')[0];
-    if (classCheckBoxSite.style.display = 'none') {
-      classCheckBoxSite.style.display = 'block';
-      classCheckBoxSite.style.left = '100px';
-      classCheckBoxSite.style.up = '80px';
-    } else classCheckBoxSite.style.display = 'none';
-  });
-
-  displayFilterTwo.addEventListener('click', function(event) {
-    var checkBoxCommonCore = document.getElementById('checkbox-commoncore');
-    var classCheckBoxCommonCore = document.getElementsByClassName('checkbox-commoncore')[0];
-    if (classCheckBoxCommonCore.style.display = 'none') {
-      classCheckBoxCommonCore.style.display = 'block';
-      classCheckBoxCommonCore.style.left = '180px';
-      classCheckBoxCommonCore.style.up = '30px';
-    } else classCheckBoxCommonCore.style.display = 'none';
-  });
-
-  displayFilterThree.addEventListener('click', function(event) {
-    var checkBoxHse = document.getElementById('checkbox-HSE');
-    var classCheckBoxHse = document.getElementsByClassName('checkbox-HSE')[0];
-    if (classCheckBoxHse.style.display = 'none') {
-      classCheckBoxHse.style.display = 'block';
-      classCheckBoxHse.style.left = '80px';
-      classCheckBoxHse.style.up = '30px';
-    } else classCheckBoxHse.style.display = 'none';
-  });
 
   // solucionando primer ennunciado
   // declarando variables generales
@@ -143,11 +110,11 @@ window.addEventListener('load', function(event) {
       }
     }
   }
+  // .onchange=changeEventHandler;},false);
 
   var percentPastScoreLimaStudents2017ii = Math.floor(pastScoreLimaStudents2017ii);
 
   checkedSite.addEventListener('change', function(event) {
-    console.log(event.target);
     if (checkedSite === 'lim2016 - ii') {
       getElementById('numDataNumber').innerHtml = enrolledLimaStudents2016ii;
       getElementById('numDataDropout').innerHtml = desertionLimaStudents2016ii;
@@ -161,7 +128,6 @@ window.addEventListener('load', function(event) {
     }
   });
 });
-
 
 // obteniendo promedio de los teachers
 // lima 2016-2
@@ -181,16 +147,14 @@ var promTeacherLim2017ii = ((teacherLim2017iiSprintOne + teacherLim2017iiSprintT
 // creando evento
   teacherRating.addEventListener('change', function(event) {
   console.log(event);
-  if (teacherRating == 'lim2016 - ii') {
+  if (teacherRating === 'lim2016 - ii') {
     getElementById('numDataFourthRow').innerHtml = promTeacherLim2016ii;
-  } else if (teacherRating == 'lim2017 - i') {
+  } else if (teacherRating === 'lim2017 - i') {
     getElementById('numDataFourthRow').innerHtml = promTeacherLim2017i;
-  } else if (teacherRating == 'lim2017 - ii') {
+  } else if (teacherRating === 'lim2017 - ii') {
     getElementById('numDataFourthRow').innerHtml = promTeacherLim2017ii;
   }
-}); 
-
-
+});
 
 // var shortCut = data['LIM']['2016-2']['students'];
 // console.log(shortCut.length);
