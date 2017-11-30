@@ -16,13 +16,12 @@
          </button>
          <nav id="menu-princ" class="disabled-menu">
            <ul class="menu-list">
-            <li class="menu-bar"><a href="#">ANNA DURAND</a></li>
-            <li class="menu-bar"><a href="#">Add strudent</a></li>
-            <li class="menu-bar"><a href="#">Remove student</a></li>
-            <li class="menu-bar"><a href="#">Add sprint</a></li>
+            <li class="menu-bar"><a class="menuLink" href="#">ANNA DURAND</a></li>
+            <li class="menu-bar"><a class="menuLink"href="#">Add strudent</a></li>
+            <li class="menu-bar"><a class="menuLink"href="#">Remove student</a></li>
+            <li class="menu-bar"><a class="menuLink"href="#">Add sprint</a></li>
            </ul>
           </nav>
-
        </div>
        <div class="bod1">
          <div class="information">
@@ -33,8 +32,8 @@
                 <option value="2017-I"id="generation">2017-I</option>
                 <option value="2017-II"id="generation">2017-II</option>
                 <option value="aqp"id="aqp"class="located">AREQUIPA</option>
-                <option value="2016-II"id="generation">2016-II</option>
-                <option value="2017-I"id="generation">2017-I</option>
+                <option value="aqp-2016-II"id="generation">2016-II</option>
+                <option value="aqp-2017-I"id="generation">2017-I</option>
                 <option value="cl" id="cl"class="located">SANTIAGO DE CHILE</option>
                 <option value="2016-II"id="generation">2016-II</option>
                 <option value="2017-I"id="generation">2017-I</option>
@@ -44,13 +43,6 @@
                 <option value="2017-I"id="generation">2017-I</option>
                 <option value="2017-II"id="generation">2017-II</option>
             </select>
-              <!-- <select id="selection-located" class="selection-located" name="">
-                 <option value="">Sede</option>
-             </select> -->
- <!-- Generaciones -->
-             <!-- <select id="generation" class="generation" name="">
-                 <option value="">Generación</option>
-             </select> -->
          <section class="options">
            <ul class="list-option">
              <li><input type="button" name="button-bar" data-tab-seleccionado="OVERVIEW" class="tab" value="OVERVIEW"></input></li>
@@ -126,18 +118,37 @@
           </div>
          </article>
          <article class="content" id="STUDENTS">
-           <div class="content-2">SPECIALIZATION:
-             <ul>
-                <li>Javascript</li>
-                <li>Ux Design</li>
-                <li>Front end Designer</li>
-             </ul>
-          </div>
+           <div class="list2">
+             <div class="list-student">
+               <div class="titleSpec">SPECIALIZACION :</div>
+               <a class="link" href="#">Javascript</a>
+               <a class="link" href="#">UX Design</a>
+               <a class="link" href="#">Front end Designer</a>
+             </div>
+             <div class="search">
+               <input type="text" name="" value="">
+               <div class="box-image"></div>
+             </div>
+           </div>
         </article>
          <article class="content" id="TEACHERS"><div class="content-3">yasssssLorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat velit commodi cupiditate quibusdam nihil blanditiis? Delectus sunt voluptatum ullam in blanditiis sint ratione nihil tempora hic mollitia, aliquam recusandae doloribus.</div></article>
+         <div class="second-file">
+          <div class="tech">
+              <p><strong>TECH SKILLS</strong></p>
+               <div class="content-box2">
+                <div class="box-enrolled">
+                    <div id="container-enrolled" class="students-currenly-up" ><strong>20</strong></div>
+                    <span class="students-currenly">#STUDENTS CURRENTLY ENROLLED</span>
+                  </div>
+                  <div class="box-deserte">
+                    <div id="container-deserte" class="container-deserte">72%</div>
+                    <span class="dropout">% DROPOUT</span>
+                  </div>
+                </div>
+                <div class="img-box2"><img src="assets/images/rectangular-graphic.png" alt="rectangular" class="rectangular"> <img src="assets/images/circle-graphic.png" alt="circle" class="circle"><div class="students"><span>#STUDENTS THAT MEET THE TARGET <br>#STUDENTS THAT DON'T MEET THE TARGET</span></div></div>
+          </div>
        </div>
      </section>
-
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
