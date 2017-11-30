@@ -25,6 +25,9 @@ window.addEventListener('load', function() {
 
   var scoresJedi = document.getElementById('scores-jedi');
 
+  var profilePic = document.getElementById('profilePic');
+  //console.log(profilePic);
+
   selection.addEventListener('change', mostrarInfo);
 
   function mostrarInfo() {
@@ -222,6 +225,25 @@ window.addEventListener('load', function() {
 
     scoresJedi.textContent = (totalRatingJedi / generationData.ratings.length).toFixed(2);
     scoresJedi.appendChild(div);
+
+    /*Funcionalidad para tab Students*/
+    for (var i = 0; i < generationData.students.length; i++) {
+      var photo = generationData.students[i].photo; //devuelve link de cada foto
+      var fullName = generationData.students[i].name; // devuelve nombre
+      var img = document.createElement('img');
+      img.setAttribute('src', photo);
+      //profilePic.appendChild(img);
+      img.style.width = '100%';
+      img.style.height = '100%';
+
+      var imgContainer = document.createElement('div')
+      imgContainer.appendChild(img);
+      profilePic.appendChild(imgContainer);
+      imgContainer.style.width = '205px';
+      imgContainer.style.height = '205px';
+      //imgContainer.appendChild(fullName);
+    }
+
   };
 
   // agregar el evento click a todos los tabs

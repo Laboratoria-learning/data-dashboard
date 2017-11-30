@@ -151,20 +151,14 @@ h2 {
 .tab.active {
   border-bottom: 4px solid #f7b617;
 }
-/*----------------------------Fin--------------------------------*/
 
 /*ESTILOS PARA SECCIÓN STUDENTS*/
 .students-tab {
   position: relative;
-  display: none;
+  background-color: red;
 }
 
-.showTab {
-  display: block;
-}
-
-/*Estilos para el contenedor div .specialization*/
-.students-tab .specialization {
+div#specialization.specialization {
 	width: 400px;
   position: absolute;
   top: 100px;
@@ -185,7 +179,6 @@ h2 {
   display: block;
 }
 
-/*Estilos para la barra de búsqueda*/
 .students-tab .search-box input {
   width: 58%;
   height: 40px;
@@ -207,7 +200,6 @@ h2 {
   z-index: 20;
 }
 
-/*Estilos para el contenedor div .students-profile*/
 .students-tab .students-profile {
   width: 58%;
   height: 220px;;
@@ -254,4 +246,8 @@ h2 {
   position: absolute;
   right: 40px;
   bottom: 20px;
+}
+
+#studentsP {
+  background-color: red;
 }
