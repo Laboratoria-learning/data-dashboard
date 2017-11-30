@@ -1,3 +1,4 @@
+
 window.addEventListener('load', function(event){
     
         var chooseGeneration = document.querySelector('.choose-sede-generation');
@@ -32,12 +33,7 @@ window.addEventListener('load', function(event){
                     title.textContent='';
                     title.textContent='CIUDAD DE MEXICO';
                 }
-            //var arraySedes = Object.keys(data);["AQP", "CDMX", "LIM", "SCL"]
-    
-            //generation.setAttribute('onchange', 'generation(this.value)');
-    
-            console.log(Object.keys(data[sede])); 
-            console.log(     Object.keys(data[sede])[0]          );       
+                   
     
             
             for(var i = 0; i <= Object.keys(data).length; i++){
@@ -52,9 +48,17 @@ window.addEventListener('load', function(event){
                             generation.appendChild(otherlistGeneration); 
     
                     }
+                    //para limpiar y qie no se repita
+                    optgroupt.addEventListener('click', function(){
+                        var sede = document.getElementsByClassName('generation-sede');
+                        for(var k = 0; k < sede.length; k++){
+                          generation.removeChild(sede[k]);
+                        }
+                      });  
+    
                 }            
             } 
-            /*************************************************************************/
+    
             generation.addEventListener('change', function(event){   
                 titleGen.textContent = event.target.value;
     
@@ -149,106 +153,43 @@ window.addEventListener('load', function(event){
                 console.log(studentAchievement);
                 console.log(retired);     
             });
+    //});
+    
+    
+     /*STUDENT SATISFACTION */
+     for (var satisfaction in data) {
+        if(satisfaction === event.target.value){ //reemplazar por dataalumns en el evento al jalar optgroupt
+          var dataSatisfaction = {};
+          dataSatisfaction = data[satisfaction];
+        }     
+      }
+      console.log(dataSatisfaction); //{2017-1: {…}, 2017-2: {…}} --> value de cada sede
+    
+      //Contenido de cada generación guardado en dataS
+      for(var g in dataSatisfaction){
+        var dataG = {};
+        dataG = dataSatisfaction[g];
+      }
+      console.log(dataG); //{students: Array(14), ratings: Array(2)}
+      console.log(dataG.ratings); //Objeto contenido en "ratings"
+      
+      //accediendo a student y su contenido
+      for (var s in dataG.ratings){
+        var dataStudent = {};
+        dataStudent = dataG.ratings[s]; //{sprint: 2, nps: {…}, student: {…}, teacher: 4.1, jedi: 4.2}
+        var dataExpectation = dataStudent.student;  //{no-cumple: 6, cumple: 75, supera: 19}
+      }
+    
+      for (var nc in dataExpectation){
+        var noCumple = {};
+        if(dataExpectation["no-cumple"]===false){
+          console.log(funciona);
+        }
+      }
+      console.log(dataExpectation["no-cumple"]); // valor de no-cumple : 6
+    
+    
     });
     
-                        //var test = "2017-2";
-                       /* if(Object.keys(data[sede])[j]==="2017-2"){
-                            arra.unshift(Object.keys(data[sede])[j]);
-                         }else if(Object.keys(data[sede])[j]==="2017-1"){
-                             arra.push(Object.keys(data[sede])[j]);
-                         }else {
-                             arra.push(Object.keys(data[sede])[j]);
-                         }*/
-        
-        
-       /* for(var i = 0; i < Object.keys(data).length; i++){
-            if(event.target.value === Object.keys(data)[i]){
-                for(var j = 0; j < Object.keys(data[Object.keys(data)[i]]).length; j++){
-                    var listGeneration = document.createElement('option');
-                    listGeneration.classList.add('generation');
-                    var textGeneration = document.createTextNode(Object.keys(data[Object.keys(data)[i]])[j]);
-                    listGeneration.appendChild(textGeneration);
-                    generation.appendChild(listGeneration);*/
-    
-       //for(var j = 0; j < Object.keys(data[Object.keys(data)[i]]).length; j++){
-       //var textGeneration = document.createTextNode(Object.keys(data[Object.keys(data)[i]])[j]);
-    
-     // generation.appendChild(listGeneration);
-    
-    
-    /*
-    
-    
-    
-          for(var i = 0; i < Object.keys(data).length; i++){
-            var listCity = document.createElement('optgroupt');
-            listCity.classList.add('optgroupt');
-            listCity.setAttribute('label',Object.keys(data)[i]);
-            var listText = document.createTextNode(Object.keys(data)[i]);
-            listCity.appendChild(listText);
-            chooseGeneration.appendChild(listCity);
-       
-            for(var j = 0; j < Object.keys(data[Object.keys(data)[i]]).length; j++){
-              var listGeneration = document.createElement('option');
-              listGeneration.classList.add('listGenerationStyle');
-              var textGeneration = document.createTextNode(Object.keys(data[Object.keys(data)[i]])[j]);
-              listGeneration.appendChild(textGeneration);
-              listCity.appendChild(listGeneration);
-               
-            }
-          } 
-      });*/
-    });
      
-    /*
-    //debugger
-    console.log(data);
-    console.log(Object.keys(data));//["AQP", "CDMX", "LIM", "SCL"]
-    console.log(Object.values(data));
-    console.log(Object.keys(data)[0]);
-    console.log(Object.values(data).length);//[{…}, {…}, {…}, {…}]
-    console.log(Object.values(data)[0]);
-    console.log([...Object.values(data)])
-    console.log([...Object.values(data)][0][0])
-    console.log([...Object.values(data)][0])
-    console.log(Object.keys([...Object.values(data)][0]))
-    console.log(Object.keys(Object.values(data)[0]))
-    console.log(Object.keys(Object.values(data)[0]).length);
-    //console.log(Object.keys(Object.keys(data)));
-    */
-    
-      /*
-      var nuevo = data.LIM["2017-2"].students;
-      console.log(nuevo);// 14 alumnos (Cada alumno 4 objetos)
-      
-      console.log(nuevo[0].active);
-      
-      var alumnos = Object.keys(nuevo);//["name", "photo", "active", "sprints"]
-      
-      
-      
-      
-      
-      
-      var cont=0;
-      debugger
-      for (var i = 0; i<=nuevo.length; i++) {
-         if (nuevo[i]['active']=== true){
-             cont++;
-         }
-      }
-      console.log(cont);
-      
-      /*
-      
-      var cont=0;
-      for(var i = 0; i<=nuevo.length; i++){
-         for(var j = 0 ; j<= alumnos[j].length; j++){
-             if(Object.keys(nuevo[i]).active){
-                 cont++;
-             }
-         }
-      }
-      */
-      
-      // Puedes hacer uso de la base de datos a través de la variable `data`
+    });
