@@ -13,7 +13,7 @@
       <section class="containerHeader"> <!--container Header-->
         <nav class="laboratoriaNav"> <!-- first Nav-->
           <div class="logoLaboratoria">
-            <img src="../assets/images/logo-laboratoria.svg" class="imgSVG" alt="imagen SVG" title="Logo Labo"/>
+            <img src="assets/images/descarga.png" class="imgLogo" alt="imagenLogo" title="logoLabo"/>
           </div>
           <div class="iconoMenu"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></div>
         </nav>
@@ -46,14 +46,14 @@
               <br>
             </form>
           </div>
-          <div class="subMenuPrincipal">OVERVIEW</div>
-          <div class="subMenu">STUDENTS</div>
-          <div class="subMenu">TEACHERS</div>
+          <div class="subMenuPrincipal"><button type="button" name="button" data-tab-seleccionado="tabOverview" class="tab">OVERVIEW</button></div>
+          <div class="subMenu"><button type="button" name="button" data-tab-seleccionado="tabStudents" class="tab">STUDENTS</button></div>
+          <div class="subMenu"><button type="button" name="button" data-tab-seleccionado="tabTeachers" class="tab">TEACHERS</button></div>
         </nav>
       </section>
     </header>
     <main>
-      <section class="containerMain"> <!-- container Main-->
+      <section id="overview" class="containerMain"> <!-- container Main-->
       <!-- first row statistical data -->
         <div class="statisticalDataFirst"> <!--first square-->
           <h1 class="statisticalDataTitle">ENROLLMENT</h1>
@@ -189,6 +189,47 @@
           </div>
         </div>
       </section>
+      <section id="students" class="containerMainStudents"> <!-- container Main Students-->
+        <!-- first row filtered main courses -->
+          <div class="mainCoursesFiltered"> <!--column left-->
+              <h1 class="mainCoursesTitle">SPECIALIZATION</h1>
+              <input type="checkbox" name="courses" value="courses" class="courses">Javascript<br>
+              <input type="checkbox" name="courses" value="courses" class="courses">UX Design<br>
+              <input type="checkbox" name="courses" value="courses" class="courses">Front end Designer<br>
+          </div>
+          <div class="inputStudentFiltered"> <!--input column rigth-->
+              <label><i class="fa fa-search" aria-hidden="true"></i></label>
+              <input type="text" value="" id="search" class="search" />
+          </div>
+          <div class="dataStudentFiltered"> <!--data students column rigth-->
+              <div id="photoStudent" class="photoStudent"><img class="photo" src="assets/images/alumna.jpg" alt="photo"></div>
+              <div id="dataStudent" class="dataStudent">
+                  <h3 class="nameStudent">DIANA NAVARRO</h3>
+                  <h5 class="typeStudent">Fronted Developer</h5>
+                  <ul id="typesTools" class="typesTools">
+                      <li id="typesToolsCourses" class="typesToolsCourses">JAVASCRIPT</li>
+                      <li id="typesToolsCourses" class="typesToolsCourses">APIs</li>
+                      <li id="typesToolsCourses" class="typesToolsCourses">JQUERY</li>
+                  </ul>
+              </div>
+              <div class="dataFinalStudent">
+                <div class="dataNumberFinal"> <!--left column-->
+                  <h6 class="numData">95.6 %</h6>
+                  <h6 class="descriptionNumData">TECH SKILLS</h6>
+                </div>
+                <div class="dataPorcentFinal"> <!--medium column-->
+                  <h6 class="numData">95.6 %</h6>
+                  <h6 class="descriptionNumData">LIFE SKILLS</h6>
+                </div>
+                <div class="dataFinal"> <!--rigth column-->
+                  <h6 class="numData">INTERM</h6>
+                  <h6 class="descriptionNumData">ENGLISH SKILLS</h6>
+                </div>
+              <div id="dataPerfil" class="dataPerfil"><span class="textDataPerfil" >Ver perfil</span><i class="fa fa-caret-right" aria-hidden="true"></i></div>
+        </section>
+        <section id="teachers">
+
+        </section>
     </main>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
