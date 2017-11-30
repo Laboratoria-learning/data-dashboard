@@ -1,3 +1,252 @@
-/*
- * Estilos de tu proyecto
- */
+ * {
+    margin: 0;
+    padding: 0;
+    /* background: rgba(209, 214, 224, 0.247); */
+}
+
+
+.logo {
+    background: white;
+}
+
+.logo img {
+    width: 150px;
+    margin: 0 44%;
+}
+
+
+.select {
+    padding: 7px 35px; 
+    background:rgba(255, 251, 0, 0.548); 
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+.option {
+    background: rgb(253, 251, 104);
+    padding: 7px 14px;
+    margin-right: 21px;
+    font-weight: 600;
+    border:none;
+    border-bottom: 4px solid rgb(253, 208, 8); 
+}
+
+
+.option:hover {
+    color :rgb(253, 208, 8);
+    border-bottom: 4px solid black; 
+}
+
+ li.list:hover {
+     background: white;
+     cursor: pointer;
+ }
+
+.tabs {
+    background:rgba(255, 251, 0, 0.548);   
+}
+
+.tab {
+    display: inline-block;
+    padding: 7px;
+    margin: 14px 35px;
+    cursor: pointer;
+    border-bottom: 4px solid rgb(253, 208, 8);
+    font-weight: 600; 
+}
+
+.tab:hover {
+    color :rgb(253, 208, 8);
+    border-bottom: 4px solid black;
+}
+
+.firt-boxes {
+    margin: 28px 95px 28px 95px;
+}
+
+div.estadist {
+    display: inline-block;
+    width: 33%;
+    height: 280px;
+    background: white;
+}
+
+h2 {
+    text-align: center;
+}
+
+div.block {
+    display: inline-block;
+    background: white;
+    padding: 0 0 0 35px;
+}
+
+ div.num {
+     display: inline-block;
+     background: white;
+     margin:  14px;
+ }
+
+ div.box {
+     background: #d6d8d3bb;
+     display:inline-block;
+     height: 42px;
+     width:120px;
+     font-size:19px;
+     padding: 7px;
+     text-align: center;
+ }
+
+img {
+    display: inline-block;
+}
+
+/* segunda section */
+
+ 
+.tec {
+   height:420px;
+   margin: 28px 95px 28px 95px;
+   /* background-color: #dbeff56c; */
+}
+
+
+ .hse{
+    height:420px;
+    margin: 28px 95px 28px 95px;
+    /* background-color: #dbeff56c; */
+
+}
+
+  .super-small{
+
+   width:50%;
+   height:63px;
+   background-color: #19bb5abb;
+   display: inline-block;
+   margin-left:28px; 
+}
+ 
+.box2{
+   margin-left:28px;
+}
+
+
+.last-box{
+    background-color: #e4c61e67;
+    height:420px;
+    display: flex;
+    margin: 28px 95px 28px 95px;
+}
+
+.small-box{
+    width:33%;
+    height:280px;
+    background-color: #ffffff;
+    margin: 61px  31px 84px 5px;  
+}
+ 
+
+
+
+/*----------------- STUDENTS --------------*/
+
+.inline {
+    display: inline-block;
+}
+
+.coders {
+    height: 300px;
+    width: 100px;
+    background: red;
+}
+
+.menu {
+  border-radius: 15px;
+  background:#FFCCFF;
+  border: 2px solid yellow;
+  width: 350px;
+  height: 100px;
+  display:inline-block;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+form h2 {
+  font-size: 15px;
+  padding: 10px;
+}
+
+
+.list {
+    list-style: none;
+}
+
+
+form {
+  line-height: 2.5px;
+  display: inline-block;
+  padding: 10px;
+
+
+}
+
+.coders {
+    height: 490px;
+    width:  500px;
+    background:#CCCCFF;
+    display: inline-block;
+    margin-top:  0px;
+    border-radius: 2px;
+    margin-left: 450px;
+    margin-bottom: 25px;
+
+}
+
+/*colocando immagen de las  alumnans*/
+.coder{
+  width: 200px;
+  height: 200px;
+  margin: 45px;
+  display: inline-block;
+
+}
+
+.coders h2 {
+  font-size: 35px;
+  margin-left:100px;
+  display: inline;
+}
+
+.coders h3 {
+  font-size: 15px;
+  margin-top: 20px;
+  margin-left: 100px;
+  display: inline;
+}
+.major {
+  margin-left: 50px;
+}
+.major p {
+  display: inline-block;
+  border: 1px solid blue;
+  margin: 10px;
+  padding: 5px;
+  font-size: 15px;
+}
+.points p {
+  display: inline-block;
+  border: 1px solid purple;
+  border-radius: 2px;
+  margin: 10px;
+  padding: 5px;
+  font-size: 15px;
+}
+
+
+
+.hiden {
+    display: none;
+}
+
