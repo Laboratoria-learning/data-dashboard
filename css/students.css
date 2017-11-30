@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "FaktProSoft", "Helvetica Neue", helvetica, arial, sans-serif;
+  color: #333;
+}
+/* HEADER*/
+header {
+  height: auto;
+  width: 100%;
+  background-color: #fb1;
+  box-sizing: border-box;
+}
+
+header p {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  position: relative;
+  bottom: 25px;
+  color: white;
+}
+
+.left {
+  left: 25px;
+}
+
+.right {
+  right: 25px;
+}
+
+img {
+  width: 200px;
+}
+
+.fa {
+  color: white;
+  font-size: 25px;
+  transform: translateY(-100%);
+}
+
+.fa-bars {
+  padding-left: 20px;
+}
+
+.fa-user-circle{
+  position: relative;
+  left: 970px;
+  font-size: 35px;
+  transform: translateY(-50%);
+}
+
+.text-Uppercase {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/*Navegador*/
+nav {
+  background-color: #ccc;
+  padding: 0;
+  margin: 0px;
+  text-align: center;
+}
+
+p {
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.nav {
+  width: 150px;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 920px;
+}
+.nav ul {
+  margin-top: 30px;
+  list-style: none;
+}
+/*Countries*/
+.nav li {
+  margin-top: 5px;
+  background-color: black;
+  width: 100px;
+  border-radius: 5px;
+  transform: translateX(25%);
+  cursor: pointer;
+  border: 1px solid black;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fb1;
+}
+
+.position {
+  margin-top: 50px;
+  position: absolute;
+  right: 7%;
+  top: 7%;
+}
+
+a {
+  border: 2px solid #fb1;
+  padding: 5px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: black;
+  color: #fb1;
+}
+
+a:active {
+  text-decoration: underline;
+}
+/*Seccion de container */
+.container {
+  margin-top: 60px;
+  display: inline-block;
+  width: auto;
+  margin-left: 10px;
+  box-sizing: border-box;
+  position: absolute;
+  background-color: #fff;
+}
+/*Estilo del div*/
+.style {
+  background-color: #ccc;
+  width: 700px;
+  height: 250px;
+  position: relative;
+  right: -450px;
+  border: 2px solid #fb1;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  padding: 20px;
+}
+/*Estilo del la photo*/
+.photo {
+  width: 160px;
+  height: 160px;
+  display: inline-block;
+}
+/*Estilo de nombres*/
+.names {
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  display: inline-block;
+  position: absolute;
+  margin-left: 10px;
+}
+/*Estilos del cuadro que contiene los cursos y la especializacion*/
+.divSmall {
+  background-color: transparent;
+  width: 200px;
+  height: 100px;
+  display: inline-block;
+  margin-left: 10px;
+  position: relative;
+  bottom: 80px;
+}
+
+.p {
+  font-size: 16px;
+}
+
+.curse {
+  background-color: #f7f7f7;
+  font-size: 10px;
+  margin-right: 15px;
+  margin-top: 15px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+/*Div que contiene las notas*/
+.divNote {
+  background-color: transparent;
+  width: 270px;
+  height: 100px;
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 10px;
+  position: relative;
+  bottom: 100px;
+}
+
+.note {
+  background-color: #f7f7f7;
+  font-size: 20px;
+  margin-right: 27px;
+  margin-top: 15px;
+  padding: 5px;
+  box-sizing: border-box;
+  font-weight: bold;
+  transform: translateX(-100%);
+}
+
+.skill {
+  font-size: 12px;
+  /*position: relative;
+  top: 25px;
+  left: 60px;*/
+  background-color: #f7f7f7;
+}
+
+.skillT {
+  position: relative;
+  top: 25px;
+  left: 10px;
+}
+
+.skillH {
+  position: absolute;
+  top: 52px;
+  right: 105px;
+}
+
+.skillE {
+  position: absolute;
+  top: 52px;
+  right: 1px;
+}
+
+.noteM {
+  background-color: #f7f7f7;
+  font-size: 18px;  
+  position: absolute;
+  top: 22px;
+  right: 20px;
+}
+
+.profile {
+  position: relative;
+  top: -50px;
+  left: 550px;
+  color: #fb1;
+  text-shadow: 2px 1px black;
+}
