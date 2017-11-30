@@ -90,16 +90,17 @@ function inscription(event) {
   alumSatisfied.setAttribute('class', 'number');
   
   // función que devuelve el promedio de la evaluación de los maestros
-  var sumEvaluation = 0;
+  var sumEvaTeacher = 0;
+  var sumEvaJedi = 0;
 
   function averageTeacher(){
     ratings = data[sede][gen].ratings;
     for (var i = 0; i < ratings.length; i++) {
       console.log(ratings[i]['teacher']);
-      sumEvaluation = sumEvaluation + ratings[i]['teacher'];
+      sumEvaTeacher = sumEvaTeacher + ratings[i]['teacher'];
     }
 
-    var averageEvaluation = sumEvaluation/ratings.length;
+    var averageEvaluation = sumEvaTeacher/ratings.length;
     return averageEvaluation.toFixed(1);
   }
   
@@ -113,19 +114,16 @@ function inscription(event) {
     ratings = data[sede][gen].ratings;
     for (var i = 0; i < ratings.length; i++) {
       console.log(ratings[i]['jedi']);
-      sumEvaluation = sumEvaluation + ratings[i]['jedi'];
+      sumEvaJedi = sumEvaJedi + ratings[i]['jedi'];
     }
 
-    var averageEvaluation = sumEvaluation / ratings.length;
+    var averageEvaluation = sumEvaJedi / ratings.length;
     return averageEvaluation.toFixed(1);
     }
 
-    var evaluationTeacher = document.getElementById('eva-teacher');
-    evaluationTeacher.textContent = averageTeacher();
-    evaluationTeacher.setAttribute('class', 'number');
+    var evaluationJedi = document.getElementById('eva-jedi');
+    evaluationJedi.textContent = averageJedi();
+    evaluationJedi.setAttribute('class', 'number');
   };
-
-
-// función que devuelve puntuación promedio de las profesor@s
 
 
