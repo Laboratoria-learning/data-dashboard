@@ -91,8 +91,34 @@ window.addEventListener('load', function(event) {
       }
     }
   }
+  var percentPastScoreLimaStudents2016ii = Math.floor((pastScoreLimaStudents2016ii * 100) / (enrolledLimaStudents2016ii)) + '%';
 
-  var percentPastScoreLimaStudents2016ii = Math.floor(pastScoreLimaStudents2016ii)
+
+  // caso Lima2017-1
+
+  for (var i = 0; i < limaStudents2017i.length;i++) {
+    if (limaStudents2017i[i]['active'] === true) {
+      activeLimaStudents2017i ++;
+    } else {
+      inactiveLimaStudents2017i ++;
+    }
+  }
+  var enrolledLimaStudents2017i = activeLimaStudents2017i + inactiveLimaStudents2017i;
+  console.log(enrolledLimaStudents2017i);
+  var desertionLimaStudents2017i = Math.floor((inactiveLimaStudents2017i * 100) / (enrolledLimaStudents2017i)) + '%';
+
+  var pastScoreLimaStudents2017i = 0;
+
+  for (var i = 0; i < limaStudents2017i.length;i++) {
+    // ingresando a los sprints para obtener las notas tech y hse
+    for (var j = 0; j < limaStudents2017i[i]['sprints'].length; j++) {
+      var sprintScoreLimaStudents2017i = (limaStudents2017i[i]['sprints'][j]['score']['tech'] + limaStudents2017i[i]['sprints'][j]['score']['hse']);
+      if (sprintScoreLimaStudents2017i >= 2100) {
+        pastScoreLimaStudents2017i ++;
+      }
+    }
+  }
+  var percentPastScoreLimaStudents2017i = Math.floor((pastScoreLimaStudents2017i * 100) / (enrolledLimaStudents2017i)) + '%';
 
   checkedSite.addEventListener('change', function(event) {
     console.log(event.target);
@@ -100,7 +126,13 @@ window.addEventListener('load', function(event) {
       getElementById('numDataNumber').innerHtml = enrolledLimaStudents2016ii;
       getElementById('numDataDropout').innerHtml = desertionLimaStudents2016ii;
       getElementById('numDataAchievement').innerHtml = pastScoreLimaStudents2016ii;
-    };
+      getElementById('numDataAchievementPercent').innerHtml = percentPastScoreLimaStudents2016ii;
+    } else if (checkedSite === 'lima2017-i') {
+      getElementById('numDataNumber').innerHtml = enrolledLimaStudents2017i;
+      getElementById('numDataDropout').innerHtml = desertionLimaStudents2017i;
+      getElementById('numDataAchievement').innerHtml = pastScoreLimaStudents2017i;
+      getElementById('numDataAchievementPercent').innerHtml = percentPastScoreLimaStudents2017i;
+    }
   });
 });
 
