@@ -58,6 +58,8 @@ function begin() {
       var currentStudents = 0;
       var dropoutStudents = 0;
       var overcomeStudents = 0;
+      var techTarget = 0;
+      var hseTarget = 0;
       // Meta de puntos Tech 1260    Meta de punstos HSE 840
 
       // Contar actuales y retiradas
@@ -68,9 +70,7 @@ function begin() {
           // Para tener promedios
           var techSum = 0;
           var hseSum = 0;
-          var techTarget = 0;
-          var hseTarget = 0;
-          // Sacar promedio de tech y hse
+          // Sacar promedio de tech y hse y las que alcanzaron meta de puntos por cada uno
           for (var j = 0; j < sprints; j++) {
             techSum += students[i].sprints[j].score.tech;
             if (students[i].sprints[j].score.tech > 1260) {
@@ -85,6 +85,7 @@ function begin() {
           console.log(techAvrg);
           var hseAvrg = Math.floor(hseSum / sprints);
           console.log(hseAvrg);
+          // Alumnas que superan meta de puntos general
           if (techAvrg > 1260 && hseAvrg > 840) {
             overcomeStudents++;
           }
