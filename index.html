@@ -21,18 +21,46 @@
       </div>
     </header>
     <nav class="menu">
-        <div class="container">
-          <div class="menu-principal">
-            <h1 class="title">SANTIAGO DE CHILE 2017-II</h1>
-            <i class="icon fa fa-caret-down" aria-hidden="true"></i>
-          </div>
-          <div class="submenu">
-            <h2 class="subtitle active">OVERVIEW</h2>
-            <h2 class="subtitle">STUDENTS</h2>
-            <h2 class="subtitle">TEACHERS</h2>
-          </div>
+      <div class="container">
+        <div class="menu-principal" id="menu-principal">
+          <h1 class="title">SANTIAGO DE CHILE 2017-II</h1>
+          <i class="icon fa fa-caret-down" aria-hidden="true"></i>
         </div>
-      </nav>
+        <div class="submenu">
+          <h2 class="subtitle active">OVERVIEW</h2>
+          <h2 class="subtitle">STUDENTS</h2>
+          <h2 class="subtitle">TEACHERS</h2>
+        </div>
+      </div>
+      <div class="content-menu hidden" id="content-menu">
+        <ul>
+          <form name="option-generation">
+            <div>
+              <p>Lima</p><br>
+              <input type="radio" name="option" value="2016-2" data-place="LIM"><label>2016-2</label> 
+              <input type="radio" name="option" value="2017-1" data-place="LIM"><label>2017-1</label> 
+              <input type="radio" name="option" value="2017-2" data-place="LIM"><label>2017</label>
+            </div>
+            <div>
+              <p>Arequipa</p><br>
+              <input type="radio" name="option" value="2016-2" data-place="AQP"><label>2016-II</label> 
+              <input type="radio" name="option" value="2017-1" data-place="AQP"><label>2016-I</label>
+            </div>
+            <div>
+              <p>Santiago de Chile</p><br>
+              <input type="radio" name="option" value="2016-2" data-place="SCL"><label>2016-II</label>
+              <input type="radio" name="option" value="2017-1" data-place="SCL"><label>2017-I</label> 
+              <input type="radio" name="option" value="2017-2" data-place="SCL"><label>2017-II</label>
+            </div>
+            <div>
+              <p>Ciudad de México</p><br>
+              <input type="radio" name="option" value="2017-1" data-place="CDMX"><label>2017-I</label>
+              <input type="radio" name="option" value="2017-2" data-place="CDMX"><label>2017-II</label>
+            </div>
+          </form>
+        </ul>
+      </div>
+    </nav>
     <main>
       <section class="overview">
         <div class="container">
@@ -41,8 +69,8 @@
               <h3>ENROLLMENT</h3>
               <div class="content-data space-between">
                 <div class="data">
-                  <span class="num">120 </span>
-                  <span class="text"># STUDENTS CURRENTLY ENROLLET</span>
+                  <span class="num" id="students-currently">0</span>
+                  <span class="text">#</span>
                 </div>
                 <div class="data">
                   <span class="num red">20%</span>
@@ -87,36 +115,60 @@
         </div>
       </section>
     <section class="overview  tech-skills">
-        <div class="container">
-          <div class="content-data space-between">
-            <div class="data-div">
-              <h3>TECH SKILLS</h3>
-              <div class="select">
-                <span class="gray">overall (cumulative)</span>
-                <i class="icon fa fa-caret-down" aria-hidden="true"></i>
+      <div class="container">
+        <div class="content-data space-between">
+          <div class="data-div menu">
+            <h3>TECH SKILLS</h3>
+            <div class="select">
+              <span class="gray">overall (cumulative)</span>
+              <i class="icon fa fa-caret-down" aria-hidden="true"></i>
+            </div>
+            <div class="content-menu hidden" id="content-menu">
+              <ul>
+                <li value='LIM'>
+                  <p class="place">LIMA</p> 
+                  <ul class="sub-menu">
+                    <li value='2016-2' class="sub-option">2016-2</li>
+                    <li value='2017-1' class="sub-option">2017-1</li>
+                    <li value='2017-2' class="sub-option">2017-2</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="content-data space-between">
+              <div class="data">
+                <span class="num">90</span>
+                <span class="text"># STUDENTS THAT MEET THE TARGET</span>
               </div>
-              <div class="content-data space-between">
-                <div class="data">
-                  <span class="num">90</span>
-                  <span class="text"># STUDENTS THAT MEET THE TARGET</span>
-                </div>
-                <div class="data">
-                  <span class="num green">62</span>
-                  <span class="text">% OF TOTAL (135)</span>
-                </div>
+              <div class="data">
+                <span class="num green">62</span>
+                <span class="text">% OF TOTAL (135)</span>
               </div>
             </div>
+          </div>
         </div>
       </div>
     </section>
     <section class="overview  tech-skills">
       <div class="container">
         <div class="content-data space-between">
-          <div class="data-div">
+          <div class="data-div menu">
             <h3>LIFE SKILLS</h3>
             <div class="select">
               <span class="gray">Last  Sprint(S4)</span>
               <i class="icon fa fa-caret-down" aria-hidden="true"></i>
+            </div>
+            <div class="content-menu hidden">
+              <ul>
+                <li value='LIM'>
+                  <p class="place">LIMA</p> 
+                  <ul class="sub-menu">
+                    <li value='2016-2' class="sub-option">2016-2</li>
+                    <li value='2017-1' class="sub-option">2017-1</li>
+                    <li value='2017-2' class="sub-option">2017-2</li>
+                  </ul>
+                </li>
+              </ul>
             </div>
             <div class="content-data space-between">
               <div class="data">
