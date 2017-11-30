@@ -16,6 +16,33 @@ for (var i = 0; i < studentsSCL20171.length; i++) {
 }
 var numdesertedSCL20171 = desertedSCL20171.length;
 
+//------------------------------
+
+/* El total de estudiantes presentes por sede y generación. */
+// estudiantes SCL
+var studentsSCL20162 = data.SCL['2016-2'].students;
+// estudiantes activas SCL 2017-1
+activeSCL20162 = [];
+for (var i = 0; i < studentsSCL20162.length; i++) {
+  if (studentsSCL20162[i].active) { // active = false
+
+    activeSCL20162.push(studentsSCL20162[i]);
+  }
+}
+console.log('alumans activas: ' + activeSCL20162 );
+
+//----------------------
+
+var sprintActive= activeSCL20162.sprints; console.log(sprintActive);
+
+promHSE = [];
+for (var i = 0; i < sprintActive.length; i++) {
+
+    promHSE.push(sprintActive[i].score.hse);
+
+}
+
+console.log('promedio hse de aluna activas: ' + promHSE);
 
 
 //------------------------------

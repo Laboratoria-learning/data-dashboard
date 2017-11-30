@@ -543,17 +543,29 @@ console.log('total estududiantes SCL : ' + sumEstudentsSCL);
 
 /* -------promesdio hse---------------------------*/
 
-/* *****2017-1***** */
+// ------------------------------
 
 /* El total de estudiantes presentes por sede y generación. */
-
-var promHSE = data.SCL['2017-1'].students;
-// estudiantes desertaron SCL 2017-1
-alumnasPromHSE = [];
-for (var i = 0; i < studentsSCL20171.length; i++) {
-  if (!studentsSCL20171[i].active) { // active = false
-    desertedSCL20171.push(studentsSCL20171[i]);
+// estudiantes SCL
+var studentsSCL20162 = data.SCL['2016-2'].students;
+// estudiantes activas SCL 2017-1
+activeSCL20162 = [];
+for (var i = 0; i < studentsSCL20162.length; i++) {
+  if (studentsSCL20162[i].active) {
+    activeSCL20162.push(studentsSCL20162[i]);
   }
 }
-var numdesertedSCL20171 = desertedSCL20171.length;
-console.log('numero de estudiantes Desertaron SCL20171 : ' + numdesertedSCL20171);
+console.log('alumans activas: ' + activeSCL20162);
+
+// ----------------------
+
+var sprintActive = activeSCL20162.sprints; console.log(sprintActive);
+
+promHSE = [];
+for (var i = 0; i < sprintActive.length; i++) {
+  promHSE.push(sprintActive[i].score.hse);
+}
+
+console.log('promedio hse de aluna activas: ' + promHSE);
+
+// ------------------------------
