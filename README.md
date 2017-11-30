@@ -40,6 +40,7 @@ Lograr:
 
 ![paginaUno](assets/images/paginaUno.png)
 ![pagina6](assets/images/pagina6.png)
+![paginaUno-sede](assets/images/paginaUno-sede.png)
 
 Developers web:
 
