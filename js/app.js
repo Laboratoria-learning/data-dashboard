@@ -1,6 +1,5 @@
 /* Funcionalidad de tu producto*/
 window.addEventListener('load', function() {
-  var currentStudents = document.getElementById('currentStudents');
   var sede = document.getElementsByClassName('sede');
   var promocion = document.getElementsByClassName('promocion');
 
@@ -8,12 +7,33 @@ window.addEventListener('load', function() {
   var container1 = document.getElementById('container1');// al que quiero que aparezca
   var overview = document.getElementById('overvi');// opcion overview
   var overcon = document.getElementById('overview');// contenido overview
-  
-
- /* function studentsLaboratoria(sede, generacion) {
-    
+  var lima = document.getElementById('lima'); // el evento clicl select
+  var currentStudents = document.getElementById('currentStudents');// mostrar la cantidad de alumnas
+  // var par = document.getElementById('par')
+  /* function studentsLaboratoria(sede, generacion) { 
   }  
   studentsLaboratoria('Lima', '2017-II');*/
+  lima.addEventListener('select', container);
+  function container() {
+    
+  }
+  // 1.funcion para la primera solicitud de usuario
+  function cantStudents() {
+    var sedAlum = data['AQP']['2016-2']['students'];
+    
+    for (var i = 0; i < n.length ; i++) {
+      if (n[i].active === true) {
+        var points = n[i].sprints.score.hse;
+        // for(var j = 0; j<points.length;j++){
+        //  var score1 = [j].score.hse;
+              
+        // console.log(points);
+      } else {
+            
+        
+      }
+    }
+  }
 
 
   student.addEventListener('click', elige);
@@ -31,7 +51,7 @@ window.addEventListener('load', function() {
   opcionMenu.style.display = 'block';
   }*/
   
- /* btnmenu.addEventListener('click', showMenu);
+  /* btnmenu.addEventListener('click', showMenu);
   function showMenu() { 
     if (menu.classList.contains('disabled-menu')) { 
       menu.classList.add('enabled-menu'); 
@@ -42,23 +62,6 @@ window.addEventListener('load', function() {
       menu.classList.remove('enabled-menu');
     }
   }*/
-  
-  
- 
-   // overview.style.display = 'none';
-  /* menu.addEventListener('click', option);
-  function option() {
-      alert('hola');
-    if (opcionMenu.classList.contains('disabled-menu')) {
-      opcionMenu.classList.add('enabled-menu');
-      opcionMenu.classList.remove('disabled-menu');   
-    } else {
-      opcionMenu.classList.add('disabled-menu');
-      opcionMenu.classList.remove('enabled-menu');
-    }
-  }*/
-
-
 });
 
      
