@@ -114,6 +114,33 @@ window.addEventListener('load', function(event) {
       divStudentsAchievement.innerHTML = '% OF TOTAL (' + totalStudentsAchievement + ')';
   
       divPercentAchievement.innerHTML = parseFloat((str['ratings'][event.target.value]['student']['cumple'] + str['ratings'][event.target.value]['student']['supera']) * 100 / totalStudentsAchievement).toFixed(0) + ' %';
+      
+      console.log(str['ratings'].length);
+      // Realizamos el gráfico de ACHIEVEMENT      
+      google.charts.load('current', {'packages': ['corechart']});
+
+      google.charts.setOnLoadCallback(drawChartEnrollment);
+
+    
+      function drawChartEnrollment() {
+        // create the data table
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'S');
+        data.addColumn('number', 'Q');
+        for (i = 0;i < str['ratings'].length;i++) {
+          data.addRows([
+            ['S' + str['ratings'][i]['sprint'], str['ratings'][i]['student']['cumple'] + str['ratings'][i]['student']['supera']],
+       
+       
+          ]);
+        }
+        
+        
+        var options = {'title': 'Achievement actual'};        
+        var chart = new google.visualization.LineChart(document.getElementById('achievement-chart'));
+        chart.draw(data, options);
+      }
+      
       // Llenando datos del NPS
       var promoters = str['ratings'][event.target.value]['nps']['promoters'];
       var passive = str['ratings'][event.target.value]['nps']['passive'];
@@ -124,6 +151,30 @@ window.addEventListener('load', function(event) {
       divPassive.innerHTML = passive + '% Passive';
       divDetractors.innerHTML = detractors + '% Detractores';
 
+          // Realizamos el gráfico de NPS      
+          google.charts.load('current', {'packages': ['corechart']});
+          
+                google.charts.setOnLoadCallback(drawChartNPS);
+          
+              
+                function drawChartNPS() {
+                  // create the data table
+                  var data = new google.visualization.DataTable();
+                  data.addColumn('string', 'S');
+                  data.addColumn('number', 'NPS');
+                  for (i = 0;i < str['ratings'].length;i++) {
+                    data.addRows([
+                      ['S' + str['ratings'][i]['sprint'], str['ratings'][i]['nps']['promoters'] - str['ratings'][i]['nps']['detractors']],
+                 
+                 
+                    ]);
+                  }
+                  
+                  
+                  var options = {'title': 'NPS actual'};        
+                  var chart = new google.visualization.LineChart(document.getElementById('nps-chart'));
+                  chart.draw(data, options);
+                }
       // Llenando datos del ENROLLMENT
       var countEnrolled = 0;
       var countDropped = 0;
@@ -132,17 +183,17 @@ window.addEventListener('load', function(event) {
       for (i = 0;i < str['students'].length;i++) {
         if (str['students'][i]['active'] === true) {
           countEnrolled = countEnrolled + 1;
-        }else {
+        } else {
           countDropped = countDropped + 1;
         }
       }
       divKpiEnrollment.innerHTML = countEnrolled;
-      divKpiDropout.innerHTML = parseFloat(countDropped / (countEnrolled + countDropped)*100).toFixed(0) + ' %';
+      divKpiDropout.innerHTML = parseFloat(countDropped / (countEnrolled + countDropped) * 100).toFixed(0) + ' %';
       console.log(data['LIM']['2016-2']['students']);
       console.log(countEnrolled);
       console.log(countDropped);
 
-      // Realizamos el gráfico de deserción
+      // Realizamos el gráfico de deserción - enrollment
       google.charts.load('current', {'packages': ['corechart']});
       google.charts.setOnLoadCallback(drawChart);
 
@@ -162,7 +213,6 @@ window.addEventListener('load', function(event) {
 
         chart.draw(data, options);
       }
-      
     });
   }
 
