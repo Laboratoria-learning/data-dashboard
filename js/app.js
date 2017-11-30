@@ -67,7 +67,7 @@ function changeTitle() {
     var sprint2Jedi = data['LIM']['2016-2']['ratings'][1]['jedi'];
     drawPromoter(sprint1, sprint2, 0, 0);
     drawTeacher(sprint1Teacher, sprint2Teacher, 0, 0);
-    drawJedi(sprint1Jedi,sprint2Jedi,0,0);
+    drawJedi(sprint1Jedi, sprint2Jedi, 0, 0);
     break;
   case 'lim2017I':
     titleSelector.textContent = 'Lima 2017-I';
@@ -92,8 +92,8 @@ function changeTitle() {
     var sprint3Jedi = data['LIM']['2017-1']['ratings'][2]['jedi'];
     var sprint4Jedi = data['LIM']['2017-1']['ratings'][3]['jedi'];
     drawPromoter(sprint1, sprint2, sprint3r, sprint4);
-    drawTeacher(sprint1Teacher,sprint2Teacher,sprint3Teacher,sprint4Teacher);
-    drawJedi(sprint1Jedi,sprint2Jedi,sprint3Jedi,sprint4Jedi);
+    drawTeacher(sprint1Teacher, sprint2Teacher,sprint3Teacher,sprint4Teacher);
+    drawJedi(sprint1Jedi, sprint2Jedi, sprint3Jedi,sprint4Jedi);
     break;
   case 'lim2017II':
     titleSelector.textContent = 'Lima 2017-II';
@@ -335,7 +335,7 @@ function calculateAchievement(sede, year) {
   var sumHse;
   // var numSprint = data[sede][year]['students'][0]['sprints'].length;
   var numSprint;
-  var cantEstudents = data[sede][year]['students'].length; 
+  var cantEstudents = data[sede][year]['students'].length;
   // console.log(data[sede][year]['students'][0]['sprints'].length);
   // console.log(cantEstudents);
   for (var i = 0; i < cantEstudents ; i++) {
@@ -382,7 +382,7 @@ function TechSkill() {
     drawTechSkill(grafyMeet, 17 - grafyMeet);
     break;
   case 'lim2017II':
-    calculateTech('LIM', '2017-2', 2); 
+    calculateTech('LIM', '2017-2', 2);
     grafyMeet = calculateTech('LIM', '2017-2', 2);
     drawTechSkill(grafyMeet, 14 - grafyMeet);
     break;
@@ -392,17 +392,17 @@ function TechSkill() {
     drawTechSkill(grafyMeet, 15 - grafyMeet);
     break;
   case 'are2017I':
-    calculateTech('AQP', '2017-1', 3); 
+    calculateTech('AQP', '2017-1', 3);
     grafyMeet = calculateTech('AQP', '2017-1', 3);
-    drawTechSkill(grafyMeet, 15 - grafyMeet); 
+    drawTechSkill(grafyMeet, 15 - grafyMeet);
     break;
   case 'chi2016II':
-    calculateTech('SCL', '2016-2', 4);  
+    calculateTech('SCL', '2016-2', 4);
     grafyMeet = calculateTech('SCL', '2016-2', 4);
-    drawTechSkill(grafyMeet, 11 - grafyMeet);  
+    drawTechSkill(grafyMeet, 11 - grafyMeet);
     break;
   case 'chi2017I':
-    calculateTech('SCL', '2017-1', 3); 
+    calculateTech('SCL', '2017-1', 3);
     grafyMeet = calculateTech('SCL', '2017-1', 3);
     drawTechSkill(grafyMeet, 23 - grafyMeet);
     break;
@@ -441,27 +441,27 @@ function lifeSkill() {
   case 'lim2017II':
     calculateHse('LIM', '2017-2', 2);
     grafyMeet = calculateHse('LIM', '2017-2', 2);
-    drawLifeSkill(grafyMeet, 14 - grafyMeet);  
+    drawLifeSkill(grafyMeet, 14 - grafyMeet);
     break;
   case 'are2016II':
     calculateHse('AQP', '2016-2', 4);
     grafyMeet = calculateHse('SCL', '2016-2', 4);
-    drawLifeSkill(grafyMeet, 11 - grafyMeet); 
+    drawLifeSkill(grafyMeet, 11 - grafyMeet);
     break;
   case 'are2017I':
     calculateHse('AQP', '2017-1', 3);
     grafyMeet = calculateHse('AQP', '2017-1', 3);
-    drawLifeSkill(grafyMeet, 15 - grafyMeet);  
+    drawLifeSkill(grafyMeet, 15 - grafyMeet);
     break;
   case 'chi2016II':
     calculateHse('SCL', '2016-2', 4);
     grafyMeet = calculateHse('SCL', '2016-2', 4);
-    drawLifeSkill(grafyMeet, 11 - grafyMeet);  
+    drawLifeSkill(grafyMeet, 11 - grafyMeet);
     break;
   case 'chi2017I':
     calculateHse('SCL', '2017-1', 3);
     grafyMeet = calculateHse('SCL', '2017-1', 3);
-    drawLifeSkill(grafyMeet, 23 - grafyMeet);  
+    drawLifeSkill(grafyMeet, 23 - grafyMeet);
     break;
   case 'chi2017II':
     calculateHse('SCL', '2017-2', 2);
@@ -476,7 +476,7 @@ function lifeSkill() {
   case 'mex2017II':
     calculateHse('CDMX', '2017-2', 2);
     grafyMeet = calculateHse('CDMX', '2017-2', 2);
-    drawLifeSkill(grafyMeet, 46 - grafyMeet);  
+    drawLifeSkill(grafyMeet, 46 - grafyMeet);
     break;
   }
 }
@@ -517,7 +517,7 @@ function calculateTech(sede, year, numSprint) {
     studentCurrentlySkill.innerHTML = '<b>' + sumSprintTwo + '</b>' + '<br> # students that meet the target';
     totalSkill.innerHTML = '<b>' + percentSprint + '</b>' + '<br> % of total (' + cantEstudents + ')';
     return sumSprintTwo;
-    break;  
+    break;
   case 'sprint3':
     if (numSprint > 2) {
       var sumSprintThree = 0;
@@ -538,7 +538,7 @@ function calculateTech(sede, year, numSprint) {
       totalSkill.innerHTML = '';
       studentCurrentlySkill.innerHTML = '';
       alert('No hay Sprint 3');
-    } 
+    }
     break;
   case 'sprint4':
     if (numSprint > 3) {
@@ -560,8 +560,8 @@ function calculateTech(sede, year, numSprint) {
       totalSkill.innerHTML = '';
       studentCurrentlySkill.innerHTML = '';
       alert('No hay Sprint 4');
-    } 
-    break;    
+    }
+    break;
   }
 }
 
@@ -601,7 +601,7 @@ function calculateHse(sede, year, numSprint) {
     overallClass.innerHTML = '<b>' + sumSprintTwo + '</b>' + '<br> # of students that meet the target';
     studentTargetOverall.innerHTML = '<b>' + percentSprint + '</b>' + '<br> % overall class average';
     return sumSprintTwo;
-    break;  
+    break;
   case 'sprintHSE3':
     if (numSprint > 2) {
       var sumSprintThree = 0;
@@ -622,7 +622,7 @@ function calculateHse(sede, year, numSprint) {
       studentTargetOverall.innerHTML = '';
       overallClass.innerHTML = '';
       alert('No hay Sprint 3');
-    } 
+    }
     break;
   case 'sprintHSE4':
     if (numSprint > 3) {
@@ -644,7 +644,108 @@ function calculateHse(sede, year, numSprint) {
       studentTargetOverall.innerHTML = '';
       overallClass.innerHTML = '';
       alert('No hay Sprint 4');
-    } 
-    break;    
+    }
+    break;
   }
 }
+function drawCurrently(attend, noAttend) {
+  var data = google.visualization.arrayToDataTable([
+    ['Currently', 'Number Student'],
+    ['Asisten', attend],
+    ['No Asisten', noAttend],
+  ]);
+  var options = {
+    'width': 300,
+    'height': 230};
+
+  var chart = new google.visualization.PieChart(document.getElementById('grafy-enrollment'));
+  chart.draw(data, options);
+}
+
+function drawTechSkill(meet, noMeet) {
+  var data = google.visualization.arrayToDataTable([
+    ['Tech Skill', 'Number Student'],
+    ['student that meet the target', meet],
+    ['student that do not meet the target', noMeet],
+  ]);
+  var options = {
+    'width': 600,
+    'height': 400};
+
+  var chart = new google.visualization.PieChart(document.getElementById('grafy-tech'));
+  chart.draw(data, options);
+}
+
+function drawLifeSkill(meet, noMeet) {
+  var data = google.visualization.arrayToDataTable([
+    ['Tech Skill', 'Number Student'],
+    ['student that meet the target', meet],
+    ['student that do not meet the target', noMeet],
+  ]);
+  var options = {
+    'width': 600,
+    'height': 400};
+
+  var chart = new google.visualization.PieChart(document.getElementById('grafy-hse'));
+  chart.draw(data, options);
+}
+
+function drawPromoter(num1, num2 , num3, num4) {
+  var data = google.visualization.arrayToDataTable([
+    ['Element', '#', { role: 'annotation' } ],
+    ['Sprint1', num1, 'sprin1' ],
+    ['Sprint2', num2, 'sprint2' ],
+    ['Sprint3', num3, 'sprint3' ],
+    ['Sprint4', num4, 'sprint4' ],
+  ]);
+
+  var options = {
+    title: '# of promoters for sprint',
+    'width': 300,
+    'height': 230};
+  var chart = new google.charts.Bar(document.getElementById('grafy-promoter'));
+  chart.draw(data, google.charts.Bar.convertOptions(options));
+}
+
+function drawTeacher(num1, num2, num3, num4) {
+  var data = google.visualization.arrayToDataTable([
+    ['Element', '#', { role: 'annotation' } ],
+    ['Sprint1', num1, 'sprin1' ],
+    ['Sprint2', num2, 'sprint2' ],
+    ['Sprint3', num3, 'sprint3' ],
+    ['Sprint4', num4, 'sprint4' ],
+  ]);
+
+  var options = {
+    title: 'Teacher score by sprint',
+    'width': 300,
+    'height': 200};
+  var chart = new google.charts.Bar(document.getElementById('grafy-teacher'));
+  chart.draw(data, google.charts.Bar.convertOptions(options));
+}
+
+function drawJedi(num1, num2, num3, num4) {
+  var data = google.visualization.arrayToDataTable([
+    ['Element', '#', { role: 'annotation' } ],
+    ['Sprint1', num1, 'sprin1' ],
+    ['Sprint2', num2, 'sprint2' ],
+    ['Sprint3', num3, 'sprint3' ],
+    ['Sprint4', num4, 'sprint4' ],
+  ]);
+
+  var options = {
+    title: 'Jedi Master score by sprint',
+    'width': 300,
+    'height': 200};
+  var chart = new google.charts.Bar(document.getElementById('grafy-jedi'));
+  chart.draw(data, google.charts.Bar.convertOptions(options));
+}
+
+window.onload = function() {
+  elementTab[0].addEventListener('click', show);
+  elementTab[1].addEventListener('click', show);
+  containesStudents.classList.add('none');
+  comboBox.addEventListener('change', changeTitle);
+  comboBoxTech.addEventListener('change', TechSkill);
+  comboBoxHse.addEventListener('change', lifeSkill);
+};
