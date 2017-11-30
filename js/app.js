@@ -95,9 +95,13 @@ window.addEventListener('load', function() {
   titleTS.innerText = 'TECH SKILLS';
   var comboTS = document.createElement('select');
   var OP1 = document.createElement('option');
-  OP1.innerText = 'Option1';
+  OP1.innerText = 'Sprint 1';
   var OP2 = document.createElement('option');
-  OP2.innerText = 'Option2';
+  OP2.innerText = 'Sprint 1';
+  var OP3 = document.createElement('option');
+  OP3.innerText = 'Sprint 3';
+  var OP4 = document.createElement('option');
+  OP4.innerText = 'Sprint 4';
   var metTarget = document.createElement('div');
   var titleMT = document.createElement('h1');
   titleMT.innerText = 'numberofpercent';
@@ -114,6 +118,8 @@ window.addEventListener('load', function() {
   techSkills.appendChild(comboTS);
   comboTS.appendChild(OP1);
   comboTS.appendChild(OP2);
+  comboTS.appendChild(OP3);
+  comboTS.appendChild(OP4);
   techSkills.appendChild(metTarget);
   techSkills.appendChild(totalTS);
   metTarget.appendChild(titleMT);
@@ -121,7 +127,10 @@ window.addEventListener('load', function() {
   totalTS.appendChild(titleTS2);
   totalTS.appendChild(textTS);
   // agregando clases al los elementos
-
+  OP1.setAttribute('value', 'SP1');
+  OP2.setAttribute('value', 'SP2');
+  OP3.setAttribute('value', 'SP3');
+  OP4.setAttribute('value', 'SP4');
   techSkills.setAttribute('class', 'techSkillStyle');
   comboTS.setAttribute('class', 'comboStyle');
   metTarget.setAttribute('class', 'metTargetStyle');
@@ -240,6 +249,7 @@ window.addEventListener('load', function() {
        var totalPromoter = allPromoter / ratigns.length;
        return totalPromoter + ' % Promoter';
     } 
+    // funcion para los pasives
     function passivePercent(sede, gene){
       var sede = data[sede];
       var generation = sede[gene];
@@ -258,6 +268,7 @@ window.addEventListener('load', function() {
          var totalPassive = allPassive / ratigns.length;
          return totalPassive + ' % Passive';
     }
+    // funcion para los detractors
     function detractorPercent(sede, gene){
       var sede = data[sede];
       var generation = sede[gene];
@@ -276,6 +287,27 @@ window.addEventListener('load', function() {
          var totalDetractor = allDetractor / ratigns.length;
          return totalDetractor + ' % Detractor';
     }
+    // al seleccionar uno de las opciones por sprint para TECH
+    function techStudent(sede, gene){
+      var sede = data[sede];
+      var generation = sede[gene];
+      var student = generation.students;
+      var cTechOne = 0;
+
+      for (var i = 0; i < student.length; i++){
+        var sprint = student[i].sprints.length;
+        if (student[i].active === true){
+
+          for (var j = 0; j < sprint; j++){
+            if (student[i].sprint[j].number === 1){
+              var points = student[i].sprint[j].score.tech;
+              
+            }
+          }
+        }
+      }
+    }
+
 });
 // Puedes hacer uso de la base de datos a través de la variable `data`
 console.log(data);
