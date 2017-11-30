@@ -152,7 +152,7 @@ window.addEventListener('load', function() {
     div.appendChild(parrafo);
     div.classList.add('description');
 
-    var porcentajePasaron = Math.floor((studentsTarget * 100) / generationData.students.length);
+    var porcentajePasaron = Math.floor((studentsTarget * 100) / totalStudents);
     totalApproved.textContent = porcentajePasaron + '%';
     totalApproved.appendChild(div);
 
