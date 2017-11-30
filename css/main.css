@@ -6,6 +6,13 @@
   width: 30%;
 }
 
+
+/* Para Posicionar h2*/
+header #nameshow{
+  display: inline-block;
+}
+/*fin h2*/
+
 /*estilos pestañas*/
 #tabs .tabs-container {
   width: 100%;

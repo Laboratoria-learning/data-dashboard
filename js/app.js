@@ -15,6 +15,7 @@ window.addEventListener('load', function() {
 /* CÓDIGO PARA MOSTRAR SEDES Y PROMOCIONES */
   // Creamos una variable que va a guardar la lista desplegable
   var selectionSede = document.getElementById('select-sede');
+
   // Recorremos el array de nombre de las sedes que traemos del archivo data.js
   for (var i = 0; i < dataNameSedes.length; i++) {
     // Creamos una variable sedes que va almacenar la grupo de la sede
@@ -22,6 +23,7 @@ window.addEventListener('load', function() {
     // le asignamos el valor del labol del grupo, de acuerdo al nombre extraido de data.js de cada sede
     optgroupsedes.label = dataNameSedes[i];
     optgroupsedes.id = 'optgroupsede' + i;
+
     // le asignamos cada sede a la lista de sedes
     selectionSede.appendChild(optgroupsedes);
     // guardamos las promociones por sede
@@ -41,16 +43,21 @@ window.addEventListener('load', function() {
       var optionproms = document.createElement('option');
       // le asignamos el valor a mostrar
       optionproms.label = promsforSede[j];
-      optionproms.id = 'optionproms' + i;
+      optionproms.id = 'optionproms' + j;
       // le asignamos donde lo va a mostrar
       optgroupsedes.appendChild(optionproms); 
         
       // var nameProm = searchInArray(promsforSede, promsforSede[j]); 
-      var nameProm = document.getElementById('optionproms' + i).label;  
+      var nameProm = document.getElementById('optionproms' + j).label;  
       
       // console.log(nameProm); 
-      console.log(data[nameSede][nameProm]);
-      
+      // console.log(data[nameSede][nameProm]);
+
+      nameProm.addEventListener('change', function(event) {
+        switch (true) {
+
+        }
+      });
     }
   }
   /* FIN DE CÓDIGO MOSTRAR SEDES Y PROMOCIONES */
