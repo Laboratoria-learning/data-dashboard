@@ -79,9 +79,37 @@ window.addEventListener('load', function(event) {
   uxdesignButton.addEventListener('click', function(event) {
     alert('es click en uxdesing');
   });
+
+
   /* evento para botón de especialización front end designer */
-  var frontEndDesignerButton = document.getElementById('front-end-designer-button');
-  frontEndDesignerButton.addEventListener('click', function(event) {
+    var frontEndDesignerButton = document.getElementById('front-end-designer-button');
+    frontEndDesignerButton.addEventListener('click', function(event) {
     alert('es click en front end desing');
+
+    /* ubico área para crear elementos */
+    var visualizationSection = document.getElementById('visualization');
+    
+          /* creaación de elementos y nodo */
+          var divStudent = document.createElement('div');/* div con id-student */
+          var imgPhoto = document.createElement('img');  /* img con propiedad src*/
+
+         /* var text = document.createTextNode(textAreaText);*/
+    
+          /* asignación de hijos a padres */
+          visualizationSection.appendChild(divStudent);
+          divStudent.appendChild(imgPhoto);
+
+          
+          pVar.appendChild(text);
+    
+          /* inicializando cuenta de caracteres*/
+          textarea.value = '' ;
+          regressive = 140 ;
+          label.textContent = regressive ;
+    
+
+
+
+
   });
 });

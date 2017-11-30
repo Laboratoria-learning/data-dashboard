@@ -5,6 +5,9 @@
     background-color: #f4f6f7;
 }
 
+div #especialization {
+  position: fixed;
+}
 
 #especialization {
     left: 15px;
@@ -26,8 +29,9 @@ li {
     width: 50% ;
     background-color: white ;
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 650px;
     /*float: right;*/
+    
 }
 
 ul, li{
@@ -123,3 +127,19 @@ button {
     width: 250px;
     height:45px;
 }
+
+/* clases de visualización para aplicarse a botón */
+button.desactive {
+    background-color: #e0e0e0;
+    color: #757575;
+  }
+  
+  button.active {
+    background-color: #faf281;
+    color: white;
+  }
+
+  .photo-standart {
+   height: 100px;
+   width: 100px;
+  }
