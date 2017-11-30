@@ -15,6 +15,9 @@ window.addEventListener('load', function() {
   var dataC2017I = document.getElementById('dataC_2017I');
   var dataC2017II = document.getElementById('dataC_2017II');
   var dataC2016II = document.getElementById('dataC_2016II');
+  
+   // Cargando ultimos datos de la proción por defecto
+  resultSede('LIM', '2017-2');
 
   dataA2017I.addEventListener('click', function() {
     clear();
