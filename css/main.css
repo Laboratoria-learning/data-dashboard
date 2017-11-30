@@ -37,6 +37,7 @@ display: block;
 height: 80px;
 background-color: #e2e4e6;
 }
+/*selectores sede-generacion*/
 .selections{
   border: none;
   background-color: #e2e4e6;
@@ -62,7 +63,9 @@ background-color: #e2e4e6;
 margin-left: 80px;
 }
 .container .box{
-  outline:1px solid red;
+  /*outline:1px solid red;*/
+  border: 1px solid black;
+  border-radius: 7px;
   height: 300px;
   width: 300px;
   background-color: #ffffff;
@@ -70,7 +73,7 @@ margin-left: 80px;
   margin-left: 30px;
   margin-top: 30px;
 }
-
+/*estilo a la caja total de estudiantes*/
 .total-students{
   height: 70px;
   width: 120px;
