@@ -1,13 +1,6 @@
-/*
- * Funcionalidad de tu producto
- */
-
-// Puedes hacer uso de la base de datos a través de la variable `data`
-
 console.log(data);
 
-
-// Función que devuelve alumans qye pasan promedio de puntajes y el porcentaje que representan.
+// Función que devuelve alumans que pasan promedio de puntajes y el porcentaje que representan.
 
 function achievement(sede,generation){
   var count = 0;
@@ -20,18 +13,6 @@ function achievement(sede,generation){
   totalSupera = parseInt((countActive*count)/100);
 // console.log('Las alumnas que superan el puntaje promedio son: ' + totalSupera + ' Y representan el: ' + count + '%');
 }
-
-// función para promedio NPS de todos los sprints
-
-function nps(sede,generation){
-  var count = 0;
-  var numberRatings = data[sede][generation]['ratings'];
-  for (var i = 0; i < numberRatings.length; i++) {
-    var averageNps = numberRatings[i]['nps']['promoters'] - numberRatings[i]['nps']['detractors'];
-    // console.log(averageNps);
-  }
-}
-
 
 var sedeSelected = document.getElementById('select-sede');
 var generationSelected = document.getElementById('select-generation');
@@ -88,15 +69,15 @@ function inscription(event) {
   var alumSatisfied = document.getElementById('alum-satifaction');
   alumSatisfied.textContent = satisfied();
   alumSatisfied.setAttribute('class', 'number');
-  
-  // función que devuelve el promedio de la evaluación de los maestros
   var sumEvaTeacher = 0;
   var sumEvaJedi = 0;
+  var sumSub = 0;
+  
+  // función que devuelve el promedio de la evaluación de los maestros
 
   function averageTeacher(){
     ratings = data[sede][gen].ratings;
     for (var i = 0; i < ratings.length; i++) {
-      console.log(ratings[i]['teacher']);
       sumEvaTeacher = sumEvaTeacher + ratings[i]['teacher'];
     }
 
@@ -113,7 +94,6 @@ function inscription(event) {
   function averageJedi(){
     ratings = data[sede][gen].ratings;
     for (var i = 0; i < ratings.length; i++) {
-      console.log(ratings[i]['jedi']);
       sumEvaJedi = sumEvaJedi + ratings[i]['jedi'];
     }
 
@@ -124,6 +104,21 @@ function inscription(event) {
     var evaluationJedi = document.getElementById('eva-jedi');
     evaluationJedi.textContent = averageJedi();
     evaluationJedi.setAttribute('class', 'number');
+
+    // función que devuelve promedio NPS 
+    
+    function nps(){
+      ratings = data[sede][gen].ratings;
+      for (var i = 0; i < ratings.length; i++) {
+        var subtraction = ratings[i]['nps']['promoters'] - ratings[i]['nps']['detractors'];
+        sumSub = sumSub + subtraction;
+      }
+      var result = sumSub/ratings.length;
+      return result;
+    }
+    var npsElement = document.getElementById('nps');
+    npsElement.textContent =  nps();
+    npsElement.setAttribute('class', 'number');
   };
 
 
