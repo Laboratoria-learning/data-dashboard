@@ -138,6 +138,7 @@ function puntajePromotor(sede, generacion) {
 
   var porcentajeIndividual = document.getElementById('porcentajeVarios');
   porcentajeIndividual.innerHTML = promoters + '<br>' + passive + '<br>' + detractors;
+  console.log(totalNps.length);
 
   for (var i = 0; i < totalNps.length; i++) {
     acumulativeNps = acumulativeNps + totalNps[i];
