@@ -1,3 +1,201 @@
 /*
  * Estilos de tu proyecto
  */
+ * {
+   box-sizing: border-box;
+   font-family: 'Helvetica', sans-serif;
+   margin: 0;
+   padding: 0;
+ }
+ /* Estilos al header */
+#logo {
+width: 15%;
+margin-left: 42%;
+}
+
+ .title {
+text-align: center;
+font-size: 20px;
+  }
+
+#sede {
+  margin-left: 10%;
+  margin-top: 60px;
+  font-size: 30px;
+}
+#text {
+  width: 350px;
+  height: 60px;
+  font-size: 30px;
+  background:#b9c2d5;
+  margin-left: 70%;
+
+
+}
+/* Estilos a button */
+.container-tab{
+  background-color: #fcb425;
+  display: flex;
+  margin-top: 20px;
+  width: 100%;
+  list-style: none;
+  outline: 1px solid red;
+}
+
+.tab {
+  color: white;
+  background-color: #fcb425;
+  border: none;
+  display: inline-block;
+  padding: 10px;
+  width: 120px;
+}
+
+span:hover{
+  text-decoration: underline;
+}
+
+.enrollments,.achievement,.net  {
+  width: 350px;
+  height: 300px;
+  background: rgb(230, 196, 196);
+  display: inline-block;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+
+.dates {
+  width: 120px;
+  background-color: white;
+  display: inline-block;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+h3{
+  text-align: center;
+}
+/* añadiendo graficos */
+.bar-graph img, .graph-line img{
+  margin-top: 40px;
+  margin-left: 45px;
+}
+
+.tech-skills,.life-skills {
+  width:1100px;
+  height: 500px;
+  background: rgb(129, 177, 151);
+  margin-top: 2%;
+  margin-left: 13%;
+}
+.graphic-1{
+  display: flex;
+}
+.rectangular-graphic img, .circle-graphic img{
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 60px;
+}
+.student,.teacher,.jedi  {
+  width: 350px;
+  height: 300px;
+  background: rgb(230, 196, 196);
+  display: inline-block;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+.dates-student{
+  width: 120px;
+  background-color: white;
+  display: inline-block;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+#contentStudents{
+  display: none;
+}
+.list-students {
+  background-color: #fff;
+  float: right;
+  margin: 20px;
+  width: 70%;
+}
+.content-1 {
+  display: inline-block;
+  margin: 15px;
+  width: 100%;
+}
+.picture { 
+  float: left;
+  margin: 15px;
+  height: 150px;
+  width: 20%;
+}
+.container-dates {
+  float: right;
+  height: 150px;
+  margin: 15px 20px;
+  width: 71%;
+  outline: 1px solid black;
+}
+.dates-coder {
+  display: inline-block;
+  height: 150px;
+  width: 100%;
+  outline: 2px solid red;
+}
+.specialization-student{
+  float: left;
+  margin: 10px;
+  width: 46%;
+  outline: 1px solid green;
+}
+.specialization-student h2, .specialization-student span {
+  letter-spacing: 3px;
+  margin: 10px;
+  text-align: left;
+}
+.specialization-student ul{
+  display: flex;
+  list-style: none;
+  margin: 15px;
+}
+.specialization-student ul li{
+  font-size: 10px;
+  margin-right: 53px;
+  margin-top: 8px;
+}
+
+.skills-students {
+  display: flex;
+  float: right;
+  margin: 15px;
+  width: 45%;
+  outline: 1px solid green;
+}
+.tec-skill, .life-skill, .english-skill {
+  background-color: red;
+  margin-right: 18px;
+  height: 60px;
+  width: 100px;
+  outline: 1px solid red;
+}
+.image{
+  float: left;
+  margin: 15px;
+  height: 150px;
+  width: 100%;
+}
+#container-skills{
+  margin-top: 5%;
+}
+
+.tech-one,.tech-two {
+ width: 150px;
+ height: 50px;
+ background:rgb(209, 209, 150);
+ margin-left: 10%;
+ margin-top: 2%;
+ display: inline-block;
+}
