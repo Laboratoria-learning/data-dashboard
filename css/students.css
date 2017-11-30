@@ -124,7 +124,6 @@ a:active {
   box-sizing: border-box;
   position: absolute;
   background-color: #fff;
-
 }
 /*Estilo del div*/
 .style {
@@ -234,6 +233,10 @@ a:active {
   right: 20px;
 }
 
-.perfile {
-  position: absolute;
+.profile {
+  position: relative;
+  top: -50px;
+  left: 550px;
+  color: #fb1;
+  text-shadow: 2px 1px black;
 }
