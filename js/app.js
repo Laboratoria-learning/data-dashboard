@@ -451,7 +451,9 @@ function createStudents() {
     singleStudent.appendChild(containerTechSkills);
     singleStudent.appendChild(containerSoftSkills);
     containerTechSkills.appendChild(teckSkillsSingle);
+    containerTechSkills.classList.add('container-tech');
     containerSoftSkills.appendChild(softSkillsSingle);
+    containerSoftSkills.classList.add('container-soft');
   }
 }
 createStudents();
