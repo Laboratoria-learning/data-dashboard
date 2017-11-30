@@ -1,25 +1,31 @@
-# Data Dashboard
+# Proyecto: Dashboard Laboratoria
 
-* **Track:** _Common Core_
-* **Curso:** _Creando tu primer sitio web interactivo_
-* **Unidad:** _Producto final_
+![Dashboard](assets/images/mvp.jpg)
 
-***
+## Descripción del Proyecto:
 
-## Flujo de trabajo
+El siguiente repositorio contiene el desarrollo de un MVP, de un dashboard, con la información relevante de la estadística de Laboratoria y su data respecto al rendimiento de sus estudiantes y el de sus profesores.
 
-1. Debes realizar un [**fork**](https://gist.github.com/ivandevp/1de47ae69a5e139a6622d78c882e1f74)
-   de este repositorio.
+## Procedimiento:
 
-2. Luego deberás **clonar** tu fork en tu máquina. Recuerda que el comando a usar
-   es `git clone` y su estructura normalmente se ve así:
+1. Primero se realizó un sketching del producto
 
-   ```bash
-   git clone https://github.com/<nombre-de-usuario>/freelancer.git
-   ```
+2. Segundo, se realizó una entrevista a la Training Manager de Laboratoria Lima: Alejandra Ramirez, para conocer sus necesidades y requirimientos del producto.
+Ella señaló que le era necesario tener la data del número de estudiantes actuales y que desertaron a primera mano. Así también un ranking del desempeño de sus profesores y la aprobación que Laboratoria obtiene como centro de enseñanza. También sugirió la implementación de un perfil de usuario visible.
 
-3. Cuando hayas terminado tu producto, envía un Pull Request a este repositorio
-   (puedes solicitar apoyo de tus profes para este paso).
+3. La segunda persona entrevistada fue Franco Chamochumbi, encargado de Finanzas de Laboratoria; quien también indicó que tenía relevancia poder ver la cantidad de estudiantes actuales y el número de deserciones. Además poder filtrarlo por sede y generación.
 
-> Nota: No olvides que es una buena práctica describir tu proyecto en este
-> archivo `README.md` y también desplegar tu web a Github Pages :smiley:.
+4. Posteriormente se pasó a modificae el sketching de el producto, replicando las necesidades del usuario.
+
+5. Desarrollo del maquetado.
+
+6. Programación de funcionalidades.
+
+
+## Herramientas utilizadas:
+
+1. HTML5
+
+2. CSS3
+
+3. JS

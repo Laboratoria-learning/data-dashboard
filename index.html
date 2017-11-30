@@ -3,12 +3,205 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <header>
+      <div class="logo">
+        <img src="assets/images/logo-laboratoria.png" alt="logo">
+      </div>
+      <div id="menu">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </div>
+    </header>
 
-		<!-- Base de datos -->
-		<script src="./js/data.js"></script>
-		<!-- Aquí va tus archivos JS -->
-    <script src="./js/app.js"></script>
+      <!--Un select para elegir sede y otro  para semestre-->
+  
+    <select class = "sede" id="sede" title="Sedes">
+      <option value="" hidden>Selecciona una sede</option>
+      <option value="LIM">Lima </option>
+      <option value="AQP">Arequipa</option>
+      <option value="SCL">Chile</option>
+      <option value="CDMX">Mexico</option>
+    </select>
+    <select class="semestre" id="semestre" title = "semestre">
+      <option value="" hidden> Selecciona semestre </option>
+      <option value="2016-2">2016-2</option>
+      <option value="2017-1">2017-1</option>
+      <option value="2017-2">2017-2</option>
+    </select>
+
+    <nav class="sections-container">
+      <div id="sections" class="uppercase">
+          <span>
+            <a href="#section-data">Oveview</a>
+          </span>
+          <span>
+            <a href="#section-students" id="students">students</a>
+          </span>
+          <span>
+            <a href="#teachers-ratings" id="teachers" name="teachers">teachers</a>
+          </span>
+      </div>
+    </nav>
+      
+    <!--Sección de la data de los teachers-->
+    <section id="teachers-ratings">
+    
+    </section>
+    
+    <!--sección del perfil del usuario-->
+    <section id="user" class="user">
+      <div class="user-name">
+          <img src="assets/images/user.jpg" alt="Alejandra Ramirez">
+          <div class="name">
+            <h3 class="name">Alejandra Ramirez</h3>
+            <h4>Training Manager</h4>
+          </div>
+        </div>
+        <div class="home">
+          <i class="fa fa-home" aria-hidden="true"></i>
+          <h4>Home</h4>
+        </div>
+        <div class="tables">
+          <i class="fa fa-table" aria-hidden="true"></i>
+          <h4>Tables</h4>
+        </div>
+        <div class="calendar">
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <h4>Calendar</h4>
+        </div>
+        <div class="out">
+          <i class="fa fa-sign-out" aria-hidden="true"></i>
+          <h4>Sign out</h4>
+      </div>
+    </section>
+    
+    <!-- Base de datos -->
+    <section id="section-data" class="data">
+        <div class="part1">
+          <div>
+            <!--punto 1 y 2-->
+            <p>ENROLLMENT</p>
+            <div class="box">
+              <div class = "total-students" id= "total-students">6</div>
+              <h4> Inscritas</h4>
+            </div>
+            <div class="box">
+              <div class = "desercion"id = "desercion" >57</div>
+              <h4> desercion</h4>
+            </div>
+        </div>
+    
+        <div>
+            <!--PUNTO 3 Y4, crear un cuadro mas verde para poner el dato-->
+            <P>SKILLS</P>
+            <div id = "ach1" class="box"></div>
+            <div id = "ach2"class="box"></div>
+        </div>
+          <!--<div>
+         <P>NET PROMOTER SCORE</P>
+         <div class = "box"></div>
+         <div class = "box"></div>
+      </div>-->
+        </div>
+        <div class="part2">
+          <div class="a">
+            <!--punto 6-->
+            <p>TECH SKILLS</p>
+            <!-- Seleccionar sprint-->
+            <select class="selection" name="" id="selection">
+              <option value="Sprint 1">Sprint-1</option>
+              <option value="Sprint 2">Sprint-2</option>
+              <option value="Sprint 3">Sprint-3</option>
+              <option value="Sprint 4">Sprint-4</option>
+            </select>
+          </div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+    
+        <div class="part3">
+          <div class="b">
+            <!--punto7-->
+            <p>HSC SKILLS</p>
+            <!-- Seleccionar sprint-->
+            <select class="selection" name="" id="selection">
+              <option value="Sprint 1">Sprint-1</option>
+              <option value="Sprint 2">Sprint-2</option>
+              <option value="Sprint 3">Sprint-3</option>
+              <option value="Sprint 4">Sprint-4</option>
+            </select>
+          </div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+    
+        <div class="part4">
+          <div>
+            <!--Punto8-->
+            <p>STUDENT SATISFACTION</p>
+            <div id = "satis1" class="box"></div>
+          </div>
+          <div>
+            <!--Punto5-->
+            <p>NET PROMOTER SCORE (NPS)</p>
+            <div class="box" id="nps-container"></div>
+          </div>
+        </div>
+        <div class="part5">
+          <div>
+            <!--Punto9-->
+            <p>TEACHER RATING</p>
+            <div class="box" id="teachers-average">
+            </div>
+          </div>
+          <div>
+            <!--Punto10-->
+            <p>JEDI MASTER RATING</p>
+            <div class="box" id="jedis-average"></div>
+          </div>
+        </div>
+      </section>
+    
+      <!--sección students-->
+      <section id="section-students" class="students-data display-none">
+        <form id="search">
+          <input type="search" name="" id="search-input" placeholder="Buscar">
+        </form>
+        <!--<div id="profile" class="container-data">
+            <div id="photo" class="photo-profile">
+              <img src="assets/" alt="Ale">
+            </div>
+            <div id="info" class="info-profile">
+              <div id="name" class="name-profile">
+                <p>MARGARITA SUTTA JUAREZ</p>
+              </div>
+              <div id="status" class="status-profile">
+                <p>Activo</p>
+              </div>
+            </div>
+            <div class="skills-profile">
+              <div class="skill">
+                <p>95.6 %</p>
+                <p class="skill-text">tech skills</p>
+              </div>
+              <div class="skill">
+                <p>95.6 %</p>
+                <p class="skill-text">tech skills</p>
+              </div>
+              <div class="button">
+                <button type="submit" class="remove">Remove</button>
+              </div>
+            </div>
+          </div>-->
+      </section>
+      <!-- Base de datos -->
+      <script src="./js/data.js"></script>
+      <!-- Aquí va tus archivos JS -->
+      <script src="./js/app.js"></script>
   </body>
+    
 </html>
+    

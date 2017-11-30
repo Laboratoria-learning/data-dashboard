@@ -1,3 +1,382 @@
 /*
  * Estilos de tu proyecto
  */
+
+ * {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+ }
+
+.body {
+    overflow: auto;
+} 
+.uppercase {
+    text-transform: uppercase;
+}
+
+header {
+    width: 100%; 
+    height: 120px; 
+}
+
+.logo {
+     width: 15%;
+     height: 20px;
+     margin: 0 auto;
+}
+
+.logo img {
+     padding-top: 10px;
+     width: 100%;
+}
+
+#menu {
+     font-size: 30px;
+     float: left;
+     margin-top: 10px;
+     margin-left: 150px;
+ }
+
+
+/*Estilo para select sede */
+
+.sede {
+    margin-left: 320px;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    height: 30px;
+    padding: 5px;
+    width: 250px;
+    outline: none;
+ }
+
+/*Estilo para select semestre*/
+.semestre{
+    margin-left: 150px;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    height: 30px;
+    padding: 5px;
+    width: 250px;
+    outline: none; 
+ }
+
+/*Estilo a sections-container */
+
+.sections-container {
+    height: 100px;
+    width: 80%;
+    float: right;
+    background-color: #d4d4d4;
+    font-family: sans-serif;
+}
+
+
+ div#sections span {
+    line-height: 100px;
+    display: inline-block; 
+    padding-left: 50px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+ }
+
+ div#sections a {
+     padding: 10px;
+     text-decoration: none;
+     color: #000;
+ }
+
+ div#sections a:hover {
+    display: inline; 
+    background: #ffc107; 
+    color: white;
+ }
+
+ /*Estilo para esconder el modal*/
+ .hidden {
+    display: none;
+    margin-top: 170px;
+    margin-left: 170px;
+ }
+
+
+/*Estilo del usuario */
+section.user {
+    float: left;
+    width: 20%;
+    /*outline: 1px solid red; */
+    font-family: sans-serif;
+    border: 2px solid #ffc107; 
+}
+
+div.user-name {
+    text-align: center;
+}
+
+section.user img {
+    width: 30%;
+    height: 30%;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+div.name {
+    float: right;
+}
+section.user h3.name {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+section.user h4 {
+    display: inline-block;
+}
+
+div.home {
+    border-bottom: 1px solid #ffc107; 
+    margin-top: 60px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+div.tables, div.calendar {
+    border-bottom: 1px solid #ffc107; 
+    padding: 20px 0px;
+    padding-bottom: 10px;
+}
+
+div.out {
+    padding: 20px 0px;
+}
+
+.home h4, .tables h4, .calendar h4, .out h4 {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+section.user i {
+    margin-left: 30px;
+}
+
+div.home:hover, div.tables:hover, div.calendar:hover, div.out:hover {
+    background-color: #ffc107; 
+    color: #fff;
+}
+
+ /*Estilo de la sección teacher */
+
+ .teachers-data {
+     float: right;
+     margin: auto; 
+     width: 80%;
+     height: 300px;
+     background-color: #e9e3e3;
+ }
+
+.average-container{
+    font-family: sans-serif;
+    margin-top: 40px;
+    margin-left: 80px;
+    width: 40%;
+    height: 200px;
+    background-color: #fff;
+    display: inline-block;
+    text-align: center;
+}
+
+ .average-title {
+     padding-top: 15px;
+ }
+
+ /*Estilos para la seccion data*/
+.data{
+    
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    /*margin-top: 210px;*/
+    background-color:  #f7f7f7;
+    /*padding-left: 50px;*/
+    width: 80%;
+    float: right;
+}
+/* Estilos para part 1, 4 y 5*/
+.part1 div, .part4 div, .part5 div{
+    display: inline-block;
+    background-color: #ffffff;
+    margin-top: 65px;
+    margin-left: 60px;
+}
+.part2, .part3{
+    width: 90%;
+    height: 200px;
+    margin-top: 20px;
+    background-color: #ffffff;
+    margin-left: 50px;
+}
+
+.part1 div, .part4 div, .part5 div{
+    width: 42%;
+    height: 200px;
+}
+ /* Estilos para los box  donde iran los datos*/
+.part1 .box, .part2 .box, .part3 .box, .part4 .box, .part5 .box{
+    width: 100px;
+    height: 60px;
+    margin: 0px;
+    margin-left: 20px;
+    display: inline-block;
+    
+}
+/*estilos de los datos*/
+.box .total-students, .box .desercion{
+    width: 42px;
+    height: 32px;
+    margin: 0px;
+}
+
+.part1 p, .part2 p, .part3 p, .part4 p, .part5 p{
+    padding: 20px;
+}
+
+.a p, .selection{
+    display: inline-block;
+}
+.b p, .selection{
+    display: inline-block;
+}
+
+.part5 div{
+    margin-bottom: 65px;
+  /*Estilo de la sección students */
+}
+
+.students-data {
+    float: right;
+    margin: 0; 
+    width: 80%;
+    height: 100%;
+    background-color: #e9e3e3;
+    display: block;
+    padding: 20px;
+    position: relative;
+}
+#search {
+    padding: 10px;
+}
+#search-input {
+    width: 90%;
+    height: 50px;
+    margin-left: 60px;
+    margin-right: 55px;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 2px solid #ffc107;
+    border-radius: 10px;
+}
+/*container-data: Se agregaran con DOM-classLists */
+.container-data{
+   width: 90%;
+   height: 20%;
+   margin-left: 60px;
+   margin-right: 50px;
+   padding: 15px;
+   background-color: #fff;
+   display: inline-block;
+}
+/*---create:div>img - classLists:photo-profile---*/
+.photo-profile{
+    width: 200px;
+    height: 245px;
+    margin: 15px;
+    background-color: black;
+    display: block;
+    position: relative;
+    float: left;
+    text-align: center;
+}
+/*---create:div>div*2 - classLists:info-profile---*/
+.info-profile{
+    margin: 5px;
+    padding: 5px;
+    display: block;
+    position: relative;
+    float: left;
+}
+
+.name-profile{
+    padding: 5px;
+    color: black;
+    display: block;
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.status-profile{
+    margin: 2px;
+    color: black;
+    display: block;
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    text-align: center;
+}
+/*---create:div>div*2 - classLists:skills-profile---*/
+.skills-profile{
+    margin: 15px;
+    margin-left: 120px;
+    display: block;
+    position: relative;
+    float: left;
+}
+
+.skill {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #e9e3e3;
+    height: 70px;
+    width: 150px;
+    text-align: center;
+    align-content: center;
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.skill-text {
+    margin: 2px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+/*---create:div>button - classLists:info-profile---*/
+.button {
+    margin-top: 15px;
+}
+.remove {
+    margin: 15px;
+    padding: 10px;
+    width: 120px;
+    height: 50px;
+    background-color: #ffc107;
+    color: black;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+}
+.remove:hover {
+    background-color: black;
+    color: white;
+}
+
+.display-none {
+    display: none;
+}
