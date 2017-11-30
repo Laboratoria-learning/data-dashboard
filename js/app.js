@@ -51,6 +51,8 @@ var jediRated = document.getElementById('JediMaster-rating');
 var navStudents = document.getElementById('estudiantes');
 var containerStudents = document.getElementsByClassName('container-students')[0];
 
+
+
 //Sedes 
 //AQP, CDMX, LIM, SCL
 function selectSede () {
@@ -95,6 +97,7 @@ function selectSede () {
       jediMaster();
       createStudents();
       drawSeriesChart();
+      drawLineColors();
     })
   }
 } 
@@ -119,6 +122,7 @@ function selectPromo() {
       jediMaster();
       createStudents();
       drawSeriesChart();
+      drawLineColors();
     })
   }
 }
@@ -138,7 +142,7 @@ function enrollment(act,inac) {
     }
   }
   totalActStudents.textContent = active;
-  dropoutStudents.textContent = Math.floor((inactive/(active+inactive))*100) + ' %';
+  dropoutStudents.textContent = Math.round(((inactive/(active+inactive))*100)*10)/10 + ' %';
   return enrollment[act] = {
     act: active,
     inac: inactive,
@@ -167,6 +171,7 @@ function achievement () {
       studentsNoAchieve ++;
     }
   }
+  
   studentsTar.textContent = studentsAchieve;
   studentsTarPer.textContent = (studentsAchieve/(studentsAchieve+studentsNoAchieve))*100 + ' %';
   studentsTotal.textContent = studentsAchieve+studentsNoAchieve;
@@ -247,7 +252,8 @@ function techSkills () {
     }
   }
   techSprintNote.textContent = techBigger;
-  techSprintPer.textContent = Math.floor(techBigger/(enrollment().act+enrollment().inac)*100) + ' %';
+  number = techBigger/(enrollment().act+enrollment().inac)*100;
+  techSprintPer.textContent = Math.round(number * 10 ) /10 + ' %';
 }
 
 techSkills();
@@ -263,7 +269,8 @@ function softSkills () {
     }
   }
   hseSprintNote.textContent = hseBigger;
-  hseSprintPer.textContent = Math.floor(hseBigger/(enrollment().act+enrollment().inac)*100) + ' %';
+  number = hseBigger/(enrollment().act+enrollment().inac)*100
+  hseSprintPer.textContent = Math.round(number *10) /10 + ' %';
 
 }
 
@@ -278,7 +285,8 @@ function studentSatisfaction () {
     var satisCumple = dataStudents[sede][promo].ratings[i].student.cumple;
     sprintSatis += (satisSup + satisCumple);
   }
-  studentSatisfac.textContent = Math.floor(sprintSatis/(dataStudents[sede][promo].ratings.length*100)*100) + ' %';
+  number = sprintSatis/(dataStudents[sede][promo].ratings.length*100)*100
+  studentSatisfac.textContent = Math.round( number *10 )/10 + ' %';
 }
 
 studentSatisfaction(); 
@@ -290,8 +298,9 @@ function teacherRating () {
   for (var i = 0; i < dataStudents[sede][promo].ratings.length; i++) {
     var teacherScore = dataStudents[sede][promo].ratings[i].teacher;
     teacherRat += teacherScore;
-  }
-  teacherRated.textContent = Math.floor(teacherRat/dataStudents[sede][promo].ratings.length);
+  } 
+  number = (teacherRat/dataStudents[sede][promo].ratings.length)*10/10;
+  teacherRated.textContent = Math.round(number * 10 )/10;
 }
 
 teacherRating();
@@ -302,7 +311,8 @@ function jediMaster () {
     var jediScore = dataStudents[sede][promo].ratings[i].jedi;
     jedi += jediScore;
   }
-  jediRated.textContent = Math.floor(jedi/dataStudents[sede][promo].ratings.length);
+  number = (jedi/dataStudents[sede][promo].ratings.length)*10/10;
+  jediRated.textContent = Math.round( number * 10 ) / 10;
 }
 
 jediMaster();
@@ -458,8 +468,8 @@ function createStudents() {
         var hseNote = dataStudents[sede][promo].students[i].sprints[j].score.hse;
         promedioHse += hseNote;
       }
-      teckSkillsSingle.textContent = Math.floor(((promedioTech/sprints)/1800)*100) + ' %';
-      softSkillsSingle.textContent = Math.floor(((promedioHse/sprints)/1200)*100) + ' %';
+      teckSkillsSingle.textContent = Math.round((((promedioTech/sprints)/1800)*100)*10/10) + ' %';
+      softSkillsSingle.textContent = Math.round((((promedioHse/sprints)/1200)*100)*10/10) + ' %';
       singleStudent.appendChild(studentImage);
       singleStudent.appendChild(studentName);
       singleStudent.appendChild(containerTechSkills);
@@ -474,5 +484,15 @@ function createStudents() {
 }
 createStudents();
 
+
+//Funciones chart 
+
+function achievementArray() {
+  var array = [];
+  for (var i = 0 ; i < dataStudents[sede][promo].ratings.length; i++) {
+    array.push([i,dataStudents[sede][promo].ratings[i].nps.promoters])
+  }
+  return array;
+}
 // Puedes hacer uso de la base de datos a través de la variable `data`
 console.log(dataStudents);
