@@ -1,33 +1,23 @@
-/*para menu------*/
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
-}
-header{
-  height: 50px;
-  background-color: #CE852A;
-  color: #FFF;
-}
-.menu ul {
+/*css menu display*/
+
+.menuDisplay ul {
   background-color: #CE852A;
   list-style: none;
 }
-.menu li{
+.menuDisplay li{
   border: 30px;
   padding: 10px 15px;
   display: inline-block;
 }
-.menu ul ul{
-  top: 50px;
+.menuDisplay ul ul{
+  top: 700px; /*list de menu*/
   position: absolute;
 }
-.menu .itemList li{
+.menuDisplay .choose li{
   display: block;
 }
 
-.menu li:hover {
+.menuDisplay li:hover {
   background-color: rgba(0,0,0,0.3);
   cursor: pointer;
 }
@@ -36,10 +26,9 @@ header{
 }
 .show{
   display: block;
-
-
 }
-/*---------------*/
+/*---------------------*/
+
  .filters-container {
    background-color:#E1E1E1;
    width: 100%;
