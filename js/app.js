@@ -11,7 +11,7 @@ var dataContainer = document.getElementById('overview-tab');
 LIM.addEventListener('click', function(){
   if(LIM.value === '2016-II') {
     for(var i = 0; i <= dataContainer.length; i++){
-      console.log(dataContainer[i]);
+      ;
     }
   }
 });
