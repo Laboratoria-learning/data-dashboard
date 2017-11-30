@@ -16,6 +16,10 @@ divKpiDropout = document.getElementById('kpi-dropout');
 divIstStudent = document.getElementById('ist-student');
 divAverageTeacher = document.getElementById('average-teacher');
 divAverageJedi = document.getElementById('average-jedi');
+divTechSkillQuantity = document.getElementById('tech-skill-quantity');
+divTechSkillPercent = document.getElementById('tech-skill-percent');
+divLifeSkillQuantity = document.getElementById('life-skill-quantity');
+divLifeSkillPercent = document.getElementById('life-skill-percent');
 
 // Puedes hacer uso de la base de datos a través de la variable `data`
 
@@ -213,7 +217,6 @@ window.addEventListener('load', function(event) {
       // Calculamos el teacher rating
       totTeacherRating = 0;
       for (i = 0;i < str['ratings'].length;i++) {
-        console.log(str['ratings'][i]['teacher']);
         totTeacherRating = totTeacherRating + str['ratings'][i]['teacher'];
       }
       divAverageTeacher.innerHTML = parseFloat(totTeacherRating / str['ratings'].length).toFixed(1);
@@ -245,7 +248,6 @@ window.addEventListener('load', function(event) {
       // Calculamos el jedi master rating
       totJediRating = 0;
       for (i = 0;i < str['ratings'].length;i++) {
-        console.log(str['ratings'][i]['jedi']);
         totJediRating = totJediRating + str['ratings'][i]['jedi'];
       }
       divAverageJedi.innerHTML = parseFloat(totJediRating / str['ratings'].length).toFixed(1);
@@ -274,6 +276,109 @@ window.addEventListener('load', function(event) {
         var chart = new google.visualization.LineChart(document.getElementById('acum-average-jedi'));
         chart.draw(data, options);
       }
+      // Calculamos los tech skills por sprint 
+      var totTechSkill = 0;
+      var totSprints = 0;
+      for (i = 0;i < str['students'].length;i++) {
+        for (j = 0;j < str['students'][i]['sprints'].length;j++) {
+          totSprints = totSprints + str['students'][i]['sprints'].length;
+             
+          // Obteniendo los que han superado la meta tech
+          if (parseInt(str['students'][i]['sprints'][j]['score']['tech']) >= 1260) {
+            totTechSkill = totTechSkill + 1;
+          }
+        }
+      }
+
+      divTechSkillQuantity.innerHTML = totTechSkill;
+      divTechSkillPercent.innerHTML = parseFloat(totTechSkill / totSprints * 100).toFixed(0);
+
+      // Realizamos el gráfico de la cantidad de alumnos que superaron x sprint   
+      google.charts.load('current', {'packages': ['corechart']});
+          
+      google.charts.setOnLoadCallback(drawCharTechSkill);
+          
+              
+      function drawCharTechSkill() {
+        // create the data table
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'S');
+        data.addColumn('number', 'Average Tech Skill');
+                 
+        for (i = 0;i < str['students'].length;i++) {
+          for (j = 0;j < str['students'][i]['sprints'].length;j++) {
+            totSprints = totSprints + str['students'][i]['sprints'].length;
+                       
+            // Obteniendo los que han superado la meta tech
+            console.log('SPRINT' + parseInt(str['students'][i]['sprints'][j]['number'] - 1));
+            if (parseInt(str['students'][i]['sprints'][j]['score']['tech']) >= 1260 && parseInt(str['students'][i]['sprints'][j]['number'] - 1) === optionSprint.value) {
+              data.addRows([
+                ['S' + str['students'][i]['sprint'], str['students'][i]['sprints'][j]['score']['tech']],
+                     
+                     
+              ]);
+            }
+          }
+        }
+                  
+                  
+        var options = {'title': 'Current average tech skill'};        
+        var chart = new google.visualization.LineChart(document.getElementById('tech-chart'));
+        chart.draw(data, options);
+      }
+
+   // Calculamos los life skills por sprint 
+   var totLifeSkill = 0;
+   var totSprints = 0;
+   for (i = 0;i < str['students'].length;i++) {
+     for (j = 0;j < str['students'][i]['sprints'].length;j++) {
+       totSprints = totSprints + str['students'][i]['sprints'].length;
+          
+       // Obteniendo los que han superado la meta tech
+       if (parseInt(str['students'][i]['sprints'][j]['score']['hse']) >= 840) {
+        totLifeSkill = totLifeSkill + 1;
+       }
+     }
+   }
+
+   divLifeSkillQuantity.innerHTML = totLifeSkill;
+   divLifeSkillPercent.innerHTML = parseFloat(totLifeSkill / totSprints * 100).toFixed(0);
+
+   // Realizamos el gráfico de la cantidad de alumnos que superaron x sprint   
+   google.charts.load('current', {'packages': ['corechart']});
+       
+   google.charts.setOnLoadCallback(drawCharLifeSkill);
+       
+           
+   function drawCharLifeSkill() {
+     // create the data table
+     var data = new google.visualization.DataTable();
+     data.addColumn('string', 'S');
+     data.addColumn('number', 'Average HSE Skill');
+              
+     for (i = 0;i < str['students'].length;i++) {
+       for (j = 0;j < str['students'][i]['sprints'].length;j++) {
+         totSprints = totSprints + str['students'][i]['sprints'].length;
+                    
+         // Obteniendo los que han superado la meta hse
+         
+         if (parseInt(str['students'][i]['sprints'][j]['score']['hse']) >= 840 && parseInt(str['students'][i]['sprints'][j]['number'] - 1) === optionSprint.value) {
+           data.addRows([
+             ['S' + str['students'][i]['sprint'], str['students'][i]['sprints'][j]['score']['hse']],
+                  
+                  
+           ]);
+         }
+       }
+     }
+               
+               
+     var options = {'title': 'Current average life skill'};        
+     var chart = new google.visualization.LineChart(document.getElementById('life-chart'));
+     chart.draw(data, options);
+   }
+
+
 
 
       // Calculamos datos del ENROLLMENT

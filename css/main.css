@@ -138,6 +138,7 @@ main {
     background: #f7f7f7;
     display: inline-block;
     
+    
     margin:5px;
     width: 45%;
 }
@@ -168,4 +169,11 @@ main {
 .graph{
     width:100%;
     border: solid 1px green;
+}
+
+.skills{
+    padding: 20px;
+    width:100%;
+    border: solid 1px green;
+
 }
