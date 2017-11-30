@@ -1,7 +1,7 @@
 /*
  * Funcionalidad de tu producto
  */
-/* ****************************************************************************************************************/
+/* *************************************************cargando la pagina *********************************************************/
 window.addEventListener('load', function() {
   var view = document.getElementById('overview'),
     students = document.getElementById('students'),
@@ -15,9 +15,10 @@ window.addEventListener('load', function() {
     filtro = document.getElementById('filtro'),
     nps = document.getElementById('nps'),
     npsPorciento = document.getElementById('nps-porciento'),
-    boosExpectativa = document.getElementById('box-expectativa');
-
-  /* ***************************************************************llamando por sede y por promocion**********************************************************************/
+    boxExpectativa = document.getElementById('box-expectativa'),
+    pointTech = document.getElementById('tech'),
+    pointHse = document.getElementById('hse');
+  /* *************************************************llamando por sede y por promocion***********************************/
   filtro.addEventListener('change', function(event) {
     switch (event.target.value) {
     case '0': sedePromo('LIM', '2016-2');
@@ -41,7 +42,9 @@ window.addEventListener('load', function() {
     case '9':sedePromo('CDMX', '2017-2');
       break;
     }
+    // funcion que llamara cada caso que pertenezca la opcion clikeada como parametros pasamos la sede y la promocion datos que estan en la data.js
     function sedePromo(sede, promo) {
+      // respondiendo primera pregunta. Hallando la cantidad de alumnas y el porcentaje recorriendo un array se puede contar cuantas alumnas hay
       var arr = data[sede][promo]['students'];
       var cant = 0;
       var nocant = 0;
@@ -55,29 +58,24 @@ window.addEventListener('load', function() {
       var calculandoPorcentaje = parseInt((nocant / arr.length) * 100);
       total.textContent = cant;
       porcentaje.textContent = calculandoPorcentaje + '%';
-      /* Cantida de alumnas que superan el objetivo*******************************************************************/
+      /* ***************************************************Cantida de alumnas que superan el objetivo*****************************************************/
       var sumaScore = 0;
       for (var i = 0; i < arr.length; i++) {
-        var suma = 0;
-        for (var j = 0; j < 4; j++) {
-          if (data[sede][promo]['students'][i]['sprints'][j] === undefined) {
-            suma = suma;
-          } else {
-            var tech = data[sede][promo]['students'][i]['sprints'][j]['score']['tech'];
-            var hse = data[sede][promo]['students'][i]['sprints'][j]['score']['hse'];
-            if (tech > 1260 && hse > 840) {
-              suma++;
-            } else {
-              suma = suma;
-            }
-          }
+        debugger;
+        var sumaHse = 0;
+        var sumaTech = 0;
+        for (var j = 0; j < data[sede][promo]['students'][i]['sprints'].length; j++) {
+          var tech = data[sede][promo]['students'][i]['sprints'][j]['score']['tech'];
+          var hse = data[sede][promo]['students'][i]['sprints'][j]['score']['hse'];
+          sumaHse = sumaHse + hse;
+          sumaTech = sumaTech + tech;
         }
-        if (suma === 4) {
+        if (sumaHse > 3360 && sumaTech > 5040) {
           sumaScore++;
         }
       }
       meta.innerHTML = sumaScore;
-      /* cantida de nps*********************************************************************************/
+      /* ***************************************************************cantida de nps*********************************************************************/
       var arrNps = data[sede][promo]['ratings'];
       var sum = 0;
       var npsTotal = 0;
@@ -93,10 +91,38 @@ window.addEventListener('load', function() {
       var promoterPorcentaje = parseInt((npsPromoters / npsTotal) * 100);
       var detractorsPorcentaje = parseInt((npsDetractors / npsTotal) * 100);
       var passivePorcentaje = parseInt((npsPassive / npsTotal) * 100);
-      var totalNps = suma / arrNps.length;
+      var totalNps = sum / arrNps.length;
       nps.innerHTML = totalNps.toFixed(2);
       npsPorciento.innerHTML = promoterPorcentaje + '% Promoters' + '<br>' + detractorsPorcentaje + '% Passive' + '<br>' + passivePorcentaje + '% Detractors';
-      /* *****************************************************************************************************************/
+      /* *********************************************calculando los puntos obtenidos en tech********************************************************************/
+      var cantidadTech = 0;
+      for (var i = 0; i < arr.length; i++) {
+        var arrSprint = data[sede][promo]['students'][i]['sprints'];
+        var sumTech = 0;
+        for (var j = 0; j < arrSprint.length; j++) {
+          var tech2 = data[sede][promo]['students'][i]['sprints'][j]['score']['tech'];
+          sumTech = sumTech + tech2;
+          if (sumTech > (1260 * 4)) {
+            cantidadTech++;
+          }
+        }
+      }
+      pointTech.textContent = cantidadTech;
+      /* ********************************************************calculando los puntos en hse*******************************************************************/
+      var cantidadHse = 0;
+      for (var i = 0; i < arr.length; i++) {
+        var arrSprint = data[sede][promo]['students'][i]['sprints'];
+        var sumHse = 0;
+        for (var j = 0; j < arrSprint.length; j++) {
+          var hse2 = data[sede][promo]['students'][i]['sprints'][j]['score']['hse'];
+          sumHse = sumHse + hse2;
+          if (sumHse > (840 * 4)) {
+            cantidadHse++;
+          }
+        }
+      }
+      pointHse.textContent = cantidadHse;
+      /* **************************************porcentaje de la expectativa de las alumnas respecto a laboratoria**************************************************/
       var sumaExpectativa = 0;
       for (var i = 0; i < arrNps.length; i++) {
         var studentNoCumple = data[sede][promo]['ratings'][i]['student']['no-cumple'];
@@ -106,15 +132,15 @@ window.addEventListener('load', function() {
         sumaExpectativa = sumaExpectativa + Expectativa;
       }
       var porcentajeExpectativa = parseInt(sumaExpectativa / arrNps.length);
-      boosExpectativa.textContent = porcentajeExpectativa + '%';
-      /* *****************************************************************************************************************/
+      boxExpectativa.textContent = porcentajeExpectativa + '%';
+      /* *********************************************promedio de los profesores********************************************************************/
       var promedioTeacher = 0;
       for (var i = 0; i < arrNps.length; i++) {
         var teacher = data[sede][promo]['ratings'][i]['teacher'];
         promedioTeacher = (promedioTeacher + teacher) / arrNps.length;
       }
       boxTeacher.textContent = promedioTeacher.toFixed(2);
-      /* ******************************************************************************************************************/
+      /* *************************************************promedio jedi*****************************************************************/
       var promedioJedi = 0;
       for (var i = 0; i < arrNps.length; i++) {
         var jedi = data[sede][promo]['ratings'][i]['jedi'];
@@ -179,17 +205,16 @@ function drawChart() {
   data.addColumn('string', 'Topping');
   data.addColumn('number', 'Slices');
   data.addRows([
-    ['Mushrooms', 2],
-    ['Onions', 3],
-    ['Olives', 1],
-    ['Zucchini', 1],
-    ['Pepperoni', 1]
+    ['S1', 2],
+    ['S2', 3],
+    ['S3', 1],
+    ['S4', 1],
   ]);
 
   // Set chart options
   var options = {
-    'title': 'How Much Pizza I Ate Last Night',
-    'width': 450,
+    'title': 'CANTIDAD DE PUNTOS  POR SPRINT',
+    'width': 500,
     'height': 450,
   };
   var chart = new google.visualization.PieChart(document.getElementById('chart_div'));

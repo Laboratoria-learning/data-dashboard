@@ -4751,7 +4751,6 @@ var data = {
           'active': false,
           'sprints': []
         },
-        { },
         {
           'name': 'Jada Curgenuer',
           'photo': 'http://dummyimage.com/133x195.png/cc0000/ffffff',
@@ -5010,7 +5009,6 @@ var data = {
             }
           ]
         },
-        { },
         {
           'name': 'Julieta Readhead',
           'photo': 'http://dummyimage.com/119x227.png/ff4444/ffffff',
