@@ -75,6 +75,10 @@ section {
   height: 400px;
 }
 
+.modif{
+  padding-top: : 200px;
+}
+
 .Enrollment {
   margin-left: 20px;
 }
@@ -97,7 +101,7 @@ section {
 }
 
 .graphContent {
-  background-color: yellow;
+
   width: 313px;
   height: 200px;
   margin-left: 30px;
@@ -134,7 +138,7 @@ section {
 }
 
 .gfContainer1 {
-  background-color: yellow;
+
   display: inline-block;
   width: 650px;
   height: 375px;
@@ -143,7 +147,7 @@ section {
 }
 
 .gfContainer2 {
-  background-color: yellow;
+  
   display: inline-block;
   width: 390px;
   height: 375px;
