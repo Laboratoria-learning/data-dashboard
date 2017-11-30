@@ -30,4 +30,4 @@
 
 ## Desarrollo
 1. Iniciamos con el sketching de lo que nos piden.
-![sketching](/assets/images/1.jpg)
+![sketching](../assets/images/1.jpg)
