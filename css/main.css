@@ -255,6 +255,9 @@ margin-top: 50PX;
 width: 100%;
 height: auto;
 }
+.style-none{
+    display: none;
+}
 /*agregando estilos a la seccion students*/
 .students{
     box-sizing: content-box;
@@ -264,7 +267,7 @@ height: auto;
     height: 100%;
     font-family: 'Roboto', sans-serif;
   }
-  .colum-left,.colum-right,.colum-1,.colum-2{
+  .colum-left,.colum-right,.colum-1,.colum-2,.container-skills{
     display: inline-block;
     margin: 7px;
   }
@@ -285,7 +288,7 @@ height: auto;
     border-bottom: 1px solid gray;
     border-right:  1px solid gray;
   }
-  .specialization ul,.colum-1 ul{
+  .specialization ul{
     padding: 0;
   }
   .specialization ul li{
@@ -303,6 +306,7 @@ height: auto;
     right: 0;
     width:55%;
     height: 100%;
+    text-transform: uppercase;
   }
   .search{
     position: absolute;
@@ -327,9 +331,10 @@ height: auto;
     margin: 10px;
   }
   .students-skills{
-    position:absolute;
+    position:relative;
     left: 0;
     top:60px;
+    margin-bottom: 20px;
     padding: 10px;
     width: 800px;
     height: 190px;
@@ -342,17 +347,21 @@ height: auto;
     margin: 5px;
     float: left;
   }
-  .figure .image{
-    width: 160px;
-    height: 160px;
+  .background-image-peru{
+    background-image: url(../assets/img/peru.png);
   }
+  .figure .image{
+    width: 100px;
+    height: 100px;
+  }
+  
   .colum-1{
     font-size: 20px;
   }
   .colum-1 h1,.colum-1 p,.box h1,.box p{
     margin: 0;
   }
-  .colum-1 ul li{
+  .colum-1 .container-skills p{
     padding: 2px;
     display: inline-block;
     list-style: none;
@@ -385,3 +394,4 @@ height: auto;
 .fontStrong {
     font-weight: 900;
 }
+
