@@ -33,7 +33,7 @@ var numdesertedAQP20162 = desertedAQP20162.length;
 console.log('numero de estudiantes Desertaron AQP20162 : ' + numdesertedAQP20162);
 /* Porcentaje estudiantes desertaron AQP------------------------------------*/
 // % estudiantes desertaron AQP 2016-2
-var percDesertedAQP20162 = parseInt((numdesertedAQP20162 / numEstudentsAQP20162) * 100);
+var percDesertedAQP20162 = (parseInt((numdesertedAQP20162 / numEstudentsAQP20162) * 100)) + '%';
 console.log('% estudiantes Desertaron AQP20162 : ' + percDesertedAQP20162);
 //* Puntución promedio de los profesores *//
 // Suma de las puntuaciones por sprint de los profesores 2016-2 *//
@@ -72,7 +72,7 @@ var numdesertedAQP20171 = desertedAQP20171.length;
 console.log('numero de estudiantes Desertaron AQP20171 : ' + numdesertedAQP20171);
 /* Porcentaje estudiantes desertaron AQP------------------------------------*/
 // % estudiantes desertaron AQP 2017-1
-var percDesertedAQP20171 = parseInt((numdesertedAQP20171 / numEstudentsAQP20171) * 100);
+var percDesertedAQP20171 = (parseInt((numdesertedAQP20171 / numEstudentsAQP20171) * 100)) + '%';
 console.log('% estudiantes Desertaron AQP20171 : ' + percDesertedAQP20171);
 //* Puntución promedio de los profesores *//
 // Suma de las puntuaciones por sprint de los profesores 2017-1 *//
@@ -124,7 +124,7 @@ var numdesertedCDMX20171 = desertedCDMX20171.length;
 console.log('numero de estudiantes Desertaron CDMX20171 : ' + numdesertedCDMX20171);
 /* Porcentaje estudiantes desertaron CDMX------------------------------------*/
 // % estudiantes desertaron CDMX 2017-1
-var percDesertedCDMX20171 = parseInt((numdesertedCDMX20171 / numEstudentsCDMX20171) * 100);
+var percDesertedCDMX20171 = (parseInt((numdesertedCDMX20171 / numEstudentsCDMX20171) * 100)) + '%';
 console.log('% estudiantes Desertaron CDMX20171 : ' + percDesertedCDMX20171);
 //* Puntución promedio de los profesores *//
 // Suma de las puntuaciones por sprint de los profesores 2017-1 *//
@@ -163,7 +163,7 @@ var numdesertedCDMX20172 = desertedCDMX20172.length;
 console.log('numero de estudiantes Desertaron CDMX20172 : ' + numdesertedCDMX20172);
 /* Porcentaje estudiantes desertaron CDMX------------------------------------*/
 // % estudiantes desertaron CDMX 2017-2
-var percDesertedCDMX20172 = parseInt((numdesertedCDMX20172 / numEstudentsCDMX20172) * 100);
+var percDesertedCDMX20172 = (parseInt((numdesertedCDMX20172 / numEstudentsCDMX20172) * 100)) + '%';
 console.log('% estudiantes Desertaron CDMX20172 : ' + percDesertedCDMX20172);
 //* Puntución promedio de los profesores *//
 // Suma de las puntuaciones por sprint de los profesores 2017-2 *//
@@ -214,7 +214,7 @@ var numdesertedLIM20162 = desertedLIM20162.length;
 console.log('numero de estudiantes Desertaron LIM20162 : ' + numdesertedLIM20162);
 /* Porcentaje estudiantes desertaron LIM;-------------------------------------*/
 // % estudiantes desertaron LIM 2016-2
-var percDesertedLIM20162 = parseInt((numdesertedLIM20162 / numEstudentsLIM20162) * 100);
+var percDesertedLIM20162 = (parseInt((numdesertedLIM20162 / numEstudentsLIM20162) * 100)) + '%';
 console.log('% estudiantes Desertaron LIM20162 : ' + percDesertedLIM20162);
 //* Puntución promedio de los profesores *//
 // Suma de las puntuaciones por sprint de los profesores 2016-2 *//
@@ -253,7 +253,7 @@ var numdesertedLIM20171 = desertedLIM20171.length;
 console.log('numero de estudiantes Desertaron LIM20171 : ' + numdesertedLIM20171);
 /* Porcentaje estudiantes desertaron LIM;-------------------------------------*/
 // % estudiantes desertaron LIM 2017-1
-var percDesertedLIM20171 = parseInt((numdesertedLIM20171 / numEstudentsLIM20171) * 100);
+var percDesertedLIM20171 = (parseInt((numdesertedLIM20171 / numEstudentsLIM20171) * 100)) + '%';
 console.log('% estudiantes Desertaron LIM20171 : ' + percDesertedLIM20171);
 //* Puntución promedio de los profesores *//
 // Suma de las puntuaciones por sprint de los profesores 2017-1 *//
@@ -292,7 +292,7 @@ var numdesertedLIM20172 = desertedLIM20172.length;
 console.log('numero de estudiantes Desertaron LIM20172 : ' + numdesertedLIM20172);
 /* Porcentaje estudiantes desertaron LIM;-------------------------------------*/
 // % estudiantes desertaron LIM 2017-2
-var percDesertedLIM20172 = parseInt((numdesertedLIM20172 / numEstudentsLIM20172) * 100);
+var percDesertedLIM20172 = (parseInt((numdesertedLIM20172 / numEstudentsLIM20172) * 100)) + '%';
 console.log('% estudiantes Desertaron LIM20172 : ' + percDesertedLIM20172);
 //* Puntución promedio de los profesores *//
 // Suma de las puntuaciones por sprint de los profesores 2017-2 *//
@@ -343,7 +343,7 @@ var numdesertedSCL20162 = desertedSCL20162.length;
 console.log('numero de estudiantes Desertaron SCL20162 : ' + numdesertedSCL20162);
 /* Porcentaje estudiantes desertaron SCL;-------------------------------------*/
 // % estudiantes desertaron SCL 2016-2
-var percDesertedSCL20162 = parseInt((numdesertedSCL20162 / numEstudentsSCL20162) * 100);
+var percDesertedSCL20162 = (parseInt((numdesertedSCL20162 / numEstudentsSCL20162) * 100)) + '%';
 console.log('% estudiantes Desertaron SCL20162 : ' + percDesertedSCL20162);
 //* Puntución promedio de los profesores *//
 // Suma de las puntuaciones por sprint de los profesores 2016-2 *//
@@ -382,7 +382,7 @@ var numdesertedSCL20171 = desertedSCL20171.length;
 console.log('numero de estudiantes Desertaron SCL20171 : ' + numdesertedSCL20171);
 /* Porcentaje estudiantes desertaron SCL;-------------------------------------*/
 // % estudiantes desertaron SCL 2017-1
-var percDesertedSCL20171 = parseInt((numdesertedSCL20171 / numEstudentsSCL20171) * 100);
+var percDesertedSCL20171 = (parseInt((numdesertedSCL20171 / numEstudentsSCL20171) * 100)) + '%';
 console.log('% estudiantes Desertaron SCL20171 : ' + percDesertedSCL20171);
 //* Puntución promedio de los profesores *//
 // Suma de las puntuaciones por sprint de los profesores 2017-1 *//
@@ -421,7 +421,7 @@ var numdesertedSCL20172 = desertedSCL20172.length;
 console.log('numero de estudiantes Desertaron SCL20172 : ' + numdesertedSCL20172);
 /* Porcentaje estudiantes desertaron SCL;-------------------------------------*/
 // % estudiantes desertaron SCL 2017-2
-var percDesertedSCL20172 = parseInt((numdesertedSCL20172 / numEstudentsSCL20172) * 100);
+var percDesertedSCL20172 = (parseInt((numdesertedSCL20172 / numEstudentsSCL20172) * 100)) + '%';
 console.log('% estudiantes Desertaron SCL20172 : ' + percDesertedSCL20172);
 //* Puntución promedio de los profesores *//
 // Suma de las puntuaciones por sprint de los profesores 2017-2 *//

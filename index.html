@@ -13,7 +13,6 @@
       </figure>
       <!--Falta agregar icono menu -->
     </header>
-
     <div class="filters-container">
       <ul class="filters">
         <span class="span">OVERVIEW</span>
@@ -22,29 +21,33 @@
       </ul>
     </div>
     <!---html menu display -->
-          <nav class="menuDisplay">
-            <ul>
-                <li class="submenu">SEDE & GENERACION
-                <ul class="hide choose">
-                  <option>AREQUIPA</option>
-                  <li id='AQP20162'>2016-2</li>
-                  <li id='AQP20171' >2017-1</li>
-                  <option>MEXICO</option>
-                  <li id='CDMX20171'>2017-1</li>
-                </ul>
-                </li>
-            </ul>
-          </nav>
-          <div id=cambioDiv class="cambioDiv">
-          </div>
-    <!------------------------------>
+    <nav class="menuDisplay">
+      <ul>
+        <li class="submenu">SEDE & GENERACION
+          <ul class="hide choose">
+            <option>AREQUIPA</option>
+              <li id='AQP20162'>2016-2</li>
+              <li id='AQP20171' >2017-1</li>
+            <option>MEXICO</option>
+              <li id='CDMX20171'>2017-1</li>
+              <li id='CDMX20172'>2017-2</li>
+            <option>LIMA</option>
+              <li id='LIM20162'>2016-2</li>
+              <li id='LIM20171'>2017-1</li>
+              <li id='LIM20172'>2017-2</li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div id=cambioDiv class="cambioDiv"></div>
+    <!-- -->
     <section>
       <div class="container1">
         <div class="Total-students">
           <h2 class="Enrollment">ENROLLMENT</h2>
           <div class="subcontainer">
             <div id='enrollmentDiv1'class="dataContainer"></div>
-            <div id='enrollmentDiv2'class="dataContainer2"></div>
+            <div id='enrollmentDiv2'class="dataContainer"></div>
           </div>
           <div class="graphContent"></div>
         </div>
@@ -90,29 +93,37 @@
           </div>
       </div>
       <div class="container4">
-          <div class="Total-students">
-            <h2 class="Enrollment">STUDENT SATISFACTION</h2>
-            <div class="subcontainer">
-              <div class="dataContainer"></div>
-            </div>
-            <div class="graphContent"></div>
+        <div class="Total-students">
+          <h2 class="Enrollment">STUDENT SATISFACTION</h2>
+          <div class="subcontainer">
+            <div class="dataContainer"></div>
           </div>
-          <div class="Total-students">
-            <h2 class="Enrollment">TEACHER RATING</h2>
-            <div class="subcontainer">
-              <div class="dataContainer"></div>
-            </div>
-            <div class="graphContent"></div>
-          </div>
-          <div class="Total-students">
-            <h2 class="Enrollment">JEDI MASTER RATING</h2>
-            <div class="subcontainer">
-              <div class="dataContainer"></div>
-            </div>
-            <div class="graphContent"></div>
-          </div>
+          <div class="graphContent"></div>
         </div>
+        <div class="Total-students">
+          <h2 class="Enrollment">TEACHER RATING</h2>
+          <div class="subcontainer">
+            <div class="dataContainer"></div>
+          </div>
+          <div class="graphContent"></div>
+        </div>
+        <div class="Total-students">
+          <h2 class="Enrollment">JEDI MASTER RATING</h2>
+          <div class="subcontainer">
+            <div class="dataContainer"></div>
+          </div>
+          <div class="graphContent"></div>
+          </div>
+      </div>
+<!-- Divs para los graficos segun google chart Pero se supone que por el evento click recien deben aparecer en los cuadros que les corresponde. Estos divs son solo para visualizar la grafica-->
+      <div id="columnchart1_values" style="width: 900px; height: 300px;"></div>
+      <div id="columnchart2_values" style="width: 900px; height: 300px;"></div>
+      <div id="columnchart3_values" style="width: 900px; height: 300px;"></div>
+      <div id="columnchart4_values" style="width: 900px; height: 300px;"></div>
     </section>
+    <!-- google charts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="./js/googlecharts.js"></script>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->

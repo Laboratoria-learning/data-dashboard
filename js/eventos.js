@@ -27,15 +27,15 @@ var cdmx20171 = document.getElementById('CDMX20171');
 // funcionalidad Generaciones en el menu desplegable
 function faqp20162() {
   enrollmentDiv1.textContent = numEstudentsAQP20162;
-  enrollmentDiv2.textContent = 'varible%1';
+  enrollmentDiv2.textContent = percDesertedAQP20162;
 }
 function faqp20171() {
   enrollmentDiv1.textContent = numEstudentsAQP20171;
-  enrollmentDiv2.textContent = 'varible%2';
+  enrollmentDiv2.textContent = percDesertedAQP20171;
 }
 function fcdmx20171() {
   enrollmentDiv1.textContent = numEstudentsCDMX20171;
-  enrollmentDiv2.textContent = 'varible%3';
+  enrollmentDiv2.textContent = percDesertedCDMX20171;
 }
 // eventos Generaciones en el menu desplegable
 aqp20162 .addEventListener('click', faqp20162);
