@@ -3,12 +3,101 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="assets/icons/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   </head>
   <body>
+  <!--primera sección -->
+  <header>
+      <i class="fa fa-bars"></i>
+      <img src="assets/images/logo-laboratoria.svg" alt="LogoLaboratoria">
 
+
+    </header>
+    <!-- sede -->
+    <section class="mainBarr">
+      <div class="boxOne">
+      <select id="sede">
+        <option value="CDMX">Mexico</option>
+        <option value="LIM">Lima</option>
+        <option value="SCL">Santiago de Chile</option>
+      </select>
+      <select id="generation">
+        <option value="2016-2">2016-2</option>
+        <option value="2017-1">2017-1</option>
+        <option value="2017-2">2017-2</option>
+      </select>
+    </select>
+  </div>
+  <div class="boxTwo">
+  <ul>
+      <li><a href="#">Overview</a></li>
+      <li><a href="#">Students</a></li>
+      <li><a href="#">Teachers</a></li>
+    </ul>
+  </div>
+</section>
+    <section id="general">
+    </section>
+
+    <section id='techS'>
+    </section>
+
+    <section id="lifeSkills">
+      <div class="LSbarr">
+        <h2>Life Skills</h2>
+        <select class="latestSpring"name="">
+          <option value="2016-2">Sprint 1</option>
+          <option value="2017-1">Sprint 2</option>
+          <option value="2017-2">Sprint 3</option>
+          <option value="2017-2">Sprint 4</option>
+        </select>
+         <div class="square s1">
+            <h3>80</h3>
+            <p>overall class average</p>
+        </div>
+        <div class="square s2">
+            <h3>62</h3>
+            <p>of students that meet the target</p>
+            <img src="assets/images/rectangular-graphic.png" alt="">
+            <img src="assets/images/circle-graphic.png" alt="">
+        </div>
+      </div>
+  </section>
+
+
+    <section id="lastSection">
+     <div class="studentSatif">
+      <h2>Student Satisfaction</h2>
+      <div class="lilbox">
+        <h4>140</h4>
+        <p>% Meeting or exceding expectations</p>
+      </div>
+      <img class="lastChart" src="assets/images/graph.png" alt="">
+    </div>
+
+    <div class="teacherRating">
+      <h2>Teacher Rating</h2>
+      <div class="lilbox">
+        <h4>4.2</h4>
+        <p>Overall teacher rating</p>
+      </div>
+      <img class="lastChart" src="assets/images/graph.png" alt="">
+  </div>
+
+    <div class="jediRating">
+      <h2>Jedi Master rating</h2>
+      <div class="lilbox">
+        <h4>50</h4>
+        <p>Overall Jedi rating (cumulative)</p>
+      </div>
+      <img class="lastChart" src="assets/images/graph.png" alt="">
+    </div>
+    </section>
 		<!-- Base de datos -->
-		<script src="./js/data.js"></script>
-		<!-- Aquí va tus archivos JS -->
+    <script src="./js/data.js"></script>
+<!-- Aquí va tus archivos JS -->
     <script src="./js/app.js"></script>
   </body>
 </html>

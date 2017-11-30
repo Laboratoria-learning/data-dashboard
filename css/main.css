@@ -1,3 +1,361 @@
 /*
  * Estilos de tu proyecto
  */
+ /*seteando el proyecto*/
+ * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-family: 'Montserrat', sans-serif;
+ }
+/*sección header*/
+
+ header {
+     box-shadow: 2px 2px 2px gray;
+     height: 80px;
+ }
+ header img {
+    margin-top: 5px;
+    margin-left: 580px;
+    width: 190px;
+    height: 100px;
+    }
+
+i {
+  margin-right: 60px;
+  font-size: 30px;
+}
+
+i:hover {
+ color: white;
+ background-color: rgb(190, 190, 190);
+}
+.boxOne{
+  float: left;
+  width: 100%;
+  margin-left: 50px;
+}
+.boxTwo{
+  float: left;
+}
+header .fa {
+    margin-top: 30px;
+    float: right;
+    font-size: 30px;
+    }
+
+/*sección mainBarr*/
+.mainBarr{
+  background-color: #e1e1e1;
+  width: 100%;
+  height: 150px;
+}
+#sede {
+  height: 60px;
+  background-color: #e1e1e1;
+  border: none;
+  font-size: 20px;
+  font-weight: bolder;
+  float: left;
+}
+
+#generation {
+  height: 60px;
+  background-color: #e1e1e1;
+  border: none;
+  font-size: 20px;
+  font-weight: bolder;
+  margin-left: 10px;
+  float: left;
+}
+
+ul li a {
+color: #000;
+text-decoration: none;
+text-transform: uppercase;
+float: left;
+display: inline-block;
+}
+
+li {
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 40px;
+  margin-top: 30px;
+  }
+
+  ul li:hover {
+  color: white;
+  background-color: rgb(190, 190, 190);
+}
+
+/*sección 1 enrollment*/
+
+ #general {
+   background-color: #e6ecf0;
+   height: 450px;
+   float: left;
+   width: 100%;
+ }
+
+
+ .enrollmentClass {
+   margin-top: 20px;
+   margin-left: 80px;
+   background-color: #fff;
+   box-sizing: border-box;
+   padding: 20px;
+   float: left;
+   width: 350px;
+   height: 300px;
+   text-align: center;
+ }
+
+.enrollOne {
+  background-color: #e6ecf0;
+  float: left;
+  font-size: 20px;
+  width: 140px;
+  height: 60px;
+  font-size: 10px;
+  text-align: center;
+  margin-top: 15px;
+  margin-right: 10px;
+ }
+
+.enrollTwo {
+    background-color: #e6ecf0;
+    float: left;
+    width: 140px;
+    height: 60px;
+    font-size: 11px;
+    text-align: center;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.achievementClass {
+  margin-top: 20px;
+  margin-left: 20px;
+  background-color: #fff;
+  box-sizing: border-box;
+  float: left;
+  padding: 20px;
+  display: inline-block;
+  width: 350px;
+  height: 300px;
+  text-align: center;
+}
+
+.achievementClass h1{
+  font-weight: bolder;
+}
+.achiOne {
+  background-color: #e6ecf0;
+  float: left;
+  width: 140px;
+  height: 60px;
+  font-size: 11px;
+  text-align: center;
+  margin-right: 10px;
+  margin-top: 15px;
+  }
+
+.achiTwo {
+  background-color: #e6ecf0;
+  float: left;
+  width: 140px;
+  height: 60px;
+  font-size: 11px;
+  text-align: center;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+
+.promoterClass {
+  float: right;
+  margin-top: 20px;
+  margin-left: 20px;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 20px;
+  float: left;
+  width: 350px;
+  height: 300px;
+  text-align: center;
+}
+
+.pOneClass {
+  background-color: #e6ecf0;
+  float: left;
+  width: 140px;
+  height: 60px;
+  font-size: 11px;
+  text-align: center;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+
+.pTwoClass {
+  background-color: #e6ecf0;
+  float: left;
+  width: 140px;
+  height: 60px;
+  font-size: 11px;
+  text-align: center;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+
+.titleStyle {
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*seccion 2 Tech Skills*/
+
+#techS {
+ width: 50%;
+ clear: both;
+ background-color: #e6ecf0;
+ box-sizing: border-box;
+ height: 400px;
+ }
+ .sectionTech {
+ padding: 10px;
+ background-color: white;
+ }
+
+.metTargetStyle{
+  background-color: #ffffff;
+  float: left;
+  width: 200px;
+  height: 100px;
+  font-size: 11px;
+  text-align: center;
+  margin-right: 10px;
+  margin-top: 15px;
+  padding: 5px;
+  /*border: 1px solid red;*/
+}
+.totalTSStyle {
+background-color: #e6ecf0;
+float: left;
+width: 200px;
+height: auto;
+font-size: 11px;
+text-align: center;
+margin-right: 10px;
+margin-top: 15px;
+padding: 5px;
+/*border: 1px solid red;*/
+
+}
+.comboStyle {
+    float: left;
+    margin: 50px;
+    border: none;
+    clear: both;
+}
+.techSkillStyle {
+ /*border: 1px solid red;*/
+ box-sizing: border-box;
+ width: auto;
+ }
+
+/*seccion lifeSkills */
+#lifeSkills{
+  padding: 30px;
+  box-sizing: border-box;
+  background-color: #e6ecf0;
+}
+
+.LSbarr {
+  background-color: #fff;
+  width: 950px;
+  height: 400px;
+  margin-left: 60px;
+  display: inline-block;
+}
+.latestSpring {
+  background-color: #fff;
+  width: 180px;
+  height: 40px;
+  margin-top: 10px;
+  margin-left: 40px;
+  font-weight: 900;
+  font-size: 10px;
+  border: none;
+  text-transform: uppercase;
+  }
+img {
+  height: 150px;
+  padding: 20px;
+  margin-top: 40px;
+  margin-left: 40px;
+  float: left;
+  display: inline-block;
+}
+
+.square{
+  background-color: #e6ecf0;
+  box-sizing: border-box;
+  width: 280px;
+  height: 30px;
+  padding: 20px;
+  border-top: 80px;
+  margin-left: 40px;
+}
+.square .s2{
+    float:right;
+}
+ /*seccion lastSection */
+#lastSection{
+box-sizing: border-box;
+padding: 40px;
+background-color: #e6ecf0;
+height: 450px;
+}
+
+.studentSatif{
+background-color:#fff;
+box-sizing: border-box;
+display: inline-block;
+width: 360px;
+height: 350px;
+padding: 20px;
+border-top: 80px;
+margin-left: 40px;
+text-align: center;
+}
+
+.teacherRating{
+  background-color:#fff;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 360px;
+  height: 350px;
+  padding: 20px;
+  border-top: 80px;
+  margin-left: 40px;
+  text-align: center;
+
+}
+
+.jediRating{
+  background-color:#fff;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 360px;
+  height: 350px;
+  padding: 20px;
+  border-top: 80px;
+  margin-left: 40px;
+  text-align: center;
+}
+
+.lastChart {
+  margin-top: 20px;
+  width: 280px;
+  height: 240px;
+}
