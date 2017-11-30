@@ -57,7 +57,7 @@ nav {
     width: 445px;
 }
 .wrap {
-    background-color: #e1e1e1;
+    background: #e1e1e1;
     width: 395px;
     height: 49px;
     margin-left: 41px;
@@ -77,68 +77,79 @@ nav {
     font-size: 22px;
     padding: 4px;
 }
-.first {
-    margin-left: 5px;
-}
-.info-container {
-    background-color: #e1e1e1;
-    width: 100%;
-}
 .overview-tab {
     display: none;
+    background-color: #f7f7f7;
 }
 .container1 {
-    background: #f7f7f7;
-    height: 433px;
-    width: 100%;
-}
-.container2 {
     display: inline-flex;
-    background: #f7f7f7;
-    height: 559px;
+    background-color: #f7f7f7;
     width: 100%;
+    height: 433px;
 }
 .square {
-    outline: 1px solid green;
+    outline: 1px solid blue;
     background-color: #ffffff;
-    display: inline-flex;
     height: 335px;
     width: 342px;
-    
+    position: relative;
 }
-
 .data1 {
-    outline: 1px solid red;
-    background: #f7f7f7;
+    background-color: #f7f7f7;
+    display: inline-block;
     font-size: 10px;
-    text-align: center;
-    line-height: 25px;
-    width: 145px;
-    height: 60px;
+    font-weight: 500;
+    line-height: 9px;
     margin: 4.5px;
-    margin-top: 62px;
+    margin-left: 14px; 
+    text-align: center;
+    width: 146px;
+    height: 60px;
+}
+.first-position {
+    margin-top: 27px;
+}
+.container2 {
+    display: block;
+    margin-bottom: 24px;
 }
 .rectangle {
-    background-color: #ffffff;
-    display: inline-flex;
-    width: 1087px;
-    height: 520px;
+    outline: 1px solid orange;
+    background: #ffffff;
     margin-left: 87px;
+    width: 1084px;
+    height: 520px;
+    position: relative;
 }
 .data2 {
-    outline: 1px solid black;
-    background: #f7f7f7;
+    background-color: #f7f7f7;
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 9px;
+    margin: 4.5px;
     width: 197px;
     height: 60px;
-    margin: 4.5px;
-    margin-top: 65px;
+    margin-left: 20px;
+}
+.initial {
+    margin-left: 20px;
 }
 .last-position {
     margin-bottom: 123px;
     margin-top: 27px;
 }
-.initial {
-    margin-left: 20px;
+.graphic {
+    outline: 1px solid red;     
+    display: block;
+    position: relative;
+    top: 200px;
+    width: 300px;
+    height: 181px;
+}
+.info-container {
+    background-color: #e1e1e1;
+    width: 100%;
 }
 .students-tab {
     display: none;
@@ -157,7 +168,9 @@ nav {
     margin-right: 10px;
     margin-left: 80px;
 }
-
+.students-tab {
+    display: none;
+}
 .students-data {
     outline: 1px solid red;
     background-color: white;
@@ -174,4 +187,5 @@ nav {
 .search{
     width:800px;
     height:35px;
-}*/
+}
+

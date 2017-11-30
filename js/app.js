@@ -12,14 +12,13 @@ var showHide = function(e) {
       //mostrar info de overview
       changeOne.toggle('overview-tab');
       //ocultar students y teachers
-      changeOne.remove('changeTwo');
+      
     } else if (tabs === 'students'){
       var studentsTab = document.getElementById('students-tab');
       var changeTwo = studentsTab.style.display = 'block';
-      //mostrar students
-      changeTwo.toggle('students-tab');
+      //mostrar students;
       //ocultar overview y teachers
-      changeTwo.remove('overview-tab');
+      
     }
   };
 
