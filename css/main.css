@@ -156,8 +156,10 @@ section {
   right: 300px;
   z-index: -10;
 }
-
 .show{
   position: absolute;
   z-index: +100;
+}
+.chartGrafic1 {
+  position: absolute;
 }

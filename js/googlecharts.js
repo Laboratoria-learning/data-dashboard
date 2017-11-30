@@ -62,6 +62,33 @@ function drawChartNPSAQP20162() {
   chartNPSAQP20162.draw(viewNPSAQP20162, optionsNPSAQP20162);
 }
 
+google.charts.setOnLoadCallback(drawChartNPSAQP20171);
+function drawChartNPSAQP20171() {
+  var dataNPSAQP20171 = google.visualization.arrayToDataTable([
+    ['Calificación NPS', 'Total', { role: 'style' } ],
+    ['Promoters', npsPromotersAQP20171, 'blue'],
+    ['Passives', npsPassivesAQP20171, 'green'],
+    ['Detractors', npsDetractorsAQP20171, 'red'],
+  ]);
+
+  var viewNPSAQP20171 = new google.visualization.DataView(dataNPSAQP20171);
+  viewNPSAQP20171.setColumns([0, 1,
+    { calc: 'stringify',
+      sourceColumn: 1,
+      type: 'string',
+      role: 'annotation' },
+    2]);
+
+  var optionsNPSAQP20171 = {
+    title: 'Calificación NPS GEN 2017-1',
+    width: 300,
+    height: 200,
+    bar: {groupWidth: '95%'},
+    legend: { position: 'none' },
+  };
+  var chartNPSAQP20171 = new google.visualization.ColumnChart(document.getElementById('columnchart2NPS'));
+  chartNPSAQP20171.draw(viewNPSAQP20171, optionsNPSAQP20171);
+}
 /* ****SEDE CDMX**** */
 /* -------Total de alumnas por generacion:--------------- */
 google.charts.setOnLoadCallback(drawChartTotalStudentsCDMX);
