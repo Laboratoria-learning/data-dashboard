@@ -1,102 +1,158 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Dashboard</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="assets/icons/css-fonts/font-awesome.min.css">
-  </head>
-  <body>
-      <header>
-            <div class="box-header start">
-                <span id="button-menu" class="fa fa-bars icons"></span>
-                <nav class="navegacion">
-                  <ul class="menu">
-                    <li class="title-menu">Editar Datos</li>
-                    <li><a href="index.html">Dashboard</a></li>
-                    <li><a href="#"><span class="fa fa-plus-circle icon-menu"></span>Añadir Estudiante</a></li>
-                    <li><a href="#"><span class="fa fa-minus-circle icon-menu"></span>Remover Estudiante</a></li>
-                    <li><a href="#">Agregar Sprint</a></li>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <title>Data Dashboard</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="assets/icons/css-fonts/font-awesome.min.css">
+      </head>
+      <body>
+          <header>
+                <div class="box-header start">
+                    <span id="button-menu" class="fa fa-bars icons"></span>
+                    <nav class="navegacion">
+                      <ul class="menu">
+                        <li class="title-menu">Editar Datos</li>
+                        <li><a href="index.html">Dashboard</a></li>
+                        <li><a href="#"><span class="fa fa-plus-circle icon-menu"></span>Añadir Estudiante</a></li>
+                        <li><a href="#"><span class="fa fa-minus-circle icon-menu"></span>Remover Estudiante</a></li>
+                        <li><a href="#">Agregar Sprint</a></li>
+                      </ul>
+                    </nav>
+                    <!-- buscador 
+                    <span class="box-header search">
+                      <input type="text" placeholder="search">
+                      <a href="#" class="icons-search">
+                      <i class="fa fa-search fa-rotate-90"></i>
+                      </a>
+                    </span>
+                    -->
+                </div>
+                <figure class="box-header logo">
+                  <a href="index.html"><img src="assets/images/logo-laboratoria.svg" alt="logo"></a> 
+                </figure>
+                <!-- iconos de mensaje y notificaciones
+                <div class="box-header user">
+                  <ul>
+                      <li><a class="icons" href="#"><span class="fa fa-envelope-o"></span></a></li>
+                      <li><a class="icons" href="#"><span class="fa fa-bell-o"></span></a></li>
                   </ul>
-                </nav>
-                <span class="box-header search">
-                  <input type="text" placeholder="search">
-                  <a href="#" class="icons-search">
-                  <i class="fa fa-search fa-rotate-90"></i>
-                  </a>
-                </span>
-            </div>
-            <figure class="box-header logo">
-              <a href="index.html"><img src="assets/images/logo-laboratoria.svg" alt="logo"></a> 
-            </figure>
-            <div class="box-header user">
-              <ul>
-                  <li><a class="icons" href="#"><span class="fa fa-envelope-o"></span></a></li>
-                  <li><a class="icons" href="#"><span class="fa fa-bell-o"></span></a></li>
-                  <li><a class="user-icon" href="#"><div>J</div></a></li> 
-              </ul>
-            </div>
-      </header>
-      <section class="container-section">
-          <div class="box-menu" >
-              <ul class="menu-sedes">
-                  <li><a href="#" class="sedes">SEDES</a>
-                    <ul>
-                      <li><a href="#">Arequipa</a>
-                        <ul>
-                          <li><a href="#">2016-2</a></li>
-                          <li><a href="#">2017-1</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="#">Lima</a>
-                        <ul>
-                          <li><a href="#">2016-2</a></li>
-                          <li><a href="#">2017-1</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="#">Ciudad de México</a>
-                        <ul>
-                          <li><a href="#">2017-1</a></li>
-                          <li><a href="#">2017-2</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="#">Santiago de Chile</a>
-                        <ul>
-                          <li><a href="#">2016-2</a></li>
-                          <li><a href="#">2017-1</a></li>
-                          <li><a href="#">2017-2</a></li>
-                        </ul>
-                      </li>
-                    </ul> 
-                  </li>
-              </ul>      
-          </div>
-          <div class="box-button">
-              <a class="tab" data-selection="one">General</a>
-              <a class="tab" data-selection="two">Estudiantes</a>
-              <a class="tab" data-selection="tree">Profesores</a>
-          </div>
-      </section>
-      <section class="box-information">
-            <div class="first hide">
-                Lorem ipsum dolor sit amet
-            </div>
-            <div class="second hide ">
-                Sed ut s
-            </div>
-            <div class="third hide">
-                Muy lejos, más allá de lasen camino.
-            </div>
-      </section>
-      
-     
+                </div>
+                -->
+                <!--Sección idioma  -->
+                <select  class='idioma' name="language">
+                    <option value="value1" selected>Español</option>
+                    <option value="value2">English</option>
+                </select>
+                <img class="ale"  src="assets/images/ale.png" alt="Alejandra"> 
+          </header>
+          <section class="container-section">
+              <div class="box-menu" >
+                <span id="site">Lima</span>
+                <select id="select-sprint" class="sede-sprint">
+                  <optgroup label="Lima">
+                    <option value="2017-1" data-site="Lima" data-sede="LIM" selected>2016-II</option>
+                    <option value="2017-2" data-site="Lima" data-sede="LIM">2017-I</option>
+                  </optgroup>
+                  <optgroup label="Arequipa">
+                    <option value="2016-2" data-site="Arequipa" data-sede="AQP">2016-II</option>
+                    <option value="2017-1" data-site="Arequipa" data-sede="AQP">2017-I</option>
+                  </optgroup>
+                  <optgroup label="Santiago de Chile">
+                    <option value="2016-2" data-site="Santiago de Chile" data-sede="SCL">2016-II</option>
+                    <option value="2017-1" data-site="Santiago de Chile" data-sede="SCL">2017-I</option>
+                    <option value="2017-2" data-site="Santiago de Chile" data-sede="SCL">2017-II</option>
+                  </optgroup>
+                  <optgroup label="Mexico">
+                    <option value="2017-1" data-site="Mexico" data-sede="CDMX">2017-I</option>
+                    <option value="2017-2" data-site="Mexico" data-sede="CDMX">2017-II</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="box-button">
+                  <a class="tab" data-selection="one">General</a>
+                  <a class="tab" data-selection="two">Estudiantes</a>
+                  <a class="tab" data-selection="tree">Profesores</a>
+              </div>
+          </section>
+          <section class="box-information">
+              <div class="first hide">
+                <!-- jymmaaaaaaa -->
+                <!-- Inscripción -->
+                <div class="enrollment container box-grafico">
+                    <h1 class="enrollment-title">INSCRITAS</h1>
+                    <div class="enrollment-info izq caja">
+                      <p id="total-enrollment"></p>
+                      <p class="text-enrollment"># Estudiantes Inscritas</p>
+                    </div>
+                    <div class="enrollment-info der caja">
+                      <p id="total-enrollment red"></p>
+                      <p class="text-enrollment">% Abandono</p>
+                    </div>
+                    <div id="enrollment-graph"></div>
+                </div>
+                <!-- Porcentaje por Sprint -->
+                <div class="achievement container box-grafico">
+                    <h1 class="enrollment-title">Achievement</h1>
+                    <div class="enrollment-info izq caja">
+                      <p id="meta"></p>
+                      <p class="text-enrollment"># Estudiante <br> alcanzarón la meta</p>
+                    </div>
+                    <div class="enrollment-info der caja">
+                      <p id="porcentaje-metas"></p>
+                      <p class="text-enrollment">% promedio general</p>
+                    </div>
+                    <div id="achievement-graph"></div>
+                </div>
+                <!-- Promote -->
+                <div class="promote container box-grafico">
+                    <h1 class="enrollment-title">Net Promoter Score</h1>
+                    <div class="enrollment-info izq caja">
+                      <p id="nps"></p>
+                      <p class="text-enrollment">% acumulate NPS</p>
+                    </div>
+                    <div class="enrollment-info der caja">
+                      <p id="promoters"></p>
+                      <p id="passive"></p>
+                      <p id="detractors"></p>
+                    </div>
+                    <div id="promote-graph"></div>
+                </div>
+                <!-- Tech Skills -->
+                <div class="tech container">
+                    <h1 class="enrollment-title">Tech Skills</h1>
+                    <div class="enrollment-info izq marg">
+                      <p id="total-enrollment"></p>
+                      <p class="text-enrollment"># alumnas que alcanza el objetivo</p>
+                    </div>
+                    <div class="enrollment-info izq">
+                      <p id="total-enrollment blue"></p>
+                      <p class="text-enrollment">% del total</p>
+                    </div>
+                    <div id="tech-graph"></div>
+                </div>
+              </div>
+              <div class="second hide ">
+                   
+              </div>
+              <div class="third hide">
+                    
+              </div>
+          </section>
 
-    <script src="js/jquery-3.2.1.js"></script>
-    <script src="js/main.js"></script>
-		<!-- Base de datos -->
-		<script src="./js/data.js"></script>
-		<!-- Aquí va tus archivos JS -->
-    <script src="./js/app.js"></script>
+          <script src="js/jquery-3.2.1.js"></script>
+          <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
+          <script src="./js/data.js"></script>
+        <script src="js/main.js"></script>
+        <!-- Base de datos -->
+        
+        <script src="js/graficas.js"></script>
+        <!-- Aquí va tus archivos JS -->
+        <script src="./js/app.js"></script>
+    
+      </body>
+    </html>
+  
 
-  </body>
-</html>
+
+
