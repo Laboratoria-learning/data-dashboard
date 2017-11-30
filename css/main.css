@@ -79,8 +79,19 @@ header div {
   outline: none;
   position: absolute;
   top: 260px;
-  left: 20px;
+  left: 10px;
   }
+
+.dataagestyle {
+  color: #ffc107;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 280px;
+  left: 30px;
+
+}
 
 .student {
  margin-bottom: 30px;
