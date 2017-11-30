@@ -9,15 +9,23 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <!-- Estructura del header-->
     <header>
       <div class="container">
         <nav class="subcontainer left">
           <ul>
             <li class="nav-bar">
               <div class="photo"></div>
+              <p>¡Bienvenida!</p>
             </li>
-            <li class="nav-bar">
+            <li class="nav-bar" id="menuD">
               <i class="fa fa-sort-desc fa-2x" aria-hidden="true"></i>
+              <ul>
+                <li><a href="#">PERFIL</a></li>
+                <li><a href="#">MENSAJES</a></li>
+                <li><a href="#">CONFIGURACION</a></li>
+                <li><a href="#">CERRAR SESION</a></li>
+              </ul>
             </li>
           </ul>
         </nav>
@@ -51,25 +59,24 @@
         <div class="label">
           <ul>
             <li>
-              <button type="button" name="button" data-tab-select = 'tabOverview' class="tab">Visión General</button>
+              <button type="button" name="button" data-tab-select = 'tabOverview' class="tab">VISION GENERAL</button>
             </li>
             <li>
-              <button type="button" name="button" data-tab-select = 'tabStudents' class="tab">Estudiantes</button>
+              <button type="button" name="button" data-tab-select = 'tabStudents' class="tab">ESTUDIANTES</button>
             </li>
             <li>
-              <button type="button" name="button" data-tab-select = 'tabTeachers' class="tab">Profesores</button>
+              <button type="button" name="button" data-tab-select = 'tabTeachers' class="tab">PROFESORES</button>
             </li>
           </ul>
         </div>
       </section>
     </header>
-
     <!-- Estructura de Visión General-->
     <article id="overview">
       <!-- Estructura de la primera sección o fila-->
       <section>
         <div class="enrollment">
-          <p>MATRICULADAS</p>
+          <h1>MATRICULADAS</h1>
           <div class='container-box'>
             <div class='box'>
               <p id="alumns-total">-</p>
@@ -85,7 +92,7 @@
           </div>
         </div>
         <div class="achievement">
-          <p>LOGROS</p>
+          <h1>LOGROS</h1>
           <div class='container-box'>
             <div class='box'>
               <p id="num-exceede-goal">-</p>
@@ -101,7 +108,7 @@
           </div>
         </div>
         <div class="nps">
-          <p>PUNTAJE DE PROMOTOR</p>
+          <h1>PUNTAJE DE PROMOTOR</h1>
           <div class='container-box'>
             <div class='box'>
               <p id="nps">-</p>
@@ -120,7 +127,7 @@
       </section>
       <!-- Estructura de la segunda sección-->
       <section>
-        <select id="sprints"> <!-- Estructura del selector de Sprint-->
+        <select id="sprints" class="sedes"><!-- Estructura del selector de Sprint-->
           <option>Sprint 1</option>
           <option>Sprint 2</option>
           <option>Sprint 3</option>
@@ -128,7 +135,7 @@
         </select>
         <div>
           <div class='tech-skills'>
-            <p>Habilidades técnicas</p>
+            <h1>HABILIDADES TECNICAS</h1>
             <div class="container-box">
               <div class='box'>
                 <p>90</p>
@@ -144,7 +151,7 @@
             </div>
           </div>
           <div class='life-skills'>
-            <p>HSE</p>
+            <h1>HSE</h1>
             <div class="container-box">
               <div class='box'>
                 <p>80</p>
@@ -163,7 +170,7 @@
       <!-- Estructura de la tercera sección-->
       <section>
         <div class="student-satisfacción">
-          <p>Satisfacción Estudiantes</p>
+          <h1>SATISFACCION DE ESTUDIANTES</h1>
           <div class='box'>
             <p id='happy'>-</p>
             <p>% Cumpliendo o excediendo las espectativas(acumulado)</p>
@@ -173,7 +180,7 @@
           </div>
         </div>
         <div class="teacher-rating">
-          <p>Puntuación Profesores</p>
+          <h1>PUNTUACION DE PROFESORES</h1>
           <div class='box'>
             <p id="teacher">-</p>
             <p>Calificación general del maestro</p>
@@ -183,7 +190,7 @@
           </div>
         </div>
         <div class="jedi-rating">
-          <p>Puntuación Jedi</p>
+          <h1>PUNTUACION JEDI</h1>
           <div class='box'>
             <p id="jedi">-</p>
             <p>Calificación general del jedi</p>
@@ -194,8 +201,10 @@
         </div>
       </section>
     </article>
-    <article id="students"></article>
-    <article id="teachers">
+    <!-- Estructura de estudiantes-->
+    <article id="students" style="display:none"></article>
+    <!-- Estructura de teachers-->
+    <article id="teachers" style="display:none">
       <div class="box-t">
         <figure><img src="assets/images/ruth.jpg" alt="photo"></figure>
         <a href="https://github.com/RuthSalvador" target="_blank">@RuthSalvador</a>
