@@ -41,6 +41,7 @@ window.addEventListener('load', function() {
       sedes.classList.add('hide');
     }  
   }); 
+<<<<<<< HEAD
   var generations = document.getElementsByClassName('generations');
   for (var a = 0; a < generations.length; a++) {
     generations[a].addEventListener('click', function() {
@@ -57,6 +58,54 @@ var totalTech = [];
 var totalHse = [];
 var totalSum = [];
 
+=======
+}); 
+
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+
+  var data = google.visualization.arrayToDataTable([
+    ['Sedes', 'Total de alumnas'],
+    ['Arequipa',     30],
+    ['Santiago de Chile',      95],
+    ['Ciudad de México',  70],
+    ['Lima', 66],
+  ]);
+
+  var options = {
+    title: 'Total de alumnas por sedes'
+  };
+
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+  chart.draw(data, options);
+
+  google.charts.load("current", {packages:["corechart"]});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Desercion', 'Total y porcentaje'],
+      ['Arequipa',     51],
+      ['Santiago de Chile',      27],
+      ['Ciudad de México',  18],
+      ['Lima', 59],
+    ]);
+
+    var options = {
+      title: 'Total de alumnas que desertaron por sede',
+      pieHole: 0.4,
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+    chart.draw(data, options);
+  };
+};
+ 
+/*
+var sum = 0;
+>>>>>>> e78d5773657a62018b07ff57c4e252e37cff754f
 for (var i = 0; i < Object.keys(data).length; i++) {
   for (var a = 0; a < Object.keys(data[Object.keys(data)[i]]).length; a++) {
     for (var b = 0; b < Object.values((Object.values(Object.values(data)[i]))[a])[0].length; b++) {
@@ -94,6 +143,7 @@ for (var c = 0; c < Object.values(Object.values((Object.values(Object.values(dat
   if(totalSum[c] >= 2400) {
     
   } */
+<<<<<<< HEAD
 
       // console.log(Object.values(data)[i]); 
     // se obtiene el array de datos de las alummnas 
@@ -110,3 +160,5 @@ for (var i = 0; i < Object.keys(data).length; i++) {
   }
 } */
 // console.log(sum); 
+=======
+>>>>>>> e78d5773657a62018b07ff57c4e252e37cff754f
