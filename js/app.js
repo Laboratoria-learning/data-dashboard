@@ -29,6 +29,69 @@ function generation(event) {
     }
     return parseInt(countDesert * 100 / students.length) + '%';
   }
+      //Achievements
+      var achieve = document.getElementById('achieve');
+      achieve.textContent = achieveFunction();
+      function achieveFunction() {
+          arrAverage = [];
+          for (i = 0; i < students.length; i++) {
+              techAccum = 0;
+              hseAccum = 0;
+              count = 0;
+              if (students[i].active === true) {
+                  for (j = 0; j< students[i].sprints.length; j++) {
+                      var tech = students[i].sprints[j].score.tech;
+                      techAccum += tech;
+                      var hse = students[i].sprints[j].score.hse;
+                      hseAccum += hse;
+                  }
+                  var genTech = techAccum/students[i].sprints.length;
+                  var genHse = hseAccum/students[i].sprints.length;
+                  arrAverage.push([genTech, genHse]);
+              }
+              for (k = 0; k < arrAverage.length; k++){
+                  if (arrAverage[k][0] >= 1260 && arrAverage[k][1] >= 840) {
+                      count++;
+              }
+              }
+            }
+            return count
+      }
+  
+      var achievePcent = document.getElementById('achievePcent');
+      achievePcent.textContent = parseInt(achieveFunction()*100/(students.length+1)) + '%';
+      
+      
+    // NPS
+    var rating = data[SEDE][GEN].ratings;
+    var npsPercent = document.getElementById('nps');
+    npsPercent.innerHTML = npsfunction();
+    function npsfunction() {
+      var satisfaction = 0;
+      for (i = 0; i < rating.length; i++) {
+          var nps = rating[i].nps.promoters - rating[i].nps.detractors;
+      
+          satisfaction += nps;
+      }
+      return parseInt(satisfaction/rating.length) + '%'
+    };
+    
+    var satPercent = document.getElementById('satPercent')
+    satPercent.textContent = satPrcnt()
+    function satPrcnt() {
+      var promoters = 0;
+      var passive = 0;
+      var detractors = 0;
+    for (i = 0; i < rating.length; i++) {
+        promoters += rating[i].nps.promoters;
+        passive += rating[i].nps.passive;
+        detractors += rating[i].nps.detractors;
+    
+    }
+    return parseInt(promoters/rating.length) + '% Promoters'+ '\n' + parseInt(passive/rating.length) + '% Passive' + '\n' + parseInt(detractors/rating.length) + '% Detractor';
+  }
+
+  //Jedi
   var totalPointsJedi = document.getElementById('totalPointsJedi');
   var totalPointsTeacher = document.getElementById('totalPointsTeacher');
   var percentSatisfaction = document.getElementById('percentSatisfaction');
