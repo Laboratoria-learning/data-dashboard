@@ -1,15 +1,13 @@
 window.addEventListener('load', function() {
 // cambiar el nombre de sede, seleccionando la generacion
-    var selectSprint = document.getElementById('select-sprint');
-    selectSprint.addEventListener('change', function() {
+  var selectSprint = document.getElementById('select-sprint');
+  selectSprint.addEventListener('change', function() {
     var site = selectSprint.options[selectSprint.selectedIndex].getAttribute('data-site');
     var sede = selectSprint.options[selectSprint.selectedIndex].getAttribute('data-sede');
     var generation = selectSprint.value;  
     document.getElementById('site').textContent = site;
 
     var inscritas = document.querySelector('.total-enrollment');
-    
-
 
 
     // GOOGLE-CHARTS
