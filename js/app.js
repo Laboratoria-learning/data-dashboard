@@ -22,9 +22,15 @@ var passive = document.getElementById('passive');
 var detractors = document.getElementById('detractors');
 
 //Tech Skills
-var currentSprint = 1;
+var currentSprintTech = 1;
 var selectTech = document.getElementById('tech-sprints');
-
+var techSprintNote = document.getElementById('tech-skills');
+var techSprintPer = document.getElementById('students-tar-tech');
+//Life Skills
+var currentSprintHse = 1;
+var selectHse = document.getElementById('hse-sprints');
+var hseSprintNote = document.getElementById('life-skills');
+var hseSprintPer = document.getElementById('students-tar-hse');
 //Sedes 
 //AQP, CDMX, LIM, SCL
 function selectSede () {
@@ -60,8 +66,11 @@ function selectSede () {
         firstPromScl.checked = false;
         firstPromAqp.checked = false;
       } 
+      createSelect(selectTech);
+      createSelect(selectHse);
+      techSkills();
+      softSkills();
       drawSeriesChart();
-      createSelect();
     })
   }
 } 
@@ -77,8 +86,11 @@ function selectPromo() {
           inputsPromo[i].checked = false;
         }
       }
+      createSelect(selectTech);
+      createSelect(selectHse);
+      techSkills();
+      softSkills();
       drawSeriesChart();
-      createSelect();
     })
   }
 }
@@ -153,29 +165,84 @@ function nps () {
 nps();
 
 //Select Sprint Tech 
-function createSelect() {
+function createSelect (select) {
   var sprints = dataStudents[sede][promo].ratings.length;
-  while (selectTech.firstChild) {
-    selectTech.removeChild(selectTech.firstChild);
+  while (select.firstChild) {
+    select.removeChild(select.firstChild);
   }
   for ( var i = 0; i < sprints; i++) {
     var optionTech = document.createElement('option');
-    selectTech.appendChild(optionTech);
+    select.appendChild(optionTech);
     optionTech.value = i+1;
     optionTech.textContent = 'Sprint' + ' ' + (i+1);
   }
 }
-createSelect();
-/*
-function selectSprintTech() {
-  selectSprint.addEventListener('change', function () {
-    console.log(this.value);
-  })
+createSelect(selectTech);
+createSelect(selectHse);
+
+//Seleccionar sprint tech
+function selectSprintTech () {
+  selectTech.addEventListener('change', function () {
+  currentSprintTech = this.value;
+  techSkills();
+  console.log (currentSprintTech);
+  return currentSprintTech;
+  }) 
+  return currentSprintTech;
 }
-selectSprintTech();*/
+
+
+//Selecionar sprint soft
+
+function selectSprintHse () {
+  selectHse.addEventListener('change', function () {
+  currentSprintHse = this.value;
+  softSkills();
+  console.log (currentSprintHse);
+  return currentSprintHse;
+  }) 
+  return currentSprintHse;
+}
+
+selectSprintTech ();
+selectSprintHse ();
+
 //Tech skils
+function techSkills () {
+  var techBigger = 0;
+  for (var i = 0; i < dataStudents[sede][promo].students.length; i++) {
+    if (dataStudents[sede][promo].students[i].active === true) {
+      var techNote = dataStudents[sede][promo].students[i].sprints[currentSprintTech-1].score.tech;
+      if (techNote >= 1260){
+        techBigger++;
+      } 
+    }
+  }
+  techSprintNote.textContent = techBigger;
+  techSprintPer.textContent = Math.floor(techBigger/(enrollment().act+enrollment().inac)*100) + ' %';
+}
+
+techSkills();
+
+function softSkills () {
+  var hseBigger = 0;
+  for (var i = 0; i < dataStudents[sede][promo].students.length; i++) {
+    if (dataStudents[sede][promo].students[i].active === true) {
+      var hseNote = dataStudents[sede][promo].students[i].sprints[currentSprintHse-1].score.hse;
+      if (hseNote >= 840){
+        hseBigger++;
+      } 
+    }
+  }
+  hseSprintNote.textContent = hseBigger;
+  hseSprintPer.textContent = Math.floor(hseBigger/(enrollment().act+enrollment().inac)*100) + ' %';
+
+}
+
+softSkills();
+
+
 function sprintsNoteTech(sp1b, sp1l, sp2b, sp2l, sp3b, sp3l, sp4b, sp4l) {
-  var currentSprint = 1;
 
   var sprint1big = 0;
   var sprint1low = 0;
