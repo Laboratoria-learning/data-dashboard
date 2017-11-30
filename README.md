@@ -35,11 +35,11 @@
 
 1. Trello
 
-![trello](assets/images/trello.png)
+![trello](https://github.com/SteffAhv/data-dashboard/blob/menu-usuario/assets/images/trello.png?raw=true)
 
 2. Slack
 
-![slack](assets/images/slack.png)
+![slack](https://github.com/SteffAhv/data-dashboard/blob/menu-usuario/assets/images/slack.png?raw=true)
 
 3. WhatsApp
 
