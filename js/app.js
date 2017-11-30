@@ -35,6 +35,7 @@ window.addEventListener('load', function() {
     var value = e.target.value; 
     var aux = value.split('-');
     var sedeName = aux.shift();
+    // console.log(sedeName);
     var generation = aux.join('-');
 
     var generationData = data[sedeName][generation];
@@ -45,6 +46,7 @@ window.addEventListener('load', function() {
     var parrafo = document.createElement('p');
     parrafo.textContent = '# estudiantes inscritas';
     div.appendChild(parrafo);
+    div.classList.add('description');
 
     studentsInscribed.textContent = totalStudents;
 
@@ -65,6 +67,15 @@ window.addEventListener('load', function() {
     // Datos de estudiantes que desartaron
     studentsDeserted.textContent = Math.floor((counter * 100) / totalStudents) + '%';
     studentsDeserted.appendChild(div);
+
+    // var studentsTarget = 0;
+    // for (var i = 0; i < generationData.students.length; i++) {
+    //   var tech = generationData.students[i].score.tech;
+    //   var hse = generationData.students[i].score.hse;
+    //   var sumTechHse = tech + hse;
+    //   studentsTarget += sumTechHse;
+    // }
+    // (studentsTarget)
     // [Promoters] = [Respuestas 9 o 10] / [Total respuestas] * 100
     // [Passive] = [Respuestas 7 u 8] / [Total respuestas] * 100
     // [Detractors] = [Respuestas entre 1 y 6] / [Total respuestas] * 100
@@ -83,6 +94,26 @@ window.addEventListener('load', function() {
     div.appendChild(parrafo);
     averageNps.textContent = Math.floor(((result / generationData.ratings.length) * 100) / 100) + '%';
     averageNps.appendChild(div);
+    console.log(generationData.ratings.length);
+
+    // El porcentaje de estudiantes satisfechas con la experiencia de Laboratoria.
+    var totalStudent = 0;
+    for (var i = 0; i < generationData.ratings.length; i++) {
+      var cumple = generationData.ratings[i].student.cumple;
+      var supera = generationData.ratings[i].student.supera;
+      var totalSatis = cumple + supera;
+      totalStudent += totalSatis;
+    }
+
+    averageSatisfied.textContent = Math.floor(((totalStudent / generationData.ratings.length) * 100) / 100) + '%';
+    // console.log (totalStudent);
+
+    var totalRatingTeacher = 0;
+    for (var i = 0; i < generationData.ratings.length; i++) {
+      var teacher = generationData.ratings[i].teacher;
+      totalRatingTeacher += teacher;
+    }
+    scoresTeacher.textContent = totalRatingTeacher / generationData.ratings.length;
   });
  
   // agregar el evento click a todos los tabs
