@@ -36,10 +36,10 @@ window.addEventListener('load', function(event) {
 
   // solucionando primer ennunciado
   // declarando variables generales
-  // var siteLim = data['LIM'];
-  // var siteAqp = data['AQP'];
-  // var siteChile = data['SCL'];
-  // var siteCdmx = data['CDMX'];
+  var siteLim = data['LIM'];
+  var siteAqp = data['AQP'];
+  var siteChile = data['SCL'];
+  var siteCdmx = data['CDMX'];
 
   // CASO LIMA
   // obteniendo numero de poblacion estudiantil
