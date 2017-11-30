@@ -12,44 +12,22 @@
   <div class="logo">
     <img src="assets/images/lab.png" alt="">
   </div>
-  <div id="select">
-    <div class="select"> SELECCIONA TU SEDE
-      <i class="fa fa-sort-desc" aria-hidden="true"></i>
-    </div>
-    <div id="options" class="options hiden">
-    <ul>
-      <li value='LIM'>LIMA
-        <ul>
-          <li class="list" value='2016-2'>2016-2</li>
-          <li class="list" value='2017-1'>2017-1</li>
-          <li class="list" value='2017-2'>2017-2</li>
-        </ul>
-      </li>
-      <br>
-      <li value='AQP'>AREQUIPA
-        <ul>
-          <li class="list" value='2016-2'>2016-2</li>
-          <li class="list" value='2017-1'>2016-2</li>
-        </ul>
-      </li>
-      <br>
-      <li value='CDMX'>MEXICO
-        <ul>
-          <li class="list" value='2017-1'>2017-1</li>
-          <li class="list" value='2017-2'>2017-2</li>
-        </ul>
-      </li>
-      <br>
-      <li value='SCL'>CHILE
-        <ul>
-          <li class="list" value='2016-2'>2016-2</li>
-          <li class="list" value='2017-1'>2017-1</li>
-          <li class="list" value='2017-2'>2017-2</li>
-        </ul>
-      </li>
-    </ul>
+  <div id="select" class="select">
+        <select class="option" id="sede">
+            <option value="0" selected>SELECCIONE SU SEDE</option>
+            <option value="LIM">LIMA</option>
+            <option value="AQP">AREQUIPA</option>
+            <option value="CDMX">MEXICO</option>
+            <option value="SCL">CHILE</option>
+        </select>
+        <select class="option" id="generation">
+            <option value="0" selected>SELECCIONE PROMOCION</option>
+            <option value="2016-2">2016-2</option>
+            <option value="2017-1">2017-1</option>
+            <option value="2017-2">2017-2</option>
+        </select>
   </div>
-</div>
+
   <!--div#tab$*3-->
   <div class="tabs">
     <div class="tab" data-text='text1'>OVERVIEW</div>
@@ -63,8 +41,14 @@
         <div class="block">
           <h2>ENROLLMENT</h2>
           <div class="num">
-            <div class="box">#students</div>
-            <div class="box">%</div>
+            <div class="box">
+              <p>#student</p>
+              <p id="TotStudents"></p>
+            </div>
+            <div class="box">
+                <p>#student</p>
+                <p id="percentaje"></p>
+            </div>
           </div>
           <img src="assets/images/bar-graph.png" alt="">
         </div>
@@ -95,7 +79,7 @@
         
         <h2>TECH SKILLS </h2>
       
-        <div id="box1" class="box2"></div>
+        <div  class="box2"></div>
         <div class="box2"></div>
         <div class="img-stadist">
           <img src="assets/images/rectangular-graphic.png" alt="">

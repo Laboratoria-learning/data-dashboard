@@ -18,34 +18,36 @@
 }
 
 .select {
-    padding: 14px 35px; 
+    padding: 7px 35px; 
     background:rgba(255, 251, 0, 0.548); 
     font-weight: 600;
     cursor: pointer;
+    border: none;
 }
 
-.select:hover {
-    color: rgb(253, 208, 8);
-}
-
-div.options {
+.option {
     background: rgb(253, 251, 104);
-    position: absolute; 
-    margin-left: 21px;
-    padding: 7px 28px;
+    padding: 7px 14px;
+    margin-right: 21px;
     font-weight: 600;
-    
-    
+    border:none;
+    border-bottom: 4px solid rgb(253, 208, 8); 
 }
+
+.option:hover {
+    color :rgb(253, 208, 8);
+    border-bottom: 4px solid black; 
+}
+
  li.list:hover {
      background: white;
      cursor: pointer;
  }
 
 .tabs {
-    background:rgba(255, 251, 0, 0.548); 
-    
+    background:rgba(255, 251, 0, 0.548);   
 }
+
 .tab {
     display: inline-block;
     padding: 7px;
@@ -75,11 +77,13 @@ h2 {
     background: white;
     text-align: center;
 }
+
 div.block {
     display: inline-block;
     background: white;
     padding: 0 0 0 35px;
 }
+
  div.num {
      display: inline-block;
      background: white;
@@ -90,7 +94,7 @@ div.block {
      background: #d6d8d3bb;
      display:inline-block;
      height: 49px;
-     width:127px;
+     width:100px;
  }
 
 img {
@@ -127,7 +131,6 @@ img {
    margin: 20px 0.5px 19px 30px;
  
  }
- 
 
  .last-box{
     background-color: #e4c61e67;
