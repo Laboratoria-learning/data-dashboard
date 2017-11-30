@@ -135,7 +135,6 @@ header h1 {
 main {
   margin-left: 20%;
   width: 80%;
-  height: 1000px;
   background-color: #ecebeb;
 }
 /* menu */
@@ -202,7 +201,11 @@ select:hover {
 }
 
 #overview div {
-  width: 31%;
+  float: left;
+}
+
+#overview .info-container {
+  /* width: 31%; */
   background-color: #fff;
   box-shadow: 0px 5px 15px #b9b9b9;
   float: left;
@@ -213,18 +216,20 @@ select:hover {
   overflow: hidden;
 }
 
-#overview .big-box {
+#overview .single {
+  width: 31%;
+}
+
+#overview .double {
   width: 47.5%;
 }
 
-#overview .big-box div {
-  float: left;
-  width: 48%;
-  box-shadow: none;
+#overview .triple {
+  width: 97%;
 }
 
-#overview .single .info {
-  width: 100%;
+#overview .info {
+  margin: 10px 0;
 }
 
 #overview pre {
@@ -237,13 +242,17 @@ select:hover {
 #overview .info {
   box-shadow: none;
   width: 48%;
+  padding: 2%;
+  margin: 0;
 }
 
-.info span {
+#overview span {
+  display: block;
   font-size: 2.5em;
   font-weight: 600;
+  margin-top: 10px;
 }
 
-.info h5 {
+#overview h5 {
   font-weight: 200;
 }

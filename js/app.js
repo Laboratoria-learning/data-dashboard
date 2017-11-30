@@ -7,7 +7,6 @@
 window.addEventListener('load', begin);
 
 function begin() {
-  // debugger;
   var selectLocal = document.getElementById('local');
   var selectPromo = document.getElementById('promo');
   var selectSprint = document.getElementById('sprint');
@@ -38,9 +37,6 @@ function begin() {
 
   // Llenar combo de sprints
   function fillSprints(event) {
-    // debugger;
-    // currentLocal = selectLocal.value;
-    // currentPromo = selectPromo.value;
     var sprints = data[selectLocal.value][selectPromo.value].ratings.length;
     selectSprint.innerHTML = '';
     for (var i = sprints; 0 < i; i--) {
@@ -104,11 +100,17 @@ function begin() {
       document.getElementById('overcome-percent').textContent = Math.round((overcomeStudents / currentStudents) * 100) * 10 / 10 + '%';
       document.getElementById('tech-target-avrg').textContent = Math.round(techTargetAvrg);
       document.getElementById('hse-target-avrg').textContent = Math.round(hseTargetAvrg);
+      
+      var ratings = data[selectLocal.value][selectPromo.value].ratings;
+      var sumNps = 0;
+      for (var i = 0; i < sprints; i++) {
+        sumNps += ratings[i].nps.promoters - ratings[i].nps.detractors;
+      }
+      console.log(sumNps / sprints);
     }
   }
 
   function infoSprint(event) {
-    debugger;
     var students = data[selectLocal.value][selectPromo.value].students;
     // Estudiantes que superan el 70% por sprint
     var techTarget = 0;
