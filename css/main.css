@@ -105,4 +105,10 @@
   width: 300px;
   height: 300px;
   border-radius: 50%;
+  text-align: center;
+}
+
+.x{
+  font-size: 50px;
+  text-align: center;
 }
