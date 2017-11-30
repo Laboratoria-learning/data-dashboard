@@ -77,7 +77,14 @@ margin-left: 80px;
   background-color: #e2e4e6;
 }
 
-
+/*estilo a las cajas de la seccion nps*/
+.total-nps, .seccion-nps {
+  height: 70px;
+  width: 120px;
+  background-color: #e2e4e6;
+  float: left;
+  margin-left: 20px;
+}
 /*
  * Estilos de tu proyecto
  */

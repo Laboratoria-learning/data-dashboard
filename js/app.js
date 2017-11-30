@@ -2,6 +2,7 @@ window.addEventListener('load', function() {
   /* funcion para mostrar las alumas por sede-generacion*/
   var selection = document.getElementById('selection');
   var containerStudents = document.getElementById('total-students');
+  var totalNps = document.getElementById('total-nps');
   selection.addEventListener('change', showGenerations);
   function showGenerations() {
     /* seleccionando cada option de lista despegable*/
@@ -23,17 +24,23 @@ window.addEventListener('load', function() {
     /* creando un texto*/
     var totalStudents = siteGeneration.students.length;
     containerStudents.innerHTML = '# de studiantes inscritos' + '</br>' + totalStudents;
-
+    /* analizando el NPS*/
+    var result = 0;
+    for (i = 0; i < siteGeneration.ratings.length;i++) {
+      var promoters = siteGeneration.ratings[i].nps.promoters;
+      var passive = siteGeneration.ratings[i].nps.passive;
+      var detractors = siteGeneration.ratings[i].nps.detractors;
+      result = result + (promoters - detractors);
+      /* console.log(result)*/
+      var percentage = parseInt(((result / siteGeneration.ratings.length) * 100) / 100) + '%';
+      /* console.log(percentage);*/
+    }
+    /*incorporando el porcentaje del nps*/
+    totalNps.textContent = percentage;
   }
 
 
-
-
-
-
-
-
-  /*menu derecho*/
+/*menu derecho*/
 var bars = document.getElementById('bars');
 bars.addEventListener('click', showMenu);
 function showMenu() {
