@@ -428,8 +428,8 @@ window.addEventListener('load', function() {
               100 - dropout(sede, generation),
             ],
             backgroundColor: [
-              '#f7464A ',
-              '#46BFBD ',              
+               '#FF0000',  
+              '#58D68D',              
             ]
           }],
           labels: [
@@ -474,8 +474,8 @@ window.addEventListener('load', function() {
               100 - ((studentAchievement(sede, generation) / totalStudentActive(sede, generation)) * 100).toFixed(1),
             ],
             backgroundColor: [
-              '#f7464A ',
-              '#46BFBD ',              
+             '#58D68D',
+             '#FF0000',              
             ]
           }],
           labels: [
@@ -522,9 +522,9 @@ window.addEventListener('load', function() {
               (detractorNps(sede, generation)).toFixed(1),
             ],
             backgroundColor: [
-              '#f7464A ',
-              '#46BFBD ',
-              '#F8BFAD',              
+              '#58D68D',
+              '#F1C40F',
+              '#FF0000',            
             ]
           }],
           labels: [
