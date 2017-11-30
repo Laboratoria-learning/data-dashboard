@@ -33,7 +33,11 @@ Con esa información y con la base de datos que nos facilitaron pudimos crear es
 #### Dashboard N° 1
 ![Sin titulo](assets/docs/dashboard-sketch.jpg)
 En este dashboard, se encuentra lo siguiente:
-1.  dfsdfh
+1.  Una barra de navegación  a la izquierda, donde se ubica en la parte superior el logo de Laboratoria, la imagen del usuario con su nombre como pie de página, una barra de búsqueda con un ícono de búsqueda, un menú desplegable de las sedes por países y ciudades.
+2. Una sección principal con una parte designada para íconos de mensajería, chat y cerra sesión.
+3. Luego, se cuenta con una sección de pestañas que habilitan la información de general, estudiantes y profesores, según la sede y generación seleccionadas.
+4. En la sección de general, se indica en la primera fila las inscripciones, nivel de logro, promedio de los sprints cruzados; en la segunda fila, las habilidades técnicas; en la tercera fila, las habilidades emocionales; en la cuarta fila, la satisfacción de las estudiantes, la calificación de los profesores y la calificación de los jedi.  
+
 
 ## Contenido
 
