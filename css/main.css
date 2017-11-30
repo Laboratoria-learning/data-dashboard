@@ -1,9 +1,39 @@
-/*
- * Estilos de tu proyecto
- */
-.students_total{
-  width: 100px;
-  height: auto;
-  background: #000000;
-  color: yellow;
+*{
+  text-align: center;
+  font-family: 'Armata', sans-serif;
+}
+h1{
+font-family: 'Source Code Pro', monospace;
+font-size: 80px;
+}
+a{
+  text-decoration: none;
+}
+#sede_generation{
+  background-color: #FFA500;
+  padding: 10px 10px;
+  color: #fff;
+  border-radius: 5px;
+  border: 0;
+  font-weight: 600;
+}
+
+.sede{
+  width: 200px;
+  font-size: 18px;
+  background-color: white;
+  color: #000000;
+}
+a .sede{
+  background-color:#FFA500 ;
+}
+.hiden {
+  display: none;
+}
+.show {
+  display: block;
+}
+.generation{
+  display: block;
+  font-size: 16px;
 }
