@@ -37,34 +37,118 @@ header{
 .show{
   display: block;
 
+
 }
 /*---------------*/
-.cuadrito{
-  width: 100px;
-  height: 20px;
-  border: 2px solid blue;
+ .filters-container {
+   background-color:#E1E1E1;
+   width: 100%;
+   height: 100px;
+   margin-top: 82px;
+ }
+  .filters {
+   list-style: none;
+   margin: 0;
+   padding-left: 80px;
+ }
+
+ .span {
+   font-size: 28px;
+   margin-left: 20px;
+ }
+
+section {
+  background-color: #F7F7F7;
+  padding-bottom: 90px;
 }
 
-.chart{
-  width: 400px;
-  height: 200px;
-  background-color: green;
+.container1 {
+  margin: 0 100px;
+}
+
+.container4 {
+  margin: 0 100px;
+}
+
+.Total-students {
+  background-color: white;
   display: inline-block;
-
-}
-.charts-container{
-
-}
-.list{
-  background-color: pink;
-  width: 70px;
-  height: 40px;
-  border: 1px solid red;
-}
-
-.new-style{
-  width: 400px;
+  margin-top: 60px;
+  margin-left: 10px;
+  width: 370px;
   height: 400px;
-  background-color: yellow;
+}
 
+.Enrollment {
+  margin-left: 20px;
+}
+
+.subcontainer {
+  margin-left: 20px;
+  width: 330px;
+  height: 100px;
+}
+
+.dataContainer {
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 10px;
+  background-color: #F7F7F7;
+  width: 150px;
+  height: 80px;
+}
+
+.graphContent {
+  background-color: yellow;
+  width: 313px;
+  height: 200px;
+  margin-left: 30px;
+}
+
+.container2 {
+  margin: 20px 100px 0 110px;
+  background-color: white;
+  height: 610px;
+}
+
+.tech {
+  margin-left: 20px;
+}
+
+.secondcontainer {
+  margin-left: 20px;
+  width: 380px;
+  height: 100px;
+}
+
+.dtContainer {
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 10px;
+  background-color: #F7F7F7;
+  width: 170px;
+  height: 80px;
+}
+
+.grafContainer {
+  width: 1140px;
+  height: 400px;
+}
+
+.gfContainer1 {
+  background-color: yellow;
+  display: inline-block;
+  width: 650px;
+  height: 375px;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.gfContainer2 {
+  background-color: yellow;
+  display: inline-block;
+  width: 390px;
+  height: 375px;
+  margin-left: 30px;
+  margin-top: 10px;
 }
