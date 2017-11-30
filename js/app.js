@@ -1,29 +1,29 @@
-/*
- * Funcionalidad de tu producto
- */
 // evento para el selector de Sedes
-var select = document.getElementById('select');
-var enrollment = document.getElementById('enrollment');
-var info = data;
+var LIM = document.getElementById('LIM');
+var AQP = document.getElementById('AQP');
+var SCL = document.getElementById('SCL');
+var CDMX = document.getElementById('CDMX');
+var dataContainer = document.getElementById('overview-tab');
 
-select.addEventListener('change', function() {
-  if (select.value === 'Ciudad de México') {
-
+LIM.addEventListener('click', function() {
+  if (LIM.value === '2016-II') {
+    for (var i = 0; i <= dataContainer.length; i++) {
+      console.log(dataContainer[i]);
+    }
   }
 });
 
 // Evento para las tabs: overview, students y teacher
 var showHide = function(e) {
   var tabs = e.target.dataset.selecttab;
+  var div1 = document.getElementById('overview-tab');
+  var div2 = document.getElementById('students-tab');
   if (tabs === 'overview') {
-    var overContent = document.getElementById('overview-tab');
-    // mostrar info de overview
-    overContent.style.display = 'block';
-    // ocultar students y teachers
+    div2.style.display = 'none';
+    div1.style.display = 'block';
   } else if (tabs === 'students') {
-    var studentsTab = document.getElementById('students-tab');
-    studentsTab.style.display = 'block';
-    // mostrar students
+    div2.style.display = 'block';
+    div1.style.display = 'none';
   }
 };
 
@@ -34,10 +34,6 @@ var chargePage = function() {
   }
 };
 chargePage();
-
-
-// Puedes hacer uso de la base de datos a través de la variable `data`
-console.log(data);
 
 
 /** **************DATOS QUE MUESTRA EL ENROLLMENT ***********/ 
@@ -74,25 +70,6 @@ function logroMetas(sede, generacion, sprint) {
   var students = data[sede][generacion]['students'];
   var studentsOverTarget = [];
   var studentsDownTarget = [];
-
-  /* alcanzaron la metaacumulado
-  for (var i = 0; i < students.length; i++) {
-    for (var j = 0; j < students[i].sprints.length; j++) {
-      if (students[i].active === true) {
-        if ((students[i].sprints[j].score.tech >= 1260) && (students[i].sprints[j].score.hse >= 840)) {
-          studentsOverTarget.push(students[i].sprints[j]);
-        } else {
-          studentsDownTarget.push(students[i].sprints[j]);
-        }
-      }
-    }
-  }
-  var porcentajeLogroMetas = (studentsOverTarget.length / students[0].sprints.length * 100) / (studentsOverTarget.length / students[0].sprints.length + studentsDownTarget.length / students[0].sprints.length);
-  console.log('pasaron la meta: ' + '\t' + studentsOverTarget.length / students[0].sprints.length);
-  console.log('no llegaron a la meta: ' + '\t' + studentsDownTarget.length / students[0].sprints.length);
-  console.log('porcentaje que logro la meta:' + '\t' + porcentajeLogroMetas + '%');
-  console.log('% del total' + (studentsOverTarget.length / students[0].sprints.length + studentsDownTarget.length / students[0].sprints.length));
-} */
   for (var i = 0; i < students.length; i++) {
     if (students[i].active === true) {
       if ((students[i].sprints[sprint].score.tech >= 1260) && (students[i].sprints[sprint].score.hse >= 840)) {
@@ -110,7 +87,7 @@ function logroMetas(sede, generacion, sprint) {
   var studentsTarget = studentsOverTarget.length;
   console.log('no llegaron a la meta: ' + '\t' + studentsDownTarget.length);
   var porcentajeAchievement = Math.round(porcentajeLogroMetas) + '%';
-  var totalStudents = '% OF TOTAL THE (' + (studentsOverTarget.length + studentsDownTarget.length) + ')';
+  var totalStudents = '% OF TOTAL (' + (studentsOverTarget.length + studentsDownTarget.length) + ')';
 
   var studentsMeetTarget = document.getElementById('studentTarget');
   studentsMeetTarget.innerHTML = studentsTarget + '<br>' + '# STUDENTS THE MEET THE TARGET';
@@ -155,13 +132,12 @@ function puntajePromotor(sede, generacion) {
   porcentajeDetractors = totalDetractors * 100 / (totalPromoters + totalDetractors + totalPassive);
   porcentajePassive = totalPassive * 100 / (totalPromoters + totalDetractors + totalPassive);
 
-  var promoters = (porcentajePromotors + '%' + '\t' + 'porcentaje de promoters');
-  var detractors = (porcentajeDetractors + '%' + '\t' + 'porcentaje de detractors');
-  var passive = (porcentajePassive + '%' + '\t' + 'porcentaje de passive');
+  var promoters = (porcentajePromotors + '%' + '\t' + 'PROMOTER');
+  var detractors = (porcentajeDetractors + '%' + '\t' + 'DETRACTORS');
+  var passive = (porcentajePassive + '%' + '\t' + 'PASSIVE');
 
   var porcentajeIndividual = document.getElementById('porcentajeVarios');
   porcentajeIndividual.innerHTML = promoters + '<br>' + passive + '<br>' + detractors;
-  console.log(totalNps.length);
 
   for (var i = 0; i < totalNps.length; i++) {
     acumulativeNps = acumulativeNps + totalNps[i];
@@ -209,7 +185,7 @@ function logroMetasTech(sede, generacion, sprint) {
   promedioNotaTech = totalPuntajeTech / puntajesTech.length;
 
   var promedioTech = document.getElementById('promedioTech');
-  promedioTech.innerHTML = Math.round(promedioNotaTech) + '<br>' + 'average score';
+  promedioTech.innerHTML = Math.round(promedioNotaTech) + '<br>' + 'AVERAGE SCORE';
   
   var porcentajeLogroMetasTech = (studentsOverTarget.length * 100) / (studentsOverTarget.length + studentsDownTarget.length);
   
@@ -220,7 +196,7 @@ function logroMetasTech(sede, generacion, sprint) {
   console.log('no llegaron a la meta Tech: ' + '\t' + studentsDownTarget.length);
 
   var porcentajeTargetTech = porcentajeLogroMetasTech + '%';
-  var totalTech = '% del total (' + (studentsOverTarget.length + studentsDownTarget.length) + ')';
+  var totalTech = '% OF TOTAL (' + (studentsOverTarget.length + studentsDownTarget.length) + ')';
 
   var porcentajeTargetTechShow = document.getElementById('porcentajeTargetTech');
   porcentajeTargetTechShow.innerHTML = porcentajeTargetTech + '<br>' + totalTech;  
@@ -261,17 +237,17 @@ function logroMetasLife(sede, generacion, sprint) {
   promedioNotaHse = totalPuntajeHse / puntajesHse.length;
   
   var promedioHse = document.getElementById('promedioHse');
-  promedioHse.innerHTML = Math.round(promedioNotaHse) + '<br>' + 'average score';
+  promedioHse.innerHTML = Math.round(promedioNotaHse) + '<br>' + 'AVERAGE SCORE';
 
   var porcentajeLogroMetasLife = (studentsOverTarget.length * 100) / (studentsOverTarget.length + studentsDownTarget.length);
   
   var targetHse = studentsOverTarget.length;
   var targetHseShow = document.getElementById('targetHse');
   targetHseShow.innerHTML = targetHse + '<br>' + 'STUDENT THE MEET THE TARGET';
-  console.log('no llegaron a la meta hse: ' + '\t' + studentsDownTarget.length);
+  console.log('NO LLEGARON A LA META HSE: ' + '\t' + studentsDownTarget.length);
   
   var porcentajeTargetHse = Math.round(porcentajeLogroMetasLife) + '%';
-  var totalHse = '% del total (' + (studentsOverTarget.length + studentsDownTarget.length) + ')';
+  var totalHse = '% OF TOTAL (' + (studentsOverTarget.length + studentsDownTarget.length) + ')';
 
   var porcentajeTargetHseShow = document.getElementById('porcentajeTargetHse');
   porcentajeTargetHseShow.innerHTML = porcentajeTargetHse + '<br>' + totalHse;
@@ -377,23 +353,11 @@ function studentsData(sede, generacion) {
           studentNotaHse.push(students[i].sprints[j].score.hse);
         }
       }
-      // console.log(students[i].name + '\t' + promedioStudentNotaTech + '\t' + promedioStudennotaHse);
        
       console.log(students[i].name + '\t' + students[i].sprints[j].score.hse + '\t' + students[i].sprints[j].score.tech);
-      /*
-  for (var i = 0; i < studentNotaTech.length; i++) {
-    sumaNotasTech = sumaNotasTech + studentNotaTech[i];
-    sumaNotasHse = sumaNotasHse + studentNotaHse[i];
-  }
-
-  var promedioStudentNotaTech = sumaNotasTech / studentNotaTech.length;
-
-  var promedioStudennotaHse = sumaNotasHse / studentNotaHse.length; 
-
-  console.log(promedioStudennotaHse);
-  console.log(promedioStudentNotaTech);*/ 
     }
   }
 }
 
 console.log(studentsData('LIM', '2016-2'));
+
