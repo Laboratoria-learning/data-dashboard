@@ -3,6 +3,7 @@ window.addEventListener('load', function(event) {
   var displayFilterTwo = document.getElementById('fa-sort-desc2');
   var displayFilterThree = document.getElementById('fa-sort-desc3');
   var checkedSite = document.getElementById('checkbox-site');
+  var teacherRating = document.getElementById('numDataFourthRow');
 
   displayFilter.addEventListener('click', function(event) {
     var checkBoxSite = document.getElementById('checkbox-site');
@@ -147,7 +148,7 @@ window.addEventListener('load', function(event) {
     }
   }
 
-  var percentPastScoreLimaStudents2017ii = Math.floor(pastScoreLimaStudents2017ii)
+  var percentPastScoreLimaStudents2017ii = Math.floor(pastScoreLimaStudents2017ii);
 
   checkedSite.addEventListener('change', function(event) {
     console.log(event.target);
@@ -165,6 +166,33 @@ window.addEventListener('load', function(event) {
   });
 });
 
+
+// obteniendo promedio de los teachers
+// lima 2016-2
+var teacherLim2016iiSprintOne = data['LIM']['2016-2']['ratings'][0]['teacher'];
+var teacherLim2016iiSprintTwo = data['LIM']['2016-2']['ratings'][1]['teacher'];
+var promTeacherLim2016ii = ((teacherLim2016iiSprintOne + teacherLim2016iiSprintTwo) / 2);
+// lima 2017-1
+var teacherLim2017iSprintOne = data['LIM']['2017-1']['ratings'][0]['teacher'];
+var teacherLim2017iSprintTwo = data['LIM']['2017-1']['ratings'][1]['teacher'];
+var teacherLim2017iSprintThree = data['LIM']['2017-1']['ratings'][2]['teacher'];
+var teacherLim2017iSprintFourth = data['LIM']['2017-1']['ratings'][3]['teacher'];
+var promTeacherLim2017i = ((teacherLim2017iSprintOne + teacherLim2017iSprintTwo + teacherLim2017iSprintThree + teacherLim2017iSprintFourth) / 4);
+// lima 2017-2
+var teacherLim2017iiSprintOne = data['LIM']['2017-2']['ratings'][0]['teacher'];
+var teacherLim2017iiSprintTwo = data['LIM']['2017-2']['ratings'][1]['teacher'];
+var promTeacherLim2017ii = ((teacherLim2017iiSprintOne + teacherLim2017iiSprintTwo) / 2);
+// creando evento
+teacherRating.addEventListener('change', function(event) {
+  console.log(event);
+  if (teacherRating == 'lim2016 - ii') {
+    getElementById('numDataFourthRow').innerHtml = promTeacherLim2016ii;
+  } else if (teacherRating == 'lim2017 - i') {
+    getElementById('numDataFourthRow').innerHtml = promTeacherLim2017i;
+  } else if (teacherRating == 'lim2017 - ii') {
+    getElementById('numDataFourthRow').innerHtml = promTeacherLim2017ii;
+  }
+}); 
 
 
 
