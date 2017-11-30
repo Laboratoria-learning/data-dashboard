@@ -1,8 +1,82 @@
-// Cargar gráfico desde  google charts  
+google.charts.load('current', {packages: ['corechart']});
+google.charts.setOnLoadCallback(drawChartEnrollment);
+google.charts.setOnLoadCallback(drawPromJedi);
+google.charts.setOnLoadCallback(drawPromTeacher);
+
+function drawChartEnrollment() {
+    var data = new google.visualization.DataTable();
+    // llamando el dato desde la funcion
+    // var divText = document.getElementById('student');
+    // var divPor = document.getElementById('student-dropout');
+    // divPor.innerHTML = studentsDesert() + '% ';
+  
+    data.addColumn('string', 'alumnas');
+    data.addColumn('number', 'count');
+    data.addRows(
+      [
+        ['Alumn Desert', 139],
+        ['Alumn Active', 122]
+      ]
+    );
+    var opciones = {'width': 300,
+      'height': 150
+    };
+    var graphic = new google.visualization.ColumnChart(document.getElementById('column-enrollment'));
+    graphic.draw(data, opciones);
+  }
+  
+  function drawPromJedi() {
+    var data = new google.visualization.DataTable();
+    // llamando el dato desde la funcion
+    // var divText = document.getElementById('student');
+    // var divPor = document.getElementById('jedi-dropout');
+    // divPor.innerHTML = promJedi() + '% ';
+  
+    data.addColumn('string', 'jedi');
+    data.addColumn('number', 'prom');
+    data.addRows(
+      [
+        ['S1', 1.2],
+        ['S2', 2.3],
+        ['S3', 2.4],
+        ['S4', 3.5]
+      ]
+    );
+    var opciones = {'width': 300,
+      'height': 150
+    };
+    var graphic = new google.visualization.LineChart(document.getElementById('graphic-jedi'));
+    graphic.draw(data, opciones);
+  }
+  
+  function drawPromTeacher() {
+    var data = new google.visualization.DataTable();
+    // llamando el dato desde la funcion
+    // var divText = document.getElementById('student');
+    // var divPor = document.getElementById('student-dropout');
+    // divPor.innerHTML = promTeacher() + '% ';
+  
+    data.addColumn('string', 'teacher');
+    data.addColumn('number', 'prom');
+    data.addRows(
+      [
+        ['S1', 1.2],
+        ['S2', 2.3],
+        ['S3', 2.4],
+        ['S4', 3.5]
+      ]
+    );
+    var opciones = {'width': 300,
+      'height': 150
+    };
+    var graphic = new google.visualization.LineChart(document.getElementById('graphic-teacher'));
+    graphic.draw(data, opciones);
+  }
+
+//GRAFICOS TEMP
 google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart);
-// google.charts.setOnLoadCallback(drawNpsChart);
-// Draw the chart and set the chart values, satisfied-students-chart
+//Draw the chart and set the chart values, satisfied-students-chart
 function drawChart() {
   var data = google.visualization.arrayToDataTable([
   ['Sprint', 'Satisfied',],
@@ -13,29 +87,14 @@ function drawChart() {
   ['S5', 70]
 ]);
 
-  // Optional; add a title and set the width and height of the chart
+//   // Optional; add a title and set the width and height of the chart
   var options = { 'width':325, 'height':170};
 
-  // Display the chart inside the <div> element with id="piechart"
+//   // Display the chart inside the <div> element with id="piechart"
   var chart = new google.visualization.LineChart(document.getElementById('satisfied-chart'));
-  chart.draw(data, options);
-}
-// nps-chart
-// var aqp20172 = data.AQP['2016-2']['students'];
-// var aqp20172Ratings = data.AQP['2016-2']['ratings'];
-// aqp20172Ratings
+   chart.draw(data, options);
+ }
 
-//    function drawNpsChart() {
-//    var dataNps = google.visualization.arrayToDataTable([
-//    ['Sprint','promoters','passive','detractors'],
-//    ['S1 ', 70, 15, 15 ],
-//    ['S2', 74, 16, 10],
-//    ['S3', 78, 13, 9],
-//    ['S4', 78,15,7],
-//    ]);
-//    var optionsNps = { 'width':325, 'height':170};
-//    var chartNps = new google.visualization.LineChart(document.getElementById('nps-chart'));
-//    chartNps.draw(dataNps, optionsNps);
 
 //funcion de los tabs de main section
 var showHide = function(e) {

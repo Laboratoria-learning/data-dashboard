@@ -1,0 +1,39 @@
+/*G-ingresando el menu usario*/
+a{
+    color: white;
+    text-decoration: none;
+  }
+  .fotoUsuario{
+    width: 120px;
+    margin-right: 15px;
+  
+  }
+  
+  .nav-usuario{
+    opacity: .7;
+    /*background-color: red;*/
+    width: 20%;
+    margin: auto;
+  }
+  
+  .box-black1{
+    font-family: sans-serif;
+    color: white;
+    background-color: black;
+    padding: 30px;
+    margin: 3px;
+    width: 110%;
+  }
+  .box-black3{
+    font-family: sans-serif;
+    background-color: black;
+    padding: 30px;
+    color: white;
+    margin: 3px;
+    width: 110%;
+  }
+  
+  figure .texto {
+    display: inline-block;
+  }
+  /*G terminando el menu usario*/
