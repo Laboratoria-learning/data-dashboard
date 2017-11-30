@@ -106,8 +106,8 @@ function changeTitle() {
     var sprint2Jedi = data['LIM']['2017-2']['ratings'][1]['jedi'];
     drawPromoter(sprint1, sprint2, 0, 0);
     drawCurrently(attend, 14 - attend);
-    drawTeacher(sprint1Teacher,sprint2Teacher, 0, 0);
-    drawJedi(sprint1Jedi,sprint2Jedi, 0, 0);
+    drawTeacher(sprint1Teacher, sprint2Teacher, 0, 0);
+    drawJedi(sprint1Jedi, sprint2Jedi, 0, 0);
     break;
   case 'are2016II':
     titleSelector.textContent = 'Arequipa 2016-II';
@@ -419,37 +419,58 @@ function TechSkill() {
 }
 
 function lifeSkill() {
+  var grafyMeet;
   var valueSelector = comboBox.value;
   switch (valueSelector) {
   case 'lim2016II':
     calculateHse('LIM', '2016-2', 2);
+    grafyMeet = calculateHse('LIM', '2016-2', 2);
+    drawLifeSkill(grafyMeet, 35 - grafyMeet);
     break;
   case 'lim2017I':
     calculateHse('LIM', '2017-1', 4);
+    grafyMeet = calculateHse('LIM', '2017-1', 4);
+    drawLifeSkill(grafyMeet, 17 - grafyMeet);
     break;
   case 'lim2017II':
-    calculateHse('LIM', '2017-2', 2);  
+    calculateHse('LIM', '2017-2', 2);
+    grafyMeet = calculateHse('LIM', '2017-2', 2);
+    drawLifeSkill(grafyMeet, 14 - grafyMeet);  
     break;
   case 'are2016II':
     calculateHse('AQP', '2016-2', 4);
+    grafyMeet = calculateHse('SCL', '2016-2', 4);
+    drawLifeSkill(grafyMeet, 11 - grafyMeet); 
     break;
   case 'are2017I':
-    calculateHse('AQP', '2017-1', 3); 
+    calculateHse('AQP', '2017-1', 3);
+    grafyMeet = calculateHse('AQP', '2017-1', 3);
+    drawLifeSkill(grafyMeet, 15 - grafyMeet);  
     break;
   case 'chi2016II':
-    calculateHse('SCL', '2016-2', 4);  
+    calculateHse('SCL', '2016-2', 4);
+    grafyMeet = calculateHse('SCL', '2016-2', 4);
+    drawLifeSkill(grafyMeet, 11 - grafyMeet);  
     break;
   case 'chi2017I':
-    calculateHse('SCL', '2017-1', 3);  
+    calculateHse('SCL', '2017-1', 3);
+    grafyMeet = calculateHse('SCL', '2017-1', 3);
+    drawLifeSkill(grafyMeet, 23 - grafyMeet);  
     break;
   case 'chi2017II':
     calculateHse('SCL', '2017-2', 2);
+    grafyMeet = calculateHse('SCL', '2017-2', 2);
+    drawLifeSkill(grafyMeet, 61 - grafyMeet);
     break;
   case 'mex2017I':
     calculateHse('CDMX', '2017-1', 3);
+    grafyMeet = calculateHse('CDMX', '2017-1', 3);
+    drawLifeSkill(grafyMeet, 24 - grafyMeet);
     break;
   case 'mex2017II':
-    calculateHse('CDMX', '2017-2', 2);  
+    calculateHse('CDMX', '2017-2', 2);
+    grafyMeet = calculateHse('CDMX', '2017-2', 2);
+    drawLifeSkill(grafyMeet, 46 - grafyMeet);  
     break;
   }
 }
@@ -557,6 +578,7 @@ function calculateHse(sede, year, numSprint) {
     percentSprint = ((sumSprintOne * 100) / cantEstudents).toFixed(0);
     overallClass.innerHTML = '<b>' + sumSprintOne + '</b>' + '<br> # of students that meet the target';
     studentTargetOverall.innerHTML = '<b>' + percentSprint + '</b>' + '<br> % overall class average';
+    return sumSprintOne;
     break;
   case 'sprintHSE2':
     var sumSprintTwo = 0;
@@ -572,6 +594,7 @@ function calculateHse(sede, year, numSprint) {
     percentSprint = ((sumSprintTwo * 100) / cantEstudents).toFixed(0);
     overallClass.innerHTML = '<b>' + sumSprintTwo + '</b>' + '<br> # of students that meet the target';
     studentTargetOverall.innerHTML = '<b>' + percentSprint + '</b>' + '<br> % overall class average';
+    return sumSprintTwo;
     break;  
   case 'sprintHSE3':
     if (numSprint > 2) {
@@ -588,6 +611,7 @@ function calculateHse(sede, year, numSprint) {
       percentSprint = ((sumSprintThree * 100) / cantEstudents).toFixed(0);
       overallClass.innerHTML = '<b>' + sumSprintThree + '</b>' + '<br> # of students that meet the target';
       studentTargetOverall.innerHTML = '<b>' + percentSprint + '</b>' + '<br> % overall class average';
+      return sumSprintThree;
     } else {
       studentTargetOverall.innerHTML = '';
       overallClass.innerHTML = '';
@@ -609,6 +633,7 @@ function calculateHse(sede, year, numSprint) {
       percentSprint = ((sumSprintFour * 100) / cantEstudents).toFixed(0);
       overallClass.innerHTML = '<b>' + sumSprintFour + '</b>' + '<br> # of students that meet the target';
       studentTargetOverall.innerHTML = '<b>' + percentSprint + '</b>' + '<br> % overall class average';
+      return sumSprintFour;
     } else {
       studentTargetOverall.innerHTML = '';
       overallClass.innerHTML = '';
@@ -644,8 +669,22 @@ function drawTechSkill(meet, noMeet) {
 
   var chart = new google.visualization.PieChart(document.getElementById('grafy-tech'));
   chart.draw(data, options);
-
 }
+
+function drawLifeSkill(meet, noMeet) {
+  var data = google.visualization.arrayToDataTable([
+    ['Tech Skill', 'Number Student'],
+    ['student that meet the target', meet],
+    ['student that do not meet the target', noMeet],
+  ]);
+  var options = {
+    'width': 600,
+    'height': 400};
+
+  var chart = new google.visualization.PieChart(document.getElementById('grafy-hse'));
+  chart.draw(data, options);
+}
+
 function drawPromoter(num1, num2 , num3, num4) {  
   var data = google.visualization.arrayToDataTable([
     ['Element', '#', { role: 'annotation' } ],
