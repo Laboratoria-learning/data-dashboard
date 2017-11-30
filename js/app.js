@@ -11,11 +11,15 @@ studentsBtn.addEventListener('click', function(){
     var x = intento[i];
     var y = x.photo;
     var z = x.name;
-    var w = x.sprints;
+    var w = x.sprints[0].score.tech;
+    var a = x.sprints[1].score.tech;
+    console.log(w)
       var img = document.createElement('img');
       var p = document.createElement('p');
-      var p2 = document.createElement('p');
-      p2.textContent = w;
+      var p2 = document.createElement('div');
+      var p21 = document.createElement('div');
+      p2.innerHTML = w;
+      p21.innerHTML = a;
       p.textContent = z;
       p.setAttribute('class','x')
       img.setAttribute('src',y)
@@ -24,6 +28,7 @@ studentsBtn.addEventListener('click', function(){
       div.appendChild(p)
       div.appendChild(img)
       div.appendChild(p2)
+      div.appendChild(p21)
     }
    //provando(students);
     //console.log(data.AQP);
