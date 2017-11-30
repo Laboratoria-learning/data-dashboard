@@ -1,37 +1,3 @@
-<<<<<<< HEAD
-body{
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-header{
-  outline: 1px solid blue;
-  height: 50px;
-  width: 100%;
-  display: block;
-}
-header span{
-  outline: 1px solid red;
-  font-family: 'Pacifico', cursive;
-  color: #f7b617;
-}
-img{
- width: 15%;
-  outline: 1px solid red;
-}
-#list_sedes{
-  text-align: center;
-  width: 20%;
-  background-color: #FF5733;
-}
-#list_sedes ul{
-  text-align: center;
-  width: 100%;
-  background-color: #19BA76;
-}
-.sede{
-  font-size: 18px;
-=======
 
 body{
   margin: 0;
@@ -77,7 +43,6 @@ a{
 }
 a .sede{
   background-color:#FFA500 ;
->>>>>>> 74d77f665ca12f8c36558711652e8608369d779d
 }
 .hiden {
   display: none;
@@ -86,17 +51,8 @@ a .sede{
   display: block;
 }
 .generation{
-<<<<<<< HEAD
-  display: block;
-  font-size: 16px;
-}
-h3{
-  font-size: 20px;
-}
-=======
   width: 100px;
  background-color: #D0D0D0;
   display:block;
   font-size: 16px;
 }
->>>>>>> 74d77f665ca12f8c36558711652e8608369d779d
