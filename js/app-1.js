@@ -93,26 +93,26 @@ window.addEventListener('load', function(event) {
       var visualizationSection = document.getElementById('visualization');
       
        /* creaación de elementos divs */
+
+       /* photo del estudiante */
        var divStudent = document.createElement('div'); /* div con id-student */
        var imgPhoto = document.createElement('img');  /* img con propiedad src*/
        imgPhoto.setAttribute('src',students[[z,3]]);
        imgPhoto.classList.add('photo-standart');
-
-       /* asignación de hijos a padres */
        visualizationSection.appendChild(divStudent);
        divStudent.appendChild(imgPhoto);
 
+       /*datos de estudiante */
        var divDate = document.createElement('div'); /* div con id-date */
        var divDateStudent = document.createElement('div'); /* div con id-name */ 
        var divName = document.createElement('div'); /* div con id-date */
+       divName.classList.add('big-letter');
        var divEspecializationStudent = document.createElement('div'); /* div con id-name */ 
-       
-
        divStudent.appendChild(divDate);
        divDate.appendChild(divName);
        divDate.textContent = students[[z,2]];
        divDate.appendChild(divEspecializationStudent);
-      
+     
     };
   });
 });

@@ -9,6 +9,10 @@ div #especialization {
   position: fixed;
 }
 
+div #container-students {
+    bottom:100px;
+}
+
 #especialization {
     left: 15px;
     /*height: 100%;*/
