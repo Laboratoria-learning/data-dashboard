@@ -2,7 +2,15 @@
 window.addEventListener('load', function() {
   var overview = document.getElementById('general');
   // agregando sedes
-  
+  var sedeSelect = document.getElementById('location');
+  var sede = 'LIM';
+  function sedeS() {
+    sedeSelect.addEventListener('change', function(){
+      sede = event.target.value;
+      console.log(sede);
+    });
+  }
+ sedeS();
   // enrollment
   var enrollment = document.createElement('div');
   var enrollOne = document.createElement('div');
@@ -11,12 +19,12 @@ window.addEventListener('load', function() {
   var allStudents = document.createElement('h2');
   // agrega la cantidad de estudiantes activos por sede y generacion
   // pero falta jalarlo de manera mas generica
-  allStudents.innerText = currentStudents('LIM', '2016-2');
+  allStudents.innerText = currentStudents(sede, '2016-2');
   var textAS = document.createElement('span');
   textAS.innerText = '# STUDENTS CURRENTLY ENROLLED';
   var enrollTwo = document.createElement('div');
   var dropout = document.createElement('h2');
-  dropout.innerText = dropoutAll('LIM', '2016-2');
+  dropout.innerText = dropoutAll(sede, '2016-2');
   var textDrop = document.createElement('span');
   textDrop.innerText = '% DROPOUT';
   // agregando al enrollment
@@ -265,7 +273,7 @@ window.addEventListener('load', function() {
         var allPassive = 0;
         for (var p = 0; p < array.length; p++) {
           allPassive += array[p];
-        } 
+        }
          var totalPassive = allPassive / ratigns.length;
          return totalPassive + ' % Passive';
     }
@@ -284,10 +292,33 @@ window.addEventListener('load', function() {
         var allDetractor = 0;
         for (var p = 0; p < array.length; p++) {
           allDetractor += array[p];
-        } 
+        }
          var totalDetractor = allDetractor / ratigns.length;
          return totalDetractor + ' % Detractor';
     }
+
+    // al seleccionar uno de las opciones por sprint para TECH
+    /*
+    function techStudent(sede, gene){
+      var sede = data[sede];
+      var generation = sede[gene];
+      var student = generation.students;
+      var cTechOne = 0;
+
+      for (var i = 0; i < student.length; i++){
+        var sprint = student[i].sprints.length;
+        if (student[i].active === true){
+
+          for (var j = 0; j < sprint; j++){
+            if (student[i].sprint[j].number === 1){
+              var points = student[i].sprint[j].score.tech;
+
+            }
+          }
+        }
+      }
+    }
+*/
 });
 // Puedes hacer uso de la base de datos a través de la variable `data`
 console.log(data);

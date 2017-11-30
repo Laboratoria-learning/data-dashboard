@@ -11,16 +11,24 @@
 /*sección header*/
  header {
      box-shadow: 2px 2px 2px gray;
-     height: 70px;
+     height: 80px;
  }
  header img {
-    float: left;
-    margin-top: 20px;
-    margin-right: 350px;
+    margin-top: 10px;
+    margin-left: 580px;
     width: 190px;
     height: 80px;
-    margin: auto 40%;
- }
+    }
+
+i {
+  margin-right: 60px;
+  font-size: 30px;
+}
+
+i:hover {
+ color: white;
+ background-color: rgb(190, 190, 190);
+}
 
 header .fa {
     margin-top: 30px;
@@ -45,8 +53,13 @@ display: inline-block;
 
 li {
   display: inline-block;
-  margin-top: 30px;
+  margin-top: 10px;
   margin-left: 40px;
+  }
+
+  ul li:hover {
+  color: white;
+  background-color: rgb(190, 190, 190);
 }
 
 #location {
@@ -68,8 +81,7 @@ text-transform: uppercase;
    height: 450px;
  }
 
- }
- .overview {
+  .overview {
      display: inline-block;
      padding: 10px;
      float: left;
@@ -96,8 +108,7 @@ text-transform: uppercase;
   font-size: 10px;
   text-align: center;
   margin-top: 15px;
-
-}
+ }
 
 .enrollTwo {
     background-color: #e6ecf0;
@@ -121,10 +132,12 @@ text-transform: uppercase;
   height: 300px;
   text-align: center;
 }
+
 .achievementClass h1{
   font-weight: bolder;
 }
 .achiOne {
+  padding: 5px;
   background-color: #e6ecf0;
   font-size: 10px;
   height: 60px;
@@ -136,6 +149,7 @@ text-transform: uppercase;
   }
 
 .achiTwo {
+  padding: 5px;
   background-color:#e6ecf0;
   font-size: 11px;
   height: 60px;
@@ -161,27 +175,106 @@ text-transform: uppercase;
 
 .pOneClass {
   background-color:#e6ecf0;
+  padding: 5px;
   font-size: 11px;
   height: 60px;
   width : 140px;
   display: inline-block;
   margin-top: 15px;
-
 }
 
 .pTwoClass {
   background-color:#e6ecf0;
+  padding: 5px;
   font-size: 11px;
   height: 60px;
   width : 140px;
   display: inline-block;
   margin-left: 10px;
   margin-top: 15px;
-
 }
 
 .titleStyle {
     margin: 10px;
     font-family: Arial, Helvetica, sans-serif;
 }
-/*seccion 2 Tech Skills/*
+
+/*seccion 2 Tech Skills*/*
+
+#techS {
+  border: 1px solid red;
+margin-left: 40px;
+ background-color: #fff;
+ box-sizing: border-box;
+ height: 650px;
+ width: 900px;
+ }
+.metTargetStyle{
+  padding: 5px;
+  border: 1px solid red;
+}
+.totalTSStyle {
+border: 1px solid red;
+
+}
+.comboStyle {
+    float: left;
+
+}
+.techSkillStyle {
+ border: 1px solid red;
+ box-sizing: border-box;
+ }
+
+
+ /*seccion lastSection */*
+#lastSection{
+border: 1px solid red;
+box-sizing: border-box;
+padding: 40px;
+background-color: #e6ecf0;
+height: 450px;
+}
+
+.studentSatif{
+background-color:#fff;
+box-sizing: border-box;
+display: inline-block;
+width: 360px;
+height: 350px;
+padding: 20px;
+border-top: 80px;
+margin-left: 40px;
+text-align: center;
+}
+
+.teacherRating{
+  background-color:#fff;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 360px;
+  height: 350px;
+  padding: 20px;
+  border-top: 80px;
+  margin-left: 40px;
+  text-align: center;
+
+}
+
+.jediRating{
+  background-color:#fff;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 360px;
+  height: 350px;
+  padding: 20px;
+  border-top: 80px;
+  margin-left: 40px;
+  text-align: center;
+}
+
+.lastChart {
+  margin-top: 20px;
+  width: 280px;
+  height: 240px;
+}
