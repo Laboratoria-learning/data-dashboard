@@ -109,19 +109,23 @@ function inscription(event) {
     // función que devuelve la cantidad de estudiantes que superan la meta de puntos en promedio de todos los sprints
 
     var studentsActive = 0;
-    var tech = {};
+    var count = 0;
     function achievement(){
       students = data[sede][gen].students;
       for(var i = 0; i < students.length; i++){
         if(students[i].active){
+          studentsActive++;
           for (var j = 0; j < students[i]['sprints'].length; j++){
             var sum = students[i]['sprints'][j]['score']['tech'] + students[i]['sprints'][j]['score']['hse'];
             // console.log(students[i]['sprints'][j]['score']['tech']);
             // console.log(students[i]['sprints'][j]['score']['hse']);
-            console.log(sum);
+            if(sum > 2100 ){
+              count++;
+            }
           }
         }
       }
+      console.log(count);
     }
 
     achievement();

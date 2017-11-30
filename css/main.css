@@ -109,6 +109,8 @@ article {
   margin-right: 5px;
   border-radius: 5px;
   width: 160px;
+  position: relative;
+  left: 20px;
 }
 
 .box-container {
@@ -150,6 +152,8 @@ p {
   margin-top: 80px;
   width: 300px;
   height: 110px;
+  position: relative;
+  left: -25px;
 }
 
 .big-imagen {
