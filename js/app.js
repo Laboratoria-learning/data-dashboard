@@ -1,3 +1,4 @@
+var selectCity = ['click'];
 /*
  * Funcionalidad de tu producto
  */

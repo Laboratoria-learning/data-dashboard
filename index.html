@@ -3,8 +3,214 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link rel="stylesheet" href="css/main.css">
+
   </head>
   <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Data Dashboard</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <div class="container">
+          <figure>
+            <img class="brand" src="assets/images/images.png" alt="imagen">
+          </figure>
+          <span>
+            <a class="efect" href="#" onclick="lineas"><i class="icon fa fa-bars" aria-hidden="true"></i></a>
+          </span class="icon">
+        </div>
+      </div>
+    </header>
+    <nav class="menu">
+        <div class="container">
+          <div class="menu-principal">
+            <a  class="efect" href="#" onclick="Chile"><h1 class="title">SANTIAGO DE CHILE 2017-II</h1>
+              <i class="icon fa fa-caret-down" aria-hidden="true"></i>
+              <!-- <div id="formulario">
+               <form id="form1" onsubmit="return display" action="post">
+                   <select name="city">
+                     <optgroup label="AREQUIPA">
+                        <option value="sub">2016-2</option>
+                        <option value="sub">2017-1</option>
+                     </optgroup>
+
+                     <optgroup label="CHILE">
+                        <option value="sub">2017-1</option>
+                        <option value="sub">2017-2</option>
+                      </optgroup>
+
+                     <optgroup label="LIMA">
+                        <option value="sub">2016-2</option>
+                        <option value="sub">2017-1</option>
+                        <option value="sub">2017-2</option>
+                     </optgroup>
+
+                     <optgroup label="MEXICO">
+                       <option value="sub">2016-2</option>
+                       <option value="sub">2017-1</option>
+                       <option value="sub">2017-2</option>
+                     </optgroup>
+                 </select>
+               </form>
+             </div> -->
+         </a>
+          </div>
+          <div class="submenu">
+            <a  class="efect"href="#" onclick="menu"><h2 class="subtitle active">OVERVIEW</h2>
+            <h2 class="subtitle">STUDENTS</h2>
+            <h2 class="subtitle">TEACHERS</h2></a>
+        </div>
+      </nav>
+    <main>
+      <section class="overview">
+        <div class="container">
+          <div class="content-data space-between">
+            <div class="data-div">
+              <h3>ENROLLMENT</h3>
+              <div class="content-data space-between">
+                <div class="data">
+                  <span class="num">120 </span>
+                  <span class="text"># STUDENTS CURRENTLY ENROLLET</span>
+                </div>
+                <div class="data">
+                  <span class="num red">20%</span>
+                  <span class="text">% DROPOUT</span>
+                </div>
+              </div>
+            </div>
+            <div class="data-div">
+              <h3>ACHIEVEMENT</h3>
+              <div class="content-data space-between">
+                <div class="data">
+                  <span class="num">105</span>
+                  <span class="text"># STUDENTS CURRENTLY ENROLLET</span>
+                </div>
+                <div class="data">
+                  <div class="content-center">
+                    <span class="num green">78%</span>
+                    <i class="icon green fa fa-caret-up" aria-hidden="true"></i>
+                  </div>
+                  <span class="text">% DROPOUT</span>
+                </div>
+              </div>
+            </div>
+            <div class="data-div">
+              <h3>NET PROMOTER SCORE</h3>
+              <div class="content-data space-between">
+                <div class="data">
+                  <div class="content-center">
+                    <span class="num green">78%</span>
+                    <i class="icon green fa fa-caret-up" aria-hidden="true"></i>
+                  </div>
+                  <span class="text">% CUMULATIVE NPS</span>
+                </div>
+                <div class="data">
+                  <p>60% Promoters</p>
+                  <p>30% Passive</>
+                  <p>10% Detractors</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <section class="overview  tech-skills">
+        <div class="container">
+          <div class="content-data space-between">
+            <div class="data-div">
+              <h3>TECH SKILLS</h3>
+              <div class="select">
+                <span class="gray">overall (cumulative)</span>
+                <i class="icon fa fa-caret-down" aria-hidden="true"></i>
+              </div>
+              <div class="content-data space-between">
+                <div class="data">
+                  <span class="num">90</span>
+                  <span class="text"># STUDENTS THAT MEET THE TARGET</span>
+                </div>
+                <div class="data">
+                  <span class="num green">62</span>
+                  <span class="text">% OF TOTAL (135)</span>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+    <section class="overview  tech-skills">
+      <div class="container">
+        <div class="content-data space-between">
+          <div class="data-div">
+            <h3>LIFE SKILLS</h3>
+            <div class="select">
+              <span class="gray">Last  Sprint(S4)</span>
+              <i class="icon fa fa-caret-down" aria-hidden="true"></i>
+            </div>
+            <div class="content-data space-between">
+              <div class="data">
+                <span class="num">80</span>
+                <span class="text"># OVERALL CLASS AVERAGE</span>
+              </div>
+              <div class="data">
+                <span class="num green">62</span>
+                <span class="text"># OF STUDENTS THAT MEET THE TARGET</span>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    </section>
+    <section class="overview">
+      <div class="container">
+        <div class="content-data space-between">
+          <div class="data-div">
+            <h3>STUDENT SATISFACTION</h3>
+            <div class="content-data space-between">
+              <div class="data">
+                <span class="num">140</span>
+                <span class="text">% MEETING OR EXCEEDNIG EXPECTATIONS (CUMULATIVE)</span>
+              </div>
+            </div>
+          </div>
+          <div class="data-div">
+            <h3>TEACHER RATING</h3>
+            <div class="content-data space-between">
+              <div class="data">
+                <span class="num">4.2</span>
+                <span class="text"># STUDENTS CURRENTLY ENROLLET</span>
+              </div>
+            </div>
+          </div>
+          <div class="data-div">
+            <h3>JEDI MASTER RATING</h3>
+            <div class="content-data space-between">
+              <div class="data">
+                <div class="content-center">
+                  <span class="num green">50</span>
+                  <i class="icon green fa fa-caret-up" aria-hidden="true"></i>
+                </div>
+                <span class="text">% CUMULATIVE NPS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+		<!-- Base de datos -->
+		<script src="./js/data.js"></script>
+		<!-- Aquí va tus archivos JS -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>
 
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
