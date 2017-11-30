@@ -179,7 +179,7 @@ var teacherLim2017iiSprintOne = data['LIM']['2017-2']['ratings'][0]['teacher'];
 var teacherLim2017iiSprintTwo = data['LIM']['2017-2']['ratings'][1]['teacher'];
 var promTeacherLim2017ii = ((teacherLim2017iiSprintOne + teacherLim2017iiSprintTwo) / 2);
 // creando evento
-teacherRating.addEventListener('change', function(event) {
+  teacherRating.addEventListener('change', function(event) {
   console.log(event);
   if (teacherRating == 'lim2016 - ii') {
     getElementById('numDataFourthRow').innerHtml = promTeacherLim2016ii;
@@ -196,44 +196,6 @@ teacherRating.addEventListener('change', function(event) {
 // console.log(shortCut.length);
 // Puedes hacer uso de la base de datos a través de la variable `data`
 
-/* event tab*/
-var mostrarOcultar = function(e) {
-  var tabSeleccionado = e.target.dataset.tabSeleccionado;
-  var overview = document.getElementById('overview');
-  var students = document.getElementById('students');
-  var teachers = document.getElementById('teachers');
-  if (tabSeleccionado === 'tabOverview') {
-    console.log('mostrar overview');
-    /* hide students y teachers*/
-    students.style.display = 'none';
-    teachers.style.display = 'none';
-    /* show overview*/
-    overview.style.display = 'block';
-  } else if (tabSeleccionado === 'tabStudents') {
-    console.log('mostrar students');
-    /* hide overview y teachers*/
-    overview.style.display = 'none';
-    teachers.style.display = 'none';
-    /* show overview*/
-    students.style.display = 'block';
-  } else if (tabSeleccionado === 'tabTeachers') {
-    console.log('mostrar teachers');
-    /* hide overview y students*/
-    overview.style.display = 'none';
-    students.style.display = 'none';
-    /* show teachers*/
-    teachers.style.display = 'block';
-  }
-};
-var cargarPagina = function() {
-  students.style.display = 'none';
-  teachers.style.display = 'none';
-  var elementosTab = document.getElementsByClassName('tab');
-  for (var i = 0; i < elementosTab.length; i++) {
-    elementosTab[i].addEventListener('click', mostrarOcultar);
-  }
-};
-cargarPagina();
 
 
 // console.log(data['LIM']['2016-2']['students'][0]['sprints'][0]['score']['tech']);
