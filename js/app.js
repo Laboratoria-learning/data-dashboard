@@ -90,6 +90,7 @@ window.addEventListener('load', function(event) {
   function showMenu(event) {
     // Eliminar todos los elementos del select - sprint
     optionSprint.innerHTML = '';
+    
 
     var str = event.target.id.split(',');
     str = data[str[0]][str[1]];
