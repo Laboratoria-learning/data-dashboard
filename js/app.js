@@ -105,10 +105,6 @@ function showTotalStudents(region, promotion) {
   console.log('region '+region+' promotion '+promotion );
   var sedeRegion = region;
   var generation = promotion;
-  /*
-  var sedeRegion = 'LIM';
-  var generation = '2017-2';
-  */
   for (var regionData in data) {
     if (regionData === sedeRegion) {
       for (var promo in data [regionData]) {
@@ -126,12 +122,38 @@ function showTotalStudents(region, promotion) {
     }
     numberBoxStudents.textContent = current;
     numberBoxStudents.classList.toggle('number-box-int');
+    studentsDropout.textContent = parseFloat(deserted/(current + deserted)*100).toFixed(0) + '%';
     drawTotalStudents(current, deserted);
   }
   console.log("current" + current + "deserted" + deserted);
 // Obtener a quien elijo
 // LIM172 = data.LIM['2017-2'];
-// Pasar parametro para obtener ya datos estadisticos
+// Pasar parametro para obtener ya datos estadisticos*/
+}
+
+function sowOverGoal(rgion,promotion) {
+  var meet = 0;
+  var falis = 0;
+  for (var regionData in data) {
+    if (regionData === sedeRegion) {
+      for (var promo in data [regionData]) {
+        if (promo === generation) {
+          for (var students in data [regionData][promo]) {
+            if (students === 'students') {
+              for (var eachStudent in data [regionData][promo][students]) {
+                var active = data[sedeRegion][promo][students][eachStudent]['active'];
+
+                (active) ? current++ : deserted++;
+              }
+            }
+          }
+        }
+      }
+    }
+    numberBoxStudents.textContent = current;
+    numberBoxStudents.classList.toggle('number-box-int');
+    drawTotalStudents(current, deserted);
+  }
 }
 /*************************GRAFICOS************/
 function drawTotalStudents(current, deserted) {
@@ -153,5 +175,3 @@ function drawTotalStudents(current, deserted) {
     chart.draw(dataTest, options);
   }
 }
-
-
