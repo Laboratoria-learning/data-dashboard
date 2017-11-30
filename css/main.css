@@ -1,3 +1,523 @@
-/*
- * Estilos de tu proyecto
- */
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    overflow: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* mostrar cargando */
+.loading {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    margin: auto;
+    width: 150px;
+    height: 150px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.main-header {
+    background-color: #ffc107;
+    position: relative;
+    max-height: 103px;
+    z-index: 1030;
+}
+
+.navbar {
+    position: relative;
+}
+
+.navbar-static-top {
+    z-index: 1000;
+}
+
+.navbar-right-menu {
+    float: right;
+}
+
+.input-group {
+
+}
+
+.nav-search {
+    position: absolute;
+    left: 34%;
+    top: 44px;
+}
+
+.form-control {
+    width: 400px;
+    border-radius: 21px;
+    border: 1px solid #e6ecf0;
+    color: #14171a;
+    font-size: 12px;
+    padding: 6px 32px 8px 12px;
+    transition: all .2s ease-in-out;
+}
+
+.form-control:focus {
+    border: 1px solid #14171a;
+    outline: none;
+}
+
+.input-group-btn {
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
+
+}
+
+.input-group-btn span {
+    color: #14171a;
+}
+
+.nav-right {
+    display: inline-block;
+}
+
+.navbar-nav {
+    margin: 0;
+    padding: 0;
+}
+
+.login {
+    position: relative;
+    right: 30px;
+    top: 30px;
+}
+
+.mensaje {
+    position: relative;
+    right: 50px;
+    top: 20px;
+    font-size: 25px;
+}
+
+.mensaje a {
+    text-decoration: none;
+}
+
+.icon-envelope {
+    color: #fff;
+}
+
+/*Left side column*/
+
+.main-sidebar {
+    background-color: #2b2b2b;
+    position: absolute;
+    left: 0;
+    padding-top: 50px;
+    height: auto;
+    width: 230px;
+    z-index: 810;
+}
+
+.sidebar {
+    height: auto;
+    padding-bottom: 10px;
+}
+
+.text {
+    text-align: center;
+}
+
+.main-image img {
+    position: relative;
+    left: 35px;
+}
+
+.main-text h2 {
+    color: white;
+}
+
+.main-text h3, span, h4 {
+    color: #ffc107;
+    position: relative;
+}
+
+.main-text span, h4 {
+    display: inline;
+    margin: 0;
+}
+
+.main-text span {
+    margin-right: 5px;
+}
+
+hr {
+    margin-top: 30px;
+    width: 100%;
+    color: #b8c7ce;
+
+}
+
+/*Selecciones*/
+
+.sidebar-menu {
+    list-style: none;
+    line-height: 30px;
+}
+
+.headquarters {
+    padding-left: 15px;
+}
+
+.headquarters-dashboard span {
+    margin-right: 10px;
+}
+
+.headquarters {
+    list-style: none;
+
+}
+
+.headquarters-dashboard a {
+    text-decoration: none;
+
+}
+
+.headquarters li a {
+    color: #b8c7ce;
+
+}
+
+.headquarters a {
+    text-decoration: none;
+}
+
+.comparativo a {
+    text-decoration: none;
+}
+
+.comparativo span {
+    margin-right: 10px;
+}
+
+.setting span {
+    margin-right: 10px;
+}
+
+.setting a {
+    text-decoration: none;
+}
+
+/*Contenido de la Pagina*/
+.content-wrapper {
+    margin-left: 230px;
+}
+
+.content-header {
+    margin: 10px 0 5px 0;
+}
+
+/*Promociones hiddem*/
+
+.container-promo {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+}
+
+/*Sprint hiddem*/
+
+.container-sprint {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+}
+
+/*Cajas*/
+
+.container-box {
+    margin-right: -10px;
+}
+
+.box-total {
+    margin: 10px 0 10px 20px;
+    background-color: #00c0ef;
+    padding: 10px;
+    color: white;
+    border-radius: 2px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    width: 12%;
+    text-align: center;
+}
+
+.box-total h3 {
+    font-size: 38px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    white-space: nowrap;
+    padding: 0;
+
+}
+
+.box-desertaron {
+    margin: 10px 0 10px 20px;
+    background-color: #dd4b39;
+    padding: 10px;
+    color: white;
+    border-radius: 2px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    width: 12%;
+    text-align: center;
+}
+
+.box-desertaron h3 {
+    font-size: 38px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    white-space: nowrap;
+    padding: 0;
+}
+
+.box-proceso {
+    margin: 10px 0 10px 20px;
+    background-color: #00a65a;
+    padding: 10px;
+    color: white;
+    border-radius: 2px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    width: 12%;
+    text-align: center;
+}
+
+.box-proceso h3 {
+    font-size: 38px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    white-space: nowrap;
+    padding: 0;
+
+}
+
+/*Derecha*/
+
+.box-puntaje {
+    margin: 10px 0 10px 150px;
+    background-color: #00a65a;
+    padding: 10px;
+    color: white;
+    border-radius: 2px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    width: 14%;
+    text-align: center;
+}
+
+.box-puntaje h3 {
+    font-size: 38px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    white-space: nowrap;
+    padding: 0;
+
+}
+
+.box-media {
+    margin: 10px 0 10px 20px;
+    background-color: #00c0ef;
+    padding: 10px;
+    color: white;
+    border-radius: 2px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    width: 12%;
+    text-align: center;
+}
+
+.box-media h3 {
+    font-size: 38px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    white-space: nowrap;
+    padding: 0;
+
+}
+
+.box-nomedia {
+    margin: 10px 0 10px 20px;
+    background-color: #dd4b39;
+    padding: 10px;
+    color: white;
+    border-radius: 2px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    width: 14%;
+    text-align: center;
+}
+
+.box-nomedia h3 {
+    font-size: 38px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    white-space: nowrap;
+    padding: 0;
+}
+
+/*Subnav*/
+
+.reponav {
+    margin-left: 20px;
+    font-size: 23px;
+}
+
+.text-nav {
+    text-decoration: none;
+}
+
+.dos {
+    margin-left: 20px;
+}
+/*diseño subnav*/
+
+div .tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+div .tab a {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    text-decoration: none;
+    color: #2b2b2b;
+}
+
+div.tab a:hover {
+    background-color: #ddd;
+}
+
+div .tab a:active {
+    background-color: #ccc;
+}
+
+.tab-content {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+/*Contenedores de información Gráficos y alumnas*/
+
+.graphics {
+    margin-right: -15px;
+    margin-left: -15px;
+    width: 100%;
+}
+
+.alumnas {
+    margin-right: -15px;
+    margin-left: -15px;
+    width: 100%;
+}
+
+/*CSS ALUMNAS */
+
+.images-container {
+    float: right;
+    margin-right: 100px;
+    margin-top: 30px;
+    background-color: #F7F7F7;
+    height: auto;
+}
+
+.img-student {
+    margin: 5%;
+    float: left;
+}
+
+.basic-information {
+    margin: 2%;
+    float: left;
+}
+
+.student-name {
+    margin-bottom: 25px;
+}
+
+.know {
+    margin-right: 20px;
+    position: relative;
+    top: 27px;
+    background-color: #dcdcdc;
+    width: 100px;
+    height: 30px;
+    float: left;
+}
+
+.know h6 {
+    padding: 0;
+    margin: 8px;
+    text-align: center;
+}
+
+.skills {
+    position: relative;
+    bottom: 160px;
+    left: 250px;
+    margin-top: 30px;
+    margin-right: 10px;
+    float: left;
+    width: 260px;
+}
+
+.skills-container {
+    float: left;
+    position: relative;
+    width: 60px;
+    padding: 5px;
+    background-color: #dcdcdc;
+    margin-left: 15px;
+    height: 50px;
+    text-align: center;
+}
+
+.skills-container h6 {
+    padding: 0;
+    margin: 0
+}
+
+
+

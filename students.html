@@ -3,11 +3,12 @@
 <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
-    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <link rel="stylesheet" href="assets/icomoon/style.css">
-    <link rel="shortcut icon" sizes="57x57" href="assets/images/apple-touch-icon-57x57.png">
-    <script src="js/data.js" type="text/javascript" ></script>
+    <link rel="stylesheet" href="css/charts.css">
+    <link rel="stylesheet" href="css/main.css">
+
 </head>
 <body>
 <div class="wrapper">
@@ -21,8 +22,8 @@
                 <div class="input-group">
                     <input type="text" name="q" class="form-control" placeholder="Search...">
                     <a class="input-group-btn">
-                        <span class="icon-search2"></span>
-                    </a>
+                <span class="icon-search2"></span>
+            </a>
                 </div>
             </form>
         </div>
@@ -72,22 +73,22 @@
                         <span class="pull-container"></span>
                     </a>
                     <ul class="headquarters">
-                        <li id="lima" class="headquarters-lima">
+                        <li class="headquarters-lima">
                             <a href="#">
                                 <span class="icon-caret-right"></span>Lima
                             </a>
                         </li>
-                        <li id="arequipa" class="headquarters-arequipa">
+                        <li class="headquarters-arequipa">
                             <a href="#">
                                 <span class="icon-caret-right"></span>Arequipa
                             </a>
                         </li>
-                        <li id="mexico" class="headquarters-mexico">
+                        <li class="headquarters-mexico">
                             <a href="#">
                                 <span class="icon-caret-right"></span>Ciudad de México
                             </a>
                         </li>
-                        <li id="santiago" class="headquarters-santiago">
+                        <li class="headquarters-santiago">
                             <a href="#">
                                 <span class="icon-caret-right"></span>Santiago de Chile
                             </a>
@@ -114,25 +115,26 @@
     <div class="content-wrapper">
         <section class="content-header">
             <div class="container-promo">
-                <span>Promoción</span>
+            <span>Promoción</span>
             </div>
             <select id="promocion">
-                <option selected class="combo">Seleccione</option>
+                <option id="2017-2" class="combo">2017 - II</option>
+                <option id="2017-1" class="combo">2017 - I </option>
+                <option id="2016-2" class="combo">2016 - II</option>
+                <option id="2016-1" class="combo">2016 - I </option>
+                <option id="2015-2" class="combo">2015 - II</option>
+                <option id="2015-1" class="combo">2015 - I </option>
             </select>
-
-            <!--Main Content-->
-            <section class="content"></section>
             <div class="container-sprint">
-                <span>Sprint</span>
+            <span>Sprint</span>
             </div>
             <select id="sprint">
                 <option id="sprint1" class="combo">1</option>
                 <option id="sprint2" class="combo">2</option>
-                <option id="sprint3" class="combo">3</option>
-                <option id="sprint4" class="combo">4</option>
+                <option id="sprint2" class="combo">3</option>
+                <option id="sprint2" class="combo">4</option>
             </select>
         </section>
-
         <!--Cajas-->
         <div class="container-box">
             <div class="box-total">
@@ -161,71 +163,87 @@
                 <p>Media no alcanzada</p>
             </div>
         </div>
+        <!--Main Content-->
+
+          <!-- Sub-menu -->
+        <nav class="reponav">
+            <span class="reponav-item.selected">
+              <a id="graphics" class="text-nav" href="#"><span>Gráfico</span></a>
+            </span>
+            <span class="reponav-item.selected">
+              <a id="students-option" class="text-nav dos"href="#"><span>Alumnas</span></a>
+            </span>
+          </nav>
+
+      <!-- Graficos -->
+        <div id="graphics-cuerpo"class="graphics">
+            <div id="donutchart" class="donutchart"></div>
+            
+            <div id="donutchartTwo" class="donutchartTwo"></div>
+            
+            <div id="tech-hse" class="tech-hse"></div>
+            
+            <div id="barchart_hse" class="barchart_hse"></div>
+            
+            <div id="barchart_tech" class="barchart_tech"></div>
+
+            <div id="PorcentualStudents" class="PorcentualStudents"></div>
+
+            <div id="jedis" class="jedis"></div>
+
+        </div>
+
+        <!-- Alumnas -->
+        <section id="content"class="content">
+        <div class="alumnas">
+          <div id="students" class="images-container">
+  <img class="img-student" src="https://dummyimage.com/162x148.png/ff4444/ffffff" alt="Donna Sloper">
+
+  <div class="basic-information">
+      <h3 class="student-name">Donna Sloper</h3>
+      <h5 class="subtittle">Frontend Developer</h5>
+      <div class="knowledge">
+        <div class="know"><h6>JavaScript</h6></div>
+        <div class="know"><h6>APIs</h6></div>
+        <div class="know"><h6>JQUERY</h6></div>
+      </div>
+  </div>
+
+
+  <div class="skills">
+      <div class="skills-container">
+        <h4>96.3%</h4>
+        <h6>TECH SKILLS</h6>
+      </div>
+      <div class="skills-container">
+        <h4>96.3%</h4>
+        <h6>LIFE SKILLS</h6>
+      </div>
+      <div class="skills-container">
+        <h4>96.3%</h4>
+        <h6>ENGLISH SKILLS</h6>
+      </div>
+  </div>
+  </div>
+        </div>
+        </section>
 
         <!--Graficos-->
-        <div class="graphic">
+        <!-- <div class="graphic">
             <section>
                 <div id="donucharts"></div>
             </section>
-        </div>
-        <!--Main Content-->
-
-        <!-- Sub-menu -->
-        <nav class="reponav">
-            <div class="tab">
-                <a href="#" class="tab-links">Grafico</a>
-                <a href="#" class="tab-links">Alumnas</a>
-            </div>
-        </nav>
-
-        <!-- Graficos -->
-
-        <section class="content">
-            <div id="grafico" class="tab-content"></div>
-
-            <!-- Alumnas -->
-            <div id="alumnas" class="tab-content">
-                <div id="student-content">
-                    <div id="students" class="images-container" style="display: none">
-                        <img class="img-student" src="https://dummyimage.com/162x148.png/ff4444/ffffff"
-                             alt="Donna Sloper">
-
-                        <div class="basic-information">
-                            <h3 class="student-name">Donna Sloper</h3>
-                            <h5 class="subtittle">Frontend Developer</h5>
-                            <div class="knowledge">
-                                <div class="know"><h6>JavaScript</h6></div>
-                                <div class="know"><h6>APIs</h6></div>
-                                <div class="know"><h6>JQUERY</h6></div>
-                            </div>
-                        </div>
-
-
-                        <div class="skills">
-                            <div class="skills-container">
-                                <h4>96.3%</h4>
-                                <h6>TECH SKILLS</h6>
-                            </div>
-                            <div class="skills-container">
-                                <h4>96.3%</h4>
-                                <h6>LIFE SKILLS</h6>
-                            </div>
-                            <div class="skills-container">
-                                <h4>96.3%</h4>
-                                <h6>ENGLISH SKILLS</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div> -->
     </div>
 </div>
-
+<!-- Base de datos -->
+<script type="text/javascript" src="js/data.js"></script>
 <!-- Aquí va tus archivos JS -->
 <script type="text/javascript" src="js/app.js"></script>
 <!--libreria-->
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-
+<script type = "text/javascript" src = "https://www.google.com/jsapi" ></script>
+<!--Google Charts-->
+<script type="text/javascript" src="js/charts.js"></script>
+<script type="text/javascript" src="js/students.js"></script>
 </body>
 </html>

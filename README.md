@@ -90,19 +90,32 @@ El reto consiste en:
 
 ### Para el sketching 
 
-  * 
+  * Fusionar ideas de nuestros sketchings personales y crear uno en común.
+  * Testear nuestro prototipado.
+  * Hacer mejoras según el testeo.
+  
+  * Prototipo de alta fidelidad :
+    ![Sketching](assets/images/sketching.jpg)
+
+### Para el maquetado
+
+  * Comenzar a maquetar en base a nuestro prototipo.
 
 ### Para manejar la data 
 
-  * 
+  * Buscar inforación sobre cómo manejarla.
 
 ### Para agregar backlog
 
   Escogimos las siguientes:
 
-  * 
+  * Añadir los gráficos.
 
 
 ## Tiempos estimados
 
-* 
+* Para el sketching y maquetado: *1 día.*
+
+* Para manejar la data: *2 días.*
+
+* Para agregar backlog: *hrs.*
