@@ -51,17 +51,25 @@ window.addEventListener('load', function(event) {
   console.log(limaProm2017i.students.length); // 17
   console.log(limaProm2017ii.students.length); // 14
 
-  // obteniendo procentaje de estudiantes de deserción de estudiantes por sede y generacion
-
   var limaStudents2016ii = limaProm2016ii.students;
+  var activeLimaStudents2016ii = 0;
+  var inactiveLimaStudents2016ii = 0;
   var limaStudents2017i = limaProm2017i.students;
+  var activeLimaStudents2017i = 0;
+  var inactiveLimaStudents2017i = 0;
   var limaStudents2017ii = limaProm2017i.students;
+  var activeLimaStudents2017ii = 0;
+  var inactiveLimaStudents2017ii = 0;
+
+  // obteniendo procentaje de estudiantes de deserción de estudiantes por sede y generacion
 
   // Caso Lima2016-2
 
-  for (var i = 0; i < shortCut.length;i++) {
-    if (1) {
-      console.log(shortCut[i]['active']);
+  for (var i = 0; i < limaStudents2016ii.length;i++) {
+    if (limaStudents2016ii[i]['active'] === true) {
+      activeLimaStudents2016ii ++;
+    } else {
+      inactiveLimaStudents2016ii ++;
     }
   }
 });
