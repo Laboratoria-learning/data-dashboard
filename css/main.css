@@ -32,6 +32,11 @@
   font-size: 20px;
   font-weight: 700;
  }
+ .number-box-black{
+   color : #000;
+   font-size: 20px;
+   font-weight: 700;
+ }
  .text-font-size{
   font-size: 10px;
  }
