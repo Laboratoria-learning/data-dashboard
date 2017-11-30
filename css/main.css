@@ -9,6 +9,7 @@
      font-family: 'Montserrat', sans-serif;
  }
 /*sección header*/
+
  header {
      box-shadow: 2px 2px 2px gray;
      height: 80px;
@@ -37,11 +38,19 @@ header .fa {
     }
 
 /*sección mainBarr*/
-
-#mainBarr {
-  height: 120px;
+#mainBarr{
   background-color: #e1e1e1;
 }
+#sede {
+  height: 100px;
+  background-color: #e1e1e1;
+}
+
+#generation {
+  height: 100px;
+  background-color: #e1e1e1;
+}
+
 
 ul li a {
 color: #000;
@@ -55,6 +64,7 @@ li {
   display: inline-block;
   margin-top: 10px;
   margin-left: 40px;
+  margin-top: 50px;
   }
 
   ul li:hover {
@@ -245,8 +255,17 @@ border: 1px solid red;
  box-sizing: border-box;
  }
 
+/*seccion lifeSkills */
+#lifeSkills{
+  padding: 30px;
+  box-sizing: border-box;
+}
 
- /*seccion lastSection */*
+
+
+
+
+ /*seccion lastSection */
 #lastSection{
 border: 1px solid red;
 box-sizing: border-box;
