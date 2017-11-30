@@ -9,32 +9,22 @@
   <body>
   <!-- Nav Section -->
     <nav class="nav-principal">
-      <div>
-        <img id="log-dash" src="assets/images/logo-lab.png" alt="">
-      </div>
       <div class="icon-user">
         <a href="" target="_black"><img id="ale-profile" src="assets/images/ale-profile.png" alt=""></a><span id="user-name">Alejandra</span>
       </div>
       <div class="icon-list">
         <ul>
-          <li>
-            <a href=""><i class="fa fa-home fa-lg" style="color:aliceblue;" aria-hidden="true"> Home</i></a>
-            <ul>
-              <li><a href="">Dashb 1</a></li>
-              <li><a href="">Dashb 2</a></li>
-            </ul>
-              </li>
-              <li><a href=""><i class="fa fa-briefcase" style="color:aliceblue;" aria-hidden="true"> Sprint</i></a></li>
-              <li><a href=""><i class="fa fa-area-chart" style="color:aliceblue;" aria-hidden="true"> Averages</i></a>
+          <li><a href=""><i class="fa fa-home fa-lg" style="color:aliceblue;" aria-hidden="true"></i></a>Home</li>
+          <li><a href=""><i class="fa fa-briefcase" style="color:aliceblue;" aria-hidden="true"></i></a>Sprint</li>
+          <li><a href=""><i class="fa fa-area-chart" style="color:aliceblue;" aria-hidden="true"></i>Averages</a>
             <ul>
               <li><a href="">Tech</a></li>
               <li><a href="">HSE</a></li>
             </ul>
           </li>
-          <li><a href=""><i class="fa fa-heart" style="color:aliceblue;" aria-hidden="true"> Fell - Lab</i></a></li>
-          <li><a href=""><i class="fa fa-bar-chart" style="color:aliceblue;" aria-hidden="true"> Comparative</i></a></li>
-          <li><a href=""><i class="fa fa-cog fa-spin fa-fw" style="color:aliceblue;"></i><span class="sr-only">Loading...</span> Settings</a></li>
-          <li><a href=""><i class="fa fa-sign-out" style="color:aliceblue;" aria-hidden="true"> Sign-Out</i></a></li>
+          <li><a href=""><i class="fa fa-heart" style="color:aliceblue;" aria-hidden="true"></i></a>Fell-Lab</li>
+          <li><a href=""><i class="fa fa-bar-chart fa-1x" style="color:aliceblue;" aria-hidden="true"></i></a>Compara</li>
+          <li><a href=""><i class="fa fa-sign-out" style="color:aliceblue;" aria-hidden="true"></i></a>Sign-Out</li>
         </ul>
       </div>
     </nav>
@@ -44,26 +34,41 @@
         <div class="name-student">
           <input autocomplete="" autofocus type="" placeholder="Ingrese nombre de la estudiante"checked>
         </div>
-        <div class="notificacion">
-            <ul>
-                <li><i class="fa fa-envelope fa-lg" style="color:aliceblue;" aria-hidden="true"></i></li>
-                <li><i class="fa fa-bell fa-lg" style="color:aliceblue;" aria-hidden="true"></i></li>
-              </ul>
-        </div>
+        <div class="img-logo">
+          <div>
+              <img id="log-dash" src="assets/images/logo-lab.png" alt="">
+          </div>
+            <div class="setting">
+                <a href=""><i class="fa fa-cog fa-spin fa-fw fa-lg" style="color:aliceblue;"></i><span class="sr-only">Loading...</span> Settings</a>
+            </div>
+          </div>
       </section>
     </header>
     <!--First Section-->
-    <section class="section-data">
-      <div class="list-sedes">
-        <ul>
-          <li id="container-sedes">Sedes</li>
-          <li id="container-generations" class="hide"></li>
-        </ul>
+    <section class="first-section">
+      <select name="" class="list-sedes" id="">
+        <option value="">Sedes</option>
+        <option value="">Lima</option>
+        <option value="">Arequipa</option>
+        <option value="">Chile</option>
+        <option value="">México</option>
+      </select>
+      <div class="container-paragraph">
+        <p class="paragraph">Total Students</p>
+      </div>
+      <div class="container-paragraph">
+        <p class="paragraph">Approved Students</p>
+      </div>
+      <div class="container-paragraph">
+        <p class="paragraph">Desertion Students</p>
+      </div>
+      <div class="container-paragraph">
+        <p class="paragraph">Download File</p>
       </div>
     </section>
     <!--Second Section-->
-    <section>
-      <div id="second-container"></div>
+    <section class="grafhic">
+
     </section>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>

@@ -1,5 +1,5 @@
 /* Iniciamos extrayendo los datos de las sedes */
-debugger;
+// debugger;
 
 window.addEventListener('load', function() {
   var containerSedes = document.getElementById('container-sedes');
@@ -23,32 +23,36 @@ window.addEventListener('load', function() {
         var containerListGenerations = document.createElement('ul');
         containerListGenerations.className = 'container-generations';
         var listGenerations = document.createElement('li');
-        listGenerations.className = 'list-generations';
+        listGenerations.className = 'generations';
         var textGenerations = document.createTextNode(Object.keys(data[Object.keys(data)[i]])[a]);
 
         
         listGenerations.appendChild(textGenerations);
         containerListGenerations.appendChild(listGenerations);
         list.appendChild(containerListGenerations);
+      }
+      /* Este evento trae la data del total de alumnas, total de desercion y activas */  
+      var generations = document.getElementsByClassName('generations');
 
-        /* Este evento trae la data del total de alumnas, total de desercion y activas  */  
-        listGenerations.addEventListener('click', function() {
+      for (var a = 0; a < generations.length; a++) {
+        generations[a].addEventListener('click', function() {
           var secondContainer = document.getElementById('second-container');
-          
+          var containerParagraph = document.getElementsByClassName('container-paragraph')
+                
           /* Variables del total de alumnas, total de desercion y activas */
           var totalDesertion = 0;
           var totalActive = 0; 
           for (var i = 0; i < Object.keys(data).length; i++) {
             for (var a = 0; a < Object.keys(data[Object.keys(data)[i]]).length; a++) {
               total = (Object.values((Object.values(Object.values(data)[i]))[a])[0].length);
-              var totalStudents = document.createElement('div');
-              var paragraphStudent = document.createElement('p');
-              var textStudent = document.createTextNode('Total Students ' + total);  
-                                         
-              paragraphStudent.appendChild(textStudent);
-              totalStudents.appendChild(paragraphStudent);
-              secondContainer.appendChild(totalStudents);
-        
+
+              var numberStudent = document.createElement('p');
+              numberStudent.className = 'number';
+              var textNumberStudent = document.createTextNode(total);  
+                                               
+              numberStudent.appendChild(textNumberStudent);
+              containerParagraph[0].appendChild(numberStudent);
+              
               for (var b = 0; b < Object.values((Object.values(Object.values(data)[i]))[a])[0].length; b++) {
                 if (Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[2]) {
                   totalActive = totalActive + 1;
@@ -56,23 +60,29 @@ window.addEventListener('load', function() {
                   totalDesertion = totalDesertion + 1;
                 }
               }  
-              var approvedStudents = document.createElement('div');
-              var paragraphApproved = document.createElement('p');
-              var textApproved = document.createTextNode('Approved Students ' + totalActive);
-      
-              var desertion = document.createElement('div');
-              var paragraphDesertion = document.createElement('p');
-              var textDesertion = document.createTextNode('Desertion Students ' + totalDesertion);
-                                    
-              paragraphDesertion.appendChild(textDesertion);
-              desertion.appendChild(paragraphDesertion);
-              secondContainer.appendChild(desertion);
-      
-              paragraphApproved.appendChild(textApproved);
-              approvedStudents.appendChild(paragraphApproved);
-              secondContainer.appendChild(approvedStudents);
+              var numberApproved = document.createElement('p');
+              numberApproved.className = 'number';
+              var numberApprovedStudent = document.createTextNode(totalActive);  
+            
+              var numberDesertion = document.createElement('p');
+              numberDesertion.className = 'number';
+              var numberDesertionStudent = document.createTextNode(totalDesertion); 
+
+              numberDesertion.appendChild(numberDesertionStudent);
+              containerParagraph[1].appendChild(numberDesertion);
+
+              numberApproved.appendChild(numberApprovedStudent);
+              containerParagraph[2].appendChild(numberApproved);
             }
           }
+          if (sedes.classList.contains('hide')) {
+            sedes.classList.remove('hide');
+            sedes.classList.add('show');
+          } else {
+            sedes.textContent = '';        
+            sedes.classList.remove('show');
+            sedes.classList.add('hide');
+          } 
         });
       }
     }
