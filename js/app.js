@@ -76,7 +76,7 @@ window.addEventListener('load', function() {
   }
 
 
-/*Añadiendo 2da pregunta*/
+/* Añadiendo 2da pregunta*/
 
 var containerFilter2 = document.getElementById('containerFilter2');
 var containerFilter3 = document.getElementById('containerFilter3');
@@ -137,5 +137,3 @@ function showPercent(event) {
     }
 }
 });
-
-

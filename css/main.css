@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 *{
 
   margin:0;
@@ -7,7 +7,7 @@
    height: 100px;
    width: 90%;
  }
- img{
+ header img{
    width: 20%;
    margin: auto;
    display: block;
@@ -26,22 +26,16 @@ ul{
 
 .disabled-menu{
 display: none;
-=======
-* {
-    margin: 0;
-    padding: 0;
->>>>>>> seccion2
+
 }
-header img{
-  width: 20%;
-}
+
 
 .selectors{
   background-color: #e1e1e1;
   height: 70px;
 }
 
-<<<<<<< HEAD
+
 
 .enabled-menu{
 display: block;
@@ -98,14 +92,12 @@ margin-left: 80px;
 
 /*estilo a las cajas de la seccion nps*/
 .total-nps, .seccion-nps, .satisfaction-nps {
-=======
-#selection{
-  border: none;
-  margin-left: 100px;
-  margin-top: 10px;
-  height: 30px;
-  width: 160px;
-}
+  height: 70px;
+    width: 120px;
+    background-color: #e2e4e6;
+    float: left;
+    margin-left: 20px;
+  }
 #section2 {
     display: inline-block;
     background-color: rgb(203, 203, 238);
@@ -113,60 +105,17 @@ margin-left: 80px;
     height: 200px;
 }
 /*pase a hoja de melli*/
-.active {
-    position: absolute;
-    left: 5%;
-    display: inline-block;
-    width: 100px;
-    height: 100px;   
-}
-.sprint{
- position: absolute;
- left: 25%;
- display: inline-block;
- width: 100%;
- height: 100px; 
-}
-.grafic{
-width: 300px;
-height: auto;
-}
-/*3era pregunta*/
-.points{
-position: absolute;
-left:25%;
-width: 50px;
-height: 50px;
-background-color: red;
-}
 
-.pointsListEstudents{
-position: absolute;
-left:45%;
-width: 100px;
-height: 50px;
-background-color: red;
-}
-.pointsEstudentsPrc {
-  position: absolute;
-  left: 65%;
-  width: 100px;
-  height: 50px;
-  background-color: red;
-}
 .filter2 {
->>>>>>> seccion2
   height: 70px;
   width: 120px;
   background-color: #e2e4e6;
   float: left;
   margin-left: 20px;
-<<<<<<< HEAD
-=======
+
   text-align: center;
 }
 
 .filtertxt {
   font-size: 12px;
->>>>>>> seccion2
 }
