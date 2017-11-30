@@ -71,14 +71,15 @@ margin-left: 80px;
   margin-top: 30px;
 }
 
-#total-students{
+.total-students{
   height: 70px;
   width: 120px;
   background-color: #e2e4e6;
+  float: left;
 }
 
 /*estilo a las cajas de la seccion nps*/
-.total-nps, .seccion-nps {
+.total-nps, .seccion-nps, .satisfaction-nps {
   height: 70px;
   width: 120px;
   background-color: #e2e4e6;
