@@ -6,11 +6,11 @@ var select = document.getElementById('select');
 var enrollment = document.getElementById('enrollment');
 var info = data;
 
-select.addEventListener('change', function(){
-  if(select.value === 'Ciudad de México') {
+select.addEventListener('change', function() {
+  if (select.value === 'Ciudad de México') {
 
   }
-})
+});
 
 // Evento para las tabs: overview, students y teacher
 var showHide = function(e) {
@@ -18,13 +18,12 @@ var showHide = function(e) {
   if (tabs === 'overview') {
     var overContent = document.getElementById('overview-tab');
     // mostrar info de overview
-   overContent.style.display = 'block';
+    overContent.style.display = 'block';
     // ocultar students y teachers
   } else if (tabs === 'students') {
     var studentsTab = document.getElementById('students-tab');
-   studentsTab.style.display = 'block';
+    studentsTab.style.display = 'block';
     // mostrar students
- 
   }
 };
 
@@ -358,3 +357,43 @@ function calificacionJedi(sede, generacion) {
 }
 
 console.log(calificacionJedi('LIM', '2016-2'));
+
+/** ******* STUDENTS DATA ******/
+
+function studentsData(sede, generacion) {
+  var students = data[sede][generacion]['students'];
+  var studentNotaTech = [];
+  var studentNotaHse = [];
+  var sumaNotasTech = 0;
+  var sumaNotasHse = 0;
+  // debugger;
+  for (var i = 0; i < students.length; i++) {
+    for (var j = 0; j < students[i].sprints.length; j++) {
+      if (students[i].active === true) {
+        if (students[i].sprints[j].score.tech) {
+          studentNotaTech.push(students[i].sprints[j].score.tech);
+        }
+        if (students[i].sprints[j].score.hse) {
+          studentNotaHse.push(students[i].sprints[j].score.hse);
+        }
+      }
+      // console.log(students[i].name + '\t' + promedioStudentNotaTech + '\t' + promedioStudennotaHse);
+       
+      console.log(students[i].name + '\t' + students[i].sprints[j].score.hse + '\t' + students[i].sprints[j].score.tech);
+      /*
+  for (var i = 0; i < studentNotaTech.length; i++) {
+    sumaNotasTech = sumaNotasTech + studentNotaTech[i];
+    sumaNotasHse = sumaNotasHse + studentNotaHse[i];
+  }
+
+  var promedioStudentNotaTech = sumaNotasTech / studentNotaTech.length;
+
+  var promedioStudennotaHse = sumaNotasHse / studentNotaHse.length; 
+
+  console.log(promedioStudennotaHse);
+  console.log(promedioStudentNotaTech);*/ 
+    }
+  }
+}
+
+console.log(studentsData('LIM', '2016-2'));
