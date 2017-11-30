@@ -1,29 +1,3 @@
-/*
- * Funcionalidad de tu producto
- */
-
-// Puedes hacer uso de la base de datos a través de la variable `data`
-
-// console.log(data['SCL']);
-// console.log(data['AQP']['2016-2']['students'][1]['active']);
-// console.log(data['AQP']['2016-2']['ratings'][1]['nps']['promoters']);
-// console.log(data['AQP']['2016-2']['ratings'][2]['teacher']);
-// console.log(data['AQP']['2016-2']['ratings'][0]['jedi']);
-// cambiar pestañas
-// console.log(data['AQP']['2016-2']['ratings'][0]['student']['cumple']);
-// console.log(data['AQP']['2016-2']['students'].length);
-// console.log(data['AQP']['2016-2']['students'][0]['sprints'].length);
-// console.log(data['LIM']['2016-2']['students'][1]['sprints'].length);
-// console.log(data['AQP']['2016-2']['students'][1]['name']);
-// var nombre
-// var returnCurrently
-// for(var i =0;i<15;i++){
-//   if(nombre === data['AQP']['2016-2']['students'][i]['name'])
-//   {
-//    resul.tex
-//   }
-// }
-// console.log(data['SCL']['2017-2']['students'][52]['sprints'].length);
 var list = document.getElementsByTagName('ul')[0].children;
 var elementTab = document.getElementsByClassName('tab');
 var containerOverview = document.getElementById('container-overview');
@@ -38,6 +12,12 @@ var jediMasterRating = document.getElementById('jedi-master-rating');
 var studentSatisfaction = document.getElementById('student-satisfaction');
 var studentTarget = document.getElementById('student-target');
 var total = document.getElementById('total');
+var comboBoxTech = document.getElementById('combo-box-tech');
+var studentCurrentlySkill = document.getElementById('student-currently-skill');
+var totalSkill = document.getElementById('total-skill');
+var comboBoxHse = document.getElementById('combo-box-hse');
+var overallClass = document.getElementById('overall-class');
+var studentTargetOverall = document.getElementById('student-target-overall');
 function show(event) {
   var tabSelection = event.target.dataset.tabSelection;
   if (tabSelection === 'overview') {
@@ -61,7 +41,7 @@ function show(event) {
 function changeTitle() {
   var titleSelector = document.getElementById('title-selector');
   var valueSelector = comboBox.value;
-  var returnCurrently;
+  // var returnCurrently;
   switch (valueSelector) {
   case 'lim2016II':
     titleSelector.textContent = 'Lima 2016-II';
@@ -71,6 +51,7 @@ function changeTitle() {
     calculateJediMasterRating('LIM', 2, '2016-2');
     calculateStudentSatisfaccion('LIM', 1, '2016-2', 35);
     calculateAchievement('LIM', '2016-2');
+    comboBoxTech.addEventListener('change', TechSkill);
     var attend = parseInt(calculateCurrently('LIM', 35, '2016-2'));
     drawCurrently(attend, 35 - attend);
     drawPromoter();
@@ -82,7 +63,7 @@ function changeTitle() {
     calculateTeacherRating('LIM', 4, '2017-1');
     calculateJediMasterRating('LIM', 4, '2017-1');
     calculateStudentSatisfaccion('LIM', 3, '2017-1', 17);
-    calculateAchievement('LIM','2017-1');
+    calculateAchievement('LIM', '2017-1');
     var attend = parseInt(calculateCurrently('LIM', 17, '2017-1'));
     drawCurrently(attend, 17 - attend);
     break;
@@ -137,7 +118,7 @@ function changeTitle() {
     calculateTeacherRating('SCL', 3, '2017-1');
     calculateJediMasterRating('SCL', 3, '2017-1');
     calculateStudentSatisfaccion('SCL', 2, '2017-1', 23);
-    calculateAchievement('SCL','2017-1');
+    calculateAchievement('SCL', '2017-1');
     var attend = parseInt(calculateCurrently('SCL', 23, '2017-1'));
     drawCurrently(attend, 23 - attend);
     break;
@@ -166,7 +147,7 @@ function changeTitle() {
   case 'mex2017II':
     titleSelector.textContent = 'Mexico 2017-II';
     calculateCurrently('CDMX', 46, '2017-2');
-    calculatePromoter('CDMX', 2,'2017-2');
+    calculatePromoter('CDMX', 2, '2017-2');
     calculateTeacherRating('CDMX', 2, '2017-2');
     calculateJediMasterRating('CDMX', 2, '2017-2');
     calculateStudentSatisfaccion('CDMX', 1, '2017-2', 46);
@@ -223,8 +204,8 @@ function calculateStudentSatisfaccion(sede, numEndSprint, year, totalEstudent) {
   var meet = data[sede][year]['ratings'][numEndSprint]['student']['cumple'];
   var beats = data[sede][year]['ratings'][numEndSprint]['student']['supera'];
   var numStudentCumple = parseInt(((totalEstudent * meet) / 100).toFixed(0));
-  var numStudentSupera = parseInt(((totalEstudent *beats) / 100).toFixed(0));
-  var total = (((numStudentCumple + numStudentSupera)*100)/totalEstudent).toFixed(2);
+  var numStudentSupera = parseInt(((totalEstudent * beats) / 100).toFixed(0));
+  var total = (((numStudentCumple + numStudentSupera) * 100) / totalEstudent).toFixed(2);
   // console.log(numStudentCumple);
   studentSatisfaction.innerHTML = '<b>' + total + '</b>' + '<br> % meeting or exceeding expectations';
 }
@@ -256,9 +237,9 @@ function calculateAchievement(sede, year) {
       }
       scoreTotal = (((sum / numSprint) * 100) / 1800).toFixed(2);
       scoreTotalHse = (((sumHse / numSprint) * 100) / 1200).toFixed(2);
-      console.log(i);
-      console.log(scoreTotalHse);
-      console.log(scoreTotal);
+      // console.log(i);
+      // console.log(scoreTotalHse);
+      // console.log(scoreTotal);
       if (scoreTotal > 70 && scoreTotalHse > 70) {
         sumTechStudent++;
       }
@@ -268,6 +249,238 @@ function calculateAchievement(sede, year) {
   percentageTotal = ((sumTechStudent * 100) / cantEstudents).toFixed(0);
   studentTarget.innerHTML = '<b>' + sumTechStudent + '</b>' + '<br># students that meet the target';
   total.innerHTML = '<b>' + percentageTotal + '</b>' + '<br>% of total (' + cantEstudents + ' )';
+}
+
+function TechSkill() {
+  var valueSelector = comboBox.value;
+  switch (valueSelector) {
+  case 'lim2016II':
+    calculateTech('LIM', '2016-2', 2);
+    break;
+  case 'lim2017I':
+    calculateTech('LIM', '2017-1', 4);
+    break;
+  case 'lim2017II':
+    calculateTech('LIM', '2017-2', 2); 
+    break;
+  case 'are2016II':
+    calculateTech('AQP', '2016-2', 4);
+    break;
+  case 'are2017I':
+    calculateHse('AQP', '2017-2', 3); 
+    break;
+  case 'chi2016II':
+    calculateHse('SCL', '2016-2', 4);  
+    break;
+  case 'chi2017I':
+    calculateHse('SCL', '2017-1', 3);  
+    break;
+  case 'chi2017II':
+    calculateHse('SCL', '2017-2', 2);
+    break;
+  case 'mex2017I':
+    calculateHse('CDMX', '2017-1', 3);
+    break;
+  case 'mex2017II':
+    calculateHse('CDMX', '2017-2', 2);  
+    break;
+  }
+}
+
+function lifeSkill() {
+  var valueSelector = comboBox.value;
+  switch (valueSelector) {
+  case 'lim2016II':
+    calculateHse('LIM', '2016-2', 2);
+    break;
+  case 'lim2017I':
+    calculateHse('LIM', '2017-1', 4);
+    break;
+  case 'lim2017II':
+    calculateHse('LIM', '2017-2', 2);  
+    break;
+  case 'are2016II':
+    calculateHse('AQP', '2016-2', 4);
+    break;
+  case 'are2017I':
+    calculateHse('AQP', '2017-2', 3); 
+    break;
+  case 'chi2016II':
+    calculateHse('SCL', '2016-2', 4);  
+    break;
+  case 'chi2017I':
+    calculateHse('SCL', '2017-1', 3);  
+    break;
+  case 'chi2017II':
+    calculateHse('SCL', '2017-2', 2);
+    break;
+  case 'mex2017I':
+    calculateHse('CDMX', '2017-1', 3);
+    break;
+  case 'mex2017II':
+    calculateHse('CDMX', '2017-2', 2);  
+    break;
+  }
+}
+
+function calculateTech(sede, year, numSprint) {
+  var cantEstudents = data[sede][year]['students'].length;
+  var valueComboTech = comboBoxTech.value;
+  var meetTarget, sprint, percentSprint;
+  switch (valueComboTech) {
+  case 'sprint1':
+    var sumSprintOne = 0;
+    for (var i = 0;i < cantEstudents;i++) {
+      if (data[sede][year]['students'][i]['sprints'].length !== 0) {
+        sprint = data[sede][year]['students'][i]['sprints'][0]['score']['tech'];
+        meetTarget = ((sprint * 100) / 1800).toFixed(2);
+        if (meetTarget >= 70) {
+          sumSprintOne++;
+        }
+      }
+    }
+    percentSprint = ((sumSprintOne * 100) / cantEstudents).toFixed(0);
+    studentCurrentlySkill.innerHTML = '<b>' + sumSprintOne + '</b>' + '<br> # students that meet the target';
+    totalSkill.innerHTML = '<b>' + percentSprint + '</b>' + '<br> % of total (' + cantEstudents + ')';
+    break;
+  case 'sprint2':
+    var sumSprintTwo = 0;
+    for (var i = 0;i < cantEstudents;i++) {
+      if (data[sede][year]['students'][i]['sprints'].length !== 0) {
+        sprint = data[sede][year]['students'][i]['sprints'][1]['score']['tech'];
+        meetTarget = ((sprint * 100) / 1800).toFixed(2);
+        if (meetTarget >= 70) {
+          sumSprintTwo++;
+        }
+      }
+    }
+    percentSprint = ((sumSprintTwo * 100) / cantEstudents).toFixed(0);
+    studentCurrentlySkill.innerHTML = '<b>' + sumSprintTwo + '</b>' + '<br> # students that meet the target';
+    totalSkill.innerHTML = '<b>' + percentSprint + '</b>' + '<br> % of total (' + cantEstudents + ')';
+    break;  
+  case 'sprint3':
+    if (numSprint > 2) {
+      var sumSprintThree = 0;
+      for (var i = 0;i < cantEstudents;i++) {
+        if (data[sede][year]['students'][i]['sprints'].length !== 0) {
+          sprint = data[sede][year]['students'][i]['sprints'][2]['score']['tech'];
+          meetTarget = ((sprint * 100) / 1800).toFixed(2);
+          if (meetTarget >= 70) {
+            sumSprintThree++;
+          }
+        }
+      }
+      percentSprint = ((sumSprintThree * 100) / cantEstudents).toFixed(0);
+      studentCurrentlySkill.innerHTML = '<b>' + sumSprintThree + '</b>' + '<br> # students that meet the target';
+      totalSkill.innerHTML = '<b>' + percentSprint + '</b>' + '<br> % of total (' + cantEstudents + ')';
+    } else {
+      totalSkill.innerHTML = '';
+      studentCurrentlySkill.innerHTML = '';
+      alert('No hay Sprint 3');
+    } 
+    break;
+  case 'sprint4':
+    if (numSprint > 3) {
+      var sumSprintFour = 0;
+      for (var i = 0;i < cantEstudents;i++) {
+        if (data[sede][year]['students'][i]['sprints'].length !== 0) {
+          sprint = data[sede][year]['students'][i]['sprints'][3]['score']['tech'];
+          meetTarget = ((sprint * 100) / 1800).toFixed(2);
+          if (meetTarget >= 70) {
+            sumSprintFour++;
+          }
+        }
+      }
+      percentSprint = ((sumSprintFour * 100) / cantEstudents).toFixed(0);
+      studentCurrentlySkill.innerHTML = '<b>' + sumSprintFour + '</b>' + '<br> # students that meet the target';
+      totalSkill.innerHTML = '<b>' + percentSprint + '</b>' + '<br> % of total (' + cantEstudents + ')';
+    } else {
+      totalSkill.innerHTML = '';
+      studentCurrentlySkill.innerHTML = '';
+      alert('No hay Sprint 4');
+    } 
+    break;    
+  }
+}
+
+function calculateHse(sede, year, numSprint) {
+  var cantEstudents = data[sede][year]['students'].length;
+  var valueComboHse = comboBoxHse.value;
+  var meetTarget, sprint, percentSprint;
+  switch (valueComboHse) {
+  case 'sprintHSE1':
+    var sumSprintOne = 0;
+    for (var i = 0;i < cantEstudents;i++) {
+      if (data[sede][year]['students'][i]['sprints'].length !== 0) {
+        sprint = data[sede][year]['students'][i]['sprints'][0]['score']['hse'];
+        meetTarget = ((sprint * 100) / 1200).toFixed(2);
+        if (meetTarget >= 70) {
+          sumSprintOne++;
+        }
+      }
+    }
+    percentSprint = ((sumSprintOne * 100) / cantEstudents).toFixed(0);
+    overallClass.innerHTML = '<b>' + sumSprintOne + '</b>' + '<br> # of students that meet the target';
+    studentTargetOverall.innerHTML = '<b>' + percentSprint + '</b>' + '<br> % overall class average';
+    break;
+  case 'sprintHSE2':
+    var sumSprintTwo = 0;
+    for (var i = 0;i < cantEstudents;i++) {
+      if (data[sede][year]['students'][i]['sprints'].length !== 0) {
+        sprint = data[sede][year]['students'][i]['sprints'][1]['score']['hse'];
+        meetTarget = ((sprint * 100) / 1200).toFixed(2);
+        if (meetTarget >= 70) {
+          sumSprintTwo++;
+        }
+      }
+    }
+    percentSprint = ((sumSprintTwo * 100) / cantEstudents).toFixed(0);
+    overallClass.innerHTML = '<b>' + sumSprintTwo + '</b>' + '<br> # of students that meet the target';
+    studentTargetOverall.innerHTML = '<b>' + percentSprint + '</b>' + '<br> % overall class average';
+    break;  
+  case 'sprintHSE3':
+    if (numSprint > 2) {
+      var sumSprintThree = 0;
+      for (var i = 0;i < cantEstudents;i++) {
+        if (data[sede][year]['students'][i]['sprints'].length !== 0) {
+          sprint = data[sede][year]['students'][i]['sprints'][2]['score']['hse'];
+          meetTarget = ((sprint * 100) / 1200).toFixed(2);
+          if (meetTarget >= 70) {
+            sumSprintThree++;
+          }
+        }
+      }
+      percentSprint = ((sumSprintThree * 100) / cantEstudents).toFixed(0);
+      overallClass.innerHTML = '<b>' + sumSprintThree + '</b>' + '<br> # of students that meet the target';
+      studentTargetOverall.innerHTML = '<b>' + percentSprint + '</b>' + '<br> % overall class average';
+    } else {
+      studentTargetOverall.innerHTML = '';
+      overallClass.innerHTML = '';
+      alert('No hay Sprint 3');
+    } 
+    break;
+  case 'sprintHSE4':
+    if (numSprint > 3) {
+      var sumSprintFour = 0;
+      for (var i = 0;i < cantEstudents;i++) {
+        if (data[sede][year]['students'][i]['sprints'].length !== 0) {
+          sprint = data[sede][year]['students'][i]['sprints'][3]['score']['hse'];
+          meetTarget = ((sprint * 100) / 1200).toFixed(2);
+          if (meetTarget >= 70) {
+            sumSprintFour++;
+          }
+        }
+      }
+      percentSprint = ((sumSprintFour * 100) / cantEstudents).toFixed(0);
+      overallClass.innerHTML = '<b>' + sumSprintFour + '</b>' + '<br> # of students that meet the target';
+      studentTargetOverall.innerHTML = '<b>' + percentSprint + '</b>' + '<br> % overall class average';
+    } else {
+      studentTargetOverall.innerHTML = '';
+      overallClass.innerHTML = '';
+      alert('No hay Sprint 4');
+    } 
+    break;    
+  }
 }
 
 function drawCurrently(attend, noAttend) {
@@ -304,6 +517,8 @@ window.onload = function() {
   elementTab[0].addEventListener('click', show);
   elementTab[1].addEventListener('click', show);
   containesStudents.classList.add('none');
-  comboBox.addEventListener('change',changeTitle);
-}
+  comboBox.addEventListener('change', changeTitle);
+  comboBoxTech.addEventListener('change', TechSkill);
+  comboBoxHse.addEventListener('change', lifeSkill);
+};
 
