@@ -1,3 +1,388 @@
 /*
  * Estilos de tu proyecto
  */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+    font-size: 22px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+/*Header*/
+.containerHeader {
+    height: 250px;
+}
+.laboratoriaNav { /*first Nav: container*/
+    height: 40%;
+    width: 100%;
+    background-color: #ffffff;
+}
+.imgLogo {
+    float: left;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 20%;
+    height: 40%;
+}
+.iconoMenu {
+    float: right;
+    margin-right: 70px;
+    padding: 30px;
+}
+.menuNav { /*second Nav: container*/
+    height: 60%;
+    width: 100%;
+    background-color: #e1e1e1;
+}
+.menuSede{
+    padding: 15px;
+    margin: 0 0 10px 80px;
+    letter-spacing: 1px;
+    font-size: 30px;
+}
+.subMenuPrincipal {
+    float: left;
+    margin-left: 85px;
+    padding: 10px;
+    letter-spacing: 1px;
+    font-weight: bolder;
+}
+.subMenu {
+    float: left;
+    margin-left: 15px;
+    padding: 10px;
+    font-weight: bolder;
+}
+.tab {
+    border:none;
+    outline: 0px;
+    font-size: 20px;
+}
+.tab:hover {
+    padding: 1px;
+    background-color: #ffc107;
+    border-radius: 5px;
+}
+ /*Main*/
+.containerMain {
+    height: 2300px;
+}
+.statisticalDataTitle { /*all titles of row */
+    font-size: 21px;
+    padding: 5px;
+    margin: 20px 0 10px 20px;
+}
+.dataNumber { /*left square*/
+    background-color:#f7f7f7;
+    width: 145px;
+    height: 65px;
+    float: left;
+    margin: 5px 20px 7px 30px;
+}
+.dataPorcent { /*rigth square*/
+    background-color:#f7f7f7;
+    width: 145px;
+    height: 65px;
+    float: left;
+    margin: 5px 10px 7px 0px;
+}
+/* - first row statistical data*/
+.statisticalDataFirst {  /*first square / first row-->*/
+    height: 16%;
+    width: 27%;
+    background-color: #ffffff;
+    float: left;
+    margin: 70px 5px 0 40px;
+    transform: translateX(10%)
+}
+.imageDataStatistical img { /*image first row*/
+    transform: translateX(8%);
+    margin: 20px 10px 5px 10px;
+    width: 85%;
+    height: 60%;
+}
+.imageDataStatisticalLineOne img {
+    transform: translateX(8%);
+    margin: 55px 10px 5px 10px;
+    width: 85%;
+    height: 60%
+}
+.imageDataStatisticalLineTwo img {
+    transform: translateX(8%);
+    margin: 55px 10px 5px 10px;
+    width: 85%;
+    height: 60%
+}
+.numData { /*styles letter num-porcent data*/
+    font-size: 25px;
+    text-align: center;
+}
+.descriptionNumData {
+    font-size: 10px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.porcentDataLeft {
+    float: left;
+    margin: 1px 0 0 15px;
+    font-size: 16px;
+}
+.porcentDataRigth {
+    float: left;
+    margin: 1px 0 0 15px;
+    font-size: 16px;
+}
+/* - second row statistical data*/
+.inputStatisticalData {
+    margin-left: 25px;
+}
+.dataNumberSecondRow { /*left square*/
+    background-color:#f7f7f7;
+    width: 200px; /*pendiente cambiar a porcentaje*/
+    height: 65px;
+    float: left;
+    margin: 5px 20px 7px 30px;
+}
+.dataPorcentSecondRow { /*rigth square*/
+    background-color:#f7f7f7;
+    width: 200px; /*pendiente cambiar a porcentaje*/
+    height: 65px;
+    float: left;
+    margin: 5px 10px 7px 0px;
+}
+.statisticalDataSecond {
+    height: 25%;
+    width: 87%;
+    background-color: #ffffff;
+    float: left;
+    margin: 70px 0 0 80px;
+}
+.containerImagesSecondRow {
+    width: 100%;
+    height: 440px;
+    margin-top: 80px;
+    padding: 12px;
+}
+.imageSecondRowLeft img { /*left square*/
+    width: 62%;
+    height: 100%;
+    float: left;
+    margin: 15px 0 5px 5px;
+}
+.imageSecondRowRigth img{ /*rigth circle image*/
+    width: 32%;
+    height:60%;
+    float: left;
+    margin: 18px 0 15px 30px;
+}
+.legendPorcentData { /*data legend*/
+    font-size: 20px;
+    width: 30%;
+    height: 25px;
+    margin: 0 45px 0 0;
+    float: right;
+    padding: 15px;
+}
+.numberLegendPorcentData { /*p de data legend*/
+    font-size: 12px;
+    float: left;
+}
+.hrGreen { /*bar legend*/
+    background-color: #7ed321;
+    height: 10px;
+    width: 9%;
+    float: left;
+}
+.hrRed {  /*bar legend*/
+    background-color:#ea5151;
+    height: 10px;
+    width: 9%;
+    float: left;
+  }
+.numberLegendPorcentData {
+    margin-left: 8px;
+    margin-bottom: 10px;
+}
+/* - third row statistical data*/
+.statisticalDataThird {
+    height: 25%;
+    width: 87%;
+    background-color: #ffffff;
+    float: left;
+    margin: 70px 0 0 80px;
+}
+.dataNumberThirdRow { /*left square*/
+    background-color:#f7f7f7;
+    width: 200px; /*pendiente cambiar a porcentaje*/
+    height: 65px;
+    float: left;
+    margin: 5px 20px 7px 30px;
+}
+.dataPorcentThirdRow { /*rigth square*/
+    background-color:#f7f7f7;
+    width: 200px; /*pendiente cambiar a porcentaje*/
+    height: 65px;
+    float: left;
+    margin: 5px 10px 7px 0px;
+}
+/* - fourth row statistical data*/
+.statisticalDataFourth {
+    height: 16%;
+    width: 27%;
+    background-color: #ffffff;
+    float: left;
+    margin: 70px 5px 0 40px;
+    transform: translateX(10%)
+}
+.dataNumberFourthRow { /*left square*/
+    background-color:#f7f7f7;
+    width: 155px; /*pendiente cambiar a porcentaje*/
+    height: 70px;
+    float: left;
+    margin: 5px 20px 7px 30px;
+}
+.numDataFourthRow { /*styles letter num-porcent data*/
+    font-size: 36px;
+    font-weight: 900;
+    text-align: center;
+}
+.fa-caret-up {
+    margin-left: 10px;
+}
+.imageDataStatisticalFourthRow { /*image fourth row*/
+    padding: 5px;
+    margin: 20px 0 0 0;
+}
+.imageFourthRow {
+    width: 300px;
+    height: 180px;
+}
+/* section checkbox */
+.checkbox-site , .checkbox-HSE , .checkbox-commoncore {
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    padding-top: 20px;
+    margin-left: 85px;
+  }
+
+/* main Students*/
+.containerMainStudents {
+    padding: 10px;
+}
+.mainCoursesFiltered {
+    background-color: #ffffff;
+    width: 37%;
+    height: 30%;
+    margin:20px 0 0 80px;
+    float: left;
+}
+.mainCoursesTitle {
+    padding: 10px;
+    font-size: 25px;
+    margin-left: 10px;
+}
+.courses {
+    margin-left: 20px;
+    padding: 10px;
+    font-size: 25px;
+}
+.search {
+    width: 70%;
+    height: 100%;
+    border: none;
+    font-size: 20px;
+}
+.search:focus, .search:hover{
+    border:none;
+    outline: 0px;
+}
+.fa-search {
+    margin-left: 5px;
+}
+.inputStudentFiltered { /*container input search students*/
+    background-color: #ffffff;
+    border-radius: 5px;
+    float: left;
+    margin:20px 0 0 30px;
+    width: 50%;
+    padding: 9px;
+    box-shadow: 2px 2px 5px #999;
+}
+.dataStudentFiltered { /*container data Student*/
+    background-color: #ffffff;
+    width: 50%;
+    padding: 5px;
+    margin:40px 0 0 30px;
+    float: left;
+    box-shadow: 2px 2px 5px #999;
+}
+.photo {
+    width: 20%;
+    height: 30%;
+    margin: 10px;
+    float: left;
+}
+.dataStudent {
+    float: left;
+}
+.nameStudent {
+    letter-spacing: 3px;
+    padding: 7px;
+    font-weight: 900;
+}
+.typeStudent {
+    padding: 5px;
+}
+.typesToolsCourses {
+    float: left;
+    list-style: none;
+    font-size: 12px;
+    padding: 2px 10px 2px 10px;
+    margin: 15px 6px;
+    background-color: #f7f7f7;
+}
+.dataNumberFinal {
+    background-color:#e1e1e1;
+    width: 10%px;
+    height: 30%px;
+    float: left;
+    margin: 10px 0 0 20px;
+    padding: 3px;
+}
+.dataPorcentFinal {
+    background-color:#e1e1e1;
+    width: 10%px;
+    height: 30%px;
+    float: left;
+    margin: 10px 0 0 10px;
+    padding: 3px;
+}
+.dataFinal {
+    background-color:#e1e1e1;
+    width: 10%px;
+    height: 30%px;
+    float: left;
+    margin: 10px 0 0 10px;
+    padding: 3px;
+}
+.numData {
+    font-size: 20px;
+    padding: 5px;
+}
+.textDataPerfil {
+    margin-left:550px;
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+.fa-caret-right {
+    margin-left: 10px;
+}

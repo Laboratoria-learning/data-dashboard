@@ -2,12 +2,212 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link href="http://designers.hubspot.com/hs-fs/hub/327485/file-2054199286-css/font-awesome.css"En Inglés rel="stylesheet">
+    <link rel="stylesheet" href="assets/images.png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
     <title>Data Dashboard</title>
   </head>
   <body>
+    <header>
+      <section class="containerHeader"> <!--container Header-->
+        <nav class="laboratoriaNav"> <!-- first Nav-->
+          <div class="logoLaboratoria">
+            <img src="assets/images/descarga.png" class="imgLogo" alt="imagenLogo" title="logoLabo"/>
+          </div>
+          <div class="iconoMenu"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></div>
+        </nav>
+        <nav class="menuNav"> <!-- Second Nav-->
+          <div id = "menuPrincipal"  class="menuPrincipal">
+            <form id="checkbox-site" class = "checkbox-site" action="/action_page.php">
+              <select>
+                <option id="choose" name="choose" value="">Seleccionar sprint</option>
+                <option id="lim2016-ii" name="2016-II" value="lim2016-ii">LIMA 2016-II</option>
+                <option id="lim2017-i"  name="2017-I" value="lim2017-i">LIMA 2017-I</option>
+                <option id="lim2017-ii" name="2017-II" value="lim2017-ii">LIMA 2017-II</option>
+              </select>
+            </form>
+          </div>
+          <div class="subMenuPrincipal"><button type="button" name="button" data-tab-seleccionado="tabOverview" class="tab">OVERVIEW</button></div>
+          <div class="subMenu"><button type="button" name="button" data-tab-seleccionado="tabStudents" class="tab">STUDENTS</button></div>
+          <div class="subMenu"><button type="button" name="button" data-tab-seleccionado="tabTeachers" class="tab">TEACHERS</button></div>
+        </nav>
+      </section>
+    </header>
+    <main>
+      <section id="overview" class="containerMain"> <!-- container Main-->
+      <!-- first row statistical data -->
+        <div id="statisticalDataFirst" class="statisticalDataFirst"> <!--first square-->
+          <h1 id="statisticalDataTitle" class="statisticalDataTitle">ENROLLMENT</h1>
+          <div id="dataNumber" class="dataNumber"> <!--left square-->
+            <h3 id="numDataNumber" class="numData">120</h3>
+            <h6 id="descriptionNumData" class="descriptionNumData"># STUDENTS CURRENTLY ENROLLED</h6>
+          </div>
+          <div id="dataPorcent" class="dataPorcent"> <!--rigth square-->
+            <h3 id="numDataDropout" class="numData">20</h3>
+            <h6 id="descriptionNumData" class="descriptionNumData">% DROPOUT</h6>
+          </div>
+          <div id="imageDataStatistical" class="imageDataStatistical"><img src="assets/images/bar-graph.png" alt="barras"></div>
+        </div>
+        <div id="statisticalDataFirst" class="statisticalDataFirst"> <!--second square-->
+          <h1 id="statisticalDataTitle" class="statisticalDataTitle">ACHIEVEMENT</h1>
+          <div id="dataNumber" class="dataNumber"> <!--left square-->
+            <h3 id="numDataAchievement" class="numData">105</h3>
+            <h6 id="descriptionNumData" class="descriptionNumData"># STUDENTS THAT MEET THE TARGET</h6>
+          </div>
+          <div id="dataPorcent" class="dataPercent"> <!--rigth square-->
+            <h3 id="numDataAchievementPercent" class="numData">78%</h3>
+            <h6 id="descriptionNumData" class="descriptionNumData">% OF TOTAL (135)</h6>
+          </div>
+          <div class="imageDataStatisticalLineOne"><img src="assets/images/graph.png" alt="linea"></div>
 
+        </div>
+        <div id="statisticalDataFirst" class="statisticalDataFirst">  <!--thrid square-->
+          <h1 id="statisticalDataTitle" class="statisticalDataTitle">NET PROMOTER SCORE</h1>
+          <div id="dataNumber" class="dataNumber"> <!--left square-->
+            <h3 id="numData" class="numData">120</h3>
+            <h6 id="descriptionNumData" class="descriptionNumData"># STUDENTS CURRENTLY ENROLLED</h6>
+          </div>
+          <div id="dataPorcent" class="dataPorcent"> <!--rigth square-->
+            <h6 id="porcentDataLeft" class="porcentDataLeft">60 % </h6><h6 class="porcentDataRigth">Promoters</h6>
+            <h6 id="porcentDataLeft" class="porcentDataLeft">30 % </h6><h6 class="porcentDataRigth">Passive</h6>
+            <h6 id="porcentDataLeft" class="porcentDataLeft">10 % </h6><h6 class="porcentDataRigth">Detractors</h6>
+          </div>
+          <div class="imageDataStatisticalLineTwo"><img src="assets/images/graph.png" alt="linea"></div>
+        </div>
+        <!-- second row statistical data -->
+        <div id="statisticalDataSecond" class="statisticalDataSecond">
+          <form id = "checkbox-commoncore" class = "checkbox-commoncore" action="/action_page.php">
+            <select>
+                <option id="tech-sprint" name="sprint" value="">Seleccionar sprint</option>
+                <option id="tech-sprint1" name="sprint1" value="sprint1">Sprint 1 : Create an interactive site</option>
+                <option id="tech-sprint2"  name="sprint2" value="sprint2">Sprint 2 : Create an interactive site</option>
+                <option id = "tech-sprint3" name="sprint3" value="sprint3">Sprint 3 : Create an interactive site</option>
+                <option id = "tech-sprint4" name="sprint4" value="sprint4">Sprint 4 : Create an interactive site</option>
+                <option id="tech-sprint5" name="sprint1" value="sprint1">Sprint 1 : Create an interactive site</option>
+                <option id="tech-sprint6"  name="sprint2" value="sprint2">Sprint 2 : Create an interactive site</option>
+                <option id = "tech-sprint7" name="sprint3" value="sprint3">Sprint 3 : Create an interactive site</option>
+                <option id = "tech-sprint8" name="sprint4" value="sprint4">Sprint 4 : Create an interactive site</option>
+                <option id="tech-sprint1" name="sprint1" value="sprint1">Sprint 1 : Create an interactive site</option>
+                <option id="tech-sprint2"  name="sprint2" value="sprint2">Sprint 2 : Create an interactive site</option>
+                <option id = "tech-sprint3" name="sprint3" value="sprint3">Sprint 3 : Create an interactive site</option>
+                <option id = "tech-sprint4" name="sprint4" value="sprint4">Sprint 4 : Create an interactive site</option>
+              </select>
+            </form>
+          <div id="dataNumber" class="dataNumber"><!--left square-->
+            <h3 id="numData" class="numData">90</h3>
+            <h6 id="descriptionNumData" class="descriptionNumData"># STUDENTS THAT MEET THE TARGET</h6>
+          </div>
+          <div id="dataPorcentSecondRow" class="dataPorcentSecondRow"><!--rigth square-->
+            <h3 id="numData" class="numData">62</h3>
+            <h6 id="descriptionNumData" class="descriptionNumData">% OF TOTAL (135)</h6>
+          </div>
+          <div class="containerImagesSecondRow">
+            <div class="imageSecondRowLeft"><img class="left" src="assets/images/rectangular-graphic.png" alt="rectangular"></div>
+            <div class="imageSecondRowRigth"><img class="rigth" src="assets/images/circle-graphic.png" alt="circle"></div>
+            <div class="legendPorcentData"><span><hr class="hrGreen"></span><p class="numberLegendPorcentData"># STUDENTS THAT MEET THE TARGET</p> </div>
+            <div class="legendPorcentData"><span><hr class="hrRed"></span><p class="numberLegendPorcentData"># STUDENTS THAT DONT MEET THE TARGET</p></div>
+          </div>
+        </div>
+
+        <!-- third row statistical data-->
+        <div class="statisticalDataThird">
+          <form id="checkbox-HSE" class = "checkbox-HSE" action="/action_page.php">
+            <select>
+              <option id="hse-sprint1" name="sprint1" value="">Seleccionar sprint</option>
+              <option id="hse-sprint1" name="sprint1" value="sprint1">Sprint 1 : Create an interactive site</option>
+              <option id="hse-sprint2"  name="sprint2" value="sprint2">Sprint 2 : Create an interactive site</option>
+              <option id = "hse-sprint3" name="sprint3" value="sprint3">Sprint 3 : Create an interactive site</option>
+              <option id = "hse-sprint4" name="sprint4" value="sprint4">Sprint 4 : Create an interactive site</option>
+            </select>
+          </form>
+          <div id="dataNumberThirdRow" class="dataNumberThirdRow"><!--left square-->
+          <h3 id="numData" class="numData">90</h3>
+          <h6 id="descriptionNumData" class="descriptionNumData"># STUDENTS THAT MEET THE TARGET</h6>
+          </div>
+          <div id="dataPorcentThirdRow" class="dataPorcentThirdRow"><!--rigth square-->
+            <h3 id="numData" class="numData">62</h3>
+            <h6 id="descriptionNumData" class="descriptionNumData">% OF TOTAL (135)</h6>
+          </div>
+          <div class="containerImagesSecondRow">
+            <div class="imageSecondRowLeft"><img class="left" src="assets/images/rectangular-graphic.png" alt="rectangular"></div>
+            <div class="imageSecondRowRigth"><img class="rigth" src="assets/images/circle-graphic.png" alt="circle"></div>
+            <div class="legendPorcentData"><span><hr class="hrGreen"></span><p class="numberLegendPorcentData"># STUDENTS THAT MEET THE TARGET</p> </div>
+            <div class="legendPorcentData"><span><hr class="hrRed"></span><p class="numberLegendPorcentData"># STUDENTS THAT DONT MEET THE TARGET</p></div>
+          </div>
+        </div>
+
+        <!-- fourth row statistical data-->
+        <div id="statisticalDataFourth" class="statisticalDataFourth">
+          <h1 id="statisticalDataTitle" class="statisticalDataTitle">STUDENT SATISFACTION</h1>
+          <div id="dataNumberFourthRow" class="dataNumberFourthRow">
+            <h3 id="numDataFourthRow" class="numDataFourthRow">140</h3>
+            <h6 id="descriptionNumData" class="descriptionNumData">% MEETING OR EXCEEDING EXPECTATIONS (CUMULATIVE)</h6>
+            <div class="imageDataStatisticalFourthRow"><img class="imageFourthRow" src="assets/images/graph.png" alt="linea"></div>
+          </div>
+        </div>
+        <div id="statisticalDataFourth" class="statisticalDataFourth">
+          <h1 id="statisticalDataTitle" class="statisticalDataTitle">TEACHER RATING</h1>
+          <div id="dataNumberFourthRow" class="dataNumberFourthRow">
+            <h3 id="numDataFourthRow" class="numDataFourthRow">4.3</h3>
+            <h6 id="descriptionNumData" class="descriptionNumData">OVERALL TEACHER RATING (CUMULATIVE)</h6>
+            <div class="imageDataStatisticalFourthRow"><img class="imageFourthRow" src="assets/images/graph.png" alt="linea"></div>
+          </div>
+        </div>
+          <div id="statisticalDataFourth" class="statisticalDataFourth">
+          <h1 class="statisticalDataTitle">JEDI MASTER RATING</h1>
+          <div id="dataNumberFourthRow" class="dataNumberFourthRow">
+            <h3 id="numDataFourthRow" class="numDataFourthRow">50<i class="fa fa-caret-up" aria-hidden="true"></i></h3>
+            <h6 id="descriptionNumData" class="descriptionNumData">OVERALL JEDI RATING (CUMULATIVE)</h6> <!-- pendiente convertirlo a h7-->
+            <div class="imageDataStatisticalFourthRow"><img class="imageFourthRow" src="assets/images/graph.png" alt="linea"></div>
+          </div>
+        </div>
+      </section>
+      <section id="students" class="containerMainStudents"> <!-- container Main Students-->
+        <!-- first row filtered main courses -->
+          <div class="mainCoursesFiltered"> <!--column left-->
+              <h1 class="mainCoursesTitle">SPECIALIZATION</h1>
+              <input type="checkbox" name="courses" value="courses" class="courses">Javascript<br>
+              <input type="checkbox" name="courses" value="courses" class="courses">UX Design<br>
+              <input type="checkbox" name="courses" value="courses" class="courses">Front end Designer<br>
+          </div>
+          <div class="inputStudentFiltered"> <!--input column rigth-->
+              <label><i class="fa fa-search" aria-hidden="true"></i></label>
+              <input type="text" value="" id="search" class="search" />
+          </div>
+          <div id="dataStudentFiltered" class="dataStudentFiltered"> <!--data students column rigth-->
+              <div id="photoStudent" class="photoStudent"><img class="photo" src="assets/images/alumna.jpg" alt="photo"></div>
+              <div id="dataStudent" class="dataStudent">
+                  <h3 id="nameStudent" class="nameStudent">DIANA NAVARRO</h3>
+                  <h5 id="typeStudent" class="typeStudent">Fronted Developer</h5>
+                  <ul id="typesTools" class="typesTools">
+                      <li id="typesToolsCourses" class="typesToolsCourses">JAVASCRIPT</li>
+                      <li id="typesToolsCourses" class="typesToolsCourses">APIs</li>
+                      <li id="typesToolsCourses" class="typesToolsCourses">JQUERY</li>
+                  </ul>
+              </div>
+              <div id="dataFinalStudent" class="dataFinalStudent">
+                <div id="dataNumberFinal" class="dataNumberFinal"> <!--left column-->
+                  <h6 id="numData" class="numData">95.6 %</h6>
+                  <h6 id="descriptionNumData" class="descriptionNumData">TECH SKILLS</h6>
+                </div>
+                <div id="dataPorcentFinal" class="dataPorcentFinal"> <!--medium column-->
+                  <h6 id="numData" class="numData">95.6 %</h6>
+                  <h6 id="descriptionNumData" class="descriptionNumData">LIFE SKILLS</h6>
+                </div>
+                <div id="dataFinal" class="dataFinal"> <!--rigth column-->
+                  <h6 id="numData" class="numData">INTERM</h6>
+                  <h6 id="descriptionNumData" class="descriptionNumData">ENGLISH SKILLS</h6>
+                </div>
+              <div id="dataPerfil" class="dataPerfil"><span class="textDataPerfil" >Ver perfil</span><i class="fa fa-caret-right" aria-hidden="true"></i></div>
+        </section>
+        <section id="teachers">
+
+        </section>
+    </main>
 		<!-- Base de datos -->
-		<script src="./js/data.js"></script>
+    <script src="./js/data.js"></script>
+    <script src="./js/tab.js"></script>
 		<!-- Aquí va tus archivos JS -->
     <script src="./js/app.js"></script>
   </body>
