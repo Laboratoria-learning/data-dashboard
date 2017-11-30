@@ -436,8 +436,22 @@ function createStudents() {
     singleStudent.classList.add('single-student');
     studentImage.src = dataStudents[sede][promo].students[i].photo;
     studentName.textContent = dataStudents[sede][promo].students[i].name;
+    var promedioTech = 0;
+    var promedioHse = 0;
+    for (var j = 0; j < dataStudents[sede][promo].students[i].sprints.length; j++) {
+      var techNote = dataStudents[sede][promo].students[i].sprints.tech;
+      promedioTech += techNote;
+      var hseNote = dataStudents[sede][promo].students[i].sprints.hse;
+      promedioHse += hseNote;
+    }
+    teckSkillsSingle.textContent = Math.floor((promedioTech/1800)*100) + ' %';
+    softSkillsSingle.textContent = Math.floor((promedioHse/1200)*100) + ' %';
     singleStudent.appendChild(studentImage);
     singleStudent.appendChild(studentName);
+    singleStudent.appendChild(containerTechSkills);
+    singleStudent.appendChild(containerSoftSkills);
+    containerTechSkills.appendChild(teckSkillsSingle);
+    containerSoftSkills.appendChild(softSkillsSingle);
   }
 }
 createStudents();
