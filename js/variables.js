@@ -399,7 +399,7 @@ console.log('suma de puntos de jedis total sprints 20171: ' + pointsPerSprintJed
 var averagePointsJedisSCL20171 = parseInt(pointsPerSprintJedisSCL20171 / 3);
 console.log('promedio de puntos de jedis en todos los sprints 20171: ' + averagePointsJedisSCL20171);
 // NPS //
-var npsSCL20171 = (((data.SCL['2017-1'].ratings[0].nps.promoters - data.SCL['2017-1'].ratings[0].nps.detractors) + (data.SCL['2017-1'].ratings[1].nps.promoters - data.SCL['2017-1'].ratings[1].nps.detractors) + (data.SCL['2017-1'].ratings[2].nps.promoters - data.SCL['2017-1'].ratings[2].nps.detractors)) / 3) + '%';
+var npsSCL20171 = parseInt(((data.SCL['2017-1'].ratings[0].nps.promoters - data.SCL['2017-1'].ratings[0].nps.detractors) + (data.SCL['2017-1'].ratings[1].nps.promoters - data.SCL['2017-1'].ratings[1].nps.detractors) + (data.SCL['2017-1'].ratings[2].nps.promoters - data.SCL['2017-1'].ratings[2].nps.detractors)) / 3) + '%';
 console.log('suma de nps 20171: ' + npsSCL20171);
 
 /* *****2017-2***** */

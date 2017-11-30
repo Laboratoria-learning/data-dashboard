@@ -23,8 +23,8 @@ function drawChartTotalStudentsAQP() {
 
   var optionsTotalStudentsAQP = {
     title: 'Total alumnas matriculadas y desertoras por generación',
-    width: 600,
-    height: 400,
+    width: 300,
+    height: 200,
     bar: {groupWidth: '95%'},
     legend: { position: 'none' },
   };
