@@ -1,3 +1,38 @@
+//Cambia de tags al hacer click
+var listbox = document.getElementById('listbox');
+var students = document.getElementById('students');
+var graphic = document.getElementById('graphics');
+var teacher = document.getElementById('teachers');
+
+function viewSections(event){
+  var tags = event.target.dataset.tag;
+  if (tags == 'first'){
+    students.style.display = 'none';
+    teacher.style.display = 'none';
+    listbox.style.display = 'block';
+    graphic.style.display = 'block';
+  } else if (tags == 'second'){
+    listbox.style.display = 'none';
+    graphic.style.display = 'none';
+    teacher.style.display = 'none';
+    students.style.display = 'block';
+  } else if (tags == 'third'){
+    listbox.style.display = 'none';
+    graphic.style.display = 'none';
+    teacher.style.display = 'block';
+    students.style.display = 'none';
+  }
+}
+
+function loadPage(){
+  listbox.style.display = 'none';
+  teacher.style.display = 'none';
+  var tabs = document.getElementsByClassName('tab');
+  for (i = 0; i < tabs.length; i++){
+    tabs[i].addEventListener('click', viewSections);
+  }
+}
+loadPage();
 
 /* Cantidad de Estudiantes activas por sede*/
 function activeStudents(sede) {
@@ -168,4 +203,19 @@ function overcomeGoal(sede, generacion, sprint) {
   porcentaje = (meta / superanMeta.length) * 100;
   return porcentaje;
 }
-
+// La cantidad y el porcentaje que representa el total de estudiantes que superan la meta de puntos de HSE en promedio y por sprint.
+function overcomeGoalHse(sede, generacion, sprint) {
+  var superanMeta = data[sede][generacion]['students'];
+  var goal = [];
+  var meta = 0;
+  var porcentaje;
+  for (var i = 0; i < superanMeta.length; i++) {
+    goal[i] = superanMeta[i]['sprints'][sprint - 1].score.hse;
+    // console.log(goal[i]);
+    if (goal[i] >= '840') {
+      meta++;
+    }
+  }
+  porcentaje = (meta / superanMeta.length) * 100;
+  return porcentaje;
+}

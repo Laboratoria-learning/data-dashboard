@@ -13,7 +13,11 @@
       <span id= "icon" class="icon-menu"></span>
     </header>
     <nav>
-      <select name="" id="listbox">
+      <span class="option-text tab" data-tag="first">OVERVIEW</span>
+      <span class="option-text tab" data-tag="second">STUDENTS</span>
+      <span class="option-text tab" data-tag="third">TEACHER</span>
+
+      <select id="listbox">
         <option value="">Sede-Generación</option>
         <optgroup label="Arequipa">
           <option value="2016-2" data-sede="AQP">2016-II</option>
@@ -33,17 +37,11 @@
           <option value="2017-1" data-sede="SCL">2017-I</option>
           <option value="2017-2" data-sede="SCL">2017-II</option>
         </optgroup>
-      </select>
-      <div class="options">
-        <span class="option-text">OVERVIEW</span>
-        <span class="option-text">STUDENTS</span>
-        <span class="option-text">TEACHER</span>
-      </div>
-     
-      
+      </select>      
     </nav>
 
-    <section>
+    <section id="graphics">
+        <div id="enrollment"></div>
         <!--Div that will hold the pie chart-->
         
         <div id="draw-estadoEstudiantes"></div>
@@ -53,8 +51,18 @@
         <div id= 'draw-scoreJedi'></div>
         <div id= 'draw-nps'></div>
         <div id= 'draw-puntajeTecnico'></div>
-   </section>
-    
+        <div id= 'draw-puntajeHse'></div>
+        
+
+    </section>
+
+    <section id="students">
+
+    </section>
+
+    <section id="teachers">
+      <img src="assets/images/img.jpg" alt="en-construcción">
+    </section>
 
    
 

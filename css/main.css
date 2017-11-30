@@ -35,21 +35,17 @@ header {
 }
 
 nav {
-  padding: 35px 35px 0px 35px;
+  padding: 21px;
   background: DarkGray;
 }
 
 #listbox {
   border-radius: 7px;
-  font-size: 21px;
-  margin-left: 21px;
-  outline: none;
-}
-
-.options {
   box-sizing: border-box;
-  padding: 21px 0px 7px 21px;
-  margin-top: 20px;
+  display: block;
+  font-size: 21px;
+  margin: 21px 0px 21px 21px;
+  outline: none;
 }
 
 .option-text {
@@ -62,4 +58,8 @@ nav {
   color: #fff;
   border-bottom: 4px solid #ffc107;
   cursor: pointer;
+}
+
+#teachers {
+  text-align: center;
 }
