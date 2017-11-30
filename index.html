@@ -3,12 +3,194 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <p class="menu-tab"><</p>
+    <main>
+      <section class="container-icons">
+        <div class="icons">
+          <a href="" class="fa fa-envelope-o"></a>
+          <a href="" class="fa fa-comment-o"></a>
+          <a href="" class="fa fa-sign-out"></a>
+        </div>
+      </section>
+      <section class="container-tabs">
+        <ul>
+          <li><button type="button" name="button" data-selected-tab="tabOverView" class="tab" id="#btnoverview">Overview</button></li>
+          <li><button type="button" name="button" data-selected-tab="tabStudents" class="tab">Students</button></li>
+          <li><button type="button" name="button" data-selected-tab="tabTeacher" class="tab">Teachers</button></li>
+        </ul>
 
-		<!-- Base de datos -->
-		<script src="./js/data.js"></script>
-		<!-- Aquí va tus archivos JS -->
-    <script src="./js/app.js"></script>
+      </section>
+      <section class="container-tabs-info">
+        <div class="">
+
+
+          <article id="overview" class="display-none">
+            <section class="container-one">
+              <section class="enrollment box-medium-size">
+                <h1 class="text-uppercase">Enrollment</h1>
+                  <div class="figures" id="student-currently">
+                    <p></p>
+                    <p class="text-uppercase"># students currently enrolled</p>
+                  </div>
+                  <div class="figures" id="student-dropount">
+                    <p></p>
+                    <p class="text-uppercase">% dropout</p>
+                  </div>
+
+              </section>
+              <section class="achievement box-medium-size">
+                <h1 class="text-uppercase">Achievement</h1>
+                  <div class="figures" id="achievement-student">
+                    <p></p>
+                    <p class="text-uppercase"># students that meet the target</p>
+                  </div>
+                  <div class="figures">
+                    <p class="text-uppercase">% of total ()</p>
+                  </div>
+              </section>
+              <section class="promoter-score box-medium-size">
+                <h1 class="text-uppercase">Net Promoter Score</h1>
+                  <div class="figures" id="net-promoter-score">
+                    <p></p>
+                    <p class="text-uppercase">% cumulative nps</p>
+                  </div>
+                  <div class="figures" id="detalle-net-promoter-score">
+                    <p></p>
+                    <!-- 3 porcentajes que provienen de data y DOM -->
+                  </div>
+              </section>
+            </section>
+
+              <section class="tech-skills box-size">
+                <h1 class="text-uppercase">Tech Skills</h1>
+                  <div class="figures" id="techSkillsTech">
+
+                  <p></p>
+                    <p class="text-uppercase"># students that meet the target</p>
+                  </div>
+                  <div class="figures" >
+                    <p></p>
+
+                    <p class="text-uppercase">% of total ()</p>
+                  </div>
+              </section>
+              <section class="life-skills box-size">
+                <h1 class="text-uppercase">Life Skills</h1>
+                  <div class="figures" id="techSkillsLife">
+
+                  <p></p>
+                    <p class="text-uppercase">overall call average</p>
+                  </div>
+                  <div class="figures">
+                    <p class="text-uppercase"># of students that meet the target</p>
+                  </div>
+              </section>
+              <section class="container-one">
+                <section class="student-satisfaction box-medium-size">
+                  <h1 class="text-uppercase">Student satisfaction</h1>
+                    <div class="figures" id="satisfaction">
+                      <p></p>
+                      <p class="text-uppercase">% meeting or exceeding expectations (cumulative)</p>
+                    </div>
+
+                </section>
+                <section class="teacher-rating box-medium-size">
+                  <h1 class="text-uppercase">Teacher Rating</h1>
+                    <div class="figures">
+                      <p class="text-uppercase">overall teacher rating (cumulative)</p>
+                    </div>
+                </section>
+                <section class="jedi-rating box-medium-size">
+                  <h1 class="text-uppercase">Jedi Master Rating</h1>
+                    <div class="figures">
+                      <p class="text-uppercase">overall jedi rating (cumulative)</p>
+                    </div>
+                </section>
+              </section>
+
+          </article>
+          <article id="students" class="display-none">
+            <div class="students-info">
+              <figure>
+                <img src="" alt="coder-picture">
+              </figure>
+              <h1 class="name">Nombre</h1>
+              <div class="figures">
+                <p class="text-uppercase">tech skills</p>
+              </div>
+              <div class="figures">
+                <p class="text-uppercase">life skills</p>
+              </div>
+
+            </div>
+          </article>
+          <article id="teachers" class="display-none">
+
+          </article>
+
+        </div>
+      </section>
+    </main>
+    <nav>
+      <div class="lab-logo">
+        <figure>
+          <img src="assets/images/logo-laboratoria.svg" alt="logo-laboratoria">
+        </figure>
+      </div>
+      <div class="user-logo">
+        <figure>
+          <img src="assets/images/user-avatar.PNG" alt="user-avatar">
+          <figcaption class="text-uppercase">user</figcaption>
+        </figure>
+        <form class="" action="index.html" method="post">
+          <input type="text">
+          <a href="#" class="fa fa-search"></a>
+        </form>
+      </div>
+      <div class="branches-section">
+        <p class="text-uppercase menu" id="branch">
+          Sede
+        </p>
+        <ul>
+          <li class="text-uppercase country display-none" id='chile'>Chile</li>
+            <ul class="display-none">
+              <li class="city">Santiago de Chile</li>
+                 <label><input type="radio" name ="generation" class="cbox" value="2017-2 SCL">2017-2</label><br>
+                 <label><input type="radio" name ="generation" class="cbox" value="2017-1 SCL">2017-1</label><br>
+                 <label><input type="radio" name ="generation" class="cbox" value="2016-2 SCL">2016-2</label><br>
+            </ul>
+
+          <li class="text-uppercase country display-none" id='mexico'>México</li>
+            <ul class="display-none">
+              <li class="city">Ciudad de México</li>
+                <label><input type="radio" name ="generation" class="cbox" value = "2017-2 CDMX">2017-2</label><br>
+                <label><input type="radio" name ="generation" class="cbox" value = "2017-1 CDMX">2017-1</label><br>
+            </ul>
+          <li class="text-uppercase country display-none" id="peru">Perú</li>
+            <ul class="display-none">
+              <li class="city">Arequipa</li>
+                <label><input type="radio" name ="generation" class="cbox" value="2017-1 AQP">2017-1</label><br>
+                <label><input type="radio" name ="generation" class="cbox" value="2016-1 AQP">2016-2</label><br>
+              <li class="city">Lima</li>
+                <label><input type="radio" name = "generation" class="cbox" value="2017-2 LIM">2017-2</label><br>
+                <label><input type="radio" name = "generation" class="cbox" value="2017-1 LIM">2017-1</label><br>
+                <label><input type="radio" name = "generation" class="cbox" value="2016-2 LIM">2016-2</label><br>
+            </ul>
+        </ul>
+      </div>
+    </nav>
+
+
+
+    <!-- Base de datos -->
+    <script src="js/data.js"></script>
+    <!-- Aquí va tus archivos JS -->
+    <script type="text/javascript" src="js/app.js">
+
+    </script>
   </body>
 </html>

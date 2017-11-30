@@ -1,3 +1,284 @@
-/*
- * Estilos de tu proyecto
- */
+/*Clases reutilizables*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
+}
+
+.mt-0 {
+  margin-top: 0px;
+}
+
+.m-0 {
+  margin: 0px;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #E95853;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+.country {
+  font-weight: bold;
+}
+
+.city {
+  font-weight: normal;
+  text-transform: none;
+}
+
+li label {
+  font-weight: normal;
+}
+
+/*Clases específicas*/
+main {
+  float: right;
+  border: 1px solid black;
+  width: 80%;
+  height: 100vh;
+}
+
+.container-icons {
+  width: 79vw;
+  border: 1px solid #ffc107;
+  height: 10vh;
+  padding: 2vh;
+  box-sizing: border-box;
+}
+
+.container-tabs ul {
+    text-align: center;
+    padding: 2vh;
+}
+
+.container-tabs li {
+  display: inline-block;
+  margin-right: 0.5vw;
+}
+
+.container-tabs li button {
+  border-style: none;
+  padding: 3vh;
+}
+
+.icons {
+  float: right;
+  width: 10vw;
+}
+
+.icons a {
+  display: inline-block;
+  border: 1px solid #000;
+  border-radius: 50px;
+  padding: 5%;
+  margin-right: 4%;
+}
+
+.icons a.fa-sign-out {
+  margin-right: 0;
+}
+
+/*.container {
+  outline: 1px solid red;
+  width: 79vw;
+}*/
+
+.container-one {
+  display: flex;
+  align-items: center;
+}
+
+.box-medium-size {
+  border: 1px solid #ffc107;
+  box-sizing: border-box;
+  width: 35vw;
+  height: auto;
+  background-color: #ffffff;
+  font-size: 14px;
+  margin: 5px;
+  padding: 3vh;
+}
+
+.box-medium-size .figures {
+  border: 1px solid #000;
+  box-sizing: border-box;
+  width: 10vw;
+  height: auto;
+  margin: 3px;
+  padding: 2vh;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.box-medium-size .figures p {
+  font-size: 10px;
+}
+
+.box-size {
+  border: 1px solid #ffc107;
+  box-sizing: border-box;
+  width: 78vw;
+  height: auto;
+  background-color: #ffffff;
+  display: inline-flex;
+  margin: 5px;
+  font-size: 14px;
+  padding: 4vh;
+}
+
+.box-size .figures {
+  border: 1px solid #000;
+  box-sizing: border-box;
+  width: 10vw;
+  height: auto;
+  margin: 3px;
+  padding: 2vh;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.box-size h1 {
+  display: block;
+}
+
+.box-size .figures p {
+  font-size: 10px;
+}
+
+#students figure img {
+  width: 2vw;
+  height: 10vh;
+}
+
+#students figcaption, #students .figures {
+  display: inline-block;
+}
+
+#students .figures {
+  width: 5vw;
+  height: 5vh;
+}
+
+nav {
+  width: 20vw;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+.lab-logo {
+  width: 100%;
+  border-bottom: 1px solid #000;
+  padding: 2%;
+}
+
+.user-logo {
+  border-bottom: 1px solid #000;
+  padding: 2%;
+}
+
+.user-logo figure img {
+  width: 100%;
+}
+
+.user-logo figcaption {
+  font-weight: bold;
+  text-align: center;
+}
+
+.user-logo form {
+  text-align: center;
+  margin: 5%;
+}
+
+.user-logo form input {
+  border-radius: 8px;
+  border: 1px solid blue;
+  padding: 2%;
+  width: 90%;
+}
+
+.branches-section p {
+  border-radius: 5px;
+  border: 3px solid #000;
+  padding: 4%;
+  font-weight: bold;
+}
+
+.country {
+  border-radius: 5px;
+  border: 2px solid #000;
+  padding: 3% 3% 3% 5%;
+  list-style: none;
+  margin: 0;
+}
+
+.city {
+  border-radius: 5px;
+  border: 1px solid #000;
+  padding: 2% 2% 2% 9%;
+  list-style: none;
+}
+
+.branches-section label {
+  padding-left: 10%;
+}
+
+.menu-tab {
+  border: 2px solid #000;
+  padding: 0.5%;
+  width: 2%;
+  font-weight: bold;
+  float: left;
+}
+
+.display-none {
+  display: none;
+}
+
+
+/*Tab*/
+#students {
+  width: 76vw;
+  height: 20vh;
+  /*border: 1px solid red;*/
+  /*margin-left: 2vw;*/
+}
+
+.students-info {
+  border: 1px solid #ffc107;
+  width: 60vw;
+  margin-left: 8vw;
+  text-align: center;
+}
+
+.students-info figure, .name, .students-info .figures {
+  vertical-align: top;
+  display: inline-block;
+  margin: 3vh;
+  padding: 0 3vh;
+}
