@@ -60,3 +60,35 @@ function nps(sede,generation){
 }
 
 nps('AQP', '2016-2');
+
+// funciones 
+
+var sedeSelected = document.getElementById('select-sede');
+var generationSelected = document.getElementById('select-generation');
+var sede = '';
+var gen = '';
+var students = {};
+var studenDesert = 0;
+
+generationSelected.addEventListener('change', inscription);
+
+function inscription(event) {
+  sede = sedeSelected.value;
+  gen = generationSelected.value;
+
+  students = data[sede][gen].students;
+
+  var numberRegistered = document.getElementById('numberRegistered');
+  numberRegistered.textContent = students.length;
+
+  // for(var i = 0; i<students.length;i++){
+  //   if(students[i].active === false){
+  //     studenDesert++;
+  //   }
+  // }
+
+  // var percentDesert = parseInt((studenDesert * 100)/students.length);
+
+  // var numberDesert = document.getElementById('numberDesert');
+  // numberDesert.textContent = percentDesert;
+};
