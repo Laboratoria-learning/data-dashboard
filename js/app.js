@@ -10,7 +10,10 @@
 // console.log(data['AQP']['2016-2']['ratings'][2]['teacher']);
 // console.log(data['AQP']['2016-2']['ratings'][0]['jedi']);
 // cambiar pestañas
-console.log(data['AQP']['2016-2']['ratings'][0]['student']['cumple']);
+// console.log(data['AQP']['2016-2']['ratings'][0]['student']['cumple']);
+// console.log(data['AQP']['2016-2']['students'].length);
+// console.log(data['AQP']['2016-2']['students'][0]['sprints'].length);
+// console.log(data['LIM']['2016-2']['students'][1]['sprints'].length);
 // console.log(data['AQP']['2016-2']['students'][1]['name']);
 // var nombre
 // var returnCurrently
@@ -20,6 +23,7 @@ console.log(data['AQP']['2016-2']['ratings'][0]['student']['cumple']);
 //    resul.tex
 //   }
 // }
+// console.log(data['SCL']['2017-2']['students'][52]['sprints'].length);
 var list = document.getElementsByTagName('ul')[0].children;
 var elementTab = document.getElementsByClassName('tab');
 var containerOverview = document.getElementById('container-overview');
@@ -32,6 +36,8 @@ var percentage = document.getElementById('percentage');
 var teacherRating = document.getElementById('teacher-rating');
 var jediMasterRating = document.getElementById('jedi-master-rating');
 var studentSatisfaction = document.getElementById('student-satisfaction');
+var studentTarget = document.getElementById('student-target');
+var total = document.getElementById('total');
 function show(event) {
   var tabSelection = event.target.dataset.tabSelection;
   if (tabSelection === 'overview') {
@@ -55,7 +61,6 @@ function show(event) {
 function changeTitle() {
   var titleSelector = document.getElementById('title-selector');
   var valueSelector = comboBox.value;
-
   var returnCurrently;
   switch (valueSelector) {
   case 'lim2016II':
@@ -65,6 +70,7 @@ function changeTitle() {
     calculateTeacherRating('LIM', 2, '2016-2');
     calculateJediMasterRating('LIM', 2, '2016-2');
     calculateStudentSatisfaccion('LIM', 1, '2016-2', 35);
+    calculateAchievement('LIM', '2016-2');
     var attend = parseInt(calculateCurrently('LIM', 35, '2016-2'));
     drawCurrently(attend, 35 - attend);
     drawPromoter();
@@ -76,6 +82,7 @@ function changeTitle() {
     calculateTeacherRating('LIM', 4, '2017-1');
     calculateJediMasterRating('LIM', 4, '2017-1');
     calculateStudentSatisfaccion('LIM', 3, '2017-1', 17);
+    calculateAchievement('LIM','2017-1');
     var attend = parseInt(calculateCurrently('LIM', 17, '2017-1'));
     drawCurrently(attend, 17 - attend);
     break;
@@ -86,6 +93,7 @@ function changeTitle() {
     calculateTeacherRating('LIM', 2, '2017-2');
     calculateJediMasterRating('LIM', 2, '2017-2');
     calculateStudentSatisfaccion('LIM', 1, '2017-2', 14);
+    calculateAchievement('LIM', '2017-2');
     var attend = parseInt(calculateCurrently('LIM', 14, '2017-2'));
     drawCurrently(attend, 14 - attend);
     break;
@@ -96,6 +104,7 @@ function changeTitle() {
     calculateTeacherRating('AQP', 4, '2016-2');
     calculateJediMasterRating('AQP', 4, '2016-2');
     calculateStudentSatisfaccion('AQP', 3, '2016-2', 15);
+    calculateAchievement('AQP', '2016-2');
     var attend = parseInt(calculateCurrently('AQP', 15, '2016-2'));
     drawCurrently(attend, 15 - attend);
     break;
@@ -104,8 +113,9 @@ function changeTitle() {
     calculateCurrently('AQP', 15, '2017-1');
     calculatePromoter('AQP', 3, '2017-1');
     calculateTeacherRating('AQP', 3, '2017-1');
-    calculateJediMasterRating('LIM', 4, '2017-1');
-    calculateStudentSatisfaccion('AQP', 3, '2017-1', 15);
+    calculateJediMasterRating('AQP', 3, '2017-1');
+    calculateStudentSatisfaccion('AQP', 2, '2017-1', 15);
+    calculateAchievement('AQP', '2017-1');
     var attend = parseInt(calculateCurrently('AQP', 15, '2017-1'));
     drawCurrently(attend, 15 - attend);
     break;
@@ -116,6 +126,7 @@ function changeTitle() {
     calculateTeacherRating('SCL', 4, '2016-2');
     calculateJediMasterRating('SCL', 4, '2016-2');
     calculateStudentSatisfaccion('SCL', 3, '2016-2', 11);
+    calculateAchievement('SCL', '2016-2');
     var attend = parseInt(calculateCurrently('SCL', 11, '2016-2'));
     drawCurrently(attend, 11 - attend);
     break;
@@ -126,18 +137,20 @@ function changeTitle() {
     calculateTeacherRating('SCL', 3, '2017-1');
     calculateJediMasterRating('SCL', 3, '2017-1');
     calculateStudentSatisfaccion('SCL', 2, '2017-1', 23);
+    calculateAchievement('SCL','2017-1');
     var attend = parseInt(calculateCurrently('SCL', 23, '2017-1'));
     drawCurrently(attend, 23 - attend);
     break;
   case 'chi2017II':
     titleSelector.textContent = 'Chile 2017-II';
-    calculateCurrently('SCL', 61, '2017-2');
+    calculateCurrently('SCL', 59, '2017-2');
     calculatePromoter('SCL', 2, '2017-2');
     calculateTeacherRating('SCL', 2, '2017-2');
     calculateJediMasterRating('SCL', 2, '2017-2');
-    calculateStudentSatisfaccion('SCL', 1, '2017-2', 61);
-    var attend = parseInt(calculateCurrently('SCL', 61, '2017-2'));
-    drawCurrently(attend, 61 - attend);
+    calculateStudentSatisfaccion('SCL', 1, '2017-2', 59);
+    calculateAchievement('SCL', '2017-2');
+    var attend = parseInt(calculateCurrently('SCL', 59, '2017-2'));
+    drawCurrently(attend, 59 - attend);
     break;
   case 'mex2017I':
     titleSelector.textContent = 'Mexico 2017-I';
@@ -146,6 +159,7 @@ function changeTitle() {
     calculateTeacherRating('CDMX', 3, '2017-1');
     calculateJediMasterRating('CDMX', 3, '2017-1');
     calculateStudentSatisfaccion('CDMX', 2, '2017-1', 24);
+    calculateAchievement('CDMX', '2017-1');
     var attend = parseInt(calculateCurrently('CDMX', 24, '2017-1'));
     drawCurrently(attend, 24 - attend);
     break;
@@ -156,6 +170,7 @@ function changeTitle() {
     calculateTeacherRating('CDMX', 2, '2017-2');
     calculateJediMasterRating('CDMX', 2, '2017-2');
     calculateStudentSatisfaccion('CDMX', 1, '2017-2', 46);
+    calculateAchievement('CDMX', '2017-2');
     var attend = parseInt(calculateCurrently('CDMX', 46, '2017-2'));
     drawCurrently(attend, 46 - attend);
     break;
@@ -170,7 +185,7 @@ function calculateCurrently(sede, numEstudents, year) {
       cont++;
     }
   }
-  studentCurrently.innerHTML = '<b>' + numEstudents + '</b>' + ' students currently enrolled';
+  studentCurrently.innerHTML = '<b>' + numEstudents + '</b>' + ' <br> students currently enrolled';
   dropout.textContent = ((100 * (numEstudents - cont)) / numEstudents).toFixed(0) + ' % dropout';
   return cont;
 }
@@ -204,7 +219,7 @@ function calculateJediMasterRating(sede, numSprint, year) {
   jediMasterRating.innerHTML = '<b>' + (sumJedi / numSprint).toFixed(2) + '</b>' + '<br> overall teacher rating <br> (cumulative)';
 }
 
-function calculateStudentSatisfaccion(sede, numEndSprint, year,totalEstudent) {
+function calculateStudentSatisfaccion(sede, numEndSprint, year, totalEstudent) {
   var meet = data[sede][year]['ratings'][numEndSprint]['student']['cumple'];
   var beats = data[sede][year]['ratings'][numEndSprint]['student']['supera'];
   var numStudentCumple = parseInt(((totalEstudent * meet) / 100).toFixed(0));
@@ -212,6 +227,47 @@ function calculateStudentSatisfaccion(sede, numEndSprint, year,totalEstudent) {
   var total = (((numStudentCumple + numStudentSupera)*100)/totalEstudent).toFixed(2);
   // console.log(numStudentCumple);
   studentSatisfaction.innerHTML = '<b>' + total + '</b>' + '<br> % meeting or exceeding expectations';
+}
+
+function calculateAchievement(sede, year) {
+  var sumTechStudent = 0;
+  var percentageTotal;
+  var scoreTotal;
+  var scoreTotalHse;
+  var sum;
+  var sumHse;
+  // var numSprint = data[sede][year]['students'][0]['sprints'].length;
+  var numSprint;
+  var cantEstudents = data[sede][year]['students'].length; 
+  // console.log(data[sede][year]['students'][0]['sprints'].length);
+  // console.log(cantEstudents);
+  for (var i = 0; i < cantEstudents ; i++) {
+    // console.log(i);
+    if (data[sede][year]['students'][i]['sprints'].length !== 0) {
+      sum = 0;
+      sumHse = 0;
+      numSprint = data[sede][year]['students'][i]['sprints'].length;
+      // console.log(numSprint);
+      for (var j = 0; j < numSprint;j++) {
+        // console.log(data[sede][year]['students'][i]['active']);
+        // console.log(data[sede][year]['students'][i]['sprints'][j]['score']['tech']);
+        sum = data[sede][year]['students'][i]['sprints'][j]['score']['tech'] + sum;
+        sumHse = data[sede][year]['students'][i]['sprints'][j]['score']['hse'] + sumHse;
+      }
+      scoreTotal = (((sum / numSprint) * 100) / 1800).toFixed(2);
+      scoreTotalHse = (((sumHse / numSprint) * 100) / 1200).toFixed(2);
+      console.log(i);
+      console.log(scoreTotalHse);
+      console.log(scoreTotal);
+      if (scoreTotal > 70 && scoreTotalHse > 70) {
+        sumTechStudent++;
+      }
+    }
+  }
+  // console.log(sumTechStudent);
+  percentageTotal = ((sumTechStudent * 100) / cantEstudents).toFixed(0);
+  studentTarget.innerHTML = '<b>' + sumTechStudent + '</b>' + '<br># students that meet the target';
+  total.innerHTML = '<b>' + percentageTotal + '</b>' + '<br>% of total (' + cantEstudents + ' )';
 }
 
 function drawCurrently(attend, noAttend) {
@@ -248,6 +304,6 @@ window.onload = function() {
   elementTab[0].addEventListener('click', show);
   elementTab[1].addEventListener('click', show);
   containesStudents.classList.add('none');
-  comboBox.addEventListener('change',changeTitle)
+  comboBox.addEventListener('change',changeTitle);
 }
 
