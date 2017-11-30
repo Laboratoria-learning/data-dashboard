@@ -164,8 +164,14 @@ margin-top: 10px;
 }
 h2{
   margin-top: 10px;
-  width:325px;
+  width:320px;
   padding-left:30px;
+}
+.sub-title{
+  display: inline-block;
+  margin-top: 10px;
+  padding-left:30px;
+  width: 140px;
 }
 .sub-box-content{
   background-color:#EFEFEF;
@@ -186,7 +192,15 @@ h2{
   font-size: 12px;
   text-align: center;
 }
+select{
+  width: 200px;
+  height: 30px;
+  display: inline-block;
+  border: 0;
+  border-bottom: 2px solid #FFD65B;
+  color: #000;
 
+}
 /*Primera estadistica*/
 .containerStyle{
   margin-left: 43%;

@@ -29,39 +29,55 @@
         <div class="title" >Sede</div>
       </div>
       <div class="box-list">
-        <input class="sede" type="radio" name="gender" value="LIM" checked > LIMA
+        LIMA <input class="sede" type="radio" name="gender" value="LIM" checked >
         <hr>
       </div>
       <form id="form-lim">
-        <div class="sub-boxList"><input class="promo prom-lim" type="radio" name="gender" value="2016-2" checked> 2016-II</div>
-        <div class="sub-boxList"><input class="promo prom-lim" type="radio" name="gender" value="2017-1">  2017-I</div>
-        <div class="sub-boxList"><input class="promo prom-lim" type="radio" name="gender" value="2017-2"> 2017-II</div>
+        <div class="sub-boxList">2016-II <input class="promo prom-lim" type="radio" name="gender" value="2016-2" checked></div>
+        <div class="sub-boxList">2017-I  <input class="promo prom-lim" type="radio" name="gender" value="2017-1"></div>
+        <div class="sub-boxList">2017-II <input class="promo prom-lim" type="radio" name="gender" value="2017-2"></div>
       </form>
         <div class="box-list">
-          <input class="sede" type="radio" name="gender" value="AQP" > AREQUIPA
+          AREQUIPA <input class="sede" type="radio" name="gender" value="AQP" >
           <hr>
         </div>
       <form id="form-aqp">
-        <div class="sub-boxList"><input class="promo prom-aqp" type="radio" name="gender" value="2016-2"> 2016-II</div>
-        <div class="sub-boxList"><input class="promo prom-aqp" type="radio" name="gender" value="2017-1"> 2017-I</div>
+        <div class="sub-boxList">2016-II <input class="promo prom-aqp" type="radio" name="gender" value="2016-2"></div>
+        <div class="sub-boxList">2017-I  <input class="promo prom-aqp" type="radio" name="gender" value="2017-1"></div>
       </form>
       <div class="box-list">
-        <input class="sede" type="radio" name="gender" value="SCL"> SANTIAGO DE CHILE
+        SANTIAGO DE CHILE <input class="sede" type="radio" name="gender" value="SCL">
         <hr>
       </div>
       <form id="form-scl">
-        <div class="sub-boxList"><input class="promo prom-scl" type="radio" name="gender" value="2016-2"> 2016-II</div>
-        <div class="sub-boxList"><input class="promo prom-scl" type="radio" name="gender" value="2017-1"> 2017-I</div>
-        <div class="sub-boxList"><input class="promo prom-scl" type="radio" name="gender" value="2017-2"> 2017-II</div>
+        <div class="sub-boxList">2016-II <input class="promo prom-scl" type="radio" name="gender" value="2016-2"> </div>
+        <div class="sub-boxList">2017-I   <input class="promo prom-scl" type="radio" name="gender" value="2017-1"> </div>
+        <div class="sub-boxList">2017-II <input class="promo prom-scl" type="radio" name="gender" value="2017-2"></div>
       </form>
       <div class="box-list">
-        <input  class="sede"  type="radio" name="gender" value="CDMX" > CUIDAD DE MEXICO
+        CUIDAD DE MEXICO <input  class="sede"  type="radio" name="gender" value="CDMX" >
         <hr>
       </div>
       <form id="form-cdmx">
-        <div class="sub-boxList"><input class="promo prom-cdmx" type="radio" name="gender" value="2017-1"> 2017-I</div>
-        <div class="sub-boxList"><input class="promo prom-cdmx" type="radio" name="gender" value="2017-2"> 2017-II</div>
+        <div class="sub-boxList">2017-I  <input class="promo prom-cdmx" type="radio" name="gender" value="2017-1"></div>
+        <div class="sub-boxList">2017-II <input class="promo prom-cdmx" type="radio" name="gender" value="2017-2"> </div>
       </form>
+    </section>
+    <!--especializacion de estudiantes -->
+    <section class="students">
+      <div class="box-container">
+        <h3>SPECIALIZATION</h3>
+         <nav>
+           <ul>
+             <li><input type="button" name="" value=""> Javascript</li>
+             <li><input type="button" name="" value=""> UX Design</li>
+             <li><input type="button" name="" value=""> Front end Designer</li>
+           </ul>
+         </nav>
+      </div>
+      <div class="bar-search">
+
+      </div>
     </section>
     <!--usuario-->
     <section >
@@ -106,7 +122,7 @@
         </div>
         <div class="sub-box-content">
           <span class="containerStyle" id="dropout"></span>
-          <span class="box-text">% dropout</span>
+          <span class="box-text">dropout</span>
         </div>
         <div id="chart_div"></div>
       </div>
@@ -119,7 +135,7 @@
         </div>
         <div class="sub-box-content">
           <span class="containerStyle color" id="students-tar-per"></span>
-          <span class="box-text">% of total <span id="total-tar"></span> </span>
+          <span class="box-text">of total <span id="total-tar"></span> </span>
         </div>
         <!--Aca va el grafico-->
       </div>
@@ -128,7 +144,7 @@
         <h2>Net Promoter Score</h2>
         <div class="sub-box-content">
           <span class="containerStyle color" id="net-score"></span>
-          <span class="box-text">% cumulative nps</span>
+          <span class="box-text"> cumulative nps</span>
         </div>
         <div class="sub-box-content">
           <span class="containerStyle sub-containerStyle" id="promoters"></span>
@@ -141,32 +157,35 @@
         <!--Aca va el grafico-->
       </div>
       <div class="sub-box">
-        <h2>Tech Skills</h2>
+        <h2 class="sub-title">Tech Skills</h2>
         <select name="" id="tech-sprints">
-        
+
         </select>
         <div class="sub-box-content">
           <span class="containerStyle" id="tech-skills"></span>
           <span class="box-text"># Students that meet the target</span>
         </div>
         <div class="sub-box-content">
+
           <span id="students-tar-tech"></span>
           <span class="box-text">% of total <span class="total-act"></span> </span>
           <span class="containerStyle color" id="students-tar"></span>
           <span class="box-text">% of total <span class="total-act"></span> </span>
+
         </div>
         <!--Aca va el grafico-->
         </div>
         <div class="sub-box">
-          <h2>Life Skills</h2>
+          <h2 class="sub-title">Life Skills</h2>
           <select name="" id="hse-sprints">
-        
+
           </select>
           <div class="sub-box-content">
-            <span class="containerStyle" id="life-skills"></span>
+            <span class="containerStyle " id="life-skills"></span>
             <span class="box-text"># Overall class average</span>
           </div>
           <div class="sub-box-content">
+
             <span id="students-tar-hse"></span>
             <span class="containerStyle color" id="students-tar"></span>
             <span class="box-text"># Of students that meet the target</span>
@@ -179,7 +198,11 @@
             <span class="containerStyle" id="student-satisfaction"></span>
             <span class="box-text text-2">Meeting or exceeding expextations (cumulative)</span>
           </div>
-           <!--Aca va el grafico-->
+
+            <span class="containerStyle color" id="students-tar-hse"></span>
+            <span class="box-text"># Of students that meet the target</span>
+          </div>
+          <!--Aca va el grafico-->
         </div>
         <div class="sub-box">
           <h2>Teacher Rating</h2>
