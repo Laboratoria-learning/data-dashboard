@@ -41,7 +41,7 @@
     .firstSection {
       display: inline-block;
       margin: 0px 0px 20px 0px;
-      width: 89.7%;
+      width: 89.6%;
       padding: 0 70px;
       font-size: 25px;
       background-image: url(../assets/images/ice.gif);
@@ -271,19 +271,19 @@
     }
     /*dando estilos a la seccion life skills */
 
-    .class-figure figure {
+    .size2 figure {
       display: inline-block;
       margin-top: 100px;
       margin: 40px;
     }
     /*dando estilos a la seccion student satisfaction */
 
-    .class-studentsatisfaction {
+    .studentSatisfaction {
       position: relative;
     }
 
     .graph {
-      outline: 1px solid brown;
+      /* outline: 1px solid brown; */
       line-height: 3.5px;
       text-align: center;
       background: #ffffff;
@@ -311,7 +311,7 @@
     }
 
     .content1 {
-      outline: 1px solid blue;
+      /* outline: 1px solid blue; */
       color: #b9b9b9;
       display: block;
       background: #f7f7f7;
@@ -348,7 +348,7 @@
     /*el contenido de las cajas pequenas*/
 
     .content1 {
-      outline: 1px solid blue;
+      /* outline: 1px solid blue; */
       color: #b9b9b9;
       margin: 0;
       margin-top: 2px;
@@ -359,7 +359,7 @@
     .edition {
       margin: 0px;
       padding: 0;
-      width: 310px;
+      width: 320px;
       height: 180px;
     }
 
@@ -383,7 +383,7 @@
       background-image: url('../assets/images/lab.png');
       height: 180px;
       width: 290px;
-      margin: 50px;
+      margin: 30px;
     }
     /* Hide Play button + controls on iOS */
 
@@ -391,7 +391,12 @@
       display: none !important;
     }
 
-
     .hidden {
       display: none;
+      background-color: yellowgreen;
+      width: 200px;
+      height: 380px;
+      padding: 50px;
     }
+
+  
