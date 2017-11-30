@@ -100,15 +100,34 @@ header section {
     display: inline-block;
 }
 
-/*Style for First Section*/
+/* Style for First Section */
 
 .section-data {
     width: 80%;
     margin-left: 17%;
 }
 
+.menu-sedes {
+    color: #FFC107;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+.menu-generations {
+    width: 30%;
+    float: left;
+    border-radius: 1.5rem;
+    background: #152638;
+    color: #fff;
+    font-size: 20px;
+}
+
 .list {
-    background: #fff;
+    list-style: none;
+}
+
+.generations {
+    list-style: none;
 }
 
 .hide {
@@ -117,4 +136,32 @@ header section {
 
 .show {
     display: block;
+}
+
+/* Style for Second Section */
+
+.second-section {
+    width: 70%;
+    margin-left: 20px;
+}
+
+.container-total{
+    width: 100%;
+    padding: 0;
+    margin-left: 20px;
+}
+
+.container-paragraph {
+    width: 33%;
+    display: inline-block;
+}
+
+.paragraph {
+    display: inline-block;
+}
+
+.number {
+    width: 50%;
+    display: inline-block;
+    margin-left: 25%;
 }
