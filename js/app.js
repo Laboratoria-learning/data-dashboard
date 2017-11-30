@@ -3,10 +3,10 @@ window.addEventListener('load', function() {
   var openAnimatedMenu = document.getElementById('open-animated-menu');
   var closeAnimatedMenu = document.getElementById('close-animated-menu');
 
-   openAnimatedMenu.addEventListener('click', openMenu);
-   function openMenu() {
+  openAnimatedMenu.addEventListener('click', openMenu);
+  function openMenu() {
     document.getElementById('animated-menu').style.width = '250px';
-   }
+  }
 
   closeAnimatedMenu.addEventListener('click', closeMenu);
   function closeMenu() {
@@ -17,14 +17,14 @@ window.addEventListener('load', function() {
   var select = document.getElementById('promo-filter');
   select.addEventListener('change', promFilter);
 
-   function promFilter(event) {
-    console.log(event.target.value);
+  function promFilter() {
     var city = select.value; // AQP SCL CDMX LIM
     var prom = select.options[select.selectedIndex].dataset.year; // 2016-2, 2017-1, etc.
-    var totalStudents = data[city][prom].students.length; // Cantidad total de estudiantes por sede y promoción
-    var arrayStudents = data[city][prom].students;
+    var totalStudents = data[city][prom]['students'].length; // Cantidad total de estudiantes por sede y promoción
+    var dataRatings = data[city][prom]['ratings'];
+    var arrayStudents = data[city][prom]['students'];
 
-    // ------------> ENROLLMENT <-----------------
+    // ------------> ENROLLMENT<-----------------
     // recorre la longitud de las estudiantes y muestra a las que desertaron en porcentaje
     var dropout = 0;
     for (var i = 0; i < arrayStudents.length; i++) {
@@ -43,31 +43,38 @@ window.addEventListener('load', function() {
     dropoutPorcentaje.textContent = dropout;
 
     // ------------> ACHIEVEMENT <--------------------
-    var dataRatings = data[city][prom]['ratings'];
-    var meetsRange = 0;
-    var exceedsRange = 0;
-    var totalStudentsOther = (dataRatings.length) * 100;
+
+    // data['AQP']['2016-2']['students'][0]['sprints'][0]['score'] // {tech: 1213, hse: 854}
+    // data['AQP']['2016-2']['students'][0]['sprints'][0]['score']['tech'] // 1213
+
+    var scoreTech = 0;
+    var scoreHSE = 0;
+
+    for (var i = 0; i < totalStudents; i++) {
+      for (var j = 0; j < arrayStudents[i]['sprints'].length; j++) {
+        scoreTech += arrayStudents[i]['sprints'][j]['score']['tech'];
+      }
+    }
+    console.log(scoreTech);
+
+    // -----------> TEACHER RATING <-----------
+    var sumTeacherRating = 0;
 
     for (var i = 0; i < dataRatings.length; i++) {
-      meetsRange = meetsRange + dataRatings[i]['student']['cumple'];
+      sumTeacherRating += dataRatings[i]['teacher'];
     }
 
-    for (var i = 0; i < dataRatings.length; i++) {
-      exceedsRange = exceedsRange + dataRatings[i]['student']['supera'];
-    }
+    var overallTeacherRating = sumTeacherRating / dataRatings.length;
+    var teacherRating = document.getElementById('teacher-rating');
+    teacherRating.textContent = overallTeacherRating.toFixed(1);
 
-    var percent = ((meetsRange + exceedsRange) / totalStudentsOther) * 100;
-
-    //console.log(percent);
+    // ------------> Crea función para generar lista de estudiantes <-----------------
     var studentsTab = document.getElementById('studentsTab');
     var container = document.getElementById('students-hidden');
     studentsTab.addEventListener('click', showSectionStudents);
 
     var sectionOverview = document.getElementById('section-overview');
     var sectionStudents = document.getElementById('section-students');
-
-
-
 
     function showSectionStudents(event) {
       console.log(select.value);
@@ -76,48 +83,46 @@ window.addEventListener('load', function() {
       sectionStudents.classList.remove('hide');
 
       for (var i = 0; i < arrayStudents.length; i++) {
-      //crear un div para almacenar el perfil de la estudiante
-     var profilestudent = document.createElement('div');
-     profilestudent.classList.add('profile-student');
-     container.appendChild(profilestudent);
+        // crear un div para almacenar el perfil de la estudiante
+        var profilestudent = document.createElement('div');
+        profilestudent.classList.add('profile-student');
+        container.appendChild(profilestudent);
 
-     //crear la imagen para la foto de perfil de la estudiante
-     var imgprofile= document.createElement('img');
-     imgprofile.setAttribute('src', arrayStudents[i].photo);
-     imgprofile.classList.add('img-student');
-     profilestudent.appendChild(imgprofile);
+        // crear la imagen para la foto de perfil de la estudiante
+        var imgprofile = document.createElement('img');
+        imgprofile.setAttribute('src', arrayStudents[i].photo);
+        imgprofile.classList.add('img-student');
+        profilestudent.appendChild(imgprofile);
 
-     //agregar nombre de la estudiante
-     var studentName = document.createElement('p');
-     studentName.textContent = arrayStudents[i].name;
-     studentName.classList.add('name-student');
-     profilestudent.appendChild(studentName);
-     sectionStudents.appendChild(container);
+        // agregar nombre de la estudiante
+        var studentName = document.createElement('p');
+        studentName.textContent = arrayStudents[i].name;
+        studentName.classList.add('name-student');
+        profilestudent.appendChild(studentName);
+        sectionStudents.appendChild(container);
 
-     //agregar box-tech-skill student
-     var boxTech = document.createElement('div');
-     var percentTech = document.createElement('p');
-     var techSkill = document.createElement('p');
-     techSkill.textContent = 'TECH SKILLS';
-     boxTech.classList.add('box-tech');
-     boxTech.appendChild(percentTech);
-     boxTech.appendChild(techSkill);
-     profilestudent.appendChild(boxTech);
+        // agregar box-tech-skill student
+        var boxTech = document.createElement('div');
+        var percentTech = document.createElement('p');
+        var techSkill = document.createElement('p');
+        techSkill.textContent = 'TECH SKILLS';
+        boxTech.classList.add('box-tech');
+        boxTech.appendChild(percentTech);
+        boxTech.appendChild(techSkill);
+        profilestudent.appendChild(boxTech);
 
-     //agregar box-life-skill student
-     var boxLife = document.createElement('div');
-     var percentLife = document.createElement('p');
-     var lifeSkill = document.createElement('p');
-     lifeSkill.textContent = 'LIFE SKILLS';
-     boxLife.classList.add('box-tech');
-     boxLife.appendChild(percentLife);
-     boxLife.appendChild(lifeSkill);
-     profilestudent.appendChild(boxLife);
+        // agregar box-life-skill student
+        var boxLife = document.createElement('div');
+        var percentLife = document.createElement('p');
+        var lifeSkill = document.createElement('p');
+        lifeSkill.textContent = 'LIFE SKILLS';
+        boxLife.classList.add('box-tech');
+        boxLife.appendChild(percentLife);
+        boxLife.appendChild(lifeSkill);
+        profilestudent.appendChild(boxLife);
+      }
     }
-  }
-
-  sectionStudents.classList.add('hide');
-  sectionOverview.classList.remove('hide');
-
+    sectionStudents.classList.add('hide');
+    sectionOverview.classList.remove('hide');
   }
 });
