@@ -90,17 +90,14 @@ header section {
     width: 30%;
     display: inline-block;
     margin: 0;
-    margin-left: 90px;
 }
 
 .notificacion ul {
     list-style: none;
-    margin-left: 80px;
 }
 
 .notificacion ul li {
     display: inline-block;
-    margin: 30px;
 }
 
 /*Style for First Section*/
