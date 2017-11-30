@@ -1,12 +1,13 @@
 window.addEventListener('load', begin);
 /*  Funciones*/
-/*  Total de estudiantes por sede y generacion*/
+
+/*  Total de estudiantes por generacion según su sede*/
 function totalStudents(place, generation) {
   var totalStudents = data[place][generation].students.length;
   return totalStudents;
 };
 
-/*  Porcentaje de Deserción*/
+/*  Total de estudiantes desertores*/
 function numDesert(place, generation, totalAlumns) {
   var desertion = 0;
   for (var i = 0; i < totalAlumns; i++) {
@@ -17,7 +18,7 @@ function numDesert(place, generation, totalAlumns) {
   return desertion;
 };
 
-/*  Función para obtener el total de puntos Tech por Sprint de cada alumna*/
+/*  Total de puntos Tech o HSE por Sprint de cada estudiante*/
 function totalPointsPerStudent(place, generation, curse, numberStudent) {
   var totalPoints = 0;
   for (var i = 0; i < data[place][generation].students[numberStudent].sprints.length; i++) {
@@ -104,8 +105,7 @@ var sprints = document.getElementById('sprints');
 /*  Ejecución del programa*/
 function begin() {
   console.log(data);
-  /* Crear la base de datos de estudiantes de acuerdo a la data*/
-  /* Primero creamos los contenedores que almacenaran los datos de cada estudiante segun sea la cantidad por generación*/
+  /* A continuación extraemos los datos de cada estudiante de acuerdo a la data, primero creamos los contenedores que almacenaran estos datos segun sea la cantidad por generación*/
   var studentInfo = document.createElement('div');/* contenedor de la información del estudiante*/
   studentInfo.className = 'studentInfo';
   var studentPhoto = document.createElement('figure');
@@ -127,15 +127,14 @@ function begin() {
   studentInfo.appendChild(studentPhoto);
   studentInfo.appendChild(studentName);
   studentInfo.appendChild(studentScores);
-
+  /* segundo paso es crear la función que obtendra estos datos para luego almacenarlos en sus contenedores respectivos ya creados*/
   function studentsByGenerations() {
-    var students = data[sedes.value][generations.value]['students'];/* te devuelve un array de alumnos segun sede y generación*/
-    /* console.log(students);*/
-    var containerOfStudents = document.getElementById('students');
+    var students = data[sedes.value][generations.value]['students'];/* te devuelve un array de alumnos segun sede y generación, comprobandolo con console.log(students);*/
+    var containerOfStudents = document.getElementById('listOfStudents');
     containerOfStudents.innerHTML = '';
     for (var i = 0; i < students.length; i++) {
       students[i];
-      var copyStudentInfo = studentInfo.cloneNode(true);/* Este método devuelve un duplicado del nodo, true porque los hijos del nodo también deben ser clonados.*/
+      var copyStudentInfo = studentInfo.cloneNode(true);/* Este método devuelve un duplicado del nodo, (true) porque los hijos del nodo también deben ser clonados.*/
       copyStudentInfo.querySelector('.studentName').textContent = students[i]['name'];
       var containerOfScores = copyStudentInfo.querySelector('.studentScores');
       /* Creamos una condicional para obtener los scores de los sprints*/
@@ -152,27 +151,28 @@ function begin() {
     }
   }
 
-  /*  mediante esta función cambiaremos el contenido segun boton*/
+  /*  Mediante esta función se cambia el contenido segun pestaña elegida*/
   var addAndHide = function(event) {
     var tabSeleccionado = event.target.dataset.tabSelect;
     var overview = document.getElementById('overview');
     var students = document.getElementById('students');
     var teachers = document.getElementById('teachers');
 
-    if (tabSeleccionado === 'tabOverview') {
+    if (tabSeleccionado === 'tabOverview') {/* Desaperece las pestañas, excepto la de vista general*/
       students.style.display = 'none';
       teachers.style.display = 'none';
       overview.style.display = 'block';
-    } else if (tabSeleccionado === 'tabStudents') {
+    } else if (tabSeleccionado === 'tabStudents') {/* Desaperece las pestañas, excepto la de estudiantes*/
       students.style.display = 'block';
       teachers.style.display = 'none';
       overview.style.display = 'none';
-    } else if (tabSeleccionado === 'tabTeachers') {
+    } else if (tabSeleccionado === 'tabTeachers') {/* Desaperece las pestañas, excepto la de profesores*/
       students.style.display = 'none';
       teachers.style.display = 'block';
       overview.style.display = 'none';
     }
   };
+
   /*  En esta función obtenemos los botones y le agregamos un evento a cada uno mediante un for, el evento se desencadena mediante un click y permitira que aparezca el contenido solicitado*/
   var changeArticle = function() {
     var btns = document.getElementsByClassName('tab');
@@ -186,6 +186,7 @@ function begin() {
   sedes.onchange = function(event) {
     genSelect(event.target.value);/*  event.target.value obtiene el valor de la sede*/
   };
+
   /*  Funcion para que al seleccionar una sede cambie las generaciones en base a cada sede*/
   function genSelect(sede) {
     var textSelect = document.getElementById('text-select');
@@ -193,7 +194,7 @@ function begin() {
     generations.textContent = '';
     generations.appendChild(textSelect);
     for (var i = 0; i < datagene.length; i++) {
-      var option = document.createElement('option');
+      var option = document.createElement('option');/* Se crea una etiqueta <option> por cada generación que encuentre segun la sede*/
       option.textContent = datagene[i];
       generations.appendChild(option);
     }

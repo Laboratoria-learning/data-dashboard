@@ -53,9 +53,8 @@ header {
   background-color: #434343;
 }
 
-/* todo este bloque desaparece*/
 #menuD ul {
-  display: none;
+  display: none; /* Hace que todo este bloque desaparezca*/
   list-style: none;
   margin-right: 868px;
   min-width: 40px;
@@ -64,7 +63,8 @@ header {
   z-index: 100;
 }
 
-#menuD:hover>ul{
+ /* Al aplicar hover permite que todo este bloque aparezca al pasar el mouse*/
+#menuD:hover>ul {
   display: block;
 }
 
@@ -177,7 +177,7 @@ button:hover {
  font-weight: 600;
 }
 
-/*Estilos al primera pestaña Visión general*/
+/* ESTILOS DE LA PRIMERA PESTAÑA VISION GENERAL*/
 article {
   background-color: black;
   padding-top: 260px;
@@ -246,26 +246,67 @@ p{
   float: right;
 }
 
+/* ESTILOS DE LA SEGUNDA PESTAÑA ESTUDIANTES*/
+.search-box {
+  background-color: #E1E1E1;
+  border: 1px solid #e6ecf0;
+  font-size: 12px;
+  padding: 8px 32px 8px 12px;
+  text-align: center;
+}
+
+.search-box input {
+  font-size: 20px;
+  height: 40px;
+  outline: none;
+  padding-left: 13px;
+  width: 500px;
+}
+
+.fa-search {
+  cursor: pointer;
+  display: inline-block;
+  height: 26px;
+  padding-right: 476px;
+  position: absolute;
+  padding-top: 7px;
+  right: 0;
+  width: 26px;
+}
+
+.studentInfo {
+  background-color:#E1E1E1;
+  border-radius: 0.5em;
+  box-shadow: 5px 5px 10px grey;
+  color: black;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 414px;
+  width: 500px;
+}
+
+.studentPhoto img {
+  height: 200px;
+  width: 200px;
+}
+
+/* ESTILOS DE LA TERCERA PESTAÑA PROFESORES*/
 #teachers {
   text-align: center;
 }
 
 .box-t {
+  box-shadow: 0 0 1em gold;
   display: inline-block;
   margin: 22px;
-  box-shadow: 0 0 1em gold;
 }
 
 #teachers figure img {
-  width: 200px;
   height: 200px;
+  width: 200px;
 }
 
 .box-t a{
   color: white;
   text-decoration: none;
-}
-
-.studentInfo {
-  color: white;
 }
