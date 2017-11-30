@@ -94,7 +94,7 @@ function showAlumn() {
         //Ingles
       var englishSkill = document.createElement('p');
       englishSkill.textContent = 'INTERM';
-      englishSkill.classList.add('note');
+      //englishSkill.classList.add('note');
       englishSkill.classList.add('noteM');
       divNote.appendChild(englishSkill);
       var skillE = document.createElement('span');
@@ -102,6 +102,11 @@ function showAlumn() {
       skillE.classList.add('skill');
       skillE.classList.add('skillE');
       divNote.appendChild(skillE);
+      //Perfil
+      var profile = document.createElement('p');
+      profile.textContent = 'Ver perfil';
+      skillE.classList.add('skill');
+      div.appendChild(profile);
     }
 
   }

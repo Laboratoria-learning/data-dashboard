@@ -186,7 +186,7 @@ a:active {
   margin-top: 10px;
   margin-left: 10px;
   position: relative;
-  bottom: 80px;
+  bottom: 100px;
 }
 
 .note {
@@ -227,5 +227,13 @@ a:active {
 }
 
 .noteM {
-  margin-right: 17px;
+  background-color: #f7f7f7;
+  font-size: 18px;
+  position: absolute;
+  top: 22px;
+  right: 20px;
+}
+
+.perfile {
+  position: absolute;
 }
