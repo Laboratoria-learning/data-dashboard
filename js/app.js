@@ -20,33 +20,6 @@ window.addEventListener('load', function() {
     }
   }
   
-
-  // -creando funcion para el total de estudiantes activos y desactivos-porcentaje de total de desertores
-  function students(sede, generation, students) {
-    var studentAct = 0;
-    var studentInac = 0;
-    var total = 0;
-    var Student = data[sede][generation][students];
-    for (var i = 0; i < Student.length; i++) {
-      if (Student[i].active) {
-        studentAct = studentAct + 1;
-      } else if (Student[i].active === false) {
-        studentInac = studentInac + 1;
-      }
-      total = studentAct + studentInac;
-    }
-
-    var porcentaje = Math.round((studentInac * 100) / total);
-
-    console.log('hay ' + total);
-    console.log('Las alumnas activas son: ' + studentAct);
-    console.log('las alumnas retiradas son: ' + studentInac);
-    console.log('Las alumnas retiratas representan el ' + porcentaje + ' %');
-  }
- 
-  // console.log(students('AQP', '2016-2', 'students'));
-
-
   var sede = document.getElementById('sede');
   var generation = document.getElementById('generation');
   var sed = '';
@@ -71,16 +44,17 @@ window.addEventListener('load', function() {
       }
       total = studentAct + studentInac;
     }
-    // Obteniendo el porcentaje de desertores
+    // Obteniendo el porcentaje de desertoras
     var porcentaje = (Math.round((studentInac * 100) / total) + ' %');
     
-    
+    // navegando por el DOM
     var register = document.getElementById('TotStudents');
     var perStudentInac = document.getElementById('percentaje');
     register.textContent = students.length;
     perStudentInac.textContent = porcentaje;
     perStudentInac.style.color = 'red';
   }
+
 
   toggleTab(tabs);
 });
