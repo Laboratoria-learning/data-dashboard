@@ -4,7 +4,7 @@ window.addEventListener('load', function() {
   var containerStudents = document.getElementById('total-students');
   var totalNps = document.getElementById('total-nps');
   selection.addEventListener('change', showGenerations);
-  function showGenerations() {
+  function showGenerations(event) {
     /* seleccionando cada option de lista despegable*/
     var options = selection.value;
     /* se convierte a un array para obtener la data de sede y generaciones*/
@@ -21,40 +21,41 @@ window.addEventListener('load', function() {
     /* obteniendo datos por sede-generacion*/
     var siteGeneration = data[site][generation];
     console.log(siteGeneration);
-    /* creando un texto*/
+    /* analizando el total de estudiantes*/
     var totalStudents = siteGeneration.students.length;
     containerStudents.innerHTML = '# de studiantes inscritos' + '</br>' + totalStudents;
     /* analizando el NPS*/
     var result = 0;
+    /* recorriendo el elemento ratings para obtner el nps*/
     for (i = 0; i < siteGeneration.ratings.length;i++) {
       var promoters = siteGeneration.ratings[i].nps.promoters;
       var passive = siteGeneration.ratings[i].nps.passive;
       var detractors = siteGeneration.ratings[i].nps.detractors;
       result = result + (promoters - detractors);
       /* console.log(result)*/
-      var percentage = parseInt(((result / siteGeneration.ratings.length) * 100) / 100) + '%';
+      var percentage = ((result / siteGeneration.ratings.length) * 100) / 100 ;
+      /* considerando solo dos decimales */
+      percentage.toFixed(2) + ' % ';
       /* console.log(percentage);*/
     }
-    /*incorporando el porcentaje del nps*/
-    totalNps.textContent = percentage;
+    /* incorporando el porcentaje del nps*/
+    totalNps.innerHTML = '% NPS' + '<br>' + percentage ;
+    /*analizando el */
   }
 
-
-/*menu derecho*/
-var bars = document.getElementById('bars');
-bars.addEventListener('click', showMenu);
-function showMenu() {
-var options = document.getElementById('options-menu');
-if(options.classList.contains('disabled-menu')){
-  options.classList.remove('disabled-menu');
-  options.classList.add('enabled-menu');
-}
-else{
-  options.classList.remove('enabled-menu');
-  options.classList.add('disabled-menu');
-}
-}
-bars.addEventListener('click', showMenu);
-// Puedes hacer uso de la base de datos a través de la variable `data`
-console.log(data);
+  /* menu derecho*/
+  var bars = document.getElementById('bars');
+  bars.addEventListener('click', showMenu);
+  function showMenu(event) {
+    var options = document.getElementById('options-menu');
+    if (options.classList.contains('disabled-menu')) {
+      options.classList.remove('disabled-menu');
+      options.classList.add('enabled-menu');
+    } else {
+      options.classList.remove('enabled-menu');
+      options.classList.add('disabled-menu');
+    }
+  }
+  bars.addEventListener('click', showMenu);
+  console.log(data);
 });
