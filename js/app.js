@@ -44,16 +44,15 @@ var studentSatisfac = document.getElementById('student-satisfaction');
 //Teacher Rating
 var teacherRated = document.getElementById('teacher-rating');
 
-//Jedi Rated 
+//Jedi Rated
 var jediRated = document.getElementById('JediMaster-rating');
 
 //Eventos del nav
 var navStudents = document.getElementById('estudiantes');
 var containerStudents = document.getElementsByClassName('container-students')[0];
 
+//Sedes
 
-
-//Sedes 
 //AQP, CDMX, LIM, SCL
 function selectSede () {
   var firstPromAqp = document.getElementById('form-aqp').children[0].firstChild;
@@ -87,7 +86,7 @@ function selectSede () {
         firstPromCdmx.checked = false;
         firstPromScl.checked = false;
         firstPromAqp.checked = false;
-      } 
+      }
       createSelect(selectTech);
       createSelect(selectHse);
       techSkills();
@@ -102,7 +101,7 @@ function selectSede () {
       drawChartTech();
     })
   }
-} 
+}
 //Promos
 //2016-2 2017-1 2017-2
 function selectPromo() {
@@ -119,7 +118,7 @@ function selectPromo() {
       createSelect(selectHse);
       techSkills();
       softSkills();
-      studentSatisfaction(); 
+      studentSatisfaction();
       teacherRating();
       jediMaster();
       createStudents();
@@ -168,7 +167,7 @@ function achievement () {
       totalTech += techNote;
       totalHse += hseNote;
     }
-    
+
     if(totalTech/sprintsNumber >= 1260 && totalHse/sprintsNumber >= 840) {
       studentsAchieve ++;
     } else {
@@ -201,7 +200,7 @@ function nps () {
 }
 nps();
 
-//Select Sprint Tech 
+//Select Sprint Tech
 function createSelect (select) {
   var sprints = dataStudents[sede][promo].ratings.length;
   while (select.firstChild) {
@@ -224,7 +223,7 @@ function selectSprintTech () {
   techSkills();
   console.log (currentSprintTech);
   return currentSprintTech;
-  }) 
+  })
   return currentSprintTech;
 }
 
@@ -237,7 +236,7 @@ function selectSprintHse () {
   softSkills();
   console.log (currentSprintHse);
   return currentSprintHse;
-  }) 
+  })
   return currentSprintHse;
 }
 
@@ -252,7 +251,7 @@ function techSkills () {
       var techNote = dataStudents[sede][promo].students[i].sprints[currentSprintTech-1].score.tech;
       if (techNote >= 1260){
         techBigger++;
-      } 
+      }
     }
   }
   techSprintNote.textContent = techBigger;
@@ -270,7 +269,7 @@ function softSkills () {
       var hseNote = dataStudents[sede][promo].students[i].sprints[currentSprintHse-1].score.hse;
       if (hseNote >= 840){
         hseBigger++;
-      } 
+      }
     }
   }
   hseSprintNote.textContent = hseBigger;
@@ -294,7 +293,7 @@ function studentSatisfaction () {
   studentSatisfac.textContent = Math.round( number *10 )/10 + ' %';
 }
 
-studentSatisfaction(); 
+studentSatisfaction();
 
 //Teacher Rating
 
@@ -484,7 +483,7 @@ function createStudents() {
       containerSoftSkills.appendChild(softSkillsSingle);
       containerSoftSkills.classList.add('container-soft');
     }
-    
+
   }
 }
 createStudents();
