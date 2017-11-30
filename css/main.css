@@ -15,23 +15,23 @@
     text-transform: uppercase;
 }
 
- header {
+header {
     width: 100%; 
     height: 120px; 
- }
+}
 
- .logo {
+.logo {
      width: 15%;
      height: 20px;
      margin: 0 auto;
- }
+}
 
- .logo img {
+.logo img {
      padding-top: 10px;
      width: 100%;
- }
+}
 
- #menu {
+#menu {
      font-size: 30px;
      float: left;
      margin-top: 10px;
@@ -103,50 +103,10 @@
     margin-left: 170px;
  }
 
- /*Estilo del modal de sedes*/
-
- /*
- #sedes-container {
-    position: fixed; 
-    width: 550px; 
-    height: 450px; 
-    top: 0; 
-    left: 150px; 
-    font-family: sans-serif; 
-    font-size: 12px; 
-    font-weight: normal; 
-    border: none; 
-    background-color: #fff; 
-    color: #a1a0a0;
-    overflow: scroll;
- }
-
- .select {
-     margin: 10px 20px 0;
-     display: inline-block;
-     width: 15px;
-     height: 15px;
-     border: 1px solid orange;
- }
-
- .sede-name {
-     margin-top: 5px;
-     display: inline-block;
- }
-
- hr {
-     background: orange;
-     width: 70%;
-     margin-top: 10px;
-     margin-left: 20px;
- }
-
- .container {
-     margin-top: 20px;
- } */
 
 /*Estilo del usuario */
 section.user {
+    float: left;
     width: 20%;
     /*outline: 1px solid red; */
     font-family: sans-serif;
@@ -156,6 +116,7 @@ section.user {
 div.user-name {
     text-align: center;
 }
+
 section.user img {
     width: 30%;
     height: 30%;
@@ -251,15 +212,15 @@ div.home:hover, div.tables:hover, div.calendar:hover, div.out:hover {
 }
 .part2, .part3{
     width: 90%;
-    height: 553px;
-    margin-top: 65px;
+    height: 200px;
+    margin-top: 20px;
     background-color: #ffffff;
-    margin-left: 60px;
+    margin-left: 50px;
 }
 
 .part1 div, .part4 div, .part5 div{
     width: 42%;
-    height: 400px;
+    height: 200px;
 }
  /* Estilos para los box  donde iran los datos*/
 .part1 .box, .part2 .box, .part3 .box, .part4 .box, .part5 .box{

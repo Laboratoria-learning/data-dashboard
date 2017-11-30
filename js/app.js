@@ -109,7 +109,98 @@ window.addEventListener('load', function(event) {
     
     nps();
   }
+  /* Funcion para el  rendimiento hse-tech */
+  function hscTech(event) {
+    if (event.target === sede || event.target === semestre) {
+      var alumnas = data[sede.value][semestre.value].students;
+      var sprints = data[sede.value][semestre.value].ratings.length;
+      var alumnasInscritas = 0;
+      var superaAlumnas = 0;
+      for (var i = 0; i < alumnas.length; i++) {
+        if (alumnas[i]['active'] === true) {
+          alumnasInscritas++;
+          var sumHsc = 0;
+          var sumTech = 0;
+          var superaTech = 0;
+          var superaHse = 0;
+          for (var j = 0; j < sprints; j++) {
+            sumTech = sumTech + alumnas[i].sprints[j].score.tech;
+            if (alumnas[i].sprints[j].score.tech > 1260) {
+              superaTech++;
+            }
+            sumHse = sumHsc + alumnas[i].sprints[j].score.hse;
+            if (alumnas[i].sprints[j].score.hse > 840) {
+              superaHse++;
+            }
+          }
+          var tech1 = Math.floor(sumTech / sprints);
+          var hse1 = Math.floor(sumHsc / sprints);
+          if (tech1 > 1260 && hse1 > 840) {
+            superaAlumnas++;
+          }
+        }
+      }
+      var tech2 = superaTech / sprints;
+      var hsc2 = superaHse / sprints;
+      document.getElementById('supera').textContent = superaAlumnas;
+      document.getElementById('porcentaje').textContent = Math.round((superaAlumnas / alumnasInscritas) * 100) * 10 / 10 + '%';
+    }
+  }
+  function satisfaction(event) {
+    if (event.target === sede || event.target === semestre) {
+      var divSatisfaction = document.getElementById('satis1');
+      var total = 0;
+      var totalSatisfaccion = 0;
+      for (var i in contentData['ratings']) {
+        var byTotalCumple = 0;
+        var byTotalSupera = 0;
+        var ratingS = contentData['ratings'][i];
+        byTotalCumple += ratingS['student']['cumple'];
+        byTotalSupera += ratingS['student']['supera'];
+        console.log(byTotalCumple);
+        console.log(byTotalSupera);
+        total = byTotalCumple + byTotalSupera;
+        totalSatisfaccion += total;
+      }
+      /* for (var indiceSprint in contentData['ratings'][i]) {
+      var sprint = contentData['sprints'][indiceSprint];
+      console.log(sprint);
+      }*/
+ 
+      console.log(totalSatisfaccion);
+      divSatisfaction.innerHTML = totalSatisfaccion;
+    }
+  }
+  function achievement(event) {
+    if (event.target === sede || event.target === semestre) {
+      // Llenando datos del ACHIEVEMENT
+      /* op3 - N° de students que superan la meta de puntos en promedio de los sprints(70%) del total de puntos en HSE y en tech.*/
+      /* op4 - El porcentaje que representa el dato anterior en relación al total de estudiantes.*/
+      var ach1 = document.getElementById('ach1');
+      var ach2 = document.getElementById('ach2');
+ 
+      console.log(' Estudiantes: ');
+      var totalTotal = 0;
+      console.log(contentData['students']);
+      for (var indiceStudent in contentData['students']) {
+        var student = contentData['students'][indiceStudent];
+        console.log(' Estudiante: ' + student['name']);
+        console.log(student);
+        var totalByStudent = 0;
+        for (var indiceSprint in student['sprints']) {
+          var sprint = student['sprints'][indiceSprint];
+          console.log(' Sprint number: ' + sprint['number']);
+          console.log(sprint);
+          totalByStudent += sprint['score']['tech'];
+        }
+        console.log('Total del alumno: ' + student['name'] + '=' + totalByStudent);
+        totalTotal += totalByStudent;
+      }
+      ach1.innerHTML = totalTotal;
+    }
+  }
 
+ 
   function nps(event) {
     if (sede === sede || event.target === semestre) {
       var ratings = data[sede.value][semestre.value].ratings;
