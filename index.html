@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="assets/icons/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -11,7 +12,7 @@
     <header>
       <!--Logo-->
       <figure>
-        <img src="assets/images/logo-laboratoria.svg" alt="logo-laboratoria">
+        <img class="logo"src="assets/images/logo-laboratoria.svg" alt="logo-laboratoria">
       </figure>
     </header>
 
@@ -63,7 +64,7 @@
         <div class="sub-boxList">2017-II <input class="promo prom-cdmx" type="radio" name="gender" value="2017-2"> </div>
       </form>
     </section>
-    
+
     <!--usuario-->
     <section >
       <div class="profile">
@@ -94,13 +95,11 @@
         <!--icono de barra-->
       </ul>
     </nav>
-
-
+<!--Estadisticas -->
     <section class="stats">
-      <!--Estadisticas -->
 
       <div class="sub-box">
-        <h2>Enrollment</h2>
+        <h2 class="sub-text">Enrollment</h2>
         <div class="sub-box-content">
           <span class="containerStyle" id="total-act"></span>
           <span class="box-text"># students currently enrolled</span>
@@ -113,7 +112,7 @@
       </div>
 
       <div class="sub-box">
-        <h2>Achievement</h2>
+        <h2 class="sub-text">Achievement</h2>
         <div class="sub-box-content">
           <span class="containerStyle" id="students-tar"></span>
           <span class="box-text"># students that meet the target</span>
@@ -126,7 +125,7 @@
       </div>
 
       <div class="sub-box">
-        <h2>Net Promoter Score</h2>
+        <h2 class="sub-text">Net Promoter Score</h2>
         <div class="sub-box-content">
           <span class="containerStyle color" id="net-score"></span>
           <span class="box-text"> cumulative nps</span>
@@ -175,7 +174,7 @@
           <!--Aca va el grafico-->
         </div>
         <div class="sub-box">
-          <h2>Student Satisfaction</h2>
+          <h2 class="sub-text">Student Satisfaction</h2>
           <div class="sub-box-content content-2">
             <span class="containerStyle" id="student-satisfaction"></span>
             <span class="box-text text-2">Meeting or exceeding expextations (cumulative)</span>
@@ -187,7 +186,7 @@
           <!--Aca va el grafico-->
         </div>
         <div class="sub-box">
-          <h2>Teacher Rating</h2>
+          <h2 class="sub-text">Teacher Rating</h2>
           <div class="sub-box-content content-2">
             <span class="containerStyle" id="teacher-rating"></span>
             <span class="box-text">Overall teacher rating (cumulative)</span>
@@ -195,7 +194,7 @@
              <!--Aca va el grafico-->
         </div>
         <div class="sub-box">
-          <h2>Jedi Master Rating</h2>
+          <h2 class="sub-text">Jedi Master Rating</h2>
           <div class="sub-box-content content-2">
             <span class="containerStyle color" id="JediMaster-rating"></span>
             <span class="box-text">Overall Jedi rating (cumulative)</span>
@@ -206,12 +205,25 @@
 
     <!--especializacion de estudiantes -->
     <section class="students ocultar">
+
       <div class="box-container">
         <h3>SPECIALIZATION</h3>
+        <div>
+          <input class="btn"type="button" name="" value=""> Javascript
+        </div>
+        <div>
+        <input class="btn" type="button" name="" value=""> UX Design
+        </div>
+        <div>
+          <input class="btn" type="button" name="" value=""> Front end Designer
+        </div>
+
       </div>
+
       <div class="bar-search">
        <i class="fa fa-search" aria-hidden="true"></i>
       </div>
+
       <div class="container-students">
 
       </div>
