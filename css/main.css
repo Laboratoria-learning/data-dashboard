@@ -1,4 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+}
+
+main {
+  background-color: #f7f7f7;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  margin-bottom: 20px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+section {
+  padding-top: 50px;
+}
+
+section:last-child {
+  padding-bottom: 50px;
+}
+
+figure {
+  margin: 5px 0;
+  display: inline-block;
+}
+
+figure .brand {
+  width: 180px;
+}
+
+.menu-principal {
+  display: inline-block;
+  cursor: pointer;
+}
+.efect {
+  color: black;
+}
+.nav {
+  text-align: center;
+  overflow: auto;
+}
+
+.nav span {
+  float: right;
+  margin: 20px 0;
+}
+
+h1 {
+  display: inline-block;
+  font-size: 25px;
+  margin: 20px 0px 20px 0;
+}
+
+.container {
+  width: 1300px;
+  margin: auto;
+}
+
+.menu {
+  background-color: #E0E0E0;
+}
+
+.submenu .subtitle {
+  display: inline-block;
+  margin-right: 30px;
+  margin: 10px 10px 5px 0;
+  padding-right: 7px;
+}
+
+.active {
+  border-bottom: 5px solid #ffca00;
+}
+
+i.icon {
+  font-size: 25px;
+  margin-left: 10px;
+}
+
+.data-div {
+  background-color: #fff;
+}
+
+.content-data {
+  background: #fff;
+}
+
+.data-div .content-data .num {
+  display: block;
+  text-align: center;
+  font-size: 25px;
+}
+
+.data-div .content-data .text {
+  font-size: 11px;
+  display: block;
+  text-align: center;
+  margin: 9px 0;
+  color: gray;
+}
+
+.overview .data-div {
+  width: 370px;
+  vertical-align: top;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+.content-center {
+  display: flex;
+  justify-content: center
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.overview .data {
+  background-color: #f7f7f7;
+  width: 150px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 15px;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+  font-weight: 800;
+}
+
+.flex {
+  display: flex;
+}
+
+.select {
+  display: inline-block;
+  border-bottom: 1px solid black;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.gray {
+  color: gray;
+}
+
+.tech-skills {
+  width: 100%;
+}
 /*
  * Estilos de tu proyecto
  */
