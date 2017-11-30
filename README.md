@@ -12,6 +12,7 @@ Es crear un web interactiva, de complejidad media, que muestre los datos y el pe
 * Se realizó el UX de la web
 * Se maquetado
 * Se programo su interacción con JavaScript
+* Se insertó gráficos estadísticos.
 
 ### Requerimientos
 
