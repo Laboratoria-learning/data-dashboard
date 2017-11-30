@@ -46,6 +46,11 @@ body {
 /*ESTILOS PARA SECCIÓN STUDENTS*/
 .students-tab {
   position: relative;
+  display: none;
+}
+
+.showTab {
+  display: block;
 }
 
 /*Estilos para el contenedor div .specialization*/
