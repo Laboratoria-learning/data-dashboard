@@ -110,7 +110,7 @@ function generation(event) {
   totalPointsJedi.textContent = totalJedi;
   totalPointsTeacher.textContent = totalTeacher;
   indiceSatisfaction += ((satisfaction.cumple + satisfaction.supera) / 2);
-  percentSatisfaction.textContent = indiceSatisfaction;
+  percentSatisfaction.textContent = indiceSatisfaction + '%';
   // debugger
   students = data[SEDE][GEN].students;
   // var totalPointHse = 0;
