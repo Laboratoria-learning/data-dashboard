@@ -28,12 +28,29 @@
          <div class="information">
             <select name="selection-located" id="selection-located">
                 <option  value="4">ELIGE UNA SEDE</option>
-                <option value="lim" id="lim">LIMA</option>
-                <option value="0">2015-I</option>
-                <option value="aqp"id="aqp">AREQUIPA</option>
-                <option value="cl" id="cl">SANTIAGO DE CHILE</option>
-                <option value="cdmx"id="cdmx">CIUDAD DE MEXICO</option>
-              </select>
+                <option value="lim" id="lim" class="located">LIMA</option>
+                <option value="2016-II" id="generation">2016-II</option>
+                <option value="2017-I"id="generation">2017-I</option>
+                <option value="2017-II"id="generation">2017-II</option>
+                <option value="aqp"id="aqp"class="located">AREQUIPA</option>
+                <option value="2016-II"id="generation">2016-II</option>
+                <option value="2017-I"id="generation">2017-I</option>
+                <option value="cl" id="cl"class="located">SANTIAGO DE CHILE</option>
+                <option value="2016-II"id="generation">2016-II</option>
+                <option value="2017-I"id="generation">2017-I</option>
+                <option value="2017-II"id="generation">2017-II</option>
+                <option value="cdmx"id="cdmx"class="located">CIUDAD DE MEXICO</option>
+                <option value="2016-II"id="generation">2016-II</option>
+                <option value="2017-I"id="generation">2017-I</option>
+                <option value="2017-II"id="generation">2017-II</option>
+            </select>
+              <!-- <select id="selection-located" class="selection-located" name="">
+                 <option value="">Sede</option>
+             </select> -->
+ <!-- Generaciones -->
+             <!-- <select id="generation" class="generation" name="">
+                 <option value="">Generación</option>
+             </select> -->
          <section class="options">
            <ul class="list-option">
              <li><input type="button" name="button-bar" data-tab-seleccionado="OVERVIEW" class="tab" value="OVERVIEW"></input></li>
@@ -51,42 +68,48 @@
            <div class="content-1">
              <div class="first-box">
                <div class="tit-box">ENROLLMENT</div>
-                <div class="box-enrolled">
-                  <div id="container-enrolled" class="students-currenly-up" ><strong>20</strong></div>
-                  <span class="students-currenly">#STUDENTS CURRENTLY ENROLLED</span>
-                </div>
-                <div class="box-deserte">
-                  <div id="container-deserte"></div>
-                  <span class="dropout">% DROPOUT</span>
-                </div>
+               <div class="container-box">
+                 <div class="box1">
+                   <div id="container-enrolled" class="students-currenly-up" ><strong>20</strong></div>
+                   <span class="students-currenly">#STUDENTS CURRENTLY ENROLLED</span>
+                 </div>
+                 <div class="box2">
+                   <div id="container-deserte"></div>
+                   <span class="dropout">% DROPOUT</span>
+                 </div>
+               </div>
                <div class="img-box1"><img src="assets/images/bar-graph.png" alt="bargraph" class="img-box1"></div>
              </div>
            </div>
              <div class="second-box">
                <div class="tit-box">ACHIEVEMENT</div>
-               <div class="box-enrolled">
-                  <div id="container-enrolled" class="students-currenly-up" ><strong>105</strong></div>
-                  <span class="students-currenly">#STUDENTS THAT MEET THE TARGET</span>
-                </div>
-                <div class="box-deserte">
-                  <div id="container-deserte"></div>
-                  <span class="dropout">% OF TOTAL</span>
-                </div>
+               <div class="container-box">
+                 <div class="box1">
+                    <div id="point" class="students-currenly-up" ><strong>105</strong></div>
+                    <span class="students-currenly">#STUDENTS THAT MEET THE TARGET</span>
+                  </div>
+                  <div class="box2">
+                    <div id="container-deserte"></div>
+                    <span class="dropout">% OF TOTAL</span>
+                  </div>
+               </div>
                <div class="img-box1"><img src="assets/images/graph.png" alt="graph" class="img-box1"></div>
              </div>
              <div class="third-box">
                 <div class="tit-box">NET PROMOTER SCORE</div>
-                <div class="box-enrolled">
-                    <div id="container-enrolled" class="students-currenly-up" ><strong>78%</strong></div>
-                    <span class="students-currenly">% CUMULATIVE NPS</span>
-                  </div>
-                  <div class="box-deserte">
-                    <div id="container-deserte"></div>
-                    <span class="dropout">60 % Promoters <br>10 % Detractors</span>
-                  </div>
+                <div class="container-box">
+                  <div class="box1">
+                      <div id="container-enrolled" class="students-currenly-up" ><strong>78%</strong></div>
+                      <span class="students-currenly">% CUMULATIVE NPS</span>
+                    </div>
+                    <div class="box2">
+                      <div id="container-deserte"></div>
+                      <span class="dropout">60 % Promoters <br>10 % Detractors</span>
+                    </div>
+                </div>
                 <div class="img-box1"><img src="assets/images/graph2.jpg" alt="graph" class="img-box1"></div>
               </div>
-          </div>  
+          </div>
           <div class="second-file">
             <div class="tech">
                 <p><strong>TECH SKILLS</strong></p>
