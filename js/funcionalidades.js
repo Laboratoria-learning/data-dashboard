@@ -1,22 +1,22 @@
-//Cambia de tags al hacer click
+// Cambia de tags al hacer click
 var listbox = document.getElementById('listbox');
 var students = document.getElementById('students');
 var graphic = document.getElementById('graphics');
 var teacher = document.getElementById('teachers');
 
-function viewSections(event){
+function viewSections(event) {
   var tags = event.target.dataset.tag;
-  if (tags == 'first'){
+  if (tags == 'first') {
     students.style.display = 'none';
     teacher.style.display = 'none';
     listbox.style.display = 'block';
     graphic.style.display = 'block';
-  } else if (tags == 'second'){
+  } else if (tags == 'second') {
     listbox.style.display = 'none';
     graphic.style.display = 'none';
     teacher.style.display = 'none';
     students.style.display = 'block';
-  } else if (tags == 'third'){
+  } else if (tags == 'third') {
     listbox.style.display = 'none';
     graphic.style.display = 'none';
     teacher.style.display = 'block';
@@ -24,11 +24,11 @@ function viewSections(event){
   }
 }
 
-function loadPage(){
+function loadPage() {
   listbox.style.display = 'none';
   teacher.style.display = 'none';
   var tabs = document.getElementsByClassName('tab');
-  for (i = 0; i < tabs.length; i++){
+  for (i = 0; i < tabs.length; i++) {
     tabs[i].addEventListener('click', viewSections);
   }
 }
@@ -110,7 +110,6 @@ function estadoDeObjetivoAlcanzado(sede, generacion, sprint) {
   arrayEstadoPuntajeSprint.push(cantidadObjetivoNoAlcanzado);
   return arrayEstadoPuntajeSprint;
 }
-
 /* devuelve un array con todas las notas de los 4 sprint de todas las alumnas por sede/generacion*/
 function notasTodosSprint(sede, generacion) {
   var alumnas = data[sede][generacion]['students'];
@@ -128,7 +127,7 @@ function notasTodosSprint(sede, generacion) {
   TotalArray = [notasSprintArray0, notasSprintArray1, notasSprintArray2, notasSprintArray3];
   return TotalArray;
 }
- notasTodosSprint('AQP', '2016-2');
+notasTodosSprint('AQP', '2016-2');
 /* devuelve un array que contiene la cantidad de alumnas que superaron la meta por generación en todos los sprints*/
 function contadorMetaPorSprint(sede, generacion) {
   var arrayNotasGen = notasTodosSprint(sede, generacion);

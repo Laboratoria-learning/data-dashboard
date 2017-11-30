@@ -10,6 +10,7 @@ window.addEventListener('load', function() {
    
     // Establece una llamada que se ejecuta cuando la API es cargada.
     google.charts.setOnLoadCallback(drawEstadoEstudiante);
+    google.charts.setOnLoadCallback(drawcontadorMetaPorSprint);
     google.charts.setOnLoadCallback(drawChart2);
     google.charts.setOnLoadCallback(drawChart3);
     google.charts.setOnLoadCallback(drawChart4);
@@ -35,6 +36,25 @@ window.addEventListener('load', function() {
         'is3D': true
       };
       var chart = new google.visualization.PieChart(document.getElementById('draw-estadoEstudiantes'));
+      chart.draw(data, options);
+    }
+    function drawcontadorMetaPorSprint()  {
+      // Crea los datos del gráfico.
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Topping');
+      data.addColumn('number', 'cantidad');
+      data.addRows([
+        ['S1',contadorMetaPorSprint(sede, generacion)[0]],
+        ['S2', contadorMetaPorSprint(sede, generacion)[1]],
+        ['S3',contadorMetaPorSprint(sede, generacion)[2]],
+        ['S4',contadorMetaPorSprint(sede, generacion)[3]]
+      ]);
+      var options = {'title': 'Meta por Sprint',
+        'width': 500,
+        'height': 400,
+        'is3D': true
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById('meta-sprint'));
       chart.draw(data, options);
     }
     
