@@ -39,7 +39,7 @@ window.addEventListener('load', function(event) {
       }
     }
   }
-/* Funcion para jalar data de alumnas inscritas y desercion por sede   */
+  /* Funcion para jalar data de alumnas inscritas y desercion por sede   */
   function inscritas(event) {
     if (event.target === sede || event.target === semestre) {
       var alumnas = data[sede.value][semestre.value].students;
@@ -106,13 +106,53 @@ window.addEventListener('load', function(event) {
       averageContainerJedi.appendChild(averageTextJedi);
       box.appendChild(averageContainerJedi);
     }
-   
+    
+    nps();
   }
 
-  
+  function nps(event) {
+    if (sede === sede || event.target === semestre) {
+      var ratings = data[sede.value][semestre.value].ratings;
+      console.log(ratings);
+      var students = data[sede.value][semestre.value].students;
+      var totalStudents = students.length;
+      console.log(totalStudents);
+      var arrSprints = [];
+      for (var i = 0; i < ratings.length; i++) {
+        var promoters = ratings[i]['nps']['promoters'];
+        console.log(promoters); // 97, 81, 87
+        var detractors = ratings[i]['nps']['detractors'];
+        console.log(detractors);
+        var sprints = ratings[i]['sprint'];
+        console.log(sprints); // 1 , 2 : me da el número de sprint
+        arrSprints.push(sprints);
+        console.log(arrSprints);
+      }
+      /* Aplicando la fórmula 
+      [Promoters] = [Respuestas 9 o 10] / [Total respuestas] * 100
+      [Passive] = [Respuestas 7 u 8] / [Total respuestas] * 100
+      [Detractors] = [Respuestas entre 1 y 6] / [Total respuestas] * 100
 
+      [NPS] = [Promoters] - [Detractors] */  
 
-
+      var numberOfSprints = arrSprints.length;
+      console.log(numberOfSprints);
+      // var averagePromoters = ((promoters / totalStudents) * 100);
+      // console.log(averagePromoters);
+      // var averageDetractors = ((detractors / totalStudents) * 100);
+      // console.log(averageDetractors);
+      var averageNps = ((Math.round((promoters - detractors) / numberOfSprints)) * 100) / 100 + '%';
+      console.log(averageNps);
+    }
+    var npsContainer = document.getElementById('nps-container');
+    /* Creando nodo te texto */
+    var averageTextNps = document.createTextNode(averageNps);
+    console.log(averageTextNps); 
+    var npsTextContainer = document.createElement('h4');
+    /* Insertando el texto a h4 */
+    npsTextContainer.appendChild(averageTextNps);
+    npsContainer.appendChild(npsTextContainer);
+  }
 
   var students = document.getElementById('students');
   students.addEventListener('click', function(event) {
@@ -172,16 +212,6 @@ window.addEventListener('load', function(event) {
     buttonRemove.classList.add('remove');
   });
   
-  /*
-  select.addEventListener('click', function showSedes(event) {
-    var select = document.getElementById('select');
-    // Agregar funcion para mostrar la data al select
-    select.addEventListener('change', function(event) {
-      if (select.value === 'Lima-2016-1') {
-        alert('hola');
-      }  
-    }); 
-  }); */
 
   teachers.addEventListener('click', function showData(event) {
     // Creando el contenedor del promedio de los Teachers.
@@ -211,55 +241,3 @@ window.addEventListener('load', function(event) {
     titleJedi.classList.add('average-title');
   });
 });
-
-/* AREQUIPA*/
-var sedeArequipa = 'AQP';
-var generacion1 = '2016-2';
-var generacion2 = '2017-1';
-
-for (var sede in data) {
-  if (sede == sedeArequipa) {
-    for (var semestre1 in data[sede]) {
-      if (semestre1 == generacion1) {
-        console.log(data[sede][semestre1].students);
-      }
-    }
-  }
-}
-for (var sede in data) {
-  if (sede == sedeArequipa) {
-    for (var semestre2 in data[sede]) {
-      if (semestre2 == generacion2) {
-        console.log(data[sede][semestre2].students);
-      }
-    }
-  }
-}
-
-for (var sede in data) {
-  if (sede == sedeArequipa) {
-    for (var semestre1 in data[sede]) {
-      if (semestre1 == generacion1) {
-        let array = data[sede][semestre1].ratings;
-        for (var i = 0; i < array.length; i++) {
-          console.log(array[i]);
-        }
-      }
-    }
-  }
-}
-for (var sede in data) {
-  if (sede == sedeArequipa) {
-    for (var semestre1 in data[sede]) {
-      if (semestre1 == generacion1) {
-        let array = data[sede][semestre1].ratings;
-        for (var i = 0; i < array.length; i++) {
-          console.log('sprint ->' + array[i]['sprint']);
-          console.log(array[i]['nps']);
-          console.log('Jedi ->' + array[i]['jedi']);
-        }
-      }
-    }
-  }
-}
-console.log(data.LIM.students);
