@@ -22,6 +22,14 @@ var cdmx171 = document.getElementById('cdmx171');
 var previous = divRegion;
 var numberBoxStudents = document.getElementById('number-box-students');
 var studentsDropout = document.getElementById('students-dropout');
+var cumulativeNpsBox = document.getElementById('cumulative-nps-box');
+var promotersBox = document.getElementById('promoters-box');
+var passiveBox = document.getElementById('passive-box');
+var detractorsBox = document.getElementById('detractors-box');
+var region;
+var promotion;
+var POINTMAX = 2100;
+
 window.addEventListener('load', function() {
   divRegion.addEventListener('click', showAllRegions);
   lima.addEventListener('click', optionsLima);
@@ -32,10 +40,12 @@ window.addEventListener('load', function() {
   // aqp171.addEventListener('click', optionsaqp171);
   chile.addEventListener('click', optionsChile);
   mexico.addEventListener('click', optionsMexico);
-  var region = lim172.dataset.region;
-  var promotion = lim172.dataset.promotion;
+  region = lim172.dataset.region;
+  promotion = lim172.dataset.promotion;
   showMain(region, promotion);
+  cumulativeNps(region,promotion);
 });
+
 function showAllRegions() {
   // ulRegion.classList.toggle('hidden');
   ulRegion.classList.toggle('hidden');
@@ -50,32 +60,38 @@ function paintOptions(option, previous) {
   if (option !== previous)
     previous.classList.remove('yellow');
 }
-/*
-function options(optionRegion, index) {
-  // paintOptions(optionRegion, previous);
-  previous = optionRegion;
-  showRegion();
-  ul[index].classList.toggle('hidden');
+function showMain(region, promotion) {
+  showTotalStudents(region, promotion);
+
 }
-*/
 function optionsLima() {
   paintOptions(lima, previous);
   previous = lima;
   ulLim.classList.toggle('hidden');
 }
+
 function optionslim172() {
+  region = lim172.dataset.region;
+  promotion = lim172.dataset.promotion;
   paintOptions(lim172, previous);
   previous = lim172;
-  var region = lim172.dataset.region;
-  var promotion = lim172.dataset.promotion;
   showMain(region, promotion);
+  showTotalStudents(region, promotion);
+  cumulativeNps(region,promotion);
+  // showOverGoal(region, promotion);
 }
+
 function optionslim171() {
+  region = lim171.dataset.region;
+  promotion = lim171.dataset.promotion;
   paintOptions(lim171, previous);
   previous = lim171;
-  var region = lim171.dataset.region;
-  var promotion = lim171.dataset.promotion;
+  region = lim171.dataset.region;
+  promotion = lim171.dataset.promotion;
   showMain(region, promotion);
+  showTotalStudents(region, promotion);
+  cumulativeNps(region,promotion);
+  // showOverGoal(region, promotion);
 }
 function optionslim162() {
   paintOptions(lim162, previous);
@@ -96,65 +112,93 @@ function optionsMexico() {
   previous = mexico;
   ulCdmx.classList.toggle('hidden');
 }
-function showMain(region, promotion) {
-  showTotalStudents(region, promotion);
-}
+/* Funnción para determinar estudiantes actuales y que desertaron*/
 function showTotalStudents(region, promotion) {
   var current = 0;
   var deserted = 0;
-  console.log('region '+region+' promotion '+promotion );
-  var sedeRegion = region;
-  var generation = promotion;
-  for (var regionData in data) {
-    if (regionData === sedeRegion) {
-      for (var promo in data [regionData]) {
-        if (promo === generation) {
-          for (var students in data [regionData][promo]) {
-            if (students === 'students') {
-              for (var eachStudent in data [regionData][promo][students]) {
-                var active = data[sedeRegion][promo][students][eachStudent]['active'];
-                (active) ? current++ : deserted++;
-              }
-            }
-          }
+
+  for (var students in data [region][promotion]) {
+    if (students === 'students') {
+      for (var eachStudent in data [region][promotion][students]) {
+        var active = data[region][promotion][students][eachStudent]['active'];
+        (active) ? current++ : deserted++;
+      }
+    }
+  }
+  drawTotalStudents(current, deserted);
+
+  numberBoxStudents.textContent = current;
+  numberBoxStudents.classList.toggle('number-box-int');
+  studentsDropout.textContent = parseFloat(deserted/(current + deserted)*100).toFixed(0) + '%';
+}
+
+function cumulativeNps(region, promotion) {
+var promoters = 0;
+var detractors = 0;
+var arrayNps=[];
+var arrayPromoters=[];
+var arrayDetractors=[];
+var arrayPassive=[];
+var totalNps = 0;
+var totalPromoters = 0;
+var totalDetractors = 0;
+var totalPassive = 0;
+var ratings = data[region][promotion]['ratings'];
+for(var i = 0; i<ratings.length; i++) {
+  arrayPromoters[i] = ratings[i]['nps']['promoters'];
+  arrayDetractors[i] = ratings[i]['nps']['detractors'];
+  arrayPassive[i] = ratings[i]['nps']['passive'];
+  arrayNps[i] = ratings[i]['nps']['promoters']+ratings[i]['nps']['detractors'];
+}
+for(var i = 0; i<arrayNps.length; i++ ) {
+  totalPromoters = totalPromoters + arrayPromoters[i];
+  totalDetractors = totalPromoters + arrayDetractors[i];
+  totalPassive = totalPromoters + arrayPassive[i];
+  totalNps = totalNps + arrayNps[i];
+}
+totalNps = parseInt(totalNps / arrayNps.length) + '%';
+totalPromoters = parseInt(totalPromoters / arrayPromoters.length) + '%';
+totalDetractors = parseInt(totalDetractors / arrayDetractors.length) + '%';
+totalPassive = parseInt(totalPassive / arrayPassive.length) + '%';
+
+cumulativeNpsBox.textContent = totalNps;
+cumulativeNpsBox.classList.add('number-box-int');
+promotersBox.textContent = totalPromoters;
+detractorsBox.textContent = totalDetractors;
+passiveBox.textContent = totalPassive;
+}
+/*
+function showOverGoal(region, promotion) {
+  var students = data[region][promotion]['students'];
+  var nsprint;
+  var hse;
+  var tech;
+  var scoresTotal;
+  var count=0;
+  var sprintTotal=[];
+  for (var i = 0; i < students.length; i++) {
+    if (students[i]['active']) {
+      var sprint = students[i]['sprints'];
+      for (var j = 0; j < sprint.length;j++) {
+        nsprint = sprint[j]['number'];
+        hse = sprint[j]['score']['hse'];
+        tech = sprint[j]['score']['tech'];
+        scoresTotal = hse+tech;
+        if(scoresTotal>=2100) {
+          sprintTotal[i][j]=scoresTotal;
+          console.log("nsprint"+nsprint);
+          console.log(scoresTotal);
+          console.log("sprintTotal[i][j]"+sprintTotal[i][j]);
         }
       }
     }
-    numberBoxStudents.textContent = current;
-    numberBoxStudents.classList.toggle('number-box-int');
-    studentsDropout.textContent = parseFloat(deserted/(current + deserted)*100).toFixed(0) + '%';
-    drawTotalStudents(current, deserted);
-  }
-  console.log("current" + current + "deserted" + deserted);
-// Obtener a quien elijo
-// LIM172 = data.LIM['2017-2'];
-// Pasar parametro para obtener ya datos estadisticos*/
-}
 
-function sowOverGoal(rgion,promotion) {
-  var meet = 0;
-  var falis = 0;
-  for (var regionData in data) {
-    if (regionData === sedeRegion) {
-      for (var promo in data [regionData]) {
-        if (promo === generation) {
-          for (var students in data [regionData][promo]) {
-            if (students === 'students') {
-              for (var eachStudent in data [regionData][promo][students]) {
-                var active = data[sedeRegion][promo][students][eachStudent]['active'];
-
-                (active) ? current++ : deserted++;
-              }
-            }
-          }
-        }
-      }
-    }
-    numberBoxStudents.textContent = current;
-    numberBoxStudents.classList.toggle('number-box-int');
-    drawTotalStudents(current, deserted);
   }
-}
+  console.log(count);
+} */
+/* Función para */
+
+
 /*************************GRAFICOS************/
 function drawTotalStudents(current, deserted) {
   google.charts.load('current', {'packages':['corechart']});
@@ -171,7 +215,7 @@ function drawTotalStudents(current, deserted) {
       'colors': ['#109618', '#dc3912'],
       'width': 320,
       'height': 150 };
-    var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+    var chart = new google.visualization.PieChart(document.getElementById('chart_div_enrollment'));
     chart.draw(dataTest, options);
   }
 }
