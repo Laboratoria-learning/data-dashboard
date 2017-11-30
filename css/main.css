@@ -4,32 +4,19 @@ body{
   text-align: center;
 }
 header{
-  padding-top: 5%;
-  height: auto;
-  margin: 0;
-  outline: 1px solid green;
+  outline: 1px solid blue;
+  height: 50px;
   width: 100%;
-  overflow: auto;
-  position: fixed;
-  z-index: 1000;
   display: block;
 }
 header span{
-  padding-left: 2%;
-  outline: 1px solid blue;
-  float: left;
-  font-size: 200%;
-  font-weight: bolder;
-  display: inline;
+  outline: 1px solid red;
   font-family: 'Pacifico', cursive;
   color: #f7b617;
 }
 img{
-  width: 15%;
-  position: relative;
-  right: 10%;
+ width: 15%;
   outline: 1px solid red;
-  margin-top: 0.5%;
 }
 #list_sedes{
   text-align: center;
@@ -40,13 +27,6 @@ img{
   text-align: center;
   width: 100%;
   background-color: #19BA76;
-}
-.space{
-  padding-top: 50px;
-  outline: 1px solid blue;
-  height:50px;
-  display: block;
-  width: 100%;
 }
 .sede{
   font-size: 18px;
