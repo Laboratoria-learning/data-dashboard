@@ -19,14 +19,7 @@ window.addEventListener('load', function() {
       /* this.classList.add('red');*/
     }
   }
-
-  var selection = document.getElementById('select');
-  var options = document.getElementById('options');
-  selection.addEventListener('click', selectSedeGen);
-
-  function selectSedeGen() {
-    options.classList.toggle('hiden');
-  }
+  
 
   // -creando funcion para el total de estudiantes activos y desactivos-porcentaje de total de desertores
   function students(sede, generation, students) {
@@ -40,7 +33,6 @@ window.addEventListener('load', function() {
       } else if (Student[i].active === false) {
         studentInac = studentInac + 1;
       }
-
       total = studentAct + studentInac;
     }
 
@@ -51,13 +43,29 @@ window.addEventListener('load', function() {
     console.log('las alumnas retiradas son: ' + studentInac);
     console.log('Las alumnas retiratas representan el ' + porcentaje + ' %');
   }
+ 
+  // console.log(students('AQP', '2016-2', 'students'));
 
-  console.log(students('AQP', '2016-2', 'students'));
 
-  var box1 = document.getElementById('box1');
-  var total = document.createElement('h2');
-  box1.appendChild(total);
-  total.textContent = students('AQP', '2016-2', 'students');
+  var sede = document.getElementById('sede');
+  var generation = document.getElementById('generation');
+  var sed = '';
+  var gen = '';
+  students = {};
+  generation.addEventListener('change', selectSedeGen);
+ 
+  function selectSedeGen(event) {
+    sed = sede.value;
+    gen = generation.value;
+    students = data[sed][gen].students;
+
+
+
+    
+    var register = document.getElementById('TotStudents');
+    var perStudentInac = document.getElementById('percentaje');
+    register.textContent = students.length;
+  }
 
   toggleTab(tabs);
 });
