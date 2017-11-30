@@ -6,7 +6,11 @@
 /*var selectData = document.getElementById('select-data');
 var content = document.getElementById('number').innher*/
 
-
+var SEDE = Object.key(data)
+for (var i=0;i<=SEDE.length;i++)
+{
+  SEDE[i]
+}
 
 /*Opcion que accede a el numero de alumnas de AQP*/
 var objetoAQP = data.AQP;
