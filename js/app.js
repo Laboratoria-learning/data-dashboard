@@ -6,31 +6,6 @@
 
 console.log(data);
 
-// función que devuelve alumnas en total, alumnas activas, alumnas retiradas y porcentaje de retiradas.
-
-var total;
-var countActive = 0;
-var countInActive = 0;
-function countStudentActive(sede, generation, students) {
-  var sedeLab = data[sede][generation][students];
-  for (var i = 0; i < sedeLab.length; i++) {
-    if (sedeLab[i].active) {
-      countActive = countActive + 1;
-    } else if (sedeLab[i].active === false) {
-      countInActive = countInActive + 1;
-    }
-
-    total = countActive + countInActive;
-    countActive = countActive;
-    countInActive = countInActive;
-  }
-
-  var porcentaje = parseInt((countInActive * 100) / total);
-  // console.log('Son ' + total + '. Las alumnas activas son: ' + countActive + '. y las alumnas retiradas son: ' + countInActive + '\n Las alumnas retiratas representan el ' + porcentaje + '%');
-}
-
-// countStudentActive('AQP', '2016-2', 'students');
-
 
 // Función que devuelve alumans qye pasan promedio de puntajes y el porcentaje que representan.
 
@@ -46,11 +21,6 @@ function achievement(sede,generation){
 // console.log('Las alumnas que superan el puntaje promedio son: ' + totalSupera + ' Y representan el: ' + count + '%');
 }
 
-// achievement('AQP','2016-2');
-// achievement('AQP', '2017-1');
-// achievement('CDMX', '2017-1');
-// achievement('CDMX', '2017-2');
-
 // función para promedio NPS de todos los sprints
 
 function nps(sede,generation){
@@ -62,20 +32,6 @@ function nps(sede,generation){
   }
 }
 
-nps('AQP', '2016-2');
-// function satisfaction(sede,generation){
-//   var count = 0;
-//   var numberRatings = data[sede][generation]['ratings'];
-//   for (var i = 0; i < numberRatings.length; i++) {
-//     var promoterStudent = numberRatings[i]['nps']['promoters'];
-//    count = count + promoterStudent;
-//    var averagePromoters=parseInt(count/numberRatings.length)
-//     }
-//     console.log(averagePromoters);
-//     }
-//     satisfaction('AQP','2016-2');
-
-// función que devuelve cantidad de alumna por sede y generación.
 
 var sedeSelected = document.getElementById('select-sede');
 var generationSelected = document.getElementById('select-generation');
@@ -133,8 +89,43 @@ function inscription(event) {
   alumSatisfied.textContent = satisfied();
   alumSatisfied.setAttribute('class', 'number');
   
-};
+  // función que devuelve el promedio de la evaluación de los maestros
+  var sumEvaluation = 0;
 
-//función para  verificar el porcentaje de estudiantes satisfechas con la experiencia de Laboratoria.
+  function averageTeacher(){
+    ratings = data[sede][gen].ratings;
+    for (var i = 0; i < ratings.length; i++) {
+      console.log(ratings[i]['teacher']);
+      sumEvaluation = sumEvaluation + ratings[i]['teacher'];
+    }
+
+    var averageEvaluation = sumEvaluation/ratings.length;
+    return averageEvaluation.toFixed(1);
+  }
+  
+  var evaluationTeacher = document.getElementById('eva-teacher');
+  evaluationTeacher.textContent = averageTeacher();
+  evaluationTeacher.setAttribute('class', 'number');
+  
+  // función que devuelve el promedio de la evaluación de los jedi master
+
+  function averageJedi(){
+    ratings = data[sede][gen].ratings;
+    for (var i = 0; i < ratings.length; i++) {
+      console.log(ratings[i]['jedi']);
+      sumEvaluation = sumEvaluation + ratings[i]['jedi'];
+    }
+
+    var averageEvaluation = sumEvaluation / ratings.length;
+    return averageEvaluation.toFixed(1);
+    }
+
+    var evaluationTeacher = document.getElementById('eva-teacher');
+    evaluationTeacher.textContent = averageTeacher();
+    evaluationTeacher.setAttribute('class', 'number');
+  };
+
+
+// función que devuelve puntuación promedio de las profesor@s
 
 
