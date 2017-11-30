@@ -1,48 +1,13 @@
 // /*
 //  * Funcionalidad de tu producto
 //  */
+// // Puedes hacer uso de la base de datos a través de la variable `data
 
-<<<<<<< HEAD
-// // Puedes hacer uso de la base de datos a través de la variable `data`
-// window.onload = function() {
-// }
-// var sede = getElementsByClassName('sede');
-
-// var selectProm= document.getElementsByClassName('promocion')
-// var selectSprint= document.getElementsByClassName('sprint')
-// console.log(data['AQP']['2017-1']['students'].length);
-
-// var sede1 = data['AQP']['2017-1']['students']['active'];
-// var sede2 = data['AQP']['2016-2']['students'];
-// google.charts.load('current', {'packages':['corechart']});
-// google.charts.setOnLoadCallback(drawChart);
-
-// function drawChart() {
-
-//   var data = google.visualization.arrayToDataTable([
-//     ['Generacion','Porcentaje'],
-//     ['2017', sede1],
-//     ['2016', sede2]]);
-
-//   var options = {
-//     title: 'Alumnas'
-//   };
-//   var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-//   chart.draw(data, options);
-// }     
-// var retiradas = data['AQP']['2017-1']['students'] 
-// function begin () {
-//   var selectSede= document.getElementsByClassName('sede');
-//   var selectProm= document.getElementsByClassName('promocion')
-//   var selectSprint= document.getElementsByClassName('sprint')
-// }
-=======
 // Puedes hacer uso de la base de datos a través de la variable `data`
 window.addEventListener('load', begin);
 
 function begin() {
-  debugger;
+  // debugger;
   var selectLocal = document.getElementById('local');
   var selectPromo = document.getElementById('promo');
   var selectSprint = document.getElementById('sprint');
@@ -51,7 +16,8 @@ function begin() {
 
   selectLocal.addEventListener('change', fillPromos);
   selectPromo.addEventListener('change', fillSprints);
-  document.addEventListener('change', studentsOverview);
+  document.addEventListener('change', infoOverview);
+  document.addEventListener('change', infoSprint);
 
   // Para llenar el combo de promos
   function fillPromos(event) {
@@ -72,29 +38,27 @@ function begin() {
 
   // Llenar combo de sprints
   function fillSprints(event) {
-    debugger;
+    // debugger;
     // currentLocal = selectLocal.value;
     // currentPromo = selectPromo.value;
     var sprints = data[selectLocal.value][selectPromo.value].ratings.length;
     selectSprint.innerHTML = '';
     for (var i = sprints; 0 < i; i--) {
       var optionSprint = document.createElement('option');
-      optionSprint.value = 'Sprint ' + (i);
+      optionSprint.value = i;
       optionSprint.textContent = 'Sprint ' + (i);
       selectSprint.appendChild(optionSprint);
     }
   }
 
-  function studentsOverview(event) {
-    if (event.target === selectLocal || event.target === selectPromo || event.target === selectSprint) {
+  function infoOverview(event) {
+    if (event.target === selectLocal || event.target === selectPromo) {
       var students = data[selectLocal.value][selectPromo.value].students;
       var sprints = data[selectLocal.value][selectPromo.value].ratings.length;
       var currentStudents = 0;
       var dropoutStudents = 0;
       var overcomeStudents = 0;
-
-      // Meta de puntos Tech 1260
-      // Meta de punstos HSE 840
+      // Meta de puntos Tech 1260    Meta de punstos HSE 840
 
       // Contar actuales y retiradas
       for (var i = 0; i < students.length; i++) {
@@ -104,10 +68,18 @@ function begin() {
           // Para tener promedios
           var techSum = 0;
           var hseSum = 0;
+          var techTarget = 0;
+          var hseTarget = 0;
           // Sacar promedio de tech y hse
           for (var j = 0; j < sprints; j++) {
             techSum += students[i].sprints[j].score.tech;
+            if (students[i].sprints[j].score.tech > 1260) {
+              techTarget++;
+            }
             hseSum += students[i].sprints[j].score.hse;
+            if (students[i].sprints[j].score.hse > 840) {
+              hseTarget++;
+            }
           }
           var techAvrg = Math.floor(techSum / sprints);
           console.log(techAvrg);
@@ -120,19 +92,59 @@ function begin() {
           dropoutStudents++;
         }
       }
-
-      // Mostrar los datos en documnto
+      var techTargetAvrg = techTarget / sprints;
+      console.log(techTargetAvrg);
+      var hseTargetAvrg = hseTarget / sprints;
+      console.log(hseTargetAvrg);
+      // Mostrar los datos en documento
       document.getElementById('current-students').textContent = currentStudents;
       document.getElementById('dropout').textContent = Math.round((dropoutStudents / students.length) * 100) * 10 / 10 + '%';
       document.getElementById('overcome-avrg').textContent = overcomeStudents;
       document.getElementById('overcome-percent').textContent = Math.round((overcomeStudents / currentStudents) * 100) * 10 / 10 + '%';
+      document.getElementById('tech-target-avrg').textContent = techTargetAvrg;
+      document.getElementById('hse-target-avrg').textContent = hseTargetAvrg;
     }
   }
 
-  // studentsCount('LIM', '2016-2');
-  // studentsCount('CDMX', '2017-1');
+  function infoSprint(event) {
+    debugger;
+    var students = data[selectLocal.value][selectPromo.value].students;
+    // Estudiantes que superan el 70% por sprint
+    var techTarget = 0;
+    var hseTarget = 0;
+    for (var i = 0; i < students.length; i++) {
+      if (students[i].sprints[selectSprint.value - 1] !== undefined && students[i].sprints[selectSprint.value - 1].score.tech > 1260) {
+        techTarget++;
+      }
+      if (students[i].sprints[selectSprint.value - 1] !== undefined && students[i].sprints[selectSprint.value - 1].score.hse > 840) {
+        hseTarget++;
+      }
+    }
+    document.getElementById('tech-target-sprint').textContent = techTarget;
+    document.getElementById('hse-target-sprint').textContent = hseTarget;
+
+    var ratings = data[selectLocal.value][selectPromo.value].ratings;
+    document.getElementById('teachers-avrg').textContent = ratings[selectSprint.value - 1].teacher;
+    document.getElementById('jedi-avrg').textContent = ratings[selectSprint.value - 1].jedi;
+    var reachExp = ratings[selectSprint.value - 1].student.cumple + ratings[selectSprint.value - 1].student.supera;
+    document.getElementById('satisfaction-percent').textContent = reachExp + '%';
+  }
 };
->>>>>>> b0616beaf1c1594ef85219069b9828d5f5f565a5
+
+function openPage(evnt, opt) {
+  var i, tabContent, menus;
+  tabContent = document.getElementsByClassName('tabContent');
+  for (i = 0; i < tabContent.length; i++) {
+    tabContent[i].style.display = 'none';
+  }
+  menus = document.getElementsByClassName('menus');
+  for (i = 0; i < menus.length; i++) {
+    menus[i].className = menus[i].className.replace('active', '');
+  }
+  document.getElementById(opt).style.display = 'block';
+  evnt.currentTarget.className += 'active';
+}
+document.getElementById('default').click();
 
 // Superan expectativas exp Laboratoria
 var ratings = data[selectLocal.value][selectPromo.value].ratings;
@@ -155,37 +167,6 @@ var sede2 = data['AQP']['2016-2']['students'];
 //     ['2017', sede1],
 //     ['2016', sede2]]);
 
-<<<<<<< HEAD
-// console.log(data.AQP['2016-2'].students[1].active);
-
-
-function openPage(evnt, opt) {
-  var i, tabContent, menus;
-  tabContent = document.getElementsByClassName('tabContent');
-  for (i = 0; i < tabContent.length; i++) {
-    tabContent[i].style.display = 'none';
-}
-  menus = document.getElementsByClassName('menus');
-  for (i = 0; i < menus.length; i++) {
-    menus[i].className = menus[i].className.replace('active', '');  
-}    
-  document.getElementById(opt).style.display = 'block';
-  evnt.currentTarget.className += 'active';
-}
-  document.getElementById('default').click();
-
-
-
-
-
-
-
-
-
-
-
-
-=======
 //   var options = { title: 'Alumnas' };
 
 //   var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -193,4 +174,3 @@ function openPage(evnt, opt) {
 //   chart.draw(data, options);
 // }
 // fin grafico
->>>>>>> b0616beaf1c1594ef85219069b9828d5f5f565a5

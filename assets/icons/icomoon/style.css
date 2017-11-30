@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?moys0c');
-  src:  url('fonts/icomoon.eot?moys0c#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?moys0c') format('truetype'),
-    url('fonts/icomoon.woff?moys0c') format('woff'),
-    url('fonts/icomoon.svg?moys0c#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?zc5yrn');
+  src:  url('fonts/icomoon.eot?zc5yrn#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?zc5yrn') format('truetype'),
+    url('fonts/icomoon.woff?zc5yrn') format('woff'),
+    url('fonts/icomoon.svg?zc5yrn#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -36,9 +36,6 @@
 .icon-download:before {
   content: "\e94c";
 }
-.icon-facebook:before {
-  content: "\e955";
-}
 .icon-file:before {
   content: "\e958";
 }
@@ -57,9 +54,6 @@
 .icon-minus-circle:before {
   content: "\e985";
 }
-.icon-percent:before {
-  content: "\e994";
-}
 .icon-pie-chart:before {
   content: "\e99c";
 }
@@ -75,8 +69,11 @@
 .icon-slack:before {
   content: "\e9b9";
 }
-.icon-twitter:before {
-  content: "\e9d2";
+.icon-star:before {
+  content: "\e9bf";
+}
+.icon-thumbs-up:before {
+  content: "\e9c9";
 }
 .icon-users:before {
   content: "\e9de";

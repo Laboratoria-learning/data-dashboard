@@ -40,34 +40,6 @@
     <!-- Contenido principal -->
     <main>
       <div id="filter-section">
-<<<<<<< HEAD
-          <select name="sede"> 
-              <option value="Arequipa">Arequipa</option>
-              <option value="lima">Lima</option>
-              <option value="Santiago">Santiago</option>
-              <option value="Ciudad">Ciudad de México</option> 
-            </select> 
-            <select name="promocion" onChange="javascript:alert('prueba');"> 
-              <option value="20172">2017 - II</option>
-              <option value="20171">2017 - I</option>      <option value="20162">2016 - II</option>
-              <option value="20161">2016 - I</option>
-            </select> 
-            <select name="sprint"> 
-              <option value="sprint1">Sprint 1</option>
-              <option value="sprint2">Sprint 2</option>
-              <option value="sprint3">Sprint 3</option>
-              <option value="sprint4">Sprint 4</option> 
-            </select>
-      </div>
-      <div class="content">
-          <button class="menus" onclick="openPage(event, 'overview')" id="default">OVERVIEW</button>
-          <button class="menus" onclick="openPage(event, 'students')">STUDENTS</button>
-    </div>
-
-      <section id="container"> 
-        <section id="overview" class="tabContent">
-            <div id="students-overview">
-=======
         <select id="local" name="sede">
           <option value="LIM">Lima</option>
           <option value="AQP">Arequipa</option>
@@ -80,15 +52,19 @@
           <option value="2016-2">2016-1</option>
         </select> 
         <select id="sprint" name="sprint"> 
-          <option value="sprint2">Sprint 2</option>
-          <option value="sprint1">Sprint 1</option> 
+          <option value="2">Sprint 2</option>
+          <option value="1">Sprint 1</option> 
         </select>
       </div>
-
+      <!-- Pestañas de visualizacion -->
+      <div class="content">
+        <button class="menus" onclick="openPage(event, 'overview')" id="default">OVERVIEW</button>
+        <button class="menus" onclick="openPage(event, 'students')">STUDENTS</button>
+      </div>
+      <!-- Con -->
       <section id="container">
-        <section id="overview">
+        <section id="overview" class="tabContent">
             <div id="enrollment-overview">
->>>>>>> b0616beaf1c1594ef85219069b9828d5f5f565a5
               <pre class="icon-users"></pre>
               <h4>ALUMNAS</h4>
               <div class="info">
@@ -118,15 +94,15 @@
               </div>
             <div id="tech-skills" class="big-box">
               <div>
-                <pre class="icon-github"></pre>
-                <h4>TECH</h4>
+                <pre class="icon-file"></pre>
+                <h4>SUPERAN META DE PUNTOS TECH</h4>
                 <div class="info">
-                  <span id="overcome-percent">50%</span>
-                  <h5>del total de alumnas inscritas</h5>
+                  <span id="tech-target-avrg">50</span>
+                  <h5>alumnas en promedio</h5>
                 </div>
                 <div class="info">
-                  <span id="overcome-percent">50%</span>
-                  <h5>del total de alumnas inscritas</h5>
+                  <span id="tech-target-sprint">4</span>
+                  <h5>alumnas en este sprint</h5>
                 </div>
               </div>
               <div class="graphic">
@@ -136,30 +112,45 @@
             <div id="life-skills" class="big-box">
               <div>
                 <pre class="icon-heart"></pre>
-                <h4>HSE</h4>
+                <h4>SUPERAN META DE PUNTOS HSE</h4>
                 <div class="info">
-                  <span id="overcome-percent">50%</span>
-                  <h5>del total de alumnas inscritas</h5>
+                  <span id="hse-target-avrg">50</span>
+                  <h5>alumnas en promedio</h5>
                 </div>
                 <div class="info">
-                  <span id="overcome-percent">50%</span>
-                  <h5>del total de alumnas inscritas</h5>
+                  <span id="hse-target-sprint">2</span>
+                  <h5>alumnas en este sprint</h5>
                 </div>
               </div>
               <div class="graphic">
-                <p>hola</p>
+                
               </div>
             </div>
-            <div id="satisfaction">
+            <div id="satisfaction" class="single">
+              <pre class="icon-thumbs-up"></pre>
               <h4>EXPERIENCIA LABORATORIA</h4>
+              <div class="info">
+                  <span id="satisfaction-percent">94%</span>
+                  <h5>de alumnas satisfechas</h5>
+              </div>
             </div>
-            <div id="students-avrg">
-              <h4>PROMEDIO PROFESORES</h4>
+            <div class="single">
+                <pre class="icon-github"></pre>
+                <h4>PUNTUACIÓN PROFESORES</h4>
+                <div class="info">
+                  <span id="teachers-avrg">3.2</span>
+                  <h5>puntos en promedio</h5>
+                </div>
             </div>
-            <div id="teachers-avrg">
-              <h4>PROMEDIO JEDI MASTERS</h4>
+            <div class="single">
+                <pre class="icon-star"></pre>
+                <h4>PUNTUACIÓN JEDI MASTERS</h4>
+                <div class="info">
+                  <span id="jedi-avrg">4.7</span>
+                  <h5>puntos en promedio</h5>
+                </div>
             </div>
-            <div id="jedi-avrg">
+            <div id="nps">
               <h4>NET PROMOTER SCORE</h4>
             </div>
           </div>
