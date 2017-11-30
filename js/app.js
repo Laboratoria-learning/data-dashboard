@@ -81,31 +81,15 @@ function netPromoterScore(sede, generation) {
 /** *****************************************************************************/
 
 // La cantidad y el porcentaje que representa el total de estudiantes que superan la meta de puntos de HSE en promedio y por sprint.
-function notaHse(sede, generation, sprints) {
-
-  var studentsGoalTechBySprint = [];
-  var studentsGoalTech = 0;
-  for (var i = 0; i < ratings.length; i++) {
-    studentsGoalTechBySprint[i] = 0;
+function notaHse(sede, generation) {
+  var ratings = data[sede][generation]['ratings'];
+  var array = [];
+  for (var i = 0 ; i < ratings.length; i++) {
+    array[i] = ratings[i].teacher;
   }
-  for (var i = 0; i < enrolled;) {
-    if (choiceProm['students'][i]['active'] === true) {
-      var sprints = choiceProm['students'][i]['sprints'];
-      var goalTechBySprint = 0;        
-      for (var j = 0; j < sprints.length; j++) {
-        var scoreTech = sprints[j]['score']['tech'];
-        goalTechBySprint += scoreTech; 
-        if (scoreTech >= 1260) {
-          studentsGoalTechBySprint[j]++;
-        }
-        if (goalTechBySprint >= 1260 * sprints.length) {
-          studentsGoalTech++;
-        }      
-      }
-    }
-    i++;
-  }
-  var targetTechPercentage = Math.round((studentsGoalTech * 100) / (studentsActive));
+  document.getElementById('total-enrollment').innerHTML = ratings;
+  document.getElementById('total-enrollment blue').innerHTML = array;
+  return array;
 }
 
-
+// notaHse('AQP', '2016-2')

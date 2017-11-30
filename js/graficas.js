@@ -15,6 +15,7 @@ window.addEventListener('load', function() {
     google.charts.setOnLoadCallback(drawChartEnrollment);
     google.charts.setOnLoadCallback(drawChartAchievement);
     google.charts.setOnLoadCallback(drawNetPromoterScore);
+    google.charts.setOnLoadCallback(drawChartNotaHse);
     // 1era gráfica de alumnas inscritas
     function drawChartEnrollment() {
       var data = new google.visualization.DataTable();
@@ -68,6 +69,26 @@ window.addEventListener('load', function() {
       };
     
       var chart = new google.visualization.ComboChart(document.getElementById('promote-graph'));
+      chart.draw(data, options);
+    }
+
+
+    function drawChartNotaHse() {
+      var data = google.visualization.arrayToDataTable([
+        ['cantidad', 'alumnas'],
+        ['2013', notaHse(sede, generation)[0]],
+        ['2014', notaHse(sede, generation)[1]],
+        ['2015', notaHse(sede, generation)[2]],
+        ['2016', notaHse(sede, generation)[3]]
+      ]);
+
+      var options = {
+        title: 'HSE',
+        hAxis: {title: 'sprints'},
+        vAxis: {minValue: 0}
+      };
+
+      var chart = new google.visualization.AreaChart(document.getElementById('tech-graph'));
       chart.draw(data, options);
     }
   });
