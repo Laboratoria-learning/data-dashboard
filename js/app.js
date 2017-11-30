@@ -2,7 +2,12 @@
 var sede = 'LIM';
 var promo = '2016-2';
 
-//var options = document.getElementsByTagName('option');
+//Navbar
+var navElem = document.getElementsByClassName('nav-li');
+var mainSection = document.getElementsByClassName('main-section');
+
+//variables
+var options = document.getElementsByTagName('option');
 var inputsSede = document.getElementsByClassName('sede');
 var inputsPromo = document.getElementsByClassName('promo');
 
@@ -407,17 +412,24 @@ function sprintsNoteHse(sp1b, sp1l, sp2b, sp2l, sp3b, sp3l, sp4b, sp4l) {
   }
 }
 
-//Estudiantes
-
-function navClick() {
-  navStudents.addEventListener('click',function(evento) {
-    evento.preventDefault();
-    document.getElementsByClassName('stats')[0].classList.add('ocultar');
-    document.getElementsByClassName('students')[0].classList.add('mostrar');
-    document.getElementsByClassName('students')[0].classList.remove('ocultar');
-  })
+//Funcion navegar
+function toggleSection (elem){
+  for (var i=0; i<elem.length; i++) {
+    elem[i].addEventListener('click', showSections);
+  }
 }
-navClick();
+function showSections(){
+  for(var i=0; i<mainSection.length; i++){
+    if(this.dataset.target === mainSection[i].dataset.target){
+      if(mainSection[i].classList.contains('ocultar')){
+        mainSection[i].classList.remove('ocultar');
+      }
+    } else{
+      mainSection[i].classList.add('ocultar');
+    }
+  }
+}
+toggleSection(navElem);
 
 //Crear studiantes
 function createStudents() {
@@ -425,35 +437,39 @@ function createStudents() {
     containerStudents.removeChild(containerStudents.firstChild);
   }
   for (var i = 0; i < dataStudents[sede][promo].students.length; i++) {
-    var singleStudent = document.createElement('div');
-    var studentImage = document.createElement('img');
-    var studentName = document.createElement('h2');
-    var containerTechSkills = document.createElement('div');
-    var containerSoftSkills = document.createElement('div');
-    var teckSkillsSingle = document.createElement('span');
-    var softSkillsSingle = document.createElement('span');
-    containerStudents.appendChild(singleStudent);
-    singleStudent.classList.add('single-student');
-    studentImage.src = dataStudents[sede][promo].students[i].photo;
-    studentName.textContent = dataStudents[sede][promo].students[i].name;
-    var promedioTech = 0;
-    var promedioHse = 0;
-    for (var j = 0; j < dataStudents[sede][promo].students[i].sprints.length; j++) {
-      var techNote = dataStudents[sede][promo].students[i].sprints.tech;
-      promedioTech += techNote;
-      var hseNote = dataStudents[sede][promo].students[i].sprints.hse;
-      promedioHse += hseNote;
+    if (dataStudents[sede][promo].students[i].active === true) {
+      var singleStudent = document.createElement('div');
+      var studentImage = document.createElement('img');
+      var studentName = document.createElement('h2');
+      var containerTechSkills = document.createElement('div');
+      var containerSoftSkills = document.createElement('div');
+      var teckSkillsSingle = document.createElement('span');
+      var softSkillsSingle = document.createElement('span');
+      containerStudents.appendChild(singleStudent);
+      singleStudent.classList.add('single-student');
+      studentImage.src = dataStudents[sede][promo].students[i].photo;
+      studentName.textContent = dataStudents[sede][promo].students[i].name;
+      var promedioTech = 0;
+      var promedioHse = 0;
+      var sprints = dataStudents[sede][promo].students[i].sprints.length
+      for (var j = 0; j < dataStudents[sede][promo].students[i].sprints.length; j++) {
+        var techNote = dataStudents[sede][promo].students[i].sprints[j].score.tech;
+        promedioTech += techNote;
+        var hseNote = dataStudents[sede][promo].students[i].sprints[j].score.hse;
+        promedioHse += hseNote;
+      }
+      teckSkillsSingle.textContent = Math.floor(((promedioTech/sprints)/1800)*100) + ' %';
+      softSkillsSingle.textContent = Math.floor(((promedioHse/sprints)/1200)*100) + ' %';
+      singleStudent.appendChild(studentImage);
+      singleStudent.appendChild(studentName);
+      singleStudent.appendChild(containerTechSkills);
+      singleStudent.appendChild(containerSoftSkills);
+      containerTechSkills.appendChild(teckSkillsSingle);
+      containerTechSkills.classList.add('container-tech');
+      containerSoftSkills.appendChild(softSkillsSingle);
+      containerSoftSkills.classList.add('container-soft');
     }
-    teckSkillsSingle.textContent = Math.floor((promedioTech/1800)*100) + ' %';
-    softSkillsSingle.textContent = Math.floor((promedioHse/1200)*100) + ' %';
-    singleStudent.appendChild(studentImage);
-    singleStudent.appendChild(studentName);
-    singleStudent.appendChild(containerTechSkills);
-    singleStudent.appendChild(containerSoftSkills);
-    containerTechSkills.appendChild(teckSkillsSingle);
-    containerTechSkills.classList.add('container-tech');
-    containerSoftSkills.appendChild(softSkillsSingle);
-    containerSoftSkills.classList.add('container-soft');
+    
   }
 }
 createStudents();

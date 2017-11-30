@@ -88,15 +88,15 @@
     <!--crear la lista desordenada-->
       <ul>
         <!--crear una lista para navegar con una nueva pestaña-->
-        <li><a href="#" id="estadisticas">Estadisticas</a></li>
-        <li><a href="#" id="promedios">Promedios</a></li>
-        <li><a href="#" id="estudiantes">Estudiantes</a></li>
+        <li><a href="#" class="nav-li" data-target="estadisticas">Estadisticas</a></li>
+        <li><a href="#" >Promedios</a></li>
+        <li><a href="#" class="nav-li" data-target="estudiantes">Estudiantes</a></li>
         <li><i class="fa fa-bars" aria-hidden="true"></i></li>
         <!--icono de barra-->
       </ul>
     </nav>
 <!--Estadisticas -->
-    <section class="stats">
+    <section class="stats main-section" data-target="estadisticas">
 
       <div class="sub-box">
         <h2 class="sub-text">Enrollment</h2>
@@ -204,7 +204,7 @@
     </section>
 
     <!--especializacion de estudiantes -->
-    <section class="students ocultar">
+    <section class="students ocultar main-section" data-target ="estudiantes">
 
       <div class="box-container">
         <h3>SPECIALIZATION</h3>
