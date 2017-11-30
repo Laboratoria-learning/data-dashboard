@@ -1,7 +1,7 @@
 window.addEventListener('load', function() {
   var selection = document.getElementById('selection');
   var contenidoSede = document.getElementById('contenido-sede');
-  
+
   var tabs = document.getElementsByClassName('tab');
   var contents = document.getElementsByClassName('content');
 
@@ -104,15 +104,35 @@ window.addEventListener('load', function() {
     approvedTech.textContent = totalStudentsTech;
     approvedTech.appendChild(div);
 
+    // Porcentaje que superan tech
+    var div = document.createElement('div');
+    var parrafo = document.createElement('p');
+    parrafo.textContent = '% estudiantes que superan la meta tech';
+    div.appendChild(parrafo);
+    div.classList.add('description');
+
+    averageTech.textContent = Math.floor((totalStudentsTech * 100) / totalStudents) + '%';
+    averageTech.appendChild(div);
+
     // Pasaron la meta hse
     var div = document.createElement('div');
     var parrafo = document.createElement('p');
-    parrafo.textContent = '# estudiantes que pasan la meta hse';
+    parrafo.textContent = '# estudiantes que superan la meta hse';
     div.appendChild(parrafo);
     div.classList.add('description');
 
     approvedHse.textContent = totalStudentsHse;
     approvedHse.appendChild(div);
+
+    // Porcentaje hse
+    var div = document.createElement('div');
+    var parrafo = document.createElement('p');
+    parrafo.textContent = '% estudiantes superan la meta hse';
+    div.appendChild(parrafo);
+    div.classList.add('description');
+    averageHse.textContent = Math.floor((totalStudentsHse * 100) / totalStudents) + '%';
+
+    averageHse.appendChild(div);
 
 
     // Pasaron la meta total 
