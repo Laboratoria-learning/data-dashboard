@@ -61,6 +61,7 @@ window.addEventListener('load', function() {
   // Consulta Sede
   function resultSede(sede, generation) {
     // creando contenedores de información General
+    var titleSede = document.createElement('p');
     var consultSede = document.createElement('div');
     var boxInfoGeneral = document.createElement('div');
     var boxRating = document.createElement('div');
@@ -114,7 +115,7 @@ window.addEventListener('load', function() {
     var optionTechS4 = document.createElement('option');
     var boxPercentageStudentTech = document.createElement('div');
     var boxNumberStudentTech = document.createElement('div');
-    var boxAverageTech = document.createElement('div');
+    
 
     // contenedores HSE
     var boxStudentHse = document.createElement('div');
@@ -127,7 +128,7 @@ window.addEventListener('load', function() {
     var optionHseS4 = document.createElement('option');
     var boxPercentageStudentHse = document.createElement('div');
     var boxNumberStudentHse = document.createElement('div');
-    var boxAverageHse = document.createElement('div');
+   
 
     // Contenedores  Teacher
     var boxTeacher = document.createElement('div');
@@ -180,16 +181,13 @@ window.addEventListener('load', function() {
     var descriptionNumberTech = document.createElement('p');
     var percentageTech = document.createElement('p');
     var descriptionTech = document.createElement('p');
-    var averageTech = document.createElement('p');
-    var descriptionAverageTech = document.createElement('p');
+    
 
     // elementos que contiene información de Student HSE
     var numberHse = document.createElement('p');
     var descriptionNumberHse = document.createElement('p');
     var percentageHse = document.createElement('p');
     var descriptionHse = document.createElement('p');
-    var averageHse = document.createElement('p');
-    var descriptionAverageHse = document.createElement('p');
 
 
     // elementos que contienen información de Teacher
@@ -240,13 +238,11 @@ window.addEventListener('load', function() {
     boxStudentTech.appendChild(selectTech);
     boxStudentTech.appendChild(boxNumberStudentTech);
     boxStudentTech.appendChild(boxPercentageStudentTech);
-    boxStudentTech.appendChild(boxAverageTech);
+    
     boxNumberStudentTech.appendChild(numberTech);
     boxNumberStudentTech.appendChild(descriptionNumberTech);
     boxPercentageStudentTech.appendChild(percentageTech);
     boxPercentageStudentTech.appendChild(descriptionTech);
-    boxAverageTech.appendChild(averageTech);
-    boxAverageTech.appendChild(descriptionAverageTech);
     selectTech.appendChild(optionTech);
     selectTech.appendChild(optionTechS1);
     selectTech.appendChild(optionTechS2);
@@ -258,13 +254,11 @@ window.addEventListener('load', function() {
     boxStudentHse.appendChild(selectHse);
     boxStudentHse.appendChild(boxNumberStudentHse);
     boxStudentHse.appendChild(boxPercentageStudentHse);
-    boxStudentHse.appendChild(boxAverageHse);
+    
     boxNumberStudentHse.appendChild(numberHse);
     boxNumberStudentHse.appendChild(descriptionNumberHse);
     boxPercentageStudentHse.appendChild(percentageHse);
     boxPercentageStudentHse.appendChild(descriptionHse);
-    boxAverageHse.appendChild(averageHse);
-    boxAverageHse.appendChild(descriptionAverageHse);
     selectHse.appendChild(optionHse);
     selectHse.appendChild(optionHseS1);
     selectHse.appendChild(optionHseS2);
@@ -316,12 +310,13 @@ window.addEventListener('load', function() {
     boxRating.appendChild(boxStudentSatisfaction);
     boxRating.appendChild(boxTeacher);
     boxRating.appendChild(boxJedi);
+    consultSede.appendChild(titleSede);
     consultSede.appendChild(boxInfoGeneral);
     consultSede.appendChild(boxTech);
     consultSede.appendChild(boxHse);
     consultSede.appendChild(boxRating);
     boxResult.appendChild(consultSede);
-    consultSede.appendChild(studentsInfo);
+    
     // estilos 
     boxEnrollment.classList.add('box-info');
     boxAchievement.classList.add('box-info');
@@ -332,21 +327,21 @@ window.addEventListener('load', function() {
     boxJedi.classList.add('box-rating');
     boxStudentSatisfaction.classList.add('box-rating');
     boxStudentTotal.classList.add('inline-block');
-    boxDropout.classList.add('inline-block');
+    boxDropout.classList.add('dropout');
     boxStudentUp.classList.add('inline-block');
     boxPercentageStudentUp.classList.add('inline-block');
     boxPercentageNps.classList.add('inline-block');
     boxPercentageNpsTypes.classList.add('inline-block');
     boxRating.classList.add('box-float');
-    boxNumberStudentHse.classList.add('inline-block');
-    boxNumberStudentTech.classList.add('inline-block');
-    boxPercentageStudentHse.classList.add('inline-block');
-    boxPercentageStudentTech.classList.add('inline-block');
-    boxAverageTech.classList.add('inline-block');
-    boxAverageHse.classList.add('inline-block');
-    boxPercentageJedi.classList.add('inline-block');
-    boxPercentageTeacher.classList.add('inline-block');
-    boxPercentageStudentSat.classList.add('inline-block');
+    boxNumberStudentHse.classList.add('box-courser-percen');
+    boxNumberStudentTech.classList.add('box-courser-percen');
+
+    boxPercentageStudentHse.classList.add('box-courser-percen');
+    boxPercentageStudentTech.classList.add('box-courser-percen');
+    
+    boxPercentageJedi.classList.add('boxrating');
+    boxPercentageTeacher.classList.add('boxrating');
+    boxPercentageStudentSat.classList.add('boxrating');
     numberStudentTotal.classList.add('style-number');
     percentageDropout.classList.add('style-number');
     numberStudentTotal.classList.add('style-number');
@@ -384,78 +379,93 @@ window.addEventListener('load', function() {
     titleStudentTech.classList.add('title');
     titleStudentHse.classList.add('title');
 
+    // insertando título
+    titleSede.textContent = 'Sede : ' + sede + ' - ' + 'Generación : ' + generation;
+    titleSede.classList.add('title-principal');
+
    
     // insertando información en Enrollment
     titleEnrollment.textContent = 'Enrollment';
     boxCanvas.classList.add('box-canvas');
-    boxCanvas.setAttribute('id','canvas-container');
-    canvasEnrollment.setAttribute('id','chart');
+    boxCanvas.setAttribute('id', 'canvas-container');
+    canvasEnrollment.setAttribute('id', 'chart');
     canvasEnrollment.classList.add('canvas');
     numberStudentTotal.textContent = totalStudentActive(sede, generation);
     percentageDropout.textContent = (dropout(sede, generation)).toFixed(1) + '%';
     descriptionNumber.textContent = '# Students Currently Enrolled';
     descriptionDropout.textContent = '% Dropout' ; 
-    $(document).ready(function () {
+    $(document).ready(function() {
       var datos = {
-          type: "doughnut",
-          data: {
-              datasets: [{
-                  data: [
-                    dropout(sede, generation),
-                      100 - dropout(sede, generation),
-                                     ],
-                  backgroundColor: [
-                      "#f7464A ",
-                      "#46BFBD ",              
-                  ]
-              }],
-              labels: [
-                  "Dropout",
-                  "Active",
-                             ]
-          },
-          options: {
-              reponsive: true,
-          }
+        type: 'doughnut',
+        data: {
+          datasets: [{
+            data: [
+              dropout(sede, generation),
+              100 - dropout(sede, generation),
+            ],
+            backgroundColor: [
+              '#f7464A ',
+              '#46BFBD ',              
+            ]
+          }],
+          labels: [
+            'Dropout',
+            'Active',
+          ]
+        },
+        options: {
+          reponsive: true,
+        }
       };
-      var canvas = document.getElementById("chart").getContext('2d');
+      var canvas = document.getElementById('chart').getContext('2d');
       window.pie = new Chart(canvas, datos);
-   });
+    });
     // insertando información en Achievement
     titleAchievement.textContent = 'Achievement';
     boxCanvas2.classList.add('box-canvas');
     boxCanvas2.setAttribute('id', 'canvas-container2');
-    canvasArchievement2.setAttribute('id','chart2');
+    canvasArchievement2.setAttribute('id', 'chart2');
     canvasArchievement2.classList.add('canvas');
     numberStudentUp.textContent = studentAchievement(sede, generation);
     descriptionStudentUp.textContent = '# Students that meet the target';
     percentageStudentUp.textContent = ((studentAchievement(sede, generation) / totalStudentActive(sede, generation)) * 100).toFixed(1) ;
-    descriptionPercentageStudent.textContent = '% of Total'; $(document).ready(function () {
+    descriptionPercentageStudent.textContent = '% of Total'; 
+    var percent = ((studentAchievement(sede, generation) / totalStudentActive(sede, generation)) * 100).toFixed(1);
+    if (percent >= 80) {
+      percentageStudentUp.classList.add('green');
+    } else if (percent < 80 && percent >= 70) {
+      percentageStudentUp.classList.add('orange');
+    } else if (percent < 70) {
+      percentageStudentUp.classList.add('red');
+    }
+
+
+    $(document).ready(function() {
       var datos2 = {
-          type: "doughnut",
-          data: {
-              datasets: [{
-                  data: [
-                    ((studentAchievement(sede, generation) / totalStudentActive(sede, generation)) * 100).toFixed(1),
-                    100-((studentAchievement(sede, generation) / totalStudentActive(sede, generation)) * 100).toFixed(1),
-                                     ],
-                  backgroundColor: [
-                      "#f7464A ",
-                      "#46BFBD ",              
-                  ]
-              }],
-              labels: [
-                  "Goal",
-                  "Goal no",
-                             ]
-          },
-          options: {
-              reponsive: true,
-          }
+        type: 'doughnut',
+        data: {
+          datasets: [{
+            data: [
+              ((studentAchievement(sede, generation) / totalStudentActive(sede, generation)) * 100).toFixed(1),
+              100 - ((studentAchievement(sede, generation) / totalStudentActive(sede, generation)) * 100).toFixed(1),
+            ],
+            backgroundColor: [
+              '#f7464A ',
+              '#46BFBD ',              
+            ]
+          }],
+          labels: [
+            'Goal',
+            'Goal no',
+          ]
+        },
+        options: {
+          reponsive: true,
+        }
       };
-      var canvas2 = document.getElementById("chart2").getContext('2d');
+      var canvas2 = document.getElementById('chart2').getContext('2d');
       window.pie = new Chart(canvas2, datos2);
-   });
+    });
 
     // insertando información en NPS
     titleNps.textContent = 'Net Promoter Score';
@@ -468,35 +478,44 @@ window.addEventListener('load', function() {
     percentageNpsPromoter.textContent = (promoterNps(sede, generation)).toFixed(1) + '%' + ' Promoter';
     percentageNpsPassive.textContent = (passiveNps(sede, generation)).toFixed(1) + '%' + ' Passive';
     percentageNpsDetractors.textContent = (detractorNps(sede, generation)).toFixed(1) + '%' + ' Detractors';
-    $(document).ready(function () {
+    var percentNPS = (npsAverage(sede, generation)).toFixed(1);
+    if (percentNPS >= 80) {
+      percentageNps.classList.add('green');
+    } else if (percentNPS < 80 && percentNPS >= 70) {
+      percentageNps.classList.add('orange');
+    } else if (percentNPS < 70) {
+      percentageNps.classList.add('red');
+    }
+    
+    $(document).ready(function() {
       var datos3 = {
-          type: "doughnut",
-          data: {
-              datasets: [{
-                  data: [
-                    (promoterNps(sede, generation)).toFixed(1),
-                    (passiveNps(sede, generation)).toFixed(1),
-                    (detractorNps(sede, generation)).toFixed(1),
-                                     ],
-                  backgroundColor: [
-                      "#f7464A ",
-                      "#46BFBD ",
-                      "#F8BFAD",              
-                  ]
-              }],
-              labels: [
-                  "Promoter",
-                  "Passive",
-                  "Detractors",
-                             ]
-          },
-          options: {
-              reponsive: true,
-          }
+        type: 'doughnut',
+        data: {
+          datasets: [{
+            data: [
+              (promoterNps(sede, generation)).toFixed(1),
+              (passiveNps(sede, generation)).toFixed(1),
+              (detractorNps(sede, generation)).toFixed(1),
+            ],
+            backgroundColor: [
+              '#f7464A ',
+              '#46BFBD ',
+              '#F8BFAD',              
+            ]
+          }],
+          labels: [
+            'Promoter',
+            'Passive',
+            'Detractors',
+          ]
+        },
+        options: {
+          reponsive: true,
+        }
       };
-      var canvas3 = document.getElementById("chart3").getContext('2d');
+      var canvas3 = document.getElementById('chart3').getContext('2d');
       window.pie = new Chart(canvas3, datos3);
-   });
+    });
 
     // insertando información en TECH
     titleStudentTech.textContent = 'Tech Skills';
@@ -511,32 +530,90 @@ window.addEventListener('load', function() {
     optionTechS2.setAttribute('value', 'sprint2');
     optionTechS3.setAttribute('value', 'sprint3');
     optionTechS4.setAttribute('value', 'sprint4');
+    // inicializamos con el último sprint
+    var percentTech = ((studentsTech(sede, generation)[2] / totalStudentActive(sede, generation)) * 100).toFixed(1) ;
+    numberTech.textContent = studentsTech(sede, generation)[2];
+    descriptionNumberTech.textContent = '# student That meet the target ';
+    percentageTech.textContent = ((studentsTech(sede, generation)[2] / totalStudentActive(sede, generation)) * 100).toFixed(1) ;
+    descriptionTech.textContent = '% of total';
+    
+    if (percentTech >= 80) {
+      percentageTech.classList.add('green');
+    } else if (percentTech < 80 && percentTech >= 70) {
+      percentageTech.classList.add('orange');
+    } else if (percentTech < 70) {
+      percentageTech.classList.add('red');
+    }
+
+
     selectTech.addEventListener('change', function() {
       if (selectTech.value === 'sprint1') {
+        percentageTech.classList.remove('red');
+        percentageTech.classList.remove('green');
+        percentageTech.classList.remove('orange');
         numberTech.textContent = studentsTech(sede, generation)[0];
         descriptionNumberTech.textContent = '# student That meet the target ';
         percentageTech.textContent = ((studentsTech(sede, generation)[0] / totalStudentActive(sede, generation)) * 100).toFixed(1) ;
         descriptionTech.textContent = '% of total';
-      }
-      if (selectTech.value === 'sprint2') {
+        percentTech = ((studentsTech(sede, generation)[0] / totalStudentActive(sede, generation)) * 100).toFixed(1);
+        if (percentTech >= 80) {
+          percentageTech.classList.add('green');
+        } else if (percentTech < 80 && percentTech >= 70) {
+          percentageTech.classList.add('orange');
+        } else if (percentTech < 70) {
+          percentageTech.classList.add('red');
+        }
+      } else if (selectTech.value === 'sprint2') {
+        percentageTech.classList.remove('red');
+        percentageTech.classList.remove('green');
+        percentageTech.classList.remove('orange');
         numberTech.textContent = studentsTech(sede, generation)[1];
         descriptionNumberTech.textContent = '# student That meet the target ';
         percentageTech.textContent = ((studentsTech(sede, generation)[1] / totalStudentActive(sede, generation)) * 100).toFixed(1) ;
         descriptionTech.textContent = '% of total';
-      }
-      if (selectTech.value === 'sprint3') {
+        percentTech = ((studentsTech(sede, generation)[1] / totalStudentActive(sede, generation)) * 100).toFixed(1);
+        if (percentTech >= 80) {
+          percentageTech.classList.add('green');
+        } else if (percentTech < 80 && percentTech >= 70) {
+          percentageTech.classList.add('orange');
+        } else if (percentTech < 70) {
+          percentageTech.classList.add('red');
+        }
+      } else if (selectTech.value === 'sprint3') {
+        percentageTech.classList.remove('red');
+        percentageTech.classList.remove('green');
+        percentageTech.classList.remove('orange');
         numberTech.textContent = studentsTech(sede, generation)[2];
         descriptionNumberTech.textContent = '# student That meet the target ';
         percentageTech.textContent = ((studentsTech(sede, generation)[2] / totalStudentActive(sede, generation)) * 100).toFixed(1) ;
         descriptionTech.textContent = '% of total';
-      }
-      if (selectTech.value === 'sprint4') {
+        percentTech = ((studentsTech(sede, generation)[2] / totalStudentActive(sede, generation)) * 100).toFixed(1);
+        if (percentTech >= 80) {
+          percentageTech.classList.add('green');
+        } else if (percentTech < 80 && percentTech >= 70) {
+          percentageTech.classList.add('orange');
+        } else if (percentTech < 70) {
+          percentageTech.classList.add('red');
+        }
+      } else if (selectTech.value === 'sprint4') {
+        percentageTech.classList.remove('red');
+        percentageTech.classList.remove('green');
+        percentageTech.classList.remove('orange');
         numberTech.textContent = studentsTech(sede, generation)[3];
         descriptionNumberTech.textContent = '# student That meet the target ';
         percentageTech.textContent = ((studentsTech(sede, generation)[3] / totalStudentActive(sede, generation)) * 100).toFixed(1) ;
         descriptionTech.textContent = '% of total';
-      }
+        percentTech = ((studentsTech(sede, generation)[3] / totalStudentActive(sede, generation)) * 100).toFixed(1);
+        if (percentTech >= 80) {
+          percentageTech.classList.add('green');
+        } else if (percentTech < 80 && percentTech >= 70) {
+          percentageTech.classList.add('orange');
+        } else if (percentTech < 70) {
+          percentageTech.classList.add('red');
+        }
+      } 
     });
+
 
     // insertando información en HSE
     titleStudentHse.textContent = 'Life Skills';
@@ -551,30 +628,73 @@ window.addEventListener('load', function() {
     optionHseS2.setAttribute('value', 'sprint2');
     optionHseS3.setAttribute('value', 'sprint3');
     optionHseS4.setAttribute('value', 'sprint4');
+    // inicializamos con el último sprint
+    var percentHse = ((studentsHse(sede, generation)[2] / totalStudentActive(sede, generation)) * 100).toFixed(1) ;
+    numberHse.textContent = studentsHse(sede, generation)[2];
+    descriptionNumberHse.textContent = '# student That meet the target ';
+    percentageHse.textContent = ((studentsHse(sede, generation)[2] / totalStudentActive(sede, generation)) * 100).toFixed(1) ;
+    descriptionHse.textContent = '% of total';
+    if (percentHse >= 80) {
+      percentageHse.classList.add('green');
+    } else if (percentHse < 80 && percentHse >= 70) {
+      percentageHse.classList.add('orange');
+    } else if (percentHse < 70) {
+      percentageHse.classList.add('red');
+    }
+
     selectHse.addEventListener('change', function() {
       if (selectHse.value === 'sprint1') {
         numberHse.textContent = studentsHse(sede, generation)[0];
         descriptionNumberHse.textContent = '# student That meet the target ';
-        percentageHse.textContent = (studentsHse(sede, generation)[0] / totalStudentActive(sede, generation)) * 100 ;
+        percentageHse.textContent = ((studentsHse(sede, generation)[0] / totalStudentActive(sede, generation)) * 100).toFixed(1) ;
         descriptionHse.textContent = '% of total';
-      }
-      if (selectHse.value === 'sprint2') {
+        percentHse = ((studentsHse(sede, generation)[0] / totalStudentActive(sede, generation)) * 100).toFixed(1);
+        if (percentHse >= 80) {
+          percentageHse.classList.add('green');
+        } else if (percentHse < 80 && percentHse >= 70) {
+          percentageHse.classList.add('orange');
+        } else if (percentHse < 70) {
+          percentageHse.classList.add('red');
+        }
+      } else if (selectHse.value === 'sprint2') {
         numberHse.textContent = studentsHse(sede, generation)[1];
         descriptionNumberHse.textContent = '# student That meet the target ';
-        percentageHse.textContent = (studentsHse(sede, generation)[1] / totalStudentActive(sede, generation)) * 100 ;
+        percentageHse.textContent = ((studentsHse(sede, generation)[1] / totalStudentActive(sede, generation)) * 100).toFixed(1) ;
         descriptionHse.textContent = '% of total';
-      }
-      if (selectHse.value === 'sprint3') {
+        percentHse = ((studentsHse(sede, generation)[1] / totalStudentActive(sede, generation)) * 100).toFixed(1);
+        if (percentHse >= 80) {
+          percentageHse.classList.add('green');
+        } else if (percentHse < 80 && percentHse >= 70) {
+          percentageHse.classList.add('orange');
+        } else if (percentHse < 70) {
+          percentageHse.classList.add('red');
+        }
+      } else if (selectHse.value === 'sprint3') {
         numberHse.textContent = studentsHse(sede, generation)[2];
         descriptionNumberHse.textContent = '# student That meet the target ';
-        percentageHse.textContent = (studentsHse(sede, generation)[2] / totalStudentActive(sede, generation)) * 100 ;
+        percentageHse.textContent = ((studentsHse(sede, generation)[2] / totalStudentActive(sede, generation)) * 100).toFixed(1) ;
         descriptionHse.textContent = '% of total';
-      }
-      if (selectHse.value === 'sprint4') {
+        percentHse = ((studentsHse(sede, generation)[2] / totalStudentActive(sede, generation)) * 100).toFixed(1);
+        if (percentHse >= 80) {
+          percentageHse.classList.add('green');
+        } else if (percentHse < 80 && percentHse >= 70) {
+          percentageHse.classList.add('orange');
+        } else if (percentHse < 70) {
+          percentageHse.classList.add('red');
+        }
+      } else if (selectHse.value === 'sprint4') {
         numberHse.textContent = studentsHse(sede, generation)[3];
         descriptionNumberHse.textContent = '# student That meet the target ';
-        percentageHse.textContent = (studentsHse(sede, generation)[3] / totalStudentActive(sede, generation)) * 100 ;
+        percentageHse.textContent = ((studentsHse(sede, generation)[3] / totalStudentActive(sede, generation)) * 100).toFixed(1) ;
         descriptionHse.textContent = '% of total';
+        percentHse = ((studentsHse(sede, generation)[3] / totalStudentActive(sede, generation)) * 100).toFixed(1);
+        if (percentHse >= 80) {
+          percentageHse.classList.add('green');
+        } else if (percentHse < 80 && percentHse >= 70) {
+          percentageHse.classList.add('orange');
+        } else if (percentHse < 70) {
+          percentageHse.classList.add('red');
+        }
       }
     });
 
@@ -591,6 +711,11 @@ window.addEventListener('load', function() {
     optionSatisfactionS2.setAttribute('value', 'sprint2');
     optionSatisfactionS3.setAttribute('value', 'sprint3');
     optionSatisfactionS4.setAttribute('value', 'sprint4');
+
+    // inicializamos con el último Sprint
+    percentSatisfaction.textContent = studentSatisfaction(sede, generation)[2];
+    descriptionSatisfaction.textContent = '% Meeting or exceeding ';
+
     selectSatisfaction.addEventListener('change', function() {
       if (selectSatisfaction.value === 'sprint1') {
         percentSatisfaction.textContent = studentSatisfaction(sede, generation)[0];
@@ -623,6 +748,11 @@ window.addEventListener('load', function() {
     optionTeacherS2.setAttribute('value', 'sprint2');
     optionTeacherS3.setAttribute('value', 'sprint3');
     optionTeacherS4.setAttribute('value', 'sprint4');
+
+    // inicializamos con el último sprint
+    percentageTeacher.textContent = teacherRating(sede, generation)[2];
+    descriptionTeacher.textContent = 'Overall Teacher Rating (Cumulative)';
+
     selectTeacher.addEventListener('change', function() {
       if (selectTeacher.value === 'sprint1') {
         percentageTeacher.textContent = teacherRating(sede, generation)[0];
@@ -655,6 +785,11 @@ window.addEventListener('load', function() {
     optionJediS2.setAttribute('value', 'sprint2');
     optionJediS3.setAttribute('value', 'sprint3');
     optionJediS4.setAttribute('value', 'sprint4');
+
+    // inicializamos con el útlimo sprint
+    percentageJedi.textContent = jediRating(sede, generation)[2];
+    descriptionJedi.textContent = 'Overall Jedi Rating (Cumulative)';
+
     selectJedi.addEventListener('change', function() {
       if (selectJedi.value === 'sprint1') {
         percentageJedi.textContent = jediRating(sede, generation)[0];
