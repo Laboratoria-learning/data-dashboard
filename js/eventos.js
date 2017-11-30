@@ -18,21 +18,24 @@ function showMenu() {
   }
 }
 // div contenedor de resultados
-var divEnrollment = document.getElementById('divEnrollment');
-
+var enrollmentDiv1 = document.getElementById('enrollmentDiv1');
+var enrollmentDiv2 = document.getElementById('enrollmentDiv2');
 // Generaciones en el menu desplegable
 var aqp20162 = document.getElementById('AQP20162');
 var aqp20171 = document.getElementById('AQP20171');
 var cdmx20171 = document.getElementById('CDMX20171');
 // funcionalidad Generaciones en el menu desplegable
 function faqp20162() {
-  divEnrollment.textContent = numEstudentsAQP20162;
+  enrollmentDiv1.textContent = numEstudentsAQP20162;
+  enrollmentDiv2.textContent = 'varible%1';
 }
 function faqp20171() {
-  divEnrollment.textContent = numEstudentsAQP20171;
+  enrollmentDiv1.textContent = numEstudentsAQP20171;
+  enrollmentDiv2.textContent = 'varible%2';
 }
 function fcdmx20171() {
-  divEnrollment.textContent = numEstudentsCDMX20171;
+  enrollmentDiv1.textContent = numEstudentsCDMX20171;
+  enrollmentDiv2.textContent = 'varible%3';
 }
 // eventos Generaciones en el menu desplegable
 aqp20162 .addEventListener('click', faqp20162);
