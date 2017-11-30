@@ -16,7 +16,7 @@ window.addEventListener('load', function() {
   // ------------> Crea función para seleccionar sede y promoción, y generar datos <----------
   var select = document.getElementById('promo-filter');
   select.addEventListener('change', promFilter);
-  
+
   function promFilter() {
     var city = select.value; // AQP SCL CDMX LIM
     var prom = select.options[select.selectedIndex].dataset.year; // 2016-2, 2017-1, etc.
@@ -25,6 +25,7 @@ window.addEventListener('load', function() {
     var arrayStudents = data[city][prom]['students'];
 
     // ------------> ENROLLMENT<-----------------
+
     // recorre la longitud de las estudiantes y muestra a las que desertaron en porcentaje
     var dropout = 0;
     for (var i = 0; i < arrayStudents.length; i++) {
@@ -75,8 +76,8 @@ window.addEventListener('load', function() {
     var sumTeacherRating = 0;
 
     for (var i = 0; i < dataRatings.length; i++) {
-      sumTeacherRating += dataRatings[i]['teacher'];          
-    }   
+      sumTeacherRating += dataRatings[i]['teacher'];
+    }
 
     var overallTeacherRating = sumTeacherRating / dataRatings.length;
     var teacherRating = document.getElementById('teacher-rating');
