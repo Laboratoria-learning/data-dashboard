@@ -5,7 +5,11 @@
 * **Herramientas:** _HTML,CSS Y Javascript_
 
 ***
-## Informacion que debe estar en el programa:
+## Colaboradoras:
+Integrantes del squad 8BM:
+-Lilliam Haro
+-Nataly Cortez
+## Informacion que debe proporcionar en el programa:
 
 1.El total de estudiantes presentes por sede y generación.
 2.El porcentaje de deserción de estudiantes.
@@ -13,11 +17,11 @@
 4.El porcentaje que representa el dato anterior en relación al total de estudiantes.
 5.El Net Promoter Score (NPS) promedio de los sprints cursados. 6.El NPS se calcula en base a la encuesta que las estudiantes responden al respecto de la recomendación que darían de Laboratoria, bajo la siguiente fórmula:
 
-*[Promoters] = [Respuestas 9 o 10] / [Total respuestas] * 100
+[Promoters] = [Respuestas 9 o 10] / [Total respuestas] * 100
 [Passive] = [Respuestas 7 u 8] / [Total respuestas] * 100
 [Detractors] = [Respuestas entre 1 y 6] / [Total respuestas] * 100
 
-[NPS] = [Promoters] - [Detractors]*
+[NPS] = [Promoters] - [Detractors]
 
 7.La cantidad y el porcentaje que representa el total de estudiantes que superan la meta de puntos técnicos en promedio y por sprint.
 8.La cantidad y el porcentaje que representa el total de estudiantes que superan la meta de puntos de HSE en promedio y por sprint.
