@@ -7,8 +7,11 @@
 ***
 ## Colaboradoras:
 Integrantes del squad 8BM:
+
 -Lilliam Haro
+
 -Nataly Cortez
+
 ## Informacion que debe proporcionar en el programa:
 
 1.El total de estudiantes presentes por sede y generación.
