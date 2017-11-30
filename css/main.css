@@ -30,16 +30,12 @@
 .menu {
   width: 25%;
   height: 100%;
+}
 
 .list {
   width: 25%;
   height: 100%;
   margin-top: 20px;
-}
-
-.results {
-  width: 75%;
-  height: 100%;
 }
 
 .container {
@@ -131,12 +127,11 @@ span, input, i, p, label {
   display: block;
 }
 
-nav:hover {
-  background: rgba(212, 212, 209, 0.6);
-  width: 15%;
+.canvas-reports {
+  width:25%;
 }
 
-/* .list {
-  display: none;
-} */
-
+.chart {
+  width: '100px';
+  height: '50px';
+}
