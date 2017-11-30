@@ -35,6 +35,9 @@ a{
   margin-top: 10px;
   margin-bottom: 10px;
 }
+.sede:hover{
+  background-color: blue;
+}
 .sede:active{
   background-color: green;
 }
