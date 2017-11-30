@@ -153,4 +153,19 @@ function overcomeGoal(sede, generacion, sprint) {
   porcentaje = (meta / superanMeta.length) * 100;
   return porcentaje;
 }
-
+// La cantidad y el porcentaje que representa el total de estudiantes que superan la meta de puntos de HSE en promedio y por sprint.
+function overcomeGoalHse(sede, generacion, sprint) {
+  var superanMeta = data[sede][generacion]['students'];
+  var goal = [];
+  var meta = 0;
+  var porcentaje;
+  for (var i = 0; i < superanMeta.length; i++) {
+    goal[i] = superanMeta[i]['sprints'][sprint - 1].score.hse;
+    // console.log(goal[i]);
+    if (goal[i] >= '840') {
+      meta++;
+    }
+  }
+  porcentaje = (meta / superanMeta.length) * 100;
+  return porcentaje;
+}

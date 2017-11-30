@@ -110,17 +110,34 @@ window.addEventListener('load', function() {
       // Crea los datos del gráfico.
       var data = new google.visualization.DataTable();
       data.addColumn('string', 'Topping');
-      data.addColumn('number', 'Cantidad');
+      data.addColumn('number', '%');
       data.addRows([
-        ['S1', nps(sede, generacion)[0]],
-        ['S2', nps(sede, generacion)[1]],
-        ['S3', nps(sede, generacion)[2]],
-        ['S4', nps(sede, generacion)[3]],
+        ['S1', overcomeGoal(sede, generacion, 1)],
+        ['S2', overcomeGoal(sede, generacion, 2)],
+        ['S3', overcomeGoal(sede, generacion, 3)],
+        ['S4', overcomeGoal(sede, generacion, 4)],
       ]);
       var options = {'title': 'Puntaje Técnico',
         'width': 500,
         'height': 400};
       var chart = new google.visualization.ColumnChart(document.getElementById('draw-puntajeTecnico'));
+      chart.draw(data, options);
+    }
+    function drawChart7() {
+      // Crea los datos del gráfico.
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Topping');
+      data.addColumn('number', '%');
+      data.addRows([
+        ['S1', overcomeGoalHse(sede, generacion, 1)],
+        ['S2', overcomeGoalHse(sede, generacion, 2)],
+        ['S3', overcomeGoalHse(sede, generacion, 3)],
+        ['S4', overcomeGoalHse(sede, generacion, 4)],
+      ]);
+      var options = {'title': 'Puntaje HSE',
+        'width': 500,
+        'height': 400};
+      var chart = new google.visualization.ColumnChart(document.getElementById('draw-puntajeHse'));
       chart.draw(data, options);
     }
   });
