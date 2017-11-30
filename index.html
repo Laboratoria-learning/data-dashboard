@@ -18,15 +18,14 @@
           <div class="iconoMenu"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></div>
         </nav>
         <nav class="menuNav"> <!-- Second Nav-->
-          <div class="menuPrincipal">
-            <h1 class="menuSede">LIMA 2016-II<i id= "fa-sort-desc" class="fa fa-sort-desc fa-2x" aria-hidden="true"></i></h1>
+          <div id = "menuPrincipal"  class="menuPrincipal">
             <form id="checkbox-site" class = "checkbox-site" action="/action_page.php">
-              <input id="lim-checked" type="checkbox" name="Lima" value="Lima">LIMA<br>
-              <hr>
-              <input id="lim2016-ii" type="checkbox" name="2016-II" value="2016-II">2016-II<br>
-              <input id="lim2017-i" type="checkbox" name="2017-I" value="2017-I">2017-I<br>
-              <input id="lim2017-ii" type="checkbox" name="2017-II" value="2017-II">2017-II<br>
-              <br>
+              <select>
+                <option id="choose" name="choose" value="">Seleccionar sprint</option>
+                <option id="lim2016-ii" name="2016-II" value="lim2016-ii">LIMA 2016-II</option>
+                <option id="lim2017-i"  name="2017-I" value="lim2017-i">LIMA 2017-I</option>
+                <option id="lim2017-ii" name="2017-II" value="lim2017-ii">LIMA 2017-II</option>
+              </select>
             </form>
           </div>
           <div class="subMenuPrincipal"><button type="button" name="button" data-tab-seleccionado="tabOverview" class="tab">OVERVIEW</button></div>
@@ -78,29 +77,22 @@
         </div>
         <!-- second row statistical data -->
         <div id="statisticalDataSecond" class="statisticalDataSecond">
-          <h1 id="statisticalDataTitle" class="statisticalDataTitle">TECH SKILLS <input type="text" class="inputStatisticalData"><i id="fa-sort-desc2" class="fa fa-sort-desc" aria-hidden="true"></i></h1>
-            <form id = "checkbox-commoncore" class = "checkbox-commoncore" action="/action_page.php">
-              <input type="checkbox" name="common core" value="common core">COMMON CORE<br>
-              <hr>
-              <input id = "tech-sprint1" type="checkbox" name="sprint1" value="sprint1">Sprint 1 : Create an interactive site<br>
-              <input id = "tech-sprint2" type="checkbox" name="sprint2" value="sprint2">Sprint 2 : Create an interactive site<br>
-              <input id = "tech-sprint3" type="checkbox" name="sprint3" value="sprint3">Sprint 3: Create an interactive site<br>
-              <input id = "tech-sprint4" type="checkbox" name="sprint4"" value="sprint4"">Sprint 4 : Create an interactive site<br>
-              <br>
-              <input id = "javascript" type="checkbox" name="javascript" value="javascript">JAVASCRIPT<br>
-              <hr>
-              <input id = "tech-sprint5" type="checkbox" name="sprint5" value="sprint5">Sprint 5 : Create an interactive site<br>
-              <input id = "tech-sprint6" type="checkbox" name="sprint6" value="sprint6">Sprint 6 : Create an interactive site<br>
-              <input id = "tech-sprint7" type="checkbox" name="sprint7" value="sprint7">Sprint 7 : Create an interactive site<br>
-              <input id = "tech-sprint8" type="checkbox" name="sprint8" value="sprint8">Sprint 8 : Create an interactive site<br>
-              <br>
-              <input id ="uxdesign" type="checkbox" name="javascript" value="javascript">UX Design<br>
-              <hr>
-              <input id = "tech-sprint5" type="checkbox" name="sprint5" value="sprint5">Sprint 5 : Create an interactive site<br>
-              <input id = "tech-sprint6" type="checkbox" name="sprint6" value="sprint6">Sprint 6 : Create an interactive site<br>
-              <input id = "tech-sprint7" type="checkbox" name="sprint7" value="sprint7">Sprint 7 : Create an interactive site<br>
-              <input id = "tech-sprint8" type="checkbox" name="sprint8" value="sprint8">Sprint 8 : Create an interactive site<br>
-              <br>
+          <form id = "checkbox-commoncore" class = "checkbox-commoncore" action="/action_page.php">
+            <select>
+                <option id="tech-sprint" name="sprint" value="">Seleccionar sprint</option>
+                <option id="tech-sprint1" name="sprint1" value="sprint1">Sprint 1 : Create an interactive site</option>
+                <option id="tech-sprint2"  name="sprint2" value="sprint2">Sprint 2 : Create an interactive site</option>
+                <option id = "tech-sprint3" name="sprint3" value="sprint3">Sprint 3 : Create an interactive site</option>
+                <option id = "tech-sprint4" name="sprint4" value="sprint4">Sprint 4 : Create an interactive site</option>
+                <option id="tech-sprint5" name="sprint1" value="sprint1">Sprint 1 : Create an interactive site</option>
+                <option id="tech-sprint6"  name="sprint2" value="sprint2">Sprint 2 : Create an interactive site</option>
+                <option id = "tech-sprint7" name="sprint3" value="sprint3">Sprint 3 : Create an interactive site</option>
+                <option id = "tech-sprint8" name="sprint4" value="sprint4">Sprint 4 : Create an interactive site</option>
+                <option id="tech-sprint1" name="sprint1" value="sprint1">Sprint 1 : Create an interactive site</option>
+                <option id="tech-sprint2"  name="sprint2" value="sprint2">Sprint 2 : Create an interactive site</option>
+                <option id = "tech-sprint3" name="sprint3" value="sprint3">Sprint 3 : Create an interactive site</option>
+                <option id = "tech-sprint4" name="sprint4" value="sprint4">Sprint 4 : Create an interactive site</option>
+              </select>
             </form>
           <div id="dataNumber" class="dataNumber"><!--left square-->
             <h3 id="numData" class="numData">90</h3>
@@ -120,16 +112,15 @@
 
         <!-- third row statistical data-->
         <div class="statisticalDataThird">
-          <h1 class="statisticalDataTitle">LIFE SKILLS<input type="text" class="inputStatisticalData"><i id ="fa-sort-desc3"class="fa fa-sort-desc" aria-hidden="true"></i></h1>
-            <form id="checkbox-HSE" class = "checkbox-HSE" action="/action_page.php">
-              <input id = "hse" type="checkbox" name="hse" value="hse">HSE<br>
-              <hr>
-              <input id = "hse-sprint1" type="checkbox" name="sprint1" value="sprint1">Sprint 1 : Create an interactive site<br>
-              <input id = "hse-sprint2" type="checkbox" name="sprint2" value="sprint2">Sprint 2 : Create an interactive site<br>
-              <input id = "hse-sprint3" type="checkbox" name="sprint3" value="sprint3">Sprint 3 : Create an interactive site<br>
-              <input id = "hse-sprint4" type="checkbox" name="sprint4" value="sprint4">Sprint 4 : Create an interactive site<br>
-              <br>
-            </form>
+          <form id="checkbox-HSE" class = "checkbox-HSE" action="/action_page.php">
+            <select>
+              <option id="hse-sprint1" name="sprint1" value="">Seleccionar sprint</option>
+              <option id="hse-sprint1" name="sprint1" value="sprint1">Sprint 1 : Create an interactive site</option>
+              <option id="hse-sprint2"  name="sprint2" value="sprint2">Sprint 2 : Create an interactive site</option>
+              <option id = "hse-sprint3" name="sprint3" value="sprint3">Sprint 3 : Create an interactive site</option>
+              <option id = "hse-sprint4" name="sprint4" value="sprint4">Sprint 4 : Create an interactive site</option>
+            </select>
+          </form>
           <div id="dataNumberThirdRow" class="dataNumberThirdRow"><!--left square-->
           <h3 id="numData" class="numData">90</h3>
           <h6 id="descriptionNumData" class="descriptionNumData"># STUDENTS THAT MEET THE TARGET</h6>

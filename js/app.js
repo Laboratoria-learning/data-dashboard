@@ -1,5 +1,5 @@
 window.addEventListener('load', function(event) {
-  var displayFilter = document.getElementById('fa-sort-desc');
+  var displayFilter = document.getElementById('menuPrincipal');
   var displayFilterTwo = document.getElementById('fa-sort-desc2');
   var displayFilterThree = document.getElementById('fa-sort-desc3');
   var checkedSite = document.getElementById('checkbox-site');
@@ -76,10 +76,6 @@ window.addEventListener('load', function(event) {
   var enrolledLimaStudents2016ii = activeLimaStudents2016ii + inactiveLimaStudents2016ii;
   console.log(enrolledLimaStudents2016ii);
   var desertionLimaStudents2016ii = Math.floor((inactiveLimaStudents2016ii * 100) / (enrolledLimaStudents2016ii)) + '%';
-  // pendientes casos Lima2017-1 y Lima2017-2
-  // La cantidad de estudiantes que superan la meta de puntos en promedio de todos los sprints cursados. La meta de puntos es 70% del total de puntos en HSE y en tech.
-  // Se declara una variable de un array vacio para que ahi se ingrese mediante push el numero total de alumnas que pasaron el 70% de todos los sprints
-  // declaramos una varible de contador para que guarde el numero de estudiantes que pasaron
   var pastScoreLimaStudents2016ii = 0;
 
   for (var i = 0; i < limaStudents2016ii.length;i++) {
@@ -135,10 +131,6 @@ window.addEventListener('load', function(event) {
     }
   });
 });
-
-// var shortCut = data['LIM']['2016-2']['students'];
-// console.log(shortCut.length);
-// Puedes hacer uso de la base de datos a través de la variable `data`
 
 /* event tab*/
 var mostrarOcultar = function(e) {
