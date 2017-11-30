@@ -218,32 +218,32 @@ window.addEventListener('load', function() {
     }
     selectLife.value = '';
 
-    // ----------------> CHARTS <----------------
-    // ----------------> Jedi Chart <----------------
+    // ------------------------- CHARTS AQP 2016-II ------------------------------
+    // ------- Jedi Chart ---------
     function drawChart() {
       var data = new google.visualization.DataTable();
       data.addColumn('string', 'logro');
       data.addColumn('number', 'puntaje');
       data.addRows([
-        ['Puntaje No Otorgado', 0.97],
-        ['Puntaje Otorgado Promedio', 4.03],
+        ['Puntaje No Otorgado', 5 - jediMaster],
+        ['Puntaje Otorgado Promedio', jediMaster],
       ]);
-      
+  
       var options = {'title': 'Rating otorgado por las alumnas a sus Jedi Master',
         'width': 500,
         'height': 300,
         'is3D': true};
-      
+  
       var chart = new google.visualization.PieChart(document.getElementById('jedi-chart'));
       chart.draw(data, options);
 
-      // ----------------> Teacher Chart <----------------
+      // -------------- Teacher Chart -------------
       var data2 = new google.visualization.DataTable();
       data2.addColumn('string', 'logro');
       data2.addColumn('number', 'puntaje');
       data2.addRows([
-        ['Puntaje No Otorgado', 1.4],
-        ['Puntaje Otorgado Promedio', 3.6],
+        ['Puntaje No Otorgado', 5 - overallTeacherRating],
+        ['Puntaje Otorgado Promedio', overallTeacherRating],
       ]);
 
       var options2 = {'title': 'Rating otorgado por las alumnas a sus junior y master teachers',
@@ -254,16 +254,16 @@ window.addEventListener('load', function() {
       var chart2 = new google.visualization.PieChart(document.getElementById('teacher-chart'));
       chart2.draw(data2, options2);
 
-      // ----------------> Student Satisfaction Chart <----------------
+      // -------------- Student Satisfaction Chart -------------
       var data3 = new google.visualization.DataTable();
       data3.addColumn('string', 'logro');
       data3.addColumn('number', 'puntaje');
       data3.addRows([
-        ['No cumple expectativa', 12.25],
-        ['Supera y Cumple Expectativa', 87.75],
+        ['No cumple expectativa', 100 - (cumple + supera)],
+        ['Supera y Cumple Expectativa', cumple + supera],
       ]);
 
-      var options3 = {'title': 'Rating otorgado por las alumnas a sus junior y master teachers',
+      var options3 = {'title': 'Supera, Cumple o No Cumple LABORATORIA las expectativas de las alumnas',
         'width': 500,
         'height': 300,
         'is3D': true};
@@ -271,17 +271,17 @@ window.addEventListener('load', function() {
       var chart3 = new google.visualization.PieChart(document.getElementById('satisfaction-chart'));
       chart3.draw(data3, options3);
 
-      // ----------------> NPS Chart <----------------
+      // -------------- NPS Chart -------------
       var data4 = new google.visualization.DataTable();
       data4.addColumn('string', 'logro');
       data4.addColumn('number', 'puntaje');
       data4.addRows([
-        ['Detractors', 1.54],
-        ['Passives', 2.21],
-        ['Promoters', 11.25]
+        ['Detractors', detractors/100*totalStudents],
+        ['Passives', passives/100*totalStudents],
+        ['Promoters', promoters/100*totalStudents]
       ]);
 
-      var options4 = {'title': 'Rating otorgado por las alumnas a sus junior y master teachers',
+      var options4 = {'title': 'Recomendarias LABORATORIA a otras personas',
         'width': 500,
         'height': 300,
         'is3D': true};
@@ -289,22 +289,39 @@ window.addEventListener('load', function() {
       var chart4 = new google.visualization.PieChart(document.getElementById('nps-chart'));
       chart4.draw(data4, options4);
 
-      // ----------------> Enrollment Chart <----------------
+      // -------------- Enrollment Chart -------------
       var data5 = new google.visualization.DataTable();
       data5.addColumn('string', 'name');
       data5.addColumn('number', 'students');
       data5.addRows([
-        ['Desertoras', parseInt(dropout)],
-        ['Asistiendo a clases', 7],
+        ['Desertoras', (parseInt(dropout) / 100) * totalStudents],
+        ['Asistiendo a clases', totalStudents - ((parseInt(dropout) / 100) * totalStudents)],
       ]);
 
-      var options5 = {'title': 'Rating otorgado por las alumnas a sus junior y master teachers',
+      var options5 = {'title': 'Alumnas que asisten a clases vs alumnas que han desertado',
         'width': 500,
         'height': 300,
         'is3D': true};
 
       var chart5 = new google.visualization.PieChart(document.getElementById('enrollment-chart'));
       chart5.draw(data5, options5);
+
+      // -------------- Achievement Chart -------------
+      var data6 = new google.visualization.DataTable();
+      data6.addColumn('string', 'name');
+      data6.addColumn('number', 'students');
+      data6.addRows([
+        ['No pasa la meta', totalStudents - studentMeetTarget],
+        ['Pasa la meta', studentMeetTarget],
+      ]);
+
+      var options6 = {'title': 'Estudiantes que pasan la meta de puntaje establecido por sprint',
+        'width': 500,
+        'height': 300,
+        'is3D': true};
+
+      var chart6 = new google.visualization.PieChart(document.getElementById('achiv-chart'));
+      chart6.draw(data6, options6);
     }
     // Set a callback to run when the Google Visualization API is loaded.
     google.charts.setOnLoadCallback(drawChart);
@@ -318,7 +335,7 @@ window.addEventListener('load', function() {
     var sectionStudents = document.getElementById('section-students');
 
     function showSectionStudents(event) {
-      container.innerHTML = "";
+      container.innerHTML = '';
       sectionOverview.classList.add('hide');
       sectionStudents.classList.remove('hide');
 
