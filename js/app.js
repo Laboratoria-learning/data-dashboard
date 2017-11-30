@@ -61,7 +61,7 @@ window.addEventListener('load', function() {
     satisfaction.innerHTML = ' % de estudiantes satisfechos' + '<br>' + percentageSatisfaction;
   }
 
-  /* menu derecho*/
+  /* menu derecho en el icono barras*/
   var bars = document.getElementById('bars');
   bars.addEventListener('click', showMenu);
   function showMenu(event) {
