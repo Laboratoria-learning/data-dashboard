@@ -3,9 +3,165 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link rel="stylesheet" href="assets/icons/icomoon/style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
   </head>
   <body>
+  <header>
+    <nav>
+      <div class="menuUno">
+        <img src="assets\images\logo-laboratoria.svg" alt="laboratoria">
+        <span class="icon-paragraph-justify"></span>
+      </div>
+    </nav>
+    <nav><!-- menu nav por filtros y tambien facetada-->
+      <div class="menuDos"><!-- menu nav por filtros opciones por sedes y promociones-->
+        <select id="filtro" name="filtro">
+          <optgroup label="Lima">
+            <option value="0"><span>Lima</span> 2016-2</option>
+            <option value="1"><span>Lima</span> 2017-1</option>
+            <option value="2"><span>Lima</span> 2017-2</option>
+          </optgroup>
+          <optgroup label="Arequipa">
+            <option value="3"><span>Arequipa</span> 2016-2</option>
+            <option value="4"><span>Arequipa</span> 2017-1</option>
+          </optgroup>
+          <optgroup label="Chile">
+            <option value="5"><span>Chile</span> 2016-2</option>
+            <option value="6"><span>Chile</span> 2017-1</option>
+            <option value="7"><span>Chile</span> 2017-2</option>
+          </optgroup>
+          <optgroup label="Mexico">
+            <option value="8"><span>Mexico</span> 2017-1</option>
+            <option value="9"><span>Mexico</span> 2017-2</option>
+          </optgroup>
+		    </select>
+        <ul><!--menu nav facetada -->
+          <li id="overview">overview <hr class="disabled"> </li>
+          <li id="students">students <hr class="disabled"> </li>
+          <li>teachers <hr class="disabled"> </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main id="paginaView" class="enabled"><!--pagina de la primera vista, vista principal-->
+    <section><!-- seccion que contiene tres cajas con graficos y datos correspondientes-->
+      <div class="container">
+        <h1>ENROLLMENT</h1>
+        <div id="top_x_div" class="box-barras"></div>
+        <div class="caja">
+          <span id="total"></span>
+          <p># Alumnas Activas</p>
+        </div>
+        <div class="caja">
+          <span id="porcentaje"></span>
+          <p>% Desercion</p>
+        </div>
+      </div>
+      <div class="container">
+        <h1>ACHIEVEMENT</h1>
+        <div class="caja">
+          <span id="meta"></span>
+          <p># Lograron la meta</p>
+        </div>
+        <div class="caja">
+          <span></span>
+          <p>% del total</p>
+        </div>
+        <img src="assets\images\graph.png" alt="">
+        <div id="curve_chart" style="width: 900px; height: 500px"></div>
+      </div>
+      <div class="container">
+        <h1>NET PROMOTOTER SCORE</h1>
+        <div class="caja">
+          <span id="nps"></span>
+          <p>% acumulativo NPS</p>
+        </div>
+        <div class="caja">
+          <span id="nps-porciento">Datos Porcentuales</span>
+        </div>
+        <img src="assets\images\graph.png" alt="">
+      </div>
+    </section>
+    <section class="box-circle"><!--seccion que contiene los puntos tecnicos y sus respectivos graficos-->
+      <div class="list-tech">
+        <span>TECH SKILLS</span>
+        <select name="">
+          <option value="0">sprint 1</option>
+          <option value="1">sprint 2</option>
+          <option value="2">sprint 3</option>
+          <option value="3">sprint 4</option>
+        </select>
+      </div>
+      <div class="caja">
+        <span id="tech"></span>
+        <p># Puntos tecnicos</p>
+      </div>
+      <img src="assets\images\rectangular-graphic.png" alt="">
+      <div class="grafico-circular" id="chart_div"></div>
+    </section>
+    <section class="box-circle"><!--seccion que contiene los puntos de hse y sus respectivos graficos-->
+      <div class="list-tech">
+        <span>LIFE SKILLS</span>
+        <select name="">
+          <option value="0">sprint 1</option>
+          <option value="1">sprint 2</option>
+          <option value="2">sprint 3</option>
+          <option value="3">sprint 4</option>
+        </select>
+      </div>
+      <div class="caja">
+        <span id="hse"></span>
+        <p># Puntos Hse</p>
+      </div>
+      <img src="assets\images\rectangular-graphic.png" alt="">
+      <div class="grafico-circular" id="chart_div2"></div>
+    </section>
+    <section><!-- seccion donde se calificara a los docentes de laboratoria y la expectativa de la alumna-->
+      <div class="container">
+        <h1>STUDENT SATISFACTION</h1>
+        <div class="caja">
+          <span id="box-expectativa"></span>
+          <p>% Student Satisfaction</p>
+        </div>
+        <img src="assets\images\graph.png" alt="">
+      </div>
+      <div class="container">
+        <h1>TEACHER RATING</h1>
+        <div class="caja">
+          <span id="box-teacher"></span>
+          <p>Promedio Profesor</p>
+        </div>
+        <img src="assets\images\graph.png" alt="">
+      </div>
+      <div class="container">
+        <h1>JEDI MASTER RATING</h1>
+        <div class="caja">
+          <span id="box-jedi"></span>
+          <p>Promedio Jedi</p>
+        </div>
+        <img src="assets\images\graph.png" alt="">
+      </div>
+    </section>
+  </main>
+  <main id="paginaStudents" class="disabled"><!--segunda pagina vista donde deberian estar los datos de una degterminada estudiante -->
+    <div class="box-specialization">
+      <h1>ESPECIALIZACION</h1>
+      <p>javascript<p>
+      <p>UX design"<p>
+      <p>Front end Design<p>
+    </div>
+    <div class="box-search">
+      <span class ="icon-search">
+        <input type="text" name="" value="">
+      </span>
+    </div>
+    <section class="box-create">
 
+    </section>
+  </main>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->

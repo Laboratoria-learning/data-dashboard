@@ -1,4 +1,5 @@
 var data = {
+  /* AREQUIPA*/
   'AQP': {
     '2016-2': {
       'students': [
@@ -1063,6 +1064,7 @@ var data = {
       ]
     }
   },
+  /* MEXICO*/
   'CDMX': {
     '2017-1': {
       'students': [
@@ -2415,6 +2417,7 @@ var data = {
       ]
     }
   },
+  /* LIMA*/
   'LIM': {
     '2016-2': {
       'students': [
@@ -3629,6 +3632,7 @@ var data = {
       ]
     }
   },
+  /* SCL*/
   'SCL': {
     '2016-2': {
       'students': [
@@ -4747,7 +4751,6 @@ var data = {
           'active': false,
           'sprints': []
         },
-        { },
         {
           'name': 'Jada Curgenuer',
           'photo': 'http://dummyimage.com/133x195.png/cc0000/ffffff',
@@ -5006,7 +5009,6 @@ var data = {
             }
           ]
         },
-        { },
         {
           'name': 'Julieta Readhead',
           'photo': 'http://dummyimage.com/119x227.png/ff4444/ffffff',
