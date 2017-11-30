@@ -114,7 +114,7 @@ select {
     display: block;
     background-color: white;
      width: 95%;
-     height: 300px;
+     height: auto;
      margin: 0 0 10px 22px;
      text-align: center;
 }
