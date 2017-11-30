@@ -1,15 +1,15 @@
-
-/*
+    /*
  * Estilos de tu proyecto
  */
-* {
+
+ * {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
 }
 
 body {
-  background-image: url(../assets/images/ball.gif);
+  background-image: url(../assets/images/sky.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -27,17 +27,16 @@ nav {
   width: 300px;
   height: 80px;
 }
-
-ul li {
-  display: inline;
-  box-sizing: border-box;
-  float: right;
-  margin: -65px 150px;
+/* ul li {
+display: inline;
+box-sizing: border-box;
+float: right;
+margin: -65px 150px;
 }
 
 i.icon {
-  font-size: 40px;
-}
+font-size: 40px;
+} */
 
 .firstSection {
   display: inline-block;
@@ -49,12 +48,16 @@ i.icon {
 }
 
 i.icon2 {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .options {
   letter-spacing: 10px;
   margin: 15px 0;
+}
+
+.optionsStyle {
+  border-bottom: 5px solid #FFC107;
 }
 
 .firstBox {
@@ -113,10 +116,8 @@ i.icon2 {
 .sizeLetter {
   font-size: 9px;
 }
-
-
 /* .center {
-    text-align: center;
+  text-align: center;
 } */
 
 .secondBox {
@@ -268,26 +269,25 @@ i.icon2 {
   padding: 50px 70px;
 }
 
-
-h3{
+.titleStyle {
   color: blue;
   font-weight: 100px;
 }
+/*dando estilos a la seccion life skills */
 
- /*dando estilos a la seccion life skills */
-.class-figure figure{
+.size2 figure {
   display: inline-block;
   margin-top: 100px;
   margin: 40px;
 }
-
 /*dando estilos a la seccion student satisfaction */
-.class-studentsatisfaction{
+
+.studentSatisfaction {
   position: relative;
 }
 
-.graph{
-  outline: 1px solid brown;
+.graph {
+  /* outline: 1px solid brown; */
   line-height: 3.5px;
   text-align: center;
   background: #ffffff;
@@ -296,12 +296,12 @@ h3{
   padding: 15px 30px 20px 30px;
 }
 
-.graph img{
+.graph img {
   width: 250px;
   height: 150px;
 }
 
-.content{
+.content {
   outline: 1px solid red;
   color: #b9b9b9;
   display: block;
@@ -314,8 +314,8 @@ h3{
   padding: 10px 10px 10px 10px;
 }
 
-.content1{
-  outline: 1px solid blue;
+.content1 {
+  /* outline: 1px solid blue; */
   color: #b9b9b9;
   display: block;
   background: #f7f7f7;
@@ -327,14 +327,100 @@ h3{
   padding: 10px 10px 10px 10px;
 }
 
-.left{
+.left {
   /*margin-left: 50px; */
-  margin: 0;   
+  margin: 0;
   display: inline-block;
 }
 
-.rigth{
-  margin: 0;/*
-  margin-top: 2px;
-  margin-right: 50px;*/
+.rigth {
+  margin: 0;
   display: inline-block;
+}
+/*el contenido de las cajas pequenas*/
+
+.content {
+  /* outline: 1px solid red; */
+  color: #b9b9b9;
+  width: 150px;
+  font-size: 20px;
+  margin: 10px 10px 10px 10px;
+  /*margin: 30px;*/
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+}
+/*el contenido de las cajas pequenas*/
+
+.content1 {
+  /* outline: 1px solid blue; */
+  color: #b9b9b9;
+  margin: 0;
+  margin-top: 2px;
+  margin-right: 50px;
+  display: inline-block;
+}
+
+.edition {
+  margin: 0px;
+  padding: 0;
+  width: 320px;
+  height: 180px;
+}
+
+.edition2 {
+  margin: 0px 20px;
+  width: 300px;
+  height: 300px;
+}
+
+.inline {
+  display: inline-block;
+}
+
+#videosList {
+  width: 320px;
+  display: inline-block;
+  /* overflow: hidden; */
+}
+
+.video {
+  background-image: url('../assets/images/lab.png');
+  height: 180px;
+  width: 290px;
+  margin: 30px;
+}
+/* Hide Play button + controls on iOS */
+
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+.hidden {
+  display: none;
+  background-color: yellowgreen;
+  width: 200px;
+  height: 380px;
+  padding: 50px;
+}
+.styleBox select{
+  border: none;
+  background-color: #FFC107;
+  border-radius: 5px;
+  width: 150px;
+  height: 40px;
+  padding: 5px;
+  font-size: 20px;
+  margin:  15px 30px 0px 0px;
+}
+
+.styleBox2 select{
+  border: none;
+  background-color: #FFC107;
+  border-radius: 5px;
+  width: 280px;
+  height: 40px;
+  padding: 5px;
+  font-size: 20px;
+  margin:  20px 0 30px 50px;
+}
+
