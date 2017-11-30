@@ -18,117 +18,117 @@ window.addEventListener('load', function(event) {
   // Ocultando especializacion de las estudiantes
   optionSpecialization.classList.add('hidden');
   
-  var showHide = function (e) {
-      var tabSelector = e.target.dataset.tabSelector;
-      var overviews = document.getElementById('options');
-      var students = document.getElementById('students');
-      var teachers = document.getElementById('teachers');
+  var showHide = function(e) {
+    var tabSelector = e.target.dataset.tabSelector;
+    var overviews = document.getElementById('options');
+    var students = document.getElementById('students');
+    var teachers = document.getElementById('teachers');
 
-      if (tabSelector === 'tabOverviews') {
-          console.log('mostrar overviews');
-          // ocultar students y teacher
-          students.style.display = 'none';
-          teachers.style.display = 'none';
-          // mostrar overviews
-          options.style.display = 'block';
+    if (tabSelector === 'tabOverviews') {
+      
+      // ocultar students y teacher
+      students.style.display = 'none';
+      teachers.style.display = 'none';
+      // mostrar overviews
+      options.style.display = 'block';
+    } else if (tabSelector === 'tabStudents') {
+      
+      // ocultar overviews y teacher
+      options.style.display = 'none';
+      teachers.style.display = 'none';
+      // mostrar students
+      students.style.display = 'block';
+    } else if (tabSelector === 'tabTeachers') {
+      
+      // mostrar overviews y students
+      students.style.display = 'none';
+      options.style.display = 'none';
+      // mostrar students
+      teachers.style.display = 'block';
+    }
+  };
 
-      } else if (tabSelector === 'tabStudents') {
-          console.log('Mostrar a los estudiantes');
-          // ocultar overviews y teacher
-          options.style.display = 'none';
-          teachers.style.display = 'none';
-          // mostrar students
-          students.style.display = 'block';
-      } else if (tabSelector === 'tabTeachers') {
-          console.log('mostrar a los profesores');
-          // mostrar overviews y students
-          students.style.display = 'none';
-          options.style.display = 'none';
-          // mostrar students
-          teachers.style.display = 'block';
-      }
-  }
+  var loadTabs = function() {
+    var elementsTabs = document.getElementsByClassName('tab');
+    for (var i = 0; i < elementsTabs.length; i++) {
+      elementsTabs[i].addEventListener('click', showHide);
+    }
+  };
 
-  var loadTabs = function () {
-      var elementsTabs = document.getElementsByClassName('tab');
-      for (var i = 0; i < elementsTabs.length; i++) {
-          elementsTabs[i].addEventListener('click', showHide);
-      }
-  }
-
-  loadTabs()
+  loadTabs();
 
   // funcionalidades del menu desplegable de las sedes de laboratoria
   var city = Object.keys(data);
   for (var i = 0; i < city.length; i++) {
-      newUl = document.createElement('ul');
-      newUl.innerHTML = city[i];
-      newUl.id = city[i];
+    newUl = document.createElement('ul');
+    newUl.innerHTML = city[i];
+    newUl.id = city[i];
 
-      document.getElementById('menuBar').appendChild(newUl);
-      var generationx = Object.keys(data[city[i]]);
-      for (var j = 0; j < generationx.length; j++) {
-          console.log(generationx)
-          newli = document.createElement('li');
-          newli.id = city[i] + ',' + generationx[j];
-          newli.setAttribute('class', 'bootcamps');
-          newli.innerHTML = generationx[j];
-          newUl.appendChild(newli);
-      }
+    document.getElementById('menuBar').appendChild(newUl);
+    var generationx = Object.keys(data[city[i]]);
+    for (var j = 0; j < generationx.length; j++) {
+      
+      newli = document.createElement('li');
+      newli.id = city[i] + ',' + generationx[j];
+      newli.setAttribute('class', 'bootcamps');
+      newli.innerHTML = generationx[j];
+      newUl.appendChild(newli);
+    }
   }
 
   var bootcamps = document.getElementsByClassName('bootcamps');
   for (var x = 0; x < bootcamps.length; x++) {
-      
-      bootcamps[x].addEventListener('click', showMenu);
-
+    bootcamps[x].addEventListener('click', showMenu);
   }
 
   function showMenu(event) {
+    console.log(optionSprint.options)
+    //Eliminar todos los elementos del select - sprint
+    optionSprint.innerHTML='';
     var str = event.target.id.split(',');
     str = data[str[0]][str[1]];
-   console.log(str);
+    
     // Cargando las opciones de sprint segun generation 
-   for (i = 0; i < str['ratings'].length; i++) {
-        var option = document.createElement('option');
-        option.text = 'Sprint ' + str['ratings'][i]['sprint'];
-        option.value = str['ratings'][i]['sprint'] - 1;
-        option.id = str['ratings'][i]['sprint'] - 1;
-        optionSprint.add(option);
+    for (i = 0; i < str['ratings'].length; i++) {
+      var option = document.createElement('option');
+      option.text = 'Sprint ' + str['ratings'][i]['sprint'];
+      option.value = str['ratings'][i]['sprint'] - 1;
+      option.id = str['ratings'][i]['sprint'] - 1;
+      optionSprint.add(option);
     }
 
-
+    
+    // Evento para elegir el Sprint
+    optionSprint.addEventListener('change', function(event) {
+      // Mostramos especializaciones en el caso que el sprnt sea mayor o igual a 5
+      if (optionSprint.value >= 5) {
+        optionSpecialization.classList.add('show');
+        optionSpecialization.classList.remove('hidden');
+      } else {
+        optionSpecialization.classList.add('hidden');
+        optionSpecialization.classList.remove('show');
+      }
+      divAchievement.innerHTML = str['ratings'][event.target.value]['student']['cumple'] + str['ratings'][event.target.value]['student']['supera'];
+  
+      var totalStudentsAchievement = str['ratings'][event.target.value]['student']['cumple'] + str['ratings'][event.target.value]['student']['no-cumple'] + str['ratings'][event.target.value]['student']['supera'];
+      divStudentsAchievement.innerHTML = '% OF TOTAL (' + totalStudentsAchievement + ')';
+  
+      divPercentAchievement.innerHTML = (str['ratings'][event.target.value]['student']['cumple'] + str['ratings'][event.target.value]['student']['supera']) * 100 / totalStudentsAchievement + ' %';
+      var promoters = str['ratings'][event.target.value]['nps']['promoters'];
+      var passive = str['ratings'][event.target.value]['nps']['passive'];
+      var detractors = str['ratings'][event.target.value]['nps']['detractors'];
+      
+      var nps = promoters - detractors;
+      
+      divNps.innerHTML = nps + '%';
+      divPromoters.innerHTML = 'Promoters ' + promoters + '%';
+      divPassive.innerHTML = 'Passive ' + passive + '%';
+      divDetractors.innerHTML = 'Detractores ' + detractors + '%';
+    });
   }
 
 
-  console.log(optionSprint);
-  // Evento para elegir el Sprint
-  optionSprint.addEventListener('change', function(event) {
-    // Mostramos especializaciones en el caso que el sprnt sea mayor o igual a 5
-    if (optionSprint.value >= 5) {
-      optionSpecialization.classList.add('show');
-      optionSpecialization.classList.remove('hidden');
-    } else {
-      optionSpecialization.classList.add('hidden');
-      optionSpecialization.classList.remove('show');
-    }
-    divAchievement.innerHTML = str['ratings'][event.target.value]['student']['cumple'] + str['ratings'][event.target.value]['student']['supera'];
-
-    var totalStudentsAchievement = str['ratings'][event.target.value]['student']['cumple'] + str['ratings'][event.target.value]['student']['no-cumple'] + str['ratings'][event.target.value]['student']['supera'];
-    divStudentsAchievement.innerHTML = '% OF TOTAL (' + totalStudentsAchievement + ')';
-
-    divPercentAchievement.innerHTML = (str['ratings'][event.target.value]['student']['cumple'] + str['ratings'][event.target.value]['student']['supera']) * 100 / totalStudentsAchievement + ' %';
-    var promoters = str['ratings'][event.target.value]['nps']['promoters'];
-    var passive = str['ratings'][event.target.value]['nps']['passive'];
-    var detractors = str['ratings'][event.target.value]['nps']['detractors'];
-    
-    var nps = promoters - detractors;
-    console.log(nps);
-    divNps.innerHTML = nps + '%';
-    divPromoters.innerHTML = 'Promoters ' + promoters + '%';
-    divPassive.innerHTML = 'Passive ' + passive + '%';
-    divDetractors.innerHTML = 'Detractores ' + detractors + '%';
-  });
+ 
 
  
 /*
