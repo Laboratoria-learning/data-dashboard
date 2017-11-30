@@ -118,6 +118,7 @@ function stdGreatLab(sede, generacion) {
   return stdStf;
 }
 
+
 // Score teachers
 function scoreTeachers(sede, generacion) {
   var arrayRatings = data[sede][generacion]['ratings'];
@@ -136,20 +137,20 @@ function scoreJedis(sede, generacion) {
   }
   return arrayScore;
 }
-//La cantidad y el porcentaje que representa el total de estudiantes que superan la meta de puntos técnicos en promedio y por sprint.
-function overcomeGoal (sede,generacion,sprint) {
+// La cantidad y el porcentaje que representa el total de estudiantes que superan la meta de puntos técnicos en promedio y por sprint.
+function overcomeGoal(sede, generacion, sprint) {
   var superanMeta = data[sede][generacion]['students'];
   var goal = [];
-  var meta = 0
+  var meta = 0;
   var porcentaje;
-  for (var i= 0; i < superanMeta.length; i++){
-    goal[i] = superanMeta[i]['sprints'][sprint-1].score.tech;
-    //console.log(goal[i]);
-    if(goal[i]>='1260') {
-      meta++
+  for (var i = 0; i < superanMeta.length; i++) {
+    goal[i] = superanMeta[i]['sprints'][sprint - 1].score.tech;
+    // console.log(goal[i]);
+    if (goal[i] >= '1260') {
+      meta++;
     }
   }
-  porcentaje = (meta/superanMeta.length)*100;
+  porcentaje = (meta / superanMeta.length) * 100;
   return porcentaje;
 }
 

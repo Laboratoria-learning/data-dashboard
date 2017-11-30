@@ -6,8 +6,9 @@
   margin: 0;
   font-family: 'Quicksand', sans-serif;  
 }
-
-
+div{
+  display: inline-block;
+}
 header {
   padding: 7px;
   text-align: center;
