@@ -153,41 +153,41 @@ p {
 /*-------------------------------------*/
 /*--.....SECTION STUDENTS....*/
 .container1 {
-    outline: 1px solid purple;
+    /*outline: 1px solid purple;*/
     padding-top: 220px;
 }
 
 nav ul {
-    outline: 1 px solid black;
+    /*outline: 1 px solid black;*/
     list-style: none;
 }
 
 .navcontainer a {
-    outline: 1px solid red;
+    /*outline: 1px solid red;*/
     text-decoration: none;
 }
 
 .navcontainer {
-    outline: 1px solid black;
+    /*outline: 1px solid black;*/
     
 }
 
 .con-opc li a{
-    outline: 1px solid black;
+    /*outline: 1px solid black;*/
     width: 13px;
     height: 13px;
     margin-right: 15px;
     text-align: none ;
 }
 .con-opc {
-    outline: 1px solid black;
+    /*outline: 1px solid black;*/
     display: inline-block;
     padding: 0;
     margin-left: 15px;
     
 }
 .con-opc li {
-  outline: 1px solid brown;
+  /*outline: 1px solid brown;*/
   list-style: none;
   margin: 7px;
   font-size: 20px;
@@ -198,7 +198,7 @@ h2 {
     text-transform: uppercase;
 }
 .opciones {
-    outline: 1px solid green;
+    /*outline: 1px solid green;*/
     display: inline-block;
     width: 25%;
     margin-left:90px;
@@ -207,14 +207,14 @@ h2 {
 }
 
 .container2 {
-    outline: 1px solid black;
+    /*outline: 1px solid black;*/
     /*display: inline-block;*/
     width: 60%;
     margin-right: 60px;
     float: right;
 }
 .input {
-    outline: 1px solid blue;
+    /*outline: 1px solid blue;*/
     margin-bottom: 25px;
     margin-top: 10px;
 }
@@ -224,13 +224,13 @@ input {
     
 }
 .con-ul li {
-    outline: 1px solid red;
+    /*outline: 1px solid red;*/
     display: inline-block;
     width: 20px;
     height: 20px;
 }
  .con-frontend {
-    outline: 1px solid purple;
+    /*outline: 1px solid purple;*/
     float: left;
     width: 30%;
     margin: 5px;
@@ -241,14 +241,14 @@ ul {
     
 }
 #contenedor-frontend {
-  outline: 1px solid red;
+   /*outline: 1px solid red;*/
    background: #fff;
    width: 95%;
    margin-left: 10px;
 }
 .con-frontend li {
     display: inline-block;
-    outline: 1px solid black;
+    /*outline: 1px solid black;*/
     margin: 7px;
 }
 

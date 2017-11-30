@@ -57,8 +57,6 @@ window.addEventListener('load', function() {
       opcionMenu.classList.remove('enabled-menu');
     }
   }*/
-
-
 });
 
      
