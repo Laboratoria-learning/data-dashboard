@@ -1,7 +1,7 @@
 // Puedes hacer uso de la base de datos a través de la variable `data`
 
 // Almacenamos el nombre de las sedes dado en el archivo data.js; que nos da un array:
-//console.log(data);
+console.log(data);
 // guardamos los nombres de las sedes
 var dataNameSedes = Object.keys(data);
 // console.log(dataNameSedes);
@@ -13,6 +13,9 @@ var valuesofData = Object.values(data);
 
 // Nos aseguramos que la página cargue correctamente:
 window.addEventListener('load', function() {
+
+  var nameshow = document.getElementById('nameshow');
+  var selectSede = document.getElementById('select-sede');
 
 /* CÓDIGO PARA MOSTRAR SEDES Y PROMOCIONES */
   // Creamos una variable que va a guardar la lista desplegable
@@ -40,9 +43,9 @@ window.addEventListener('load', function() {
     // console.log(nameSede);
     var nameSede = document.getElementById('optgroupsede' + i).label;
 
-    // Recorremos las promociones
+    
     var arrayNumberStudentsActiveforSede = [];
-      
+    // Recorremos las promociones  
     for (var j = 0; j < valuesofPromsforSede.length; j++) {
       // Creamos un elemento para mostrar las promociones
       var optionproms = document.createElement('option');
@@ -53,11 +56,11 @@ window.addEventListener('load', function() {
       optgroupsedes.appendChild(optionproms); 
   
       // var nameProm = searchInArray(promsforSede, promsforSede[j]); 
-      var nameProm = document.getElementById('optionproms' + j).label;  
-      
+      var nameProm = document.getElementById('optionproms' + j).label; 
+          
       var numberOfStudentsforProm = valuesofPromsforSede[j].students.length;
       // console.log(numberOfStudentsforProm);
-      var numberStudentsActiveforProm = serchStudentsActive(valuesofPromsforSede[j].students);
+      var numberStudentsActiveforProm = parseInt(serchStudentsActive(valuesofPromsforSede[j].students));
       var numberStudentsInactiveforProm = numberOfStudentsforProm - numberStudentsActiveforProm;
       // console.log(numberStudentsActiveforProm);
      
@@ -68,33 +71,53 @@ window.addEventListener('load', function() {
       // Porcentaje de alumnas inactivas por promoción
       var percentSatudentsIntiveforProm = Math.round((numberStudentsInactiveforProm * 100) / numberOfStudentsforProm);
       
+      
       // console.log(numberOfStudentsforProm);
       
-      // nameProm.addEventListener('change', function(event) {
-      //   switch (true) {
-
-      //   }
-      // });
+      selectSede.addEventListener('change', function(event) {
+        var valueSelector = nameSede + nameProm;
+        console.log(valueSelector);
+        switch (valueSelector) {
+          case (nameProm):
+            nameshow.textContent = nameSede + ' ' + valueSelector;
+            
+            break;
+        }
+      });
 
           
       /* ACCEDER A LAS NOTAS DE LAS ESTUDIANTES*/
       var dataStudent = valuesofPromsforSede[j].students;
       // recorremos las estudiantes
+      var arrayPercentTotalProm = [];
+      
       for (var f = 0; f < dataStudent.length; f++) {
-        var sprints = dataStudent[f];
-        // recorremos los sprints 
-        
-        for (var g = 0; g < sprints.length; g++) {
-          // console.log(sprints[g]);
-          var notaTech = sprints[g]['score']['tech'];
-          var notaHSE = sprints[g]['score']['hse'];
+        var arraysprints = dataStudent[f].sprints;
+        // console.log(dataStudent[f]); 
+        // console.log(arraysprints);
+
+        var arrayPercentTotalStudent = [];
+        // recorremos los sprints
+        for (var g = 0; g < arraysprints.length; g++) {
+          // console.log(arraysprints[g]);
+          // notas por sprint 
+          var notaTech = arraysprints[g]['score']['tech'];
+          var notaHSE = arraysprints[g]['score']['hse'];
           var percenNotaTech = Math.round(notaTech / 18);
           var percenNotaHSE = Math.round(notaTech / 12);
-          var percenTotal = percenNotaTech + percenNotaHSE;
-          // console.log(notaHSE);
+          // porcentaje por sprint 
+          var percenTotalforSprint = (percenNotaTech + percenNotaHSE) / 2;
+          // console.log(percenTotalforSprint);
+          arrayPercentTotalStudent.push(percenTotalforSprint);
         }
-
+        
+        var PercentTotalStudent = parseInt(sumElementArray(arrayPercentTotalStudent) / arraysprints.length); 
+        // console.log(PercentTotalStudent); 
+        arrayPercentTotalProm.push(PercentTotalStudent);
       }
+
+      var PercentTotalProm = parseInt(sumElementArray(arrayPercentTotalProm) / dataStudent.length);
+      // console.log(PercentTotalProm);
       /* FIN ACCEDER*/
     }
     // total de studiantes por sede;
@@ -201,4 +224,13 @@ function activeforSede(array) {
     sum += array[s];
   }
   return sum;
+}
+
+// para sumar elementos de un array 
+function sumElementArray(array) {
+  var sumTotal = 0;
+  for (var u = 0; u < array.length; u++) {
+    sumTotal += array[u];
+  }
+  return sumTotal;
 }
