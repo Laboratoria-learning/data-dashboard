@@ -25,7 +25,7 @@ Realizar una herramienta web denominada **Dashboard** que permita que los Traini
 * La puntuación promedio de las profesores.
 * La puntuación promedio de las jedi masters.
 
-La heramienta debe de ser de la siguiente forma:
+La heramienta debe de ser de la siguiente forma presente:
 [Dashboard](https://marvelapp.com/104ejifg/screen/33742285)
 
 # Adicional
