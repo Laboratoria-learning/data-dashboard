@@ -26,23 +26,33 @@ Lograr:
 
 #### PARTE 1
 
-* Se identifican los objetivos a lograr (requerimientos del Training Manager) y las actividades a realizar, nos dividimos tareas.
+* Se identifican los objetivos a lograr (requerimientos del Training Manager, sede Lima) y las actividades a realizar, nos dividimos tareas pendientes: maquetado y estilos, funcionalidad, y necesidades del cliente.
 
 #### PARTE 2
 
-* Se crea una rama del gitHub por cada alumna para subir nuestros cambios a la rama master, a través del comando merge.
+* Se crea una rama del gitHub por cada colaboradora para subir nuestros cambios a la rama master, a través del comando merge.
 * Maquetación y diseño de las páginas.
 * Se realiza la funcionalidad de los eventos mediante javascript.
 
 ### PARTE 3
 
-* Se envía un correo al Training Manager (Lulú), con los avances para sus comentarios. Se adjunta capturas de pantalla.
+* Se envía un correo al Training Manager (Lulú Vilchez), con los avances para sus comentarios. Se adjunta capturas de pantalla del avance del proyecto.
 
 ![paginaUno](assets/images/paginaUno.png)
 ![pagina6](assets/images/pagina6.png)
 ![paginaUno-sede](assets/images/paginaUno-sede.png)
 
-Developers web:
+### PARTE 4
+
+* Se recibe feedback de nuestro Training Manager (Lulú Vilchez); quien solicita seleccionar la sede de lima y las 3 generaciones, para la toma de decisiones.
+
+![email](assets/images/email.png)
+
+### PARTE 5
+
+* Se corrige lo solicitado por el Training Manager.
+
+Colaboradoras:
 
 * L. Vanessa Colqui Santos.
 * Victoria Lung Hinostroza
