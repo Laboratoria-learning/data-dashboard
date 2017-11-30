@@ -35,7 +35,7 @@
 
 - ### **Metodología de Trabajo**
 
-    Para un óptimo trabajo en equipo se usó la herramienta Trello, mediante la cual se distibuyeron tareas, se realizaron coordinaciones y se establecieron metas claves a cumplir.
+    Para un óptimo trabajo en equipo se usó la herramienta Trello, mediante la cual se distribuyeron tareas, se realizaron coordinaciones y se establecieron metas claves a cumplir.
 
     ![](assets/images/org.png)
 
