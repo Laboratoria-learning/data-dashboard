@@ -1664,6 +1664,7 @@ listSedes.addEventListener('click', function(event) {
     scoreJedi.textContent = scoreJediLim20162;
     event.preventDefault();
   });
+    var lima20172 = document.getElementById('lima20172');
     lima20172.addEventListener('click', function(event) {
     title.innerHTML = 'LIMA 2017 II';
     listCity.classList.add('hide');
@@ -1694,6 +1695,39 @@ listSedes.addEventListener('click', function(event) {
     scoreTeacher.textContent = scoreTeacherLim20172;
     var scoreJedi = document.getElementById('scoreJedi');
     scoreJedi.textContent = scoreJediLim20172;
+    event.preventDefault();
+  });
+  var arequipa20162 = document.getElementById('arequipa20162');
+    arequipa20162.addEventListener('click', function(event) {
+    title.innerHTML = 'Arequipa 2016 II';
+    listCity.classList.add('hide');
+    var totalStudents = document.getElementById('totalStudents');
+    totalStudents.textContent = totalstudentsAqp20162;
+    var detractors = document.getElementById('detractors');
+    detractors.textContent = detractorsAqp20162 + '%';
+    detractors.classList.add('fontStrong');
+    var stuContar = document.getElementById('stuContar');
+    stuContar.textContent = stuContarAqp20162;
+    var prctstuContar = document.getElementById('prctstuContar');
+    prctstuContar.textContent = prctstuContarAqp20162 + '%';
+    prctstuContar.classList.add('fontStrong');
+    var totalStd = document.getElementById('totalStd');
+    totalStd.textContent = totalstudentsAqp20162;
+    var npstotal = document.getElementById('npstotal');
+    npstotal.textContent = npstotalAqp20162 + '%';
+    npstotal.classList.add('fontStrong');
+    var npsTotalPromoters = document.getElementById('npsTotalPromoters');
+    npsTotalPromoters.textContent = npsTotalPromotersAqp20162 + ' % Promoters';
+    var npsTotalPasive = document.getElementById('npsTotalPasive');
+    npsTotalPasive.textContent = npsTotalPasiveAqp20162 + ' % Pasive';
+    var npsTotalDetractors = document.getElementById('npsTotalDetractors');
+    npsTotalDetractors.textContent = npsTotalDetractorsAqp20162 + ' % Detractors';
+    var totalSatisfation = document.getElementById('totalSatisfation');
+    totalSatisfation.textContent = totalSatisfationAqp20162;
+    var scoreTeacher = document.getElementById('scoreTeacher');
+    scoreTeacher.textContent = scoreTeacherAqp20162;
+    var scoreJedi = document.getElementById('scoreJedi');
+    scoreJedi.textContent = scoreJediAqp20162;
     event.preventDefault();
   });
 });
