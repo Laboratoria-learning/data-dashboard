@@ -1,31 +1,25 @@
 var ulRegion = document.getElementById('ul-region');
 var ulLim = document.getElementById('ul-lim');
-
 var divRegion = document.getElementById('divRegion');
 var lima = document.getElementById('lim');
 var ulLim = document.getElementById('ul-lim');
 var lim172 = document.getElementById('lim172');
 var lim171 = document.getElementById('lim171');
 var lim162 = document.getElementById('lim162');
-
 var arequipa = document.getElementById('aqp');
 var ulAqp = document.getElementById('ul-aqp');
 var aqp171 = document.getElementById('aqp171');
 var aqp162 = document.getElementById('aqp162');
-
 var chile = document.getElementById('scl');
 var ulScl = document.getElementById('ul-scl');
 var scl172 = document.getElementById('scl172');
 var scl171 = document.getElementById('scl171');
 var scl162 = document.getElementById('scl162');
-
 var mexico = document.getElementById('cdmx');
 var ulCdmx = document.getElementById('ul-cdmx');
 var cdmx172 = document.getElementById('cdmx172');
 var cdmx171 = document.getElementById('cdmx171');
-
 var previous = divRegion;
-
 window.addEventListener('load', function() {
   divRegion.addEventListener('click', showAllRegions);
   lima.addEventListener('click', optionsLima);
@@ -40,7 +34,6 @@ window.addEventListener('load', function() {
   var promotion = lim172.dataset.promotion;
   showMain(region, promotion);
 });
-
 function showAllRegions() {
   // ulRegion.classList.toggle('hidden');
   ulRegion.classList.toggle('hidden');
@@ -50,7 +43,6 @@ function showAllRegions() {
   ulScl.classList.toggle('hidden');
   ulCdmx.classList.toggle('hidden');
 };
-
 function paintOptions(option, previous) {
   option.classList.add('yellow');
   if (option !== previous)
@@ -102,19 +94,15 @@ function optionsMexico() {
   previous = mexico;
   ulCdmx.classList.toggle('hidden');
 }
-
 function showMain(region, promotion) {
   showTotalStudents(region, promotion);
 }
-
 function showTotalStudents(region, promotion) {
   var current = 0;
   var deserted = 0;
-
   console.log('region '+region+' promotion '+promotion );
   var sedeRegion = region;
   var generation = promotion;
-
   /*
   var sedeRegion = 'LIM';
   var generation = '2017-2';
@@ -127,14 +115,12 @@ function showTotalStudents(region, promotion) {
             if (students === 'students') {
               for (var eachStudent in data [regionData][promo][students]) {
                 var active = data[sedeRegion][promo][students][eachStudent]['active'];
-
                 (active) ? current++ : deserted++;
               }
             }
           }
         }
       }
-
     }
   }
   console.log("current "+current+" deserted "+deserted);
@@ -143,9 +129,7 @@ function showTotalStudents(region, promotion) {
 // Obtener a quien elijo
 // LIM172 = data.LIM['2017-2'];
 // Pasar parametro para obtener ya datos estadisticos
-
 /*************************GRAFICOS************/
-
 function drawTotalStudents(current, deserted) {
   google.charts.load('current', {'packages':['corechart']});
   google.charts.setOnLoadCallback(drawChart);

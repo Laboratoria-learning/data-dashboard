@@ -85,7 +85,6 @@ nav{
   background-image: url(../assets/images/ale.png);
   background-size: cover;
 }
-
 .div-user{
   width: 100%;
   transform: translateY(320%);
@@ -169,7 +168,6 @@ cursor: pointer;
 =======
 height: 100%;
 }
-
 a:hover {
   outline-color: grey;
   cursor: pointer;
