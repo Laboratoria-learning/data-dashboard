@@ -118,3 +118,8 @@ li label {
     width: 100px;
     background-color: red;
 }
+
+button {
+    width: 250px;
+    height:45px;
+}

@@ -7,11 +7,25 @@
 console.log(data);
 
 window.addEventListener('load', function(event) {
+
 /* evento para botón de especialización javascript */
   var javascriptButton = document.getElementById('javascript-button');
   javascriptButton.addEventListener('click', function(event) {
-    alert('es click');
+  alert('es click');
+  button.classList.add('desactive');
+ })
 
+  /* evento para botón de especialización uxdesing */
+  var uxdesignButton = document.getElementById('uxdesign-button');
+  uxdesignButton.addEventListener('click', function(event) {
+    alert('es click en uxdesing');
+  });
+
+
+  /* evento para botón de especialización front end designer */
+  var frontEndDesignerButton = document.getElementById('front-end-designer-button');
+  frontEndDesignerButton.addEventListener('click', function(event) {
+    alert('es click en front end desing');
 
     var students= [];
     var studentsData = [];
@@ -19,6 +33,7 @@ window.addEventListener('load', function(event) {
     var baseHse = 1200;
     var acumTech = 0;
     var acumHse = 0;
+    var ind = 0;
     
         /* Sedes - Array */
         var sedes = Object.keys(data);
@@ -51,48 +66,26 @@ window.addEventListener('load', function(event) {
           students[[a,3]] = studentsData[1];
           students[[a,4]] = studentsData[2];
           students[[a,5]] = studentsData[3];
-          console.log(students[a]) ;
-          
+          ind = 0;
+
          /* extrayendo puntaje de sprints */     
           for (var b= 0; b <4 ; b++) {
             var tech =Object.values(studentsData[3]);
             var tec = Object.values(tech[b]);
             /*console.log('array tec' , tec); imprime notas alumnas sprint */
             var tePoint= Object.values(tec[1]);
-            /*console.log('tepoint' , tePoint );*/
             
-            /* recorre las notas por print 4 por alumna */
+           /* recorre las notas por print 4 por alumna */
            /*sprint 1*/
+            ind = 0;
             for (var c=0; c<2 ;c++) {
-               students[[a,6]] =((tePoint[c]/1800)*100).toFixed(1) ; /*tech*/
-               acumTech = acumTech + tePoint[0] ;
-               students[[a,7]] =((tePoint[c]/1200)*100).toFixed(1) ; /*hse*/   
-               console.log('nota sprint1',students[[a,2]], students[[a,6]],students[[a,7]]);
+               students[[a,6+b+ind]] =((tePoint[c]/1800)*100).toFixed(1) ; /*tech*/
+               students[[a,7+b]] =((tePoint[c]/1200)*100).toFixed(1) ; /*hse*/   
+               ind = ind+1;
             }
           }
         }
-     
-        /* console.log('tech', tech); /*hacer for para 4 */ 
-        /* console.log('tech', tech[0]); /*primer sprint*/
-        /*console.log('tec', tec);*/
-        /*console.log('tec', tec[1]);*/
-        /* console.log('students', students); */
-    
         var acumTech = 0;
         var acumHse = 0;
-    
-    
-
-  })
-
-  /* evento para botón de especialización uxdesing */
-  var uxdesignButton = document.getElementById('uxdesign-button');
-  uxdesignButton.addEventListener('click', function(event) {
-    alert('es click en uxdesing');
-  });
-  /* evento para botón de especialización front end designer */
-  var frontEndDesignerButton = document.getElementById('front-end-designer-button');
-  frontEndDesignerButton.addEventListener('click', function(event) {
-    alert('es click en front end desing');
   });
 });
