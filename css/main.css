@@ -17,16 +17,30 @@
     margin: 0 42%;
 }
 
-.options {
-    background:rgba(253, 234, 27, 0.938); 
-}
 .select {
-    border:none;
-    height: 28px;
-    margin:0 35px; 
-    background:rgba(255, 251, 0, 0.082); 
-
+    padding: 14px 35px; 
+    background:rgba(255, 251, 0, 0.548); 
+    font-weight: 600;
+    cursor: pointer;
 }
+
+.select:hover {
+    color: rgb(253, 208, 8);
+}
+
+div.options {
+    background: rgb(253, 251, 104);
+    position: absolute; 
+    margin-left: 21px;
+    padding: 7px 28px;
+    font-weight: 600;
+    
+    
+}
+ li.list:hover {
+     background: white;
+     cursor: pointer;
+ }
 
 .tabs {
     background:rgba(255, 251, 0, 0.548); 
@@ -37,19 +51,19 @@
     padding: 7px;
     margin: 14px 35px; 
     cursor: pointer;
-    border-bottom: 4px solid rgb(236, 195, 11);
+    border-bottom: 4px solid rgb(253, 208, 8);
+    font-weight: 600;
+    
 }
 
 .tab:hover {
-    border-bottom: 4px solid rgb(17, 17, 17);
+    color :rgb(253, 208, 8);
+    border-bottom: 4px solid black;
 }
-
-
 
 .firt-boxes {
     margin: 28px 95px 28px 95px; 
 }
-
 
 div.estadist {
     display: inline-block;
@@ -84,40 +98,19 @@ img {
 }
 
 /* segunda section */
-
-
-
- 
-
- 
- /* .information {
-   background-color: #a0246c;
- } */
  
  .tec {
    height:420px;
    margin: 28px 95px 28px 95px; 
    /* background-color: #dbeff56c; */
- 
  }
 
- 
  .hse{
     height:420px;
     margin: 28px 95px 28px 95px; 
     /* background-color: #dbeff56c; */
  }
- 
- /* h2{
-   margin-left: 24px;
-   text-transform: uppercase;
-   font-size: 20px;
-   font-family: inherit;
-   font-style: normal;
-   font-weight: bold;
-   font-size: 22px;
-   padding-top: 2%;
- } */
+
   .super-small{
    width:50%;
    height:63px;
@@ -137,7 +130,7 @@ img {
  
 
  .last-box{
-    background-color: #e41e1e;
+    background-color: #e4c61e67;
     height:420px;
     display: flex;
     margin: 28px 95px 28px 95px;
@@ -156,22 +149,16 @@ img {
     display: inline-block;
 }
 
-
 .coders {
     height: 300px;
     width: 100px;
     background: red;
 }
 
-
-
-
-
-
-
-
-
-
 .hiden {
     display: none;
+}
+
+.list {
+    list-style: none;
 }
