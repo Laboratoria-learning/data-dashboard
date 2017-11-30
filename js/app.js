@@ -5,15 +5,17 @@ window.addEventListener('load', function() {
   var selectSede = document.getElementById('sede');
   var selectGene = document.getElementById('generation');
   // agregando sedes
-  var sede = '';
-  var gene = '';
+  var sedeO = '';
+  var geneO = '';
   selectSede.addEventListener('change', function(event) {
-    sede = selectSede.value;
-    console.log(sede);
+    sedeO = selectSede.value;
+    return sedeO;
   });
+  console.log(selectSede);
   selectGene.addEventListener('change', function(event) {
-    gene = selectGene.value;
-    console.log(gene);
+    geneO = selectGene.value;
+    console.log(geneO);
+    return geneO;
   });
   // enrollment
   var enrollment = document.createElement('div');
@@ -161,15 +163,6 @@ window.addEventListener('load', function() {
       }
     } return count;
   }
-  /* function allStudents(sede, gene) {
-    var count = 0;
-    var sede = data[sede];
-    var generation = sede[gene];
-    var student = generation.students;
-    for (var i = 0; i < student.length; i++) {
-      count++;
-    } return count;
-  } */
   // promedio de desertadas
   function dropoutAll(sede, gene) {
     var count = 0;
@@ -300,29 +293,6 @@ window.addEventListener('load', function() {
     var totalDetractor = allDetractor / ratigns.length;
     return totalDetractor + ' % Detractor';
   }
-
-  // al seleccionar uno de las opciones por sprint para TECH
-  /*
-    function techStudent(sede, gene){
-      var sede = data[sede];
-      var generation = sede[gene];
-      var student = generation.students;
-      var cTechOne = 0;
-
-      for (var i = 0; i < student.length; i++){
-        var sprint = student[i].sprints.length;
-        if (student[i].active === true){
-
-          for (var j = 0; j < sprint; j++){
-            if (student[i].sprint[j].number === 1){
-              var points = student[i].sprint[j].score.tech;
-
-            }
-          }
-        }
-      }
-    }
-*/
 });
 // Puedes hacer uso de la base de datos a través de la variable `data`
 console.log(data);
