@@ -19,6 +19,5 @@ El archivo ___app___ almacena la funcionalidad de nuestra herramienta web y ___d
 
 #### Resultado final:
 
-![Sin titulo](assets/images/.png)  
-![Sin titulo](assets/images/.png)  
-![Sin titulo](assets/images/.png)  
+![Sin titulo](assets/images/captura-1.png)  
+![Sin titulo](assets/images/captura-2.png)  
