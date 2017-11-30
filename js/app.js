@@ -1,7 +1,7 @@
 // Puedes hacer uso de la base de datos a través de la variable `data`
 
 // Almacenamos el nombre de las sedes dado en el archivo data.js; que nos da un array:
-console.log(data);
+//console.log(data);
 // guardamos los nombres de las sedes
 var dataNameSedes = Object.keys(data);
 // console.log(dataNameSedes);
@@ -75,18 +75,34 @@ window.addEventListener('load', function() {
 
       //   }
       // });
+
+          
+      /* ACCEDER A LAS NOTAS DE LAS ESTUDIANTES*/
+      var dataStudent = valuesofPromsforSede[j].students;
+      // recorremos las estudiantes
+      for (var f = 0; f < dataStudent.length; f++) {
+        var sprints = dataStudent[f];
+        // recorremos los sprints 
+        
+        for (var g = 0; g < sprints.length; g++) {
+          // console.log(sprints[g]);
+          var notaTech = sprints[g]['score']['tech'];
+          var notaHSE = sprints[g]['score']['hse'];
+          var percenNotaTech = Math.round(notaTech / 18);
+          var percenNotaHSE = Math.round(notaTech / 12);
+          var percenTotal = percenNotaTech + percenNotaHSE;
+          // console.log(notaHSE);
+        }
+
+      }
+      /* FIN ACCEDER*/
     }
     // total de studiantes por sede;
     var numberOfStudentsforSede = activeforSede(arrayNumberStudentsActiveforSede);
     // console.log(numberOfStudentsforSede);
   }
   /* FIN DE CÓDIGO MOSTRAR SEDES Y PROMOCIONES */
-  
-  /* ACCEDER A LAS NOTAS DE LAS ESTUDIANTES*/
-  
 
-  /* FIN ACCEDER*/
-  
   /* CODIGO PESTAÑAS*/
   var show = function(e) {
     var tabSeleccionado = e.target.dataset.tabSeleccionado;
