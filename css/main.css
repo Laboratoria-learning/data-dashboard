@@ -15,6 +15,9 @@
     padding: 0;
     margin: 0;
     font-family: 'Raleway', sans-serif;
+    border-bottom-right-radius: 10px;
+    border-color: #ffc107;
+    outline:none;
 }
 
 nav{
@@ -79,7 +82,7 @@ nav .fa-bars{
 
 .square{
    width: 370px;
-   height: 350px;
+   height: 400px;
    /* outline: 1px solid red;  */
    display: inline-block;
    margin: 10px;
@@ -90,12 +93,12 @@ nav .fa-bars{
 
 .graphic-data{
    width: 150px;
-   outline: 1px solid red;
    display: inline-block;
    margin: 5px;
-   margin-top: 20px;
-   background:#f7f7f7;
+   margin-top: 15px;
+   background:#e1e1e1;
    text-align: center;
+   padding:5px;
 }
 
 .skill{
@@ -118,6 +121,14 @@ nav .fa-bars{
    background: #f7f7f7;
 }
 
+.container-big .text1{
+  display:inline-block;
+  background-color: #f7b617;
+  padding:10px;
+  margin:0 60px 0 60px;
+ border-radius: 5px;
+
+}
 .inline-block{
     display: inline-block;
 }
@@ -240,6 +251,11 @@ nav .fa-bars{
   #img-container span{
     font-size: 10px;
   }
+  #img-container .item{
+    background-color: #efefef;
+    padding: 4px;
+    margin-right: 5px;
+  }
   #img-container #porcentage-box{
     position:absolute;
     right: 10px;
@@ -263,13 +279,20 @@ nav .fa-bars{
     font-size: 20px;
   }
 
+  #img-container .remove{
+    background-color: #f7b617;
+    color: #fff;
+    display:inline-block;
+    margin-top: 35px;
+    padding: 5px 10px;
+  }
+
 .container-grafy{
   width: 300px;
   height: 230px;
   left:50%;
   transform: translateX(-50%);
   position: relative;
-  outline:1px solid blue;
 }
 
 .red{
@@ -282,7 +305,6 @@ nav .fa-bars{
   left:70%;
   transform: translateX(-50%);
   position: relative;
-  outline:1px solid green;
 }
 
 #buscar{

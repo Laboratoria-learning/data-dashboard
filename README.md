@@ -33,7 +33,7 @@ Que a la vez seguimos los requerimiento especificados:
     * Trabajar en parejas:
       1. [**Elena Lucero Japa Oscategui.**](ele.lucero1993@gmail.com)
 
-      2. [**Cintya Fernanda Perlacio Perlacio.*](nandafer.pe@gmail.com)
+      2. [**Cintya Fernanda Perlacio Perlacio.**](nandafer.pe@gmail.com)
 
     * Tener una planificación.
     * La definición del diseño.
