@@ -206,3 +206,9 @@ selectSede.addEventListener('change', function(event) {
     document.getElementById('scorej').innerHTML = scoreJedisTotalAqp71;
   }
 });
+
+var studentsPage = document.getElementById('students');
+studentsPage.addEventListener('click', function(event) {
+  document.getElementById('content').setAttribute('class','disappear');
+  document.getElementById('content-two').setAttribute('class','appear');
+});

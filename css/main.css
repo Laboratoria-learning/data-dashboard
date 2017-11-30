@@ -155,9 +155,18 @@
 #pastel-red {
   color: rgb(234,81,81);
 }
-.content-two {
+#content-two {
   margin: 40px 56px 58px 88px ;
   overflow: auto;
+}
+.disappear {
+  display: none;
+}
+.hidden {
+  visibility: hidden;
+}
+.appear {
+  visibility: visible;
 }
 .specialization {
   background: #fff;
