@@ -7,31 +7,28 @@
 var showHide = function(e) {
     var tabs = e.target.dataset.selecttab;
     var overContent = document.getElementById('overview-tab');
-    var studentsTab = document.getElementById('students-tab');
     if(tabs === 'overview'){
-      console.log('bien hecho');
-      //ocultar students y teachers
-      //mostrar info de overview
       var changeOne = overContent.style.display = 'block';
-      change.toggle('overview-tab');
+      //mostrar info de overview
+      changeOne.toggle('overview-tab');
+      //ocultar students y teachers
+      changeOne.remove('changeTwo');
     } else if (tabs === 'students'){
-      console.log('vas bien');
-      //ocultar overview y teachers
-      //mostrar students
+      var studentsTab = document.getElementById('students-tab');
       var changeTwo = studentsTab.style.display = 'block';
-    changeTwo.toggle('students-tab');
-    } if (tabs === 'teachers')
-      console.log('lo lograste');
-      //ocultar students y overview
-      //mostrar teachers
-  }
+      //mostrar students
+      changeTwo.toggle('students-tab');
+      //ocultar overview y teachers
+      changeTwo.remove('overview-tab');
+    }
+  };
+
   var chargePage = function() {
     var tabElements = document.getElementsByClassName('tabBtn');
     for(var i = 0; i < tabElements.length; i++) {
       tabElements[i].addEventListener('click', showHide);
     }
-  }
-  
+  };
   chargePage();
 
 // Puedes hacer uso de la base de datos a través de la variable `data`
@@ -53,7 +50,7 @@ function desercion(sede, generacion) {
   }
  
   var porcentajeDesercion = ((studentsDeserte.length * 100 / students.length));
-  var studentsCurrent = studentsActive.length + '\n' + 'STUDENTS CURRENTLY ENROLLMENT' ;
+  var studentsCurrent = studentsActive.length + '\n' + '# STUDENTS CURRENTLY ENROLLMENT' ;
   console.log('STUDENTS DROPOUT' + '\t' + studentsDeserte.length);
   var desercion = Math.round(porcentajeDesercion) + '%' + '\t' + 'PERCENTAGE OF DESERTION' ;
 
