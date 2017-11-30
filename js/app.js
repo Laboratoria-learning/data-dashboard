@@ -6,7 +6,6 @@ window.addEventListener('load', function() {
   containerSedes.addEventListener('click', function() {
     var sedes = document.getElementById('container-generations');
     /* Creando la lista de las sedes */
-<<<<<<< HEAD
                     
     var totalAlum = [];
     var sumTechHse = 0;
@@ -16,8 +15,6 @@ window.addEventListener('load', function() {
     var totalSum = [];
     var totalDesertion = [];
 
-=======
->>>>>>> 3b3a362ba22b3aaca04a007dcc5a05e8b519931a
     for (var i = 0; i < Object.keys(data).length; i++) {
       var containerList = document.createElement('ul');
       containerList.className = 'container-list';
@@ -156,9 +153,6 @@ window.addEventListener('load', function() {
       sedes.classList.add('hide');
     }  
   }); 
-<<<<<<< HEAD
-});  
-=======
 }); 
 
 google.charts.load('current', {'packages':['corechart']});
@@ -204,59 +198,3 @@ function drawChart() {
 
 
 };
- 
-/*
-var sum = 0;
-for (var i = 0; i < Object.keys(data).length; i++) {
-  for (var a = 0; a < Object.keys(data[Object.keys(data)[i]]).length; a++) {
-    sum = sum + (Object.values((Object.values(Object.values(data)[i]))[a])[0].length);
-    console.log(Object.values(data)[i]); 
-    // console.log(Object.values((Object.values(Object.values(data)[i]))[a])[0].length);
-  }
-} */
-// console.log(sum); 
-
-// var sum = 0;
-// var rest = 0;
-// var totalTech = [];
-// var totalHse = [];
-// var totalSum = [];
-// for (var i = 0; i < Object.keys(data).length; i++) {
-//   for (var a = 0; a < Object.keys(data[Object.keys(data)[i]]).length; a++) {
-//     for (var b = 0; b < Object.values((Object.values(Object.values(data)[i]))[a])[0].length; b++) {
-//     // console.log(Object.values(data)[i]); 
-//     // se obtiene el array de datos de las alummnas 
-//     // console.log(Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[2]);
-
-//       if (Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[2]) {
-//         for (var c = 0; c < Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[3].length; c++) {
-//           var tech = Object.values(Object.values(Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[3][c])[1])[0];
-//           totalTech.push(tech);
-//           var hse = Object.values(Object.values(Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[3][c])[1])[1];
-//           totalHse.push(hse);
-//           var sum = totalTech[c] + totalHse[c];
-//           totalSum.push(sum);
-//           if(totalSum[c] >= 2400) {
-            
-//           }
-//         }
-//         console.log(Object.values(Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[3][c])[0]);
-//       }
-//  else {
-//   rest = rest + 1;
-// }
-
-// console.log(sum);
-// console.log(rest); 
-/*
-for (var c = 0; c < Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[3].length; c++) {
-  var tech = Object.values(Object.values(Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[3][c])[1])[0];
-  totalTech.push(tech);
-  var hse = Object.values(Object.values(Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[3][c])[1])[1];
-  totalHse.push(hse);
-  var sum = totalTech[c] + totalHse[c];
-  totalSum.push(sum);
-  if(totalSum[c] >= 2400) {
-    
-  } */
->>>>>>> 3b3a362ba22b3aaca04a007dcc5a05e8b519931a
