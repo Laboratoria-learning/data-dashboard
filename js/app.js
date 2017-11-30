@@ -20,6 +20,8 @@ var ulCdmx = document.getElementById('ul-cdmx');
 var cdmx172 = document.getElementById('cdmx172');
 var cdmx171 = document.getElementById('cdmx171');
 var previous = divRegion;
+var numberBoxStudents = document.getElementById('number-box-students');
+var studentsDropout = document.getElementById('students-dropout');
 window.addEventListener('load', function() {
   divRegion.addEventListener('click', showAllRegions);
   lima.addEventListener('click', optionsLima);
@@ -122,13 +124,15 @@ function showTotalStudents(region, promotion) {
         }
       }
     }
+    numberBoxStudents.textContent = current;
+    numberBoxStudents.classList.toggle('number-box-int');
+    drawTotalStudents(current, deserted);
   }
-  console.log("current "+current+" deserted "+deserted);
-  drawTotalStudents(current, deserted);
-}
+  console.log("current" + current + "deserted" + deserted);
 // Obtener a quien elijo
 // LIM172 = data.LIM['2017-2'];
 // Pasar parametro para obtener ya datos estadisticos
+}
 /*************************GRAFICOS************/
 function drawTotalStudents(current, deserted) {
   google.charts.load('current', {'packages':['corechart']});

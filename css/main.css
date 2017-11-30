@@ -26,7 +26,14 @@
 }
 .border-bottom{
   border-bottom: 4px solid rgb(255,193,7);
->>>>>>> 403eece7bac2f3ea9a8659fba715ed92bdb08e7b
+}
+.number-box-int{
+  color : green;
+  font-size: 20px;
+  font-weight: 700;
+}
+.text-font-size{
+  font-size: 10px;
 }
 /*Modificando header*/
 header{
@@ -87,7 +94,7 @@ nav{
 }
 .div-user{
   width: 100%;
-  transform: translateY(320%);
+  transform: translateY(300%);
   margin-left: 30px;
 }
 .text-info-user{
