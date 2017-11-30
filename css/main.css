@@ -1,9 +1,9 @@
 *{
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     text-transform: uppercase;
     font-family: "FaktProSoft", "Helvetica Neue", helvetica, arial, sans-serif;
-    color: black;
     text-rendering: optimizeLegibility;
 }
 /* encabezado */
@@ -27,24 +27,21 @@
 /* barra de navegación */
 .nav-bar{
     background: #e1e1e1;
-    height: 130px;
+    padding: 5px 100px;
 }
-.nav-bar>h2,i{
-    display: inline-block;
-    position: relative;
-    left: 7%;
-    margin:35px 15px 0 0;
-    font-size: 30px;  
+.font-size {
+    margin: 10px;
+    padding: 5px;
+    font-size: 16px;
 }
-.nav-bar input{
-    font-size: 20px;
-    list-style: none;
-    display: inline-block;
-    position: relative;
-    left: -360px;
-    top: 25px;
-    margin-right: 20px;
+.tab {
+    padding: 10px;
+    font-weight: 700;
+    border-style: none;
+    background-color: transparent;
+    margin-top: 10px;
 }
+
 /* etiqueta section en general */
 section{
     background-color: #f7f7f7;
@@ -88,7 +85,7 @@ section{
 }
 /* segunda sección y tercera sección*/
 .second-section, .thirst-section{
-    outline: 2px solid red;
+    /*outline: 2px solid red;*/
     background-color: #fff;
     display: inline-block;
     position: relative;
@@ -96,8 +93,4 @@ section{
     height: auto;
     left: 70px;
     margin-bottom: 50px;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> bbec219e0c94c9d8c6825c6f43e526e94595684a

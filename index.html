@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <title>Data Dashboard</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <title>Data Dashboard</title>
   </head>
   <body>
     <header class="header-laboratoria">
@@ -12,13 +12,21 @@
       <i id="icon-hamburger" class="fa fa-bars fa-2x icon-hamburger" aria-hidden="true"></i>
     </header>
     <nav class="nav-bar">
-        <h2>santiago de chile 2017 - II</h2>
-        <i class="fa fa-caret-down fa-2x" aria-hidden="true"></i>
-        <input id="overview" type="submit" value="overview">
-        <input id="students" type="submit" value="students">
-        <input id="teachers" type="submit" value="teachers">
+      <!-- Sedes -->
+      <select id="headquarters" class="font-size">
+        <option value="">Sede</option>
+      </select>
+      <!-- Generaciones -->
+      <select id="generation" class="font-size">
+        <option value="">Generación</option>
+      </select>
+      <form action="index.html" method="post">
+        <input class="tab" type="submit" name="" value="general">
+        <input class="tab" type="submit" name="" value="estudiantes">
+        <input class="tab" type="submit" name="" value="profesores">
+      </form>
     </nav>
-   <section id="sections" name=""> 
+   <section id="sections">
     <section>
       <section class="first-section">
         <div class="div-enrollment">
