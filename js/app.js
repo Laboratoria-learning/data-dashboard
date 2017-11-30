@@ -58,6 +58,31 @@ for (var i = 0;i < tabs.length;i++) {
   tabs[i].addEventListener('click', showTab);
 }
 
+/*variables de data*/
+// var branches = data[branch];
+// var generations = data[branch][generation];
+// var students = data[branch][generation][students];
+
+/* Muestra de información de cada estudiante en tab de estudiantes */
+var studentsInfoMainBox = document.querySelector('.students-info');
+
+function createImage(name, photo) {
+  for (var i = 0; i < data[branch][generation]['students'].length; i++) {
+
+    ;
+    var pictureFigEle = document.createElement('figure');
+    studentsInfoMainBox.appendChild(pictureFigEle);
+    var pictureImgEle = document.createElement('img');
+    pictureImgEle.setAttribute('src', data[branch][generation]['students'][i]['photo']); // foto de generation
+    pictureImgEle.setAttribute('alt', data[branch][generation]['students'][i]['name']);
+    studentsInfoMainBox.appendChild(pictureImgEle)
+  }
+}
+
+// function addFiguresBox {
+//
+// }
+
 var radioButtonChile = document.querySelectorAll('.cbox-ch');
 var radioButtonMexico = document.querySelectorAll('.cbox-me');
 var radioButtonArequipa = document.querySelectorAll('.cbox-ar');
