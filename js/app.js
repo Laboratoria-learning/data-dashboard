@@ -58,7 +58,7 @@ window.addEventListener('load', function(event) {
   var limaStudents2017i = limaProm2017i.students;
   var activeLimaStudents2017i = 0;
   var inactiveLimaStudents2017i = 0;
-  var limaStudents2017ii = limaProm2017i.students;
+  var limaStudents2017ii = limaProm2017ii.students;
   var activeLimaStudents2017ii = 0;
   var inactiveLimaStudents2017ii = 0;
 
