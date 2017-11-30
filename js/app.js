@@ -242,7 +242,7 @@ function showAll() {
 
     var generationSelection = newarr[0];
     var branchSelection = newarr[1];
-
+    var numEnrollment = 0;
     var numEnrollment = enrollment(branchSelection, generationSelection, true);
     var studentCurrently = document.querySelector('#student-currently');
     var parragraf = document.createElement('p');
