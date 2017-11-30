@@ -16,17 +16,18 @@
     </header>
     <nav>
       <div class="nav-menu bold">
-        <select class="select bold" name="">
-                <option value="">AREQUIPA 2016-II </i></option>
-                <option value="">AREQUIPA 2017-I </option>
-                <option value="">CDMX 2017-I</option>
-                <option value="">CDMX 2017-II</option>
-                <option value="">LIMA 2016-II</option>
-                <option value="">LIMA 2017-I</option>
-                <option value="">LIMA 2017-II</option>
-                <option value="">SANTIAGO DE CHILE 2016-II</option>
-                <option value="">SANTIAGO DE CHILE 2017-I</option>
-                <option value="">SANTIAGO DE CHILE 2017-II</option>
+        <select id="sedes" class="select bold" name="">
+                <option value="">SELECCIONA SEDE</option>
+                <option value="aqp62">AREQUIPA 2016-II </i></option>
+                <option value="aqp71">AREQUIPA 2017-I </option>
+                <option value="cdmx71">CDMX 2017-I</option>
+                <option value="cdmx72">CDMX 2017-II</option>
+                <option value="lim62">LIMA 2016-II</option>
+                <option value="lim71">LIMA 2017-I</option>
+                <option value="lim72">LIMA 2017-II</option>
+                <option value="sdc62">SANTIAGO DE CHILE 2016-II</option>
+                <option value="sdc71">SANTIAGO DE CHILE 2017-I</option>
+                <option value="sdc72">SANTIAGO DE CHILE 2017-II</option>
         </select>
         <ul>
           <li>OVERVIEW</li>
@@ -42,11 +43,11 @@
         <div class="box-left inline-b background-w padding">
           <p class="bold font-s">ENROLLMENT</p>
           <div class="gray-box inline-b">
-            <p class="bold font-s">120</p>
+            <p id="enrolled" class="bold font-s">120</p>
             <p>#STUDENTS CURRENTLY ENROLLED</p>
           </div>
           <div class="gray-box inline-b">
-            <p class="color-red bold font-s">20%</p>
+            <p id="dropout" class="color-red bold font-s">20%</p>
             <p>% DROPOUT</p>
           </div>
           <img src="assets/images/bar-graph.png" alt="stadistic-graph">
@@ -55,11 +56,11 @@
         <div class="box-center inline-b background-w padding">
           <p class="bold font-s">ACHIEVEMENT</p>
           <div class="gray-box inline-b">
-            <p class="bold font-s">105</p>
+            <p id="target" class="bold font-s">105</p>
             <p>#STUDENTS THAT MEET THE TARGET</p>
           </div>
           <div class="gray-box inline-b">
-            <p class="bold font-s color-green">78% <i class="fa fa-caret-up" aria-hidden="true"></i></p>
+            <p id="target-percent" class="bold font-s color-green">78% <i class="fa fa-caret-up" aria-hidden="true"></i></p>
             <p>% OF TOTAL(135)</p>
           </div>
           <img src="assets/images/graph.png" alt="stadistic-graph">
@@ -68,7 +69,7 @@
         <div class="box-right inline-b background-w padding">
           <p class="bold font-s">NET PROMOTER SCORE</p>
           <div class="gray-box inline-b">
-          <p class="bold font-s color-green">78% <i class="fa fa-caret-up" aria-hidden="true"></i></p>
+          <p id="nps" class="bold font-s color-green">78% <i class="fa fa-caret-up" aria-hidden="true"></i></p>
           <p>% CUMULATIVE NPS</p>
           </div>
           <div class="font-s-two gray-box inline-b">
