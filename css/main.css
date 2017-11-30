@@ -121,7 +121,7 @@ header {
   padding: 20px;
 }
 
-.box1, .box2 {
+.box1, .box2, .box3 {
   background-color: #f7f7f7;
   display: inline-block;
   height: 60px;
@@ -151,6 +151,10 @@ header {
 .box2 p:last-child {
   font-size: 0.7em;
   height: 30px;;
+}
+
+.box3 p {
+  font-size: 1em;
 }
 
 /*Menu section*/
