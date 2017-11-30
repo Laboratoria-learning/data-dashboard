@@ -218,38 +218,52 @@ header {
 
 /*---------> clases para seccion students <---------*/
 .container-students {
-  display: block;
   background: white;
   width: 90%;
   margin: 0 auto;
   outline: 1px solid red;
-  text-align: center;
+  overflow: auto;
+  padding: 1em;
 }
 
 .specialization {
-  display: inline-block;
+  float: left;
   vertical-align: top;
   background-color: lightgray;
-  margin: 1em;
-  padding: 1.5em;
   width: 30%;
+  padding: 1em;
 }
 
 .student-hide {
-  display: inline-block;
-  background-color: lightgray;
-  margin: 1em;
-  padding: 1em;
-  width: 60%;
+  float: right;
+  width: 69%;
 }
 
 .img-student {
-  display: inline-block;
-  width: 10em;
-  margin-right: 0.5em;
+  float: left;
+  width: 25%;
+  height: 8em;
 }
 
-.datos-student {
+.name-student {
+  float: left;
+  vertical-align: top;
+  width: 35%;
+  text-align: center;
+}
+
+.profile-student {
+  margin-bottom: 2em;
+  background-color: #b1b0ab;
+  padding: 1em;
+  overflow: auto;
+}
+
+.box-tech {
+  background-color: #ec9513;
   display: inline-block;
   vertical-align: top;
+  height: 4em;
+  width: 20%;
+  padding-right: 0.5em;
 }
