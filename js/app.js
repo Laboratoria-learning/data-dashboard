@@ -50,7 +50,8 @@ window.addEventListener('load', function() {
     /* Promedio de puntuacion Teacher */
     ratingTeachers(sede, generacion);
     ratingJedi(sede, generacion);
-    //studentSatisfation(sede, generacion);
+    studentSatisfation(sede, generacion);
+    location.reload();
   });
 });
 /* Funciones */
