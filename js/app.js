@@ -7,12 +7,13 @@ window.addEventListener('load', function() {
   // agregando sedes
   var sedeO = '';
   var geneO = '';
-  selectSede.addEventListener('change', function(event) {
+  selectSede.addEventListener('click', function(event) {
     sedeO = selectSede.value;
+    console.log(sedeO);
     return sedeO;
   });
   console.log(selectSede);
-  selectGene.addEventListener('change', function(event) {
+  selectGene.addEventListener('click', function(event) {
     geneO = selectGene.value;
     console.log(geneO);
     return geneO;
