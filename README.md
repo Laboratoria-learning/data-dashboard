@@ -24,4 +24,11 @@
 > Nota: No olvides que es una buena práctica describir tu proyecto en este
 > archivo `README.md` y también desplegar tu web a Github Pages :smiley:.
 
-* probando
+## Proyecto Data Dashboard
+* El proyecto requirió sobre un trabajo de construcción de una web, al analizar los datos de las estudiantes lo cual nos brindaron una Data, el objetivo es por la pérdida de tiempo al localizar carpetas, documentos y datos.
+
+# Miembros del equipo:
+
+* Aurora Vásquez Sanchez.
+* Claudia Garibotto.
+* Katherine Chuquillanqui sermeño.
