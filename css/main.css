@@ -292,3 +292,15 @@
 .red{
   color: red;
 }
+<<<<<<< HEAD
+=======
+
+.container-select-grafy{
+  width: 600px;
+  height: 400px;
+  left:70%;
+  transform: translateX(-50%);
+  position: relative;
+  outline:1px solid green;
+}
+>>>>>>> 91e6e68e77864e5d22aa10576122ab5df340f722
