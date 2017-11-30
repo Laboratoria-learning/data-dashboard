@@ -87,20 +87,32 @@ window.addEventListener('load', function(event) {
     var acumTech = 0;
     var acumHse = 0;
 
-    for (var i= 0 ; i<15 ; i++){
+    /* para recorrer el array students */
+    for (var z= 0 ; z<15 ; z++){
       /* ubico área para crear elementos */
       var visualizationSection = document.getElementById('visualization');
- 
+      
        /* creaación de elementos divs */
-       var divStudent = document.createElement('div');/* div con id-student */
-      var imgPhoto = document.createElement('img');  /* img con propiedad src*/
-      imgPhoto.setAttribute('src',students[[i,3]]);
-      imgPhoto.classList.add('photo-standart');
+       var divStudent = document.createElement('div'); /* div con id-student */
+       var imgPhoto = document.createElement('img');  /* img con propiedad src*/
+       imgPhoto.setAttribute('src',students[[z,3]]);
+       imgPhoto.classList.add('photo-standart');
 
        /* asignación de hijos a padres */
        visualizationSection.appendChild(divStudent);
        divStudent.appendChild(imgPhoto);
-    }
 
+       var divDate = document.createElement('div'); /* div con id-date */
+       var divDateStudent = document.createElement('div'); /* div con id-name */ 
+       var divName = document.createElement('div'); /* div con id-date */
+       var divEspecializationStudent = document.createElement('div'); /* div con id-name */ 
+       
+
+       divStudent.appendChild(divDate);
+       divDate.appendChild(divName);
+       divDate.textContent = students[[z,2]];
+       divDate.appendChild(divEspecializationStudent);
+      
+    };
   });
 });

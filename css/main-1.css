@@ -139,7 +139,8 @@ button.desactive {
     color: white;
   }
 
+  /* clases para foto standart */
   .photo-standart {
-   height: 100px;
-   width: 100px;
+   height: 130px;
+   width: 140px;
   }
