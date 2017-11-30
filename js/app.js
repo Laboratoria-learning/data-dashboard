@@ -88,10 +88,6 @@ window.addEventListener('load', function() {
   promoterScore.setAttribute('class', 'promoterClass');
   promoterOne.setAttribute('class', 'pOneClass');
   promoterTwo.setAttribute('class', 'pTwoClass');
-<<<<<<< HEAD
-
-=======
->>>>>>> df5357331918925e24ee5e90929633fc82419c3f
   // TechSkills
   var techS = document.getElementById('techS');
   var techSkills = document.createElement('div');
@@ -116,13 +112,8 @@ window.addEventListener('load', function() {
   titleTS2.innerText = 'percentoftotal';
   var textTS = document.createElement('span');
   textTS.innerText = '% Of TOTAL';
-<<<<<<< HEAD
  // agregando clases
-  general.appendChild(techSkills);
-=======
- // agregando clases 
   techS.appendChild(techSkills);
->>>>>>> df5357331918925e24ee5e90929633fc82419c3f
   techSkills.appendChild(titleTS);
   techSkills.appendChild(comboTS);
   comboTS.appendChild(OP1);
@@ -144,13 +135,7 @@ window.addEventListener('load', function() {
   comboTS.setAttribute('class', 'comboStyle');
   metTarget.setAttribute('class', 'metTargetStyle');
   totalTS.setAttribute('class', 'totalTSStyle');
-<<<<<<< HEAD
 
-
-  // solo todos los alumnos completos
-=======
-  
->>>>>>> df5357331918925e24ee5e90929633fc82419c3f
   // funcion para sacar la cantidad actual activos de estudiantes por sede
   function currentStudents(sede, gene) {
     var count = 0;
@@ -259,18 +244,11 @@ window.addEventListener('load', function() {
  }
       var allPromoter = 0;
       for (var p = 0; p < array.length; p++) {
-<<<<<<< HEAD
-        allPromoter += array[p].promoter;
-      } var totalPromoters = 0;
-      totalPromoters = allPromoter / ratigns.length;
-    } return totalPromoters;
-
-=======
         allPromoter += array[p];
-      } 
+      }
        var totalPromoter = allPromoter / ratigns.length;
        return totalPromoter + ' % Promoter';
-    } 
+    }
     // funcion para los pasives
     function passivePercent(sede, gene){
       var sede = data[sede];
@@ -286,7 +264,7 @@ window.addEventListener('load', function() {
         var allPassive = 0;
         for (var p = 0; p < array.length; p++) {
           allPassive += array[p];
-        } 
+        }
          var totalPassive = allPassive / ratigns.length;
          return totalPassive + ' % Passive';
     }
@@ -305,14 +283,12 @@ window.addEventListener('load', function() {
         var allDetractor = 0;
         for (var p = 0; p < array.length; p++) {
           allDetractor += array[p];
-        } 
+        }
          var totalDetractor = allDetractor / ratigns.length;
          return totalDetractor + ' % Detractor';
     }
-<<<<<<< HEAD
->>>>>>> df5357331918925e24ee5e90929633fc82419c3f
-=======
     // al seleccionar uno de las opciones por sprint para TECH
+    /*
     function techStudent(sede, gene){
       var sede = data[sede];
       var generation = sede[gene];
@@ -326,14 +302,13 @@ window.addEventListener('load', function() {
           for (var j = 0; j < sprint; j++){
             if (student[i].sprint[j].number === 1){
               var points = student[i].sprint[j].score.tech;
-              
+
             }
           }
         }
       }
     }
-
->>>>>>> a69aa989dc2aa44ba44797aea8d384ad2e056707
+*/
 });
 // Puedes hacer uso de la base de datos a través de la variable `data`
 console.log(data);
