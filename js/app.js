@@ -2,11 +2,19 @@
 window.addEventListener('load', function() {
   var overview = document.getElementById('general');
   // agregando sedes
-  /* var sede;
-  var gene;
-  gene.addEventListener('change', function() {
-    
-  });*/
+  var selectSede = document.getElementById('sede');
+  var selectGene = document.getElementById('generation');
+  // agregando sedes
+  var sede = '';
+  var gene = '';
+  selectSede.addEventListener('change', function(event) {
+    sede = selectSede.value;
+    console.log(sede);
+  });
+  selectGene.addEventListener('change', function(event) {
+    gene = selectGene.value;
+    console.log(gene);
+  });
   // enrollment
   var enrollment = document.createElement('div');
   var enrollOne = document.createElement('div');
