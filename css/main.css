@@ -270,7 +270,7 @@ nav {
 }
 
 .students-info {
-  /*border: 1px solid green;*/
+  border: 1px solid #ffc107;
   width: 60vw;
   margin-left: 8vw;
   text-align: center;
