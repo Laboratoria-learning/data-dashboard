@@ -11,16 +11,24 @@
 /*sección header*/
  header {
      box-shadow: 2px 2px 2px gray;
-     height: 70px;
+     height: 80px;
  }
  header img {
-    float: left;
-    margin-top: 20px;
-    margin-right: 350px;
+    margin-top: 10px;
+    margin-left: 600px;
     width: 190px;
     height: 80px;
-    margin: auto 40%;
- }
+    }
+
+i {
+  margin-right: 60px;
+  font-size: 30px;
+}
+
+i:hover {
+ color: white;
+ background-color: rgb(190, 190, 190);
+}
 
 header .fa {
     margin-top: 30px;
@@ -45,8 +53,13 @@ display: inline-block;
 
 li {
   display: inline-block;
-  margin-top: 30px;
+  margin-top: 10px;
   margin-left: 40px;
+  }
+
+  ul li:hover {
+  color: white;
+  background-color: rgb(190, 190, 190);
 }
 
 #location {

@@ -43,7 +43,7 @@ window.addEventListener('load', function() {
   var percentTotal = document.createElement('h2');
   percentTotal.innerText = totalAchivement('LIM', '2016-2');
   var textTotal = document.createElement('span');
-  textTotal.innerText = '% of total( )'// allStudents('LIM', '2016-2');
+  textTotal.innerText = '% of total( )'; // allStudents('LIM', '2016-2');
   // agregando al achievement
   general.appendChild(achievement);
   achievement.appendChild(titleAchi);
@@ -88,7 +88,7 @@ window.addEventListener('load', function() {
   promoterScore.setAttribute('class', 'promoterClass');
   promoterOne.setAttribute('class', 'pOneClass');
   promoterTwo.setAttribute('class', 'pTwoClass');
-<<<<<<< HEAD
+
   // TechSkills
   var techSkills = document.createElement('div');
   var titleTS = document.createElement('h1');
@@ -108,7 +108,7 @@ window.addEventListener('load', function() {
   titleTS2.innerText = 'percentoftotal';
   var textTS = document.createElement('span');
   textTS.innerText = '% Of TOTAL';
- // agregando clases 
+ // agregando clases
   general.appendChild(techSkills);
   techSkills.appendChild(titleTS);
   techSkills.appendChild(comboTS);
@@ -126,11 +126,9 @@ window.addEventListener('load', function() {
   comboTS.setAttribute('class', 'comboStyle');
   metTarget.setAttribute('class', 'metTargetStyle');
   totalTS.setAttribute('class', 'totalTSStyle');
-  
-=======
-  // solo todos los alumnos completos
 
->>>>>>> e393ddbe79127c17b7613e647cb9ebc12ec157d2
+
+  // solo todos los alumnos completos
   // funcion para sacar la cantidad actual activos de estudiantes por sede
   function currentStudents(sede, gene) {
     var count = 0;
@@ -242,7 +240,7 @@ window.addEventListener('load', function() {
       } var totalPromoters = 0;
       totalPromoters = allPromoter / ratigns.length;
     } return totalPromoters;
-    
+
 });
 // Puedes hacer uso de la base de datos a través de la variable `data`
 console.log(data);
