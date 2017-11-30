@@ -21,7 +21,8 @@
           <!--Añadiendo un formulario con las lista seleccion -->
           <form method="" action="#">
             <select name="entradalista1">
-              <optgroup label="LIMA">
+              <optgroup label="SEDES">
+                <option ><h3>LIMA</h3></option>
                 <option>2015-I</option>
                 <option>2015-II</option>
                 <option>2016-I</option>
@@ -29,7 +30,8 @@
                 <option>2017-I</option>
                 <option>2017-II</option>
               </optgroup>
-              <optgroup label="AREQUIPA">
+             <!-- <optgroup label="AREQUIPA">-->
+               <option >AREQUIPA</option>
                 <option>2015-I</option>
                 <option>2015-II</option>
                 <option>2016-I</option>
@@ -37,7 +39,8 @@
                 <option>2017-I</option>
                 <option>2017-II</option>
               </optgroup>
-              <optgroup label="SANTIAGO DE CHILE">
+            <!--  <optgroup label="SANTIAGO DE CHILE">-->
+              <option >SANTIAGO</option>
                 <option>2015-I</option>
                 <option>2015-II</option>
                 <option>2016-I</option>
@@ -45,7 +48,8 @@
                 <option>2017-I</option>
                 <option>2017-II</option>
               </optgroup>
-              <optgroup type="checkout" label="CIUDAD DE MEXICO">
+             <!-- <optgroup type="checkout" label="CIUDAD DE MEXICO">-->
+               <option >MEXICO</option>
                 <option>2015-I</option>
                 <option>2015-II</option>
                 <option>2016-I</option>
@@ -58,9 +62,9 @@
         </div>
         <div id="sectionTabs">
           <ul class="contenedorTabs">
-            <li><a href="#">OVERVIEW</a></li>
-            <li><a href="#">STUDENTS</a></li>
-            <li><a href="#">TEACHERS</a></li>
+            <li id="overvi"><a href="#">OVERVIEW</a></li>
+            <li id="student"><a href="#">STUDENTS</a></li>
+            <li ><a href="#">TEACHERS</a></li>
           </ul>
         </div>
       </nav>
@@ -207,6 +211,44 @@
         </div>
       </section>
     </main>
+      <!--.....SECTION STUDENTS....-->
+    <section class="container1" id="container1">
+        <div class="opciones">
+           <h2>specialization:</h2>
+            <ul class="con-opc">
+              <li><a href="#"></a><span>Javascript</span></li>
+              <li><a href="#"></a><span>UX Design</span></li>
+              <li><a href="#"></a><span>Front end Designer</span></li>
+            </ul>
+        </div>
+        <div class="container2">
+            <div class="input">
+              <input type="text" placeholder="search">
+            </div>
+            <div id="contenedor-frontend">
+              <div class="con-frontend">
+                <img src="" alt="">
+              </div>
+              <div class="con-frontend">
+                <h2>diana navarro</h2>
+                <span>frontend developer</span>
+                <ul>
+                  <li>Javascript</li>
+                  <li>apis</li>
+                  <li>jquery</li>
+                </ul>
+              </div>
+              <div class="con-frontend">
+               <ul>
+                 <li>tech skills</li>
+                 <li>life skills</li>
+                 <li>english skills</li>
+               </ul>
+              </div>
+            </div>
+        </div>
+      </section> 
+    
     
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
