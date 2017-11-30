@@ -41,26 +41,16 @@ window.addEventListener('load', function() {
   var btndash = document.getElementById('btndash');
   btndash.addEventListener('click', function() {
     /* Enveroment Static*/
-    console.log(sede);
-    console.log(generacion);
-    console.log('-------------');
     var cantidad = data[sede][generacion].students.length;
-    console.log(cantidad);
     var acum = 0;
     var acumtrue = 0;
     for (var i = 0; i < cantidad;i++) {
-    // console.log(data[sede][generacion].students[i].active);
       if (data[sede][generacion].students[i].active == false) {
-        console.log(data[sede][generacion].students[i]);
         acum++;
-}
-      else {
-        console.log(data[sede][generacion].students[i]);
+      } else {
         acumtrue++;
-}
+      }
     }
-    console.log(acum);
-    console.log(acumtrue);
     var dropout = (acum / cantidad) * 100;
     var dropoutPercentaje = (Math.round(dropout) + '%');
     // inserta data de cantidad a los elementos
@@ -71,18 +61,38 @@ window.addEventListener('load', function() {
     var spanPercentaje = document.getElementById('percentaje-overview');
     var textPercentaje = document.createTextNode(dropoutPercentaje);
     spanPercentaje.appendChild(textPercentaje);
-    ratingTeachers(sede,generacion)
+    /* Promedio de puntuacion Teacher */
+    ratingTeachers(sede, generacion);
+    ratingJedi(sede,generacion);
   });
-   
 });
 
-function ratingTeachers() {
-    var rating=0;
-    var countRating=data[sede][generacion].ratings.length-1;
-    for(var i=0;i<data[sede][generacion].ratings;i++){ 
-     rating+=data[sede][generacion].ratings[i].teacher;
-    
-    }
-    var v=(rating/countRating)*100;
-    console.log(v);
+// Funcion que obtiene el promedio de la puntuacion de los teachers
+function ratingTeachers(sede, generacion) {
+  var ratingTeacher = 0;
+  var countRatingT = data[sede][generacion].ratings.length;
+  for (var i = 0;i < data[sede][generacion].ratings.length;i++) { 
+    ratingTeacher += data[sede][generacion].ratings[i].teacher;
+  }
+  var averageTeacher = (ratingTeacher / countRatingT).toFixed(1);
+  // inserta data de cantidad a los elementos
+  var spanRatingT = document.getElementById('t-rating-overview');
+  var textRatingT = document.createTextNode(averageTeacher);
+  spanRatingT.appendChild(textRatingT);
+}
+function ratingJedi(sede, generacion) {
+  var ratingJedi = 0;
+  var countRatingJ = data[sede][generacion].ratings.length;
+  for (var j = 0;j < data[sede][generacion].ratings.length;j++) { 
+    console.log('--------');
+    console.log(data[sede][generacion].ratings[j].jedi);
+    ratingJedi += data[sede][generacion].ratings[j].jedi;
+  }
+  // Declaro variable que almacene el promedio y con  función toFixed() poder limitar el número de decimales a través de su parámetr
+  var averageJedi = (ratingJedi / countRatingJ).toFixed(1);
+
+  // inserta data de cantidad a los elementos
+  var spanRatingJ = document.getElementById('j-rating-overview');
+  var textRatingJ = document.createTextNode(averageJedi);
+  spanRatingJ.appendChild(textRatingJ);
 }
