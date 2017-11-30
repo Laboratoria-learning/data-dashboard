@@ -98,5 +98,42 @@ function notasTodosSprint(sede, generacion) {
   TotalArray = [notasSprintArray0, notasSprintArray1, notasSprintArray2, notasSprintArray3];
   return TotalArray;
 }
-// console.log(notasSprint('AQP','2016-2'));
+// funcionalidad para NPS
+function nps(sede, generacion) {
+  var arrayRating = data[sede][generacion]['ratings'];
+  var nps = [];
+  for (var i = 0 ; i < arrayRating.length;i++) {
+    nps[i] = arrayRating[i].nps.promoters - arrayRating[i].nps.detractors;
+  }
+  return nps;
+}
+
+// Porcentaje de estudiantes satisfechas con exp Lab
+function stdGreatLab(sede, generacion) {
+  var arrayRatings = data[sede][generacion]['ratings'];
+  var stdStf = [];
+  for (var i = 0 ; i < arrayRatings.length;i++) {
+    stdStf[i] = arrayRatings[i].student.cumple + arrayRatings[i].student.supera;
+  }
+  return stdStf;
+}
+
+// Score teachers
+function scoreTeachers(sede, generacion) {
+  var arrayRatings = data[sede][generacion]['ratings'];
+  var arrayScore = [];
+  for (var i = 0 ; i < arrayRatings.length;i++) {
+    arrayScore[i] = arrayRatings[i].teacher;
+  }
+  return arrayScore;
+}
+// La puntuación promedio de l@s jedis.
+function scoreJedis(sede, generacion) {
+  var arrayRatings = data[sede][generacion]['ratings'];
+  var arrayScore = [];
+  for (var i = 0 ; i < arrayRatings.length;i++) {
+    arrayScore[i] = arrayRatings[i].jedi;
+  }
+  return arrayScore;
+}
 
