@@ -2,7 +2,7 @@
 
 body {
     padding: 4%;
-    background: -webkit-linear-gradient(left, rgba(30,82,72,1) 0%, rgba(90,131,127,1) 32%, rgba(159,187,191,1) 69%, rgba(213,231,241,1) 98%);
+    background: #fff;
 }
 
 /* Style for Nav */
@@ -12,7 +12,7 @@ body {
     width: 12%;
     height: 533px;
     float: left;
-    background-color: #152638;
+    background-color: #f7b617;
     border-radius: 18px;
     padding: 17px;
     filter: drop-shadow(2px 2px 5px #999);
@@ -28,13 +28,13 @@ body {
 }
 
 .icon-user #user-name {
-    color: #fff;
+    color: #333333;
     margin-left: 10px;
 }
 
 a {
     text-decoration: none;
-    color: #fff;
+    color: #333333;
 }
 
 .nav-principal ul {
@@ -45,7 +45,7 @@ a {
 
 .nav-principal li {
     padding: 15px;
-    color: #fff;
+    color: #333333;
     font-size: 18px;
 }
 
@@ -59,7 +59,7 @@ a {
 header {
     width: 80%;
     margin-left: 17%;
-    background-color: #152638;
+    background-color: #f7b617;
     border-radius: 13px;
     filter: drop-shadow(2px 2px 5px #999);
     padding: 5px;
@@ -79,15 +79,15 @@ header section {
 
 .name-student input {
     width: 100%;
-    background: -webkit-linear-gradient(left, rgba(30,82,72,1) 0%, rgba(90,131,127,1) 32%, rgba(159,187,191,1) 69%, rgba(213,231,241,1) 98%);
+    background: #fff;
     padding: 7px;
     border-radius: 10px;
-    color: #fff;
+    color: #333333;
     outline: none;
 }
 
 .name-student input::-webkit-input-placeholder {
-    color: #fff;
+    color: #333333;
 }
 
 .img-logo {
@@ -124,8 +124,8 @@ header section {
 .first-section .list-sedes {
     width: 15%;
     margin-top: 8px;
-    background-color: #152638;
-    color: #fff;
+    background-color: #f7b617;
+    color: #333333;
     font-weight: 700;
     padding: 8px;
     margin: 0px 50px;
@@ -134,7 +134,7 @@ header section {
 
 .first-section .container-paragraph {
     display: inline-block;
-    background-color: #152638;
+    background-color: #f7b617;
     padding: 10px;
     border-radius: 5px;
     margin: 20px;
@@ -144,6 +144,18 @@ header section {
 .first-section .container-paragraph p {
     margin: 0;
     padding: 0;
-    color: #fff;
+    color: #333333;
     font-size: 15px;
+}
+
+.grafhic {
+    background-color: transparent;
+    outline: 1px solid yellow;
+    width: 80%;
+    margin-left: 17%;
+}
+
+.grafhic .grafhic-1 {
+    background: -webkit-linear-gradient(left, rgba(30,82,72,1) 0%, rgba(90,131,127,1) 32%, rgba(159,187,191,1) 69%, rgba(213,231,241,1) 98%);
+    width: 30%;
 }
