@@ -16,7 +16,7 @@ window.addEventListener('load', function() {
   var dataC2017II = document.getElementById('dataC_2017II');
   var dataC2016II = document.getElementById('dataC_2016II');
   
-   // Cargando ultimos datos de la proción por defecto
+  // Cargando ultimos datos de la proción por defecto
   resultSede('LIM', '2017-2');
 
   dataA2017I.addEventListener('click', function() {
@@ -321,7 +321,7 @@ window.addEventListener('load', function() {
     selectJedi.appendChild(optionJediS2);
     selectJedi.appendChild(optionJediS3);
     selectJedi.appendChild(optionJediS4);
-     boxJedi.appendChild(boxJedi8);
+    boxJedi.appendChild(boxJedi8);
     boxJedi8.appendChild(canvasJedi);
 
 
@@ -428,7 +428,7 @@ window.addEventListener('load', function() {
               100 - dropout(sede, generation),
             ],
             backgroundColor: [
-               '#FF0000',  
+              '#FF0000',  
               '#58D68D',              
             ]
           }],
@@ -474,8 +474,8 @@ window.addEventListener('load', function() {
               100 - ((studentAchievement(sede, generation) / totalStudentActive(sede, generation)) * 100).toFixed(1),
             ],
             backgroundColor: [
-             '#58D68D',
-             '#FF0000',              
+              '#58D68D',
+              '#FF0000',              
             ]
           }],
           labels: [
@@ -552,38 +552,38 @@ window.addEventListener('load', function() {
     optionTechS2.textContent = 'Sprint 2';
     optionTechS3.textContent = 'Sprint 3';
     optionTechS4.textContent = 'Sprint 4';
-     $(document).ready(function () {
+    $(document).ready(function() {
       var datos4 = {
-          type: "bar",
-          data: {
-              datasets: [{
-                  data: [
-                    ((studentsTech(sede, generation)[0] / totalStudentActive(sede, generation)) * 100).toFixed(1),
-                    ((studentsTech(sede, generation)[1] / totalStudentActive(sede, generation)) * 100).toFixed(1),
-                    ((studentsTech(sede, generation)[2] / totalStudentActive(sede, generation)) * 100).toFixed(1),
-                    ((studentsTech(sede, generation)[3] / totalStudentActive(sede, generation)) * 100).toFixed(1),
-                                     ],
-                  backgroundColor: [
-                      "#E16946 ",
-                      "#E0AE5E",
-                      "#A33464 ", 
-                      "#1B548E ",             
-                  ]
-              }],
-              labels: [
-                  "Sprint1",
-                  "Sprint2",
-                  "Sprint3",
-                  "Sprint4",
-                             ]
-          },
-          options: {
-              reponsive: true,
-          }
+        type: 'bar',
+        data: {
+          datasets: [{
+            data: [
+              ((studentsTech(sede, generation)[0] / totalStudentActive(sede, generation)) * 100).toFixed(1),
+              ((studentsTech(sede, generation)[1] / totalStudentActive(sede, generation)) * 100).toFixed(1),
+              ((studentsTech(sede, generation)[2] / totalStudentActive(sede, generation)) * 100).toFixed(1),
+              ((studentsTech(sede, generation)[3] / totalStudentActive(sede, generation)) * 100).toFixed(1),
+            ],
+            backgroundColor: [
+              '#E16946 ',
+              '#E0AE5E',
+              '#A33464 ', 
+              '#1B548E ',             
+            ]
+          }],
+          labels: [
+            'Sprint1',
+            'Sprint2',
+            'Sprint3',
+            'Sprint4',
+          ]
+        },
+        options: {
+          reponsive: true,
+        }
       };
-      var canvas4 = document.getElementById("chart4").getContext('2d');
+      var canvas4 = document.getElementById('chart4').getContext('2d');
       window.pie = new Chart(canvas4, datos4);
-   });
+    });
 
     // atributos atributos TECH
     optionTechS1.setAttribute('value', 'sprint1');
@@ -686,38 +686,38 @@ window.addEventListener('load', function() {
     optionHseS2.textContent = 'Sprint 2';
     optionHseS3.textContent = 'Sprint 3';
     optionHseS4.textContent = 'Sprint 4';
-     $(document).ready(function () {
+    $(document).ready(function() {
       var datos5 = {
-          type: "bar",
-          data: {
-              datasets: [{
-                  data: [
-                    (studentsHse(sede, generation)[0] / totalStudentActive(sede, generation)) * 100 ,
-                    (studentsHse(sede, generation)[1] / totalStudentActive(sede, generation)) * 100 ,
-                    (studentsHse(sede, generation)[2] / totalStudentActive(sede, generation)) * 100 ,
-                    (studentsHse(sede, generation)[3] / totalStudentActive(sede, generation)) * 100 ,
-                                     ],
-                  backgroundColor: [
-                    "#E16946 ",
-                    "#E0AE5E",
-                    "#A33464 ", 
-                    "#1B548E ",          
-                  ]
-              }],
-              labels: [
-                  "Sprint1",
-                  "Sprint2",
-                  "Sprint3",
-                  "Sprint4",
-                             ]
-          },
-          options: {
-              reponsive: true,
-          }
+        type: 'bar',
+        data: {
+          datasets: [{
+            data: [
+              (studentsHse(sede, generation)[0] / totalStudentActive(sede, generation)) * 100,
+              (studentsHse(sede, generation)[1] / totalStudentActive(sede, generation)) * 100,
+              (studentsHse(sede, generation)[2] / totalStudentActive(sede, generation)) * 100,
+              (studentsHse(sede, generation)[3] / totalStudentActive(sede, generation)) * 100,
+            ],
+            backgroundColor: [
+              '#E16946 ',
+              '#E0AE5E',
+              '#A33464 ', 
+              '#1B548E ',          
+            ]
+          }],
+          labels: [
+            'Sprint1',
+            'Sprint2',
+            'Sprint3',
+            'Sprint4',
+          ]
+        },
+        options: {
+          reponsive: true,
+        }
       };
-      var canvas5 = document.getElementById("chart5").getContext('2d');
+      var canvas5 = document.getElementById('chart5').getContext('2d');
       window.pie = new Chart(canvas5, datos5);
-   });
+    });
 
     // atributos atributos HSE
     optionHseS1.setAttribute('value', 'sprint1');
@@ -805,38 +805,38 @@ window.addEventListener('load', function() {
     optionSatisfactionS2.textContent = 'Sprint 2';
     optionSatisfactionS3.textContent = 'Sprint 3';
     optionSatisfactionS4.textContent = 'Sprint 4';
-     $(document).ready(function () {
+    $(document).ready(function() {
       var datos6 = {
-          type: "line",
-          data: {
-              datasets: [{
-                  data: [
-                    studentSatisfaction(sede, generation)[0] ,
-                    studentSatisfaction(sede, generation)[1] ,
-                    studentSatisfaction(sede, generation)[2] ,
-                    studentSatisfaction(sede, generation)[3] ,
-                                     ],
-                  backgroundColor: [
-                      "#f7464A ",
-                      "#46BFBD ",
-                      "#F8BFAD ", 
-                      "#46DOAE ",             
-                  ]
-              }],
-              labels: [
-                  "Sprint1",
-                  "Sprint2",
-                  "Sprint3",
-                  "Sprint4",
-                             ]
-          },
-          options: {
-              reponsive: true,
-          }
+        type: 'line',
+        data: {
+          datasets: [{
+            data: [
+              studentSatisfaction(sede, generation)[0],
+              studentSatisfaction(sede, generation)[1],
+              studentSatisfaction(sede, generation)[2],
+              studentSatisfaction(sede, generation)[3],
+            ],
+            backgroundColor: [
+              '#f7464A ',
+              '#46BFBD ',
+              '#F8BFAD ', 
+              '#46DOAE ',             
+            ]
+          }],
+          labels: [
+            'Sprint1',
+            'Sprint2',
+            'Sprint3',
+            'Sprint4',
+          ]
+        },
+        options: {
+          reponsive: true,
+        }
       };
-      var canvas6 = document.getElementById("chart6").getContext('2d');
+      var canvas6 = document.getElementById('chart6').getContext('2d');
       window.pie = new Chart(canvas6, datos6);
-   });
+    });
 
 
     // atributos Student Satisafaction
@@ -879,36 +879,36 @@ window.addEventListener('load', function() {
     optionTeacherS2.textContent = 'Sprint 2';
     optionTeacherS3.textContent = 'Sprint 3';
     optionTeacherS4.textContent = 'Sprint 4';
-     $(document).ready(function () {
+    $(document).ready(function() {
       var datos7 = {
-          type: "line",
-          data: {
-              datasets: [{
-                  data: [
-                    teacherRating(sede, generation)[0],
-                    teacherRating(sede, generation)[1],
-                    teacherRating(sede, generation)[2],
-                    teacherRating(sede, generation)[3],
-                                     ],
-                  backgroundColor: [
-                      "#f7464A ",
-                      "#46BFBD ",              
-                  ]
-              }],
-              labels: [
-                "Sprint1",
-                "Sprint2",
-                "Sprint3",
-                "Sprint4",
-                             ]
-          },
-          options: {
-              reponsive: true,
-          }
+        type: 'line',
+        data: {
+          datasets: [{
+            data: [
+              teacherRating(sede, generation)[0],
+              teacherRating(sede, generation)[1],
+              teacherRating(sede, generation)[2],
+              teacherRating(sede, generation)[3],
+            ],
+            backgroundColor: [
+              '#f7464A ',
+              '#46BFBD ',              
+            ]
+          }],
+          labels: [
+            'Sprint1',
+            'Sprint2',
+            'Sprint3',
+            'Sprint4',
+          ]
+        },
+        options: {
+          reponsive: true,
+        }
       };
-      var canvas7 = document.getElementById("chart7").getContext('2d');
+      var canvas7 = document.getElementById('chart7').getContext('2d');
       window.pie = new Chart(canvas7, datos7);
-   });
+    });
     
     // atributos teacher
     optionTeacherS1.setAttribute('value', 'sprint1');
@@ -950,38 +950,38 @@ window.addEventListener('load', function() {
     optionJediS2.textContent = 'Sprint 2';
     optionJediS3.textContent = 'Sprint 3';
     optionJediS4.textContent = 'Sprint 4';
-    $(document).ready(function () {
+    $(document).ready(function() {
       var datos8 = {
-          type: "line",
-          data: {
-              datasets: [{
-                  data: [
-                    jediRating(sede, generation)[0],
-                    jediRating(sede, generation)[1],
-                    jediRating(sede, generation)[2],
-                    jediRating(sede, generation)[3],
-                                     ],
-                  backgroundColor: [
-                      "#f7464A ",
-                      "#46BFBD ",  
-                      "#GF35F4 ",
-                      "#3DG4TD ",               
-                  ]
-              }],
-              labels: [
-                "Sprint1",
-                "Sprint2",
-                "Sprint3",
-                "Sprint4",
-                             ]
-          },
-          options: {
-              reponsive: true,
-          }
+        type: 'line',
+        data: {
+          datasets: [{
+            data: [
+              jediRating(sede, generation)[0],
+              jediRating(sede, generation)[1],
+              jediRating(sede, generation)[2],
+              jediRating(sede, generation)[3],
+            ],
+            backgroundColor: [
+              '#f7464A ',
+              '#46BFBD ',  
+              '#GF35F4 ',
+              '#3DG4TD ',               
+            ]
+          }],
+          labels: [
+            'Sprint1',
+            'Sprint2',
+            'Sprint3',
+            'Sprint4',
+          ]
+        },
+        options: {
+          reponsive: true,
+        }
       };
-      var canvas8 = document.getElementById("chart8").getContext('2d');
+      var canvas8 = document.getElementById('chart8').getContext('2d');
       window.pie = new Chart(canvas8, datos8);
-   });
+    });
     
     // atributos Jedi
     optionJediS1.setAttribute('value', 'sprint1');
