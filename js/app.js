@@ -24,329 +24,209 @@ function create() {
   switch (sede) {
   case 'LIMA2016-II':
     var estudiantelim1 = (data['LIM']['2016-2']['students'].length);
-    console.log(document.getElementById('one').innerHTML = estudiantelim1 + ' # estudents currentl enrrolled');
-    
-    // creando desercion
-    var totalStudent = data['LIM']['2016-2']['students'];
-    var activeStudent = [];
-    var inactiveStudent = [];
-    for (var i = 0; i < totalStudent.length; i++) {
-      if (totalStudent[i].active === true) {
-        activeStudent.push(i);
-      } else {
-        inactiveStudent.push(i);
-      }
-    }
-    document.getElementById('two').innerHTML = (inactiveStudent.length / estudiantelim1) * 100 + '%';
-    // creando promedio de los profesores
-    var teacheone = data['LIM']['2016-2']['ratings'][0]['teacher'];
-    var teachetwo = data['LIM']['2016-2']['ratings'][1]['teacher'];    
-    var total = teacheone + teachetwo ;
-    var promedio = total / 2;
+    var totalStudentlim1 = data['LIM']['2016-2']['students'];
+      console.log(document.getElementById('one').innerHTML =  estudiantelim1  + " # estudents currentl enrrolled" );
+      /* Añadiendo NPS */
+      var ratings = data['LIM']['2016-2']['ratings'][0];
+      var promoters = ratings['nps']['promoters'];
+      var passive = ratings['nps']['passive'];
+      var detractors = ratings['nps']['detractors'];
+      var npsTotal = promoters - detractors;
 
-    document.getElementById('teacher').innerHTML = promedio;
+      console.log(document.getElementById('five').innerHTML = (npsTotal) + " %");
 
-    // creando promedio de los JEDIMASTER
-    var teacheone = data['LIM']['2016-2']['ratings'][0]['jedi'];
-    var teachetwo = data['LIM']['2016-2']['ratings'][1]['jedi'];
-    var total = teacheone + teachetwo;
-    var promedio = total / 2;
-    document.getElementById('jedi').innerHTML = promedio;
-    
-    break;
-
+      console.log(document.getElementById('six-1').innerHTML = (promoters) + "%" + "promoters");
+      console.log(document.getElementById('six-2').innerHTML = (passive) + "%" + "passives");
+      console.log(document.getElementById('six-3').innerHTML = (detractors) + "%" + "detractors");
+      break;
   case 'LIMA2017-I':
-    var estudiantelim2 = (data['LIM']['2017-1']['students'].length);   
-    console.log(document.getElementById('one').innerHTML = estudiantelim2);
-    // creando desercion
-    var totalStudent = data['LIM']['2017-1']['students'];
-    var activeStudent = [];
-    var inactiveStudent = [];
-    for (var i = 0; i < totalStudent.length; i++) {
-      if (totalStudent[i].active === true) {
-        activeStudent.push(i);
-      } else {
-        inactiveStudent.push(i);
-      }
-    }
-    document.getElementById('two').innerHTML = (inactiveStudent.length / estudiantelim2) * 100 + '%';    
-    // creando promedio de los profesores
-    var teacheone = data['LIM']['2017-1']['ratings'][0]['teacher'];
-    var teachetwo = data['LIM']['2017-1']['ratings'][1]['teacher'];
-    var teachetree = data['LIM']['2017-1']['ratings'][2]['teacher'];
-    var teachefour = data['LIM']['2017-1']['ratings'][3]['teacher'];
-    var total = teacheone + teachetwo + teachetree + teachefour;
-    var promedio = total / 4;    
-    document.getElementById('teacher').innerHTML = promedio;
+  var estudiantelim2 = (data['LIM']['2017-1']['students'].length);
+  var totalStudentlim2 = data['LIM']['2017-1']['students'];
+  console.log( document.getElementById('one').innerHTML = estudiantelim2);
+  /* Añadiendo NPS*/
+  var ratings = data['LIM']['2017-1']['ratings'][0];
+  var promoters = ratings['nps']['promoters'];
+  var passive = ratings['nps']['passive'];
+  var detractors = ratings['nps']['detractors'];
+  var npsTotal = promoters - detractors;
 
-    // creando promedio de jedis
-    var teacheone = data['LIM']['2017-1']['ratings'][0]['jedi'];
-    var teachetwo = data['LIM']['2017-1']['ratings'][1]['jedi'];
-    var teachetree = data['LIM']['2017-1']['ratings'][2]['jedi'];
-    var teachefour = data['LIM']['2017-1']['ratings'][3]['jedi'];
-    var total = teacheone + teachetwo + teachetree + teachefour;
-    var promedio = total / 4;
-    document.getElementById('jedi').innerHTML = promedio;
+  console.log(document.getElementById('five').innerHTML = (npsTotal) + " %");
 
-    break;
+  console.log(document.getElementById('six-1').innerHTML = (promoters) + "%" + "promoters");
+  console.log(document.getElementById('six-2').innerHTML = (passive) + "%" + "passives");
+  console.log(document.getElementById('six-3').innerHTML = (detractors) + "%" + "detractors");
+      break;
   case 'LIMA2017-II':
-    var estudiantelim3 = (data['LIM']['2017-2']['students'].length);
-    console.log(document.getElementById('one').innerHTML = estudiantelim3);
-    // creando desercion
-    var totalStudent = data['LIM']['2017-2']['students'];
-    var activeStudent = [];
-    var inactiveStudent = [];
-    for (var i = 0; i < totalStudent.length; i++) {
-      if (totalStudent[i].active === true) {
-        activeStudent.push(i);
-      } else {
-        inactiveStudent.push(i);
-      }
-    }
-    document.getElementById('two').innerHTML = (inactiveStudent.length / estudiantelim3) * 100 + '%';
-    // creando promedio de los profesores
-    var teacheone = data['LIM']['2017-2']['ratings'][0]['teacher'];
-    var teachetwo = data['LIM']['2017-2']['ratings'][1]['teacher'];
-    var total = teacheone + teachetwo;
-    var promedio = total / 2; 
-    document.getElementById('teacher').innerHTML = promedio;
-    // creando promedio para jedis
-    var teacheone = data['LIM']['2017-2']['ratings'][0]['jedi'];
-    var teachetwo = data['LIM']['2017-2']['ratings'][1]['jedi'];
-    var total = teacheone + teachetwo;
-    var promedio = total / 2;
-    document.getElementById('jedi').innerHTML = promedio;
+  var  estudiantelim3 = (data["LIM"]["2017-1"]["students"].length);
+  console.log( document.getElementById('one').innerHTML = estudiantelim3);
+  /* Añadiendo NPS*/
+  var ratings = data['LIM']['2017-2']['ratings'][0];
+  var promoters = ratings['nps']['promoters'];
+  var passive = ratings['nps']['passive'];
+  var detractors = ratings['nps']['detractors'];
+  var npsTotal = promoters - detractors;
 
-    break;
+  console.log(document.getElementById('five').innerHTML = (npsTotal) + " %");
+
+  console.log(document.getElementById('six-1').innerHTML = (promoters) + "%" + "promoters");
+  console.log(document.getElementById('six-2').innerHTML = (passive) + "%" + "passives");
+  console.log(document.getElementById('six-3').innerHTML = (detractors) + "%" + "detractors");
+      break;
   case 'AREQUIPA2016-II':
-    var estudiantelim4 = (data['AQP']['2016-2']['students'].length);
-    console.log(document.getElementById('one').innerHTML = estudiantelim4);
-    
-    // creando desercion
-    var totalStudent = data['AQP']['2016-2']['students'];
-    var activeStudent = [];
-    var inactiveStudent = [];
-    for (var i = 0; i < totalStudent.length; i++) {
-      if (totalStudent[i].active === true) {
-        activeStudent.push(i);
-      } else {
-        inactiveStudent.push(i);
-      }
-    }
-    document.getElementById('two').innerHTML = (inactiveStudent.length / estudiantelim4) * 100 + '%';
-    // creando promedio de los profesores
-    var teacheone = data['AQP']['2016-2']['ratings'][0]['teacher'];
-    var teachetwo = data['AQP']['2016-2']['ratings'][1]['teacher'];
-    var teachetree = data['AQP']['2016-2']['ratings'][2]['teacher'];
-    var teachefour = data['AQP']['2016-2']['ratings'][3]['teacher'];
-    var total = teacheone + teachetwo + teachetree + teachefour;
-    var promedio = total / 4;      
-    document.getElementById('teacher').innerHTML = promedio;
-    // creando promedio de los jedis
-    var teacheone = data['AQP']['2016-2']['ratings'][0]['jedi'];
-    var teachetwo = data['AQP']['2016-2']['ratings'][1]['jedi'];
-    var teachetree = data['AQP']['2016-2']['ratings'][2]['jedi'];
-    var teachefour = data['AQP']['2016-2']['ratings'][3]['jedi'];
-    var total = teacheone + teachetwo + teachetree + teachefour;
-    var promedio = total / 4;
-    document.getElementById('jedi').innerHTML = promedio;
-      
-    break;
+  var  estudiantelim4 = (data["AQP"]["2016-2"]["students"].length);
+  console.log( document.getElementById('one').innerHTML = estudiantelim4);
+  var totalStudentAQP1 = data["AQP"]["2016-2"]["students"];
+  /* Añadiendo NPS */
+  /* Añadiendo NPS*/
+  var ratings = data['AQP']['2016-2']['ratings'][0];
+  var promoters = ratings['nps']['promoters'];
+  var passive = ratings['nps']['passive'];
+  var detractors = ratings['nps']['detractors'];
+  var npsTotal = promoters - detractors;
+
+  console.log(document.getElementById('five').innerHTML = (npsTotal) + " %");
+
+  console.log(document.getElementById('six-1').innerHTML = (promoters) + "%" + "promoters");
+  console.log(document.getElementById('six-2').innerHTML = (passive) + "%" + "passives");
+  console.log(document.getElementById('six-3').innerHTML = (detractors) + "%" + "detractors");
+       break;
   case 'AREQUIPA2017-I':
-    var estudiantelim5 = (data['AQP']['2017-1']['students'].length);
-    console.log(document.getElementById('one').innerHTML = estudiantelim5);
-    // creando desercion
-    var totalStudent = data['AQP']['2017-1']['students'];
-    var activeStudent = [];
-    var inactiveStudent = [];
-    for (var i = 0; i < totalStudent.length; i++) {
-      if (totalStudent[i].active === true) {
-        activeStudent.push(i);
-      } else {
-        inactiveStudent.push(i);
-      }
-    }
-    document.getElementById('two').innerHTML = (inactiveStudent.length / estudiantelim5) * 100 + '%';
-    // creando promedio de los profesores
-    var teacheone = data['AQP']['2017-1']['ratings'][0]['teacher'];
-    var teachetwo = data['AQP']['2017-1']['ratings'][1]['teacher'];
-    var teachetree = data['AQP']['2017-1']['ratings'][2]['teacher'];          
-    var total = teacheone + teachetwo + teachetree ;
-    var promedio = total / 3;
-    document.getElementById('teacher').innerHTML = promedio;
-    // creando promedio de los jedis
-    var teacheone = data['AQP']['2017-1']['ratings'][0]['jedi'];
-    var teachetwo = data['AQP']['2017-1']['ratings'][1]['jedi'];
-    var teachetree = data['AQP']['2017-1']['ratings'][2]['jedi'];
-    var total = teacheone + teachetwo + teachetree;
-    var promedio = total / 3;
-    document.getElementById('jedi').innerHTML = promedio;  
+  var  estudiantelim5 = (data["AQP"]["2017-1"]["students"].length);
+  console.log( document.getElementById('one').innerHTML = estudiantelim5);
+  /* Añadiendo NPS*/
+  var ratings = data['AQP']['2017-1']['ratings'][0];
+  var promoters = ratings['nps']['promoters'];
+  var passive = ratings['nps']['passive'];
+  var detractors = ratings['nps']['detractors'];
+  var npsTotal = promoters - detractors;
 
-    break;
+  console.log(document.getElementById('five').innerHTML = (npsTotal) + " %");
+
+  console.log(document.getElementById('six-1').innerHTML = (promoters) + "%" + "promoters");
+  console.log(document.getElementById('six-2').innerHTML = (passive) + "%" + "passives");
+  console.log(document.getElementById('six-3').innerHTML = (detractors) + "%" + "detractors");
+      break;
   case 'SantiagodeChile2016-II':
-    var estudiantelim6 = (data['SCL']['2016-2']['students'].length);
-    console.log(document.getElementById('one').innerHTML = estudiantelim6);
-    // creando desercion
-    var totalStudent = data['SCL']['2016-2']['students'];
-    var activeStudent = [];
-    var inactiveStudent = [];
-    for (var i = 0; i < totalStudent.length; i++) {
-      if (totalStudent[i].active === true) {
-        activeStudent.push(i);
-      } else {
-        inactiveStudent.push(i);
-      }
-    }
-    
-    document.getElementById('two').innerHTML = (inactiveStudent.length / estudiantelim6) * 100 + '%';
-    // creando promedio de los profesores
-    var teacheone = data['SCL']['2016-2']['ratings'][0]['teacher'];
-    var teachetwo = data['SCL']['2016-2']['ratings'][1]['teacher'];
-    var teachetree = data['SCL']['2016-2']['ratings'][2]['teacher'];
-    var teachefour = data['SCL']['2016-2']['ratings'][3]['teacher'];
-    var total = teacheone + teachetwo + teachetree + teachefour;
-    var promedio = total / 4;
-    document.getElementById('teacher').innerHTML = promedio;
-    // creando promedio de los jedis
-    var teacheone = data['SCL']['2016-2']['ratings'][0]['jedi'];
-    var teachetwo = data['SCL']['2016-2']['ratings'][1]['jedi'];
-    var teachetree = data['SCL']['2016-2']['ratings'][2]['jedi'];
-    var teachefour = data['SCL']['2016-2']['ratings'][3]['jedi'];
-    var total = teacheone + teachetwo + teachetree + teachefour;
-    var promedio = total / 4;
-    document.getElementById('jedi').innerHTML = promedio;
+  var  estudiantelim6 = (data["SCL"]["2016-2"]["students"].length);
+  console.log( document.getElementById('one').innerHTML = estudiantelim6);
+  /* Añadiendo NPS*/
+  var ratings = data['SCL']['2016-2']['ratings'][0];
+  var promoters = ratings['nps']['promoters'];
+  var passive = ratings['nps']['passive'];
+  var detractors = ratings['nps']['detractors'];
+  var npsTotal = promoters - detractors;
 
+  console.log(document.getElementById('five').innerHTML = (npsTotal) + " %");
 
-    break;
+  console.log(document.getElementById('six-1').innerHTML = (promoters) + "%" + "promoters");
+  console.log(document.getElementById('six-2').innerHTML = (passive) + "%" + "passives");
+  console.log(document.getElementById('six-3').innerHTML = (detractors) + "%" + "detractors");
+      break;
   case 'SantiagodeChile2017-I':
-    var estudiantelim7 = (data['SCL']['2017-1']['students'].length);
-    console.log(document.getElementById('one').innerHTML = estudiantelim7);
-    // creando desercion
-    var totalStudent = data['SCL']['2017-1']['students'];
-    var activeStudent = [];
-    var inactiveStudent = [];
-    for (var i = 0; i < totalStudent.length; i++) {
-      if (totalStudent[i].active === true) {
-        activeStudent.push(i);
-      } else {
-        inactiveStudent.push(i);
-      }
-    }
-    document.getElementById('two').innerHTML = (inactiveStudent.length / estudiantelim7) * 100 + '%';
-    // creando promedio de los profesores
-    var teacheone = data['SCL']['2017-1']['ratings'][0]['teacher'];
-    var teachetwo = data['SCL']['2017-1']['ratings'][1]['teacher'];
-    var teachetree = data['SCL']['2017-1']['ratings'][2]['teacher'];
-    var total = teacheone + teachetwo + teachetree;
-    var promedio = total / 3;
-    document.getElementById('teacher').innerHTML = promedio;
-    // creando promedio de los jedis
-    var teacheone = data['SCL']['2017-1']['ratings'][0]['jedi'];
-    var teachetwo = data['SCL']['2017-1']['ratings'][1]['jedi'];
-    var teachetree = data['SCL']['2017-1']['ratings'][2]['jedi'];
-    var total = teacheone + teachetwo + teachetree;
-    var promedio = total / 3;
-    document.getElementById('jedi').innerHTML = promedio;  
-    break;
+  var  estudiantelim7 = (data["SCL"]["2017-1"]["students"].length);
+  console.log( document.getElementById('one').innerHTML = estudiantelim7);
+  /* Añadiendo NPS*/
+  var ratings = data['SCL']['2017-1']['ratings'][0];
+  var promoters = ratings['nps']['promoters'];
+  var passive = ratings['nps']['passive'];
+  var detractors = ratings['nps']['detractors'];
+  var npsTotal = promoters - detractors;
+
+  console.log(document.getElementById('five').innerHTML = (npsTotal) + " %");
+
+  console.log(document.getElementById('six-1').innerHTML = (promoters) + "%" + "promoters");
+  console.log(document.getElementById('six-2').innerHTML = (passive) + "%" + "passives");
+  console.log(document.getElementById('six-3').innerHTML = (detractors) + "%" + "detractors");
+      break;
   case 'SantiagodeChile2017-II':
-    var estudiantelim8 = (data['SCL']['2017-2']['students'].length);
-    console.log(document.getElementById('one').innerHTML = estudiantelim8);
-    // creando desercion
-    var totalStudent = data['SCL']['2017-2']['students'];
-    var activeStudent = [];
-    var inactiveStudent = [];
-    for (var i = 0; i < totalStudent.length; i++) {
-      if (totalStudent[i].active === true) {
-        activeStudent.push(i);
-      } else {
-        inactiveStudent.push(i);
-      }
-    }
-    document.getElementById('two').innerHTML = (inactiveStudent.length / estudiantelim8) * 100 + '%';
-    // creando promedio de los profesores
-    var teacheone = data['SCL']['2017-2']['ratings'][0]['teacher'];
-    var teachetwo = data['SCL']['2017-2']['ratings'][1]['teacher'];    
-    var total = teacheone + teachetwo ;
-    var promedio = total / 2;
-    document.getElementById('teacher').innerHTML = promedio; 
+  var  estudiantelim8 = (data["SCL"]["2017-2"]["students"].length);
+  console.log( document.getElementById('one').innerHTML = estudiantelim8);
+  /* Añadiendo NPS*/
+  var ratings = data['SCL']['2017-2']['ratings'][0];
+  var promoters = ratings['nps']['promoters'];
+  var passive = ratings['nps']['passive'];
+  var detractors = ratings['nps']['detractors'];
+  var npsTotal = promoters - detractors;
 
-    // creando promedio de los jedis
-    var teacheone = data['SCL']['2017-2']['ratings'][0]['jedi'];
-    var teachetwo = data['SCL']['2017-2']['ratings'][1]['jedi'];
-    var total = teacheone + teachetwo;
-    var promedio = total / 2;
-    document.getElementById('jedi').innerHTML = promedio; 
-    break;
+  console.log(document.getElementById('five').innerHTML = (npsTotal) + " %");
+
+  console.log(document.getElementById('six-1').innerHTML = (promoters) + "%" + "promoters");
+  console.log(document.getElementById('six-2').innerHTML = (passive) + "%" + "passives");
+  console.log(document.getElementById('six-3').innerHTML = (detractors) + "%" + "detractors");
+      break;
   case 'CiudaddeMexico2017-I':
-    var estudiantelim9 = (data['CDMX']['2017-1']['students'].length);
-    console.log(document.getElementById('one').innerHTML = estudiantelim9);
-    // creando desercion
-    var totalStudent = data['CDMX']['2017-1']['students'];
-    var activeStudent = [];
-    var inactiveStudent = [];
-    for (var i = 0; i < totalStudent.length; i++) {
-      if (totalStudent[i].active === true) {
-        activeStudent.push(i);
-      } else {
-        inactiveStudent.push(i);
-      }
-    }
-    document.getElementById('two').innerHTML = (inactiveStudent.length / estudiantelim9) * 100 + '%';
-    
-    // creando promedio de los profesores
-    var teacheone = data['CDMX']['2017-1']['ratings'][0]['teacher'];
-    var teachetwo = data['CDMX']['2017-1']['ratings'][1]['teacher'];
-    var teachetree = data['CDMX']['2017-1']['ratings'][2]['teacher'];
-          
-    var total = teacheone + teachetwo + teachetree;
-    var promedio = total / 3;
+  var  estudiantelim9 = (data["CDMX"]["2017-1"]["students"].length);
+  console.log( document.getElementById('one').innerHTML = estudiantelim9);
+  /* Añadiendo NPS*/
+  var ratings = data['CDMX']['2017-1']['ratings'][0];
+  var promoters = ratings['nps']['promoters'];
+  var passive = ratings['nps']['passive'];
+  var detractors = ratings['nps']['detractors'];
+  var npsTotal = promoters - detractors;
 
-    document.getElementById('teacher').innerHTML = promedio;
-    // creando promedio de los jedis
-    var teacheone = data['CDMX']['2017-1']['ratings'][0]['jedi'];
-    var teachetwo = data['CDMX']['2017-1']['ratings'][1]['jedi'];
-    var teachetree = data['CDMX']['2017-1']['ratings'][2]['jedi'];
+  console.log(document.getElementById('five').innerHTML = (npsTotal) + " %");
 
-    var total = teacheone + teachetwo + teachetree;
-    var promedio = total / 3;
-
-    document.getElementById('jedi').innerHTML = promedio;
-    break;
+  console.log(document.getElementById('six-1').innerHTML = (promoters) + "%" + "promoters");
+  console.log(document.getElementById('six-2').innerHTML = (passive) + "%" + "passives");
+  console.log(document.getElementById('six-3').innerHTML = (detractors) + "%" + "detractors");
+     break;
   case 'CiudaddeMexico2017-II':
-    var estudiantelim10 = (data['CDMX']['2017-2']['students'].length);
-    console.log(document.getElementById('one').innerHTML = estudiantelim10);// creando desercion
-    var totalStudent = data['CDMX']['2017-2']['students'];
-    var activeStudent = [];
-    var inactiveStudent = [];
-    for (var i = 0; i < totalStudent.length; i++) {
-      if (totalStudent[i].active === true) {
-        activeStudent.push(i);
-      } else {
-        inactiveStudent.push(i);
-      }
-    }
-    document.getElementById('two').innerHTML = (inactiveStudent.length / estudiantelim10) * 100 + '%';
-    // creando promedio de los profesores
-    var teacheone = data['CDMX']['2017-2']['ratings'][0]['teacher'];
-    var teachetwo = data['CDMX']['2017-2']['ratings'][1]['teacher'];    
-    var total = teacheone + teachetwo ;
-    var promedio = total / 2;
-    document.getElementById('teacher').innerHTML = promedio;
-    // creando promedio de los jedis
-    var teacheone = data['CDMX']['2017-2']['ratings'][0]['jedi'];
-    var teachetwo = data['CDMX']['2017-2']['ratings'][1]['jedi'];
-    var total = teacheone + teachetwo;
-    var promedio = total / 2;
-    document.getElementById('jedi').innerHTML = promedio;
+  var  estudiantelim10 = (data["CDMX"]["2017-2"]["students"].length);
+  console.log( document.getElementById('one').innerHTML = estudiantelim10);
+  /* Añadiendo NPS*/
+  var ratings = data['CDMX']['2017-2']['ratings'][0];
+  var promoters = ratings['nps']['promoters'];
+  var passive = ratings['nps']['passive'];
+  var detractors = ratings['nps']['detractors'];
+  var npsTotal = promoters - detractors;
 
+  console.log(document.getElementById('five').innerHTML = (npsTotal) + " %");
+
+  console.log(document.getElementById('six-1').innerHTML = (promoters) + "%" + "promoters");
+  console.log(document.getElementById('six-2').innerHTML = (passive) + "%" + "passives");
+  console.log(document.getElementById('six-3').innerHTML = (detractors) + "%" + "detractors");
     break;
   default:
-    alert('seleccione una opcion');
-  }    
+      alert('seleccione una opcion');
+}
+
+  function porcentaje() {
+
+var activeStudentAQP1 = [];
+var inactiveStudentAQP1 = [];
+for (var i = 0; i<totalStudentAQP1.length;i++){
+
+      if(totalStudentAQP1[i].active === true){
+        activeStudentAQP1.push(i);
+      }else{
+		inactiveStudentAQP1.push(i);}
+    }
+    console.log(document.getElementById('two').innerHTML = (inactiveStudentAQP1.length/estudiantelim4)*100 + "%" );
+}
+
+  function nps() {
+    // var ratings = data['AQP']['2016-2']['ratings'][0];
+    var promotersAQP = ratings['nps']['promoters'];
+    var passiveAQP = ratings['nps']['passive'];
+    var detractorsAQP = ratings['nps']['detractors'];
+    var npsTotal = promotersAQP - detractorsAQP;
+
+    console.log(document.getElementById('five').innerHTML = (npsTotal) + " %");
+
+    console.log(document.getElementById('six-1').innerHTML = (promotersAQP) + "%" + "promoters");
+    console.log(document.getElementById('six-2').innerHTML = (passiveAQP) + "%" + "passives");
+    console.log(document.getElementById('six-3').innerHTML = (detractorsAQP) + "%" + "detractors");
+
+}
+
 }
 
 function select() {
+
   sede.addEventListener('change', create);
+
   students.addEventListener('click', estudentcont);
   overview.addEventListener('click', overcont);
+
+
 };
