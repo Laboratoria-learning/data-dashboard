@@ -160,7 +160,7 @@ hr{
   /* Estadisticas */
 .stats{
     height: 75%;
-    width: 4000px;
+    width: 3550px;
     position: absolute;
     left: 28%;
     top: 10em;
@@ -171,8 +171,8 @@ hr{
  height: 90%;
 display: inline-block;
 float: left;
-margin-left: 10px;
-margin-top: 10px;
+margin: 20px 20px;
+box-shadow: 5px 5px 10px #888888;
 
 }
 .sub-text{
@@ -212,7 +212,9 @@ select{
   border: 0;
   border-bottom: 2px solid #FFD65B;
   color: #000;
-
+}
+select:focus{
+outline:none;
 }
 /*Primera estadistica*/
 .containerStyle{
@@ -389,4 +391,9 @@ img{
   font-size: 12px;
   font-weight: lighter;
   padding-left: 5px;
+}
+.nav-select{
+  border-bottom: 5px solid #FFC107;
+  background-color: inherit;
+
 }
