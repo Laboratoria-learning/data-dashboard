@@ -22,11 +22,7 @@
   background-color: rgb(255,193,7);
 }
 .hidden {
-<<<<<<< HEAD
-    display:none;
-=======
     display: none;
->>>>>>> 944dceb7cc23481fd61f3ec1da565027ea80bf92
 }
 /*Modificando header*/
 header{
@@ -35,11 +31,7 @@ header{
   height: 9.2%;
   position: fixed;
   z-index: 1000;
-<<<<<<< HEAD
-  background-color: rgba(255,193,7,0.5);
-=======
   background-color: rgba(43,43,43,0.8);;
->>>>>>> 944dceb7cc23481fd61f3ec1da565027ea80bf92
   box-shadow: 0 0 3px #000;
   top: 0;
 }
@@ -82,13 +74,9 @@ figure{
 /*Modificando nav*/
 nav{
   width: 252px;
-<<<<<<< HEAD
-  position: fixed;
-=======
   height: 100%;
   position: fixed;
   z-index: 1000;
->>>>>>> 944dceb7cc23481fd61f3ec1da565027ea80bf92
   box-shadow: 0 0 3px #000;
 }
 .info-user{
@@ -168,38 +156,22 @@ a{
 text-align: center;
 padding: 5px 10px;
 width: 220px;
-<<<<<<< HEAD
-height: 50px;
-cursor: pointer;
-}
-.sprints:hover{
-  outline-color: #grey;
-=======
 height: 100%;
 }
 
 a:hover {
   outline-color: grey;
   cursor: pointer;
->>>>>>> 944dceb7cc23481fd61f3ec1da565027ea80bf92
 }
 .sprints:active{
   background-color: rgb(236,235,235);
 }
-<<<<<<< HEAD
-/*Modificando aticle Overview*/
-=======
 /*Modificando article Overview*/
->>>>>>> 944dceb7cc23481fd61f3ec1da565027ea80bf92
 .background-color-article{
   background-color: rgb(247,247,247);
 }
 .padding-article{
-<<<<<<< HEAD
-    padding-top: 50px;
-=======
     padding-top: 40px;
->>>>>>> 944dceb7cc23481fd61f3ec1da565027ea80bf92
 }
 .sections-overview{
   margin-top: 20px;
