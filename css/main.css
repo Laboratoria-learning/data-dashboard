@@ -86,9 +86,9 @@ nav {
     background-color: #f7f7f7;
     width: 100%;
     height: 433px;
+    margin-left: 85px;
 }
 .square {
-    outline: 1px solid blue;
     background-color: #ffffff;
     height: 335px;
     width: 342px;
@@ -100,21 +100,21 @@ nav {
     font-size: 10px;
     font-weight: 500;
     line-height: 9px;
-    margin: 4.5px;
     margin-left: 14px; 
+    margin-top: 61px;
     text-align: center;
     width: 146px;
     height: 60px;
 }
 .first-position {
-    margin-top: 27px;
+    margin-top: 50px;
+    margin-right: 30.5px;
 }
 .container2 {
     display: block;
     margin-bottom: 24px;
 }
 .rectangle {
-    outline: 1px solid orange;
     background: #ffffff;
     margin-left: 87px;
     width: 1084px;
@@ -130,7 +130,8 @@ nav {
     margin: 4.5px;
     width: 197px;
     height: 60px;
-    margin-left: 20px;
+    margin-left: 26px;
+    margin-top: 66px;
 }
 .initial {
     margin-left: 20px;
@@ -143,9 +144,14 @@ nav {
     outline: 1px solid red;     
     display: block;
     position: relative;
-    top: 200px;
-    width: 300px;
-    height: 181px;
+    top: 35px;
+    left: 40px;
+}
+.graphic2 {
+    display: inline-flex;
+    position: relative;
+    top: 90px;
+    left: 26px;
 }
 .info-container {
     background-color: #e1e1e1;
@@ -168,24 +174,23 @@ nav {
     margin-right: 10px;
     margin-left: 80px;
 }
-.students-tab {
-    display: none;
-}
+
 .students-data {
     outline: 1px solid red;
     background-color: white;
-    display: inline-block;
+    position: relative;
     padding-left: 20px;
     padding-right: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 20px;
     line-height: 1.5;
-    margin-top: 50px;
-    position: absolute;
+    
+    
 }
 .search{
-    width:800px;
-    height:35px;
+    width: 735px;
+    height: 41px;
+    float: right;
 }
 
