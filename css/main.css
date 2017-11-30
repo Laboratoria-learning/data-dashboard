@@ -56,17 +56,15 @@ nav {
     text-transform: uppercase;
     width: 445px;
 }
-#wrap {
+.wrap {
     background-color: #e1e1e1;
     width: 395px;
     height: 49px;
-    max-width: 60%;
-    margin-left: 81px;
+    margin-left: 41px;
     margin-top: 12px;
-
 }
 .tabs {
-    display: inline;
+    display: inline-flex;
     list-style: none;
     position: relative;
 }
@@ -77,13 +75,11 @@ nav {
     color: black;
     float: left;
     font-size: 22px;
-    margin-left: 15px;
-    margin-top: 12px;
     padding: 4px;
 }
-/*.first {
-    margin-left: 85px;
-}*/
+.first {
+    margin-left: 5px;
+}
 .info-container {
     background-color: #e1e1e1;
     width: 100%;
@@ -97,26 +93,26 @@ nav {
     width: 100%;
 }
 .container2 {
-    display: inline-block;
+    display: inline-flex;
     background: #f7f7f7;
     height: 559px;
     width: 100%;
 }
 .square {
+    outline: 1px solid green;
     background-color: #ffffff;
     display: inline-flex;
     height: 335px;
     width: 342px;
-    margin-top: 58px;
-    margin-left:26px;
-    margin-bottom: 41px;
+    
 }
-.first-position {
-    margin-left: 87px;
-}
+
 .data1 {
     outline: 1px solid red;
     background: #f7f7f7;
+    font-size: 10px;
+    text-align: center;
+    line-height: 25px;
     width: 145px;
     height: 60px;
     margin: 4.5px;
@@ -147,7 +143,8 @@ nav {
 .students-tab {
     display: none;
 }
-.first{
+.specialization {
+    outline: 1px solid green;
     background-color: white;
     display: inline-block;
     padding-left: 20px;
@@ -161,7 +158,8 @@ nav {
     margin-left: 80px;
 }
 
-.second{
+.students-data {
+    outline: 1px solid red;
     background-color: white;
     display: inline-block;
     padding-left: 20px;
@@ -176,4 +174,4 @@ nav {
 .search{
     width:800px;
     height:35px;
-}
+}*/

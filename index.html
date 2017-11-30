@@ -68,29 +68,31 @@
           <div class="container1">
           <div id="enrollment" class="square first-position"><span class="data1 initial" id="studentsCurrent"></span><span class="data1" id="dropout"></span></div>
           <div id="achivement" class="square"><span class="data1 initial" id="studentTarget"></span><span class="data1" id="porcentajeAchievement"></span></div>
-          <div id="net-promoter-score" class="square"><span class="data1 initial"></span><span class="data1"></span></div>
+          <div id="net-promoter-score" class="square"><span class="data1 initial" id="cumulativeNps"></span><span class="data1" id="porcentajeVarios"></span></div>
           </div>
           <div class="container2">
-            <div id="tech-skills" class="rectangle"><span class="data2 initial"></span><span class="data2"></span></div>
+            <div id="tech-skills" class="rectangle"><span class="data2" id="targetTech"></span><span class="data2" id="porcentajeTargetTech"></span><span class="data2" id="promedioTech"></span></div>
           </div>
           <div class="container2">
-            <div id="life-skills" class="rectangle"><span class="data2 initial  "></span><span class="data2"></span></div>
+            <div id="life-skills" class="rectangle"><span class="data2" id="targetHse"></span><span class="data2" id="porcentajeTargetHse"></span><span class="data2" id="promedioHse"></span></div>
           </div>
           <div class="container1">
-            <div id="student-satisfaction" class="square first-position last-position"><span class="data1 initial"></span><span class="data1"></span></div>
-            <div id="teacher-rating" class="square last-position"><span class="data1 initial"></span><span class="data1"></span></div>
-            <div id="jedi-master-rating" class="square last-position"><span class="data1 initial"></span><span class="data1"></span></div>
+            <div id="student-satisfaction" class="square"><span class="data1 "></span><span class="data1"></span></div>
+            <div id="teacher-rating" class="square"><span class="data1"></span><span class="data1"></span></div>
+            <div id="jedi-master-rating" class="square"><span class="data1"></span><span class="data1"></span></div>
           </div>
         </section>
          <section id="students-tab" class="students-tab">
-           <div id="specialization" class="specialitazion">
+           <div id="specialization" class="specialization">
+             <h2>SPECIALIZATION</h2>
              <div class="selectSpecial">
-               <form action="" method="get">
-                 <label><input type="checkbox"  id="javascript" value="true" class="first">JAVASCRIPT</label>
-                 <label><input type="checkbox" id="ux-designer" value="true" class="">UX Design</label>
-                 <label><input type="checkbox" id="front-end-designer" value="" class=""></label>
+               <form id="form1" method="post" action="">
+                <input type="checkbox" name="checkbox" id="chk1"><label for="chk1"> Javascript</label><br>
+                <input type="checkbox" name="checkbox" id="chk2"><label for="chk2"> UX Designer</label><br>
+                <input type="checkbox" name="checkbox" id="chk3"><label for="chk3"> Front-End Developer</label><br>
                </form>
              </div>
+             <div id="students-data" class="students-data"></div>
            </div>
            
          </section>
