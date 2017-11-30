@@ -166,7 +166,7 @@ window.addEventListener('load', function(event) {
     
     });
 
-    // STUDENT SATISFACTION (para últimos gráficos)
+    //Parte Student satisfaction (para últimos gráficos)
     for (var satisfaction in data) {
       if (satisfaction === event.target.value) {// reemplazar por dataalumns en el evento al jalar optgroupt
         var dataSatisfaction = {};
@@ -193,10 +193,18 @@ window.addEventListener('load', function(event) {
     for (var nc in dataExpectation) {
       var noCumple = {};
       if (dataExpectation['no-cumple'] === false) {
-        console.log(funciona);
       }
     }
     console.log(dataExpectation['no-cumple']); // valor de no-cumple : 6
+    
+    /*Recorriendo sedes pero ingresando a rating según el for in realizado */
+    var countInit = 0;
+      //debugger
+      for (var w = 0; w <= dataValue.length; w++) { 
+        if(dataValue[w] === event.target.value){
+          countInit+=dataSede[w].ratings;
+        }
+      }
   });
 });
     
