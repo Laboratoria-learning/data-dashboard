@@ -5,6 +5,7 @@
     <title>Data Dashboard</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/icons/icomoon/style.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
@@ -32,13 +33,149 @@
         </select>
         <input type="button" id="btndash" class="btn-higher" value="Dashboard">
       </div>
-        
-        
-        
-        
+     
     </section>
-    
-    
+    <section id="bar-container" class="bar">
+     <div class="dropdown">
+     	<div class="dropbtn" id="button"><p id="selected" class="option-menu">General View</p><span class="icon-triangle-down"></span></div>
+     	<div id="options" class="hide space">
+     	<div class="place-div"class="dropdown-list-lima">
+     	
+     		<label class="container-list place" data-option-selec="lima" id="option-lima">Lima
+                <input type="checkbox" name="vehicle">
+                <span class="checkmark"></span>
+            </label>                                  
+     		
+     		<label class="container-list" data-option-selec="lima-two" id="dateOne-lima">2014 II
+                <input type="checkbox" name="vehicle">
+                <span class="checkmark"></span>
+            </label>   
+            <label class="container-list" data-option-selec="lima-three" id="dateTwo-lima">2015 I
+                <input type="checkbox" name="vehicle">
+                <span class="checkmark"></span>
+            </label>   
+            <label class="container-list" data-option-selec="lima-four" id="dateThree-lima">2015 II
+                <input type="checkbox" name="vehicle">
+                <span class="checkmark"></span>
+            </label>   
+            <label class="container-list" data-option-selec="lima-five" id="dateFour-lima">2016 I
+                <input type="checkbox" name="vehicle">
+                <span class="checkmark"></span>
+            </label>   
+            <label class="container-list" data-option-selec="lima-six" id="dateFive-lima">2016 II
+                <input type="checkbox" name="vehicle">
+                <span class="checkmark"></span>
+            </label>   
+            <label class="container-list" data-option-selec="lima-seven" id="dateSix-lima">2017 I
+                <input type="checkbox" name="vehicle">
+                <span class="checkmark"></span>
+            </label>   
+            <label class="container-list" data-option-selec="lima-eight" id="dateSeven-lima">2017 II
+                <input type="checkbox" name="vehicle">
+                <span class="checkmark"></span>
+            </label>   
+     	</div>
+     	<div class="place-div" class="dropdown-list-santiago">
+     		<label  id="option-chile" data-option-selected="chile" class="container-list place">Santiago de Chile
+               <input type="checkbox" name="vehicle">
+                <span class="checkmark"></span>
+            </label>                                  
+     		
+            <label id="dateOne-chile" data-option-selected="chile-one" class="container-list">2015 I
+                <input type="checkbox" name="vehicle">
+                <span class="checkmark"></span>
+            </label>   
+            <label id="dateTwo-chile" data-option-selected="chile-two" class="container-list">2015 II
+                <input type="checkbox" name="vehicle">
+                <span class="checkmark"></span>
+            </label>   
+            <label id="dateThree-chile" data-option-selected="chile-three" class="container-list">2016 I
+                <input type="checkbox" name="vehicle">
+                <span class="checkmark"></span>
+            </label>   
+            <label id="dateFour-chile" data-option-selected="chile-four" class="container-list">2016 II
+               <input type="checkbox" name="vehicle">
+                <span class="checkmark"></span>
+            </label>   
+            <label id="dateFive-chile" data-option-selected="chile-five" class="container-list">2017 I
+                <input type="checkbox" name="vehicle">
+                <span class="checkmark"></span>
+            </label>   
+            <label id="dateSix-chile" data-option-selected="chile-six" class="container-list">2017 II
+                <input type="checkbox" name="vehicle">
+                <span class="checkmark"></span>
+            </label>   
+     	</div>
+     	<div class="place-div" class="dropdown-list-mexico">
+     		<label  id="option-mexico" data-option-selected="mexico" class="container-list place" >Mexico
+                <input type="checkbox" name="vehicle">
+                <span class="checkmark"></span>
+            </label>                                  
+     		
+            <label id="dateOne-mexico" data-option-selected="mexico-one" class="container-list">2015 I
+                <input type="checkbox" name="vehicle">
+                <span class="checkmark"></span>
+            </label>   
+            <label id="dateTwo-mexico" data-option-selected="mexico-two" class="container-list">2015 II
+                <input type="checkbox" name="vehicle">
+                <span class="checkmark"></span>
+            </label>   
+            <label id="dateThree-mexico" data-option-selected="mexico-three" class="container-list">2016 I
+                <input type="checkbox" name="vehicle">
+                <span class="checkmark"></span>
+            </label>   
+            <label id="dateFour-mexico" data-option-selected="mexico-four" class="container-list">2016 II
+                <input type="checkbox" name="vehicle">
+                <span class="checkmark"></span>
+            </label>   
+            <label id="dateFive-mexico" data-option-selected="mexico-five" class="container-list">2017 I
+                <input type="checkbox" name="vehicle">
+                <span class="checkmark"></span>
+            </label>   
+            <label id="dateSix-mexico" data-option-selected="mexico-six" class="container-list">2017 II
+                <input type="checkbox" name="vehicle">
+                <span class="checkmark"></span>
+            </label>   
+     	</div>
+     	<div class="place-div" class="dropdown-list-arequipa">
+     		<label id="option-arequipa" data-option-selected="arequipa" class="container-list place">Arequipa
+                <input type="checkbox" name="vehicle">
+                <span class="checkmark"></span>
+            </label>                                  
+     		
+            <label id="dateOne-arequipa" data-option-selected="arequipa-one" class="container-list">2015 I
+                <input type="checkbox" name="vehicle">
+                <span class="checkmark"></span>
+            </label>   
+            <label id="dateTwo-arequipa" data-option-selected="arequipa-two" class="container-list">2015 II
+                <input type="checkbox" name="vehicle">
+                <span class="checkmark"></span>
+            </label>   
+            <label id="dateThree-arequipa" data-option-selected="arequipa-three" class="container-list">2016 I
+                <input type="checkbox" name="vehicle">
+                <span class="checkmark"></span>
+            </label>   
+            <label id="dateFour-arequipa" data-option-selected="arequipa-four" class="container-list">2016 II
+                <input type="checkbox" name="vehicle">
+                <span class="checkmark"></span>
+            </label>   
+            <label id="dateFive-arequipa" data-option-selected="arequipa-five" class="container-list">2017 I
+                <input type="checkbox" name="vehicle">
+                <span class="checkmark"></span>
+            </label>   
+            <label id="dateSix-arequipa" data-option-selected="arequipa-six" class="container-list">2017 II
+                <input type="checkbox" name="vehicle">
+                <span class="checkmark"></span>
+            </label>   
+     	   </div>
+     	</div>
+     </div>
+     
+     
+      <!--====================================================================================================================-->
+
+      
+    </section>
     <section>
     <div class="container">
     <div class="principal">
@@ -211,3 +348,5 @@
     <script src="./js/app.js"></script>
   </body>
 </html>
+
+	  
