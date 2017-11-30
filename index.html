@@ -5,6 +5,8 @@
     <title>Data Dashboard</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/javasript" rel="stylesheet" href="jquery-1.12.0.min.js">
+    <link type="text/javasript" rel="stylesheet" href="dist/Chart.bundle.min.js">
   </head>
   <body>
     <header>
@@ -12,18 +14,15 @@
       <figure>
         <img class="logo" src="assets/images/logo-laboratoria.svg" alt="Logo">
       </figure>
+      <ul class="menu">
+          <li class="general-menu"><i class="fa fa-home" aria-hidden="true"><span class="li-menu center">Start</span></i></li>
+          <li class="general-menu"><i class="fa fa-graduation-cap" aria-hidden="true"><span class="li-menu center">Students</span></i></li>
+          <li class="general-menu"><i class="fa fa-address-card-o" aria-hidden="true"><span class="li-menu center">Teachers</span></i></li>
+          <li class="general-menu"><i class="fa fa-calendar" aria-hidden="true"><span class="li-menu center">Calendary</span></i></li>
+          <li class="general-menu"><i class="fa fa-bar-chart" aria-hidden="true"><span class="li-menu center">Reports</span></i></li>
+          <li class="general-menu"><i class="fa fa-sign-out" aria-hidden="true"><span class="li-menu center">Log uot</span></i></li>
+        </ul>
     </header>
-     <section class="menu">
-      <ul class="list">
-        <li class="general-menu"><i class="fa fa-home" aria-hidden="true"><span class="li-menu center">Start</span></i></li>
-        <li class="general-menu"><i class="fa fa-graduation-cap" aria-hidden="true"><span class="li-menu center">Students</span></i></li>
-        <li class="general-menu"><i class="fa fa-address-card-o" aria-hidden="true"><span class="li-menu center">Teachers</span></i></li>
-        <li class="general-menu"><i class="fa fa-calendar" aria-hidden="true"><span class="li-menu center">Calendary</span></i></li>
-        <li class="general-menu"><i class="fa fa-bar-chart" aria-hidden="true"><span class="li-menu center">Reports</span></i></li>
-        <li class="general-menu"><i class="fa fa-sign-out" aria-hidden="true"><span class="li-menu center">Log uot</span></i></li>
-      </ul>
-    </section>
-
     <section class="student container">
       <div class="new-student">
         <p>Add Student<i class="fa fa-plus right" aria-hidden="true"></i></p>
@@ -66,6 +65,11 @@
           <option value="second-17">2017 - II</option>
         </select>
     </form>
+    <section class="reports">
+      <div class="canvas-reports">
+        <canvas id="chart"></canvas>
+      </div>
+    </section>
     <div id="coders-container" class="sub-container right"></div>
     </section>		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
