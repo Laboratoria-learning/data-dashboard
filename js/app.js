@@ -11,8 +11,8 @@ divDetractors = document.getElementById('detractors');
 divAchievement = document.getElementById('kpi-achievement');
 divPercentAchievement = document.getElementById('percent-achievement');
 divStudentsAchievement = document.getElementById('students-achievement');
-divKpiEnrollment=document.getElementById('kpi-enrollment');
-divKpiDropout=document.getElementById('kpi-dropout');
+divKpiEnrollment = document.getElementById('kpi-enrollment');
+divKpiDropout = document.getElementById('kpi-dropout');
 // Puedes hacer uso de la base de datos a través de la variable `data`
 
 
@@ -113,7 +113,7 @@ window.addEventListener('load', function(event) {
       var totalStudentsAchievement = str['ratings'][event.target.value]['student']['cumple'] + str['ratings'][event.target.value]['student']['no-cumple'] + str['ratings'][event.target.value]['student']['supera'];
       divStudentsAchievement.innerHTML = '% OF TOTAL (' + totalStudentsAchievement + ')';
   
-      divPercentAchievement.innerHTML =parseFloat( (str['ratings'][event.target.value]['student']['cumple'] + str['ratings'][event.target.value]['student']['supera']) * 100 / totalStudentsAchievement).toFixed(0) + ' %';
+      divPercentAchievement.innerHTML = parseFloat((str['ratings'][event.target.value]['student']['cumple'] + str['ratings'][event.target.value]['student']['supera']) * 100 / totalStudentsAchievement).toFixed(0) + ' %';
       // Llenando datos del NPS
       var promoters = str['ratings'][event.target.value]['nps']['promoters'];
       var passive = str['ratings'][event.target.value]['nps']['passive'];
@@ -128,19 +128,41 @@ window.addEventListener('load', function(event) {
       var countEnrolled = 0;
       var countDropped = 0;
 
-      //Calculamos a los estudiantes activos y desertores
+      // Calculamos a los estudiantes activos y desertores
       for (i = 0;i < str['students'].length;i++) {
         if (str['students'][i]['active'] === true) {
           countEnrolled = countEnrolled + 1;
-        }else{
+        }else {
           countDropped = countDropped + 1;
         }
       }
-      divKpiEnrollment.innerHTML=countEnrolled;
-      divKpiDropout.innerHTML=parseFloat(countDropped/(countEnrolled+countDropped)).toFixed(0);
+      divKpiEnrollment.innerHTML = countEnrolled;
+      divKpiDropout.innerHTML = parseFloat(countDropped / (countEnrolled + countDropped)*100).toFixed(0) + ' %';
       console.log(data['LIM']['2016-2']['students']);
       console.log(countEnrolled);
       console.log(countDropped);
+
+      // Realizamos el gráfico de deserción
+      google.charts.load('current', {'packages': ['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Active', 'Quantity'],
+          ['Enrolled', countEnrolled],
+          ['Dropout', countDropped],
+         
+        ]);
+
+        var options = {
+          title: 'Enrollment actual'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+      //drawChart(countEnrolled, countDropped);
     });
   }
 
