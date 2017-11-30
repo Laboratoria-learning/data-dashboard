@@ -93,11 +93,14 @@ header section {
 }
 
 .notificacion ul {
-    list-style: none;
+    /* list-style: none; */
 }
 
 .notificacion ul li {
+    list-style-type: none;
     display: inline-block;
+    margin: 20px;
+
 }
 
 /*Style for First Section*/
