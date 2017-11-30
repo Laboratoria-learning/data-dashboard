@@ -219,9 +219,8 @@ h2 {
     width: 60%;
     margin-right: 60px;
     float: right;
-   
-    
 }
+
 .input {
     outline: 1px solid blue;
     margin-bottom: 25px;
@@ -230,7 +229,6 @@ h2 {
 input {
     width: 100%;
     height: 30px;
-    
 }
 .con-ul li {
     outline: 1px solid red;
@@ -243,11 +241,9 @@ input {
     float: left;
     width: 30%;
     margin: 5px;
-    
 }
 ul {
     padding: 0;
-    
 }
 #contenedor-frontend {
   outline: 1px solid red;
