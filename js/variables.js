@@ -279,6 +279,7 @@ for (var i = 0; i < studentsLIM20171.length; i++) {
     desertedLIM20171.push(studentsLIM20171[i]);
   }
 }
+console.log(desertedLIM20171);
 var numdesertedLIM20171 = desertedLIM20171.length;
 console.log('numero de estudiantes Desertaron LIM20171 : ' + numdesertedLIM20171);
 /* Porcentaje estudiantes desertaron LIM;-------------------------------------*/
@@ -509,3 +510,20 @@ for (var i = 0; i < studentsSeatSCL.length; i++) {
   sumEstudentsSCL = sumEstudentsSCL + studentsSeatSCL[i];
 };
 console.log('total estududiantes SCL : ' + sumEstudentsSCL);
+
+/* -------promesdio hse---------------------------*/
+
+/* *****2017-1***** */
+
+/* El total de estudiantes presentes por sede y generación. */
+
+var promHSE = data.SCL['2017-1'].students;
+// estudiantes desertaron SCL 2017-1
+alumnasPromHSE = [];
+for (var i = 0; i < studentsSCL20171.length; i++) {
+  if (!studentsSCL20171[i].active) { // active = false
+    desertedSCL20171.push(studentsSCL20171[i]);
+  }
+}
+var numdesertedSCL20171 = desertedSCL20171.length;
+console.log('numero de estudiantes Desertaron SCL20171 : ' + numdesertedSCL20171);

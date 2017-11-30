@@ -1,3 +1,25 @@
+/* -------promesdio hse---------------------------*/
+
+/* *****2017-1***** */
+
+/* El total de estudiantes presentes por sede y generación. */
+var numEstudentsSCL20171 = data.SCL['2017-1'].students.length;
+/* El porcentaje de deserción de estudiantes. */
+// estudiantes SCL
+var studentsSCL20171 = data.SCL['2017-1'].students;
+// estudiantes desertaron SCL 2017-1
+desertedSCL20171 = [];
+for (var i = 0; i < studentsSCL20171.length; i++) {
+  if (!studentsSCL20171[i].active) { // active = false
+    desertedSCL20171.push(studentsSCL20171[i]);
+  }
+}
+var numdesertedSCL20171 = desertedSCL20171.length;
+
+
+
+//------------------------------
+
 <div class="filters-container">
   <ul class="filters">
     <li class="Overview">OVERVIEW</li>
@@ -209,4 +231,3 @@ console.log('numero alumnas exceden meta CDMX20172-sprint2 : ' + sprint2numExcee
 
 
 // Codigo Chio para agrupar //
-
