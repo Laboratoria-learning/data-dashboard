@@ -1,13 +1,13 @@
 /* Iniciamos extrayendo los datos de las sedes */
 // debugger;
-
+/*
 window.addEventListener('load', function() {
   var containerSedes = document.getElementById('container-sedes');
   containerSedes.addEventListener('click', function() {
     var sedes = document.getElementById('container-generations');
 
     /* Creando la lista de las sedes */
-    for (var i = 0; i < Object.keys(data).length; i++) {
+/*  for (var i = 0; i < Object.keys(data).length; i++) {
       var containerList = document.createElement('ul');
       containerList.className = 'container-list';
       var list = document.createElement('li');
@@ -19,7 +19,7 @@ window.addEventListener('load', function() {
       sedes.appendChild(containerList);
 
       /* Creando la lista de las generaciones */
-      for (var a = 0; a < Object.keys(data[Object.keys(data)[i]]).length; a++) {
+/*    for (var a = 0; a < Object.keys(data[Object.keys(data)[i]]).length; a++) {
         var containerListGenerations = document.createElement('ul');
         containerListGenerations.className = 'container-generations';
         var listGenerations = document.createElement('li');
@@ -32,7 +32,7 @@ window.addEventListener('load', function() {
         list.appendChild(containerListGenerations);
       }
       /* Este evento trae la data del total de alumnas, total de desercion y activas */  
-      var generations = document.getElementsByClassName('generations');
+/*    var generations = document.getElementsByClassName('generations');
 
       for (var a = 0; a < generations.length; a++) {
         generations[a].addEventListener('click', function() {
@@ -40,7 +40,7 @@ window.addEventListener('load', function() {
           var containerParagraph = document.getElementsByClassName('container-paragraph')
                 
           /* Variables del total de alumnas, total de desercion y activas */
-          var totalDesertion = 0;
+/*   var totalDesertion = 0;
           var totalActive = 0; 
           for (var i = 0; i < Object.keys(data).length; i++) {
             for (var a = 0; a < Object.keys(data[Object.keys(data)[i]]).length; a++) {
@@ -95,21 +95,24 @@ window.addEventListener('load', function() {
       sedes.classList.add('hide');
     }  
   }); 
-}); 
+}); */
  
 /*
 var sum = 0;
 for (var i = 0; i < Object.keys(data).length; i++) {
   for (var a = 0; a < Object.keys(data[Object.keys(data)[i]]).length; a++) {
     sum = sum + (Object.values((Object.values(Object.values(data)[i]))[a])[0].length);
-    // console.log(Object.values(data)[i]); 
+    console.log(Object.values(data)[i]); 
     // console.log(Object.values((Object.values(Object.values(data)[i]))[a])[0].length);
   }
-}
-console.log(sum); */
-/*
-var sum = 0;
-var rest = 0;
+} */
+// console.log(sum); 
+
+// var sum = 0;
+// var rest = 0;
+var totalTech = [];
+var totalHse = [];
+var totalSum = [];
 for (var i = 0; i < Object.keys(data).length; i++) {
   for (var a = 0; a < Object.keys(data[Object.keys(data)[i]]).length; a++) {
     for (var b = 0; b < Object.values((Object.values(Object.values(data)[i]))[a])[0].length; b++) {
@@ -118,14 +121,35 @@ for (var i = 0; i < Object.keys(data).length; i++) {
     // console.log(Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[2]);
 
       if (Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[2]) {
-        sum = sum + 1;
-
-      } else {
-        rest = rest + 1;
-
+        for (var c = 0; c < Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[3].length; c++) {
+          var tech = Object.values(Object.values(Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[3][c])[1])[0];
+          totalTech.push(tech);
+          var hse = Object.values(Object.values(Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[3][c])[1])[1];
+          totalHse.push(hse);
+          var sum = totalTech[c] + totalHse[c];
+          totalSum.push(sum);
+          if(totalSum[c] >= 2400) {
+            
+          }
+        }
+        console.log(Object.values(Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[3][c])[0]);
       }
+      //  else {
+      //   rest = rest + 1;
+      // }
     }
   }
 }
-console.log(sum);
-console.log(rest); */
+// console.log(sum);
+// console.log(rest); 
+/*
+for (var c = 0; c < Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[3].length; c++) {
+  var tech = Object.values(Object.values(Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[3][c])[1])[0];
+  totalTech.push(tech);
+  var hse = Object.values(Object.values(Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[3][c])[1])[1];
+  totalHse.push(hse);
+  var sum = totalTech[c] + totalHse[c];
+  totalSum.push(sum);
+  if(totalSum[c] >= 2400) {
+    
+  } */
