@@ -1,25 +1,20 @@
 # Data Dashboard
 
-* **Track:** _Common Core_
-* **Curso:** _Creando tu primer sitio web interactivo_
-* **Unidad:** _Producto final_
+## Objetivo
 
-***
+Utilizar nuestros conocimientos de HTML, CSS y JAVASCRIPT para construir una herramienta web que permita mostrar data fácil y rápidamente.
 
-## Flujo de trabajo
+## SKETCH
 
-1. Debes realizar un [**fork**](https://gist.github.com/ivandevp/1de47ae69a5e139a6622d78c882e1f74)
-   de este repositorio.
+![Sin titulo](assets/images/sketch1.jpg)
 
-2. Luego deberás **clonar** tu fork en tu máquina. Recuerda que el comando a usar
-   es `git clone` y su estructura normalmente se ve así:
+![Sin titulo](assets/images/sketch2.jpg)
 
-   ```bash
-   git clone https://github.com/<nombre-de-usuario>/freelancer.git
-   ```
+## DISEÑO
 
-3. Cuando hayas terminado tu producto, envía un Pull Request a este repositorio
-   (puedes solicitar apoyo de tus profes para este paso).
+![Sin titulo](assets/images/design-web.png)
 
-> Nota: No olvides que es una buena práctica describir tu proyecto en este
-> archivo `README.md` y también desplegar tu web a Github Pages :smiley:.
+Autoras:
+
+* Angelica Villalobos
+* Shannon Rivera
