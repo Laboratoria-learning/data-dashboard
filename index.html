@@ -3,8 +3,123 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Amaranth" rel="stylesheet">
+    <link rel="stylesheet" href="assets/icons/style.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <!--añadiendo header-->
+    <header>
+      <div class="user">
+        	<h5>Alejandra Ramirez</h5>
+    </div>
+    <div class="imageuser">
+      <img src="assets/images/profe2.jpg" alt="header-logo">
+  </div>
+
+    </header>
+<!--añadiendo seccion uno-->
+    <section>
+      <div class="logolaboratoria">
+        <img src="assets/images/logo-laboratoria.svg" alt="logo">
+    </div>
+    <div class="icons">
+        <div class="home">
+            <a href=""><span class="icon-home"></span></a>
+              <h4>INICIO</h4>
+      </div>
+<!--añadido por karina vivanco//opcion "sedes" acordion-->
+  <span class="icon-location"></span>
+    <select name="select-data" id="select-data" class="datastyle">
+        <option id="" selected> SEDES</option>
+        <option id="lima">LIMA</option>
+        <option id="lim2016II">2016-II</option>
+        <option id="lim2017I">2017-I</option>
+        <option id="lim2017II">2017-II</option>
+        <option id="arequipa">AREQUIPA</option>
+        <option id="are2016II">2016-II</option>
+        <option id="are2017I">2017-I</option>
+        <option id="santiago de chile">SANTIAGO DE CHILE</option>
+        <option id="chi2016II">2016-II</option>
+        <option id="chi2017I">2017-I</option>
+        <option id="chi2017II">2017-II</option>
+        <option id="ciudad de mexico">CIUDAD DE MEXICO</option>
+        <option id="mex2017I">2017-I</option>
+        <option id="mex2017II">2017-II</option>
+    </select>
+<!--logos de seleccion-->
+        <div class="student">
+            <a href="alumnas.html"><span class="icon-book"></span></a>
+              <h4>ALUMNAS</h4>
+        </div>
+
+        <div class="teacher">
+            <a href=""><span class="icon-user-tie"></span></a>
+              <h4>PROFESORES</h4>
+      </div>
+  </div>
+    </section>
+    <!--añadiendo seccion dos graficos-->
+    <section>
+      <!--grafico uno-->
+     <div class="graphicone">
+       <img src="assets/images/grafico1.png" alt="">
+       </div>
+        <div class="onebox">
+          <div id="aactiv" class="number">120</div>
+          <h5># Alumnas activas.</h5>
+        </div>
+        <div class="oneboxx">
+          <div id="ndesercion" class="numberred">20</div>
+          <h5>% Desercion.</h5>
+        </div>
+
+  <!--grafico dos-->
+    <div class="graphictwo">
+      <img src="assets/images/grafico2.png" alt="">
+      </div>
+       <div class="twobox">
+         <div id="ameta" class="number">105</div>
+         <h5># Alumnas que superan la meta.</h5>
+       </div>
+       <div class="twoboxx">
+         <div id="nstudent" class="number">78</div>
+         <h5>% Total de estudiantes.</h5>
+       </div>
+   </div>
+<!--grafico tres-->
+   <div class="graphicthree">
+     <img src="assets/images/grafico3.png" alt="">
+     </div>
+      <div class="threebox">
+        <div id="anps" class="number">78</div>
+        <h5>% Acumulativo NPS.</h5>
+      </div>
+      <div class="threeboxx">
+      <div id="nprom" class="number"></div>
+        <h5>60 % Promotoras.</h5>
+      <div id="npasi" class="number"></div>
+        <h5>30 % Pasivas.</h5>
+      <div id="ndetrac" class="number"></div>
+        <h5>10 % Detractoras.</h5>
+      </div>
+
+<!--grafico cuatro-->
+  <div class="graphicfour">
+    <img src="assets/images/grafico4.png" alt="">
+    </div>
+     <div class="fourbox">
+       <div id="aespecta" class="number"></div>
+       <h5>% Alumnas que superaron sus espectativas.</h5>
+     </div>
+
+<!--grafico cinco y seis falta son graficos mas detallados por sprint-->
+ <div class="graficocuatro">
+    <div class="cuadrofour">
+      <h5></h5>
+    </div>
+</div>
+    </section>
 
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>

@@ -1,0 +1,558 @@
+
+.rectangule {
+    background-color: beige;
+}
+
+/*agregando estilos a la section students*/
+.students{
+    box-sizing: content-box;
+    padding:0 ;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+  }
+  .columna-izquierda,.columna-derecha,.colum-1,.colum-2{
+    display: inline-block;
+    margin: 7px;
+  }
+  .columna-izquierda{
+    position: absolute;
+    left: 0;
+    width:40%;
+    height: 100%;
+<<<<<<< HEAD
+    padding: 7px;
+
+=======
+    padding: 7px;  
+>>>>>>> 674264803967774e0512bb765c22dccbcd3fbbed
+  }
+
+  .especializacion{
+    position: absolute;
+    right: 0;
+    padding: 15px;
+    width: 450px;
+    border-radius: 5px;
+    background: #f7f7f7;
+    border-bottom: 1px solid gray;
+    border-right:  1px solid gray;
+  }
+
+  .h1color{
+      color: #ffc107;
+  }
+
+  .especializacion ul,.colum-1 ul{
+    padding: 0;
+  }
+  .especializacion ul li{
+    list-style: none;
+  }
+
+
+  .columna-debajo{
+    top: 200px;
+    position: absolute;
+    left: 0;
+    width:40%;
+    height: 100%;
+    padding: 7px;  
+  }
+
+
+
+  .turno{
+    position: absolute;
+    right: 0;
+    padding: 15px;
+    width: 450px;
+    border-radius: 5px;
+    background: #f7f7f7;
+    border-bottom: 1px solid gray; 
+    border-right:  1px solid gray;
+  }
+
+  .turno ul,.colum-1 ul{
+    padding: 0;
+  }
+  .turno ul li{
+    list-style: none;
+  }
+
+  
+  .icon-square-o{
+    margin-right: 10px;
+    color: #ffc107;
+  }
+  
+  .columna-derecha{
+    position:absolute;
+    right: 0;
+    width:55%;
+    height: 100%;
+  }
+  .search{
+    position: absolute;
+    left: 0;
+    width: 820px;
+    height: 40px;
+    top: 0;
+    border-radius: 5px;
+    background: #f7f7f7;
+    border-bottom: 1px solid gray;
+    border-right:  1px solid gray;
+  }
+  input{
+    display:inline-block;
+    border: none;
+    outline: none;
+    width: 670px;
+    background: #f7f7f7;
+  }
+  .icon-search{
+    display: inline-block;
+    margin: 10px;
+  }
+  .estudiante1{
+    position:absolute;
+    left: 0;
+    top:60px;
+    padding: 10px;
+    width: 800px;
+    height: 190px;
+    border-radius: 5px;
+    background: #f7f7f7;
+    border-bottom: 1px solid gray;
+    border-right:  1px solid gray;
+  }
+
+  .figure{
+    margin: 5px;
+    float: left;
+  }
+  .figure .image{
+    width: 160px;
+    height: 180px;
+  }
+  .columna1{
+    font-size: 20px;
+  }
+
+  .h1nombre{
+      color: #ffc107;
+  }
+<<<<<<< HEAD
+
+  .colum-1 h1,.colum-1 p,.box h1,.box p{
+    margin: 0;
+  }
+
+  .colum-1 ul li{
+=======
+  
+  .columna1 h1,.columna1 p,.box1 h1,.box1 p{
+    margin: 0;
+  }
+  
+  .columna1 ul li{
+>>>>>>> 674264803967774e0512bb765c22dccbcd3fbbed
+    padding: 2px;
+    display: inline-block;
+    list-style: none;
+    font-size: 10px;
+    margin-right: 20px;
+    background: white;
+  }
+  .columna2{
+    float: right;
+    margin:10px;
+    font-size: 10px;
+  }
+  .box1{
+    display: inline-block;
+    padding: 8px;
+    margin-right: 5px;
+    background:white;
+  }
+<<<<<<< HEAD
+=======
+
+  .estudiante2{
+    position:absolute;
+    left: 0;
+    top:300px;
+    padding: 10px;
+    width: 800px;
+    height: 190px;
+    border-radius: 5px;
+    background: #f7f7f7;
+    border-bottom: 1px solid gray; 
+    border-right:  1px solid gray;
+  }
+
+  .columna3{
+    font-size: 20px;
+  }
+
+  .h1nombre{
+      color: #ffc107;
+  }
+  
+  .columna3 h1,.columna3 p,.box2 h1,.box2 p{
+    margin: 0;
+  }
+  
+  .columna3 ul li{
+    padding: 2px;
+    display: inline-block;
+    list-style: none;
+    font-size: 10px;
+    margin-right: 20px;
+    background: white;  
+  }
+  .columna4{
+    float: right;
+    margin:10px;
+    font-size: 10px;
+  }
+  .box2{
+    display: inline-block;
+    padding: 8px;
+    margin-right: 5px;
+    background:white;
+  }
+
+
+  .estudiante3{
+    position:absolute;
+    left: 0;
+    top:530px;
+    padding: 10px;
+    width: 800px;
+    height: 190px;
+    border-radius: 5px;
+    background: #f7f7f7;
+    border-bottom: 1px solid gray; 
+    border-right:  1px solid gray;
+  }
+
+  .columna5{
+    font-size: 20px;
+  }
+
+  .h1nombre{
+      color: #ffc107;
+  }
+  
+  .columna5 h1,.columna5 p,.box3 h1,.box3 p{
+    margin: 0;
+  }
+  
+  .columna5 ul li{
+    padding: 2px;
+    display: inline-block;
+    list-style: none;
+    font-size: 10px;
+    margin-right: 20px;
+    background: white;  
+  }
+  .columna6{
+    float: right;
+    margin:10px;
+    font-size: 10px;
+  }
+  .box3{
+    display: inline-block;
+    padding: 8px;
+    margin-right: 5px;
+    background:white;
+  }
+
+
+
+  .estudiante4{
+    position:absolute;
+    left: 0;
+    top:750px;
+    padding: 10px;
+    width: 800px;
+    height: 190px;
+    border-radius: 5px;
+    background: #f7f7f7;
+    border-bottom: 1px solid gray; 
+    border-right:  1px solid gray;
+  }
+
+  .columna7{
+    font-size: 20px;
+  }
+
+  .h1nombre{
+      color: #ffc107;
+  }
+  
+  .columna7 h1,.columna7 p,.box4 h1,.box4 p{
+    margin: 0;
+  }
+  
+  .columna7 ul li{
+    padding: 2px;
+    display: inline-block;
+    list-style: none;
+    font-size: 10px;
+    margin-right: 20px;
+    background: white;  
+  }
+  .columna8{
+    float: right;
+    margin:10px;
+    font-size: 10px;
+  }
+  .box4{
+    display: inline-block;
+    padding: 8px;
+    margin-right: 5px;
+    background:white;
+  }
+
+
+
+  .estudiante5{
+    position:absolute;
+    left: 0;
+    top:1000px;
+    padding: 10px;
+    width: 800px;
+    height: 190px;
+    border-radius: 5px;
+    background: #f7f7f7;
+    border-bottom: 1px solid gray; 
+    border-right:  1px solid gray;
+  }
+
+  .columna9{
+    font-size: 20px;
+  }
+
+  .h1nombre{
+      color: #ffc107;
+  }
+  
+  .columna9 h1,.columna9 p,.box5 h1,.box5 p{
+    margin: 0;
+  }
+  
+  .columna10 ul li{
+    padding: 2px;
+    display: inline-block;
+    list-style: none;
+    font-size: 10px;
+    margin-right: 20px;
+    background: white;  
+  }
+  .columna6{
+    float: right;
+    margin:10px;
+    font-size: 10px;
+  }
+  .box5{
+    display: inline-block;
+    padding: 8px;
+    margin-right: 5px;
+    background:white;
+  }
+
+
+
+  .estudiante6{
+    position:absolute;
+    left: 0;
+    top:1250px;
+    padding: 10px;
+    width: 800px;
+    height: 190px;
+    border-radius: 5px;
+    background: #f7f7f7;
+    border-bottom: 1px solid gray; 
+    border-right:  1px solid gray;
+  }
+
+  .columna11{
+    font-size: 20px;
+  }
+
+  .h1nombre{
+      color: #ffc107;
+  }
+  
+  .columna11 h1,.columna11 p,.box6 h1,.box6 p{
+    margin: 0;
+  }
+  
+  .columna11 ul li{
+    padding: 2px;
+    display: inline-block;
+    list-style: none;
+    font-size: 10px;
+    margin-right: 20px;
+    background: white;  
+  }
+  .columna12{
+    float: right;
+    margin:10px;
+    font-size: 10px;
+  }
+  .box6{
+    display: inline-block;
+    padding: 8px;
+    margin-right: 5px;
+    background:white;
+  }
+
+
+
+  .estudiante7{
+    position:absolute;
+    left: 0;
+    top:1500px;
+    padding: 10px;
+    width: 800px;
+    height: 190px;
+    border-radius: 5px;
+    background: #f7f7f7;
+    border-bottom: 1px solid gray; 
+    border-right:  1px solid gray;
+  }
+
+  .columna13{
+    font-size: 20px;
+  }
+
+  .h1nombre{
+      color: #ffc107;
+  }
+  
+  .columna13 h1,.columna13 p,.box7 h1,.box7 p{
+    margin: 0;
+  }
+  
+  .columna13 ul li{
+    padding: 2px;
+    display: inline-block;
+    list-style: none;
+    font-size: 10px;
+    margin-right: 20px;
+    background: white;  
+  }
+  .columna14{
+    float: right;
+    margin:10px;
+    font-size: 10px;
+  }
+  .box7{
+    display: inline-block;
+    padding: 8px;
+    margin-right: 5px;
+    background:white;
+  }
+
+
+
+  .estudiante8{
+    position:absolute;
+    left: 0;
+    top:1750px;
+    padding: 10px;
+    width: 800px;
+    height: 190px;
+    border-radius: 5px;
+    background: #f7f7f7;
+    border-bottom: 1px solid gray; 
+    border-right:  1px solid gray;
+  }
+
+  .columna15{
+    font-size: 20px;
+  }
+
+  .h1nombre{
+      color: #ffc107;
+  }
+  
+  .columna15 h1,.columna15 p,.box8 h1,.box8 p{
+    margin: 0;
+  }
+  
+  .columna15 ul li{
+    padding: 2px;
+    display: inline-block;
+    list-style: none;
+    font-size: 10px;
+    margin-right: 20px;
+    background: white;  
+  }
+  .columna16{
+    float: right;
+    margin:10px;
+    font-size: 10px;
+  }
+  .box8{
+    display: inline-block;
+    padding: 8px;
+    margin-right: 5px;
+    background:white;
+  }
+
+
+
+  .estudiante9{
+    position:absolute;
+    left: 0;
+    top:2000px;
+    padding: 10px;
+    width: 800px;
+    height: 190px;
+    border-radius: 5px;
+    background: #f7f7f7;
+    border-bottom: 1px solid gray; 
+    border-right:  1px solid gray;
+  }
+
+  .columna17{
+    font-size: 20px;
+  }
+
+  .h1nombre{
+      color: #ffc107;
+  }
+  
+  .columna17 h1,.columna17 p,.box9 h1,.box9 p{
+    margin: 0;
+  }
+  
+  .columna17 ul li{
+    padding: 2px;
+    display: inline-block;
+    list-style: none;
+    font-size: 10px;
+    margin-right: 20px;
+    background: white;  
+  }
+  .columna18{
+    float: right;
+    margin:10px;
+    font-size: 10px;
+  }
+  .box9{
+    display: inline-block;
+    padding: 8px;
+    margin-right: 5px;
+    background:white;
+  }
+
+
+
+
+>>>>>>> 674264803967774e0512bb765c22dccbcd3fbbed

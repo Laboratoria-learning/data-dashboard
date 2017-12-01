@@ -1,25 +1,53 @@
-# Data Dashboard
+# PROYECTO FINAL:DATA DASHBOARD LABORATORIA
 
-* **Track:** _Common Core_
-* **Curso:** _Creando tu primer sitio web interactivo_
-* **Unidad:** _Producto final_
-
-***
 
 ## Flujo de trabajo
 
-1. Debes realizar un [**fork**](https://gist.github.com/ivandevp/1de47ae69a5e139a6622d78c882e1f74)
-   de este repositorio.
+### PARTE 1  
+Realizamos el descubrimiento, y nos informamos sobre quienes son nuestros usuarios y cuales son sus necesidades.
 
-2. Luego deberás **clonar** tu fork en tu máquina. Recuerda que el comando a usar
-   es `git clone` y su estructura normalmente se ve así:
+Nuestros Usuarios son los **Training Managers (TMs)** ellos quieren ver la data de manera sencilla y poder optimizar su tiempo.  
 
-   ```bash
-   git clone https://github.com/<nombre-de-usuario>/freelancer.git
-   ```
+Estos son los requerimientos:  
 
-3. Cuando hayas terminado tu producto, envía un Pull Request a este repositorio
-   (puedes solicitar apoyo de tus profes para este paso).
+- El total de estudiantes presentes por sede y generación.
+- El porcentaje de deserción de estudiantes.
+- La cantidad de estudiantes que superan la meta de puntos en promedio de todos los sprints cursados.
+- El porcentaje que representa el dato anterior en relación al total de estudiantes.
+- El Net Promoter Score (NPS) promedio de los sprints cursados.
+- La cantidad y el porcentaje que representa el total de estudiantes que superan la meta de puntos técnicos en promedio y por sprint.
+- La cantidad y el porcentaje que representa el total de estudiantes que superan la meta de puntos de HSE en promedio y por sprint.
+- El porcentaje de estudiantes satisfechas con la experiencia de Laboratoria.
+- La puntuación promedio de l@s profesores.
+- La puntuación promedio de l@s jedi masters.  
 
-> Nota: No olvides que es una buena práctica describir tu proyecto en este
-> archivo `README.md` y también desplegar tu web a Github Pages :smiley:.
+### PARTE 2  
+Prototipamos ,lanzamos ideas y según lo requerido diseñamos un sketch y probamos con los **Training Managers (TMs)** las posibles soluciones.
+
+**Version 1**  
+![Imagen sketch](assets/images/foto007.jpg)
+
+
+Realizamos una prueba de usabilidad con el **Training Managers (TMs)** Joalbert .  
+En el cual le pedimos que realice 4 operaciones :  
+
+1.Loguearse  
+2.Ingresar a su perfil  
+3.Filtrar su búsqueda  
+4.Ingresar a ver otros datos. (los datos de las estudiantes y profesoras).  
+
+**Prueba**  
+(Simulacion)
+
+
+### PARTE 3  
+Ya que tenemos nuestra version 1 del proyecto,añadimos el codigo html y css.  
+
+### PARTE 4
+Añadimos el codigo js.
+
+**FLUJOGRAMA**
+
+Integrantes:  
+Alejandra Hoces.  
+Karina Vivanco.
