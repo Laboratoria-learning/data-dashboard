@@ -1,3 +1,397 @@
 /*
  * Estilos de tu proyecto
  */
+/* estilo header, section-2 , section-5, lista desplegable*/
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.capital-letter {
+    text-transform: uppercase;
+}
+header {
+    text-align: center;
+    font-size:36px;
+}
+.logo {
+    width: 300px;
+    text-align: center;
+    display: inline-block;
+}
+.icons-header {
+    display: inline-block ;
+    position: absolute;
+    right:0px;
+    margin: 20px;
+}
+.icons-header i {
+    padding: 0 5px;
+    color: rgba(0, 0, 0, 0.54)
+}
+.section-1{
+    height: 150px;
+    background: #e1e1e1;
+    padding-left: 175px;
+    padding-top: 20px;
+}
+.section-1 h3 {
+    font-size: 30px;
+    font-weight: 900;
+    display: inline-block;
+    color: #2a2440;
+}
+.section-1 span a {
+    display: inline-block;
+    padding: 0 12px;
+    position: relative;
+    top: 7px;
+    color: #2a2440;
+}
+.section-1 div {
+    padding-top: 40px;
+}
+.section-1 h5{
+    display: inline-block;
+    margin-right:20px;
+    color: #2a2440;
+    font-size: 20px;
+    font-weight: 900;
+}
+.section-1 h5 a {
+    text-decoration: none;
+    color: #2a2440;
+}
+.section-1 h5:first-child {
+    border-bottom: 5px solid #ffc107;
+}
+.section-2 {
+    float: left;
+    width: 100%;
+    text-align: center;
+    background: #f7f7f7;
+    height: 380px;
+}
+.box-info {
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    text-align:center;
+    margin: 30px;
+    background: #ffffff;
+    padding: 15px 10px;
+}
+.box-info h6 {
+    font-size:18px;
+    text-align: left;
+    display: inline-block;
+}
+.box-container-data{
+  padding: 7px;
+  }
+.box-data{
+    width: 130px;
+    height: 60px;
+    padding: 5px;
+    display: inline-block;
+    text-align: center;
+    background-color: #e1e1e1;
+}
+.box-data span {
+    display :inline-block;
+    width: 110px;
+    height: 20px ;
+    margin-bottom: 10px;
+}
+.box-data p {
+    display: inline-block;
+    font-size: 9px;
+    width: 110px;
+    height: 25px ;
+    margin: 0;
+    line-height: 8px;
+}
+.box-info img {
+    display: inline-block;
+    width: 261px;
+    height: 154px;
+}
+.box-data ul {
+    list-style: none;
+    word-wrap: break-word;
+    font-size: 10px;
+    text-align: left;
+    display: inline-block;
+    padding: 9px;
+}
+.section-5{
+    float: left;
+    width: 100%;
+    text-align: center;
+    background: #f7f7f7;
+}
+.box-evaluation {
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    text-align:center;
+    margin: 30px;
+    background: #ffffff;
+    padding: 15px 10px;
+}
+.box-points {
+    margin-top:20px;
+    width: 150px;
+    padding: 5px 0px;
+    display: inline-block;
+    background: #e1e1e1;
+}
+.box-evaluation h6 {
+    font-size: 18px;
+}
+.box-evaluation p {
+    font-size: 30px;
+    font-weight: 900;
+}
+.box-evaluation span {
+    font-size: 10px;
+}
+.list-city {
+    padding:20px 10px 20px;
+    width:300px;
+    background:#ffffff;
+    height:550px;
+    display: none;
+    text-align: left;
+}
+.list-city ul {
+     padding: 5px 40px;
+ }
+.list-city ul li {
+    list-style: none;
+    line-height: 30px;
+    font-size: 14px;
+}
+.list-city ul li a {
+display: inline-block;
+width: 12px;
+height:12px;
+border: 2px solid #ffc107;
+margin: 0 5px;
+border-radius:2px;
+}
+.list-city ul li:first-child {
+    font-weight: 700;
+    border-bottom: 3px solid #ffc107;
+}
+/* katherine*/
+.cuadrado{
+  width: 100%;
+  height: 80px;
+  margin-top:30px;
+  margin-bottom: 35px;
+  margin-left: 60px;
+}
+.box-sprint{
+margin-right: 10px;
+padding: 10px;
+display: inline-block;
+text-align: center;
+background-color:#e1e1e1;
+width:  198px;
+height: 60px;
+}
+.box-sprint span {
+   font-size: 20px;
+   font-weight: 900;
+}
+.box-sprint p {
+padding-top:5px;
+font-size: 10px;
+text-transform: uppercase;
+line-height: 8px;
+}
+.padre {
+margin: auto;
+/*outline: 2px solid black;*/
+width: 1170px;
+}
+.caja {
+  margin: auto;
+  /*outline: 2px solid red;*/
+  display: inline-block;
+  margin : 0px;
+}
+.uno{
+  width:  700px;
+  height: 370px;
+}
+
+.dos {
+  width:  390px;
+  height: 310px;
+  margin-left: 30px;
+}
+.letra {
+  display: block;
+  margin-top: 20px;
+}
+.circulo{
+  position: absolute;
+  /*outline: 2px solid blue;*/
+  display: inline-block;
+  right: 100px;
+}
+.subtitle{
+    display: inline-block;
+margin-left: 60px;
+margin-top: 40PX;
+}
+.fondo{
+  background: #fff;
+margin-left: 35px;
+margin-right: 30px;
+margin-top: 50PX;
+width: 100%;
+height: auto;
+}
+.style-none{
+    display: none;
+}
+/*agregando estilos a la seccion students*/
+.students{
+    box-sizing: content-box;
+    padding:0 ;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+  }
+  .colum-left,.colum-right,.colum-1,.colum-2,.container-skills{
+    display: inline-block;
+    margin: 7px;
+  }
+  .colum-left{
+    position: absolute;
+    left: 0;
+    width:40%;
+    height: 100%;
+    padding: 7px;
+  }
+  .specialization{
+    position: absolute;
+    right: 0;
+    padding: 15px;
+    width: 450px;
+    border-radius: 5px;
+    background: #f7f7f7;
+    border-bottom: 1px solid gray;
+    border-right:  1px solid gray;
+  }
+  .specialization ul{
+    padding: 0;
+  }
+  .specialization ul li{
+    list-style: none;
+  }
+  .icon-square-o{
+    margin-right: 10px;
+    color: #ffc107;
+  }
+  .icon-square-o:hover{
+    background: #ffc107;
+  }
+  .colum-right{
+    position:absolute;
+    right: 0;
+    width:55%;
+    height: 100%;
+    text-transform: uppercase;
+  }
+  .search{
+    position: absolute;
+    left: 0;
+    width: 800px;
+    height: 40px;
+    top: 0;
+    border-radius: 5px;
+    background: #f7f7f7;
+    border-bottom: 1px solid gray;
+    border-right:  1px solid gray;
+  }
+  input{
+    display:inline-block;
+    border: none;
+    outline: none;
+    width: 670px;
+    background: #f7f7f7;
+  }
+  .icon-search{
+    display: inline-block;
+    margin: 10px;
+  }
+  .students-skills{
+    position:relative;
+    left: 0;
+    top:60px;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 800px;
+    height: 190px;
+    border-radius: 5px;
+    background: #f7f7f7;
+    border-bottom: 1px solid gray;
+    border-right:  1px solid gray;
+  }
+  .figure{
+    margin: 5px;
+    float: left;
+  }
+  .background-image-peru{
+    background-image: url(../assets/img/peru.png);
+  }
+  .figure .image{
+    width: 100px;
+    height: 100px;
+  }
+  
+  .colum-1{
+    font-size: 20px;
+  }
+  .colum-1 h1,.colum-1 p,.box h1,.box p{
+    margin: 0;
+  }
+  .colum-1 .container-skills p{
+    padding: 2px;
+    display: inline-block;
+    list-style: none;
+    font-size: 10px;
+    margin-right: 20px;
+    background: white;
+  }
+  .colum-2{
+    float: right;
+    margin:10px;
+    font-size: 10px;
+  }
+  .box{
+    display: inline-block;
+    padding: 8px;
+    margin-right: 5px;
+    background:white;
+  }
+  /* Clase para eventos-Claudia*/
+.listPosition {
+    position: absolute;
+    top: 180px;
+    left: 180px ;
+    z-index: 100;
+    display: inline-block;
+}
+.hide {
+    display:none;
+}
+.fontStrong {
+    font-weight: 900;
+}
+
