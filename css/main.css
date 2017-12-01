@@ -1,3 +1,6 @@
+*{
+  font-family: 'Noto Sans', sans-serif;
+}
  /* Estilos al body*/
  body {
   margin: 0 auto;
@@ -98,6 +101,7 @@ main {
   font-family: sans-serif;
   margin-left: 50px;
   margin-top: 20px;
+  margin-right: 20px;
 }
 
 #content table td {
@@ -127,13 +131,16 @@ main {
 }
 
 #promedio-total, #notas-hse, #notas-tech, #enrolled, #nps, #satisfaction, #teacher, #jedi {
+  border-radius: 20px;
   background: white;
   display: inline-block;
   height: 400px;
   margin-top: 30px;
+  margin-right: 40px;
   text-align: left;
   width: 380px;
 }
+
 
 #promedio-total span{
   display:block;
