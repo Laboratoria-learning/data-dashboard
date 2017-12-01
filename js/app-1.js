@@ -25,7 +25,7 @@ window.addEventListener('load', function(event) {
   /* evento para botón de especialización front end designer */
   var frontEndDesignerButton = document.getElementById('front-end-designer-button');
   frontEndDesignerButton.addEventListener('click', function(event) {
-    alert('es click en front end desing');
+  alert('es click en front end desing');
 
   var students= [];
   var studentsData = [];
@@ -70,7 +70,6 @@ window.addEventListener('load', function(event) {
      for (var b= 0; b <4 ; b++) {
         var tech =Object.values(studentsData[3]);
         var tec = Object.values(tech[b]);
-        /*console.log('array tec' , tec); imprime notas alumnas sprint */
         var tePoint= Object.values(tec[1]);
          
         /* recorre las notas por print 4 por alumna */
@@ -108,11 +107,29 @@ window.addEventListener('load', function(event) {
        var divName = document.createElement('div'); /* div con id-date */
        divName.classList.add('big-letter');
        var divEspecializationStudent = document.createElement('div'); /* div con id-name */ 
+       
        divStudent.appendChild(divDate);
-       divDate.appendChild(divName);
-       divDate.textContent = students[[z,2]];
-       divDate.appendChild(divEspecializationStudent);
-     
-    };
+       divDate.appendChild(divDateStudent);
+
+       divDateStudent.appendChild(divName);
+       divName.textContent = students[[z,2]];
+       divDateStudent.appendChild(divEspecializationStudent);
+       divEspecializationStudent.textContent = 'Front End Developer';
+       
+       /* evaluación técnica */
+       var divTechSkills = document.createElement('div');
+       var divTech = document.createElement('div');
+       var labelPercentTech= document.createElement('label');
+       var labelNumberTech= document.createElement('label');
+       var brUp1 = document.createElement('br')
+
+       divDate.appendChild(divTechSkills);
+       divTechSkills.appendChild(divTech);
+       divTech.appendChild(labelPercentTech);
+       labelPercentTech.textContent = students[[z,6]];
+       divTech.appendChild(brUp1);
+       divTech.appendChild(labelNumberTech);
+       labelNumberTech.textContent = students[[z,7]];
+     };
   });
 });
