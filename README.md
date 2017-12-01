@@ -6,20 +6,29 @@
 
 ***
 
-## Flujo de trabajo
+## Desarrollo :
 
-1. Debes realizar un [**fork**](https://gist.github.com/ivandevp/1de47ae69a5e139a6622d78c882e1f74)
-   de este repositorio.
+### DESCUBRIMIENTO : "Salimos a entender quienes son nuestros usuarios y cuales son sus necesidades"
 
-2. Luego deberás **clonar** tu fork en tu máquina. Recuerda que el comando a usar
-   es `git clone` y su estructura normalmente se ve así:
+Se buscó colaboradoras (Alejandra Ramirez(CEO de Laboratoria) y Ruth Salvador(Junior Teacher) ) a las cuales se entrevistó por un espacio no mayor de 20 minutos; en esa entrevista comunicaron sus necesidades y cuales fueron sus experiencias anteriores utilizando herramientas que les muestren el desempeño de las alumnas , de dicha entrevista se pudo obtener la siguiente data :
 
-   ```bash
-   git clone https://github.com/<nombre-de-usuario>/freelancer.git
-   ```
+* Las herramietas usadas anteriormente estaban enfocadas a mostrar datos estadisticos a las alumnas y no tanto a las training manager.
+* Una necesidad básica es mostrar los datos de forma visual(gráficos estadisticos),respetando una gama de colores.
+* Es importante ver puntajes ;cuantas chicas lograron la meta y cuantas están por debajo de la meta (numero y porcentaje)
+* Preferencias de navegación : menú hamburguesa y filtros para escoger la promocion, el turno y el sprint.
+* Visualizacion por sprint.
+* Mientras más especifico sean los datos, sirve más.
+* Para datos acumulados sirve ver el progreso de los sprints(lineas que cambien en el tiempo) y la comparacion de turnos.
+* Los tipos de graficos estadisticos dependeran de la data.
+* Que la estructura sea fácil de entender.
 
-3. Cuando hayas terminado tu producto, envía un Pull Request a este repositorio
-   (puedes solicitar apoyo de tus profes para este paso).
+### DEFINICIÓN: "De todo lo que descubrimos priorizamos que problemas queremos resolver"
 
-> Nota: No olvides que es una buena práctica describir tu proyecto en este
-> archivo `README.md` y también desplegar tu web a Github Pages :smiley:.
+Para esta etapa , ademas de tomar las consideraciones del reto ,se prioriso solucionar el problema de mostrar datos estadisticos que sean simples de entender (con números y porcentajes) , tomando en cuenta las preferencias de navegacion de las colaboradoras, ademas de la simplicidad y la sobriedad del diseño que se busca.
+
+### PROTOTIPADO: "Diseñamos posibles soluciones"
+
+### DESARROLLO DE FUNCIONALIDAD Y MAQUETADO :
+
+* Se agruparon los datos del objeto de acuerdo a los requerimientos.
+* Se

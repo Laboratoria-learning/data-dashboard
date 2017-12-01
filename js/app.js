@@ -34,9 +34,11 @@ window.addEventListener('load', function() {
   // evento para los filtros:
   var PLACE = '';
   var CODE = '';
+  var SPRINT = '';
   var students = {};
   var placeFilter = document.querySelector('.place-filter');
   var codeFilter = document.querySelector('.code-filter');
+  var sprintFilter = document.querySelector('.sprint-filter');
 
   codeFilter.addEventListener('change', showNumber);
 
@@ -139,7 +141,6 @@ window.addEventListener('load', function() {
     var result = (studentPercentagePassed(PLACE, CODE) * totalActive(PLACE, CODE, 'active')) / 100;
     return result;
   }
-
   // funcion que saca el promedio de los puntajes de los jedi-master   (todos los sprints)
 
   function jediMasterPoints(place, code) {
@@ -208,27 +209,51 @@ window.addEventListener('load', function() {
     return sum / array.length;
   }
 
-  function achievement(place , code) {
-
+  function achievement(place, code) {
     var container = [];
     var average = 0;
-    var counter = 0
-    for(var i = 0 ; i < data[place][code].students.length ;i++){
-        var arrayOfSprints = [place][code].students[i].sprints
-        if(data[place][code].students[i].active === true){
-            var arrayStudent=[];
-            for (var j = 0 ; j < arrayOfSprints.length ; j++){
-                var tech = arrayOfSprints[j].score.tech;
-                var hse = arrayOfSprints[j].score.hse;
-                if(tech>=1260 && hse>=860){
-                    counter++
-                }
-            }
-
+    var counter = 0;
+    for (var i = 0 ; i < data[place][code].students.length ;i++) {
+      var arrayOfSprints = [place][code].students[i].sprints;
+      if (data[place][code].students[i].active === true) {
+        var arrayStudent = [];
+        for (var j = 0 ; j < arrayOfSprints.length ; j++) {
+          var tech = arrayOfSprints[j].score.tech;
+          var hse = arrayOfSprints[j].score.hse;
+          if (tech >= 1260 && hse >= 860) {
+            counter++;
+          }
         }
+      }
     }
     return counter ;
-}
-achievement('LIM' , '2017-1');
+  }
+  // achievement('LIM', '2017-1');
 
+  // funcion que calcula el numero de personas que representa  el porcentaje de las que superan la meta en ambos cursos:
+  function studentPassed(place, code) {
+    var result = (studentPercentagePassed(PLACE, CODE) * totalActive(PLACE, CODE, 'active')) / 100;
+    return result;
+  }
+  google.charts.load('current', {'packages': ['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+  // Create the data table.
+    var passed = document.getElementById('passed').textContent;
+    var noPassed = document.getElementById('noPassed').textContent;
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'passed');
+    data.addColumn('number', 'resultado');
+    data.addRows([
+      ['Passed', parseInt(passed)],
+      ['No Passed', parseInt(noPassed)],
+    ]);
+    // Set chart options
+    var options = {'width': 450,
+      'height': 150};
+    // Instantiate and draw our chart, passing in some options.
+    var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
+  }
+  google.charts.setOnLoadCallback(drawChart);
 });
