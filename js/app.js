@@ -382,8 +382,8 @@ studentsData.addEventListener('click', showStudentData);
 function showStudentData(e) {
   var textSedeSelected = document.getElementById('sedeSelect').textContent;
   var textGenerSelected = document.getElementById('generSelect').textContent;
-  var sa = data[textSedeSelected][textGenerSelected]['students'];
-if (textSedeSelected && textGenerSelected) { // add if 	
+if (textSedeSelected && textGenerSelected) { // add if	
+  var sa = data[textSedeSelected][textGenerSelected]['students']; 	
   for (var j = 0;j < sa.length;j++) {
     if (sa[j]['active'] === true) {
       // var ss = data[textSedeSelected][textGenerSelected]["students"][j]["sprints"];
