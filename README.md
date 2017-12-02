@@ -43,4 +43,4 @@ Con esta información logramos filtrar datos de mayor relevancia para nuestro cl
 
 ![](assets/recursos/wireframe.png)
 
-## Objetivos acanzados
+
