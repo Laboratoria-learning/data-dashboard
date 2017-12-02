@@ -78,7 +78,6 @@ window.addEventListener('load', function(event) {
       var contHse = 0;
       var qTech;
       var uHse;
-      var contCalc = 0;
       var contInactive = 0;
 
       for (var k = 0; k < dataAlumns.length; k++) {
