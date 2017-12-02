@@ -4,11 +4,8 @@
 
 
 ## Integrantes
-- Araceli 
-- Yenny Quiñones Jáuregui
-
-## Objetivos
-- 
+- Araceli Gutarra
+- Yenny Quiñones 
 
 ## Vistas
 1. Overview
