@@ -119,9 +119,7 @@ window.addEventListener('load', function(event) {
           if (uHse >= 840) {
             contHse++;
           }
-          contCalc++;
         }
-        console.log(contCalc);// probar
       }
       console.log(contTech);// número de estudiantes que pasaron el mínimo requerido en tech
       console.log(contHse);// número de estudiantes que pasaron el mínimo requerido en hse
@@ -149,7 +147,7 @@ window.addEventListener('load', function(event) {
       countSkills.textContent = contTech;
       var totalStudents = document.getElementById('totalStudentsTech');
       totalStudents.textContent = '';
-      totalStudents.textContent = (dataAlumns.length-contInactive);
+      totalStudents.textContent = (dataAlumns.length - contInactive);
       var percentageStudentsPass = document.getElementById('percentageStudentsTech');
       percentageStudentsPass.textContent = '';
       percentageStudentsPass.textContent = neoTech;
@@ -158,7 +156,7 @@ window.addEventListener('load', function(event) {
       countHse.textContent = contHse;
       var totalStudentsHse = document.getElementById('totalStudentsHse');
       totalStudentsHse.textContent = '';
-      totalStudentsHse.textContent = (dataAlumns.length-contInactive);
+      totalStudentsHse.textContent = (dataAlumns.length - contInactive);
       var percentageStudentsHse = document.getElementById('percentageStudentsHse');
       percentageStudentsHse.textContent = '';
       percentageStudentsHse.textContent = neoSkills;
