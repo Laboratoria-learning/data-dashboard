@@ -3,11 +3,140 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
+    <header>
+      <img src="assets/images/logo_laboratoria.png" alt="Logo Laboratoria">
+      <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+    </header>
+    <!-- Inicio - Sección para seleccionar sede y generación -->
+    <section>
+      <select class="select-sede" id="select-sede">
+        <option value="0">Selecciona una sede </option>
+        <option class="sede" value="AQP">Arequipa</option>
+        <option class="sede" value="CDMX">Ciudad de México</option>
+        <option class="sede" value="LIM">Lima</option>
+        <option class="sede" value="SCL">Santiago de Chile</option>
+      </select>
+      <select class="select-gen" id="select-generation">
+        <option value="0">Selecciona una promoción </option>
+        <option class="promo" value="2016-2">2016-2</option>
+        <option class="promo" value="2017-1">2017-1</option>
+        <option class="promo" value="2017-2">2017-2</option>
+      </select>
+    </section>
+    <!-- Fin - Sección para seleccionar sede y generación -->
 
-		<!-- Base de datos -->
-		<script src="./js/data.js"></script>
+    <!-- Inicio - Sección alumnas inscritas -->
+    <article class="box-container">
+      <h2>INSCRIPCION</h2>
+      <div class="box">
+      <span id="numberRegistered"></span>
+        <p>N° ESTUDIANTES INSCRITAS</p>
+      </div>
+      <div class="box">
+        <span id="numberDesert"></span>
+        <p>% ESTUDIANTES DESERTADAS</p>
+        <img class="imagen" src="assets/images/bar-graph.png" alt="estudiantes inscritas">
+      </div>
+    </article>
+    <!-- Fin - Sección alumnas inscritas -->
+    
+    <!-- Inicio - Sección alumnas logran pasar promedio -->
+    <article class="box-container">
+      <h2>LOGROS</h2>
+      <div class="box">
+        <p> <span class="number">105</span> N° de estudiantes que superan la meta de puntos en promedio de todos los sprints cursados
+          <br> EL OBJETIVO</p>
+        <img class="imagen" src="assets/images/graph.png" alt="estudiantes que pasan puntaje mínimo">
+      </div>
+      <div class="box">
+        <p> <span class="number">78 %</span>  DEL TOTAL</p>
+      </div>
+    </article>
+    <!-- Fin - Sección alumnas logran pasar promedio -->
+
+    <!-- Inicio - Sección promedio NPS -->
+    <article class="box-container third">
+    <h2>
+      PUNTAJE NETO DEL PROMOTOR - NET PROMOTER SCORE (NPS)</h2>
+      <div class="box">
+      <span id="nps"></span>
+      <p>El Net Promoter Score (NPS) promedio de los sprints cursados</p>
+        <img class="imagen" src="assets/images/graph.png" alt="nts">
+      </div>
+    </article>
+    <!-- Fin - Sección promedio NPS -->
+
+    <section>
+      <div class="box-container">
+        <h2>SATISFACCIÓN DEL ESTUDIANTE</h2>
+        <div class="box">
+          <span id="alum-satifaction"></span>
+          <p>ESTUDIANTES SATISFECHAS</p>
+          <img class="imagen" src="assets/images/graph.png" alt="Estudiantes satisfechas">
+        </div>
+      </div>
+      <div class="box-container">
+        <h2>EVALUACIÓN DE MAESTROS</h2>
+        <div class="box">
+          <span id="eva-teacher"></span>
+          <p>PROMEDIO DE CALIFICACIÓN GENERAL DE MAESTROS</p>
+          <img class="imagen" src="assets/images/graph.png" alt="Evaluación maestros">
+        </div>
+      </div>
+      <div class="box-container fourth">
+        <h2>EVALUACIÓN DE JEDI MASTER</h2>
+        <div class="box">
+          <span id="eva-jedi"></span>
+          <p>PROMEDIO DE CALIFICACIÓN GENERAL DE JEDI</p>
+          <img class="imagen" src="assets/images/graph.png" alt="Evaluación Jedi">  
+        </div>
+      </div>
+    </section>
+    <!-- Inicio - Sección habilidades técnicas -->
+    <article class="skills">
+      <h2>HABILIDADES TÉCNICAS</h2>
+      <div class="box">
+      <p>
+      <span class="number">80 </span>N° ESTUDIANTES QUE CUMPLIERON
+          <br>CON EL OBJETIVO</p>
+      </div>
+      <div class="box">
+      <p>
+     <span class="number">62 </span>% DEL TOTAL</p>
+      </div>
+      <img class="big-imagen" src="assets/images/rectangular-graphic.png" alt="habilidades técnicas">
+      <img class="circle" src="assets/images/circle-graphic.png" alt="habilidades técnicas">
+    </article>
+    <!-- Fin - Sección habilidades técnicas -->
+
+
+    <!-- Inicio - Sección habilidades Sociales -->
+    <article class="skills">
+      <h2>HABILIDADES SOCIALES</h2>
+      <div class="box">
+      <p>
+     <span class="number">90 </span>N° PROMEDIO GENERAL
+          <br>DE LA CLASE</p>
+      </div>
+      <div class="box">
+      <p>
+     <span class="number">62 </span>N° ESTUDIANTES QUE CUMPLIERON
+          CON EL OBJETIVO</p>
+      </div>
+      <img class="big-imagen" src="assets/images/rectangular-graphic.png" alt="habilidades sociales">
+      <img class="circle" src="assets/images/circle-graphic.png" alt="habilidades sociales">
+    </article>
+    <!-- Fin - Sección habilidades Sociales -->
+
+
+
+    <script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
     <script src="./js/app.js"></script>
   </body>

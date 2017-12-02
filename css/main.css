@@ -1,3 +1,178 @@
-/*
- * Estilos de tu proyecto
- */
+*{
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f3f3f3;
+}
+/* Header style */
+
+header {
+  display: flex;
+  margin-top: 20;
+  height: 80px;
+  background-color: #fff;
+}
+
+header i {
+  color: #383838;
+  position: relative;
+  left: 500px;
+  top: 10px;
+}
+
+header img{
+  height: 70px;
+  left: 500px;
+  position: relative;
+  width: 200px;
+}
+
+.fa-bars{
+  margin-top: 10px;
+  margin-left:400px;
+}
+
+.fa-sort-desc{
+  margin-top: 25px;
+  margin-left:5px;
+}
+
+/* select style */
+.select-sede, .select-gen{
+  background-color: #ffc107;
+  border-radius: 10px;
+  font-size: 20px;
+  height: 50px;
+  margin-left: 200px;
+  padding: 5px;
+  position: relative;
+  outline: none;
+  top: 53px;
+  width: 350px;
+}
+
+/* Article style */
+.box-container {
+  width: 350px;
+  height: 400px;
+  border: 2px solid #383838;
+  border-radius: 10px;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #fff;
+}
+
+.box-container h2 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.box-container .imagen-big {
+  width: 300px;
+  height: 250px;
+}
+
+select {
+  outline: none;
+  border: none;
+  width: 302px;
+  padding: 2px;
+  font-size: 22px;
+}
+
+section {
+  padding-left: 38px;
+  padding-top: 10px;
+}
+
+article {
+  width: 373px;
+  height: 362px;
+  padding: 20px;
+  display: inline-block;
+  background-color: #FFFFFF;
+  margin: 36px;
+  border-radius: 6px;
+}
+
+.box {
+  background-color: #f5f1f1;
+  display: inline-block;
+  height: 65px;
+  float: left;
+  padding: 10px;
+  margin-right: 5px;
+  border-radius: 5px;
+  width: 160px;
+  position: relative;
+  left: 20px;
+}
+
+.box-container {
+  position: relative;
+  top: 30px;
+  width: 310px;
+  height: 350px;
+  margin-left: 40px;
+}
+
+.third {
+  top: 90px;
+}
+
+.fourth {
+  top: 30px;
+}
+
+.skills {
+  position: relative;
+  top: 20px;
+  width: 1100px;
+  height: 600px;
+}
+
+.skills h2{
+  text-align: center;
+}
+
+main {
+  display: inline-block;
+}
+
+p {
+  font-size: 11px;
+}
+
+.imagen {
+  margin-top: 80px;
+  width: 300px;
+  height: 110px;
+  position: relative;
+  left: -25px;
+}
+
+.big-imagen {
+  margin-top: 80px;
+  width: 650px;
+  height: 370px;
+  position: absolute;
+  left: 34px;
+}
+
+.circle{
+  position: relative;
+  left: 400px;
+  margin-top: 156px;
+}
+
+/* class styles with javascript */
+
+.number {
+  color: #ffc107;
+  font-weight: 700;
+}
