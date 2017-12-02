@@ -126,10 +126,10 @@ window.addEventListener('load', function(event) {
       console.log(contTech);// número de estudiantes que pasaron el mínimo requerido en tech
       console.log(contHse);// número de estudiantes que pasaron el mínimo requerido en hse
       console.log(contGoal);// número de estudiantes que pasaron el mínimo requerido en ambos skills
-      var retired = ((datesGen.students.length) * 100).toFixed(1);
-      var studentAchievement = ((contGoal / datesGen.students.length) * 100).toFixed(1);
-      var neoTech = ((contTech / dataAlumns.length) * 100).toFixed(1);
-      var neoSkills = ((contHse / dataAlumns.length) * 100).toFixed(1);
+      var retired = ((contInactive * 100) / dataAlumns.length).toFixed(1);
+      var studentAchievement = ((contGoal * 100) / dataAlumns.length).toFixed(1);
+      var neoTech = ((contTech / (dataAlumns.length - contInactive)) * 100).toFixed(1);
+      var neoSkills = ((contHse / (dataAlumns.length - contInactive)) * 100).toFixed(1);
                 
       // añade función a html
       var enrollment = document.getElementById('enrollment');
@@ -149,7 +149,7 @@ window.addEventListener('load', function(event) {
       countSkills.textContent = contTech;
       var totalStudents = document.getElementById('totalStudentsTech');
       totalStudents.textContent = '';
-      totalStudents.textContent = dataAlumns.length;
+      totalStudents.textContent = (dataAlumns.length-contInactive);
       var percentageStudentsPass = document.getElementById('percentageStudentsTech');
       percentageStudentsPass.textContent = '';
       percentageStudentsPass.textContent = neoTech;
@@ -158,7 +158,7 @@ window.addEventListener('load', function(event) {
       countHse.textContent = contHse;
       var totalStudentsHse = document.getElementById('totalStudentsHse');
       totalStudentsHse.textContent = '';
-      totalStudentsHse.textContent = dataAlumns.length;
+      totalStudentsHse.textContent = (dataAlumns.length-contInactive);
       var percentageStudentsHse = document.getElementById('percentageStudentsHse');
       percentageStudentsHse.textContent = '';
       percentageStudentsHse.textContent = neoSkills;
