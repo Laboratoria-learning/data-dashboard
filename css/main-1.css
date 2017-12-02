@@ -5,6 +5,10 @@
     background-color: #f4f6f7;
 }
 
+div .view-student {
+  text-align: center ;
+}
+
 div #especialization {
   position: fixed;
 }
@@ -35,7 +39,7 @@ li {
     display: inline-block;
     margin-left: 650px;
     /*float: right;*/
-    
+
 }
 
 ul, li{
@@ -137,7 +141,7 @@ button.desactive {
     background-color: #e0e0e0;
     color: #757575;
   }
-  
+
   button.active {
     background-color: #faf281;
     color: white;

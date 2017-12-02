@@ -1,0 +1,428 @@
+/*
+ * Estilos de tu proyecto
+ */
+
+/* Estilos generales */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #f4f6f7;
+  color: #2b2b2b;
+  width: 1366px;
+}
+
+main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Estilos a la sección principal, contenedores generales o que sus elementos comparten ciertas propiedades de estilo */
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+div .view-overview {
+  text-align: center;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+.section-1, .section-4 {
+  width: 100%;
+}
+
+.section-2, .section-3 {
+  width: 82.8%;
+  margin: 0 auto;
+}
+
+.section-2 h2, .section-3 h2 {
+  display: inline-block;
+  margin-left: 2.3%;
+}
+
+.section-1, .section-2, .section-3, .section-4 {
+  height: 25%;
+  font-size: 0.9em;
+}
+
+
+.div-1, .div-2, .div-3, .section-2, .section-3, .div-6, .div-7, .div-8 {
+  background-color: #fff;
+}
+
+.div-1, .div-2, .div-3, .div-6, .div-7, .div-8 {
+  display: inline-block;
+}
+
+.div-1, .div-2, .div-3, .div-6, .div-7, .div-8 {
+  width: 25%;
+  height: 300px;
+}
+
+.little-div-1, .little-div-2, .little-div-3, .little-div-4, .little-div-5, .little-div-6, .little-div-7, .little-div-8, .little-div-10, .little-div-11, .little-div-13, .little-div-14, .little-div-15 {
+  background-color: #e5e7e9;  /*#F8F9F9;*/
+  display: inline-block;
+}
+
+/* Estilos generales a la 1ra subsección*/
+
+.section-1 {
+  padding-top: 4%;
+  padding-bottom: 7%;
+}
+
+.div-1, .div-2, .div-3 {
+  padding: 2%;
+}
+
+.section-1 h2 {
+  padding-bottom: 5%;
+}
+
+.section-1 img {
+  display: inline-block;
+}
+
+/* Estilos al contenedor general nº1 */
+
+.div-1 {
+  margin-left: 9%;
+  position: relative;
+  top: 16px;
+}
+/* Estilos al contenedor general nº2 */
+.div-2 {
+  margin-left: 3.7%;
+}
+
+.div-2 img {
+  position: relative;
+  top: 17px;
+}
+
+/* Estilos al contenedor general nº3 */
+.div-3 {
+  margin-left: 3.3%;
+  position: relative;
+  bottom: 12px;
+}
+
+.div-3 img {
+  position: relative;
+  top: 11px;
+}
+
+/* Estilos generales a los pequeños contenedores dentro todas las secciones */
+
+.little-div-1, .little-div-2, .little-div-3, .little-div-4, .little-div-5, .little-div-6 {
+  height: 25%;
+  font-size: 0.69em;
+  text-align: center;
+}
+
+.little-div-1, .little-div-2, .little-div-3, .little-div-4, .little-div-5 {
+  width: 45%;
+}
+
+.little-div-1, .little-div-2 {
+  margin-top: 2%;
+}
+
+.little-div-3, .little-div-4 {
+  margin-top: 2.7%;
+}
+
+
+.little-div-2, .little-div-4 {
+  position: relative;
+  bottom: 12px;
+}
+
+.little-div-9, .little-div-12 {
+  display: inline-block;
+}
+/* Estilos para cada uno de los pequeños contenedores dentro de la primera sección*/
+
+.little-div-1 {
+  position: relative;
+  bottom: 1px;
+}
+
+.little-div-5 {
+  position: relative;
+  bottom: 4px;
+}
+
+.little-div-6 {
+  font-size: 0.94em;
+  position: relative;
+  top: 5px;
+  width: 48%;
+}
+
+.little-div-6 ul {
+  list-style: none;
+  text-align: left;
+  padding-top: 3%;
+  margin-left: 7%;
+}
+
+/* Estilos a la 2da subsección */
+
+.section-2 {
+  font-size: 0.69em;
+  margin-bottom: 5%;
+}
+
+.section-2 h2 {
+  font-size: 2em;
+  position: relative;
+  top: 3px;
+}
+
+.section-2 select {
+  display: inline-block;
+  margin-top: 2.5%;
+  margin-left: 2.8%;
+}
+
+.div-4 {
+  width: 100%;
+  margin-top: 2%;
+}
+
+.little-div-7, .little-div-8 {
+  width: 18%;
+  height: 70px;
+  text-align: center;
+}
+
+.little-div-7 {
+  margin-left: 2.3%;
+}
+
+.little-div-8 {
+  margin-left: 0.6%;
+  position: relative;
+  bottom: 14px;
+}
+
+.little-div-9 {
+  width: 41.7%;
+  height: 350px;
+  position: relative;
+  bottom: 19px;
+}
+
+
+/* Estilos a las 3era subsección */
+
+.section-3 {
+  font-size: 0.69em;
+  margin-bottom: 5%;
+}
+
+.section-3 h2 {
+  font-size: 2em;
+  position: relative;
+  top: 3px;
+}
+
+.section-3 select {
+  display: inline-block;
+  margin-top: 2.5%;
+  margin-left: 2.8%;
+}
+
+.div-5 {
+    width: 100%;
+    margin-top: 2%;
+}
+
+.little-div-10, .little-div-11 {
+  width: 18%;
+  height: 70px;
+  text-align: center;
+}
+
+.little-div-10 {
+  margin-left: 2.3%;
+  position: relative;
+  bottom: 14px;
+}
+
+.little-div-11 {
+  margin-left: 0.6%;
+}
+
+.little-div-12 {
+  width: 41.7%;
+  height: 350px;
+  position: relative;
+  bottom: 19px;
+}
+
+/* Estilos generales a la 4ta subsección */
+
+.section-4 {
+  margin-bottom: 10%;
+}
+
+.div-6, .div-7, .div-8 {
+  padding: 2%;
+}
+
+.section-4 h2 {
+  padding-bottom: 5%;
+}
+
+.section-4 img {
+  display: inline-block;
+}
+
+/* Estilos al contenedor general nº6 */
+
+.div-6 {
+  margin-left: 9%;
+}
+
+.div-6 img {
+  position: relative;
+  top: 7px;
+}
+
+/* Estilos al contenedor general nº7 */
+
+.div-7 {
+  margin-left: 3.7%;
+}
+
+.div-7 img {
+  position: relative;
+  top: 6px;
+}
+
+/* Estilos al contenedor general nº8 */
+
+.div-8 {
+  margin-left: 3.3%;
+}
+
+.div-8 img {
+  position: relative;
+  top: 3px;
+}
+
+
+/* Estilos generales a los pequeños contenedores dentro de los contenedores generales de section */
+
+.little-div-13, .little-div-14, .little-div-15 {
+  width: 60%;
+  height: 25%;
+  font-size: 0.69em;
+  text-align: center;
+  background-color: #e5e7e9;
+  margin-left: 1%;
+}
+
+/* Estilos para cada uno de los contenedores generales de la cuarta sección */
+
+.little-div-13 {
+  margin-top: 2%;
+}
+
+.little-div-14 {
+  margin-top: 2%;
+}
+
+.little-div-15 {
+  margin-top: 2%;
+  position: relative;
+  bottom: 2px;
+}
+
+/*Clases especiales*/
+
+.big-number {
+  font-weight: 700;
+  font-size: 2.5em;
+  margin: 2% 0 2%;
+}
+
+.fifty {
+  display: inline-block;
+  color: #64dd17;
+  font-weight: 700;
+  font-size: 2.5em;
+  margin: 2% 0 2%;
+}
+
+.mini-div-1 {
+  font-size: 2em;
+  font-weight: 700;
+  margin: 2% 0 3%;
+}
+
+.red {
+  color: #e74c3c;
+  font-size: 2em;
+  font-weight: 700;
+  margin: 2% 0 4%;
+}
+
+.green {
+  color: #64dd17;
+  font-size: 2em;
+  font-weight: 700;
+  margin: 2% 0 3%;
+}
+
+.color-green {
+  width: 20px;
+  height: 12px;
+  display: inline-block;
+  background-color: #64dd17;
+}
+
+.color-red {
+  width: 20px;
+  height: 12px;
+  display: inline-block;
+  background-color: #ff0000;
+}
+
+.student {
+  display: inline-block;
+}
+
+.rectangular-graphic {
+  margin-left: 2.3%;
+  margin-top: 2%;
+  width: 55%;
+  height: 350px;
+}
+
+.circle-graphic {
+  width: 70%;
+  position: relative;
+  left: 58px;
+  padding-top: 2%;
+  padding-bottom: 7%
+}
+
+.color-container {
+  padding-bottom: 2%;
+  padding-left: 8%;
+  letter-spacing: 0.4px;
+}
