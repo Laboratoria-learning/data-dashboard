@@ -60,7 +60,6 @@ nav{
 }
 
 .title{
-    //display:inline-block;
     position:absolute;
     left:410px;
     top:15px;
@@ -69,7 +68,6 @@ nav{
 }
 
 .title-gen{
-    //display:inline-block;
     position:absolute;
     left:400px;
     top:50px;
@@ -100,10 +98,6 @@ nav{
     margin-top:1em;
     background:white;
     cursor:pointer;
-}
-
-.html-select{
-
 }
 
 .menu-nav{
@@ -158,9 +152,14 @@ nav{
     margin:1.5em 0.3em;
 }
 
+.promoter-score{
+    font-size:0.8em;
+    list-style:none;
+    text-align:left;
+}
 
 .boxes-top-content p{
-    font-size:0.6em;
+    font-size:0.5em;
     margin-top:0.5em;
 }
 
