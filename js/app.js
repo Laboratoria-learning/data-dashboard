@@ -95,13 +95,11 @@ window.addEventListener('load', function() {
             var arrStudents = students[m] ;
             activeStudents = 0 ;
             // condicion que solo recorre estuidnates activas
-            if (arrStudents['active'] === true) {
-              activeStudents ++ ;
+            if (arrStudents.active === true) {
+              var activeStudents = (activeStudents + 1);
 
               console.log('las estudiantes activas son: ' + activeStudents);
-            }else {
-                activeStudents = activeStudents;
-              }
+
               // cantidad y el porcentaje que representa el total de estudiantes que superan la meta de puntos tecnicos 70% en promedio por todos los sprints sprint
               var superantech = 0;
               for (k = 0; k < students[m]['sprints'].length; k++) {
@@ -134,6 +132,7 @@ window.addEventListener('load', function() {
                 console.log(studentsHighScore);
               };
             }; */
+          }//condicion que toma en cuenta solo etudinates activas
           }; // for que recorre la data de todad las estudinates de la sede y genración escogida
 
 
@@ -213,35 +212,6 @@ window.addEventListener('load', function() {
           };
           console.log('cantidad de estudiantes que superan la meta de puntos HSE en promedio y en el primer sprint: ' + studentsSuperanHse);
 
-          var studentsSuperanHse = 0;
-          for (i = 0; i < data[sede][generation]['students'].length; i++) {
-            if (data[sede][generation]['students'][i]['sprints'][1]['score']['hse'] > 840) {
-              studentsSuperanHse ++;
-            } else {
-              studentsSuperanHse = studentsSuperanHse;
-            }
-          };
-          console.log('cantidad de estudiantes que superan la meta de puntos HSE en promedio y en el segundo sprint: ' + studentsSuperanHse);
-
-          var studentsSuperanHse = 0;
-          for (i = 0; i < data[sede][generation]['students'].length; i++) {
-            if (data[sede][generation]['students'][i]['sprints'][2]['score']['hse'] > 840) {
-              studentsSuperanHse ++;
-            } else {
-              studentsSuperanHse = studentsSuperanHse;
-            }
-          };
-          console.log('cantidad de estudiantes que superan la meta de puntos HSE en promedio y en el tercer sprint: ' + studentsSuperanHse);
-
-          var studentsSuperanHse = 0;
-          for (i = 0; i < data[sede][generation]['students'].length; i++) {
-            if (data[sede][generation]['students'][i]['sprints'][3]['score']['hse'] > 840) {
-              studentsSuperanHse ++;
-            } else {
-              studentsSuperanHse = studentsSuperanHse;
-            }
-          };
-          console.log('cantidad de estudiantes que superan la meta de puntos HSE en promedio y en el cuarto sprint: ' + studentsSuperanHse);
 
           // hallando la cantidad todal de estudiantes ACTIVAS por generación
           console.log(students[0]['active']);
