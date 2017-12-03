@@ -19,18 +19,18 @@
       </nav>
     </header>
     <section id="bar-container" class="bar">
-      <div>
-        <select name="place-lab" id="place">
+      <div class="higher">
+        <select class="slc-transp" name="place-lab" id="place">
           <option value="default">Seleccione Sede</option>
           <option value="LIM">Lima</option> 
           <option value="AQP">Arequipa</option> 
           <option value="SCL">Santiago de Chile</option>
           <option value="CDMX">Ciudad de Mexico</option> 
         </select>
-        <select name="generation-lab" id="generation">
+        <select class="slc-transp" name="generation-lab" id="generation">
           <option value="default">Seleccione Generación</option> 
         </select>
-        <input type="button" id="btndash" value="Dashboard">
+        <input type="button" id="btndash" class="btn-higher" value="Dashboard">
       </div>
       <div class="principal">
         <ul class="lista">
@@ -49,6 +49,7 @@
            <span class="description"># STUDENTS CURRENTLY ENROLLED</span>
          </div>
          <div class="display-inline-block c-plomo text-align-center">
+            <div id="1"></div>
             <span id="percentaje-overview" class="data-style"></span>
             <span class="description">% DROPOUT</span>
          </div> 
@@ -85,23 +86,31 @@
           <div></div>
       </section>
       <section class="overview-for">
-          <div>
-            <div class="title-overview">STUDENT SATISFACTION</div>
-            <div></div>
-            <div></div>
+        <div class="data-overview">
+          <div class="title-overview">STUDENT SATISFACTION</div>
+          <div class="display-inline-block c-plomo text-align-center">
+            <span id="s-nps-overview" class="data-style"></span>
+            <span class="description">% MEETING OR EXCEEDING EXPECTATIONS(CUMULATIVE)</span>
           </div>
-          <div>
-            <div class="title-overview">TEACHER RATING</div>
-            <div></div>
-            <div></div>
+          <div></div>
+        </div>
+        <div class="data-overview">
+          <div class="title-overview">TEACHER RATING</div>
+          <div class="display-inline-block c-plomo text-align-center">
+            <span id="t-rating-overview" class="data-style"></span>
+            <span class="description">OVERALL TEACHER RATING(CUMULATIVE)</span>
           </div>
-          <div>
-            <divclass="title-overview">JEDI MASTER RATING</div>
-            <div></div>
-            <div></div>
+          <div></div>
+        </div>
+        <div class="data-overview">
+          <div class="title-overview">JEDI MASTER RATING</div>
+          <div class="display-inline-block c-plomo text-align-center">
+            <span id="j-rating-overview" class="data-style"></span>
+            <span class="description">OVERALL JEDI RATING(CUMULATIVE)</span>
           </div>
-        </section>
-
+          <div></div>
+        </div>
+      </section>
     </section>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
