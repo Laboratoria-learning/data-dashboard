@@ -132,7 +132,7 @@ window.addEventListener('load', function() {
                 console.log(studentsHighScore);
               };
             }; */
-          }//condicion que toma en cuenta solo etudinates activas
+            } ;// condicion que toma en cuenta solo etudinates activas
           }; // for que recorre la data de todad las estudinates de la sede y genración escogida
 
 
