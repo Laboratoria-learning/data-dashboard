@@ -37,6 +37,7 @@ a{
   margin-bottom: 2px;
 }
 #sede_generation{
+  cursor: pointer;
   margin-left: 5%;
   display: block;
   background-color: #FFA500;

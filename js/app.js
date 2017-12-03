@@ -78,7 +78,6 @@ window.addEventListener('load', function() {
           var nps = promoters - detractors;
           console.log('nps: ' + nps);
 
-
           // cantidad y el porcentaje que representa el total de estudiantes que superan la meta de puntos tecnicos 70% en promedio por todos los sprints sprint
           var studentsSuperan = 0;
           for (i = 0; i < totalstudents; i++) {
@@ -92,11 +91,8 @@ window.addEventListener('load', function() {
           };// for que recorre la longitud de todas las estudiates de la sede y genracion escogida
           console.log('cantidad de estudiantes que superan la meta puntos tecnicos de todos los sprint: ' + studentsSuperan);
 
-          console.log(data[sede][generation]['students'][0]['name']);
-
-          for (i = 0; i < totalstudents; i++) {
-            var name = data[sede][generation]['students']['name']['i'];
-            console.log(name);
+          for (i = 0; i < data[sede][generation]['students'].length; i++) {
+            console.log(data[sede][generation]['students'][i]['name']);
           }
 
           // espacio puesto a proposito para separar.
