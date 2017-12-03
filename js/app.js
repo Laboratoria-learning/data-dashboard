@@ -73,6 +73,15 @@ window.addEventListener('load', function(event) {
         }
       }
       console.log(dataAlumns);// tengo a todos los estudiantes de la sede y generación elegida en un array
+
+      for (var m in dataSede) {
+        if (m === event.target.value) {
+          var dataRatings = {};
+          dataRatings = dataSede[m].ratings;
+        }
+      }
+      console.log(dataRatings);// tengo el contenido de dataRatings por generación elegida. ejem: (3) [{…}, {…}, {…}]
+
       var contGoal = 0;// que alcanzaron la meta
       var contTech = 0;
       var contHse = 0;
@@ -127,6 +136,23 @@ window.addEventListener('load', function(event) {
       var studentAchievement = ((contGoal * 100) / dataAlumns.length).toFixed(1);
       var neoTech = ((contTech / (dataAlumns.length - contInactive)) * 100).toFixed(1);
       var neoSkills = ((contHse / (dataAlumns.length - contInactive)) * 100).toFixed(1);
+
+      // para net promoter 
+        
+      var detractors = 0;
+      var promoters = 0;
+      var pasive = 0;
+      
+      for (var z = 0; z < dataRatings.length; z++) {
+        detractors += dataRatings[z].nps.detractors;
+        promoters += dataRatings[z].nps.promoters;
+        pasive += dataRatings[z].nps.passive;
+      }
+      var resultDetractors = (detractors / dataRatings.length).toFixed(1);
+      var resultPromoters = (promoters / dataRatings.length).toFixed(1);
+      var resultPasive = (pasive / dataRatings.length).toFixed(1);
+      // ya no se multiplicó por 100, ya que el 100% es equivalente a la unidad 
+      var resultNps = resultPromoters - resultDetractors; 
                 
       // añade función a html
       var enrollment = document.getElementById('enrollment');
@@ -141,6 +167,9 @@ window.addEventListener('load', function(event) {
       var percentageAchievement = document.getElementById('percentageAchievement');
       percentageAchievement.textContent = '';
       percentageAchievement.textContent = studentAchievement;
+      var totalAlumns = document.getElementById('total-alumns');
+      totalAlumns.textContent = '';
+      totalAlumns.textContent = dataAlumns.length;
       var countSkills = document.getElementById('countSkills');
       countSkills.textContent = '';
       countSkills.textContent = contTech;
@@ -159,7 +188,18 @@ window.addEventListener('load', function(event) {
       var percentageStudentsHse = document.getElementById('percentageStudentsHse');
       percentageStudentsHse.textContent = '';
       percentageStudentsHse.textContent = neoSkills;
-                    
+      var promoterScore = document.getElementById('promoter-score');
+      promoterScore.textContent = '';
+      promoterScore.textContent = resultPromoters;
+      var passiveScore = document.getElementById('passive-score');
+      passiveScore.textContent = '';
+      passiveScore.textContent = resultPasive;
+      var detractorScore = document.getElementById('detractor-score');
+      detractorScore.textContent = '';
+      detractorScore.textContent = resultDetractors; 
+      var averageNps = document.getElementById('average-nps');
+      averageNps.textContent = '';
+      averageNps.textContent = resultNps;           
     
     });
 
