@@ -1,3 +1,4 @@
+/* reglas universales de estilo */
 * {
     box-sizing: border-box ;
     font-family: 'Montserrat', sans-serif;
@@ -5,6 +6,7 @@
     background-color: #f4f6f7;
 }
 
+/* reglas específicas de estilo*/
 div .view-student {
   text-align: center ;
 }
@@ -19,7 +21,6 @@ div #container-students {
 
 #especialization {
     left: 15px;
-    /*height: 100%;*/
     height: 2000px;
     width: 20%;
     background-color: white;
@@ -31,15 +32,12 @@ li {
     text-decoration-style: none;
 }
 
-
 #visualization {
     height: 100%;
     width: 50% ;
     background-color: white ;
     display: inline-block;
     margin-left: 650px;
-    /*float: right;*/
-
 }
 
 ul, li{
@@ -62,7 +60,7 @@ li label {
     display: inline-block;
 }
 
-#photo , #date-student , #tech-skills , #life-skills, english-skill , .date , #english-skills {
+#photo , #date-student , #tech-skills , #life-skills, #english-skill , .date , #english-skills {
     display: inline-block;
 }
 #name , #especialization-student ,   #skills-details  {
@@ -109,8 +107,6 @@ li label {
     background-color: white;
 }
 
-
-
 #skill-1 , #skill-2 , #skill-3 {
     display: inline-block;
     background-color: white;
@@ -142,13 +138,13 @@ button.desactive {
     color: #757575;
   }
 
-  button.active {
+button.active {
     background-color: #faf281;
     color: white;
   }
 
-  /* clases para foto standart */
-  .photo-standart {
+/* clases para foto standart */
+.photo-standart {
    height: 130px;
    width: 140px;
   }

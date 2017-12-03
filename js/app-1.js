@@ -55,28 +55,28 @@ window.addEventListener('load', function(event) {
     var gen = generationsValuesStudentsData[0];
 
     /* extrayendo alumnas de sede arequipa */
-    for (var a = 0; a < 15 ; a++) {
-      studentsData = Object.values(gen[a]); /* extrae alumnos */
-      students[[a, 0]] = sedesArray[0]; /* asigna sede arequipa */
-      students[[a, 1]] = generationsArray[0]; /* asigna generation 1 */
-      students[[a, 2]] = studentsData[0]; /* asigna nombre */
-      students[[a, 3]] = studentsData[1]; /* asigna foto */
-      students[[a, 4]] = studentsData[2]; /* asigna active */
-      students[[a, 5]] = studentsData[3]; /* asigna score objeto */
+    for (var aa = 0; aa < 15 ; aa++) {
+      studentsData = Object.values(gen[aa]); /* extrae alumnos */
+      students[[aa, 0]] = sedesArray[0]; /* asigna sede arequipa */
+      students[[aa, 1]] = generationsArray[0]; /* asigna generation 1 */
+      students[[aa, 2]] = studentsData[0]; /* asigna nombre */
+      students[[aa, 3]] = studentsData[1]; /* asigna foto */
+      students[[aa, 4]] = studentsData[2]; /* asigna active */
+      students[[aa, 5]] = studentsData[3]; /* asigna score objeto */
       ind = 0;
 
       /* extrayendo puntaje de sprints */
-      for (var b = 0; b < 4 ; b++) {
+      for (var bb = 0; bb < 4 ; bb++) {
         var tech = Object.values(studentsData[3]);
-        var tec = Object.values(tech[b]);
+        var tec = Object.values(tech[bb]);
         var tePoint = Object.values(tec[1]);
 
         /* recorre las notas por print 4 por alumna */
         /* sprint 1 */
         ind = 0;
-        for (var c = 0; c < 2 ;c++) {
-          students[[a, 6 + b + ind]] = ((tePoint[c] / 1800) * 100).toFixed(1) ; /* tech */
-          students[[a, 7 + b]] = ((tePoint[c] / 1200) * 100).toFixed(1) ; /* hse */
+        for (var cc = 0; cc < 2 ;cc++) {
+          students[[aa, 6 + bb + ind]] = ((tePoint[cc] / 1800) * 100).toFixed(1) ; /* tech */
+          students[[aa, 7 + bb]] = ((tePoint[cc] / 1200) * 100).toFixed(1) ; /* hse */
           ind = ind + 1;
         }
       }
@@ -86,7 +86,7 @@ window.addEventListener('load', function(event) {
     var acumHse = 0;
 
     /* para recorrer el array students */
-    for (var z = 0 ; z < 15 ; z++) {
+    for (var zz = 0 ; zz < 15 ; zz++) {
       /* ubico área para crear elementos */
       var visualizationSection = document.getElementById('visualization');
 
@@ -95,7 +95,7 @@ window.addEventListener('load', function(event) {
       /* photo del estudiante */
       var divStudent = document.createElement('div'); /* div con id-student */
       var imgPhoto = document.createElement('img'); /* img con propiedad src */
-      imgPhoto.setAttribute('src', students[[z, 3]]);
+      imgPhoto.setAttribute('src', students[[zz, 3]]);
       imgPhoto.classList.add('photo-standart');
       visualizationSection.appendChild(divStudent);
       divStudent.appendChild(imgPhoto);
@@ -111,7 +111,7 @@ window.addEventListener('load', function(event) {
       divDate.appendChild(divDateStudent);
 
       divDateStudent.appendChild(divName);
-      divName.textContent = students[[z, 2]];
+      divName.textContent = students[[zz, 2]];
       divDateStudent.appendChild(divEspecializationStudent);
       divEspecializationStudent.textContent = 'Front End Developer';
 
@@ -120,15 +120,15 @@ window.addEventListener('load', function(event) {
       var divTech = document.createElement('div');
       var labelPercentTech = document.createElement('label');
       var labelNumberTech = document.createElement('label');
-      var brUp1 = document.createElement('br')
+      var brUp1 = document.createElement('br');
 
       divDate.appendChild(divTechSkills);
       divTechSkills.appendChild(divTech);
       divTech.appendChild(labelPercentTech);
-      labelPercentTech.textContent = students[[z, 6]];
+      labelPercentTech.textContent = students[[zz, 6]];
       divTech.appendChild(brUp1);
       divTech.appendChild(labelNumberTech);
-      labelNumberTech.textContent = students[[z, 7]];
+      labelNumberTech.textContent = students[[zz, 7]];
     };
   });
 });
