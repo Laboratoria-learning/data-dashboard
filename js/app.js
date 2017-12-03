@@ -383,11 +383,7 @@ function showStudentData(e) {
   var textSedeSelected = document.getElementById('sedeSelect').textContent;
   var textGenerSelected = document.getElementById('generSelect').textContent;
 if (textSedeSelected && textGenerSelected) { // add if	
-<<<<<<< HEAD
-  e.target.setAttribute('href','#studentsData'); 
-=======
    e.target.setAttribute('href','#studentsData'); 
->>>>>>> 587c7041d3626982fc60dfaf17bd24e425711c5b
   var sa = data[textSedeSelected][textGenerSelected]['students']; 	
   for (var j = 0;j < sa.length;j++) {
     if (sa[j]['active'] === true) {
