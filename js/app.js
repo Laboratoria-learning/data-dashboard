@@ -36,19 +36,10 @@ window.addEventListener('load', function() {
           var generation = event.target.dataset.generation;
           console.log('la generación es: ' + generation);// 2016-2
           // console.log(typeof generation); //string
-
           var students = data[sede][generation].students;
           var totalstudents = data[sede][generation].students.length ;
           // console.log(data[sede][generation].ratings.length);
-
           console.log('la cantidad de estudiantes en esta sede y generación es: ' + totalstudents);
-
-          /*
-          // creando div que almacenará el cuadro estradístico
-          var chartDiv = document.createElement('div');
-          chartDiv.textContent = students;
-          console.log(chartDiv);
-          */
 
           // puntuacion promedio de los profes
           var promTeacher = 0;
@@ -87,22 +78,38 @@ window.addEventListener('load', function() {
           var nps = promoters - detractors;
           console.log('nps: ' + nps);
 
-          // cantidad y el porcentaje que representa el total de estudiantes que superan la meta de puntos tecnicos en promedio por todos los sprints sprint
+
+          // cantidad y el porcentaje que representa el total de estudiantes que superan la meta de puntos tecnicos 70% en promedio por todos los sprints sprint
           var studentsSuperan = 0;
-          for (i = 0; i < data[sede][generation]['students'].length; i++) {
+          for (i = 0; i < totalstudents; i++) {
             for (j = 0; j < data[sede][generation]['students'][i]['sprints'].length; j++) {
               if (data[sede][generation]['students'][i]['sprints'][j]['score']['tech'] > 1260) {
                 studentsSuperan ++;
               } else {
                 studentsSuperan = studentsSuperan;
               }
-            };
-          };
+            };// for que recorre cada srpint de todas las esrudianyes de la sede y generacion escogida
+          };// for que recorre la longitud de todas las estudiates de la sede y genracion escogida
           console.log('cantidad de estudiantes que superan la meta puntos tecnicos de todos los sprint: ' + studentsSuperan);
+
+          console.log(data[sede][generation]['students'][0]['name']);
+
+          for (i = 0; i < totalstudents; i++) {
+            var name = data[sede][generation]['students']['name']['i'];
+            console.log(name);
+          }
+
+          // espacio puesto a proposito para separar.
+        }); // evento que sucede al dar click en cualquier generación;
+      };// for que recorre las generaciones para hacer eventos click en cualquier generacipon
+    });// función o evento general click en cualquier  sede  multiples eventos
+  };// for que recorre sedes para hacer ventos click en cualquier sede
+});// general
+
 
           //  ingresando a cada sprint
            /*var score = students[i1].sprints;
-           // # de estudiantes que pasaron el 70% en Tech y Hse
+           // # de estudiantes que pasaron el 70% en Tech y Hse0
            var scoreHse = '';
            for (var i2 = 0; i2 < score.length; i1++) {
              if (score[i2].hse > 840 && score[i2].tech > 1260) {
@@ -129,7 +136,7 @@ window.addEventListener('load', function() {
           //} else {
             //  studentsSuperanTech = studentsSuperanTech;
             //}
-          });
+
           //console.log('cantidad de estudiantes que superan la meta de puntos tecnicos en promedio y en el primer sprint : ' + studentsSuperanTech);
 
 
@@ -231,10 +238,7 @@ window.addEventListener('load', function() {
           inactiveStudents.textContent = inactiveStudents;
           console.log(inactiveStudentsDiv);
           */
-        };
-      })
-    };
-  })
+
 
 /*
 var students = data[sede][generation].students ;

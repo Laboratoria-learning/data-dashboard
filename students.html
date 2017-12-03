@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Data Dashboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Armata|Source+Code+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <header>
+      <img src="assets/images/logo-laboratoria.svg" alt="logo">
+    </header>
+
+    <div class="optionsheader">
+      <h3><a href="index.html" target="_blank">OVERVIEW</a></h3>
+      <h3><a href="students.html" target="_blank">STUDENTS</a></h3>
+    </div>
+
+    <div class="container_students">
+      <div class="perfil">
+        <img id="photo_perfil"src="http://dummyimage.com/162x148.png/ff4444/ffffff" alt="photo">
+
+        <div class="basic_data_perfil">
+          <div><span>NAME: </span><h2 id="name">Donna Sloper</h2></div>
+          <div><span>Active: </span> <h2 id="active">true</h2></div>
+        </div>
+
+        <div id="skills">
+          <div class="tech">
+          <span>Tech Skills: </span><h2 id="notatechtotal">70%</h2>
+          </div>
+          <div class="life">
+          <span>Life Skills: </span><h2 id="notaHSEtotal">68%</h2>
+          </div>
+        </div>
+
+        <table>
+          <tr>
+            <th>Sprints</th>
+            <th>1er</th>
+            <th>2do</th>
+            <th>3er</th>
+            <th>4to</th>
+          </tr>
+          <tr>
+            <td>Tech</td>
+            <td id="tech_1sprint">50%</td>
+            <td id="tech_2sprint">80%</td>
+            <td id="tech_3sprint">50%</td>
+            <td id="tech_4sprint">50%</td>
+         </tr>
+         <tr>
+           <td>HSE</td>
+           <td id="hse_1sprint">50%</td>
+           <td id="hse_2sprint">80%</td>
+           <td id="hse_3sprint">50%</td>
+           <td id="hse_4sprint">50%</td>
+         </tr>
+        </table>
+      </div>
+    </div>
+		<!-- Base de datos -->
+		<script src="./js/data.js"></script>
+		<!-- Aquí va tus archivos JS -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>

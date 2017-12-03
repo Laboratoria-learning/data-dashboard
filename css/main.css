@@ -1,9 +1,33 @@
 *{
   font-family: 'Armata', sans-serif;
 }
-h1{
+header{
+  width: 100%;
+  text-align: center;
+  height: 15%;
+}
+header img {
+  width: 20%;
+  height: 100%;
+}
+h3{
 font-family: 'Source Code Pro', monospace;
-font-size: 80px;
+font-size: 25px;
+display: inline-block;
+padding-left: 5%;
+}
+h3 a{
+font-family: 'Source Code Pro';
+text-decoration: none;
+color: black;
+}
+h3 a:hover{
+color: #FFA500;
+font-weight: bolder;
+}
+.optionsheader h3:hover{
+  color: #FFA500;
+  font-weight: bolder;
 }
 a{
   text-decoration: none;
@@ -13,6 +37,8 @@ a{
   margin-bottom: 2px;
 }
 #sede_generation{
+  margin-left: 5%;
+  display: block;
   background-color: #FFA500;
   padding: 10px 10px;
   color: #fff;
@@ -46,4 +72,47 @@ a .sede{
   width: 100px;
   background-color: #D0D0D0;
   font-size: 16px;
+}
+.container_students{
+  outline: 1px solid green;
+  margin: 1%;
+  display: block;
+}
+.perfil img{
+  padding: 1.5%;
+  outline: 1px solid yellow;
+  display: inline;
+}
+.perfil .basic_data_perfil{
+  position: relative;
+  padding: 1%;
+  padding-left: 2%;
+  outline: 1px solid blue;
+  display: inline-block;
+}
+.basic_data_perfil div{
+  width: 15%;
+  outline: 1px solid orange;
+  display: block;
+}
+.basic_data_perfil div span{
+  outline: 1px solid red;
+  display: inline-block;
+}
+.basic_data_perfil div h2{
+  font-size: 15px;
+  outline: 1px solid purple;
+  display: inline-block;
+}
+#skills{
+  text-align: center;
+  padding: 1%;
+  outline: 1px solid black;
+  display: inline-block;
+}
+.container_students table{
+  margin-left: 1%;
+  padding: 2%;
+  outline: 1px solid blue;
+  display: inline-block;
 }
