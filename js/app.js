@@ -383,6 +383,7 @@ function showStudentData(e) {
   var textSedeSelected = document.getElementById('sedeSelect').textContent;
   var textGenerSelected = document.getElementById('generSelect').textContent;
 if (textSedeSelected && textGenerSelected) { // add if	
+   e.target.setAttribute('href','#studentsData'); 
   var sa = data[textSedeSelected][textGenerSelected]['students']; 	
   for (var j = 0;j < sa.length;j++) {
     if (sa[j]['active'] === true) {
@@ -425,9 +426,7 @@ if (textSedeSelected && textGenerSelected) { // add if
 } else {
     alert('Por favor seleccione una Sede y su generación');
   }		
-//} else {
- //   alert('Por favor seleccione una Sede y su generación');
- // }	
+
 }
 
 
