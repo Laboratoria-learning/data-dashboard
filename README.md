@@ -20,7 +20,7 @@ Es una representación gráfica de los indicadores clave (KPI) que intervienen e
 
 ## Objetivo
 
-Construir una herramienta web donde las **TMs** de Laboratoria puedan ver los datos de manera fácil y rápida con respecto al desempeño de las estudiantes,  para poder analizarlos,  posteriormente emitir conclusiones, y así poder apoyar a las alumnas en su aprendizaje. Estos son los datos(indicadores Kpi) que revisan normalmente, los cuales debemos mostrarlos brevemente, con una representación gráfica adecuada (ordenado y limpio) para que se pueda visualizar, contextualizar y comparar los datos :
+Construir una herramienta web donde las **TMs** de Laboratoria puedan ver los datos de manera fácil y rápida con respecto al desempeño de las estudiantes,  para poder analizarlos,  posteriormente emitir conclusiones, y así poder apoyar a las alumnas en su aprendizaje. Estos son los datos(indicadores Kpi) que revisan normalmente, los cuales debemos mostrarlos con una representación gráfica adecuada (ordenado y limpio) para que se pueda visualizar, contextualizar y comparar datos:
 
 * El total de estudiantes presentes por sede y generación.
 * El porcentaje de deserción de estudiantes.
@@ -39,7 +39,7 @@ ETAPAS DEL DESARROLLO DEL PRODUCTO:
 
 * **ETAPA UNO: DISEÑO DE LA EXPERIENCIA (UX UI)**
 
- A partir de la necesidad de las TMs de Laboratoria de analizar datos de una manera más sencilla y práctica, nació como alternativa de resolución del problema la idea de desarrollar un **Dashboard** que simplifique dicha tarea mediante la presentacion de gráficos y datos(indicadore KPI) concisos y precisos. Para ello se hizo lo siguiente:
+A partir de la necesidad de las TMs de Laboratoria de analizar datos de una manera más sencilla y práctica, nació como alternativa a esta problemática, la idea de desarrollar un **Dashboard** que simplifique dicha tarea mediante la presentacion de gráficos y datos(indicadores KPI) concisos y precisos. Para ello se hizo el siguiente esquema:
 
  - Elaboración de Sketch (prototipo sencillo) sobre de la herramienta web(**dashboard**).
 
@@ -47,21 +47,7 @@ ETAPAS DEL DESARROLLO DEL PRODUCTO:
   ![sketch](assets/images/sketch.png)
 
 
- **ETAPA DOS: DESARROLLO (Frond end y Back End)**
-
-  Etapa de elaboración del producto en código. Se realizó lo siguientes:
-
-   -  Se creó un Archivo HTML donde figura: **header** (logo de laboratoria), **nav** ( barra de navegación: sedes y generaciones (contenida en una etiqueta **selection. my-select** a quien se le aplicará el EVENTO UNO: CHANGE), students y teachers),  **section. dispplay-none** (Se encuentra toda la información concerniente a los indicadores solicitados a mostrar. Dicha sección se encuentra con la propiedad ** display: none** para que cuando apliquemos en el evento **change** a la etiqueta selection ** SEDE Y GENERACIONES**,  aparezca la section. También se encuentra los filtros para TECH SKILLS y LIFE SKILLS a quien se les aplicara el EVENTO DOS:CHANGE ).
-
-   - Se creó un archivo **main.css** donde se encuentran todos los estilos aplicados a todas la partes del body del documento HTML. No hubo la necesidad de crear estilos para los eventos ya que no se creo ningun elemento en el DOM.
-
-   - Se creó dos archivo **javascript** : **"app.js"** donde se encuentran todos los eventos aplicados ( _change_ ) a la etiqueta **select. my-select** que se encuentra en la etiqueta **nav**, a las etiquetas **select.select-sprint-life** y **select.select-sprint-tech**  que se encuentran en la etiqueta **section. display-none**; y el archivo  **graphic.js** donde se encuentran las funciones generales(globales) de las gráficas ingresadas utilizando la herramienta **"chart google"** las cuales son llamadas en los eventos aplicados en **app.js**.
-
-  **ETAPA TRES: CRECIMIENTO**
-
-  En esta etapa se probará el producto desarrollado para recibir feed back y seguir mejorandolo para que siga cumpliendo mejores expectativas.
-
- - Testeo del producto para modificar o agregar cambios según la necesidad de las TMs: 
+ - Testeo del prototipo para modificar o agregar cambios según la necesidad de las TMs: 
  
  
    ![sketch](assets/images/email.png)
@@ -71,8 +57,21 @@ ETAPAS DEL DESARROLLO DEL PRODUCTO:
   
   * Enfocarnos en la obtención de datos de la sede Lima y las tres generaciones que la componen.
   
-  **Cambios a aplicar:**
 
-  * Adición de la data de todas las sedes (Arequipa, Santiago de chile y México) faltantes y sus generaciones respectivas.
+ **ETAPA DOS: DESARROLLO (Frond end y Back End)**
+
+  Etapa de elaboración del producto en código. Se realizó lo siguientes:
+
+   -  Se creó un Archivo HTML donde figura: **header** (logo de laboratoria), **nav** ( barra de navegación: sedes y generaciones (contenida en una etiqueta **selection. my-select** a quien se le aplicará el EVENTO UNO: CHANGE), students y teachers),  **section. dispplay-none** (Se encuentra toda la información concerniente a los indicadores solicitados a mostrar. Dicha sección se encuentra con la propiedad ** display: none** para que cuando apliquemos en el evento **change** a la etiqueta selection ** SEDE Y GENERACIONES**,  aparezca la section. También se encuentra los filtros para TECH SKILLS y LIFE SKILLS a quien se les aplicara el EVENTO DOS:CHANGE ).
+
+   - Se creó un archivo **main.css** donde se encuentran todos los estilos aplicados a todas la partes del body del documento HTML. No hubo la necesidad de crear estilos para los eventos ya que no se creo ningun elemento en el DOM.
+
+   - Se creó dos archivo **javascript** : **"app.js"** donde se encuentran todos los eventos aplicados ( _change_ ) a la etiqueta **select. my-select** que se encuentra en la etiqueta **nav**, a las etiquetas **select.select-sprint-life** y **select.select-sprint-tech**  que se encuentran en la etiqueta **section. display-none**; y el archivo  **graphic.js** donde se encuentran las funciones generales(globales) de las gráficas ingresadas utilizando la herramienta **"Google Charts"**, las cuales son llamadas en los eventos aplicados en **app.js**.
+
+  **ETAPA TRES: CRECIMIENTO**
+
+  En esta etapa se probará el producto desarrollado y terminado para recibir un nuevo feed back, y seguir mejorándolo según las necesidades del cliente.
+
+  ![sketch](assets/images/dashboard.jpg)
   
    ***
