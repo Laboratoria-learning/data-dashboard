@@ -116,25 +116,8 @@
             <div class="container-promo">
                 <span>Promoción</span>
             </div>
-            <select id="filtro" name="filtro">
-                <optgroup label="Lima">
-                  <option value="0"><span>Lima</span> 2016-2</option>
-                  <option value="1"><span>Lima</span> 2017-1</option>
-                  <option value="2"><span>Lima</span> 2017-2</option>
-                </optgroup>
-                <optgroup label="Arequipa">
-                  <option value="3"><span>Arequipa</span> 2016-2</option>
-                  <option value="4"><span>Arequipa</span> 2017-1</option>
-                </optgroup>
-                <optgroup label="Chile">
-                  <option value="5"><span>Chile</span> 2016-2</option>
-                  <option value="6"><span>Chile</span> 2017-1</option>
-                  <option value="7"><span>Chile</span> 2017-2</option>
-                </optgroup>
-                <optgroup label="Mexico">
-                  <option value="8"><span>Mexico</span> 2017-1</option>
-                  <option value="9"><span>Mexico</span> 2017-2</option>
-                </optgroup>
+            <select id="promocion">
+                <option selected class="combo">Seleccione</option>
             </select>
 
             <!--Main Content-->
@@ -150,44 +133,8 @@
             </select>
         </section>
 
-        <section>
-            <div class="box-data-students">
-                <div id="total"></div>
-                <div id="porcentaje"></div>
-            </div>
-            <div class="box-data-students">
-                <div id="meta"></div>
-                <div></div>
-            </div>
-            <div class="box-data-students">
-                <div id="nps"></div>
-                <div id="nps-porciento"></div>
-            </div>
-            <div class="box-graphics">
-                <div></div>
-                <div></div>
-            </div>
-            <div class="box-graphics">
-                <div></div>
-                <div></div>
-            </div>
-            <div class="box-data-students">
-                <div id="box-expectativa"></div>
-                <div></div>
-            </div>
-            <div class="box-data-students">
-                <div id="tech"></div>
-                <div></div>
-            </div>
-            <div class="box-data-students">
-                <div id="hse"></div>
-                <div></div>
-            </div>
-                      
-        </section>
-
         <!--Cajas-->
-        <!-- <div class="container-box">
+        <div class="container-box">
             <div class="box-total">
                 <h3 id="total-students">0</h3>
                 <p>Total Alumnas</p>
@@ -201,7 +148,7 @@
                 <p>En Proceso</p>
             </div>
             <!--Derecha-->
-            <!-- <div class="box-puntaje">
+            <div class="box-puntaje">
                 <h3 id="promedio">80%</h3>
                 <p>Puntaje Promedio</p>
             </div>
@@ -212,20 +159,20 @@
             <div class="box-nomedia">
                 <h3 id="media-no-alcanzada">18</h3>
                 <p>Media no alcanzada</p>
-            </div> -->
-        <!-- </div> -->
+            </div>
+        </div>
 
         <!-- Sub-menu -->
-        <!-- <nav class="reponav">
+        <nav class="reponav">
             <div class="tab">
                 <a href="#" class="tab-links">Grafico</a>
                 <a href="#" class="tab-links">Alumnas</a>
             </div>
-        </nav> -->
+        </nav>
 
         <!-- Graficos -->
 
-        <!-- <section class="content">
+        <section class="content">
             <div id="grafico" class="tab-content">
                 <div class="graphics-content">
                     <canvas id="line-chart" style="height:200px;width: content-box;"></canvas>
@@ -273,6 +220,8 @@
 </div>
 
 <!-- Aquí va tus archivos JS -->
+<script type="text/javascript" src="js/Chart.min.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/graphic.js"></script>
 </body>
 </html>

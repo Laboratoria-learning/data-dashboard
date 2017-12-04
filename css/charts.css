@@ -1,0 +1,46 @@
+*{
+  margin-top: 0px;
+}
+
+.graphics{
+  text-align: center;
+}
+.donutchart{
+  width: 600px; 
+  height: 200px;
+  padding: 0px; 
+  margin: 0px
+}
+
+.donutchartTwo {
+    width: 600px; 
+    height: 200px;
+    padding: 0px; 
+    margin: 0px
+}
+
+.barchart_material {
+  width: 600px; 
+  height: 200px;
+  padding: 0px; 
+  margin: 0px
+}
+
+.tech-hse {
+  width: 600px; 
+  height: 200px;
+  padding: 0px; 
+  margin: 0px
+}
+
+.ocult {
+  display: none;
+}
+
+.see {
+  display: block;
+}
+
+.content {
+  display: none;
+}

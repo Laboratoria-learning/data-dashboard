@@ -1,0 +1,177 @@
+* {
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+.wrapper {
+    background-color: white;
+}
+
+/*.main-header {
+    text-align: center;
+}*/
+
+.init {
+
+}
+.boton-menu{
+    font-size: 25px;
+    margin-top: 45px;
+    margin-left: 50px;
+    float: left;
+    border: none;
+}
+.boton-menu:hover{
+    cursor: pointer;
+}
+/*.fa-bars {
+    
+}*/
+figure {
+    margin-left: 35%;
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.laboratoria-logo {
+    width: 230px;
+    height: auto;
+}
+
+h1 {
+    padding-top: 10px;
+    font-size: 30px;
+    margin-left: 100px;
+}
+.nav-students {
+    background-color: #dcdcdc;
+}
+
+.select-sede {
+  margin-top: 10px;
+  margin-left: 100px;
+  font-size: 25px;
+  background-color: #dcdcdc;
+  border: none;
+}
+
+.select-generation {
+    margin-top: 10px;
+    margin-left: 15px;
+    font-size: 25px;
+    background-color: #dcdcdc;
+    border: none;
+    padding-bottom: 10px;
+}
+
+.specialization {
+  border-color: #ffc107;
+  margin-left: 100px;
+  margin-top: 50px;
+  background-color: white;
+  float: left;
+  padding: 20px;
+  width: 300px;
+}
+
+h3 {
+    margin-bottom: 25px;
+}
+.fa-square-o {
+    display: inline-block;
+    color:#ffc107;
+    margin-right: 20px;
+}
+
+h4 {
+    display: inline-block;
+
+}
+
+.input-group {
+    margin-top: 50px;
+    margin-right: 100px;
+    float: right;
+}
+
+.search {
+    border: none;
+    background-color: 1piseeewhite;
+    width: 740px;
+    height: 30px; 
+    padding: 10px;
+    font-size: 20px;
+}
+
+button {
+    margin-right: 0px;
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid gray;
+    background-color: white;
+    padding: 11px;
+    font-size: 20px;
+}
+
+.images-container {
+    float: right;
+    margin-right: 100px;
+    margin-top: 30px;
+    background-color: white;
+    width: 807px;
+    height: 200px;
+}
+.img-student {
+    margin-top: 30px;
+    margin-left: 20px;
+    float: left;
+}
+
+.basic-information {
+    margin-top: 30px;
+    float: left;
+    width: 270px;
+    height: 200px;
+}
+
+.knowledge {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.know {
+    margin-left: 20px;
+    padding: 5px;
+    background-color:#dcdcdc;
+    width: 50px;
+    float: left;
+    text-align: center;
+}
+.skills {
+    margin-top: 30px;
+    margin-right: 10px;
+    float: left;
+    width: 260px;
+}
+
+.student-name {
+    margin-left: 50px;
+}
+
+.subtittle {
+    margin-left: 50px;
+}
+.skills-container {
+    float: left;
+    width: 60px;
+    height: auto;
+    padding: 5px;
+    background-color: #dcdcdc;
+    margin-left: 15px;
+    height: 50px;
+    text-align: center;
+}
+
