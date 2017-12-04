@@ -1,3 +1,161 @@
 /*
  * Estilos de tu proyecto
  */
+ *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Montserrat';
+ }
+header{
+    width: auto;
+    border-width: 0;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    height: 89px;
+}
+nav{
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+}
+.logo{
+ 
+     width: auto;
+     margin: 0 auto;
+     height: 89px;
+ }
+.a-logo img{
+    width: 100%;
+    height: 100%;
+}
+.bar-lab{
+    width: 40px;
+    height: 40px;
+    z-index: 101;
+    /* border: 2px solid #f7b617; */
+    position: absolute;
+    right: 0;
+    top:25%;
+    text-align: center;
+
+}
+.bar-lab a{
+    color:#333333;
+    text-align: center;
+}
+.bar{
+    background-color: #e1e1e1;
+}
+section{
+    width: 100%;
+    margin: auto;
+    background-color: #F7F7F7;
+}
+section .higher{
+    width: 80%;
+    /*outline: 1px solid orange;*/
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 20px;
+
+}
+.slc-transp {
+    background-color: transparent;
+    height: 30px;
+}
+.btn-higher{
+    background-color: transparent;
+    border-radius: 5px;
+    border:1px solid  #3333;
+    height: 30px;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+section .principal{
+    width: 80%;
+    /*outline: 1px solid orange;*/
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    
+
+}
+/*PRIMER DIV DEL SECTION BAR-CONTAINER*/
+.principal:nth-child(1){
+    padding: 20px;
+    outline: 1px solid orange;
+}
+.principal .lista{
+    /*outline: 1px solid red;*/
+}
+/*SEGUNDO DIV DEL SECTION BAR-CONTAINER*/
+.lista li{
+    /*outline: 1PX solid aqua;*/
+    display: inline-block;
+    padding: 10px;
+    margin-left: 10px;
+    list-style: none;
+}
+.lista li a{
+    display: block;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1em;
+    color: black;
+    text-decoration: none;
+}
+.lista li:hover{
+    border-bottom: 5px solid #EFB415;
+}
+
+/*Estilos para la seccion overview*/
+.overview-one,.overview-two,.overview-three,.overview-for{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px; 
+}
+.container .title-overview{
+    background-color: white;
+    /* display: inline-block;*/
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.data-overview{
+    background-color: white;
+   /*  border: 2px solid red; */
+    display: inline-block;
+}
+.description{
+    background-color: #e1e1e1;
+    display: block;
+    font-size:  10px;
+    text-align: center;
+
+}
+.data-style {
+    font-weight: bold;
+    font-size: 24px;
+}
+.display-inline-block{
+    display: inline-block;
+}
+.c-plomo{
+    background-color: #e1e1e1;
+
+}
+.text-align-center{
+    text-align: center;
+    border-radius: 5px;
+}
+.display-none{
+    display: none;
+}
