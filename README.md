@@ -46,7 +46,7 @@ Tener un botón que permita indicar que una estudiante ha salido del Bootcamp y 
 ## Sketchs:
 ![](https://raw.githubusercontent.com/NatalyCortez/data-dashboard/master/assets/images/sketch1.JPG)
 ![](https://raw.githubusercontent.com/NatalyCortez/data-dashboard/master/assets/images/sketch2.JPG)
-![](https://raw.githubusercontent.com/NatalyCortez/data-dashboard/master/assets/images/sketch3.JPG)
+![](https://raw.githubusercontent.com/NatalyCortez/data-dashboard/master/assets/images/sketch3%20-%20copy.JPG)
 
 ## Vista previa:
 
