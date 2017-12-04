@@ -9,6 +9,7 @@ window.addEventListener('load', function() {
   var generacion = '';
   var places = document.getElementById('place');
   var generations = document.getElementById('generation');
+  var sectionMain= document.getElementById('container-main');
   places.addEventListener('change', function(event) {
     var listGenerations = {AQP: ['2016-2', '2017-1'],
       CDMX: ['2017-1', ' 2017-2 '],
@@ -39,6 +40,7 @@ window.addEventListener('load', function() {
   //obteniendo el elemento button por medio del metodo getElementId
   var btndash = document.getElementById('btndash');
   btndash.addEventListener('click', function() {
+    sectionMain.classList.toggle('display-none');
     /* Enveroment Static*/
     enrollment(sede, generacion);
     achievement(sede, generacion);

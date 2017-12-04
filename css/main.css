@@ -113,7 +113,7 @@ section .principal{
 }
 
 /*Estilos para la seccion overview*/
-.overview-one,.overview-two{
+.overview-one,.overview-two,.overview-three,.overview-for{
     padding-bottom: 10px;
     padding-top: 10px;
     padding-left: 50px;
@@ -126,6 +126,8 @@ section .principal{
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
+    font-weight: bold;
+    font-size: 20px;
 }
 .data-overview{
     background-color: white;
@@ -153,4 +155,7 @@ section .principal{
 .text-align-center{
     text-align: center;
     border-radius: 5px;
+}
+.display-none{
+    display: none;
 }
