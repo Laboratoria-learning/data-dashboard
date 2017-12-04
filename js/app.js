@@ -1,4 +1,3 @@
-
 window.addEventListener('load', function() {
   var selectSede = document.getElementById('sedes');
   var promoArequipa62 = data['AQP']['2016-2'];
@@ -17,7 +16,7 @@ window.addEventListener('load', function() {
     // El total de estudiantes presentes por sede y generación.
     function dataStudents(promo) {
       // estudiantes activas y desercion
-      var students = promo.students;
+      var students = promo.students; // data['SCL']['2017-2'].students
       // estudiantes activas
       var activeStudents = 0;
       // estudiantes inactivas
@@ -37,43 +36,45 @@ window.addEventListener('load', function() {
 
       document.getElementById('enrolled').innerHTML = activeStudents;
       document.getElementById('dropout').innerHTML = desertion;
-
+      document.getElementById('total').innerHTML = students.length;
       // -------------------------------------------------------------------------------------------------------------------------------
       // Alumnas que pasaron el 70%
       var countPastTarget = 0;
       var countPastTargetTech = 0;
       var countPastTargetHse = 0;
       // lista con notas de los 4 sprints de las alumnas
-      var allStudentsNotasTotalArr = [];
+      // var allStudentsNotasTotalArr = [];
       // variables para la sumatoria de las notas tech + hse
       var notaTotal = 0;
       var notaTechTotal = 0;
       var notaHseTotal = 0;
       for (var i = 0; i < students.length; i++) {
-        if (notaTotal !== 0) {
-          allStudentsNotasTotalArr.push(notaTotal);
-        }
+        // if (notaTotal !== 0) {
+        //   // allStudentsNotasTotalArr.push(notaTotal);
+        // }
         notaTechTotal = 0;
         notaHseTotal = 0;
-        for (var j = 0; j < students[i]['sprints'].length; j++) {
-          var notaTech = students[i]['sprints'][j]['score']['tech'];
-          var notaHse = students[i]['sprints'][j]['score']['hse'];
-          // sumatoria de las notas tech de todos los sprints
-          notaTechTotal += notaTech;
-          // sumatoria de las notas hse de todos los sprints
-          notaHseTotal += notaHse;
-          // la meta es superar 70% en tech y en hse
-          if ((notaTechTotal / students[i]['sprints'].length) > 1260 && (notaHseTotal / students[i]['sprints'].length) > 940) {
-            countPastTarget++;
-          }
-          // META DEL 70% POR AREAS
-          // la meta es superar 70% en tech
-          if ((notaTechTotal / students[i]['sprints'].length) > 1260) {
-            countPastTargetTech++;
-          }
-          // la meta es superar 70% en hse
-          if ((notaHseTotal / students[i]['sprints'].length) > 940) {
-            countPastTargetHse++;
+        if (students[i]['sprints'] !== undefined) {
+          for (var j = 0; j < students[i]['sprints'].length; j++) {
+            var notaTech = students[i]['sprints'][j]['score']['tech'];
+            var notaHse = students[i]['sprints'][j]['score']['hse'];
+            // sumatoria de las notas tech de todos los sprints
+            notaTechTotal += notaTech;
+            // sumatoria de las notas hse de todos los sprints
+            notaHseTotal += notaHse;
+            // la meta es superar 70% en tech y en hse
+            if ((notaTechTotal / students[i]['sprints'].length) > 1260 && (notaHseTotal / students[i]['sprints'].length) > 940) {
+              countPastTarget++;
+            }
+            // META DEL 70% POR AREAS
+            // la meta es superar 70% en tech
+            if ((notaTechTotal / students[i]['sprints'].length) > 1260) {
+              countPastTargetTech++;
+            }
+            // la meta es superar 70% en hse
+            if ((notaHseTotal / students[i]['sprints'].length) > 940) {
+              countPastTargetHse++;
+            }
           }
         }
       }
@@ -140,7 +141,8 @@ window.addEventListener('load', function() {
       // alert(scoreTeachersTotal);
       document.getElementById('scoret').innerHTML = scoreTeacherTotal;
       document.getElementById('scorej').innerHTML = scoreJedisTotal;
-
+// -------------------------------------------------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------------------------------------
       var techSprintSelect = document.getElementById('tech-skills');
       techSprintSelect.addEventListener('change', function(event) {
         var notasTechSprint1Arr = [];
@@ -149,19 +151,21 @@ window.addEventListener('load', function() {
         var notasTechSprint4Arr = [];
 
         for (var i = 0; i < students.length; i++) {
-          for (var j = 0; j < students[i]['sprints'].length; j++) {
-            var notaTechSprint = students[i]['sprints'][j]['score']['tech'];
-            if (j === 0) {
-              notasTechSprint1Arr.push(notaTechSprint);
-            }
-            if (j === 1) {
-              notasTechSprint2Arr.push(notaTechSprint);
-            }
-            if (j === 2) {
-              notasTechSprint3Arr.push(notaTechSprint);
-            }
-            if (j === 3) {
-              notasTechSprint4Arr.push(notaTechSprint);
+          if (students[i]['sprints'] !== undefined) {
+            for (var j = 0; j < students[i]['sprints'].length; j++) {
+              var notaTechSprint = students[i]['sprints'][j]['score']['tech'];
+              if (j === 0) {
+                notasTechSprint1Arr.push(notaTechSprint);
+              }
+              if (j === 1) {
+                notasTechSprint2Arr.push(notaTechSprint);
+              }
+              if (j === 2) {
+                notasTechSprint3Arr.push(notaTechSprint);
+              }
+              if (j === 3) {
+                notasTechSprint4Arr.push(notaTechSprint);
+              }
             }
           }
         }
@@ -211,19 +215,21 @@ window.addEventListener('load', function() {
         var notasHseSprint4Arr = [];
 
         for (var i = 0; i < students.length; i++) {
-          for (var j = 0; j < students[i]['sprints'].length; j++) {
-            var notaHseSprint = students[i]['sprints'][j]['score']['hse'];
-            if (j === 0) {
-              notasHseSprint1Arr.push(notaHseSprint);
-            }
-            if (j === 1) {
-              notasHseSprint2Arr.push(notaHseSprint);
-            }
-            if (j === 2) {
-              notasHseSprint3Arr.push(notaHseSprint);
-            }
-            if (j === 3) {
-              notasHseSprint4Arr.push(notaHseSprint);
+          if (students[i]['sprints'] !== undefined) {
+            for (var j = 0; j < students[i]['sprints'].length; j++) {
+              var notaHseSprint = students[i]['sprints'][j]['score']['hse'];
+              if (j === 0) {
+                notasHseSprint1Arr.push(notaHseSprint);
+              }
+              if (j === 1) {
+                notasHseSprint2Arr.push(notaHseSprint);
+              }
+              if (j === 2) {
+                notasHseSprint3Arr.push(notaHseSprint);
+              }
+              if (j === 3) {
+                notasHseSprint4Arr.push(notaHseSprint);
+              }
             }
           }
         }
@@ -297,33 +303,34 @@ window.addEventListener('load', function() {
     if (event.target.value === 'sdc72') {
       dataStudents(promoSantiago72);
     }
-    document.getElementById('total').innerHTML = students.length
+
+    // -------------------------------------------------------------------------------------------------------------------------------------
+    // Eventos para tab
+    var studentsPage = document.getElementById('students');
+    studentsPage.addEventListener('click', function(event) {
+      // -----------------------------------------------------------------------------------------------------------------------------------------------------
+      document.getElementById('content').setAttribute('class', 'disappear');
+      document.getElementById('content-two').setAttribute('class', 'appear');
+      document.getElementById('white').setAttribute('class', 'disappear');
+      document.getElementById('orangeline').setAttribute('class', 'margin-left');
+      document.getElementById('students').setAttribute('class', 'cursor-change');
+    });
+    studentsPage.addEventListener('mouseover', function(event) {
+      document.getElementById('students').setAttribute('class', 'cursor-hand');
+    });
+
+    var overview = document.getElementById('overview');
+    overview.addEventListener('click', function(event) {
+      document.getElementById('content').setAttribute('class', 'appear');
+      document.getElementById('content-two').setAttribute('class', 'disappear');
+      document.getElementById('white').setAttribute('class', 'disappear');
+      document.getElementById('orangeline').setAttribute('class', 'margin-none');
+    });
+
+    overview.addEventListener('mouseover', function(event) {
+      document.getElementById('overview').setAttribute('class', 'cursor-hand');
+    });
   });
-});
-// -------------------------------------------------------------------------------------------------------------------------------------
-// Eventos para tab
-var studentsPage = document.getElementById('students');
-studentsPage.addEventListener('click', function(event) {
-  document.getElementById('content').setAttribute('class', 'disappear');
-  document.getElementById('content-two').setAttribute('class', 'appear');
-  document.getElementById('white').setAttribute('class', 'disappear');
-  document.getElementById('orangeline').setAttribute('class', 'margin-left');
-  document.getElementById('students').setAttribute('class', 'cursor-change');
-});
-studentsPage.addEventListener('mouseover', function(event) {
-  document.getElementById('students').setAttribute('class', 'cursor-hand');
-});
-
-var overview = document.getElementById('overview');
-overview.addEventListener('click', function(event) {
-  document.getElementById('content').setAttribute('class', 'appear');
-  document.getElementById('content-two').setAttribute('class', 'disappear');
-  document.getElementById('white').setAttribute('class', 'disappear');
-  document.getElementById('orangeline').setAttribute('class', 'margin-none');
-});
-
-overview.addEventListener('mouseover', function(event) {
-  document.getElementById('overview').setAttribute('class', 'cursor-hand');
 });
 // --------------------------------------------------------------------------------------------------------------------------------------
 // Eventos para el menú hamburguesa
