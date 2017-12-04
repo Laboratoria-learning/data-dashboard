@@ -1,48 +1,60 @@
 console.log(data);
 
+// Variables obtenidos del documento html
+var titleMenu = document.getElementById('title-menu');
 var menuPrincipal = document.getElementById('menu-principal');
 var content = document.getElementById('content-menu');
 var studentsCurrentlyEnrolled = document.getElementById('students-currently');
 var studentSatisfaction = document.getElementById('student-satisfaction');
 var teacherRating = document.getElementById('teacher-rating');
 var jediRating = document.getElementById('jedi-rating');
-var titleMenu = document.getElementById('title-menu');
+var enrollmentDropout = document.getElementById('enrollment-dropout');
 
-function viewMenu() {
+// Mostrar el menú para elegir la generación
+menuPrincipal.addEventListener('click', function() {
   content.classList.toggle('hidden');
-};
+});
 
-menuPrincipal.addEventListener('click', viewMenu);
-
+// Obtener el valor seleccionado
 var options = document.getElementsByName('option');
 for (var i = 0; i < options.length; i++) {
-  options[i].addEventListener('click', valueOption);
+  options[i].addEventListener('change', valueOption);
 };
 
 function valueOption(event) {
-  var generation = event.target.value;
-  var titleGeneration = event.target.getAttribute('data-name');
+  // Obtiene el valor de las opciones al hacer click de generación y lugar
   var place = event.target.getAttribute('data-place');
-  studentsCurrentlyEnrolled.textContent = totalStudents(place, generation);
+  var generation = event.target.value;
+  studentsCurrentlyEnrolled.textContent = totalAtive(place, generation, 'active');
+  enrollmentDropout.textContent = enrollmentDropoutPercentaje(totalAtive(place, generation, 'active'), totalAtive(place, generation, 'inactive'));
   studentSatisfaction.textContent = studentSatisfactionTotal(place, generation);
   teacherRating.textContent = rating(place, generation, 'teacher');
   jediRating.textContent = rating(place, generation, 'jedi');
-  titleMenu.textContent = titleGeneration + ' ' + generation;
 };
 
-function totalStudents(place, generation) {
+function totalAtive(place, generation, activeOrNotActive) {
   var totalInactive = 0;
   var totalActive = 0;
-  var dataStudents = data[place][generation]['students'];
+  var dataStudents = data[place][generation].students;
   for (var i = 0; i < dataStudents.length; i++) {
-    if (dataStudents[i]['active'] === true) {
+    if (dataStudents[i].active === true && activeOrNotActive === 'active') {
       totalActive++;
-    } else if (dataStudents[i]['active'] === false) {
+    } else if (dataStudents[i].active === false && activeOrNotActive === 'inactive') {
       totalInactive++;
     }
   }
-  var totalStudents = totalActive + totalInactive;
-  return totalStudents;
+    
+  if (activeOrNotActive === 'active') {
+    return totalActive;
+  } else if (activeOrNotActive === 'inactive') {
+    return totalInactive;
+  }
+}
+
+function enrollmentDropoutPercentaje(totalActive, totalInactive, ) {
+  var totalStudents = totalInactive + totalActive;
+  var percentaje = (totalInactive / totalStudents) * 100;
+  return (percentaje).toFixed(1);
 }
 
 function studentSatisfactionTotal(place, generation) {
@@ -64,14 +76,4 @@ function rating(place, generation, nameRating) {
   }
   var rating = (totalRating / nps.length).toFixed(1);
   return rating;
-}
-
-
-window.onload = function(event) {
-  var generation = '2017-2';
-  var place = 'LIM';
-  studentsCurrentlyEnrolled.textContent = totalStudents(place, generation);
-  studentSatisfaction.textContent = studentSatisfactionTotal(place, generation);
-  teacherRating.textContent = rating(place, generation, 'teacher');
-  jediRating.textContent = rating(place, generation, 'jedi');
 }
