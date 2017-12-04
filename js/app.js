@@ -4,22 +4,12 @@
 console.log(data);
 // guardamos los nombres de las sedes
 var dataNameSedes = Object.keys(data);
-// console.log(dataNameSedes);
-
-// guardamos los valores las sedes
 var valuesofData = Object.values(data);
-// console.log(valuesofData);
-// console.log(valuesofData);
-
 // Nos aseguramos que la página cargue correctamente:
 window.addEventListener('load', function() {
-
-  var nameshow = document.getElementById('nameshow');
-
   /* CÓDIGO PARA MOSTRAR SEDES Y PROMOCIONES */
   // Creamos una variable que va a guardar la lista desplegable
   var selectionSede = document.getElementById('select-sede');
-
   // Recorremos el array de nombre de las sedes que traemos del archivo data.js
   for (var i = 0; i < dataNameSedes.length; i++) {
     // Creamos una variable sedes que va almacenar la grupo de la sede
@@ -27,7 +17,6 @@ window.addEventListener('load', function() {
     // le asignamos el valor del labol del grupo, de acuerdo al nombre extraido de data.js de cada sede
     optgroupsedes.label = dataNameSedes[i];
     optgroupsedes.id = 'optgroupsede' + i;
-    
     // le asignamos cada sede a la lista de sedes
     selectionSede.appendChild(optgroupsedes);
     // guardamos las promociones por sede
@@ -37,146 +26,86 @@ window.addEventListener('load', function() {
     var valuesofPromsforSede = Object.values(valuesofData[i]);
     // console.log(valuesofData[i]);
     // console.log(valuesofPromsforSede);
-    
-
-    // var nameSede = (searchInArray(dataNameSedes, dataNameSedes[i]));
-    // console.log(nameSede);
-    var nameSede = document.getElementById('optgroupsede' + i).label;
-    
-    
     var arrayNumberStudentsActiveforSede = [];
     // Recorremos las promociones  
     for (var j = 0; j < valuesofPromsforSede.length; j++) {
-      
       // Creamos un elemento para mostrar las promociones
       var optionproms = document.createElement('option');
       // le asignamos el valor a mostrar
-      optionproms.id = 'optionproms' + j;
+      optionproms.id = 'optionproms' + i + '' + j ;
       optionproms.label = promsforSede[j];
-      optionproms.value = j;
-
+      optionproms.value = dataNameSedes[i] + '_' + promsforSede[j];
       // le asignamos donde lo va a mostrar
       optgroupsedes.appendChild(optionproms); 
-      // console.log(optionproms.id);
-      // var nameProm = searchInArray(promsforSede, promsforSede[j]); 
-      var nameProm = document.getElementById('optionproms' + j).label; 
-      // console.log( optionproms.value);
-          
-      var numberOfStudentsforProm = valuesofPromsforSede[j].students.length;
-      // console.log(numberOfStudentsforProm);
-      var numberStudentsActiveforProm = parseInt(serchStudentsActive(valuesofPromsforSede[j].students));
-      var numberStudentsInactiveforProm = numberOfStudentsforProm - numberStudentsActiveforProm;
-      // console.log(numberStudentsActiveforProm);
-     
-      arrayNumberStudentsActiveforSede.push(numberStudentsActiveforProm);
-
-      // Porcentaje de alumnas activas por promoción
-      var percentSatudentsActiveforProm = Math.round((numberStudentsActiveforProm * 100) / numberOfStudentsforProm);
-      // Porcentaje de alumnas inactivas por promoción
-      var percentSatudentsIntiveforProm = Math.round((numberStudentsInactiveforProm * 100) / numberOfStudentsforProm);
-
-      // console.log(numberOfStudentsforProm);
-      
-      selectionSede.addEventListener('change', function(event) {
-        
-        var nodosoptGroup = event.target.children;
-        for (var h = 0; h < nodosoptGroup. length; h++) {
-          var nodosOption = nodosoptGroup[h].children;
-          for (var d =0 ; d < nodosOption.length; d++) {
-            
-            var nodo = nodosOption [d];
-            console.log(nodo);
-            if (nodo.value = j) {
-              nameshow.textContent = nameSede + ' ' + nameProm;
-            }
-
-            // console.log(optionproms.id);
-          }
-        } 
-      });
-
-          
-      /* ACCEDER A LAS NOTAS DE LAS ESTUDIANTES*/
-      var dataStudent = valuesofPromsforSede[j].students;
-      // recorremos las estudiantes
-      var arrayPercentTotalProm = [];
-      
-      for (var f = 0; f < dataStudent.length; f++) {
-        var arraysprints = dataStudent[f].sprints;
-        // console.log(dataStudent[f]); 
-        // console.log(arraysprints);
-
-        var arrayPercentTotalStudent = [];
-        // recorremos los sprints
-        for (var g = 0; g < arraysprints.length; g++) {
-          // console.log(arraysprints[g]);
-          // notas por sprint 
-          var notaTech = arraysprints[g]['score']['tech'];
-          var notaHSE = arraysprints[g]['score']['hse'];
-          var percenNotaTech = Math.round(notaTech / 18);
-          var percenNotaHSE = Math.round(notaTech / 12);
-          // porcentaje por sprint 
-          var percenTotalforSprint = (percenNotaTech + percenNotaHSE) / 2;
-          // console.log(percenTotalforSprint);
-          arrayPercentTotalStudent.push(percenTotalforSprint);
-        }
-        
-        var PercentTotalStudent = parseInt(sumElementArray(arrayPercentTotalStudent) / arraysprints.length); 
-        // console.log(PercentTotalStudent); 
-        arrayPercentTotalProm.push(PercentTotalStudent);
-
-        var PercentTotalProm = parseInt(sumElementArray(arrayPercentTotalProm) / dataStudent.length);
-        // console.log(PercentTotalProm);
-      }
-      // console.log(optgroupsedes.id);
-
-      /* FIN ACCEDER*/
     }
-    // total de studiantes por sede;
-    var numberOfStudentsforSede = activeforSede(arrayNumberStudentsActiveforSede);
-    // console.log(numberOfStudentsforSede);
   }
+
   /* FIN DE CÓDIGO MOSTRAR SEDES Y PROMOCIONES */
 
   /* CODIGO PESTAÑAS*/
-  var show = function(e) {
-    var tabSeleccionado = e.target.dataset.tabSeleccionado;
-    console.log(tabSeleccionado);
-    var overview = document.getElementById('overview');
-    var students = document.getElementById('students');
-    var teachers = document.getElementById('teachers');
-    if (tabSeleccionado === 'tabOverview') {
-      students.style.display = 'none';
-      teachers.style.display = 'none';
-      overview.style.display = 'block';
-    } else if (tabSeleccionado === 'tabStudents') {
-      overview.style.display = 'none';
-      teachers.style.display = 'none';
-      students.style.display = 'block';
-      console.log('students');
-    } else if (tabSeleccionado === 'tabTeachers') {
-      overview.style.display = 'none';
-      students.style.display = 'none';
-      teachers.style.display = 'block';
-      console.log('teachers');
-    }
-  };
-  var chargePage = function() {
-    var overview = document.getElementById('overview');
-    var students = document.getElementById('students');
-    var teachers = document.getElementById('teachers');
-    students.style.display = 'none';
-    teachers.style.display = 'none';
-    overview.style.display = 'block';
-    var elementsTab = document.getElementsByClassName('tab');
-    for (var i = 0; i < elementsTab.length;i++) {
-      elementsTab[i].addEventListener('click', show);
-    }
-  };
-  chargePage();
-/* FIN CODIGO PESTAÑAS*/
+
+  var overview = document.getElementById('overview');
+  var students = document.getElementById('students');
+  var teachers = document.getElementById('teachers');
+  students.style.display = 'none';
+  teachers.style.display = 'none';
+  overview.style.display = 'block';
+  var elementsTab = document.getElementsByClassName('tab');
+  for (var i = 0; i < elementsTab.length;i++) {
+    elementsTab[i].addEventListener('click', function(event) {
+      var tabSeleccionado = event.target.dataset.tabSeleccionado;
+      console.log(tabSeleccionado);
+      var overview = document.getElementById('overview');
+      var students = document.getElementById('students');
+      var teachers = document.getElementById('teachers');
+      if (tabSeleccionado === 'tabOverview') {
+        students.style.display = 'none';
+        teachers.style.display = 'none';
+        overview.style.display = 'block';
+      } else if (tabSeleccionado === 'tabStudents') {
+        overview.style.display = 'none';
+        teachers.style.display = 'none';
+        students.style.display = 'block';
+        console.log('students');
+      } else if (tabSeleccionado === 'tabTeachers') {
+        overview.style.display = 'none';
+        students.style.display = 'none';
+        teachers.style.display = 'block';
+        console.log('teachers');
+      }
+    });
+  }
+  /* FIN CODIGO PESTAÑAS */
+
+  /* CÓDIGO PARA MOSTRAR */
+  selectionSede.addEventListener('change', function(event) { 
+    var selectedValue = this.value;
+    var nameSede = selectedValue.split('_')[0];
+    var nameProm = selectedValue.split('_')[1];
+    document.getElementById('nameshow').innerText = nameSede + ' ' + nameProm;
+    ShowData(nameSede, nameProm);
+  });
+  /* FIN DE CÓDIGO MOSTRAR*/
 });
 
+function ShowData(nameSede, nameProm) {
+  // estudiantes por promoción 
+  var studentsList = data[nameSede][nameProm].students;
+  // número de estudiantes por promoción
+  var numberStudentsforProm = data[nameSede][nameProm].students.length;
+  // número de estudiantes activas por promoción
+  var numberStudentsActiveforProm = parseInt(serchStudentsActive(studentsList));
+  // número de estudantes inactivas por promoción 
+  var numberStudentsInactiveforProm = numberStudentsforProm - numberStudentsActiveforProm;
+  // Porcentaje de alumnas activas por promoción
+  var percentStudentsActiveforProm = (Math.round((numberStudentsActiveforProm * 100) / numberStudentsforProm)) + '' + '%';
+  // Porcentaje de alumnas inactivas por promoción
+  var percentStudentsInactiveforProm = (Math.round((numberStudentsInactiveforProm * 100) / numberStudentsforProm)) + '' + '%';
+  console.log(numberStudentsforProm);
+  console.log(percentStudentsInactiveforProm);
+
+  
+}
 
 // para buscar en un array
 function searchInArray(array, string) {
@@ -228,15 +157,15 @@ function serchStudentsActive(studentsList) {
 }
 
 
-// para buscar el total de acttivas por prom
-function activeforSede(array) {
-  /* PARA RECORRER EL ARRAY DEL NUMERO DE ESTUDIANTES ACTIVAS*/
-  var sum = 0;
-  for (var s = 0; s < array.length; s++) {
-    sum += array[s];
-  }
-  return sum;
-}
+// // para buscar el total de acttivas por prom
+// function activeforSede(array) {
+//   /* PARA RECORRER EL ARRAY DEL NUMERO DE ESTUDIANTES ACTIVAS*/
+//   var sum = 0;
+//   for (var s = 0; s < array.length; s++) {
+//     sum += array[s];
+//   }
+//   return sum;
+// }
 
 // para sumar elementos de un array 
 function sumElementArray(array) {
