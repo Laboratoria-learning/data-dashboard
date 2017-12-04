@@ -70,9 +70,9 @@ window.addEventListener('load', function() {
         /* Contenedores ocultos  */
         total = (Object.values((Object.values(Object.values(data)[i]))[a])[0].length);
                            
-        PorcentageDesertion = parseInt((totalDesertion) * 100 / total);
+        porcentageDesertion = parseInt((totalDesertion) * 100 / total);
 
-        PorcentageRelation = parseInt((totalAprob) * 100 / total);
+        porcentageRelation = parseInt((totalAprob) * 100 / total);
 
         var numberStudent = document.createElement('input');
         numberStudent.className = 'number-student';
@@ -84,19 +84,19 @@ window.addEventListener('load', function() {
                                 
         var numberDesertion = document.createElement('input');
         numberDesertion.className = 'number-desertion';
-        numberDesertion.value = PorcentageDesertion + '%'; 
+        numberDesertion.value = porcentageDesertion + '%'; 
 
         var numberRelation = document.createElement('input');
         numberRelation.className = 'number-relation';
-        numberRelation.value = PorcentageRelation + '%';
+        numberRelation.value = porcentageRelation + '%';
                 
         var numberNps = document.createElement('input');
         numberNps.className = 'number-nps';
         numberNps.value = totalNps + '%';  
                                 
-        var numberDesertion = document.createElement('input');
-        numberDesertion.className = 'number-desertion';
-        numberDesertion.value = PorcentajeDesertion + '%'; 
+        // var numberDesertion = document.createElement('input');
+        // numberDesertion.className = 'number-desertion';
+        // numberDesertion.value = porcentageDesertion + '%'; 
 
         // var numberStudent = document.createElement('input');
         // numberStudent.className = 'number-student';
