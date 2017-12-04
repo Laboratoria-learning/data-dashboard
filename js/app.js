@@ -56,60 +56,60 @@ window.addEventListener('load', function(event) {
       return counter;
     }
     // Funcion para obtener el porcentaje de satisfacción por generación
-    function studentsSatisfaction (obj){
+    function studentsSatisfaction(obj) {
       var arrSatisfaction = [];
       var prome = 0;
-      for (var i=0; i<rating.length; i++){
+      for (var i = 0; i < rating.length; i++) {
         var sum = rating[i]['student']['cumple'] + rating[i]['student']['supera'];
         arrSatisfaction.push(sum);
       }
-      for (var m = 0; m<arrSatisfaction.length; m++){
+      for (var m = 0; m < arrSatisfaction.length; m++) {
         prome += arrSatisfaction[m];
       }
-      return prome/rating.length + '%';
+      return prome / rating.length + '%';
     }
     // Función para promediar puntaje de profesores
-    function teacherProm (obj){
+    function teacherProm(obj) {
       var arr = [];
       var prome = 0;
-      for (var i = 0; i<rating.length; i++){
+      for (var i = 0; i < rating.length; i++) {
         arr.push(rating[i]['teacher']);
       }
-      for (var x= 0; x<arr.length; x++){
+      for (var x = 0; x < arr.length; x++) {
         prome += arr[x];
       }
-      return Math.round(prome/rating.length);
+      return Math.round(prome / rating.length);
     }
-    //Función para promediar puntaje de Jedis Masters
-    function jdProm (obj){
+    // Función para promediar puntaje de Jedis Masters
+    function jdProm(obj) {
       var arr = [];
       var prome = 0;
-      for (var i = 0; i<rating.length; i++){
+      for (var i = 0; i < rating.length; i++) {
         arr.push(rating[i]['jedi']);
       }
-      for (var x= 0; x<arr.length; x++){
+      for (var x = 0; x < arr.length; x++) {
         prome += arr[x];
       }
-      return Math.round(prome/rating.length);
+      return Math.round(prome / rating.length);
     }
     // Función para promediar nps
-    function nps (obj) {
+    function nps(obj) {
       var arr = [];
       var prome = 0;
-      for (var i = 0; i<rating.length; i++) {
+      for (var i = 0; i < rating.length; i++) {
         arr.push(rating[i]['nps']['promoters'] - rating[i]['nps']['detractors']);
       }
       for (var x = 0; x < arr.length; x++) {
         prome += arr[x];
       }
-      return Math.round(prome/rating.length);
+      return Math.round(prome / rating.length);
     }
     switch (true) {
     case event.target.value === 'lima2016II':
     // Llenar la cantidad de alumnos por generación y sede
       section.classList.remove('display-none');
       /* Llamando a la funcion de la GRAFICO ENROLLMENT (ver graphics.js, line:3)"aqp2016II"*/
-      //FALTA CAMBIAR LOS PARAMETROS
+      // FALTA CAMBIAR LOS PARAMETROS
       enrollmentGraphic(10, 124);
       /* Llamando a la funcion de la GRAFICO ACHIEVEMENT (ver graphics.js, line:4)"aqp2016II"*/
       achievementGraphic(15, 50);
@@ -142,32 +142,22 @@ window.addEventListener('load', function(event) {
       teacherRating.textContent = teacherProm(rating);
       jediMasterRating.textContent = jdProm(rating);
       cumulativeNps.textContent = nps(rating);
-      //Faltan editar los parámetros para los gráficos y que se actualice con las datos obtenidos de las funciones
-      enrollmentGraphic(10, 39);
-      achievementGraphic(15, 56);
-      netPromoterScoreGraphic(20, 45, 17);
-      techSkillsGraphic(18, 30);
-      techSkillsSprintsGraphic(15, 34);
-      lifesSkillsGraphic(14, 23);
-      lifeSkillsSprintsGraphic(6, 6);
-      studentSatisfactionGraphic(3, 34);
-      teacherRatingGraphic(35, 34);
-      jediMasterRatingGraphic(34, 23);
+     
       /* Evento para tech y life por sprint*/
       selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
         case event.target.value === 'sprint1':
-        techSkillsSprintGraphic(7, 8);
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
-        techSkillsSprintGraphic(7, 8);
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint3':
-        techSkillsSprintGraphic(7, 8);
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint4':
-        techSkillsSprintGraphic(7, 8);
+          techSkillsSprintGraphic(7, 8);
           break;
         default:
         }
@@ -176,16 +166,16 @@ window.addEventListener('load', function(event) {
       function showSprintLife(event) {
         switch (true) {
         case event.target.value === 'sprint1':
-        lifeSkillsSprintGraphic(7, 8);
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
-        lifeSkillsSprintGraphic(7, 8);
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint3':
-        lifeSkillsSprintGraphic(7, 8);
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint4':
-        lifeSkillsSprintGraphic(7, 8);
+          lifeSkillsSprintGraphic(7, 8);
           break;
         default:
         }
@@ -205,7 +195,7 @@ window.addEventListener('load', function(event) {
       teacherRating.textContent = teacherProm(rating);
       jediMasterRating.textContent = jdProm(rating);
       cumulativeNps.textContent = nps(rating);
-      //Faltan editar los parámetros para los gráficos y que se actualice con las datos obtenidos de las funciones
+      // Faltan editar los parámetros para los gráficos y que se actualice con las datos obtenidos de las funciones
       enrollmentGraphic(10, 39);
       achievementGraphic(15, 56);
       netPromoterScoreGraphic(20, 45, 17);
@@ -221,13 +211,13 @@ window.addEventListener('load', function(event) {
       function showSprintTech(event) {
         switch (true) {
         case event.target.value === 'sprint1':
-        techSkillsSprintGraphic(7, 8);
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
-        techSkillsSprintGraphic(7, 8);
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint3':
-        techSkillsSprintGraphic(7, 8);
+          techSkillsSprintGraphic(7, 8);
           break;
         default:
         }
@@ -236,18 +226,19 @@ window.addEventListener('load', function(event) {
       function showSprintLife(event) {
         switch (true) {
         case event.target.value === 'sprint1':
-        lifeSkillsSprintGraphic(7, 8);
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
-        lifeSkillsSprintGraphic(7, 8);
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint3':
-        lifeSkillsSprintGraphic(7, 8);
+          lifeSkillsSprintGraphic(7, 8);
           break;
         default:
         }
       }
       break;
+      // 
     case event.target.value === 'lima2017II':
       section.classList.remove('display-none');
       var student = data.LIM['2017-2'];
@@ -262,7 +253,7 @@ window.addEventListener('load', function(event) {
       teacherRating.textContent = teacherProm(rating);
       jediMasterRating.textContent = jdProm(rating);
       cumulativeNps.textContent = nps(rating);
-      //Faltan editar los parámetros para los gráficos y que se actualice con las datos obtenidos de las funciones
+      // Faltan editar los parámetros para los gráficos y que se actualice con las datos obtenidos de las funciones
       enrollmentGraphic(10, 39);
       achievementGraphic(15, 56);
       netPromoterScoreGraphic(20, 45, 17);
@@ -278,13 +269,13 @@ window.addEventListener('load', function(event) {
       function showSprintTech(event) {
         switch (true) {
         case event.target.value === 'sprint1':
-        techSkillsSprintGraphic(7, 8);
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
-        techSkillsSprintGraphic(7, 8);
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint3':
-        techSkillsSprintGraphic(7, 8);
+          techSkillsSprintGraphic(7, 8);
           break;
         default:
         }
@@ -293,13 +284,13 @@ window.addEventListener('load', function(event) {
       function showSprintLife(event) {
         switch (true) {
         case event.target.value === 'sprint1':
-        lifeSkillsSprintGraphic(7, 8);
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
-        lifeSkillsSprintGraphic(7, 8);
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint3':
-        lifeSkillsSprintGraphic(7, 8);
+          lifeSkillsSprintGraphic(7, 8);
           break;
         default:
         }
@@ -319,7 +310,7 @@ window.addEventListener('load', function(event) {
       teacherRating.textContent = teacherProm(rating);
       jediMasterRating.textContent = jdProm(rating);
       cumulativeNps.textContent = nps(rating);
-      //Faltan editar los parámetros para los gráficos y que se actualice con las datos obtenidos de las funciones
+      // Faltan editar los parámetros para los gráficos y que se actualice con las datos obtenidos de las funciones
       enrollmentGraphic(10, 39);
       achievementGraphic(15, 56);
       netPromoterScoreGraphic(20, 45, 17);
@@ -335,10 +326,10 @@ window.addEventListener('load', function(event) {
       function showSprintTech(event) {
         switch (true) {
         case event.target.value === 'sprint1':
-        techSkillsSprintGraphic(7, 8);
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
-        techSkillsSprintGraphic(7, 8);
+          techSkillsSprintGraphic(7, 8);
           break;
         default:
         }
@@ -347,10 +338,10 @@ window.addEventListener('load', function(event) {
       function showSprintLife(event) {
         switch (true) {
         case event.target.value === 'sprint1':
-        lifeSkillsSprintGraphic(7, 8);
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
-        lifeSkillsSprintGraphic(7, 8);
+          lifeSkillsSprintGraphic(7, 8);
           break;
         default:
         }
@@ -370,7 +361,7 @@ window.addEventListener('load', function(event) {
       teacherRating.textContent = teacherProm(rating);
       jediMasterRating.textContent = jdProm(rating);
       cumulativeNps.textContent = nps(rating);
-      //Faltan editar los parámetros para los gráficos y que se actualice con las datos obtenidos de las funciones
+      // Faltan editar los parámetros para los gráficos y que se actualice con las datos obtenidos de las funciones
       enrollmentGraphic(10, 39);
       achievementGraphic(15, 56);
       netPromoterScoreGraphic(20, 45, 17);
@@ -386,10 +377,10 @@ window.addEventListener('load', function(event) {
       function showSprintTech(event) {
         switch (true) {
         case event.target.value === 'sprint1':
-        techSkillsSprintGraphic(7, 8);
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
-        techSkillsSprintGraphic(7, 8);
+          techSkillsSprintGraphic(7, 8);
           break;
         default:
         }
@@ -398,10 +389,10 @@ window.addEventListener('load', function(event) {
       function showSprintLife(event) {
         switch (true) {
         case event.target.value === 'sprint1':
-        lifeSkillsSprintGraphic(7, 8);
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
-        lifeSkillsSprintGraphic(7, 8);
+          lifeSkillsSprintGraphic(7, 8);
           break;
         default:
         }
@@ -421,7 +412,7 @@ window.addEventListener('load', function(event) {
       teacherRating.textContent = teacherProm(rating);
       jediMasterRating.textContent = jdProm(rating);
       cumulativeNps.textContent = nps(rating);
-      //Faltan editar los parámetros para los gráficos y que se actualice con las datos obtenidos de las funciones
+      // Faltan editar los parámetros para los gráficos y que se actualice con las datos obtenidos de las funciones
       enrollmentGraphic(10, 39);
       achievementGraphic(15, 56);
       netPromoterScoreGraphic(20, 45, 17);
@@ -437,16 +428,16 @@ window.addEventListener('load', function(event) {
       function showSprintTech(event) {
         switch (true) {
         case event.target.value === 'sprint1':
-        techSkillsSprintGraphic(7, 8);
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
-        techSkillsSprintGraphic(7, 8);
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint3':
-        techSkillsSprintGraphic(7, 8);
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint4':
-        techSkillsSprintGraphic(7, 8);
+          techSkillsSprintGraphic(7, 8);
           break;
         default:
         }
@@ -455,16 +446,16 @@ window.addEventListener('load', function(event) {
       function showSprintLife(event) {
         switch (true) {
         case event.target.value === 'sprint1':
-        lifeSkillsSprintGraphic(7, 8);
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
-        lifeSkillsSprintGraphic(7, 8);
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint3':
-        lifeSkillsSprintGraphic(7, 8);
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint4':
-        lifeSkillsSprintGraphic(7, 8);
+          lifeSkillsSprintGraphic(7, 8);
           break;
         default:
         }
@@ -484,7 +475,7 @@ window.addEventListener('load', function(event) {
       teacherRating.textContent = teacherProm(rating);
       jediMasterRating.textContent = jdProm(rating);
       cumulativeNps.textContent = nps(rating);
-      //Faltan editar los parámetros para los gráficos y que se actualice con las datos obtenidos de las funciones
+      // Faltan editar los parámetros para los gráficos y que se actualice con las datos obtenidos de las funciones
       enrollmentGraphic(10, 39);
       achievementGraphic(15, 56);
       netPromoterScoreGraphic(20, 45, 17);
@@ -500,10 +491,10 @@ window.addEventListener('load', function(event) {
       function showSprintTech(event) {
         switch (true) {
         case event.target.value === 'sprint1':
-        techSkillsSprintGraphic(7, 8);
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
-        techSkillsSprintGraphic(7, 8);
+          techSkillsSprintGraphic(7, 8);
           break;
         default:
         }
@@ -512,10 +503,10 @@ window.addEventListener('load', function(event) {
       function showSprintLife(event) {
         switch (true) {
         case event.target.value === 'sprint1':
-        lifeSkillsSprintGraphic(7, 8);
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
-        lifeSkillsSprintGraphic(7, 8);
+          lifeSkillsSprintGraphic(7, 8);
           break;
         default:
         }
@@ -535,7 +526,7 @@ window.addEventListener('load', function(event) {
       teacherRating.textContent = teacherProm(rating);
       jediMasterRating.textContent = jdProm(rating);
       cumulativeNps.textContent = nps(rating);
-      //Faltan editar los parámetros para los gráficos y que se actualice con las datos obtenidos de las funciones
+      // Faltan editar los parámetros para los gráficos y que se actualice con las datos obtenidos de las funciones
       enrollmentGraphic(10, 39);
       achievementGraphic(15, 56);
       netPromoterScoreGraphic(20, 45, 17);
@@ -551,16 +542,16 @@ window.addEventListener('load', function(event) {
       function showSprintTech(event) {
         switch (true) {
         case event.target.value === 'sprint1':
-        techSkillsSprintGraphic(7, 8);
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
-        techSkillsSprintGraphic(7, 8);
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint3':
-        techSkillsSprintGraphic(7, 8);
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint4':
-        techSkillsSprintGraphic(7, 8);
+          techSkillsSprintGraphic(7, 8);
           break;
         default:
         }
@@ -569,16 +560,16 @@ window.addEventListener('load', function(event) {
       function showSprintLife(event) {
         switch (true) {
         case event.target.value === 'sprint1':
-        lifeSkillsSprintGraphic(7, 8);
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
-        lifeSkillsSprintGraphic(7, 8);
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint3':
-        lifeSkillsSprintGraphic(7, 8);
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint4':
-        lifeSkillsSprintGraphic(7, 8);
+          lifeSkillsSprintGraphic(7, 8);
           break;
         default:
         }
@@ -598,7 +589,7 @@ window.addEventListener('load', function(event) {
       teacherRating.textContent = teacherProm(rating);
       jediMasterRating.textContent = jdProm(rating);
       cumulativeNps.textContent = nps(rating);
-      //Faltan editar los parámetros para los gráficos y que se actualice con las datos obtenidos de las funciones
+      // Faltan editar los parámetros para los gráficos y que se actualice con las datos obtenidos de las funciones
       enrollmentGraphic(10, 39);
       achievementGraphic(15, 56);
       netPromoterScoreGraphic(20, 45, 17);
@@ -614,13 +605,13 @@ window.addEventListener('load', function(event) {
       function showSprintTech(event) {
         switch (true) {
         case event.target.value === 'sprint1':
-        techSkillsSprintGraphic(7, 8);
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
-        techSkillsSprintGraphic(7, 8);
+          techSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint3':
-        techSkillsSprintGraphic(7, 8);
+          techSkillsSprintGraphic(7, 8);
           break;
         default:
         }
@@ -629,13 +620,13 @@ window.addEventListener('load', function(event) {
       function showSprintLife(event) {
         switch (true) {
         case event.target.value === 'sprint1':
-        lifeSkillsSprintGraphic(7, 8);
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint2':
-        lifeSkillsSprintGraphic(7, 8);
+          lifeSkillsSprintGraphic(7, 8);
           break;
         case event.target.value === 'sprint3':
-        lifeSkillsSprintGraphic(7, 8);
+          lifeSkillsSprintGraphic(7, 8);
           break;
         default:
         }
@@ -655,26 +646,81 @@ window.addEventListener('load', function(event) {
       teacherRating.textContent = teacherProm(rating);
       jediMasterRating.textContent = jdProm(rating);
       cumulativeNps.textContent = nps(rating);
-      //Faltan editar los parámetros para los gráficos y que se actualice con las datos obtenidos de las funciones
-      enrollmentGraphic(10, 39);
-      achievementGraphic(15, 56);
-      netPromoterScoreGraphic(20, 45, 17);
-      techSkillsGraphic(18, 30);
+      //Obteniendo el HSE Skills
+      var studentns = 0;
+      var accumulatorHseS = 0;
+
+      function hseSkills() {
+        var quantityStu = data['CDMX']['2017-2'].students.length;
+     
+        for (var i = 0; i < data['CDMX']['2017-2'].students.length;i++) {
+          var countSprints = data['CDMX']['2017-2'].students[i].sprints.length;
+          for (var j = 0; j < countSprints;j++) {
+            if ('0' == data['CDMX']['2017-2'].students[i].sprints[j].number) {
+              if (data['CDMX']['2017-2'].students[i].sprints[j].score.hse > 840) {
+                accumulatorHseS++;
+              }
+            }
+          }
+        }
+        var studentns = quantityStu - accumulatorHseS;
+        return studentns;
+      }
+
+
+      lifeSkills.textContent= hseSkills();
+
+  //Obteniendo el tech Skills
+  var studentns2 = 0;
+  var accumulatortech = 0;
+      function techSkills() {
+        var quantityStu = data['CDMX']['2017-2'].students.length;
+     
+        for (var i = 0; i < data['CDMX']['2017-2'].students.length;i++) {
+          var countSprints = data['CDMX']['2017-2'].students[i].sprints.length;
+          for (var j = 0; j < countSprints;j++) {
+            if ('0' == data['CDMX']['2017-2'].students[i].sprints[j].number) {
+              if (data['CDMX']['2017-2'].students[i].sprints[j].score.tech > 1260) {
+                accumulatortech++;
+              }
+            }
+          }
+        }
+        var studentns2 = quantityStu - accumulatortech;
+        return studentns;
+        
+      }
+
+
+      document.getElementById('tech-skills').textContent= techSkills();
+      
+
+
+      // Faltan editar los parámetros para los gráficos y que se actualice con las datos obtenidos de las funciones
+      enrollmentGraphic(25, 21); //
+      achievementGraphic(7, 39);//
+      netPromoterScoreGraphic(20, 45, 17);//
+      techSkillsGraphic(18, 30);//
       techSkillsSprintsGraphic(15, 34);
       lifesSkillsGraphic(14, 23);
       lifeSkillsSprintsGraphic(6, 6);
-      studentSatisfactionGraphic(3, 34);
-      teacherRatingGraphic(35, 34);
-      jediMasterRatingGraphic(34, 23);
+      studentSatisfactionGraphic(87, 97);//
+      teacherRatingGraphic(4.4, 4.1);//
+      jediMasterRatingGraphic(4.7, 4.2);//
       /* Evento para tech y life por sprint*/
       selectSprintTech.addEventListener('change', showSprintTech);
       function showSprintTech(event) {
         switch (true) {
-          case event.target.value === 'sprint1':
-            techSkillsSprintGraphic(7, 8);
-            break;
-          case event.target.value === 'sprint2':
-            techSkillsSprintGraphic(7, 8);
+        case event.target.value === 'sprint1':
+
+          
+         
+       
+
+          techSkillsSprintGraphic(7, 9);
+          break;
+        case event.target.value === 'sprint2':
+          techSkillsSprintGraphic(7, 8);
           break;
         default:
         }
@@ -682,18 +728,18 @@ window.addEventListener('load', function(event) {
       selectSprintLife.addEventListener('change', showSprintLife);
       function showSprintLife(event) {
         switch (true) {
-          case event.target.value === 'sprint1':
-            lifeSkillsSprintGraphic(7, 8);
-            break;
-          case event.target.value === 'sprint2':
-            lifeSkillsSprintGraphic(7, 8);
+        case event.target.value === 'sprint1':
+          lifeSkillsSprintGraphic(7, 8);
+          break;
+        case event.target.value === 'sprint2':
+          lifeSkillsSprintGraphic(7, 8);
           break;
         default:
         }
       }
       break;
     default:
-    section.classList.add('display-none');
+      section.classList.add('display-none');
     }
   }
 });
