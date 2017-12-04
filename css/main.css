@@ -90,13 +90,13 @@
 .box-center {
   width: 340px;
   height: 326px;
-  margin: 0 60px;
+  margin: 0 6%;
   float: left;
 }
 .box-right {
   width: 340px;
   height: 326px;
-  float: right;
+  float: left;
 }
 .tech-skills {
   height: 500px;
@@ -136,11 +136,12 @@
 #graph-img {
   width: 660px;
   height: 310px;
+  float: left;
+  margin-right: 6%;
 }
 #circle-img {
   width: 320px;
   height:255px;
-  outline: 1px solid purple;
   margin-bottom: 10px;
 }
 .information {
@@ -149,6 +150,7 @@
   font-size: 11.3px;
   line-height: 20px;
   color: rgba(43,43,43,0.6);
+  float: left;
 }
 #pastel-green {
   color: rgb(126,211,33);
