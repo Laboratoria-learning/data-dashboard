@@ -1,4 +1,3 @@
-/* reglas universales de estilo */
 * {
     box-sizing: border-box ;
     font-family: 'Montserrat', sans-serif;
@@ -6,7 +5,6 @@
     background-color: #f4f6f7;
 }
 
-/* reglas específicas de estilo*/
 div .view-student {
   text-align: center ;
 }
@@ -21,6 +19,7 @@ div #container-students {
 
 #especialization {
     left: 15px;
+    /*height: 100%;*/
     height: 2000px;
     width: 20%;
     background-color: white;
@@ -32,12 +31,15 @@ li {
     text-decoration-style: none;
 }
 
+
 #visualization {
     height: 100%;
     width: 50% ;
     background-color: white ;
     display: inline-block;
     margin-left: 650px;
+    /*float: right;*/
+
 }
 
 ul, li{
@@ -60,24 +62,28 @@ li label {
     display: inline-block;
 }
 
-#photo , #date-student , #tech-skills , #life-skills, #english-skill , .date , #english-skills {
+.photo , .date-student , .tech-skills , .life-skills, .english-skills , .date  {
     display: inline-block;
 }
-#name , #especialization-student ,   #skills-details  {
-    margin-left: 20px;
+
+.life-skills, .english-skills {
+  margin-left: 10px;
 }
 
-#photo {
+.name , .especialization-student ,   .skills-details  {
     margin-left: 20px;
 }
-#tech-skills {
+.photo {
+    margin-left: 20px;
+}
+.tech-skills {
     margin-left: 40px;
 }
-#date-student , #name , #especialization-student {
+.date-student , .name , #especialization-student {
     background-color: white;
 }
 
-#tech-skills , #life-skills , #english-skills{
+.tech-skills , .life-skills , .english-skills{
     border: 1px solid black;
     text-align: center;
 }
@@ -107,17 +113,19 @@ li label {
     background-color: white;
 }
 
-#skill-1 , #skill-2 , #skill-3 {
+.skill-1 , .skill-2 , .skill-3 {
     display: inline-block;
     background-color: white;
+    border: 1px solid gray;
+    background-color: #BDBDBD;
 }
 
-#photo, .date {
+.photo, .date {
     padding-top: 15px;
     background-color: white;
 }
 
-#student {
+.student {
     background-color: white;
 }
 
@@ -138,13 +146,13 @@ button.desactive {
     color: #757575;
   }
 
-button.active {
+  button.active {
     background-color: #faf281;
     color: white;
   }
 
-/* clases para foto standart */
-.photo-standart {
+  /* clases para foto standart */
+  .photo-standart {
    height: 130px;
    width: 140px;
   }

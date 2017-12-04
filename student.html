@@ -10,20 +10,27 @@
 
 </head>
 <body>
-<div class="enlace-overview">
-  <a href="over-view.html">Vista Overview</a>
 
-</div>
+<!-- Enlaces para las vistas -->
+  <div class="enlace-overview">
+    <a href="over-view.html"> <h4> <strong>Vista Overview</strong></h4></a>
+  </div>
+
+  <div class="view">
+    <h1 class= "view-student"> STUDENTS</h1>
+  </div>
 
   <div id="container-students">
     <!--Especialización-->
 
     <div id="especialization">
+        <h3>Especialización</h3>
         <button class = "desactive" class="active" id="javascript-button" type="button" name="button"> Javascript</button> <br>
         <button class = "desactive" class="active" id="uxdesign-button" type="button" name="button"> Ux Design</button> <br>
         <button id="front-end-designer-button"  type="button"  name="button"> Front end Designer</button> <br>
-        <br> <br> <br> <br>
+        <br> <br> <br>
     </div>
+
 
     <!--Visualización-->
     <div id="visualization">
@@ -38,20 +45,19 @@
 
       <!-- Visualiza estudiantes -->
 
-      <div id="student">
+      <div class="student">
          <!--foto-->
-         <div id="photo"class="photo-standart">
+         <div class="photo">
              <img src="assets/images/photos/maria.jpg" alt="">
          </div>
-
          <div class="date">
             <!--datos de estudiante-->
-            <div id="date-student">
-              <div id="name" class ="big-letter">DIANA NAVARRO</div>
-              <div id="especialization-student">Fronted Developer</div>
+            <div class="date-student">
+              <div  class = "big-letter" class= "name" >DIANA NAVARRO</div>
+              <div class="especialization-student">Fronted Developer</div>
             </div>
             <!--evaluación técnica-->
-            <div id="tech-skills">
+            <div class="tech-skills">
               <div id="tech">
                 <label for="" class ="big-letter">95.6%</label>
                 <br>
@@ -59,15 +65,15 @@
               </div>
             </div>
             <!--evaluación habilidades blandas-->
-            <div id="life-skills">
-              <div id="life">
+            <div class="life-skills">
+              <div class="life">
                 <label for="" class ="big-letter">95.6%</label>
                 <br>
                 <label for="" class="little-letter">LIFE SKILLS</label>
               </div>
             </div>
             <!--evaluación ingles-->
-            <div id="english-skills">
+            <div class="english-skills">
                 <div id="english">
                     <label for="" class ="big-letter">INTERN</label>
                     <br>
@@ -77,10 +83,10 @@
             <br>
             <br>
             <!--descripción de habilidades técnicas-->
-            <div id="skills-details" class="little-letter">
-                <div id="skill-1">Javascript</div>
-                <div id="skill-2">APIs</div>
-                <div id="skill-3">JQuery</div>
+            <div class="skills-details" class="little-letter">
+                <div class="skill-1">Javascript</div>
+                <div class="skill-2">APIs</div>
+                <div class="skill-3">JQuery</div>
             </div>
             <br>
             <br>
@@ -91,11 +97,6 @@
          <br>
          <br>
       </div>
-
-
-        <div id="nuevo">ssssss
-            <br>
-        </div>
 
     </div>
   </div>
