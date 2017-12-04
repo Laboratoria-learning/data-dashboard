@@ -42,6 +42,12 @@ Nota: En la etapa de diseño de la experiencia del producto, nos dimos cuenta qu
 
 Tener un botón que permita indicar que una estudiante ha salido del Bootcamp y alterar los totales afectados por este cambio.
 
+
+## Sketchs:
+![](https://raw.githubusercontent.com/NatalyCortez/data-dashboard/master/assets/images/sketch1.JPG)
+![](https://raw.githubusercontent.com/NatalyCortez/data-dashboard/master/assets/images/sketch2.JPG)
+![](https://raw.githubusercontent.com/NatalyCortez/data-dashboard/master/assets/images/sketch3.JPG)
+
 ## Vista previa:
 
 ![](https://raw.githubusercontent.com/NatalyCortez/data-dashboard/master/assets/images/screen.JPG)
