@@ -15,7 +15,7 @@ header{
    height: 89px;
 }
 nav{
-   width: 960px;
+   width: 100%;;
    margin: 0 auto;
    position: relative;
    height: 100%;
@@ -31,15 +31,14 @@ nav{
    height: 100%;
 }
 .bar-lab{
-   width: 40px;
-   height: 40px;
+  padding: 8px 20px 10px 0;
    z-index: 101;
    /* border: 2px solid #f7b617; */
    position: absolute;
    right: 0;
    top:25%;
    text-align: center;
-
+   
 }
 .bar-lab a{
    color:#333333;
@@ -162,7 +161,7 @@ section .principal{
 .show {
 	display: block;
 }
-/*students styles*/
+/*students and teachers section styles*/
 a {
 	text-decoration: none;
 }
@@ -344,4 +343,53 @@ padding-right: 15px;
 .background-color {
 	background-color: #ffc107;
 	border-radius: 5px;
+}
+#teachers-section {
+	text-align: center;
+}
+/*menu hamburguesa*/
+
+.user-config {
+	color: #fff;
+	opacity: 0.9;
+	cursor: pointer;
+	border-bottom: 1px solid #6f7072;
+
+}
+.user-photo {
+	width: 80px;
+	height: 80px;
+	display: inline-block;
+	margin: 12px 15px;
+}
+.name-manager {
+	display: inline-block;
+	padding: 30px 10px;
+	position: absolute;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 20px;
+	cursor: pointer;
+}
+#user-c {
+	width: 350px;
+	background-color: #333;
+	right: 0;
+	cursor: pointer;
+	position: absolute;
+	z-index: 1000;
+	float: right;
+}
+.config {
+	padding: 15px;
+	text-transform: capitalize;
+}
+.config:hover {
+	color: #ffc107;
+}
+#empty-menu {
+	padding: 150px 70px;
+}
+header {
+	position: relative;
 }

@@ -14,10 +14,20 @@
         <div id="logo-header" class="logo">
           <a class="a-logo" href="#"><img src="assets/images/logo-laboratoria.svg" alt="logolaboratoria"></a>
         </div>
-        <div class="bar-lab">
-          <a class="fa fa-bars fa-2x" href=""></a>
+        <div id="menu-burguer" class="bar-lab">
+          <span class="fa fa-bars fa-2x"></span>
         </div>
+        
       </nav>
+      <div id="user-c" class="nav-div display-none">
+        	<div class="user-config">
+        		<img class="user-photo" src="assets/images/ale.png" alt="manager"><p class="name-manager">Alejandra Ramirez<span></span></p>
+        	</div>
+        	<div class="user-config config">add student</div>
+        	<div class="user-config config">remove student</div>
+        	<div class="user-config config">add sprint</div>
+        	<div class="user-config config" id="empty-menu"></div>
+        </div>
     </header>
     <section id="bar-container" class="bar">
       <div class="higher">
@@ -37,9 +47,9 @@
       </div>
       <div class="principal">
         <ul class="lista">
-          <li><a id="overview" class="tab-list" href="#">overview</a></li>
-          <li><a id="students" class="tab-list" href="#">students</a></li>
-          <li><a id="teachers" class="tab-list" href="#">teachers</a></li>
+          <li id="overview-container"><a id="overview" class="tab-list" href="#">overview</a></li>
+          <li id="students-container"><a id="students" class="tab-list" href="#">students</a></li>
+          <li id="teachers-container"><a id="teachers" class="tab-list" href="#">teachers</a></li>
         </ul>
       </div>
     </section>
@@ -201,7 +211,7 @@
 	  		</div>
     </section>
     <section class="display-none" id="teachers-section">
-    	<h2>TEACHERS</h2>
+    	<img class="empty" src="assets/images/nothing.png">
     </section>
 		<!-- Base de datos -->
     <script src="./js/data.js"></script>

@@ -281,5 +281,27 @@ specialization_3.addEventListener("click", function(event) {
 	squareMarked_1.setAttribute("class", "icon-square");
 	squareMarked_2.setAttribute("class", "icon-square");
 })
+/*menu hamburguesa*/
 
+var menuBurguer= document.getElementById('menu-burguer');
+function showSMenu(event) {
+	var userC = document.getElementById('user-c');
+	if(userC.className='nav-div display-none'){
+		userC.setAttribute('class','nav-div show');
+	} 
+}
 
+var userConfig = document.getElementsByClassName("user-config");
+
+function hideMenu(event) {
+	var userC = document.getElementById('user-c');
+	if(userC.className='nav-div show'){
+		userC.setAttribute('class','nav-div display-none');
+	} 
+}
+
+for(var x=0; x<userConfig.length; x++){
+	userConfig[x].addEventListener("click", hideMenu);
+}
+
+menuBurguer.addEventListener("click", showSMenu);
