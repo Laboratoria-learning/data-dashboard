@@ -1,3 +1,4 @@
+console.log(data);
 
 // evento para el selector de Sedes
 var LIM = document.getElementById('LIM');
@@ -73,6 +74,7 @@ function logroMetas(sede, generacion) {
   var studentsDownTarget = [];
   for (var i = 0; i < students.length; i++) {
     if (students[i].active === true) {
+      var cantidadSprint = students[i].sprints.length;
       for (var j = 0; j < students[i].sprints.length; j++) {
         if ((students[i].sprints[j].score.tech >= 1260) && (students[i].sprints[j].score.hse >= 840)) {
           studentsOverTarget.push(students[i].sprints[j]);
@@ -90,7 +92,7 @@ function logroMetas(sede, generacion) {
   var studentsTarget = studentsOverTarget.length;
   console.log('no llegaron a la meta: ' + '\t' + studentsDownTarget.length);
   var porcentajeAchievement = Math.round(porcentajeLogroMetas) + '%';
-  var totalStudents = '% OF TOTAL (' + (studentsOverTarget.length + studentsDownTarget.length) + ')';
+  var totalStudents = '% OF TOTAL (' + (studentsOverTarget.length + studentsDownTarget.length) / cantidadSprint + ')';
 
   var studentsMeetTarget = document.getElementById('studentTarget');
   studentsMeetTarget.innerHTML = studentsTarget + '<br>' + '# STUDENTS THE MEET THE TARGET';
@@ -99,7 +101,7 @@ function logroMetas(sede, generacion) {
   porcentajeAchievementShow.innerHTML = porcentajeAchievement + '<br>' + totalStudents;
 }
 
-console.log(logroMetas('LIM', '2016-2'));
+console.log(logroMetas('LIM', '2017-2'));
 
 /** ************** NET PROMOTER SCORE ****************/ 
 
@@ -135,9 +137,9 @@ function puntajePromotor(sede, generacion) {
   porcentajeDetractors = totalDetractors * 100 / (totalPromoters + totalDetractors + totalPassive);
   porcentajePassive = totalPassive * 100 / (totalPromoters + totalDetractors + totalPassive);
 
-  var promoters = (porcentajePromotors + '%' + '\t' + 'PROMOTER');
-  var detractors = (porcentajeDetractors + '%' + '\t' + 'DETRACTORS');
-  var passive = (porcentajePassive + '%' + '\t' + 'PASSIVE');
+  var promoters = (Math.round(porcentajePromotors) + '%' + '\t' + 'PROMOTER');
+  var detractors = (Math.round(porcentajeDetractors) + '%' + '\t' + 'DETRACTORS');
+  var passive = (Math.round(porcentajePassive) + '%' + '\t' + 'PASSIVE');
 
   var porcentajeIndividual = document.getElementById('porcentajeVarios');
   porcentajeIndividual.innerHTML = promoters + '<br>' + passive + '<br>' + detractors;
@@ -149,13 +151,13 @@ function puntajePromotor(sede, generacion) {
 
   porcentajeAcumulativeNps = acumulativeNps / totalNps.length;
 
-  var cumulativeNps = porcentajeAcumulativeNps + '%';
+  var cumulativeNps = Math.round(porcentajeAcumulativeNps) + '%';
 
   var cumulativeNpsShow = document.getElementById('cumulativeNps');
   cumulativeNpsShow.innerHTML = cumulativeNps + '<br>' + '% CUMULATIVE NPS';
 }
 
-console.log(puntajePromotor('LIM', '2016-2'));
+console.log(puntajePromotor('CDMX', '2017-1'));
 
 /** ********** TECH SKILLS *******************/ 
 
