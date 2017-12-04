@@ -64,6 +64,7 @@ header {
     filter: drop-shadow(2px 2px 5px #999);
     padding: 5px;
     height: 80px;
+    margin-bottom: 20px;
 }
 
 header section {
@@ -113,15 +114,16 @@ header section {
 
 /* Style for First Section */
 
-.first-section {
+.section {
     width: 80%;
     margin-left: 17%;
+    margin-bottom: 5%;
     font-size: 15px;
     font-weight: 700;
     filter: drop-shadow(2px 2px 5px #999);
 }
 
-.first-section .container-sedes {
+.container-sedes {
     width: 15%;
     display: inline-block;
     background-color: #f7b617;
@@ -131,23 +133,18 @@ header section {
     border-radius: 5px;
 }
 
-.list-sedes .cont-sedes {
-    list-style: none;
-    padding: 3px;
-}
-
-.first-section .list-sedes {
+.list-sedes {
     width: 15%;
     height: 40px;
     display: inline-block;
     background-color: #f7b617;
     color: #333333;
     font-weight: 700;
-    margin: 0px 50px;
+    margin: 0px 20px;
     border-radius: 5px;
 }
 
-.list-sedes .hide {
+.list-sedes {
     list-style: none;
 }
 
@@ -157,30 +154,57 @@ header section {
     height: 30px;
 }
 
-.list-sedes ul li {
+.menu-sedes {
     width: 150px;
 }
 
-/* .show {
-    background-color: white;
-    float: left;
-    z-index: 1000;
-} */
-
-.first-section .container-paragraph {
-    display: inline-block;
-    background-color: #f7b617;
-    padding: 10px;
+.menu-generations{
+    margin-left: 95px;
+    width: 150%;
     border-radius: 5px;
-    margin: 20px;
+    background: #f7b617;
+    font-size: 20px;
     cursor: pointer;
+    display: flex;
 }
 
-.first-section .container-paragraph p {
-    margin: 0;
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+} 
+
+/* Style for Second Section */
+
+.container {
+    width: 26%;
+    display: inline-block;
+    background-color: #f7b617;
+    padding-right: 13px;
+    padding-left: 13px;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.container-paragraph {
+    display: inline-block;
+    margin-left: 35px;
     padding: 0;
     color: #333333;
-    font-size: 15px;
+    font-size: 10px;    
+}
+
+.title {
+    display: inline-block;
+    margin-right: 20px;
+    margin-left: 40px;
+}
+
+.center {
+    margin-right: 65px;
+    margin-left: 65px;
 }
 
 .grafhic {
@@ -192,3 +216,6 @@ header section {
     width: 100%;
     display: inline-block;
 }
+
+/* Style for Third Section */
+
