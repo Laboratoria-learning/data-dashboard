@@ -2,10 +2,12 @@ window.addEventListener('load', function() {
   // ----------------> Funcionalidad Menú <----------------
   var openAnimatedMenu = document.getElementById('open-animated-menu');
   var closeAnimatedMenu = document.getElementById('close-animated-menu');
+  var img = document.getElementById('ale-pic');
 
   openAnimatedMenu.addEventListener('click', openMenu);
   function openMenu() {
     document.getElementById('animated-menu').style.width = '250px';
+    img.style.display = 'none';
     var lastDay = document.getElementById('last-day');
     var lastHour = document.getElementById('last-hour');
     lastDay.textContent = moment().format('MMMM Do YYYY');
@@ -15,6 +17,7 @@ window.addEventListener('load', function() {
   closeAnimatedMenu.addEventListener('click', closeMenu);
   function closeMenu() {
     document.getElementById('animated-menu').style.width = '0';
+    img.style.display = 'inline-block';
   }
 
   // ----------------> Crea función para seleccionar sede y promoción, y generar datos <----------------
@@ -36,7 +39,7 @@ window.addEventListener('load', function() {
         dropout++;
       }
     }
-    dropout = Math.round((dropout / totalStudents) * 100) + '%';
+    var dropoutPercent = ((dropout / totalStudents) * 100).toFixed(1) + '%';
 
     // Total estudiantes
     var enrollmentStudents = document.getElementById('box-enrollment');
@@ -44,7 +47,7 @@ window.addEventListener('load', function() {
 
     // Porcentaje de alumnas que desertaron
     var dropoutPorcentaje = document.getElementById('dropout-percent');
-    dropoutPorcentaje.textContent = dropout;
+    dropoutPorcentaje.textContent = dropoutPercent;
 
     // ----------------> ACHIEVEMENT <----------------
     var studentMeetTarget = 0;
@@ -68,10 +71,9 @@ window.addEventListener('load', function() {
 
     var boxAchievement = document.getElementById('box-achievement');
     boxAchievement.textContent = studentMeetTarget;
-
     var percentOfTotal = document.getElementById('percent-achievement');
     percentOfTotal.textContent = ((studentMeetTarget / totalStudents) * 100).toFixed(2);
-
+    
     var changeInfoTotal = document.getElementById('total-achievement');
     changeInfoTotal.textContent = '% OF TOTAL (' + totalStudents + ')';
 
@@ -101,7 +103,7 @@ window.addEventListener('load', function() {
       promoters += (dataRatings[i]['nps']['promoters']) / dataRatings.length;
       passives += (dataRatings[i]['nps']['passive']) / dataRatings.length;
       detractors += (dataRatings[i]['nps']['detractors']) / dataRatings.length;
-
+      
       npsProm.textContent = promoters.toFixed(2) + '% Promoters';
       npsPass.textContent = passives.toFixed(2) + '% Passives';
       npsDetr.textContent = detractors.toFixed(2) + '% Detractors';
@@ -296,8 +298,8 @@ window.addEventListener('load', function() {
       data5.addColumn('string', 'name');
       data5.addColumn('number', 'students');
       data5.addRows([
-        ['Desertoras', (parseInt(dropout) / 100) * totalStudents],
-        ['Asistiendo a clases', totalStudents - ((parseInt(dropout) / 100) * totalStudents)],
+        ['Desertoras', dropout],
+        ['Asistiendo a clases', totalStudents - dropout],
       ]);
 
       var options5 = {'title': 'Alumnas que asisten a clases vs alumnas que han desertado',

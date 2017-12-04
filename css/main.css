@@ -221,7 +221,7 @@ padding: 0.25em;
 
 .textDate {
   font-size: 3.4em;
-  font-weight: 300;
+  font-weight: 400;
   border-bottom: 1px solid #ffff;
   width: 2.7em;
   height: 1.2em;
@@ -249,6 +249,24 @@ padding: 0.25em;
 /*.box3 p {
   font-size: 1em;
 }*/
+
+/*poniendole color rojo fijo al porcentaje del dropout*/
+#dropout-percent {
+  color: #FF0000;
+}
+
+/*creando clases para los colores segun porcentajes: green, yellow y red*/
+.green-font {
+  color: #008000;
+}
+
+.yellow-font {
+  color: #ffff00;
+}
+
+.red-font {
+  color: #FF0000;
+}
 
 .texTbox {
   font-size: .8em;
@@ -281,13 +299,13 @@ padding: 0.25em;
 }
 
 .user .welcome {
-  font-weight: 300;
-  font-size: 1em;
-  padding: 0.5em 0 0.5em 0;
+  font-weight: 400;
+  font-size: 1.5em;
+  /* padding: 0.5em 0; */
 }
 
 .menu .user hr {
-  width: 70%;
+  width: 90%;
   border: 0.7px solid #f7b617;
 }
 
@@ -304,6 +322,7 @@ padding: 0.25em;
   padding: 0.1em;
   border: 1px solid #f7b617;
   display: inline-block;
+  cursor: pointer;
 }
 
 #user-information {
@@ -335,6 +354,7 @@ padding: 0.25em;
 .user div {
   display: inline-block;
   margin: 20px 10px;
+  padding: 25px 0;
 }
 
 .user div i {
@@ -342,18 +362,26 @@ padding: 0.25em;
 }
 
 .setting {
-  padding: 20px;
-  border-bottom: 0.3px solid #fff;
+  padding: 25px;
   border-top: 0.3px solid #fff;
+  
 }
 
-.setting a {
-  text-decoration: none;
-  color: #fff;
+section div:nth-child(4) {
+  border-bottom: 0.3px solid #fff;
 }
 
 .setting:hover {
   background-color: #f7b617;
+  /* border-bottom: 2px solid rgba(43, 43, 43, 0.98); */
+  border-top: 0.3px solid rgba(43, 43, 43, 0.98);
+  color: rgba(43, 43, 43, 0.98);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+section div:nth-child(4):hover {
+  border-bottom: 0.3px solid rgba(43, 43, 43, 0.98);
 }
 
 /*---------> Gaby agrega clases <---------*/
