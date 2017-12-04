@@ -518,6 +518,35 @@ div .tab a:active {
     padding: 0;
     margin: 0
 }
+/*****************************************************************************/
+.box-data-students {
+    width: 300px;
+    height: 300px;
+    outline: 1px solid blue;
+    float: left;
+    margin: 30px;
+} 
+.box-data-students div {
+    width: 100px;
+    height: 50px;
+    outline: 1px solid red;
+    float: left;
+    margin: 20px;
+}
+.box-graphics {
+    width: 900px;
+    height: 300px;
+    margin: 20px;
+    float: left;
+    outline: 1px solid red;
+}
+.box-graphics div {
+    width: 100px;
+    height: 50px;
+    outline: 1px solid black;
+    float: left;
+    margin: 20px;
 
+}
 
 
