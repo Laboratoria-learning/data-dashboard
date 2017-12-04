@@ -12,63 +12,17 @@ window.addEventListener('load', function(event) {
   uxdesignButton.addEventListener('click', function(event) {
     alert('es click en uxdesing');
   });
+
+
   /* evento para botón de especialización front end designer */
   var frontEndDesignerButton = document.getElementById('front-end-designer-button');
   frontEndDesignerButton.addEventListener('click', function(event) {
     alert('es click en front end desing');
-    var students = [];
-    var studentsData = [];
-    var baseTech = 1800;
-    var baseHse = 1200;
-    var acumTech = 0;
-    var acumHse = 0;
-    var ind = 0;
-    /* Sedes - Array */
-    var sedes = Object.keys(data);
-    var sedesArray = [];
-    var studentGeneratiosArray = [];
-    for (var i = 0 ; i < 4 ; i++) {
-      sedesArray[i] = sedes[i];
-    }
-    /* Generaciones- Array */
-    var generations = Object.values(data);
-    /* sede */
-    var generationsArray = Object.keys(generations[0]); /* AQP-GEN-POS 0 , hacer for para 2 */
-    /* encuentro lista de alumnos */
-    var generationsValues = Object.values(generations[0]);
-    var generationsValuesStudents = generationsValues[0];
-    var generationsValuesStudentsData = Object.values(generationsValuesStudents);
-    var gen = generationsValuesStudentsData[0];
-    /* extrayendo alumnas de sede arequipa */
-    for (var aa = 0; aa < 15 ; aa++) {
-      studentsData = Object.values(gen[aa]); /* extrae alumnos */
-      students[[aa, 0]] = sedesArray[0]; /* asigna sede arequipa */
-      students[[aa, 1]] = generationsArray[0]; /* asigna generation 1 */
-      students[[aa, 2]] = studentsData[0]; /* asigna nombre */
-      students[[aa, 3]] = studentsData[1]; /* asigna foto */
-      students[[aa, 4]] = studentsData[2]; /* asigna active */
-      students[[aa, 5]] = studentsData[3]; /* asigna score objeto */
-      ind = 0;
-      /* extrayendo puntaje de sprints */
-      for (var bb = 0; bb < 4 ; bb++) {
-        var tech = Object.values(studentsData[3]);
-        var tec = Object.values(tech[bb]);
-        var tePoint = Object.values(tec[1]);
-        /* recorre las notas por print 4 por alumna */
-        /* sprint 1 */
-        ind = 0;
-        for (var cc = 0; cc < 2 ;cc++) {
-          students[[aa, 6 + bb + ind]] = ((tePoint[cc] / 1800) * 100).toFixed(1) ; /* tech */
-          students[[aa, 7 + bb]] = ((tePoint[cc] / 1200) * 100).toFixed(1) ; /* hse */
-          ind = ind + 1;
-        }
-      }
-    }
-    var acumTech = 0;
-    var acumHse = 0;
     /* para recorrer el array students */
-    for (var zz = 0 ; zz < 15 ; zz++) {
+
+    for (var zz = 0 ; zz < 259 ; zz++) {
       /* ubico área para crear elementos */
+
       var visualizationSection = document.getElementById('visualization');
       /* creaación de elementos divs */
       /* photo del estudiante */
@@ -77,7 +31,7 @@ window.addEventListener('load', function(event) {
       var imgPhoto = document.createElement('img'); /* img con propiedad src */
       divStudent.classList.add('student');
       divPhoto.classList.add('photo');
-      imgPhoto.setAttribute('src', students[[zz, 3]]);
+      imgPhoto.setAttribute('src', students[[zz, 1]]);
       imgPhoto.classList.add('photo-standart');
       visualizationSection.appendChild(divStudent);
       divStudent.appendChild(divPhoto);
@@ -96,7 +50,7 @@ window.addEventListener('load', function(event) {
       divDate.appendChild(divDateStudent);
       divDateStudent.appendChild(divName);
       divDateStudent.appendChild(divEspecializationStudent);
-      divName.textContent = students[[zz, 2]];
+      divName.textContent = students[[zz, 0]];
       divEspecializationStudent.textContent = 'Front End Developer';
       /* evaluación técnica */
       var divTechSkills = document.createElement('div');
@@ -112,7 +66,7 @@ window.addEventListener('load', function(event) {
       divTech.appendChild(labelPercentTech);
       divTech.appendChild(brUp1);
       divTech.appendChild(labelNumberTech);
-      labelPercentTech.textContent = students[[zz, 6]] + ' % ' ;
+      labelPercentTech.textContent = students[[zz, 13]] + ' % ' ;
       labelNumberTech.textContent = ' TECH SKILLS ';
       /* evaluación habilidades blandas */
       var divLifeSkills = document.createElement('div');
@@ -128,7 +82,7 @@ window.addEventListener('load', function(event) {
       divLife.appendChild(labelPercentHse);
       divLife.appendChild(brUp2);
       divLife.appendChild(labelNumberHse);
-      labelPercentHse.textContent = students[[zz, 7]] + ' % ';
+      labelPercentHse.textContent = students[[zz, 14]] + ' % ';
       labelNumberHse.textContent = ' LIFE SKILLS ';
       /* evaluación habilidades blandas */
       var divEnglishSkills = document.createElement('div');
