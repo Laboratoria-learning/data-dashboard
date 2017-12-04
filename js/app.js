@@ -1,3 +1,4 @@
+
 // evento para el selector de Sedes
 var LIM = document.getElementById('LIM');
 var AQP = document.getElementById('AQP');
@@ -66,16 +67,18 @@ console.log(desercion('LIM', '2016-2'));
 
 /** ************* DATOS ACHIEVEMENT********************/ 
 
-function logroMetas(sede, generacion, sprint) {
+function logroMetas(sede, generacion) {
   var students = data[sede][generacion]['students'];
   var studentsOverTarget = [];
   var studentsDownTarget = [];
   for (var i = 0; i < students.length; i++) {
     if (students[i].active === true) {
-      if ((students[i].sprints[sprint].score.tech >= 1260) && (students[i].sprints[sprint].score.hse >= 840)) {
-        studentsOverTarget.push(students[i].sprints[sprint]);
-      } else {
-        studentsDownTarget.push(students[i].sprints[sprint]);
+      for (var j = 0; j < students[i].sprints.length; j++) {
+        if ((students[i].sprints[j].score.tech >= 1260) && (students[i].sprints[j].score.hse >= 840)) {
+          studentsOverTarget.push(students[i].sprints[j]);
+        } else {
+          studentsDownTarget.push(students[i].sprints[j]);
+        }
       }
     } else {
 
@@ -96,7 +99,7 @@ function logroMetas(sede, generacion, sprint) {
   porcentajeAchievementShow.innerHTML = porcentajeAchievement + '<br>' + totalStudents;
 }
 
-console.log(logroMetas('LIM', '2016-2', '0'));
+console.log(logroMetas('LIM', '2016-2'));
 
 /** ************** NET PROMOTER SCORE ****************/ 
 
