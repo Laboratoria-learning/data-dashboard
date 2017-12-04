@@ -20,17 +20,19 @@
     </header>
     <section id="bar-container" class="bar">
       <div class="higher">
-        <select class="slc-transp" name="place-lab" id="place">
-          <option value="default">Seleccione Sede</option>
-          <option value="LIM">Lima</option> 
-          <option value="AQP">Arequipa</option> 
-          <option value="SCL">Santiago de Chile</option>
-          <option value="CDMX">Ciudad de Mexico</option> 
-        </select>
-        <select class="slc-transp" name="generation-lab" id="generation">
-          <option value="default">Seleccione Generación</option> 
-        </select>
-        <input type="button" id="btndash" class="btn-higher" value="Dashboard">
+        <form action="">
+          <select class="slc-transp" name="place-lab" id="place">
+            <option value="default">Seleccione Sede</option>
+            <option value="LIM">Lima</option> 
+            <option value="AQP">Arequipa</option> 
+            <option value="SCL">Santiago de Chile</option>
+            <option value="CDMX">Ciudad de Mexico</option> 
+          </select>
+          <select class="slc-transp" name="generation-lab" id="generation">
+            <option value="default">Seleccione Generación</option> 
+          </select>
+          <input type="button" id="btndash" class="btn-higher" value="Dashboard">
+        </form>
       </div>
       <div class="principal">
         <ul class="lista">
@@ -49,19 +51,34 @@
            <span class="description"># STUDENTS CURRENTLY ENROLLED</span>
          </div>
          <div class="display-inline-block c-plomo text-align-center">
-            <div id="1"></div>
             <span id="percentaje-overview" class="data-style"></span>
             <span class="description">% DROPOUT</span>
          </div> 
+         <div></div>
         </div>
         <div class="data-overview">
           <div class="title-overview">ACHIEVEMENT</div>
-          <div></div>
+          <div class="display-inline-block c-plomo text-align-center">
+              <span id="achi-overview" class="data-style"></span>
+              <span class="description"># STUDENTS THAT MEET THE TARGET</span>
+          </div>
+          <div class="display-inline-block c-plomo text-align-center">
+              <span id="achi-percentaje-overview" class="data-style"></span>
+              <span class="description">% Total</span>
+           </div> 
           <div></div> 
         </div>
         <div class="data-overview">
           <div class="title-overview">NET PROMOTER SCORE</div>
-          <div></div>
+          <div class="display-inline-block c-plomo text-align-center">
+            <span id="nps-overview" class="data-style"></span>
+            <span class="description">% CUMULATIVE NPS</span>
+          </div>
+          <div class="display-inline-block c-plomo text-align-center">
+            <span id="npsp-overview" class="description"></span>
+            <span id="npspa-overview" class="description"></span>
+            <span id="npsde-overview" class="description"></span> 
+          </div>
           <div></div> 
         </div>
       </section>
@@ -69,13 +86,18 @@
           <div>
             <div class="title-overview">TECH SKILLS</div>
              <form action="">
-
               <select name="sprint">
-               <option value="1">Sprint 1</option> 
+               <option value="1">Seleccione Sprint</option> 
               </select>
              </form>
-            <div>#</div>
-            <div>%</div>
+             <div class="display-inline-block c-plomo text-align-center">
+                <span id="tskills-overview" class="data-style"></span>
+                <span class="description"># STUDENTS THAT MEET THE TARGET</span>
+              </div>
+              <div class="display-inline-block c-plomo text-align-center">
+                 <span id="ts-percentaje-overview" class="data-style"></span>
+                 <span id="ts-overview" class="description"></span>
+              </div> 
             <div></div>
             <div></div>
           </div>

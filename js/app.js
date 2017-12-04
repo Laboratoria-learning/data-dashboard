@@ -35,19 +35,20 @@ window.addEventListener('load', function() {
       generacion = generations.value;
     });
   });
-
-
   /* Fin de los Selects */
+  //obteniendo el elemento button por medio del metodo getElementId
   var btndash = document.getElementById('btndash');
   btndash.addEventListener('click', function() {
     /* Enveroment Static*/
     enrollment(sede, generacion);
+    achievement(sede, generacion);
     /* Promedio de puntuacion Teacher */
     ratingTeachers(sede, generacion);
     ratingJedi(sede, generacion);
     studentSatisfation(sede, generacion);
     achievement(sede, generacion);
     nps(sede, generacion);
+    techSkills(sede, generacion);
   });
 });
 /* Funciones */
@@ -118,26 +119,61 @@ function achievement(sede, generacion) {
     var quantitySprints = data[sede][generacion].students[i].sprints.length;
     for (var j = 0; j < quantitySprints; j++) {
       if ((data[sede][generacion].students[i].sprints[j].score.tech > 1260) && (data[sede][generacion].students[i].sprints[j].score.hse > 840)) {
-        if((data[sede][generacion].students[i].sprints[j].number)){
         countAim++;
-        data[sede][generacion].students[i].sprints[j].number=data[sede][generacion].students[i].sprints[j].number+1;
-      console.log(data[sede][generacion].students[i].sprints[j].number)}
-      else{
-        data[sede][generacion].students[i].sprints[j].number=1;
-      }
       }
     } 
   } 
-  console.log(countAim);
+  var averageAim = (countAim * 100) / quantityStudents;
+  // inserta data a los elementos
+  var spanAim = document.getElementById('achi-overview');
+  spanAim.textContent = countAim;
+  var spanPercAim = document.getElementById('achi-percentaje-overview');
+  spanPercAim.textContent = averageAim.toFixed(0);
 }
-function nps(sede,generacion) {
+function nps(sede, generacion) {
   var countRatings = data[sede][generacion].ratings.length;
-  var accumulatorNPS=0;
-  
-  for(var i=0; i<countRatings;i++){
-    accumulatorNPS+=data[sede][generacion].ratings[i].nps.promoters-data[sede][generacion].ratings[i].nps.detractors;
+  var accumulatorNPS = 0;
+  var accumulatorPro = 0;
+  var accumulatorDet = 0;
+  var accumulatorPas = 0;
+  for (var i = 0; i < countRatings;i++) {
+    accumulatorPro += data[sede][generacion].ratings[i].nps.promoters;
+    accumulatorPas += data[sede][generacion].ratings[i].nps.passive;
+    accumulatorDet += data[sede][generacion].ratings[i].nps.detractors;
+    accumulatorNPS += data[sede][generacion].ratings[i].nps.promoters - data[sede][generacion].ratings[i].nps.detractors;
   }
-  var averageNPS=accumulatorNPS/countRatings;
-  //inserta data a los elementos
-  
+  var averagePro = (accumulatorPro / countRatings);
+  var averagePas = (accumulatorPas / countRatings);
+  var averageDet = (accumulatorDet / countRatings);
+  var averageNPS = (accumulatorNPS / countRatings) + '%';
+  // inserta data a los elementos
+  var spanNPS = document.getElementById('nps-overview');
+  spanNPS.textContent = averageNPS; 
+  var spanNPSPr = document.getElementById('npsp-overview');
+  spanNPSPr.textContent = averagePro + '% Promoters'; 
+  var spanNPSPa = document.getElementById('npspa-overview');
+  spanNPSPa.textContent = averagePas + '% Passive'; 
+  var spanNPSDe = document.getElementById('npsde-overview');
+  spanNPSDe.textContent = accumulatorDet + '% Detractors'; 
+}
+function techSkills(sede, generacion) {
+  var accumulatorTechS = 0;
+  var quantityStu = data[sede][generacion].students.length;
+ 
+  for (var i = 0; i < data[sede][generacion].students.length;i++) {
+    var countSprints = data[sede][generacion].students[i].sprints.length;
+    for (var j = 0; j < countSprints;j++) {
+      if (data[sede][generacion].students[i].sprints[j].score.tech > 1260) {
+        accumulatorTechS++;
+      }
+    }
+  }
+  var percentaje = ((accumulatorTechS * 100)/quantityStu).toFixed(0);
+  // insertamos los datos a los elementos html
+  var spanSkillT = document.getElementById('tskills-overview');
+  spanSkillT.textContent = accumulatorTechS;
+  var spanSkillTPer = document.getElementById('ts-percentaje-overview');
+  spanSkillTPer.textContent = percentaje;
+  var spanDescSkill = document.getElementById('ts-overview');
+  spanDescSkill.textContent = '% OF TOTAL (' + quantityStu + ')';
 }
