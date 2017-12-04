@@ -159,3 +159,6 @@ section .principal{
 .display-none{
    display: none;
 }
+.show {
+	display: block;
+}

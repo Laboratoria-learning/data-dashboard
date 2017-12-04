@@ -38,8 +38,52 @@ window.addEventListener('load', function() {
   });
   /* Fin de los Selects */
   // obteniendo el elemento button por medio del metodo getElementId
+	
+  /*realizamos el tab*/
+var overview = document.getElementById('overview');
+var students = document.getElementById('students');
+var teachers = document.getElementById('teachers');
+
+function showOverview(event) {
+	var containerMain = document.getElementById('container-main');
+	var studentsSection = document.getElementById('students-section');
+	var teachersSection = document.getElementById('teachers-section');
+	if(containerMain.classList.contains('display-none')){
+		containerMain.setAttribute('class', 'container show');
+		studentsSection.setAttribute('class', 'display-none');
+		teachersSection.setAttribute('class', 'display-none');
+	} 
+}
+
+function showStudents(event) {
+	var containerMain = document.getElementById('container-main');
+	var studentsSection = document.getElementById('students-section');
+	var teachersSection = document.getElementById('teachers-section');
+	if(studentsSection.classList.contains('display-none')){
+		studentsSection.setAttribute('class', 'container show');
+		containerMain.setAttribute('class', 'display-none');
+		teachersSection.setAttribute('class', 'display-none');
+	} 
+}
+
+function showTeachers(event) {
+	var containerMain = document.getElementById('container-main');
+	var studentsSection = document.getElementById('students-section');
+	var teachersSection = document.getElementById('teachers-section');
+	if(teachersSection.classList.contains('display-none')){
+		teachersSection.setAttribute('class', 'container show');
+		studentsSection.setAttribute('class', 'display-none');
+		containerMain.setAttribute('class', 'display-none');
+	} 
+}
+  
   var btndash = document.getElementById('btndash');
   btndash.addEventListener('click', function() {
+	  
+	overview.addEventListener('click', showOverview);
+    students.addEventListener('click', showStudents);
+    teachers.addEventListener('click', showTeachers);
+
     // aplicando clase a la seccion principal
     sectionMain.classList.remove('display-none');
     sectionMain.classList.add('display-inline-block');
@@ -206,3 +250,4 @@ function hseSkills(sede, generacion) {
   var spanDescSkill = document.getElementById('hse-overview');
   spanDescSkill.textContent = '% OF TOTAL (' + quantityStu + ')';
 }
+
