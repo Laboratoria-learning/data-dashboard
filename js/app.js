@@ -251,3 +251,35 @@ function hseSkills(sede, generacion) {
   spanDescSkill.textContent = '% OF TOTAL (' + quantityStu + ')';
 }
 
+/* styles change-icon-square*/
+
+var specialization_1 = document.getElementById("topic-1");
+var squareMarked_1 = document.getElementById("square-1");
+var specialization_2 = document.getElementById("topic-2");
+var squareMarked_2 = document.getElementById("square-2");
+var specialization_3 = document.getElementById("topic-3");
+var squareMarked_3 = document.getElementById("square-3");
+
+
+specialization_1.addEventListener("click", function(event) {
+	squareMarked_1.setAttribute("class", "icon-square background-color");
+	squareMarked_2.setAttribute("class", "icon-square");
+	squareMarked_3.setAttribute("class", "icon-square");
+})
+
+
+specialization_2.addEventListener("click", function(event) {
+	squareMarked_2.setAttribute("class", "icon-square background-color");
+	squareMarked_1.setAttribute("class", "icon-square");
+	squareMarked_3.setAttribute("class", "icon-square");
+})
+
+
+
+specialization_3.addEventListener("click", function(event) {
+	squareMarked_3.setAttribute("class", "icon-square background-color");
+	squareMarked_1.setAttribute("class", "icon-square");
+	squareMarked_2.setAttribute("class", "icon-square");
+})
+
+

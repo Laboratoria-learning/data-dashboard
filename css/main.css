@@ -162,3 +162,186 @@ section .principal{
 .show {
 	display: block;
 }
+/*students styles*/
+a {
+	text-decoration: none;
+}
+.icon-square {
+	color: #ffc107;
+	display: inline-block;
+	font-size: 20px;
+}
+.skills-menu {
+	display: inline-block;
+	margin-left: 10px;
+}
+.topic {
+	padding: 6px;
+	margin: 4px 5px;
+}
+.dropdown {
+	margin-left: 95px;
+	
+	margin-top: 30px;
+	background-color: #fff;
+	outline: 1px purple solid;
+	cursor: pointer;
+	z-index: 50;
+}
+.space {
+	padding-left: 20px;
+padding-right: 15px;
+}
+.hide {
+	display: none;
+}
+
+.dropbtn {
+	width: auto;
+	font-size: 30px;
+	outline: 1px solid red;
+	background-color: #e1e1e1;
+	z-index: 50;
+}
+.option-menu {
+	display: inline-block;
+}
+.laboratoria-place {
+	border-bottom: 2px solid #ffc107;
+	width: 180px;
+	outline: 1px solid green;
+}
+.block {
+	display: block;
+}
+.place {
+	border-bottom: 2px solid #ffc107;
+	margin-bottom: 18px;
+	padding-bottom: 10px;
+	margin-top: 20px;
+}
+.generation {
+	margin-left: 6px;
+}
+.specialization {
+	background-color: #fff;
+	display: inline-block;
+	padding: 20px 180px 20px 20px;
+	margin: 40px;
+	position: absolute;
+}
+.profile {
+	
+	display: inline-block;
+	margin: 40px 20px 20px 480px;
+	padding: 20px;
+	height: auto;
+}
+.icon-search {
+	background-color: #fff;
+	outline: none;
+	border-radius: 5px;
+	border: none;
+	font-size: 20px;
+	color: grey;
+	padding: 8px;
+}
+.profile-input {
+	background-color: #fff;
+	outline: none;
+	border-radius: 5px;
+	border: none;
+	width: 700px;
+	height: 30px;
+	font-size: 20px;
+	color: grey;
+}
+.profile-form {
+	background-color: #fff;
+	outline: none;
+	border-radius: 5px;
+	border: none;
+	height: 33px;
+}
+.student-profile {
+	padding-top: 30px;
+	
+}
+.photo {
+	position: absolute;
+}
+.photo-profile {
+	width: 180px;
+	height: 180px;
+	display: inline-block;
+}
+.lab-student {
+	background-color: #fff;
+	padding: 20px;
+	height: 220px;
+}
+.content-profile, .content-number, .photo {
+	display: inline-block;
+}
+.content-number {
+	position: absolute;
+	padding: 6px 6px 6px 25px;
+	height: auto;
+	/*outline: 1px solid blue;*/
+}
+.content-profile {
+	margin-left: 190px;
+}
+.skills-menu {
+	text-transform: capitalize;
+}
+.tech-skills, .life-skills, .english-skills {
+	display: inline-block;
+	background-color: #e1e1e1;
+	padding: 6px;
+	margin: 3px;
+	position: relative;
+	text-align: center;
+}
+.career {
+	margin-bottom: 50px;
+	text-transform: capitalize;
+}
+.specialization-title {
+	text-transform: uppercase;
+}
+.skills {
+	background-color: #f1f1f1;
+	display: inline-block;
+	margin: 5px;
+	font-size: 14px;
+	text-transform: capitalize;
+	padding: 4px;
+}
+.name {
+	text-transform: uppercase;
+}
+.icon-triangle-right {
+	margin-left: 8px;
+}
+.skills-points {
+	font-size: 8px;
+	text-transform: uppercase;
+}
+.description {
+	font-size: 13px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.topic {
+	cursor: pointer;
+}
+.go {
+	margin-top: 115px;
+	margin-left: 130px;
+	
+}
+.background-color {
+	background-color: #ffc107;
+	border-radius: 5px;
+}
