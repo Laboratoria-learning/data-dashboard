@@ -19,25 +19,21 @@
       </nav>
     </header>
     <section id="bar-container" class="bar">
-      <div>
-        <span>
-
-        </span>
+      <div class="higher">
+        <form action="">
+          <select class="slc-transp" name="place-lab" id="place">
+            <option value="default">Seleccione Sede</option>
+            <option value="LIM">Lima</option> 
+            <option value="AQP">Arequipa</option> 
+            <option value="SCL">Santiago de Chile</option>
+            <option value="CDMX">Ciudad de Mexico</option> 
+          </select>
+          <select class="slc-transp" name="generation-lab" id="generation">
+            <option value="default">Seleccione Generación</option> 
+          </select>
+          <input type="button" id="btndash" class="btn-higher" value="Dashboard">
+        </form>
       </div>
-      <select name="Sede">
-        <option value="1">Lima</option> 
-        <option value="2">Arequipa</option> 
-        <option value="3">Santiago de Chile</option>
-        <option value="4">Ciudad de Mexico</option> 
-      </select>
-      <select name="Promocin">
-        <option value="1">2015 - I</option> 
-        <option value="2">2015 - II</option> 
-        <option value="3">2016 - I</option>
-        <option value="4">2016 - II</option> 
-        <option value="3">2017 - I</option>
-        <option value="4">2017 - II</option> 
-      </select>
       <div class="principal">
         <ul class="lista">
           <li><a href="#">overview</a></li>
@@ -46,64 +42,123 @@
         </ul>
       </div>
     </section>
-    <section class="container">
+    <section class="container display-none" id="container-main">
       <section class="overview-one">
         <div class="data-overview">
          <div class="title-overview">ENROLLMENT</div>
-         <div><span># STUDENTS CURRENTLY ENROLLED</span></div>
-         <div></div> 
+         <div class="display-inline-block c-plomo text-align-center">
+           <span id="count-overview" class="data-style"></span>
+           <span class="description"># STUDENTS CURRENTLY ENROLLED</span>
+         </div>
+         <div class="display-inline-block c-plomo text-align-center">
+            <span id="percentaje-overview" class="data-style"></span>
+            <span class="description">% DROPOUT</span>
+         </div> 
+         <div id="enrollment-graph"><img src="assets/images/bar-graph.png" alt=""></div>
         </div>
         <div class="data-overview">
           <div class="title-overview">ACHIEVEMENT</div>
-          <div></div>
-          <div></div> 
+          <div class="display-inline-block c-plomo text-align-center">
+              <span id="achi-overview" class="data-style"></span>
+              <span class="description"># STUDENTS THAT MEET THE TARGET</span>
+          </div>
+          <div class="display-inline-block c-plomo text-align-center">
+              <span id="achi-percentaje-overview" class="data-style"></span>
+              <span class="description">% Total</span>
+           </div> 
+          <div><img src="assets/images/graph.png" alt=""></div> 
         </div>
         <div class="data-overview">
           <div class="title-overview">NET PROMOTER SCORE</div>
-          <div></div>
-          <div></div> 
+          <div class="display-inline-block c-plomo text-align-center">
+            <span id="nps-overview" class="data-style"></span>
+            <span class="description">% CUMULATIVE NPS</span>
+          </div>
+          <div class="display-inline-block c-plomo text-align-center">
+            <span id="npsp-overview" class="description"></span>
+            <span id="npspa-overview" class="description"></span>
+            <span id="npsde-overview" class="description"></span> 
+          </div>
+          <div><img src="assets/images/graph.png" alt=""></div> 
         </div>
       </section>
       <section class="overview-two">
-          <div>
-            <div class="title-overview">TECH SKILLS</div>
-             <form action="">
+        <div>
+          <div class="title-overview">TECH SKILLS</div>
+             <!-- <form action="">
               <select name="sprint">
-               <option value="1">Sprint 1</option> 
+               <option value="1">Seleccione Sprint</option> 
               </select>
-             </form>
-            <div>#</div>
-            <div>%</div>
-            <div></div>
-            <div></div>
+             </form> -->
+          <div class="display-inline-block c-plomo text-align-center">
+            <span id="tskills-overview" class="data-style"></span>
+            <span class="description"># STUDENTS THAT MEET THE TARGET</span>
           </div>
+          <div class="display-inline-block c-plomo text-align-center">
+            <span id="ts-percentaje-overview" class="data-style"></span>
+            <span id="ts-overview" class="description"></span>
+          </div> 
+          <div>
+            <img src="assets/images/rectangular-graphic.png" alt="">
+            <img src="assets/images/circle-graphic.png" alt="">
+          </div> 
+          <div></div>
+        </div>
       </section>
       <section class="overview-three">
-          <div></div>
-          <div></div>
-          <div></div>
+          <div>
+              <div class="title-overview">LIFE SKILLS</div>
+               <!-- <form action="">
+                <select name="sprint">
+                 <option value="1">Seleccione Sprint</option> 
+                </select>
+               </form> -->
+               <div class="display-inline-block c-plomo text-align-center">
+                  <span id="hse-skills-overview" class="data-style"></span>
+                  <span class="description"># OVERALL CLASS AVERAGE</span>
+                </div>
+                <div class="display-inline-block c-plomo text-align-center">
+                  <span id="hse-percentaje-overview" class="data-style"></span>
+                  <span id="hse-overview" class="description"></span>
+                </div> 
+                <div>
+                  <img src="assets/images/rectangular-graphic.png" alt="">
+                  <img src="assets/images/circle-graphic.png" alt="">
+                </div> 
+                <div></div>
+            </div>
       </section>
       <section class="overview-for">
-          <div>
-            <div class="title-overview">STUDENT SATISFACTION</div>
-            <div></div>
-            <div></div>
+        <div class="data-overview">
+          <div class="title-overview">STUDENT SATISFACTION</div>
+          <div class="display-inline-block c-plomo text-align-center">
+            <span id="s-nps-overview" class="data-style"></span>
+            <span class="description">% MEETING OR EXCEEDING EXPECTATIONS(CUMULATIVE)</span>
           </div>
-          <div>
-            <div class="title-overview">TEACHER RATING</div>
-            <div></div>
-            <div></div>
+          <div><img src="assets/images/graph.png" alt=""></div> 
+        </div>
+        <div class="data-overview">
+          <div class="title-overview">TEACHER RATING</div>
+          <div class="display-inline-block c-plomo text-align-center">
+            <span id="t-rating-overview" class="data-style"></span>
+            <span class="description">OVERALL TEACHER RATING(CUMULATIVE)</span>
           </div>
-          <div>
-            <divclass="title-overview">JEDI MASTER RATING</div>
-            <div></div>
-            <div></div>
+          <div><img src="assets/images/graph.png" alt=""></div> 
+        </div>
+        <div class="data-overview">
+          <div class="title-overview">JEDI MASTER RATING</div>
+          <div class="display-inline-block c-plomo text-align-center">
+            <span id="j-rating-overview" class="data-style"></span>
+            <span class="description">OVERALL JEDI RATING(CUMULATIVE)</span>
           </div>
-        </section>
-
+          <div><img src="assets/images/graph.png" alt=""></div> 
+        </div>
+      </section>
     </section>
 		<!-- Base de datos -->
-		<script src="./js/data.js"></script>
+    <script src="./js/data.js"></script>
+    <!-- Herramienta para Graficos -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 		<!-- Aquí va tus archivos JS -->
     <script src="./js/app.js"></script>
   </body>
