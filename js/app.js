@@ -1,3 +1,5 @@
+//Lo primero que tenemos que hacer es declarar todas las variables para acceder al DOM
+
 //Variables
 var sede = 'LIM';
 var promo = '2016-2';
@@ -53,6 +55,7 @@ var containerStudents = document.getElementsByClassName('container-students')[0]
 
 //Sedes
 
+//Esta funcion selecciona la sede donde estoy haciendo click, haciendo que mi variable sede sea igual al input donde hago click
 //AQP, CDMX, LIM, SCL
 function selectSede () {
   var firstPromAqp = document.getElementById('form-aqp').children[0].firstChild;
@@ -104,6 +107,7 @@ function selectSede () {
 }
 //Promos
 //2016-2 2017-1 2017-2
+//Esta funcion hace lo mismo pero con las promos, haciedno que mi variable promo sea igual al input donde le hago click
 function selectPromo() {
   for (var i = 0; i < inputsPromo.length; i++) {
     inputsPromo[i].addEventListener('click',function () {
@@ -134,6 +138,7 @@ selectPromo();
 
 
 //Enrollment
+//Esta funcion me permite saber cuantas chicas activas e inactivas hay
 function enrollment(act,inac) {
   active = 0;
   inactive = 0;
@@ -153,6 +158,7 @@ function enrollment(act,inac) {
 }
 
 //Function para saber el achievement
+//Esta funcion me permite saber que porcentaje de alumnas alacanzo el promedio requerido
 function achievement () {
 
   var studentsAchieve = 0;
@@ -321,6 +327,7 @@ function jediMaster () {
 
 jediMaster();
 
+/*Esto e spara google charts
 function sprintsNoteTech(sp1b, sp1l, sp2b, sp2l, sp3b, sp3l, sp4b, sp4l) {
 
   var sprint1big = 0;
@@ -425,8 +432,9 @@ function sprintsNoteHse(sp1b, sp1l, sp2b, sp2l, sp3b, sp3l, sp4b, sp4l) {
     sp4l: sprint4low,
   }
 }
-
+*/
 //Funcion navegar
+//La funcion toogle y show section es para el menu de navegacion
 function toggleSection (elem){
   for (var i=0; i<elem.length; i++) {
     elem[i].addEventListener('click', showSections);
@@ -446,6 +454,7 @@ function showSections(){
 toggleSection(navElem);
 
 //Crear studiantes
+//ESta funcion crea las estudiantes del menu 
 function createStudents() {
   while (containerStudents.firstChild) {
     containerStudents.removeChild(containerStudents.firstChild);
@@ -488,6 +497,7 @@ function createStudents() {
 }
 createStudents();
 
+//Desde aqui empiezan las funciones para google charts
 
 //Funciones chart 
 
