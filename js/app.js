@@ -1,237 +1,307 @@
 
-// Funcionalidad de tu producto
-var localArequipa = data['AQP'];
-var localCdmx = data['CDMX'];
-var localLim = data['LIM'];
-var localSantiago = data['SCL'];
-
-
-// aqp62 ---> arequipa 2016-2
-var promAq62 = localArequipa['2016-2'];
-var studentsAq62 = promAq62.students;
-// -------------------------------------------------------------------------
-var nameListstudentsAq62 = '';
-for (var i = 0; i < studentsAq62.length; i++) {
-  nameAq62 = studentsAq62[i]['name'] + '/n';
-  nameListstudentsAq62 += nameAq62;
-}
-console.log(nameListstudentsAq62);
-// -------------------------------------------------------------------------
-
-// estudiantes activas
-var activeAq62 = 0;
-// estudiantes inactivas
-var inactiveAq62 = 0;
-
-for (var i = 0; i < studentsAq62.length; i++) {
-  if ((studentsAq62[i]['active']) === true) {
-    activeAq62 ++;
-  } else {
-    inactiveAq62 ++;
-  }
-}
-
-// desersion en porcentaje
-var desertion = Math.floor((inactiveAq62 * 100) / (inactiveAq62 + activeAq62)) + '%';
-// students currenly enrolled
-var enrolled = inactiveAq62 + activeAq62;
-
-// ver el total que pasaron el 70% (del total de puntos de hse y tecnico)
-countPastTarget = 0;
-aqp62notasArr = [];
-var contador = 0;
-for (var i = 0; i < studentsAq62.length; i++) {
-  if (contador !== 0) {
-    aqp62notasArr.push(contador);
-  } else {
-  }
-  contador = 0;
-  for (var j = 0; j < studentsAq62[i]['sprints'].length; j++) {
-    var notaSprint = (studentsAq62[i]['sprints'][j]['score']['tech']) + (studentsAq62[i]['sprints'][j]['score']['hse']);
-    contador += notaSprint;
-  }
-}
-
-for (var notas = 0; notas < aqp62notasArr.length; notas++) {
-  promedio = (aqp62notasArr[notas]) / 4;
-  // console.log(promedio);
-  if (promedio > 2100)
-    countPastTarget++;
-}
-// lsta con todas las notas promedio de las 15 alumnas
-// console.log(aqp62notasArr);
-// alumnas que pasaron el 70% en porcenraje (falta obtener countPastTarget)
-var countPastTargetPorc = Math.round((countPastTarget * 100) / (studentsAq62.length)) + '%';
-
-// nps
-var promAq62ratng = promAq62.ratings;
-npsPromoter = 0;
-npsDetractors = 0;
-npsPassive = 0;
-
-for (var i = 0; i < promAq62ratng.length; i++) {
-  // for (var j = 0; j < promAq61ratng[i]['nps'].length; j++)
-  npsPromoter += promAq62ratng[i]['nps']['promoters'];
-  npsPassive += promAq62ratng[i]['nps']['passive'];
-  npsDetractors += promAq62ratng[i]['nps']['detractors'];
-  npsCantTotal = (npsPromoter + npsPassive + npsDetractors);
-
-  npsPromotersPerc = Math.round((npsPromoter * 100) / npsCantTotal) ;
-  npsPassivePerc = Math.round((npsPassive * 100) / npsCantTotal);
-  npsDetractorsPerc = Math.round((npsDetractors * 100) / npsCantTotal);
-
-  npsTotal = Math.round(npsPromotersPerc - npsDetractorsPerc) + '%';
-}
-
-// satisfacion de estudiantes con la experiencia laboratoria
-noCumpleExp = 0;
-cumpleExp = 0;
-superaExp = 0;
-for (var i = 0; i < promAq62ratng.length; i++) {
-  noCumpleExp += promAq62ratng[i]['student']['no-cumple'];
-  cumpleExp += promAq62ratng[i]['student']['cumple'];
-  superaExp += promAq62ratng[i]['student']['supera'];
-}
-
-// puntuación promedio de los profesores
-var scoreTeachers = 0;
-for (i = 0; i < promAq62ratng.length; i++) {
-  scoreTeachers += promAq62ratng[i]['teacher'];
-}
-// toFixed --> función para limitar el número de decimales con su parametro
-var scoreTeachersTotal = (scoreTeachers / 4).toFixed(1);
-// alert(scoreTeachersTotal);
-
-// puntuacion promedio de jedis
-var scoreJedis = 0;
-for (i = 0; i < promAq62ratng.length; i++) {
-  scoreJedis += promAq62ratng[i]['jedi'];
-}
-var scoreJedisTotal = (scoreJedis / 4).toFixed(1);
-// ----------------------------------------------------------------------------------------------------------------------------------------
-// Aq71 ----> arequipa 2017-1
-var promAq71 = localArequipa['2017-1'];
-var studentsAq71 = promAq71.students;
-// estudiantes activas
-var activeAq71 = 0;
-// estudiantes inactivas
-var inactiveAq71 = 0;
-
-for (var i = 0; i < studentsAq71.length; i++) {
-  if ((studentsAq71[i]['active']) === true) {
-    activeAq71 ++;
-  } else {
-    inactiveAq71 ++;
-  }
-}
-
-// desersion en porcentaje
-var desertionAq71 = Math.floor((inactiveAq71 * 100) / (inactiveAq71 + activeAq71)) + '%';
-// students currenly enrolled
-var enrolledAq71 = inactiveAq71 + activeAq71;
-
-// ver el total que pasaron el 70% (del total de puntos de hse y tecnico)
-countPastTargetAqp71 = 0;
-aqp71notasArr = [];
-var contadorAqp71 = 0;
-for (var i = 0; i < studentsAq71.length; i++) {
-  if (contadorAqp71 !== 0) {
-    aqp71notasArr.push(contadorAqp71);
-  } else {
-  }
-  contadorAqp71 = 0;
-  for (var j = 0; j < studentsAq71[i]['sprints'].length; j++) {
-    var notaSprintAqp71 = (studentsAq71[i]['sprints'][j]['score']['tech']) + (studentsAq71[i]['sprints'][j]['score']['hse']);
-    contadorAqp71 += notaSprintAqp71;
-  }
-}
-for (var notasAqp71 = 0; notasAqp71 < aqp71notasArr.length; notasAqp71++) {
-  promedioAqp71 = (aqp71notasArr[notasAqp71]) / 3;
-  console.log(promedioAqp71);
-  if (promedioAqp71 > 2100)
-    countPastTargetAqp71++;
-}
-// lsta con todas las notas de las 15 alumnas y sus 3 sprints
-console.log(aqp71notasArr);
-// alumnas que pasaron el 70% en porcenraje (falta obtener countPastTargetAqp71)
-var countPastTargetPorcAqp71 = Math.round((countPastTargetAqp71 * 100) / (studentsAq71.length)) + '%';
-
-// nps
-var promAq71ratng = promAq71.ratings;
-npsPromoterAqp71 = 0;
-npsDetractorsAqp71 = 0;
-npsPassiveAqp71 = 0;
-
-for (var i = 0; i < promAq71ratng.length; i++) {
-  // for (var j = 0; j < promAq61ratng[i]['nps'].length; j++)
-  npsPromoterAqp71 += promAq71ratng[i]['nps']['promoters'];
-  npsPassiveAqp71 += promAq71ratng[i]['nps']['passive'];
-  npsDetractorsAqp71 += promAq71ratng[i]['nps']['detractors'];
-  npsCantTotalAqp71 = (npsPromoterAqp71 + npsPassiveAqp71 + npsDetractorsAqp71);
-
-  npsPromotersPercAqp71 = Math.round((npsPromoterAqp71 * 100) / npsCantTotalAqp71) ;
-  npsPassivePercAqp71 = Math.round((npsPassiveAqp71 * 100) / npsCantTotalAqp71);
-  npsDetractorsPercAqp71 = Math.round((npsDetractorsAqp71 * 100) / npsCantTotalAqp71);
-
-  npsTotalAqp71 = Math.round(npsPromotersPercAqp71 - npsDetractorsPercAqp71) + '%';
-}
-// satisfacion de estudiantes con la experiencia laboratoria
-noCumpleExpAqp71 = 0;
-cumpleExpAqp71 = 0;
-superaExpAqp71 = 0;
-for (var i = 0; i < promAq71ratng.length; i++) {
-  noCumpleExpAqp71 += promAq71ratng[i]['student']['no-cumple'];
-  cumpleExpAqp71 += promAq71ratng[i]['student']['cumple'];
-  superaExpAqp71 += promAq71ratng[i]['student']['supera'];
-}
-// puntuación promedio de los profesores
-var scoreTeachersAqp71 = 0;
-for (i = 0; i < promAq71ratng.length; i++) {
-  scoreTeachersAqp71 += promAq71ratng[i]['teacher'];
-  console.log(promAq71ratng[i]['teacher']);
-}
-// toFixed --> función para limitar el número de decimales con su parametro
-var scoreTeachersTotalAqp71 = (scoreTeachersAqp71 / 3).toFixed(1);
-// alert(scoreTeachersTotal);
-
-// puntuacion promedio de jedis
-var scoreJedisAqp71 = 0;
-for (i = 0; i < promAq71ratng.length; i++) {
-  scoreJedisAqp71 += promAq71ratng[i]['jedi'];
-}
-var scoreJedisTotalAqp71 = (scoreJedisAqp71 / 3).toFixed(1);
-
-// ----------------------------------------------------------------------------------------------------------------------------------------------
 window.addEventListener('load', function() {
-  document.getElementById('white').setAttribute('class', 'disappear');
-});
-var selectSede = document.getElementById('sedes');
-selectSede.addEventListener('change', function(event) {
-  if (event.target.value === 'aqp62') {
-    document.getElementById('enrolled').innerHTML = enrolled;
-    document.getElementById('dropout').innerHTML = desertion;
-    document.getElementById('target').innerHTML = countPastTarget;
-    document.getElementById('target-percent').innerHTML = countPastTargetPorc;
-    document.getElementById('nps').innerHTML = npsTotal;
-    document.getElementById('promoter').innerHTML = npsPromotersPerc + '% Promoters';
-    document.getElementById('passive').innerHTML = npsPassivePerc + '% Passive';
-    document.getElementById('detractors').innerHTML = npsDetractorsPerc + '% Detractors';
-    document.getElementById('scoret').innerHTML = scoreTeachersTotal;
-    document.getElementById('scorej').innerHTML = scoreJedisTotal;
-  } else if (event.target.value === 'aqp71') {
-    document.getElementById('enrolled').innerHTML = enrolledAq71;
-    document.getElementById('dropout').innerHTML = desertionAq71;
-    document.getElementById('target').innerHTML = countPastTargetAqp71;
-    document.getElementById('target-percent').innerHTML = countPastTargetPorcAqp71;
-    document.getElementById('nps').innerHTML = npsTotalAqp71;
-    document.getElementById('promoter').innerHTML = npsPromotersPercAqp71 + '% Promoters';
-    document.getElementById('passive').innerHTML = npsPassivePercAqp71 + '% Passive';
-    document.getElementById('detractors').innerHTML = npsDetractorsPercAqp71 + '% Detractors';
-    document.getElementById('scoret').innerHTML = scoreTeachersTotalAqp71;
-    document.getElementById('scorej').innerHTML = scoreJedisTotalAqp71;
-  }
-});
+  var selectSede = document.getElementById('sedes');
+  var promoArequipa62 = data['AQP']['2016-2'];
+  var promoArequipa71 = data['AQP']['2017-1'];
+  var promoCdmx71 = data['CDMX']['2017-1'];
+  var promoCdmx72 = data['CDMX']['2017-2'];
+  var promoLim62 = data['LIM']['2016-2'];
+  var promoLim71 = data['LIM']['2017-1'];
+  var promoLim72 = data['LIM']['2017-2'];
+  var promoSantiago62 = data['SCL']['2016-2'];
+  var promoSantiago71 = data['SCL']['2017-1'];
+  var promoSantiago72 = data['SCL']['2017-2'];
 
+  selectSede.addEventListener('change', function(event) {
+    // FUNCIONES
+    // El total de estudiantes presentes por sede y generación.
+    function dataStudents(promo) {
+      // estudiantes activas y desercion
+      var students = promo.students;
+      // estudiantes activas
+      var activeStudents = 0;
+      // estudiantes inactivas
+      var inactiveStudents = 0;
+
+      for (var i = 0; i < students.length; i++) {
+        if ((students[i]['active']) === true) {
+          activeStudents ++;
+        } else {
+          inactiveStudents ++;
+        }
+      }
+      // desersion en porcentaje
+      var desertion = Math.floor((inactiveStudents * 100) / students.length) + '%';
+      // students currenly enrolled
+      var enrolled = activeStudents;
+
+      document.getElementById('enrolled').innerHTML = activeStudents;
+      document.getElementById('dropout').innerHTML = desertion;
+
+      // -------------------------------------------------------------------------------------------------------------------------------
+      // Alumnas que pasaron el 70%
+      var countPastTarget = 0;
+      var countPastTargetTech = 0;
+      var countPastTargetHse = 0;
+      // lista con notas de los 4 sprints de las alumnas
+      var allStudentsNotasTotalArr = [];
+      // variables para la sumatoria de las notas tech + hse
+      var notaTotal = 0;
+      var notaTechTotal = 0;
+      var notaHseTotal = 0;
+      for (var i = 0; i < students.length; i++) {
+        if (notaTotal !== 0) {
+          allStudentsNotasTotalArr.push(notaTotal);
+        }
+        notaTechTotal = 0;
+        notaHseTotal = 0;
+        for (var j = 0; j < students[i]['sprints'].length; j++) {
+          var notaTech = students[i]['sprints'][j]['score']['tech'];
+          var notaHse = students[i]['sprints'][j]['score']['hse'];
+          // sumatoria de las notas tech de todos los sprints
+          notaTechTotal += notaTech;
+          // sumatoria de las notas hse de todos los sprints
+          notaHseTotal += notaHse;
+          // la meta es superar 70% en tech y en hse
+          if ((notaTechTotal / students[i]['sprints'].length) > 1260 && (notaHseTotal / students[i]['sprints'].length) > 940) {
+            countPastTarget++;
+          }
+          // META DEL 70% POR AREAS
+          // la meta es superar 70% en tech
+          if ((notaTechTotal / students[i]['sprints'].length) > 1260) {
+            countPastTargetTech++;
+          }
+          // la meta es superar 70% en hse
+          if ((notaHseTotal / students[i]['sprints'].length) > 940) {
+            countPastTargetHse++;
+          }
+        }
+      }
+      var countPastTargetPorc = Math.round((countPastTarget * 100) / (students.length)) + '%';
+      var countPastTargetTechPorc = Math.round((countPastTargetTech * 100) / (students.length)) + '%';
+      var countPastTargetHsePorc = Math.round((countPastTargetHse * 100) / (students.length)) + '%';
+
+      document.getElementById('target').innerHTML = countPastTarget;
+      document.getElementById('target-percent').innerHTML = countPastTargetPorc;
+      document.getElementById('tech').innerHTML = countPastTargetTech;
+      document.getElementById('tech-percent').innerHTML = countPastTargetTechPorc;
+      document.getElementById('hse').innerHTML = countPastTargetHse;
+      document.getElementById('hse-percent').innerHTML = countPastTargetHsePorc;
+      // ---------------------------------------------------------------------------------------------------------------------------------
+      // nps
+      var promoRating = promo.ratings;
+      var npsPromoter = 0;
+      var npsDetractors = 0;
+      var npsPassive = 0;
+
+      for (var i = 0; i < promoRating.length; i++) {
+        npsPromoter += promoRating[i]['nps']['promoters'];
+        npsPassive += promoRating[i]['nps']['passive'];
+        npsDetractors += promoRating[i]['nps']['detractors'];
+      }
+      npsCantTotal = (npsPromoter + npsPassive + npsDetractors);
+
+      npsPromotersPerc = Math.round((npsPromoter * 100) / npsCantTotal);
+      npsPassivePerc = Math.round((npsPassive * 100) / npsCantTotal);
+      npsDetractorsPerc = Math.round((npsDetractors * 100) / npsCantTotal);
+
+      npsTotal = Math.round(npsPromotersPerc - npsDetractorsPerc) + '%';
+      document.getElementById('nps').innerHTML = npsTotal;
+      document.getElementById('promoter').innerHTML = npsPromotersPerc + '% Promoter';
+      document.getElementById('passive').innerHTML = npsPassivePerc + '% Passive';
+      document.getElementById('detractors').innerHTML = npsDetractorsPerc + '% Detractor';
+      // --------------------------------------------------------------------------------------------------------------------------------
+      // satisfacion de estudiantes con la experiencia laboratoria
+      noCumpleExp = 0;
+      cumpleExp = 0;
+      superaExp = 0;
+      for (var i = 0; i < promoRating.length; i++) {
+        noCumpleExp += promoRating[i]['student']['no-cumple'];
+        cumpleExp += promoRating[i]['student']['cumple'];
+        superaExp += promoRating[i]['student']['supera'];
+      }
+      totalExp = noCumpleExp + cumpleExp + superaExp;
+      var satisfaction = Math.round(((cumpleExp + superaExp) * 100) / totalExp);
+      document.getElementById('satisfaction').innerHTML = satisfaction;
+
+      // ----------------------------------------------------------------------------------------------------------------------------------
+      // puntuación promedio de los profesores y jedis
+      var scoreTeacher = 0;
+      var scoreJedi = 0;
+      for (i = 0; i < promoRating.length; i++) {
+        scoreTeacher += promoRating[i]['teacher'];
+        scoreJedi += promoRating[i]['jedi'];
+      }
+      // puntuacion promedio de teacher
+      var scoreTeacherTotal = (scoreTeacher / promo['ratings'].length).toFixed(1);
+      // puntuacion promedio de jedis
+      var scoreJedisTotal = (scoreJedi / promo['ratings'].length).toFixed(1);
+      // toFixed --> función para limitar el número de decimales con su parametro
+      // alert(scoreTeachersTotal);
+      document.getElementById('scoret').innerHTML = scoreTeacherTotal;
+      document.getElementById('scorej').innerHTML = scoreJedisTotal;
+
+      var techSprintSelect = document.getElementById('tech-skills');
+      techSprintSelect.addEventListener('change', function(event) {
+        var notasTechSprint1Arr = [];
+        var notasTechSprint2Arr = [];
+        var notasTechSprint3Arr = [];
+        var notasTechSprint4Arr = [];
+
+        for (var i = 0; i < students.length; i++) {
+          for (var j = 0; j < students[i]['sprints'].length; j++) {
+            var notaTechSprint = students[i]['sprints'][j]['score']['tech'];
+            if (j === 0) {
+              notasTechSprint1Arr.push(notaTechSprint);
+            }
+            if (j === 1) {
+              notasTechSprint2Arr.push(notaTechSprint);
+            }
+            if (j === 2) {
+              notasTechSprint3Arr.push(notaTechSprint);
+            }
+            if (j === 3) {
+              notasTechSprint4Arr.push(notaTechSprint);
+            }
+          }
+        }
+        // console.log(notasTechSprint1Arr);
+        // console.log(notasTechSprint2Arr);
+        // console.log(notasTechSprint3Arr);
+        // console.log(notasTechSprint4Arr);
+
+        var pastTargetperSprint = 0;
+        if (event.target.value === '1') {
+          for (var i = 0 ;i < notasTechSprint1Arr.length ;i++) {
+            if (notasTechSprint1Arr[i] > 1260) {
+              pastTargetperSprint++;
+            }
+          }
+        }
+        if (event.target.value === '2') {
+          for (var i = 0 ;i < notasTechSprint2Arr.length ;i++) {
+            if (notasTechSprint2Arr[i] > 1260) {
+              pastTargetperSprint++;
+            }
+          }
+        }
+        if (event.target.value === '3') {
+          for (var i = 0 ;i < notasTechSprint3Arr.length ;i++) {
+            if (notasTechSprint3Arr[i] > 1260) {
+              pastTargetperSprint++;
+            }
+          }
+        }
+        if (event.target.value === '4') {
+          for (var i = 0 ;i < notasTechSprint4Arr.length ;i++) {
+            if (notasTechSprint4Arr[i] > 1260) {
+              pastTargetperSprint++;
+            }
+          }
+        }
+        var pastTargetperSprintPorc = Math.round((pastTargetperSprint * 100) / (students.length)) + '%';
+        document.getElementById('tech').innerHTML = pastTargetperSprint;
+        document.getElementById('tech-percent').innerHTML = pastTargetperSprintPorc;
+      });
+      var hseSprintSelect = document.getElementById('hse-skills');
+      hseSprintSelect.addEventListener('change', function(event) {
+        var notasHseSprint1Arr = [];
+        var notasHseSprint2Arr = [];
+        var notasHseSprint3Arr = [];
+        var notasHseSprint4Arr = [];
+
+        for (var i = 0; i < students.length; i++) {
+          for (var j = 0; j < students[i]['sprints'].length; j++) {
+            var notaHseSprint = students[i]['sprints'][j]['score']['hse'];
+            if (j === 0) {
+              notasHseSprint1Arr.push(notaHseSprint);
+            }
+            if (j === 1) {
+              notasHseSprint2Arr.push(notaHseSprint);
+            }
+            if (j === 2) {
+              notasHseSprint3Arr.push(notaHseSprint);
+            }
+            if (j === 3) {
+              notasHseSprint4Arr.push(notaHseSprint);
+            }
+          }
+        }
+        // console.log(notasHseSprint1Arr);
+        // console.log(notasHseSprint2Arr);
+        // console.log(notasHseSprint3Arr);
+        // console.log(notasHseSprint4Arr);
+
+        var pastTargetperSprintHse = 0;
+        if (event.target.value === '1') {
+          for (var i = 0 ;i < notasHseSprint1Arr.length ;i++) {
+            if (notasHseSprint1Arr[i] > 940) {
+              pastTargetperSprintHse++;
+            }
+          }
+        }
+        if (event.target.value === '2') {
+          for (var i = 0 ;i < notasHseSprint2Arr.length ;i++) {
+            if (notasHseSprint2Arr[i] > 940) {
+              pastTargetperSprintHse++;
+            }
+          }
+        }
+        if (event.target.value === '3') {
+          for (var i = 0 ;i < notasHseSprint3Arr.length ;i++) {
+            if (notasHseSprint3Arr[i] > 940) {
+              pastTargetperSprintHse++;
+            }
+          }
+        }
+        if (event.target.value === '4') {
+          for (var i = 0 ;i < notasHseSprint4Arr.length ;i++) {
+            if (notasHseSprint4Arr[i] > 940) {
+              pastTargetperSprintHse++;
+            }
+          }
+        }
+        var pastTargetperSprintHsePorc = Math.round((pastTargetperSprintHse * 100) / (students.length)) + '%';
+        document.getElementById('hse').innerHTML = pastTargetperSprintHse;
+        document.getElementById('hse-percent').innerHTML = pastTargetperSprintHsePorc;
+      });
+    }
+
+    if (event.target.value === 'aqp62') {
+      dataStudents(promoArequipa62);
+    }
+    if (event.target.value === 'aqp71') {
+      dataStudents(promoArequipa71);
+    }
+    if (event.target.value === 'cdmx71') {
+      dataStudents(promoCdmx71);
+    }
+    if (event.target.value === 'cdmx72') {
+      dataStudents(promoCdmx72);
+    }
+    if (event.target.value === 'lim62') {
+      dataStudents(promoLim62);
+    }
+    if (event.target.value === 'lim71') {
+      dataStudents(promoLim71);
+    }
+    if (event.target.value === 'lim72') {
+      dataStudents(promoLim72);
+    }
+    if (event.target.value === 'sdc62') {
+      dataStudents(promoSantiago62);
+    }
+    if (event.target.value === 'sdc71') {
+      dataStudents(promoSantiago71);
+    }
+    if (event.target.value === 'sdc72') {
+      dataStudents(promoSantiago72);
+    }
+    document.getElementById('total').innerHTML = students.length
+  });
+});
+// -------------------------------------------------------------------------------------------------------------------------------------
+// Eventos para tab
 var studentsPage = document.getElementById('students');
 studentsPage.addEventListener('click', function(event) {
   document.getElementById('content').setAttribute('class', 'disappear');
@@ -255,7 +325,8 @@ overview.addEventListener('click', function(event) {
 overview.addEventListener('mouseover', function(event) {
   document.getElementById('overview').setAttribute('class', 'cursor-hand');
 });
-
+// --------------------------------------------------------------------------------------------------------------------------------------
+// Eventos para el menú hamburguesa
 var menuhamburger = document.getElementById('button');
 menuhamburger.addEventListener('click', function(event) {
   document.getElementById('all-content').setAttribute('class', 'disappear');
@@ -264,12 +335,4 @@ menuhamburger.addEventListener('click', function(event) {
 white.addEventListener('click', function(event) {
   document.getElementById('all-content').setAttribute('class', 'appear');
   document.getElementById('white').setAttribute('class', 'disappear');
-});
-
-button.addEventListener('mouseover', function(event) {
-  document.getElementById('button').setAttribute('class', 'cursor-hand');
-});
-
-white.addEventListener('mouseover', function(event) {
-  document.getElementById('white').setAttribute('class', 'cursor-hand');
 });

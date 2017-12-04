@@ -30,6 +30,9 @@
   background: none;
   outline: none;
 }
+.button-hamb {
+  cursor: pointer;
+}
 .select {
   font-size: 29px;
   background: none;
@@ -275,6 +278,8 @@ padding: 5px 15px;
   background-color: #fff;
   width: 100%;
   height:1000px;
+  cursor: pointer;
+
 }
 .menu {
   background: rgb(43,43,43);
