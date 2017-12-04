@@ -44,7 +44,7 @@ ETAPAS DEL DESARROLLO DEL PRODUCTO:
  - Elaboración de Sketch (prototipo sencillo) sobre de la herramienta web(**dashboard**).
 
 
-  ![sketch](assets/docs/sketch.png)
+  ![sketch](assets/images/sketch.png)
 
 
  **ETAPA DOS: DESARROLLO (Frond end y Back End)**
@@ -64,7 +64,7 @@ ETAPAS DEL DESARROLLO DEL PRODUCTO:
  - Testeo del producto para modificar o agregar cambios según la necesidad de las TMs: 
  
  
-   ![sketch](assets/docs/email.png)
+   ![sketch](assets/images/email.png)
    
    
   **Feedback de TMs Lulú Vilchez:**
