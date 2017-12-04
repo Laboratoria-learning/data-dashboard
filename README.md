@@ -30,7 +30,7 @@ La puntuación promedio de l@s profesores.
 La puntuación promedio de l@s jedi masters.
 Con esa información y con la base de datos que nos facilitaron pudimos crear este diseño. Sin embargo, creemos que tú podrías proponer algún cambio a este diseño que pueda mejorar la experiencia de las TMs.
 
-####¿Qué se requiere?
+#### ¿Qué se requiere?
 
 Trabajar en parejas
 Tener una planificación
