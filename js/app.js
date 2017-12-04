@@ -37,11 +37,13 @@ window.addEventListener('load', function() {
     });
   });
   /* Fin de los Selects */
-  //obteniendo el elemento button por medio del metodo getElementId
+  // obteniendo el elemento button por medio del metodo getElementId
   var btndash = document.getElementById('btndash');
   btndash.addEventListener('click', function() {
-    sectionMain.classList.toggle('display-none');
-    /* Enveroment Static*/
+    // aplicando clase a la seccion principal
+    sectionMain.classList.remove('display-none');
+    sectionMain.classList.add('display-inline-block');
+    /* Enrollment Static*/
     enrollment(sede, generacion);
     achievement(sede, generacion);
     /* Promedio de puntuacion Teacher */
@@ -51,6 +53,7 @@ window.addEventListener('load', function() {
     achievement(sede, generacion);
     nps(sede, generacion);
     techSkills(sede, generacion);
+    hseSkills(sede, generacion);
   });
 });
 /* Funciones */
@@ -73,6 +76,7 @@ function enrollment(sede, generacion) {
   // inserta data de desercion a los elementos
   var spanPercentaje = document.getElementById('percentaje-overview');
   spanPercentaje.textContent = dropoutPercentaje;
+
 }
 // Funcion que obtiene el promedio de la puntuacion de los teachers
 function ratingTeachers(sede, generacion) {
@@ -85,6 +89,7 @@ function ratingTeachers(sede, generacion) {
   // inserta data a los elementos
   var spanRatingT = document.getElementById('t-rating-overview');
   spanRatingT.textContent = averageTeacher;
+
 }
 // Funcion que obtiene el promedio de la puntuacion de los jedis
 function ratingJedi(sede, generacion) {
@@ -100,6 +105,7 @@ function ratingJedi(sede, generacion) {
   // inserta data a los elementos
   var spanRatingJ = document.getElementById('j-rating-overview');
   spanRatingJ.textContent = averageJedi;
+
 }
 function studentSatisfation(sede, generacion) {
   var count = data[sede][generacion].ratings.length;
@@ -109,7 +115,7 @@ function studentSatisfation(sede, generacion) {
     sum += data[sede][generacion].ratings[i].nps.promoters;
   }
 
-  var satisfationPercentaje = sum / count;
+  var satisfationPercentaje = (sum / count).toFixed(0);
   // inserta data a los elementos
   var spanNpsS = document.getElementById('s-nps-overview');
   spanNpsS.textContent = satisfationPercentaje ;
@@ -144,10 +150,10 @@ function nps(sede, generacion) {
     accumulatorDet += data[sede][generacion].ratings[i].nps.detractors;
     accumulatorNPS += data[sede][generacion].ratings[i].nps.promoters - data[sede][generacion].ratings[i].nps.detractors;
   }
-  var averagePro = (accumulatorPro / countRatings);
-  var averagePas = (accumulatorPas / countRatings);
-  var averageDet = (accumulatorDet / countRatings);
-  var averageNPS = (accumulatorNPS / countRatings) + '%';
+  var averagePro = (accumulatorPro / countRatings).toFixed(0);
+  var averagePas = (accumulatorPas / countRatings).toFixed(0);
+  var averageDet = (accumulatorDet / countRatings).toFixed(0);
+  var averageNPS = (accumulatorNPS / countRatings).toFixed(0) + '%';
   // inserta data a los elementos
   var spanNPS = document.getElementById('nps-overview');
   spanNPS.textContent = averageNPS; 
@@ -177,5 +183,26 @@ function techSkills(sede, generacion) {
   var spanSkillTPer = document.getElementById('ts-percentaje-overview');
   spanSkillTPer.textContent = percentaje;
   var spanDescSkill = document.getElementById('ts-overview');
+  spanDescSkill.textContent = '% OF TOTAL (' + quantityStu + ')';
+}
+function hseSkills(sede, generacion) {
+  var accumulatorHseS = 0;
+  var quantityStu = data[sede][generacion].students.length;
+ 
+  for (var i = 0; i < data[sede][generacion].students.length;i++) {
+    var countSprints = data[sede][generacion].students[i].sprints.length;
+    for (var j = 0; j < countSprints;j++) {
+      if (data[sede][generacion].students[i].sprints[j].score.hse > 840) {
+        accumulatorHseS++;
+      }
+    }
+  }
+  var percentaje = ((accumulatorHseS * 100) / quantityStu).toFixed(0);
+  // insertamos los datos a los elementos html
+  var spanSkillH = document.getElementById('hse-skills-overview');
+  spanSkillH.textContent = accumulatorHseS;
+  var spanSkillHPer = document.getElementById('hse-percentaje-overview');
+  spanSkillHPer.textContent = percentaje;
+  var spanDescSkill = document.getElementById('hse-overview');
   spanDescSkill.textContent = '% OF TOTAL (' + quantityStu + ')';
 }
