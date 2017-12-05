@@ -371,10 +371,10 @@ function enrollment(actives, inactives) {
   google.charts.load('current', {'packages': ['corechart']});
   google.charts.setOnLoadCallback(drawChart);
   function drawChart() {
-    var dataTest = new google.visualization.DataTable();
-    dataTest.addColumn('string', 'Topping');
-    dataTest.addColumn('number', 'Slices');
-    dataTest.addRows([
+    var dataPrueba = new google.visualization.DataTable();
+    dataPrueba.addColumn('string', 'Topping');
+    dataPrueba.addColumn('number', 'Slices');
+    dataPrueba.addRows([
       ['Enrolled', actives],
       ['Desertion', inactives],
     ]);
@@ -383,7 +383,7 @@ function enrollment(actives, inactives) {
       'width': 310,
       'height': 160};
     var chart = new google.visualization.PieChart(document.getElementById('grafico'));
-    chart.draw(dataTest, options);
+    chart.draw(dataPrueba, options);
   }
 }
 
@@ -391,10 +391,10 @@ function achievement(meet, under) {
   google.charts.load('current', {'packages': ['corechart']});
   google.charts.setOnLoadCallback(drawChart);
   function drawChart() {
-    var dataTest = new google.visualization.DataTable();
-    dataTest.addColumn('string', 'Topping');
-    dataTest.addColumn('number', 'Slices');
-    dataTest.addRows([
+    var dataPrueba = new google.visualization.DataTable();
+    dataPrueba.addColumn('string', 'Topping');
+    dataPrueba.addColumn('number', 'Slices');
+    dataPrueba.addRows([
       ['Meet the target', meet],
       ['Under the target', under],
     ]);
@@ -403,7 +403,7 @@ function achievement(meet, under) {
       'width': 310,
       'height': 160};
     var chart = new google.visualization.PieChart(document.getElementById('grafico-target'));
-    chart.draw(dataTest, options);
+    chart.draw(dataPrueba, options);
   }
 }
 
@@ -412,19 +412,19 @@ function techGrafic(meet, under) {
   google.charts.load('current', {'packages': ['corechart']});
   google.charts.setOnLoadCallback(drawChart);
   function drawChart() {
-    var dataTest = new google.visualization.DataTable();
-    dataTest.addColumn('string', 'Topping');
-    dataTest.addColumn('number', 'Slices');
-    dataTest.addRows([
+    var dataPrueba = new google.visualization.DataTable();
+    dataPrueba.addColumn('string', 'Topping');
+    dataPrueba.addColumn('number', 'Slices');
+    dataPrueba.addRows([
       ['Meet the target', meet],
       ['Under the target', under],
     ]);
     var options = {
-      'colors': ['red', 'gold'],
+      'colors': ['red', 'pink'],
       'width': 550,
       'height': 380};
     var chart = new google.visualization.PieChart(document.getElementById('grafico-tech'));
-    chart.draw(dataTest, options);
+    chart.draw(dataPrueba, options);
   }
 }
 // funcion el total de sprint y por sprints
@@ -432,10 +432,10 @@ function hseGrafic(meet, under) {
   google.charts.load('current', {'packages': ['corechart']});
   google.charts.setOnLoadCallback(drawChart);
   function drawChart() {
-    var dataTest = new google.visualization.DataTable();
-    dataTest.addColumn('string', 'Topping');
-    dataTest.addColumn('number', 'Slices');
-    dataTest.addRows([
+    var dataPrueba = new google.visualization.DataTable();
+    dataPrueba.addColumn('string', 'Topping');
+    dataPrueba.addColumn('number', 'Slices');
+    dataPrueba.addRows([
       ['Meet the target', meet],
       ['Under the target', under],
     ]);
@@ -444,7 +444,7 @@ function hseGrafic(meet, under) {
       'width': 550,
       'height': 380};
     var chart = new google.visualization.PieChart(document.getElementById('grafico-hse'));
-    chart.draw(dataTest, options);
+    chart.draw(dataPrueba, options);
   }
 }
 
@@ -452,20 +452,20 @@ function npsGrafic(active, detractor, passive) {
   google.charts.load('current', {'packages': ['corechart']});
   google.charts.setOnLoadCallback(drawChart);
   function drawChart() {
-    var dataTest = new google.visualization.DataTable();
-    dataTest.addColumn('string', 'Topping');
-    dataTest.addColumn('number', 'Slices');
-    dataTest.addRows([
+    var dataPrueba = new google.visualization.DataTable();
+    dataPrueba.addColumn('string', 'Topping');
+    dataPrueba.addColumn('number', 'Slices');
+    dataPrueba.addRows([
       ['Promoters', active],
       ['Detractor', detractor],
       ['Passive', passive],
     ]);
     var options = {
-      'colors': ['green', 'yellowgreen', '#9AFD86'],
+      'colors': ['green', 'yellowgreen', 'blue'],
       'width': 310,
       'height': 160};
     var chart = new google.visualization.PieChart(document.getElementById('grafico-nps'));
-    chart.draw(dataTest, options);
+    chart.draw(dataPrueba, options);
   }
 }
 
@@ -473,19 +473,19 @@ function satisfationGrafic(cumple, nocumple, supera) {
   google.charts.load('current', {'packages': ['corechart']});
   google.charts.setOnLoadCallback(drawChart);
   function drawChart() {
-    var dataTest = new google.visualization.DataTable();
-    dataTest.addColumn('string', 'Topping');
-    dataTest.addColumn('number', 'Slices');
-    dataTest.addRows([
+    var dataPrueba = new google.visualization.DataTable();
+    dataPrueba.addColumn('string', 'Topping');
+    dataPrueba.addColumn('number', 'Slices');
+    dataPrueba.addRows([
       ['Cumple', cumple],
       ['No Cumple', nocumple],
       ['Supera', supera],
     ]);
     var options = {
-      'colors': ['blue', 'salmon', '#9CC630'],
+      'colors': ['salmon', 'blue', '#9CC630'],
       'width': 320,
       'height': 250};
     var chart = new google.visualization.PieChart(document.getElementById('grafico-satisfaccion'));
-    chart.draw(dataTest, options);
+    chart.draw(dataPrueba, options);
   }
 }

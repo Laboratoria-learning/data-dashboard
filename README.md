@@ -12,6 +12,14 @@ Integrantes del squad 8BM:
 
 -Nataly Cortez
 
+-Aracelly
+
+-Pamela
+
+-Andrea
+
+-Adriana
+
 ## Informacion que debe proporcionar el programa:
 
 1.El total de estudiantes presentes por sede y generación.
