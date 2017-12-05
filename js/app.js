@@ -158,6 +158,7 @@ window.addEventListener('load', function() {
       // toFixed --> función para limitar el número de decimales con su parametro
       // alert(scoreTeachersTotal);
       document.getElementById('scoret').innerHTML = scoreTeacherTotal;
+      document.getElementById('scorej').innerHTML = scoreJedisTotal;
       // -------------------------------------------------------------------------------------------------------------------------------
       var techSprintSelect = document.getElementById('tech-skills');
       techSprintSelect.addEventListener('change', function(event) {
@@ -426,7 +427,7 @@ function techGrafic(meet, under) {
     chart.draw(dataTest, options);
   }
 }
-// funcion el total de sprint y por sprints 
+// funcion el total de sprint y por sprints
 function hseGrafic(meet, under) {
   google.charts.load('current', {'packages': ['corechart']});
   google.charts.setOnLoadCallback(drawChart);
