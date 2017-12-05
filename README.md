@@ -1,41 +1,49 @@
-# Proyecto Final: Data Dashboard Laboratoria
+# Data Dashboard
 
-## Sobre el **Producto**
+* **Objetivo:** _Crear un Data Dashboard para las Training Managers de Laboratoria. Con este les ayudarames a optimizar su tiempo y establecer un orden para poder manejar toda la data de las alumnas que participan del bootcamp._
+* **Unidades en práctica** _Todos los temas vistos en los dos primeros Sprints_
+* **Herramientas:** _HTML,CSS Y Javascript_
 
-En Laboratoria, las Training Managers (TMs) hacen un gran trabajo al analizar la mayor cantidad de datos posibles respecto al desempeño de las estudiantes para apoyarlas en su aprendizaje. Para revisar esta data, las TMs, normalmente, tienen que revisar muchos documentos de excel (Google Spreadsheets) que están localizados en distintas carpetas y ubicaciones. Muchas veces pierden tiempo localizando estos documentos y ejecutando fórmulas para obtener los datos que necesitan.
+***
+## Colaboradoras:
+Integrantes del squad 8BM:
 
-Para poder optimizar su tiempo, las TMs han solicitado que construyamos una herramienta web donde puedan ver estos datos fácil y rápidamente. Y nos comentaron que estos son los datos que revisan normalmente:
+-Lilliam Haro
 
-* El total de estudiantes presentes por sede y generación.
-* El porcentaje de deserción de estudiantes.
-* La cantidad de estudiantes que superan la meta de puntos en promedio de todos los sprints cursados.
-* La meta de puntos es 70% del total de puntos en HSE y en tech.
-* El porcentaje que representa el dato anterior en relación al total de estudiantes.
-* El Net Promoter Score (NPS) promedio de los sprints cursados. El NPS se calcula en base a la encuesta que las estudiantes responden al respecto de la recomendación que darían de Laboratoria, bajo la siguiente fórmula:
+-Nataly Cortez
 
-> [Promoters] = [Respuestas 9 o 10] / [Total respuestas] * 100
+## Informacion que debe proporcionar el programa:
+
+1.El total de estudiantes presentes por sede y generación.
+2.El porcentaje de deserción de estudiantes.
+3.La cantidad de estudiantes que superan la meta de puntos en promedio de todos los sprints cursados. La meta de puntos es 70% del total de puntos en HSE y en tech.
+4.El porcentaje que representa el dato anterior en relación al total de estudiantes.
+5.El Net Promoter Score (NPS) promedio de los sprints cursados. 6.El NPS se calcula en base a la encuesta que las estudiantes responden al respecto de la recomendación que darían de Laboratoria, bajo la siguiente fórmula:
+
+[Promoters] = [Respuestas 9 o 10] / [Total respuestas] * 100
 [Passive] = [Respuestas 7 u 8] / [Total respuestas] * 100
 [Detractors] = [Respuestas entre 1 y 6] / [Total respuestas] * 100
+
 [NPS] = [Promoters] - [Detractors]
 
-* La cantidad y el porcentaje que representa el total de estudiantes que superan la meta de puntos técnicos en promedio y por sprint.
-* La cantidad y el porcentaje que representa el total de estudiantes que superan la meta de puntos de HSE en promedio y por sprint.
-* El porcentaje de estudiantes satisfechas con la experiencia de Laboratoria.
-* La puntuación promedio de l@s profesores.
-* La puntuación promedio de l@s jedi masters.
+7.La cantidad y el porcentaje que representa el total de estudiantes que superan la meta de puntos técnicos en promedio y por sprint.
+8.La cantidad y el porcentaje que representa el total de estudiantes que superan la meta de puntos de HSE en promedio y por sprint.
+9.El porcentaje de estudiantes satisfechas con la experiencia de Laboratoria.
+10.La puntuación promedio de l@s profesores.
+11.La puntuación promedio de l@s jedi masters.
 
-## Requerimientos
+## Adicionales:
 
-* Trabajar en parejas
-* Tener una planificación
-* La definición del diseño
-* Implementación del data dashboard usando html, css y js
-* Desplegar el producto en Github Pages
+1.En Laboratoria (y sobre todo las TMs) somos adictos a la representación gráfica de los datos y como muestra el diseño, sería ideal poder mostrar los datos procesados en un gráfico como el diseño propone u otra alternativa.
 
-## Wireframe
+Nota: En la etapa de diseño de la experiencia del producto, nos dimos cuenta que Google Charts podría ser una opción para desarrollar estos gráficos, pero no es la única que se puede usar .
 
-![Sin titulo](pictures/avatar.png)
+2.Además, la proactividad (siempre de las TMs) hace que el siguiente requerimiento adicional sea muy útil:
 
-## Resultados
+Tener un botón que permita indicar que una estudiante ha salido del Bootcamp y alterar los totales afectados por este cambio.
 
-![Sin titulo](pictures/avatar.png)
+## Vista previa:
+
+![](https://raw.githubusercontent.com/NatalyCortez/data-dashboard/master/assets/images/screen.JPG)
+![](https://raw.githubusercontent.com/NatalyCortez/data-dashboard/master/assets/images/screentwo.JPG)
+![](https://raw.githubusercontent.com/NatalyCortez/data-dashboard/master/assets/images/screenthree.JPG)

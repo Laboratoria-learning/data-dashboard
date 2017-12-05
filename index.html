@@ -2,192 +2,242 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Dashboard</title>
+      <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="assets/images/lab.ico">
+    <title>Data Dashboard</title>
   </head>
   <body>
-    <!-- Header -->
-  <header>
-      <img class="header-logo"src="assets/images/logo-laboratoria.svg" alt="">
-      <i class="fa fa-bars" aria-hidden="true"></i>
-      <h2 id= "nameshow"> AREQUIPA 2016-II</h2>
-      <select name="select-sede" id="select-sede">
-      </select>
-  </header>
+    <div id="all-content">
+    <header>
+      <div class="header">
+        <img src="assets/images/logo-laboratoria.svg">
+        <button id="button"type="button" class="button-hamb" name="menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+      </div>
+    </header>
+    <!-- Menu de navegacion -->
+    <nav>
+      <div class="nav-menu bold">
+        <h2  id="nameshow"> AREQUIPA </h2>
+        <select id="sedes" class="select bold" name="">
+        </select>
+        <ul>
+          <li id="overview">OVERVIEW</li>
+          <li id="students">STUDENTS</li>
+          <li>TEACHERS</li>
+        </ul>
+        <hr id="orangeline">
+      </div>
+    </nav>
+    <!-- Overview -->
 
-  <section id="tabs">
-    <ul class="tabs-container">
-    <li><button type="button" name="button-tab" data-tab-seleccionado='tabOverview' class='tab' >OVERVIEW</button></li>
-    <li><button type="button" name="button-tab" data-tab-seleccionado='tabStudents' class='tab' >STUDENTS</button></li>
-    <li><button type="button" name="button-tab" data-tab-seleccionado='tabTeachers' class='tab' >TEACHERS</button></li>
-    </ul>
-    <div class="">
-      <article id="overview" class="content">
-        <div class="contenedor">
-            <section class ='first'>
-              <!-- <div id='overview'class='elements'> -->
-              <div class ='cuadro-1'>
-                  <h2 class=tituloCuadro-1><strong>ENROLLMENT</strong></h2>
-                  <div class='tablaint-1'>
-                    <h2 class='numeroCuadro-1'><strong id= "total_enrollment">120</strong></h2>
-                    <p class='detalleCuadro-1'>#STUDENTS CURRENTLY <br>ENROLLED </p>
-                  </div>
-                  <div class='tablaint-2'>
-                 <h2 class='porcentajeCuadro-1'><strong id="total_desert">20%</strong></h2>
-                 <h5 class='porcentajeDropout'>% DROPOUT</h5>
-             </div>
-                <img src='assets/images/bar-graph.png' alt='enrolled'>
-             <div class ='cuadro-2'>
-                <h3 class=tituloCuadro-2><strong>ACHIEVEMENT</strong></h3>
-                <div class='tablaint-3'>
-                 <h2 class='numeroCuadro-2'><strong>105</strong></h2>
-                 <p class='detalleCuadro-2'>#STUDENTS THAT METT <br>THE TARGET  </p>
-                </div>
-                <div class='tablaint-4'>
-                  <h2 class='porcentajeCuadro-2'>78%</h2>
-                  <h5 class='porcentajetotal'>% OF TOTAL(135)</h5>
-                </div>
-                  <img src='assets/images/graph.png' alt='achievement'>
-            </div>
-             <div class ='cuadro-3'>
-                <h3 class=tituloCuadro-3>NET PROMOTER SCORE</h3>
-                <div class='tablaint-5'>
-                  <h3 class='porcentajeCuadro-2'>78%</h3>
-                  <h6 class='porcentajetotal'>% CUMULATIVE NPS</h6>
-                 </div>
-                  <ul class ='tablanetpromoter'>
-                    <li>60 %  Promoters</li>
-                    <li> 30 %  Passive</li>
-                    <li>10 %  Detractores</li>
-                  </ul>
-                   <img src='assets/images/graph.png' alt='achievement'>
-             </div>
-            </section>
-            <section class ='second'>
-                <div class ='cuadro-4'>
-                   <h3 class=tituloCuadro-4>TECH SKILLS</h3>
-                <div class='sprintlist'>
-                  <select name='OS'>
-                  <option selected value="0"> Overall (cumulative) </option>
-                  <optgroup label ="COMMON CORE">
-                    <option value='1'>Sprint 1:Create an interactive site</option>
-                    <option value="2">Sprint 2:Create an interactive site</option>
-                    <option value="3">Sprint 3:Create an interactive site</option>
-                    <option value="4">Sprint 4:Create an interactive site</option>
-                  </optgroup>
-                  <optgroup label="Javascript">
-                    <option value="10">Sprint 5:Create an interactive site</option>
-                    <option value="11">Sprint 6:Create an interactive site</option>
-                    <option value="12">Sprint 7:Create an interactive site</option>
-                    <option value="13">Sprint 8:Create an interactive site</option>
-                   </optgroup>
-                   <optgroup label="UX Design">
-                     <option value="14">Sprint 5:Create an interactive site</option>
-                     <option value="15">Sprint 6:Create an interactive site</option>
-                     <option value="16">Sprint 7:Create an interactive site</option>
-                     <option value="17">Sprint 8:Create an interactive site</option>
-                  </optgroup>
-                  </select>
-                 </div>
-                 <div class='tablaint-6'>
-                   <h2 class='numeroCuadro-4'><strong>90</strong></h2>
-                   <h6 class='detalleCuadro-4'>#STUDENTS THAT MEET<br>THE TARGET</h6>
-                 </div>
-                 <div class='tablaint-7'>
-                  <h2 class='porcentajeCuadro-4'><strong>62</strong></h2>
-                  <h5 class='porcentajetotal'>% OF TOTAL(135)</h5>
-                 </div>
-                  <img class='rectangulo-1' src="assets/images/rectangular-graphic.png" alt="">
-              <div class ='cuadro-5'>
-                  <img src="assets/images/circle-graphic.png" alt="">
-             </div>
-                <div class ='btn-green'></div>
-                 <h6 class='estudents-green'>#ESTUDENTS THAT MEET TARGET</h6>
-                <div class ='btn-red'></div>
-                 <h6 class='estudents-red'>#ESTUDENTS THAT DONT MEET TARGET</h6>
-               </div>
-          </section>
-         <section class ='third'>
-            <div class ='cuadro-6'>
-                <h3 class=tituloCuadro-6>TECH SKILLS</h3>
-              <div class='hse'>
-             <select name="OS">
-                <option selected value="0"> Latest sprint(S4)</option>
-              <optgroup label ="HSE">
-                <option value="1">Sprint 1:Create an interactive site</option>
-                <option value="2">Sprint 2:Create an interactive site</option>
-                <option value="3">Sprint 3:Create an interactive site</option>
-                <option value="4">Sprint 4:Create an interactive site</option>
-              </optgroup>
-            </select>
-            </div>
-           <div class='tablaint-8'>
-             <h3 class='numeroCuadro-6'>80</h3>
-             <h5 class='detalleCuadro-6'>#OVERALL CLASS AVERAGE</h5>
-           </div>
-           <div class='tablaint-9'>
-             <h3 class='porcentajeCuadro-4'>62%</h3>
-             <p class='detalleCuadro-2'>#STUDENTS THAT METT <br>THE TARGET</p>
-           </div>
-           <img class='rectangular-2'src="assets/images/rectangular-graphic.png" alt="">
-         <div class ='cuadro-7'>
-           <img class='circle-1'src="assets/images/circle-graphic.png" alt="">
+    <div id="content"class="content">
+      <div class="box-one">
+        <div class="box-left inline-b background-w padding">
+          <p class="bold font-s">ENROLLMENT</p>
+          <div class="gray-box inline-b">
+            <p id="enrolled" class="bold font-s">120</p>
+            <p>#STUDENTS CURRENTLY ENROLLED</p>
           </div>
-           <div class ='btn-green'></div>
-             <h6 class='estudents-green'>#ESTUDENTS THAT MEET TARGET</h6>
-           <div class ='btn-red'></div>
-             <h6 class='estudents-red'>#ESTUDENTS THAT DONT MEET TARGET</h6>
+          <div class="gray-box inline-b">
+            <p id="dropout" class="color-red bold font-s">20%</p>
+            <p>% DROPOUT</p>
           </div>
-          </section>
-          <section class ='fourth'>
-            <div class ='cuadro-8'>
-              <h3 class=tituloCuadro-8>STUDENT SATISFAXTION</h3>
-             <div class='tablaint-10'>
-               <h3 class='numeroCuadro-8'>140</h3>
-               <p class='meeting'>% MEETING OR EXCEEDING <br>EXPECTATIONS(CUMULATIVE)</p>
-             </div>
-              <div class='graph-2'>
-               <img src='assets/images/graph.png' alt='achievement'>
-            </div>
-            </div>
-          <div class ='cuadro-9'>
-               <h3 class=tituloCuadro-9>TEACHER RATING</h3>
-             <div class='tablaint-11'>
-               <h3 class='numeroCuadro-10'>4.2</h3>
-               <p class='overall'>OVERALL TEZHER RATING<br>(CUMULATIVE)</p>
-             </div>
-              <div class='graph-3'>
-                <img src='assets/images/graph.png' alt='achievement'>
-              </div>
+          <!--<div id="grafy-enrollment" class="container-grafy"></div>-->
+          <img src="assets/images/bar-graph.png" alt="stadistic-graph">
           </div>
-      </article>
-      <article id="students" class="content">
-        <h1>STUDENTS</h1>
-        <section class="specialization">
-          <h1>SPECIALIZATION</h1>
-          <ul>
-            <li>Javascript</li>
-            <li>UX Desing</li>
-            <li>Front end Developer</li>
-          </ul>
-        </section>
-        <input type="text" name="search" value="">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </article>
-      <article id="teachers" class="content">
-        <h1>TEACHERS</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </article>
+
+        <div class="box-center inline-b background-w padding">
+          <p class="bold font-s">ACHIEVEMENT</p>
+          <div class="gray-box inline-b">
+            <p id="target" class="bold font-s">105</p>
+            <p>#STUDENTS THAT MEET THE TARGET</p>
+          </div>
+          <div class="gray-box inline-b">
+            <p id="target-percent" class="bold font-s color-green">78% <i class="fa fa-caret-up" aria-hidden="true"></i></p>
+            <p>% OF TOTAL(<span id="total">xx</span>)</p>
+          </div>
+          <img src="assets/images/graph.png" alt="stadistic-graph">
+        </div>
+
+        <div class="box-right inline-b background-w padding">
+          <p class="bold font-s">NET PROMOTER SCORE</p>
+          <div class="gray-box inline-b">
+          <p id="nps" class="bold font-s color-green">78% <i class="fa fa-caret-up" aria-hidden="true"></i></p>
+          <p>% CUMULATIVE NPS</p>
+          </div>
+          <div class="font-s-two gray-box inline-b">
+            <p id="promoter">60% Promoters</p>
+            <p id="passive">30% Passive</p>
+            <p id="detractors">10% Detractors</p>
+          </div>
+          <img src="assets/images/graph2.JPG" alt="stadistic-graph">
+        </div>
+      </div>
+
+        <div class="tech-skills background-w padding">
+          <p class="bold font-s inline-b">TECH-SKILLS</p>
+          <select id="tech-skills" class="overall" name="">
+                <option value="">Overall (cumulative)</option>
+                <option value="1">SPRINT 1</option>
+                <option value="2">SPRINT 2</option>
+                <option value="3">SPRINT 3</option>
+                <option value="4">SPRINT 4</option>
+              </select>
+          <div class="gray-content">
+            <div class="gray-box inline-b">
+              <p id="tech"class="font-s bold">90</p>
+              <p># STUDENTS THAT MEETTHE TARGET</p>
+            </div>
+            <div class="gray-box inline-b">
+              <p id="tech-percent"class="font-s bold color-green">62</p>
+              <p>% OF TOTAL (135)</p>
+            </div>
+          </div>
+          <img id="graph-img"src="assets/images/rectangular-graphic.png" alt="rectangular-graphic">
+          <div class="information inline-b">
+            <img id="circle-img"src="assets/images/circle-graphic.png" alt="circle-graphic">
+            <p><i id="pastel-green" class="fa fa-square" aria-hidden="true"></i> # STUDENTS THAT MEET THE TARGET</p>
+            <p><i id="pastel-red"class="fa fa-square" aria-hidden="true"></i> # STUDENTS THAT DONT MEET THE TARGET</p>
+          </div>
+        </div>
+
+        <div class="life-skills background-w padding">
+          <p class="bold font-s inline-b">LIFE SKILLS</p>
+          <select id="hse-skills"class="sprints" name="">
+                <option value="">latest Sprint (S4)</option>
+                <option value="1">SPRINT 1</option>
+                <option value="2">SPRINT 2</option>
+                <option value="3">SPRINT 3</option>
+                <option value="4">SPRINT 4</option>
+              </select>
+          <div class="gray-content">
+            <div class="gray-box inline-b">
+              <p id="hse" class="bold font-s">80</p>
+              <p># OVERALL CLASS AVERAGE</p>
+            </div>
+          <div class="gray-box inline-b">
+            <p id="hse-percent"class="bold font-s color-green">62</p>
+            <p># OF STUDENTS THAT MEET THE TARGET</p>
+          </div>
+        </div>
+        <img id="graph-img"src="assets/images/rectangular-graphic.png" alt="rectangular-graphic">
+        <div class="information inline-b">
+          <img id="circle-img"src="assets/images/circle-graphic.png" alt="circle-graphic">
+          <p><i id="pastel-green" class="fa fa-square" aria-hidden="true"></i> # STUDENTS THAT MEET THE TARGET</p>
+          <p><i id="pastel-red"class="fa fa-square" aria-hidden="true"></i> # STUDENTS THAT DONT MEET THE TARGET</p>
+        </div>
+      </div>
+
+        <div class="box-two">
+          <div class="box-left background-w inline-b padding">
+            <p class="bold font-s">STUDENTS SATISFACTION</p>
+            <div class="gray-box inline-b">
+              <p id="satisfaction" class="font-s bold font-s-three">140</p>
+              <p class="font-s-four">% MEETING OR EXCEEDING EXPECTATIONS (CUMULATIVE)</p>
+            </div>
+            <img src="assets/images/graph.png" alt="graph">
+          </div>
+        <div class="box-center background-w inline-b padding">
+          <p class="bold font-s">TEACH RATING</p>
+          <div class="gray-box inline-b">
+            <p id="scoret" class="bold font-s-three">4.2</p>
+            <p>OVERAL TEACHER RATING (CUMULATIVE)</p>
+          </div>
+          <img src="assets/images/graph.png" alt="graph">
+        </div>
+
+        <div class="box-right background-w inline-b padding">
+          <p class="bold font-s">JEDI MASTER RATING</p>
+          <div class="gray-box inline-b">
+            <p id="scorej" class="bold font-s-three color-green">50</p>
+            <p>OVERAL JEDI RATING (CUMULATIVE)</p>
+          </div>
+          <img src="assets/images/graph.png" alt="graph">
+        </div>
+
+      </div>
     </div>
-  </section>
+
+      <!-- Students -->
+      <div id="content-two" class="hidden">
+
+      <div class="specialization">
+        <p>SPECIALIZATION:</p>
+        <ul>
+          <li><i class="fa fa-square" aria-hidden="true"></i> Javascript</li>
+          <li><i class="fa fa-square" aria-hidden="true"></i> UX design</li>
+          <li><i id="radiusquare"class="fa fa-square" aria-hidden="true"></i> Front end Designer</li>
+        </ul>
+      </div>
+
+      <div class="search-box">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <input type="text" name="" value="">
+      </div>
+
+      <div class="students-information">
+        <div class="student-square">
+          <img src="assets/images/student.jpg" alt="">
+          <div class="p-information">
+            <p class="name">DIANA NAVARRO</p>
+            <p class="career">Frontend Developer</p>
+            <ul>
+              <li>JAVASCRIPT</li>
+              <li>APIs</li>
+              <li>JQUERY</li>
+            </ul>
+          </div>
+          <div class="square-skills">
+            <div class="tle-skills">
+              <p class="size-big">95.6%</p>
+              <p>TECH SKILLS</p>
+            </div>
+            <div class="tle-skills">
+              <p class="size-big">95.6%</p>
+              <p>LIFE SKILLS</p>
+            </div>
+            <div class="tle-skills">
+              <p class="size-big">INTERM</p>
+              <p>ENGLISH SKILLS</p>
+            </div>
+            <p id="remove"><i class="fa fa-times" aria-hidden="true"></i>
+Remove student</p>
+            <p class="view">Ver perfil <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+<!-- Final de "all-content" -->
+    </div>
+    <!-- Menu hamburguesa -->
+    <div id="white" class="disappear">
+      <div class="menu">
+        <img src="assets/images/student.jpg" alt="">
+        <p>ANNA DURAND <i class="fa fa-caret-down" aria-hidden="true"></i></p>
+        <hr>
+        <p>Add Student</p>
+        <hr>
+        <p>Remove Student</p>
+        <hr>
+        <p>Add sprint</p>
+        <hr>
+      </div>
+    </div>
 
 
-    <!-- Base de datos -->
-    <script src="./js/data.js"></script>
-    <!-- Aquí va tus archivos JS -->
+		<!-- Base de datos -->
+		<script src="./js/data.js"></script>
+		<!-- Aquí va tus archivos JS -->
     <script src="./js/app.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {packages: ['corechart']});
+      google.charts.load('current', {'packages':['bar']});
+    </script>
   </body>
 </html>
