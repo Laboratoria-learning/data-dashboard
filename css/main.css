@@ -125,7 +125,8 @@
 .box-two {
   overflow: auto;
 }
-.box-two img {
+.box-two figure {
+
   width: 301px;
   height: 176px;
 }
@@ -346,4 +347,7 @@ padding: 5px 15px;
 }
 .cursor-hand {
   cursor: pointer;
+}
+.block {
+  display: block;
 }

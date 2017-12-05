@@ -53,7 +53,10 @@
             <p id="dropout" class="color-red bold font-s">20%</p>
             <p>% DROPOUT</p>
           </div>
-          <img src="assets/images/bar-graph.png" alt="stadistic-graph">
+          <hr>
+          <div id="grafico">
+
+          </div>
           </div>
 
         <div class="box-center inline-b background-w padding">
@@ -66,7 +69,10 @@
             <p id="target-percent" class="bold font-s color-green">78% <i class="fa fa-caret-up" aria-hidden="true"></i></p>
             <p>% OF TOTAL(<span id="total">xx</span>)</p>
           </div>
-          <img src="assets/images/graph.png" alt="stadistic-graph">
+          <hr>
+          <div id="grafico-target">
+
+          </div>
         </div>
 
         <div class="box-right inline-b background-w padding">
@@ -80,7 +86,10 @@
             <p id="passive">30% Passive</p>
             <p id="detractors">10% Detractors</p>
           </div>
-          <img src="assets/images/graph2.JPG" alt="stadistic-graph">
+          <hr>
+          <div id="grafico-nps">
+
+          </div>
         </div>
       </div>
 
@@ -103,11 +112,15 @@
               <p>% OF TOTAL (135)</p>
             </div>
           </div>
-          <img id="graph-img"src="assets/images/rectangular-graphic.png" alt="rectangular-graphic">
+          <hr>
+          <div id="grafico-tech">
+
+          </div>
+          <!-- <img id="graph-img"src="assets/images/rectangular-graphic.png" alt="rectangular-graphic"> -->
           <div class="information inline-b">
-            <img id="circle-img"src="assets/images/circle-graphic.png" alt="circle-graphic">
-            <p><i id="pastel-green" class="fa fa-square" aria-hidden="true"></i> # STUDENTS THAT MEET THE TARGET</p>
-            <p><i id="pastel-red"class="fa fa-square" aria-hidden="true"></i> # STUDENTS THAT DONT MEET THE TARGET</p>
+            <!-- <img id="circle-img"src="assets/images/circle-graphic.png" alt="circle-graphic"> -->
+            <!-- <p><i id="pastel-green" class="fa fa-square" aria-hidden="true"></i> # STUDENTS THAT MEET THE TARGET</p> -->
+            <!-- <p><i id="pastel-red"class="fa fa-square" aria-hidden="true"></i> # STUDENTS THAT DONT MEET THE TARGET</p> -->
           </div>
         </div>
 
@@ -130,11 +143,15 @@
             <p># OF STUDENTS THAT MEET THE TARGET</p>
           </div>
         </div>
-        <img id="graph-img"src="assets/images/rectangular-graphic.png" alt="rectangular-graphic">
+        <hr>
+        <div id="grafico-hse">
+
+        </div>
+        <!-- <img id="graph-img"src="assets/images/rectangular-graphic.png" alt="rectangular-graphic"> -->
         <div class="information inline-b">
-          <img id="circle-img"src="assets/images/circle-graphic.png" alt="circle-graphic">
-          <p><i id="pastel-green" class="fa fa-square" aria-hidden="true"></i> # STUDENTS THAT MEET THE TARGET</p>
-          <p><i id="pastel-red"class="fa fa-square" aria-hidden="true"></i> # STUDENTS THAT DONT MEET THE TARGET</p>
+          <!-- <img id="circle-img"src="assets/images/circle-graphic.png" alt="circle-graphic"> -->
+          <!-- <p><i id="pastel-green" class="fa fa-square" aria-hidden="true"></i> # STUDENTS THAT MEET THE TARGET</p> -->
+          <!-- <p><i id="pastel-red"class="fa fa-square" aria-hidden="true"></i> # STUDENTS THAT DONT MEET THE TARGET</p> -->
         </div>
       </div>
 
@@ -145,13 +162,18 @@
               <p id="satisfaction" class="font-s bold font-s-three">140</p>
               <p class="font-s-four">% MEETING OR EXCEEDING EXPECTATIONS (CUMULATIVE)</p>
             </div>
-            <img src="assets/images/graph.png" alt="graph">
+              <div id="grafico-satisfaccion">
+
+            </div>
           </div>
         <div class="box-center background-w inline-b padding">
           <p class="bold font-s">TEACH RATING</p>
           <div class="gray-box inline-b">
             <p id="scoret" class="bold font-s-three">4.2</p>
             <p>OVERAL TEACHER RATING (CUMULATIVE)</p>
+          </div>
+          <div class="teacher">
+
           </div>
           <img src="assets/images/graph.png" alt="graph">
         </div>
@@ -243,5 +265,6 @@ Remove student</p>
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
     <script src="./js/app.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   </body>
 </html>

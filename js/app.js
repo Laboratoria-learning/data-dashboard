@@ -30,18 +30,23 @@ window.addEventListener('load', function() {
         }
       }
       // desersion en porcentaje
-      var desertion = Math.floor((inactiveStudents * 100) / students.length) + '%';
+      var desertion = Math.floor((inactiveStudents * 100) / students.length);
       // students currenly enrolled
       var enrolled = activeStudents;
 
+      enrollment(enrolled, inactiveStudents);
+
       document.getElementById('enrolled').innerHTML = activeStudents;
-      document.getElementById('dropout').innerHTML = desertion;
+      document.getElementById('dropout').innerHTML = desertion + '%';
       document.getElementById('total').innerHTML = students.length;
       // -------------------------------------------------------------------------------------------------------------------------------
       // Alumnas que pasaron el 70%
       var countPastTarget = 0;
       var countPastTargetTech = 0;
       var countPastTargetHse = 0;
+      var noPastTarget = 0;
+      var noPastTargetTech = 0;
+      var noPastTargetHse = 0;
       // lista con notas de los 4 sprints de las alumnas
       // var allStudentsNotasTotalArr = [];
       // variables para la sumatoria de las notas tech + hse
@@ -65,15 +70,21 @@ window.addEventListener('load', function() {
             // la meta es superar 70% en tech y en hse
             if ((notaTechTotal / students[i]['sprints'].length) > 1260 && (notaHseTotal / students[i]['sprints'].length) > 940) {
               countPastTarget++;
+            } else {
+              noPastTarget++;
             }
             // META DEL 70% POR AREAS
             // la meta es superar 70% en tech
             if ((notaTechTotal / students[i]['sprints'].length) > 1260) {
               countPastTargetTech++;
+            } else {
+              noPastTargetTech++;
             }
             // la meta es superar 70% en hse
             if ((notaHseTotal / students[i]['sprints'].length) > 940) {
               countPastTargetHse++;
+            } else {
+              noPastTargetHse++;
             }
           }
         }
@@ -81,6 +92,10 @@ window.addEventListener('load', function() {
       var countPastTargetPorc = Math.round((countPastTarget * 100) / (students.length)) + '%';
       var countPastTargetTechPorc = Math.round((countPastTargetTech * 100) / (students.length)) + '%';
       var countPastTargetHsePorc = Math.round((countPastTargetHse * 100) / (students.length)) + '%';
+
+      achievement(countPastTarget, noPastTarget);
+      techGrafic(countPastTargetTech, noPastTargetTech);
+      hseGrafic(countPastTargetHse, noPastTargetHse);
 
       document.getElementById('target').innerHTML = countPastTarget;
       document.getElementById('target-percent').innerHTML = countPastTargetPorc;
@@ -107,6 +122,8 @@ window.addEventListener('load', function() {
       npsDetractorsPerc = Math.round((npsDetractors * 100) / npsCantTotal);
 
       npsTotal = Math.round(npsPromotersPerc - npsDetractorsPerc) + '%';
+
+      npsGrafic(npsPromoter, npsDetractors, npsPassive);
       document.getElementById('nps').innerHTML = npsTotal;
       document.getElementById('promoter').innerHTML = npsPromotersPerc + '% Promoter';
       document.getElementById('passive').innerHTML = npsPassivePerc + '% Passive';
@@ -122,6 +139,7 @@ window.addEventListener('load', function() {
         superaExp += promoRating[i]['student']['supera'];
       }
       totalExp = noCumpleExp + cumpleExp + superaExp;
+      satisfationGrafic(cumpleExp, noCumpleExp, superaExp);
       var satisfaction = Math.round(((cumpleExp + superaExp) * 100) / totalExp);
       document.getElementById('satisfaction').innerHTML = satisfaction;
 
@@ -140,9 +158,7 @@ window.addEventListener('load', function() {
       // toFixed --> función para limitar el número de decimales con su parametro
       // alert(scoreTeachersTotal);
       document.getElementById('scoret').innerHTML = scoreTeacherTotal;
-      document.getElementById('scorej').innerHTML = scoreJedisTotal;
-// -------------------------------------------------------------------------------------------------------------------------------
-// -------------------------------------------------------------------------------------------------------------------------------
+      // -------------------------------------------------------------------------------------------------------------------------------
       var techSprintSelect = document.getElementById('tech-skills');
       techSprintSelect.addEventListener('change', function(event) {
         var notasTechSprint1Arr = [];
@@ -204,6 +220,8 @@ window.addEventListener('load', function() {
           }
         }
         var pastTargetperSprintPorc = Math.round((pastTargetperSprint * 100) / (students.length)) + '%';
+        var under = students.length - pastTargetperSprint;
+        techGrafic(pastTargetperSprint, under);
         document.getElementById('tech').innerHTML = pastTargetperSprint;
         document.getElementById('tech-percent').innerHTML = pastTargetperSprintPorc;
       });
@@ -268,6 +286,8 @@ window.addEventListener('load', function() {
           }
         }
         var pastTargetperSprintHsePorc = Math.round((pastTargetperSprintHse * 100) / (students.length)) + '%';
+        var under = students.length - pastTargetperSprintHse;
+        hseGrafic(pastTargetperSprintHse, under);
         document.getElementById('hse').innerHTML = pastTargetperSprintHse;
         document.getElementById('hse-percent').innerHTML = pastTargetperSprintHsePorc;
       });
@@ -343,3 +363,125 @@ white.addEventListener('click', function(event) {
   document.getElementById('all-content').setAttribute('class', 'appear');
   document.getElementById('white').setAttribute('class', 'disappear');
 });
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------
+
+function enrollment(actives, inactives) {
+  google.charts.load('current', {'packages': ['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var dataTest = new google.visualization.DataTable();
+    dataTest.addColumn('string', 'Topping');
+    dataTest.addColumn('number', 'Slices');
+    dataTest.addRows([
+      ['Enrolled', actives],
+      ['Desertion', inactives],
+    ]);
+    var options = {
+      'colors': ['#1386EA', 'red'],
+      'width': 310,
+      'height': 160};
+    var chart = new google.visualization.PieChart(document.getElementById('grafico'));
+    chart.draw(dataTest, options);
+  }
+}
+
+function achievement(meet, under) {
+  google.charts.load('current', {'packages': ['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var dataTest = new google.visualization.DataTable();
+    dataTest.addColumn('string', 'Topping');
+    dataTest.addColumn('number', 'Slices');
+    dataTest.addRows([
+      ['Meet the target', meet],
+      ['Under the target', under],
+    ]);
+    var options = {
+      'colors': ['yellowgreen', 'salmon'],
+      'width': 310,
+      'height': 160};
+    var chart = new google.visualization.PieChart(document.getElementById('grafico-target'));
+    chart.draw(dataTest, options);
+  }
+}
+function techGrafic(meet, under) {
+  google.charts.load('current', {'packages': ['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var dataTest = new google.visualization.DataTable();
+    dataTest.addColumn('string', 'Topping');
+    dataTest.addColumn('number', 'Slices');
+    dataTest.addRows([
+      ['Meet the target', meet],
+      ['Under the target', under],
+    ]);
+    var options = {
+      'colors': ['red', 'gold'],
+      'width': 550,
+      'height': 380};
+    var chart = new google.visualization.PieChart(document.getElementById('grafico-tech'));
+    chart.draw(dataTest, options);
+  }
+}
+function hseGrafic(meet, under) {
+  google.charts.load('current', {'packages': ['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var dataTest = new google.visualization.DataTable();
+    dataTest.addColumn('string', 'Topping');
+    dataTest.addColumn('number', 'Slices');
+    dataTest.addRows([
+      ['Meet the target', meet],
+      ['Under the target', under],
+    ]);
+    var options = {
+      'colors': ['#2489EF', 'yellowgreen'],
+      'width': 550,
+      'height': 380};
+    var chart = new google.visualization.PieChart(document.getElementById('grafico-hse'));
+    chart.draw(dataTest, options);
+  }
+}
+
+function npsGrafic(active, detractor, passive) {
+  google.charts.load('current', {'packages': ['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var dataTest = new google.visualization.DataTable();
+    dataTest.addColumn('string', 'Topping');
+    dataTest.addColumn('number', 'Slices');
+    dataTest.addRows([
+      ['Promoters', active],
+      ['Detractor', detractor],
+      ['Passive', passive],
+    ]);
+    var options = {
+      'colors': ['green', 'yellowgreen', '#9AFD86'],
+      'width': 310,
+      'height': 160};
+    var chart = new google.visualization.PieChart(document.getElementById('grafico-nps'));
+    chart.draw(dataTest, options);
+  }
+}
+
+function satisfationGrafic(cumple, nocumple, supera) {
+  google.charts.load('current', {'packages': ['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var dataTest = new google.visualization.DataTable();
+    dataTest.addColumn('string', 'Topping');
+    dataTest.addColumn('number', 'Slices');
+    dataTest.addRows([
+      ['Cumple', cumple],
+      ['No Cumple', nocumple],
+      ['Supera', supera],
+    ]);
+    var options = {
+      'colors': ['blue', 'salmon', '#9CC630'],
+      'width': 320,
+      'height': 250};
+    var chart = new google.visualization.PieChart(document.getElementById('grafico-satisfaccion'));
+    chart.draw(dataTest, options);
+  }
+}
