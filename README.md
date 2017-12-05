@@ -1,18 +1,12 @@
-# Data Dashboard
+# Producto Final: Data Dashboard
 
 * **Objetivo:** _Crear un Data Dashboard para las Training Managers de Laboratoria. Con este les ayudarames a optimizar su tiempo y establecer un orden para poder manejar toda la data de las alumnas que participan del bootcamp._
 * **Unidades en práctica** _Todos los temas vistos en los dos primeros Sprints_
 * **Herramientas:** _HTML,CSS Y Javascript_
 
 ***
-## Colaboradoras:
-Integrantes del squad 8BM:
 
--Lilliam Haro
-
--Nataly Cortez
-
-## Informacion que debe proporcionar el programa:
+## Informacion que debe proporcionar el programa
 
 1.El total de estudiantes presentes por sede y generación.
 2.El porcentaje de deserción de estudiantes.
@@ -32,7 +26,7 @@ Integrantes del squad 8BM:
 10.La puntuación promedio de l@s profesores.
 11.La puntuación promedio de l@s jedi masters.
 
-## Adicionales:
+## Adicionales
 
 1.En Laboratoria (y sobre todo las TMs) somos adictos a la representación gráfica de los datos y como muestra el diseño, sería ideal poder mostrar los datos procesados en un gráfico como el diseño propone u otra alternativa.
 
@@ -41,9 +35,3 @@ Nota: En la etapa de diseño de la experiencia del producto, nos dimos cuenta qu
 2.Además, la proactividad (siempre de las TMs) hace que el siguiente requerimiento adicional sea muy útil:
 
 Tener un botón que permita indicar que una estudiante ha salido del Bootcamp y alterar los totales afectados por este cambio.
-
-## Vista previa:
-
-![](https://raw.githubusercontent.com/NatalyCortez/data-dashboard/master/assets/images/screen.JPG)
-![](https://raw.githubusercontent.com/NatalyCortez/data-dashboard/master/assets/images/screentwo.JPG)
-![](https://raw.githubusercontent.com/NatalyCortez/data-dashboard/master/assets/images/screenthree.JPG)
