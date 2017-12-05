@@ -405,6 +405,8 @@ function achievement(meet, under) {
     chart.draw(dataTest, options);
   }
 }
+
+// funcion el total de sprint y por sprints
 function techGrafic(meet, under) {
   google.charts.load('current', {'packages': ['corechart']});
   google.charts.setOnLoadCallback(drawChart);
@@ -424,6 +426,7 @@ function techGrafic(meet, under) {
     chart.draw(dataTest, options);
   }
 }
+// funcion el total de sprint y por sprints 
 function hseGrafic(meet, under) {
   google.charts.load('current', {'packages': ['corechart']});
   google.charts.setOnLoadCallback(drawChart);
