@@ -1,3 +1,395 @@
 /*
  * Estilos de tu proyecto
  */
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+header{
+   width: auto;
+   border-width: 0;
+   border-top-width: 0px;
+   border-bottom-width: 0px;
+   height: 89px;
+}
+nav{
+   width: 100%;;
+   margin: 0 auto;
+   position: relative;
+   height: 100%;
+}
+.logo{
+
+    width: auto;
+    margin: 0 auto;
+    height: 89px;
+}
+.a-logo img{
+   width: 100%;
+   height: 100%;
+}
+.bar-lab{
+  padding: 8px 20px 10px 0;
+   z-index: 101;
+   /* border: 2px solid #f7b617; */
+   position: absolute;
+   right: 0;
+   top:25%;
+   text-align: center;
+   
+}
+.bar-lab a{
+   color:#333333;
+   text-align: center;
+}
+.bar{
+   background-color: #e1e1e1;
+}
+section{
+   width: 100%;
+   margin: auto;
+   background-color: #F7F7F7;
+}
+section .higher{
+   width: 80%;
+   /*outline: 1px solid orange;*/
+   position: relative;
+   left: 50%;
+   transform: translateX(-50%);
+   padding-top: 20px;
+
+}
+.slc-transp {
+   background-color: transparent;
+   height: 30px;
+}
+.btn-higher{
+   background-color: transparent;
+   border-radius: 5px;
+   border:1px solid  #3333;
+   height: 30px;
+   cursor: pointer;
+   padding-left: 10px;
+   padding-right: 10px;
+}
+section .principal{
+   width: 80%;
+   /*outline: 1px solid orange;*/
+   position: relative;
+   left: 50%;
+   transform: translateX(-50%);
+   
+
+}
+/*PRIMER DIV DEL SECTION BAR-CONTAINER*/
+.principal:nth-child(1){
+   padding: 20px;
+   outline: 1px solid orange;
+}
+.principal .lista{
+   /*outline: 1px solid red;*/
+}
+/*SEGUNDO DIV DEL SECTION BAR-CONTAINER*/
+.lista li{
+   /*outline: 1PX solid aqua;*/
+   display: inline-block;
+   padding: 10px;
+   margin-left: 10px;
+   list-style: none;
+}
+.lista li a{
+   display: block;
+   text-transform: uppercase;
+   font-weight: 800;
+   font-size: 1em;
+   color: black;
+   text-decoration: none;
+}
+.lista li:hover{
+   border-bottom: 5px solid #EFB415;
+}
+
+/*Estilos para la seccion overview*/
+.overview-one,.overview-two,.overview-three,.overview-for{
+   padding-bottom: 10px;
+   padding-top: 10px;
+   padding-left: 50px;
+   padding-right: 50px; 
+}
+.container .title-overview{
+   background-color: white;
+   /* display: inline-block;*/
+   padding-bottom: 10px;
+   padding-top: 10px;
+   padding-left: 10px;
+   padding-right: 10px;
+   font-weight: bold;
+   font-size: 20px;
+}
+.data-overview{
+   background-color: white;
+  /*  border: 2px solid red; */
+   display: inline-block;
+}
+.description{
+   background-color: #e1e1e1;
+   display: block;
+   font-size:  10px;
+   text-align: center;
+
+}
+.data-style {
+   font-weight: bold;
+   font-size: 24px;
+}
+.display-inline-block{
+   display: inline-block;
+}
+.c-plomo{
+   background-color: #e1e1e1;
+
+}
+.text-align-center{
+   text-align: center;
+   border-radius: 5px;
+}
+.display-none{
+   display: none;
+}
+.show {
+	display: block;
+}
+/*students and teachers section styles*/
+a {
+	text-decoration: none;
+}
+.icon-square {
+	color: #ffc107;
+	display: inline-block;
+	font-size: 20px;
+}
+.skills-menu {
+	display: inline-block;
+	margin-left: 10px;
+}
+.topic {
+	padding: 6px;
+	margin: 4px 5px;
+}
+.dropdown {
+	margin-left: 95px;
+	
+	margin-top: 30px;
+	background-color: #fff;
+	outline: 1px purple solid;
+	cursor: pointer;
+	z-index: 50;
+}
+.space {
+	padding-left: 20px;
+padding-right: 15px;
+}
+.hide {
+	display: none;
+}
+
+.dropbtn {
+	width: auto;
+	font-size: 30px;
+	outline: 1px solid red;
+	background-color: #e1e1e1;
+	z-index: 50;
+}
+.option-menu {
+	display: inline-block;
+}
+.laboratoria-place {
+	border-bottom: 2px solid #ffc107;
+	width: 180px;
+	outline: 1px solid green;
+}
+.block {
+	display: block;
+}
+.place {
+	border-bottom: 2px solid #ffc107;
+	margin-bottom: 18px;
+	padding-bottom: 10px;
+	margin-top: 20px;
+}
+.generation {
+	margin-left: 6px;
+}
+.specialization {
+	background-color: #fff;
+	display: inline-block;
+	padding: 20px 180px 20px 20px;
+	margin: 40px;
+	position: absolute;
+}
+.profile {
+	
+	display: inline-block;
+	margin: 40px 20px 20px 480px;
+	padding: 20px;
+	height: auto;
+}
+.icon-search {
+	background-color: #fff;
+	outline: none;
+	border-radius: 5px;
+	border: none;
+	font-size: 20px;
+	color: grey;
+	padding: 8px;
+}
+.profile-input {
+	background-color: #fff;
+	outline: none;
+	border-radius: 5px;
+	border: none;
+	width: 700px;
+	height: 30px;
+	font-size: 20px;
+	color: grey;
+}
+.profile-form {
+	background-color: #fff;
+	outline: none;
+	border-radius: 5px;
+	border: none;
+	height: 33px;
+}
+.student-profile {
+	padding-top: 30px;
+	
+}
+.photo {
+	position: absolute;
+}
+.photo-profile {
+	width: 180px;
+	height: 180px;
+	display: inline-block;
+}
+.lab-student {
+	background-color: #fff;
+	padding: 20px;
+	height: 220px;
+}
+.content-profile, .content-number, .photo {
+	display: inline-block;
+}
+.content-number {
+	position: absolute;
+	padding: 6px 6px 6px 25px;
+	height: auto;
+	/*outline: 1px solid blue;*/
+}
+.content-profile {
+	margin-left: 190px;
+}
+.skills-menu {
+	text-transform: capitalize;
+}
+.tech-skills, .life-skills, .english-skills {
+	display: inline-block;
+	background-color: #e1e1e1;
+	padding: 6px;
+	margin: 3px;
+	position: relative;
+	text-align: center;
+}
+.career {
+	margin-bottom: 50px;
+	text-transform: capitalize;
+}
+.specialization-title {
+	text-transform: uppercase;
+}
+.skills {
+	background-color: #f1f1f1;
+	display: inline-block;
+	margin: 5px;
+	font-size: 14px;
+	text-transform: capitalize;
+	padding: 4px;
+}
+.name {
+	text-transform: uppercase;
+}
+.icon-triangle-right {
+	margin-left: 8px;
+}
+.skills-points {
+	font-size: 8px;
+	text-transform: uppercase;
+}
+.description {
+	font-size: 13px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.topic {
+	cursor: pointer;
+}
+.go {
+	margin-top: 115px;
+	margin-left: 130px;
+	
+}
+.background-color {
+	background-color: #ffc107;
+	border-radius: 5px;
+}
+#teachers-section {
+	text-align: center;
+}
+/*menu hamburguesa*/
+
+.user-config {
+	color: #fff;
+	opacity: 0.9;
+	cursor: pointer;
+	border-bottom: 1px solid #6f7072;
+
+}
+.user-photo {
+	width: 80px;
+	height: 80px;
+	display: inline-block;
+	margin: 12px 15px;
+}
+.name-manager {
+	display: inline-block;
+	padding: 30px 10px;
+	position: absolute;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 20px;
+	cursor: pointer;
+}
+#user-c {
+	width: 350px;
+	background-color: #333;
+	right: 0;
+	cursor: pointer;
+	position: absolute;
+	z-index: 1000;
+	float: right;
+}
+.config {
+	padding: 15px;
+	text-transform: capitalize;
+}
+.config:hover {
+	color: #ffc107;
+}
+#empty-menu {
+	padding: 150px 70px;
+}
+header {
+	position: relative;
+}
