@@ -5,12 +5,12 @@ window.addEventListener('load', function() {
     var sedes = document.getElementById('container-sedes');
     
     /* Creando la lista de las sedes */
-    for (var i = 0; i < Object.keys(data).length; i++) {
+    for (var i = 0; i < nameSedes.length; i++) {
       var containerList = document.createElement('ul');
       containerList.className = 'container-list';
       var list = document.createElement('li');
       list.className = 'list';
-      var text = document.createTextNode(Object.keys(data)[i]);
+      var text = document.createTextNode(nameSedes[i]);
     
       list.appendChild(text);
       containerList.appendChild(list);
@@ -28,8 +28,9 @@ window.addEventListener('load', function() {
         listGenerations.appendChild(textGenerations);
         containerListGenerations.appendChild(listGenerations);
         list.appendChild(containerListGenerations);
-        debugger;
+      
         /* Variables del total de alumnas, total de desercion y activas */
+        var totalCurrent = 0;
         var totalDesertion = 0;
         var totalAprobSprint = 0;
         var totalAprob = 0; 
@@ -38,6 +39,7 @@ window.addEventListener('load', function() {
         console.log(Object.values(data)); 
         for (var b = 0; b < Object.values((Object.values(Object.values(data)[i]))[a])[0].length; b++) {
           if (Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[2]) {
+            totalCurrent = totalCurrent + 1;
             for (var c = 0; c < Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[3].length; c++) {
               var tech = Object.values(Object.values(Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[3][c])[1])[0];
       
@@ -67,44 +69,45 @@ window.addEventListener('load', function() {
 
           var totalNps = promoters - detractors;
         }
-        /* Contenedores ocultos  */
+        /* Total y porcentajes  */
         total = (Object.values((Object.values(Object.values(data)[i]))[a])[0].length);
                            
         porcentageDesertion = parseInt((totalDesertion) * 100 / total);
 
-        porcentageRelation = parseInt((totalAprob) * 100 / total);
+        porcentageRelation = parseInt((totalAprob) * 100 / totalCurrent);
 
+        /* Contenedores ocultos  */
         var numberStudent = document.createElement('input');
-        numberStudent.className = 'number-student';
-        numberStudent.value = total;
+        numberStudent.className = 'number-student hide';
+        numberStudent.value = totalCurrent;
                 
         var numberApproved = document.createElement('input');
-        numberApproved.className = 'number-approved';
+        numberApproved.className = 'number-approved hide';
         numberApproved.value = totalAprob;  
                                 
         var numberDesertion = document.createElement('input');
-        numberDesertion.className = 'number-desertion';
+        numberDesertion.className = 'number-desertion hide';
         numberDesertion.value = porcentageDesertion + '%'; 
 
         var numberRelation = document.createElement('input');
-        numberRelation.className = 'number-relation';
+        numberRelation.className = 'number-relation hide';
         numberRelation.value = porcentageRelation + '%';
                 
         var numberNps = document.createElement('input');
-        numberNps.className = 'number-nps';
+        numberNps.className = 'number-nps hide';
         numberNps.value = totalNps + '%';  
                                 
-        // var numberDesertion = document.createElement('input');
-        // numberDesertion.className = 'number-desertion';
-        // numberDesertion.value = porcentageDesertion + '%'; 
+        var numberPromoters = document.createElement('input');
+        numberPromoters.className = 'number-promoters hide';
+        numberPromoters.value = promoters + '%'; 
 
-        // var numberStudent = document.createElement('input');
-        // numberStudent.className = 'number-student';
-        // numberStudent.value = total;
+        var numberPassive = document.createElement('input');
+        numberPassive.className = 'number-passive hide';
+        numberPassive.value = passive + '%';
                 
-        // var numberApproved = document.createElement('input');
-        // numberApproved.className = 'number-approved';
-        // numberApproved.value = totalAprob;  
+        var numberDetractors = document.createElement('input');
+        numberDetractors.className = 'number-detractors hide';
+        numberDetractors.value = detractors + '%';  
                                 
         // var numberDesertion = document.createElement('input');
         // numberDesertion.className = 'number-desertion';
@@ -136,11 +139,11 @@ window.addEventListener('load', function() {
 
         containerListGenerations.appendChild(numberNps);
 
-        // containerListGenerations.appendChild(numberApproved);
+        containerListGenerations.appendChild(numberPromoters);
                 
-        // containerListGenerations.appendChild(numberStudent);
+        containerListGenerations.appendChild(numberPassive);
 
-        // containerListGenerations.appendChild(numberDesertion);
+        containerListGenerations.appendChild(numberDetractors);
 
         // containerListGenerations.appendChild(numberApproved);
                         
@@ -184,7 +187,7 @@ window.addEventListener('load', function() {
     } 
     /* Contenedores visibles  */
     var generations = document.getElementsByClassName('generations');
-    // debugger;
+  
     for (var a = 0; a < generations.length; a++) {
       generations[a].addEventListener('click', function() {
         var secondContainer = document.getElementById('second-container');
@@ -194,6 +197,9 @@ window.addEventListener('load', function() {
         var numberDesertion = document.getElementsByClassName('number-desertion');
         var numberRelation = document.getElementsByClassName('number-relation');
         var numberNps = document.getElementsByClassName('number-nps');
+        var numberPromoters = document.getElementsByClassName('number-promoters');
+        var numberPassive = document.getElementsByClassName('number-passive');
+        var numberDetractors = document.getElementsByClassName('number-detractors');
                         
         for (var a = 0; a < generations.length; a++) {
           if (event.target === generations[a]) {
@@ -217,12 +223,26 @@ window.addEventListener('load', function() {
             var containerNps = document.createElement('p');
             containerNps.className = 'container';
             containerNps.textContent = numberNps[a].value;
+            
+            var containerPorcentage = document.createElement('div');
+            containerPorcentage.className = 'container-porcentage';
+            var containerPromoters = document.createElement('p');
+            var containerPassive = document.createElement('p');
+            var containerDetractors = document.createElement('p');
+            containerPromoters.textContent = numberPromoters[a].value;
+            containerPassive.textContent = numberPassive[a].value;
+            containerDetractors.textContent = numberDetractors[a].value; 
+            
+            containerPorcentage.appendChild(containerPromoters);
+            containerPorcentage.appendChild(containerPassive);
+            containerPorcentage.appendChild(containerDetractors);
 
             containerParagraph[0].appendChild(containerStudent);
             containerParagraph[1].appendChild(containerDesertion);  
             containerParagraph[2].appendChild(containerApproved);
             containerParagraph[3].appendChild(containerRelation);
             containerParagraph[4].appendChild(containerNps);
+            containerParagraph[5].appendChild(containerPorcentage);
           }
         }
       });
