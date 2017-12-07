@@ -202,20 +202,10 @@ header section {
     margin-left: 40px;
 }
 
-.center {
-    margin-right: 65px;
-    margin-left: 65px;
-}
-
-.grafhic {
-    width: 80%;
-    margin-left: 17%;
-}
-
-.grafhic .grafhic-data {
-    width: 100%;
-    display: inline-block;
-}
-
 /* Style for Third Section */
 
+
+.title-skills{
+    display: inline-block;
+    margin: 0;
+}

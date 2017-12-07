@@ -5,12 +5,12 @@ window.addEventListener('load', function() {
     var sedes = document.getElementById('container-sedes');
     
     /* Creando la lista de las sedes */
-    for (var i = 0; i < nameSedes.length; i++) {
+    for (var i = 0; i < Object.keys(data).length; i++) {
       var containerList = document.createElement('ul');
       containerList.className = 'container-list';
       var list = document.createElement('li');
       list.className = 'list';
-      var text = document.createTextNode(nameSedes[i]);
+      var text = document.createTextNode(Object.keys(data)[i]);
     
       list.appendChild(text);
       containerList.appendChild(list);
@@ -36,11 +36,19 @@ window.addEventListener('load', function() {
         var totalAprob = 0; 
         var totalNps = 0;
 
-        console.log(Object.values(data)); 
+        // console.log(Object.values(data)); 
         for (var b = 0; b < Object.values((Object.values(Object.values(data)[i]))[a])[0].length; b++) {
-          if (Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[2]) {
-            totalCurrent = totalCurrent + 1;
-            for (var c = 0; c < Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[3].length; c++) {
+          // console.log(Object.values(Object.values(Object.values((Object.values(Object.values(data)[0]))[0])[0][3])[3][0])[0]);
+          // debugger;
+          for (var c = 0; c < Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[3].length; c++) {
+            var sprint = document.getElementById('sprint');
+            text.textContent = '';
+            // var containerListSprint = document.createElement('option');
+            // containerListSprint.className = 'container-option';
+            var text = document.createTextNode(Object.keys(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[3] + '-' + Object.values(Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[3][c])[0]);
+              
+            if (Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[2]) {
+              totalCurrent = totalCurrent + 1;
               var tech = Object.values(Object.values(Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[3][c])[1])[0];
       
               var hse = Object.values(Object.values(Object.values(Object.values((Object.values(Object.values(data)[i]))[a])[0][b])[3][c])[1])[1];
@@ -55,10 +63,11 @@ window.addEventListener('load', function() {
                   totalAprob = totalAprob + 1;
                 }
               }
-            } 
-          } else {
-            totalDesertion = totalDesertion + 1;
-          }
+              containerListGenerations.appendChild(text);
+            } else {
+              totalDesertion = totalDesertion + 1;
+            }                         
+          } 
         } 
 
         for (var b = 0; b < Object.values((Object.values(Object.values(data)[i]))[a])[1].length; b++) {
@@ -109,9 +118,9 @@ window.addEventListener('load', function() {
         numberDetractors.className = 'number-detractors hide';
         numberDetractors.value = detractors + '%';  
                                 
-        // var numberDesertion = document.createElement('input');
-        // numberDesertion.className = 'number-desertion';
-        // numberDesertion.value = PorcentajeDesertion + '%'; 
+        // var textOption = document.createElement('option');
+        // textOption.className = 'text-option';
+        // textOption.value = text; 
 
         // var numberStudent = document.createElement('input');
         // numberStudent.className = 'number-student';
@@ -145,6 +154,8 @@ window.addEventListener('load', function() {
 
         containerListGenerations.appendChild(numberDetractors);
 
+        // containerListGenerations.appendChild(text);
+
         // containerListGenerations.appendChild(numberApproved);
                         
         // containerListGenerations.appendChild(numberStudent);
@@ -165,7 +176,7 @@ window.addEventListener('load', function() {
       sedes.classList.remove('hide');
       sedes.classList.add('show');
     } else {
-      sedes.textContent = '';        
+      sedes.textContent = '';       
       sedes.classList.remove('show');
       sedes.classList.add('hide');
     }
