@@ -3,8 +3,43 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Armata|Source+Code+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <header>
+      <img src="assets/images/logo-laboratoria.svg" alt="logo">
+    </header>
+
+    <div class="optionsheader">
+      <h3><a href="index.html" target="_blank">OVERVIEW</a></h3>
+      <h3><a href="students.html" target="_blank">STUDENTS</a></h3>
+    </div>
+    <button id="sede_generation">NUESTRAS SEDES</button>
+      <div id="listSedes" class="hiden">
+        <a href="#" class="sede" data-sede ="AQP">Arequipa</a>
+         <div class="listGenerations" class="hiden">
+           <a  href="#" class="generation" data-generation ="2016-2">2016-2</a>
+           <a href="#" class="generation" data-generation ="2017-1">2017-1</a>
+         </div>
+         <a href="#" class="sede" data-sede ="CDMX">Mexico</a>
+         <div class="listGenerations" class="hiden">
+           <a href="#" class="generation" data-generation ="2017-1">2017-1</a>
+           <a href="#" class="generation" data-generation ="2017-2">2017-2</a>
+         </div>
+         <a href="#" class="sede" data-sede ="LIM">Lima</a>
+         <div class="listGenerations" class="hiden">
+           <a href="#" class="generation" data-generation ="2016-2">2016-2</a>
+           <a href="#" class="generation" data-generation ="2017-1">2017-1</a>
+           <a href="#" class="generation" data-generation ="2017-2">2017-2</a>
+         </div>
+         <a href="#" class="sede" data-sede ="SCL">Chile</a>
+         <div class="listGenerations" class="hiden">
+           <a href="#" class="generation" data-generation ="2016-2">2016-2</a>
+           <a href="#" class="generation" data-generation ="2017-1">2017-1</a>
+           <a href="#" class="generation" data-generation ="2017-2">2017-2</a>
+         </div>
+      </div>
 
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
