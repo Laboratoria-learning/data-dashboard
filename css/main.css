@@ -48,9 +48,6 @@ a {
   cursor: pointer;
 }
 
-/*.list {
-  padding: 20px;
-}*/
 
 .hide {
   display: none;
@@ -60,15 +57,12 @@ a {
   float: right;
   display: block;
   background-color: #FDE6BF;
-  /*background-color: #1E2327;*/
   width: 320px;
   height: auto;
   position: absolute;
   line-height: 76px;
   list-style: none;
   right: 20px;
-  /* float: right; */
-  bottom: 157px;
   z-index: 999;
 }
 
