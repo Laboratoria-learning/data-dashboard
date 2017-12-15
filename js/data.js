@@ -1,6 +1,6 @@
 var data = {
-  'AQP': {
-    '2016-2': {
+  'AREQUIPA': {
+    '2016-II': {
       'students': [
         {
           'name': 'Donna Sloper',
@@ -591,7 +591,7 @@ var data = {
         }
       ]
     },
-    '2017-1': {
+    '2017-I': {
       'students': [
         {
           'name': 'Collette Tubby',
@@ -1063,8 +1063,8 @@ var data = {
       ]
     }
   },
-  'CDMX': {
-    '2017-1': {
+  'MEXICO': {
+    '2017-I': {
       'students': [
         {
           'name': 'Jada Curgenuer',
@@ -1787,7 +1787,7 @@ var data = {
         }
       ]
     },
-    '2017-2': {
+    '2017-II': {
       'students': [
         {
           'name': 'Julieta Readhead',
@@ -2415,8 +2415,8 @@ var data = {
       ]
     }
   },
-  'LIM': {
-    '2016-2': {
+  'LIMA': {
+    '2016-II': {
       'students': [
         {
           'name': 'Shalna Peddersen',
@@ -2902,7 +2902,7 @@ var data = {
         }
       ]
     },
-    '2017-1': {
+    '2017-I': {
       'students': [
         {
           'name': 'Marie-jeanne Bardwall',
@@ -3418,7 +3418,7 @@ var data = {
         }
       ]
     },
-    '2017-2': {
+    '2017-II': {
       'students': [
         {
           'name': 'Melany Brougham',
@@ -3629,8 +3629,8 @@ var data = {
       ]
     }
   },
-  'SCL': {
-    '2016-2': {
+  'CHILE': {
+    '2016-II': {
       'students': [
         {
           'name': 'Leela Nunson',
@@ -3849,7 +3849,7 @@ var data = {
         }
       ]
     },
-    '2017-1': {
+    '2017-I': {
       'students': [
         {
           'name': 'Emmalee Bowery',
@@ -4346,7 +4346,7 @@ var data = {
         }
       ]
     },
-    '2017-2': {
+    '2017-II': {
       'students': [
         {
           'name': 'Donna Sloper',
@@ -4747,7 +4747,7 @@ var data = {
           'active': false,
           'sprints': []
         },
-        { },
+        // { },
         {
           'name': 'Jada Curgenuer',
           'photo': 'http://dummyimage.com/133x195.png/cc0000/ffffff',
@@ -5006,7 +5006,7 @@ var data = {
             }
           ]
         },
-        { },
+        // { },
         {
           'name': 'Julieta Readhead',
           'photo': 'http://dummyimage.com/119x227.png/ff4444/ffffff',

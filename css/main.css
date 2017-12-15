@@ -1,3 +1,353 @@
 /*
  * Estilos de tu proyecto
  */
+ * {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+ }
+ body {
+    background: rgb(247,247,247);
+    color: rgb(43,43,43);
+ }
+.header {
+  width: 100%;
+  height: 79px;
+  padding-right: 93px;
+  text-align: center;
+  background: #fff;
+}
+.header img {
+  height: 70%;
+  margin-top:13px;
+}
+.header button {
+  float: right;
+  padding-top: 20px;
+  font-size: 30px;
+  border: none;
+  background: none;
+  outline: none;
+}
+.button-hamb {
+  cursor: pointer;
+}
+.select {
+  font-size: 20px;
+  background: none;
+  border: none;
+  outline: none;
+}
+.nav-menu {
+  background:rgb(225,225,225) ;
+  width: 100%;
+  height: 130px;
+  position: relative;
+  padding: 32px 0 29px 86px;
+}
+
+.nav-menu h2{
+  display: inline-block;
+  font-size: 20px;
+}
+
+.nav-menu li {
+  display: inline-block;
+  margin: 32px 25px 0 0;
+  font-size: 19px;
+}
+.nav-menu hr {
+  width: 110px;
+  height: 5px;
+  background:rgb(247,182,23);
+  border: none;
+}
+/*Overview*/
+#content {
+  margin: 41px 93px 111px 93px;
+}
+.box-one {
+  overflow: auto;
+  margin-bottom: 77px;
+}
+.box-left {
+  width: 340px;
+  height: 326px;
+  float: left;
+}
+.gray-box {
+  background: rgb(247,247,247);
+  font-size: 10px;
+  text-align: center;
+  width: 142px;
+  height: 60px;
+  float: left;
+  margin: 14px 8px 14px 0;
+  padding: 6px;
+}
+.box-one img {
+  width: 301px;
+  height: 176px;
+}
+.color-red {
+  color: rgb(237,119,119);
+}
+.box-center {
+  width: 340px;
+  height: 326px;
+  margin: 0 60px;
+  float: left;
+}
+.box-right {
+  width: 340px;
+  height: 326px;
+  float: right;
+}
+.tech-skills {
+  height: 500px;
+  margin-bottom: 77px;
+}
+.tech-skills p {
+  margin-right: 15px;
+}
+.overall {
+  color: rgba(43,43,43,0.6);
+  border: none;
+  border-bottom: 2px solid black;
+}
+.life-skills {
+  height: 500px;
+  margin-bottom: 77px;
+}
+.life-skills p {
+  margin-right: 15px;
+}
+.sprints {
+  color: rgba(43,43,43,0.6);
+  border: none;
+  border-bottom: 2px solid black;
+}
+.box-two {
+  overflow: auto;
+}
+.box-two img {
+  width: 301px;
+  height: 176px;
+}
+.gray-content {
+  display: block;
+  overflow: auto;
+}
+#graph-img {
+  width: 660px;
+  height: 310px;
+}
+#circle-img {
+  width: 320px;
+  height:255px;
+  outline: 1px solid purple;
+  margin-bottom: 10px;
+}
+.information {
+  margin-right: 40px;
+  float: right;
+  font-size: 11.3px;
+  line-height: 20px;
+  color: rgba(43,43,43,0.6);
+}
+#pastel-green {
+  color: rgb(126,211,33);
+}
+#pastel-red {
+  color: rgb(234,81,81);
+}
+/*Students*/
+#content-two {
+  margin: 40px 56px 58px 88px ;
+  overflow: auto;
+}
+.specialization {
+  background: #fff;
+  height: 149px;
+  width: 349px;
+  padding: 14px;
+  display: inline-block;
+  float: left;
+}
+.specialization p {
+  font-weight: 900;
+  margin-bottom: 16px;
+  font-size: 21px;
+}
+.specialization ul {
+  font-size: 19px;
+  line-height: 29px;
+  list-style: none;
+}
+.specialization i {
+  color: #fff;
+  border: 1px solid rgb(247,182,23);
+  border-radius: 5px;
+}
+#radiusquare {
+  color: rgb(247,182,23);
+  background: rgb(247,182,23);
+}
+.search-box {
+  background: #fff;
+  display: inline-block;
+  float: right;
+  height:45px;
+  width:810px;
+  overflow: auto;
+  margin-bottom: 30px;
+  border-bottom: 3px solid rgba(200,200,200,0.3);
+  border-right: 3px solid rgba(200,200,200,0.3);
+}
+.search-box i {
+  font-size: 20px;
+  margin-left: 13px;
+  color: rgb(200,200,200);
+}
+.search-box input {
+  height: 40px;
+  width: 730px;
+  border: none;
+  outline: none;
+}
+.students-information {
+  height: 190px;
+  width: 810px;
+  background: #fff;
+  border-bottom: 3px solid rgba(200,200,200,0.3);
+  border-right: 3px solid rgba(200,200,200,0.3);
+  float: right;
+  padding: 19px;
+  display: inline-block;
+  overflow: auto;
+}
+.students-information img {
+  width: 147px;
+  height: 147px;
+  margin-right: 22px;
+  float: left;
+}
+.p-information {
+  float: left;
+}
+.name {
+  font-size: 28px;
+  font-weight: 900;
+}
+.students-information ul {
+  list-style: none;
+  margin-top: 20px;
+}
+.students-information li {
+display: inline-block;
+margin-right: 13px;
+background: rgb(225,225,225);
+color: rgb(120,120,120);
+font-size: 12px;
+padding: 5px 15px;
+}
+.square-skills {
+  float: right;
+  font-size: 12px;
+  text-align: center;
+}
+.size-big {
+  font-size: 18px;
+  font-weight: 900;
+}
+.tle-skills {
+  background: rgb(225,225,225);
+  display: inline-block;
+  margin-right: 5px;
+  padding: 10px 5px;;
+  margin-bottom: 30px;
+}
+.view {
+  text-align: right;
+  font-size: 19px;
+}
+#remove {
+  padding: 3px;
+  background: rgb(237,119,119);
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+/*Menu Hamburguesa*/
+#white {
+  background-color: #fff;
+  width: 100%;
+  height:1000px;
+  cursor: pointer;
+
+}
+.menu {
+  background: rgb(43,43,43);
+  color: #fff;
+  height: 1000px;
+  width: 297px;
+  font-size: 18px;
+  font-weight: 800;
+  margin-left: 461px;
+  line-height: 60px;
+  padding: 11px;
+}
+.menu img {
+  height: 78px;
+  width: 73px;
+  margin-left: 100px;
+}
+
+/*CLASES REUTILIZABLES*/
+.background-w {
+  background: #fff;
+}
+.bold {
+  font-weight: 700;
+}
+.inline-b {
+  display: inline-block;
+}
+.font-s {
+  font-size: 19px;
+}
+.padding {
+  padding: 20px;
+}
+.font-s-two {
+  font-size: 14px;
+}
+.color-green {
+  color: rgb(107,174,32);
+}
+.font-s-three {
+  font-size: 28px;
+}
+.font-s-four {
+  font-size: 8px;
+}
+/*Clases agregadas con javascript*/
+.disappear {
+  display: none;
+}
+.hidden {
+  visibility: hidden;
+}
+.appear {
+  visibility: visible;
+}
+.margin-left {
+  margin-left: 127px;
+}
+.margin-none {
+  margin-left: 0;
+}
+.cursor-hand {
+  cursor: pointer;
+}
