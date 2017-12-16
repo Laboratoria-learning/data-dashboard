@@ -3,8 +3,91 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+
+    <header>
+      <div>
+        <img src="assets/images/logo-laboratoria.svg" alt="">
+        <div id="barra-lateral">
+          <p>cerrar sescion</p>
+        </div>
+
+      </div>
+
+
+      <section id="barra-menus">
+      <div>
+        <select id="filtro-sedes" name="">
+          <option value="" hidden>Selecciona una opción</option>
+          <optgroup label="Arequipa">
+            <option value="AQP" data-sede="AQP" data-generacion="2016-2">AQP  [2016 - 2]</option>
+            <option value="AQP" data-sede="AQP" data-generacion="2016-2">AQP  [2017 - 1]</option>
+          </optgroup>
+          <optgroup label="México">
+            <option value="CDMX" data-sede="CDMX" data-generacion="2017-1">CDMX  [2017 - 1]</option>
+            <option value="CDMX" data-sede="CDMX" data-generacion="2017-2">CDMX  [2017 - 2]</option>
+          </optgroup>
+          <optgroup label="Lima">
+            <option value="LIM" data-sede="LIM" data-generacion="2016-2">LIM  [2016 - 1]</option>
+            <option value="LIM" data-sede="LIM" data-generacion="2017-1">LIM  [2017 - 2]</option>
+            <option value="LIM" data-sede="LIM" data-generacion="2017-2">LIM  [2017 - 3]</option>
+          </optgroup>
+          <optgroup label="Chile">
+            <option value="SCL" data-sede="SCL" data-generacion="2016-2">SCL  [2016 - 1]</option>
+            <option value="SCL" data-sede="SCL" data-generacion="2017-1">SCL  [2017 - 2]</option>
+            <option value="SCL" data-sede="SCL" data-generacion="2017-2">SCL  [2017 - 3]</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <section id="contenido-tab">
+        <ul class="cont-tabs">
+         <li> <button type="button" name="button" class="tab" data-tab-seleccionado = "tabOverview">OVERVIEW</button></li>
+         <li> <button type="button" name="button" class="tab" data-tab-seleccionado = "tabStudents">STUDENTS</button></li>
+         <li ><button type="button" name="button" class="tab" data-tab-seleccionado = "tabTeachers">TEACHERS</button></li>
+       </ul>
+      </section>
+    </section>
+  </header>
+
+
+  <main>
+
+      <!-- contenedor OVERVIEW(Tab overview) -->
+      <section id="overviewTab">
+        <div class="caja-1">
+          <p>ENROLLMENT</p>
+          <div class="caja-1-a"></div>
+          <img src="./assets/images/bar-graph.png" alt="">
+        </div>
+      </section>
+
+
+      <!-- contenedor Alumnas(Tab student) -->
+      <section id="studentsTab" style="display:none">
+          <div class="specialization">
+            <h4>SPECIALIZATION</h4>
+            <form>
+              <input type="checkbox"> UX Design
+              <input type="checkbox"> Front end developer
+            </form>
+          </div>
+          <div id="listOfStudents" class="student-hide">
+          </div>
+        </section>
+
+     <!-- contenedor TEACHERS(Tab teacher) -->
+      <section id="teachersTab">
+      <div class="">
+        <h4>TEACHERS AND JEDIS</h4>
+        <div class="caja-3-a"></div>
+        <img src="./assets/images/rectangular-graphic.png" alt="">
+       </section>
+      </div>
+
+    </main>
 
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
