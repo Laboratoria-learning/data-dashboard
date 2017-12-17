@@ -1,0 +1,150 @@
+/*
+ * Estilos de tu proyecto
+ */
+
+ * {
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  text-align: center;
+}
+
+header div img{
+  width: 300px;
+}
+
+#barra-lateral{
+	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+	left: 0; /* Establecemos la barra en la izquierda */
+	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+  background-color: #757575;
+  width: 100px;
+  height: 100%;
+}
+
+/* boton de seleccion*/
+#barra-menus{
+  background-color: #d4cecb;
+  width: 100%;
+  height: 150px;
+}
+
+/* boton de seleccion*/
+#filtro-sedes{
+  margin-left: 200px;
+  text-align: center;
+  width: 300px;
+  margin: 20px 350px;
+}
+
+
+
+/*Tabuladores*/
+/* Menu Over student teachers*/
+#contenido-tab .cont-tabs{
+  width: 100%;
+  font-size: 5em;
+  border: none;
+
+}
+.cont-tabs li{
+  list-style: none;
+  display: inline-block;
+
+}
+.tab{
+  color: white;
+  background-color: #d9e991;
+  border-radius: 5%;
+  border-radius: none;
+  padding: 20px;
+  width: 150px;
+}
+
+
+
+
+/*---------> clases para seccion students <---------*/
+.container-students {
+  background: #f5eded;
+  width: 90%;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 1em;
+}
+
+.specialization {
+  float: left;
+  vertical-align: top;
+  background-color: #ffffff;
+  width: 30%;
+  padding: 1em;
+  box-shadow: 2px 2px 2px #aaa8a8;
+}
+
+.specialization h4 {
+  font-weight: 700;
+  margin-bottom: 1em;
+  font-size: 1.2em;
+  color: #4C4743;
+}
+
+.student-hide {
+  float: right;
+  width: 69%;
+}
+
+.img-student {
+  float: left;
+  width: 25%;
+  height: 8em;
+}
+
+.name-student {
+  float: left;
+  vertical-align: top;
+  width: 35%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2em;
+  color: #4C4743;
+}
+
+.profile-student {
+  margin-bottom: 2em;
+  background-color: #ffffff;
+  padding: 1em;
+  overflow: auto;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px #aaa8a8;
+}
+
+.box-tech {
+  background-color: #FFB230;
+  float: left;
+  vertical-align: top;
+  height: 5em;
+  margin-right: 2%;
+  width: 19%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 1px 2px 1px #949292;
+}
+
+.box-life {
+  background-color: #ED6C44;
+  float: left;
+  vertical-align: top;
+  height: 5em;
+  width: 19%;
+  border-radius: 4px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 1px 2px 1px #949292;
+}

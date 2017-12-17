@@ -53,14 +53,39 @@
 
   <main>
 
-      <!-- contenedor OVERVIEW(Tab overview) -->
-      <section id="overviewTab">
-        <div class="caja-1">
-          <p>ENROLLMENT</p>
-          <div class="caja-1-a"></div>
-          <img src="./assets/images/bar-graph.png" alt="">
+    <section id="overviewTab">
+
+      <!-- DESERCION -->
+    <div class="graficasTotal">
+      <span>PORCENTAJE DE DESERCION</span>
+      <div class="contenedor-cajas">
+        <div class="contenedor-grafica">
+          <p id="caja-enrollment" class="datoText">-</p>
+          <p class="texTbox"># ALUMNAS MATRICULADAS</p>
         </div>
-      </section>
+        <div class="contenedor-grafica">
+          <P id="dropout-porcentaje" class="datoText">-</p>
+          <P>% DESERCION</P>
+        </div>
+      </div>
+      <div class="grafica" id="enrollment-draw"></div>
+    </div>
+
+    <!-- CUMPLIO META -->
+      <div class="graficasTotal">
+        <span> META (ALUMNAS) </span>
+        <div class="contenedor-cajas">
+          <div class="contenedor-grafica">
+            <p id="caja-achievement" class="datoText">-</p>
+            <p># ALUMNAS (Cumple Meta)</p>
+          </div>
+          <div class="contenedor-grafica">
+            <p id="achievement-porcentaje" class="datoText">-</p>
+            <p id="total-achievement" class="cajaTexto">% TOTAL(Cumple Meta)</P>
+          </div>
+        </div>
+        <div class="grafica" id="achieven-draw"></div>
+      </div>
 
 
       <!-- contenedor Alumnas(Tab student) -->
