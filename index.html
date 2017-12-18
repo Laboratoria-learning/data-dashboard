@@ -2,13 +2,163 @@
 <html>
   <head>
     <meta charset="utf-8">
+
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+
+          // Load the Visualization API and the corechart package.
+          google.charts.load('current', {'packages':['corechart']});
+
+    </script>
     <title>Data Dashboard</title>
+    <link rel="stylesheet" href="css/main.css">
+         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900" rel="stylesheet">
   </head>
   <body>
 
-		<!-- Base de datos -->
-		<script src="./js/data.js"></script>
-		<!-- Aquí va tus archivos JS -->
-    <script src="./js/app.js"></script>
-  </body>
-</html>
+    <header>
+      <div id="barra-lateral">
+           <img class="imagen-lab" src="assets/images/logo-lab.png" alt="logo-laboratoria">
+            <img class="imagen-profile"src="assets/images/Jonh-Parra-imagen-profile.jfif" alt="foto de perfil">
+
+
+             <div>
+               <select id="filtro-sedes" name="promo">
+                 <option value="" hidden><a class="tab" data-tab-seleccionado = "tabOverview">DASHBOARD</a></option>
+                 <optgroup label="Arequipa">
+                   <option value="AQP"  data-generacion="2016-2"> 2016 - 2</option>
+                   <option value="AQP"  data-generacion="2016-2"> 2017 - 1</option>
+                 </optgroup>
+                 <optgroup label="México">
+                   <option value="CDMX" data-sede="CDMX" data-generacion="2017-1">2017 - 1</option>
+                   <option value="CDMX" data-sede="CDMX" data-generacion="2017-2">2017 - 2</option>
+                 </optgroup>
+                 <optgroup label="Lima">
+                   <option value="LIM" data-sede="LIM" data-generacion="2016-2">2016 - 1</option>
+                   <option value="LIM" data-sede="LIM" data-generacion="2017-1">2017 - 2</option>
+                              <option value="LIM" data-sede="LIM" data-generacion="2017-2">2017 - 3</option>
+                            </optgroup>
+                            <optgroup label="Chile">
+                              <option value="SCL" data-sede="SCL" data-generacion="2016-2">2016 - 1</option>
+                              <option value="SCL" data-sede="SCL" data-generacion="2017-1">2017 - 2</option>
+                              <option value="SCL" data-sede="SCL" data-generacion="2017-2">2017 - 3</option>
+                            </optgroup>
+                          </select>
+                        </div>
+
+
+  <nav id="contenido-tab">
+<ul class="cont-tabs">
+ <li>
+   <div class="barra"></div>
+   <a class="tab" data-tab-seleccionado = "tabOverview">DASHBOARD</a>
+
+  <ul class="sub-menu">
+    <li> <a>SEDE</a></li>
+    <li><a>SEDE</a></li>
+  </ul>
+ </li>
+ <li>
+   <div class="barra"></div>
+   <a class="tab" data-tab-seleccionado = "tabStudents" >STUDENTS</a>
+ </li>
+ <li>
+   <div class="barra"></div>
+    <a class="tab">STUDENTS DATA</a>
+ </li>
+ <li>
+   <div class="barra"></div>
+    <a class="tab" data-tab-seleccionado = "tabTeachers">TEACHERS</a>
+</li>
+
+</ul>
+</nav>
+      </div>
+
+      <div>
+        <img src="assets/images/logo-laboratoria.svg" alt="">
+
+        </div>
+
+      </div>
+
+
+
+
+                  </header>
+                  <!-- +++++++++++++++++++CONTENIDOSS +++++++++++++++++++++++++++-->
+                    <main>
+
+                        <!-- contenedor OVERVIEW(Tab overview) -->
+                        <section id="overviewTab">
+
+                          <!-- DESERCION -->
+                        <div class="graficasTotal">
+                          <span>PORCENTAJE DE DESERCION</span>
+                          <div class="contenedor-cajas">
+                            <div class="contenedor-grafica">
+                              <p id="caja-enrollment" class="datoText">-</p>
+                              <p class="texTbox"># ALUMNAS MATRICULADAS</p>
+                            </div>
+                            <div class="contenedor-grafica">
+                              <P id="dropout-porcentaje" class="datoText">-</p>
+                              <P>% DESERCION</P>
+                            </div>
+                          </div>
+                          <div class="grafica" id="enrollment-draw"></div>
+                        </div>
+
+                        <!-- CUMPLIO META -->
+                          <div class="graficasTotal">
+                            <span> META (ALUMNAS) </span>
+                                      <div class="contenedor-cajas">
+                                        <div class="contenedor-grafica">
+                                          <p id="caja-achievement" class="datoText">-</p>
+                                          <p># ALUMNAS (Cumple Meta)</p>
+                                        </div>
+                                        <div class="contenedor-grafica">
+                                          <p id="achievement-porcentaje" class="datoText">-</p>
+                                          <p id="total-achievement" class="cajaTexto">% TOTAL(Cumple Meta)</P>
+                                        </div>
+                                      </div>
+                                      <div class="grafica" id="achieven-draw"></div>
+                                    </div>
+                                  </section>
+
+
+
+
+                                  <!-- contenedor Alumnas(Tab student) -->
+                                  <section id="studentsTab" style="display:none">
+                                      <div class="especializacion">
+                                        <h4>SPECIALIZATION</h4>
+                                        <form>
+                                          <input type="checkbox"> UX Design
+                                          <input type="checkbox"> Front end developer
+                                        </form>
+                                      </div>
+                                      <div id="listOfStudents" class="student-hide">
+                                      </div>
+                                      <div class="">
+                                                 PINTAR ALUMNAS
+                                               </div>
+                                             </section>
+
+                                          <!-- contenedor TEACHERS(Tab teacher) -->
+                                           <section id="teachersTab">
+                                           <div class="">
+                                             <h4>TEACHERS AND JEDIS</h4>
+                                             <div class="caja-3-a"></div>
+                                             <img src="./assets/images/rectangular-graphic.png" alt="">
+                                            </section>
+                                           </div>
+                                         </main>
+
+                                       <!-- +++++++++++++CONEXION A DATA Y APP +++++++++++++++++++++++++++-->
+                                     		<!-- Base de datos -->
+                                     		<script src="./js/data.js"></script>
+                                     		<!-- Aquí va tus archivos JS -->
+                                         <script src="./js/app.js"></script>
+                                       </body>
+                                      </html>
