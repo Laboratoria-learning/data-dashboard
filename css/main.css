@@ -1,3 +1,117 @@
-/*
- * Estilos de tu proyecto
- */
+body {
+ font-family: 'Montserrat', sans-serif;
+ margin: 0;
+ padding: 0;
+ width: 100%;
+}
+
+button {
+  width: 40px;
+  background-color: inherit;
+  border-color: inherit;
+  margin-left: 200px;
+}
+nav {
+  width: 60%;
+  margin-left: 20%;
+}
+span {
+  font-size: 40px;
+  margin-left: 100px;
+}
+
+
+nav {
+  width: 60%;
+  margin-left: 20%;
+}
+ul {
+  list-style: none;
+}
+li:hover {
+  background-color: lightgrey;
+}
+ a {
+   text-decoration: none;
+ }
+ a:hover{
+  color: #fff;
+}
+div {
+  display: inline-block;
+}
+#barra-sedes {
+  height: 100px;
+  background-color: #F7B617;
+
+}
+#sedes {
+  border-radius: 8px;
+  font-size: 20px;
+  margin-left: 50px;
+  margin-top: 25px;
+
+}
+#headboard >span {
+  margin: auto ;
+
+}
+
+.enabled-menu {
+  display: block;
+}
+.disabled-menu {
+  display: none;
+}
+.logo {
+  height: 100px;
+  margin-left: 100px;
+  margin-top: 50px;
+}
+.alumnas {
+  width: 300px;
+  height: 500px;
+  background-color: #4643BB;
+
+}
+.prom-general {
+  width: 300px;
+  height: 500px;
+  background-color: #52E000;
+
+
+}
+.meta-ht {
+  width: 300px;
+  height: 500px;
+  background-color: #FC331C;
+
+}
+.meta-HSE{
+  width: 300px;
+  height: 500px;
+  background-color:#00C4DA;
+}
+
+.nps {
+  width: 600px;
+  height: 500px;
+  background-color: #0EACBD;
+
+}
+.nsa {
+  width: 600px;
+  height: 500px;
+  background-color: #00B22C;
+}
+.prom-teachs {
+  width: 600px;
+  height: 300px;
+  background-color: #1A9391;
+
+}
+.prom-jedi {
+  width: 600px;
+  height: 300px;
+  background-color: #C7E000;
+}
