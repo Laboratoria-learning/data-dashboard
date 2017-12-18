@@ -16,7 +16,7 @@ nav {
   margin-left: 20%;
 }
 span {
-  font-size: 40px;
+  font-size:40px;
   margin-left: 100px;
 }
 
@@ -40,6 +40,17 @@ li:hover {
 div {
   display: inline-block;
 }
+h2 {
+  color: #fff;
+  margin: 0;
+  padding-left: 30px;
+}
+
+i {
+
+  color: #fff;
+}
+
 #barra-sedes {
   height: 100px;
   background-color: #F7B617;
@@ -69,49 +80,65 @@ div {
   margin-top: 50px;
 }
 .alumnas {
-  width: 300px;
-  height: 500px;
   background-color: #4643BB;
+  border-radius: 5px;
+  height: 400px;
+  width: 300px;
 
 }
 .prom-general {
+ border-radius: 5px;
   width: 300px;
-  height: 500px;
+  height: 400px;
   background-color: #52E000;
 
 
 }
 .meta-ht {
+  border-radius: 5px;
+
   width: 300px;
-  height: 500px;
+  height: 400px;
   background-color: #FC331C;
 
 }
+.meta-ht > h2 {
+  font-size: 20px;
+}
 .meta-HSE{
+   border-radius: 5px;
   width: 300px;
-  height: 500px;
+  height: 400px;
   background-color:#00C4DA;
 }
 
 .nps {
+  border-radius: 5px;
   width: 600px;
-  height: 500px;
+  height: 400px;
   background-color: #0EACBD;
 
 }
 .nsa {
+  border-radius: 5px;
   width: 600px;
-  height: 500px;
+  height: 400px;
   background-color: #00B22C;
 }
-.prom-teachs {
+.prom-teachs{
+ background-color:#1A9391;
+ border-radius: 5px;
+ height: 300px;
   width: 600px;
-  height: 300px;
-  background-color: #1A9391;
+
 
 }
 .prom-jedi {
+  background-color: #C7E000;
+  border-radius: 5px;
   width: 600px;
   height: 300px;
-  background-color: #C7E000;
+}
+.icons {
+  font-size: 30px;
 }
