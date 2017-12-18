@@ -3,12 +3,162 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <!-- estructura del header -->
+    <div class="headboard" id="headboard">
+        <header class="header" id="header">
+          <figure>
+            <img class="imgLaboratoria" src="assets/images/logo-laboratoria.svg" alt="Logo Laboratoria">
+         </figure>
+        </header>
+      <!-- estructura del nav -->
+        <nav class="nav" id="nav">
+          <!-- estructura menu desplazable -->
+          <ul class="menu">
+          <li class="menuName"><a href="#"> SEDES<i class="fa fa-caret-down" aria-hidden="true"></i></a></li>
+          <div class="menuBar" id="menuBar">
+          </div>
+          </ul>
+          <!-- estructura del la lista overview, students y teacher -->
+          <div class="listNav" id="listNav">
+            <ul>
+              <li><button type="button" name="button" data-tab-selector ="tabOverviews" class="tab"> OVERVIEW </button></li>
+              <li><button type="button" name="button" data-tab-selector ="tabStudents" class="tab"> STUDENTS </button></li>
+              <li><button type="button" name="button" data-tab-selector ="tabTeachers" class="tab"> TEACHERS </button></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+    <main>
+      <div id="overview">
+      <div id="options" class="options">
+        <select id="sprint" class="sprint">
+          <option value="none">Elija una opción</option>
+          <option value="5">Sprint 5</option>
+        </select>
+        <select id="specialization" class="specialization">
+          <option value="js">Javascript</option>
+          <option value="ux">UX</option>
+        </select>
+      </div>
+      <section>
+      <div id="enrollment" class="kpi">
+        <h3 class="title">ENROLLMENT</h3>
+      <div class="kpiGray">
+      <div id="kpi-enrollment" class="black">120</div>
+      <h6 class="smallest">#STUDENTS CURRENTLY ENROLLED</h6>
+      </div>
+      <div class="kpiGray">
+          <div id="kpi-dropout" class="red">20%</div>
+          <h6 class="smallest">% DROPOUT</h6>
+      </div>
+      <div id="enrollment-chart" class="graph"></div>
+      </div>
+      <div id="achievement" class="kpi">
+        <h3 class="title">ACHIEVEMENT</h3>
+        <div class="kpiGray">
+        <h4 id="kpi-achievement" class="black">105</h4>
+        <h6 class="smallest">#STUDENTS THAT MEET THE TARGET</h6>
+      </div>
+        <div class="kpiGray">
+        <div id="percent-achievement" class="green">78%</div>
+        <h6 id="students-achievement" class="smallest">% OF TOTAL (135)</h6>
+        </div>
+        <div id="achievement-chart" class="graph"></div>
+      </div>
+
+      <div id="nps" class="kpi">
+        <h3 class="title">NET PROMOTER SCORE</h3>
+        <div class="kpiGray">
+        <div id="kpi-nps" class="green">78%</div>
+        <h6 class="smallest">% CUMULATIVE NPS</h6>
+        </div>
+        <div class="kpiGray">
+        <h5 id="promoters">60% Promoters</h5>
+        <h5 id="passive">30% Passive</h5>
+        <h5 id="detractors">10% Detractors</h5>
+        </div>
+        <div id="nps-chart" class="graph"></div>
+      </div>
+    </section>
+    <!--TECH SKILLS -->
+    <section class="skills">
+    <h3 class="title">TECH SKILLS</h3>
+    <div class="kpiGray">
+        <div id="tech-skill-quantity" class="black">90</div>
+        <h6 class="smallest">#STUDENTS THAT MEET THE TARGET(CUMULATIVE)</h6>
+    </div>
+    <div class="kpiGray">
+        <div id="tech-skill-percent"  class="green">62</div>
+        <h6 class="smallest">% OF TOTAL (CUMULATIVE)</h6>
+    </div>
+    <div id="tech-chart" class="graph"></div>
+    
+    </section>
+
+     <!--LIFE SKILLS -->
+     <section class="skills">
+        <h3 class="title">LIFE SKILLS</h3>
+        <div class="kpiGray">
+            <div id="life-skill-quantity" class="black">90</div>
+            <h6 class="smallest">#STUDENTS THAT MEET THE TARGET(CUMULATIVE)</h6>
+        </div>
+        <div class="kpiGray">
+            <div id="life-skill-percent"  class="green">62</div>
+            <h6 class="smallest">% OF TOTAL (CUMULATIVE)</h6>
+        </div>
+        <div id="life-chart" class="graph"></div>
+        
+      </section>
+
+    <!--RATINGS-->
+    <section>
+        <div  class="kpi">
+        <h3 class="title">STUDENT SATISFACTION</h3>
+        <div class="kpiGray">
+        <h2 id="ist-student" class="black">140</h2>
+        <h6 class="smallest">% MEETING OR EXCEEDING EXPECTATIONS (CUMULATIVE)</h6>
+        </div>
+        
+        <div id="ist-chart" class="graph"></div>
+        </div>
+        <div id="" class="kpi">
+            <h3 class="title">TEACHER RATING</h3>
+            <div class="kpiGray">
+            <h2 id="average-teacher" class="black">4.2</h2>
+            <h6 class="smallest">OVERALL TEACHER RATING (CUMULATIVE)</h6>
+            </div>
+            
+            <div id="acum-average-teacher" class="graph"></div>
+        </div>
+        
+  
+        <div id="" class="kpi">
+            <h3 class="title">JEDI MASTER RATING</h3>
+            <div class="kpiGray">
+            <h2 id="average-jedi" class="green">50</h2>
+            <h6 class="smallest">OVERALL JEDI RATING (CUMULATIVE)</h6>
+            </div>
+            <div id="acum-average-jedi" class="graph"></div>
+        </div>
+    </section>
+  </div>
+    <div id="students" class="students"></div>
+    <div id="teachers" class="teachers"></div>
+    
+    </main>
+    <!-- Google Charts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
     <script src="./js/app.js"></script>
+  
+  
   </body>
 </html>
