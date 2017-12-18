@@ -25,6 +25,7 @@ nav {
   width: 60%;
   margin-left: 20%;
 }
+
 ul {
   list-style: none;
 }
@@ -47,26 +48,34 @@ h2 {
 }
 
 i {
-
   color: #fff;
 }
+
+p {
+  display: inline-block;
+  color: #fff;
+  font-size: 20px;
+  width: 100px;
+}
+
+
 
 #barra-sedes {
   height: 100px;
   background-color: #F7B617;
-
 }
+
 #sedes {
   border-radius: 8px;
   font-size: 20px;
   margin-left: 50px;
   margin-top: 25px;
-
 }
+
 #headboard >span {
   margin: auto ;
-
 }
+
 
 .enabled-menu {
   display: block;
@@ -141,4 +150,14 @@ i {
 }
 .icons {
   font-size: 30px;
+  text-align: center;
+}
+.icons-teachs,
+.icons-jedi {
+  font-size: 25px;
+}
+
+.icons-alumnas {
+  font-size: 35px;
+
 }
