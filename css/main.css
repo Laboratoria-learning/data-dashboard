@@ -61,11 +61,13 @@ div {
   font-size: 20px;
   margin-left: 50px;
   margin-top: 25px;
+  width: 220px;
 }
 
-#generacion {
+#generation {
   border-radius: 8px;
   font-size: 20px;
+  width: 150px;
 }
 
 #headboard{
