@@ -1,6 +1,5 @@
-/*
- * Funcionalidad de tu producto
- */
+var firstOption= document.getElementById('option-1');
+var option= firstOption.data.option;
+console.log(option);
+//document.addEventListener("click", hideSections);
 
-// Puedes hacer uso de la base de datos a través de la variable `data`
-console.log(data);

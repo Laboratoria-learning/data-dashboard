@@ -1,3 +1,73 @@
-/*
- * Estilos de tu proyecto
- */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#logo-laboratoria {
+	width: 200px;
+	margin: auto;
+}
+/*tamaño de icons de kpis*/
+.icon {
+	width:15px;
+}
+
+.kpis-container {
+	float: left;
+	width: 20%;
+}
+
+.kpi-bullet {
+	display: block;
+	text-align: center;
+}
+
+.kpi-bullet div img {
+	margin-right: 5px;
+}
+
+.sub-kpi {
+	font-size: 12px;
+}
+.result {
+	color:red;
+}
+
+#kpis-section {
+	height: 90px;
+}
+
+.sections section {
+	height: 200px;
+	border: black;
+}
+
+#end-kpis {
+	margin-top: 80px;
+}
+
+.tabs li {
+	display: inline-block;
+	width: 16%;
+	text-align: center;
+	height:20px;
+}
+
+.tabs li a {
+	text-decoration: none;
+	color: black;
+}
+
+#menu {
+	background: #FFC107;
+	height: 20px;
+}
+
+.active {
+	background: #CCCCCC;
+}
+
+.inactive {
+	display: none;
+}
+

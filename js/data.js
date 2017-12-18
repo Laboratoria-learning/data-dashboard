@@ -1,3 +1,4 @@
+
 var data = {
   'AQP': {
     '2016-2': {
@@ -5130,3 +5131,7 @@ var data = {
     }
   }
 };
+
+for(var i in data) {
+  console.log(i);
+}
