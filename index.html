@@ -7,37 +7,39 @@
   </head>
   <body>
 
-		<!-- Base de datos -->
-		<script src="./js/data.js"></script>
-		<!-- Aquí va tus archivos JS -->
     <section id="headboard" >
-     <span>Data Dashboard</span>
-     <img class="logo" src="assets/images/logo-laboratoria.svg" alt="logo">
-     <button id="btn">
-     <hr>
-     <hr>
-     <hr>
+      <span>Data Dashboard</span>
+      <img class="logo" src="assets/images/logo-laboratoria.svg" alt="logo">
+      <button id="btn">
+        <hr>
+        <hr>
+        <hr>
      </button>
-     <!-- <nav id="opcs-menu" class="enabled-menu">
+     <nav id="opcs-menu" class="disabled-menu">
        <ul>
-        <li><a href="#">Mi perfil</a></li>
-        <li><a href="#">Configuración</a></li>
-        <li><a href="#">Salir</a></li>
+         <li><a href="#">Mi perfil</a></li>
+         <li><a href="#">Configuración</a></li>
+         <li><a href="#">Salir</a></li>
        </ul>
-      </nav> -->
-   </section>
-
-
+     </nav>
+    </section>
 
     <section id="barra-sedes">
+
       <select id="sedes"  title="selccion de sedes">
        <option value="" hidden="">Selecciona una Sede</option>
-       <option value="Ciudad de México">Ciudad de México</option>
-       <option value="Lima">Lima</option>
-       <option value="Arequipa">Arequipa</option>
-       <option value="Santiago de Chile">Santiago de Chile</option>
+       <option value="cdmx">Ciudad de México</option>
+       <option value="lima">Lima</option>
+       <option value="aqp">Arequipa</option>
+       <option value="scl">Santiago de Chile</option>
       </select>
+
+      <select id="generacion"  title="seleccion de generacion">
+        <option value="_"></option>
+      </select>
+
     </section>
+
     <section>
       <div class="alumnas">
 
@@ -65,6 +67,9 @@
       </div>
 
     </section>
+    <!-- Base de datos -->
+		<script src="./js/data.js"></script>
+		<!-- Aquí va tus archivos JS -->
     <script src="./js/app.js"></script>
   </body>
 </html>
