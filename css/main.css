@@ -239,9 +239,11 @@ p { /* estilos para los párrafos de la primera fila de botones */
   background-repeat: no-repeat;
   border-radius: 50%;
 }
+
  .name {
    background-color: #00C4DA;
    display:inline-block;
       width: 300px;
    height: 150px;
+
  }
