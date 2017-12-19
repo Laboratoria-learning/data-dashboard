@@ -16,14 +16,17 @@ header div img{
   width: 300px;
 }
 .imagen-profile {
-  width: 70%;
-  margin-top: 50px;
+  width: 40%;
+  margin-top: 5px;
+  border-radius: 50%;
+
 }
 
 .imagen-lab{
-  width:80%;
-  background-color: white;
-  margin-top: 10%;
+  width:90%;
+  height:
+  background-color: #2B2B2B;
+  margin-top: 5px;
 
 }
 
@@ -32,16 +35,10 @@ header div img{
 	left: 0; /* Establecemos la barra en la izquierda */
 	/*z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
   background-color: #2B2B2B;
-  width: 200px;
+  width: 250px;
   height: 100%;
+}
 
-}
-/* boton de seleccion*/
-#barra-menus{
-  background-color: #d4cecb;
-  width: 100%;
-  height: 150px;
-}
 
 /* boton de seleccion*/
 #filtro-sedes{
@@ -49,8 +46,8 @@ header div img{
   text-align: center;
   width: 150px;
   float:left;
-  margin-top: 200px;
-  margin-left: 40px;
+  margin-top: 100px;
+  margin-left: 80px;
 }
 
 /*Tabuladores*/
@@ -58,14 +55,16 @@ header div img{
 #contenido-tab {
   margin: 0px;
 padding: 0px;
-font-family: ;
 font-weight: 500;
 font-family: 'Montserrat', sans-serif;
+cursor: pointer;
+
 }
 .cont-tabs{
   margin-top: 150px;
  list-style: none;
  display: block;
+
 }
 
 
@@ -81,10 +80,31 @@ font-family: 'Montserrat', sans-serif;
  padding-right: 25px;
  float: right;
  color: white;
- opacity: .6;
+ opacity: .5;
  font-size: 18px;
 }
 
+.fa-home,
+.fa-graduation-cap,
+.fa-pie-chart,
+.fa-code {
+  color: #F7B617;
+}
+
+.fa-home{
+margin-left:-8%;
+}
+
+.fa-graduation-cap{
+  margin-left: -15%;
+}
+
+.fa-pie-chart{
+  margin-left: 2%;
+}
+.fa-code{
+  margin-left:-15%;
+}
 
 .barra {
  position: absolute; /*se pone para que los p no se encimen*/
@@ -95,17 +115,20 @@ font-family: 'Montserrat', sans-serif;
 }
 
 li:hover div.barra {
-width: 200px;
+width: 250px;
 }
 
 
 /*--------------------CONTENIDOSS---------------*/
 
 /*--SECCION OVERVIEW (ESTILOS DE GRAFICA)*/
-#overviewTab {
+#overviewTab,
+#studentsTab,
+#teachersTab {
   overflow: auto;
-  margin-left: 220px;
+  margin-left: 270px;
 }
+
 
 .graficasTotal {
   background-color: #fff;
@@ -113,15 +136,24 @@ width: 200px;
   height: 500px;
   margin: 40px 100px;
   vertical-align: top;
-  width: 800px;
+  width: 600px;
   box-shadow: 4px 4px 4px #c4c4c4;
   margin-right: 1%;
   overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .graficasTotal span {
   font-size: 1.5em;
-  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  padding: 20px;
+}
+
+.graficasTotal .texTbox{
+  font-size: .8em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   padding: 20px;
 }
 
@@ -130,28 +162,32 @@ width: 200px;
 }
 
 .contenedor-grafica {
-  background-color: #f7b617;
+  /*background-color: trans;*/
   float: left;
   text-align: center;
   vertical-align: top;
-  width: 40%;
+  width: 35%;
   height: 150px;
   padding: 0.8em;
   border-radius: 3px;
   box-shadow: 2px 2px 2px #aaa8a8;
   margin-right: 1em;
 }
+
+
 .grafica {
   margin-top: 150px;
-
+  margin-left: 50px;
 }
 
 .grafica img {
   padding-left: 1em;
   padding-bottom: 0.8em;
 }
+
+
 .datoText {
-  font-size: 3.4em;
+  font-size: 3em;
   font-weight: 300;
   border-bottom: 1px solid #ffff;
   width: 2.7em;
@@ -162,34 +198,117 @@ width: 200px;
   color: red;
 }
 
+#achievement-porcentaje {
+  color:red;
+}
+
+#acumulativo-nps {
+  color:red;
+}
+#promoters,
+#passive,
+#detractor {
+  color:red;
+  line-height: 1.5;
+  margin-top: 15px;
+  font-size: 1em;
+  font-weight: 300;
+
+
+}
+
 .cajaTexto {
   font-size: .8em;
-  padding-top: 1em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  padding: 20px;
+
+/*  font-size: .8em;
+  padding-top: 1em;*/
 }
+
 .number-boxes {
   font-size: 3.5em;
   font-weight: 300;
-  border-bottom: 1px solid #ffffff;
-}
+   border-bottom: 1px solid #ffffff;
+ }
 
 
-/* SECCION ALUMNAS */
-#overviewTab {
-  overflow: auto;
-}
+ /* SECCION ALUMNAS */
+ /*#studentsTab {
+   overflow: auto;
+ }*/
 
-.especializacion {
-  float: left;
-  vertical-align: top;
-  background-color: #ffffff;
-  width: 30%;
-  padding: 1em;
-  box-shadow: 2px 2px 2px #aaa8a8;
-}
 
-.especializacion h4 {
-  font-weight: 700;
-  margin-bottom: 1em;
-  font-size: 1.2em;
-  color: #4C4743;
-}
+ .contenedor-coders{
+   float: right;
+   width: 800px;
+   margin-right: 200px;
+ }
+ .coders{
+   width: 600px;
+   margin: 20px 20px;
+ }
+ .info-coders{
+ float: right;
+ }
+
+ .foto{
+   width: 150px;
+   height: 150px;
+ }
+
+ .nombre{
+   font-size: 30px;
+    margin-left: 200px;
+    text-align:justify;
+  }
+
+  .tech {
+    font-size: 20px;
+    margin-top: 50px;
+  }
+
+
+
+
+  /* SECCION TEACHERS */
+
+  /*#teachersTab {
+    overflow: auto;
+  }*/
+
+  .contenedor-teacher{
+    width: 900px;
+    margin-left: 400px;
+  }
+  .contenedor-teacher div{
+    display:inline-block;
+    margin: 20px 20px;
+  }
+
+  .contenedor-teacher div img{
+    width: 200px;
+    height: 200px;
+  }
+
+  .info{
+    float: right;
+    margin-bottom: 20px;
+  }
+
+  #teachersTab  hr{
+    width: 800px;
+    text-align: center;
+    margin-top: 40px;
+    margin: 0 auto;
+  }
+
+  #teachersTab  h4{
+    text-align: center;
+      margin-top: 50px;
+    }
+
+    .cajas-graficas-teacher{
+      margin-top: 80px;
+    }

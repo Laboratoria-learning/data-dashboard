@@ -20,7 +20,7 @@
 
     <header>
       <div id="barra-lateral">
-           <img class="imagen-lab" src="assets/images/logo-lab.png" alt="logo-laboratoria">
+          <img class="imagen-lab" src="assets/images/logolab2.png" alt="logo-laboratoria-transparente">
             <img class="imagen-profile"src="assets/images/Jonh-Parra-imagen-profile.jfif" alt="foto de perfil">
 <div class="form">
 
@@ -58,14 +58,21 @@
         <div class="barra"></div>
         <i class="fa fa-home fa-2x" aria-hidden="true"></i>
         <a class="tab" data-tab-seleccionado = "tabOverview">DASHBOARD</a>
+        <ul>
+          <li>
+            <a href="">SEDE</a>
+            <a href="">GENERACION</a>
+          </li>
+        </ul>
      </li>
  <li>
    <div class="barra"></div>
-   <i class="fa fa-graduation-cap fa-2x" aria-hidden="true"></i>
+  <i class="fa fa-graduation-cap fa-2x" aria-hidden="true"></i>
    <a class="tab" data-tab-seleccionado = "tabStudents" >STUDENTS</a>
  </li>
  <li>
    <div class="barra"></div>
+     <i class="fa fa-pie-chart fa-2x" aria-hidden="true"></i>
     <a class="tab">STUDENTS DATA</a>
  </li>
  <li>
@@ -97,63 +104,166 @@
                               <p class="texTbox"># ALUMNAS MATRICULADAS</p>
                             </div>
                             <div class="contenedor-grafica">
-                              <P id="dropout-porcentaje" class="datoText">-</p>
-                              <P>% DESERCION</P>
+                              <p id="dropout-porcentaje" class="datoText">-</p>
+                              <p class="texTbox">% DESERCION</P>
                             </div>
                           </div>
                           <div class="grafica" id="enrollment-draw"></div>
                         </div>
 
                         <!-- CUMPLIO META -->
-                          <div class="graficasTotal">
-                            <span> META (ALUMNAS) </span>
-                                      <div class="contenedor-cajas">
-                                        <div class="contenedor-grafica">
-                                          <p id="caja-achievement" class="datoText">-</p>
-                                          <p># ALUMNAS (Cumple Meta)</p>
-                                        </div>
-                                        <div class="contenedor-grafica">
-                                          <p id="achievement-porcentaje" class="datoText">-</p>
-                                          <p id="total-achievement" class="cajaTexto">% TOTAL(Cumple Meta)</P>
-                                        </div>
+                        <div class="graficasTotal">
+       <span> META (ALUMNAS) </span>
+       <div class="contenedor-cajas">
+         <div class="contenedor-grafica">
+           <p id="caja-achievement" class="datoText">-</p>
+           <p class="texTbox"># ALUMNAS (Cumple Meta)</p>
+         </div>
+         <div class="contenedor-grafica">
+           <p id="achievement-porcentaje" class="datoText">-</p>
+           <p id="total-achievement" class="cajaTexto">% TOTAL(Cumple Meta)</P>
+         </div>
+       </div>
+       <div class="grafica" id="achieven-draw"></div>
+     </div>
+
+     <!-- El Net Promoter Score (NPS) promedio de los sprints cursados -->
+             <div class="graficasTotal">
+               <span>NET PROMOTER SCORE (NPS)</span>
+               <div class="contenedor-cajas">
+                 <div class="contenedor-grafica">
+                   <p id="acumulativo-nps" class="datoText">-</p>
+                   <p class="cajaTexto">% ACUMULATIVO NPS</p>
+                 </div>
+                 <div class="contenedor-grafica">
+                   <p id="promoters"></p>
+                   <p id="passive"></p>
+                   <p id="detractor"></p>
                                       </div>
-                                      <div class="grafica" id="achieven-draw"></div>
                                     </div>
-                                  </section>
+                                    <div class="grafica" id="nps-draw"></div>
+                                  </div>
+
+                        </section>
 
 
+                        <!-- Contenedor Alumnas(Tab student) -->
+<section id="studentsTab">
+<div class="especializacion">
+<h4>ESPECIALIZACION</h4>
+<form>
+<input type="checkbox"> UX Design
+<input type="checkbox"> Front end developer
+</form>
+</div>
+      <!--<div id="contenedor-coders">
+      <div class="coders">
+            <img src="http://dummyimage.com/200x200" class="foto">
+            <div class="info-coders">
+            <p class="nombre">Patricia Hernández</p>
+            <p class="tech">Porcentaje total de Tech</p>
+            <p class="hse">Porcentaje total de HSE</p>
+            <p>Javascript</p>
+            </div>
+          </div>
+       </div> -->
+
+    </section>
+    <!-- Contenedor TEACHERS(Tab teacher) -->
+        <section id="teachersTab">
+
+          <div class="contenedor-teacher">
+            <div class="caja-teacher">
+              <img src="assets/images/jon.jpg" alt="">
+              <div class="info">
+                <h5>Jonathan "John"</h5>
+                <p>Teacher & Jedi Master</p>
+                <p>jonathan@laboratoria.la</p>
+              </div>
+            </div>
+
+            <div class="caja-teacher">
+              <img src="assets/images/manu.jpg" alt="">
+              <div class="info">
+                <h5>Emmanuel "Manu"</h5>
+                <p>Lead Teacher</p>
+                <p>emmanuel@laboratoria.la</p>
+              </div>
+            </div>
+
+            <div class="caja-teacher">
+              <img src="assets/images/meme.jpg" alt="">
+              <div class="info">
+                          <h5>Ameli "Meme"</h5>
+                          <p>Teacher</p>
+                          <p>ameli@laboratoria.la</p>
+                        </div>
+                      </div>
+
+                      <div class="caja-teacher">
+                        <img src="assets/images/amalia.jpg" alt="">
+                        <div class="info">
+                          <h5>Amalia</h5>
+                          <p>Teacher</p>
+                          <p>amalia@laboratoria.la</p>
+                        </div>
+                      </div>
+
+                      <div class="caja-teacher">
+                        <img src="assets/images/inti.jpg" alt="">
+                        <div class="info">
+                          <h5>Yesenia "Inti"</h5>
+                          <p>Teacher</p>
+                          <p>yesenia@laboratoria.la</p>
+                        </div>
+                      </div>
+                      <div class="caja-teacher">
+                                 <img src="assets/images/karla.jpg" alt="">
+                                 <div class="info">
+                                   <h5>Karla "Karlis"</h5>
+                                   <p>Teacher</p>
+                                   <p>karla.n@laboratoria.la</p>
+                                 </div>
+                               </div>
+                             </div>
+                             <hr>
+                             <h4> GRAFICAS DE CALIFICACION (TEACHER & JEDI MASTER)</h4>
 
 
-                                  <!-- contenedor Alumnas(Tab student) -->
-                                  <section id="studentsTab" style="display:none">
-                                      <div class="especializacion">
-                                        <h4>SPECIALIZATION</h4>
-                                        <form>
-                                          <input type="checkbox"> UX Design
-                                          <input type="checkbox"> Front end developer
-                                        </form>
-                                      </div>
-                                      <div id="listOfStudents" class="student-hide">
-                                      </div>
-                                      <div class="">
-                                                 PINTAR ALUMNAS
-                                               </div>
-                                             </section>
+                     <div class="cajas-graficas-teacher">
+                       <!--  TEACHERS  -->
+                       <div class="graficasTotal">
+                         <span>CALIFICACION TEACHER</span>
+                         <div class="contenedor-cajas">
+                           <div class="contenedor-grafica">
+                             <P id="teacher-calificacion" class="datoText">-</P>
+                             <P class="cajaTexto">CALIFICACION GENERAL TEACHER</P>
+                           </div>
+                             </div>
+                             <div class="grafica" id="teacher-draw"></div>
+                           </div>
 
-                                          <!-- contenedor TEACHERS(Tab teacher) -->
-                                           <section id="teachersTab">
-                                           <div class="">
-                                             <h4>TEACHERS AND JEDIS</h4>
-                                             <div class="caja-3-a"></div>
-                                             <img src="./assets/images/rectangular-graphic.png" alt="">
-                                            </section>
-                                           </div>
-                                         </main>
+                           <!--  JEDI MASTER  -->
+                           <div class="graficasTotal">
+                             <span>CALIFICACION "JEDI MASTER"</span>
+                             <div class="contenedor-cajas">
+                               <div class="contenedor-grafica">
+                                 <P id="jedi-calificacion" class="datoText">-</P>
+                                 <P class="cajaTexto">CALIFICACION GENERAL JEDI MASTER</P>
+                               </div>
+                             </div>
+                             <div class="grafica" id="jedi-draw"></div>
+                           </div>
 
-                                       <!-- +++++++++++++CONEXION A DATA Y APP +++++++++++++++++++++++++++-->
-                                     		<!-- Base de datos -->
-                                     		<script src="./js/data.js"></script>
-                                     		<!-- Aquí va tus archivos JS -->
-                                         <script src="./js/app.js"></script>
-                                       </body>
-                                      </html>
+                         </div>
+                                </section>
+
+
+                             </main>
+                             <!-- +++++++++++++CONEXION A DATA Y APP +++++++++++++++++++++++++++-->
+                            		<!-- Base de datos -->
+                            		<script src="./js/data.js"></script>
+                            		<!-- Aquí va tus archivos JS -->
+                                <script src="./js/app.js"></script>
+                              </body>
+                            </html>
