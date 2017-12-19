@@ -46,10 +46,54 @@ function getGeneration() {
     selectGeneration.options[0].selected = true;
 }
 
-var numTotalStudents = document.getElementsByClassName('numTotal')[0];
+var displayTotalStudents = document.getElementsByClassName('numTotal')[0];
+var displayTotalStudentsEnrolled = document.getElementsByClassName('numTotal')[1];
+var displayTotalStudentsEnrolledTech = document.getElementsByClassName('numTotal')[2];
+var displayTotalStudentsEnrolledHse = document.getElementsByClassName('numTotal')[3];
+
+function studentsReachedGoal(students, scoreType, goal) {
+
+  var studentsScoresAverages = students.map(function (student) {
+
+    var sumOfSprintsScores = student.sprints.reduce( function(sum, sprint) {
+
+      return sum + sprint.score[scoreType];
+
+    }, 0)
+
+    return sumOfSprintsScores / student.sprints.length
+  })
+
+  return studentsScoresAverages.filter( function(average) {
+    return average >= goal;
+  }).length
+}
+
+function studentsReachedGeneralGoal(students, goal) {
+  var studentsScoresAverages = students.map(function (student) {
+
+    var sumOfSprintsScores = student.sprints.reduce( function(sum, sprint) {
+
+      return sum + sprint.score.tech + sprint.score.hse;
+
+    }, 0)
+
+    return sumOfSprintsScores / student.sprints.length
+  })
+
+  return studentsScoresAverages.filter( function(average) {
+    return average >= goal;
+  }).length
+}
 
 function studentsEnrollment(){
-  var sedeAccessor = selectSedes.value.toUpperCase();
-  var numberOfStudents = data[sedeAccessor][selectGeneration.value].students.length;
-  numTotalStudents.innerText = numberOfStudents;
+  var sedeAccessor = selectSedes.value;
+  var generationBySede = data[sedeAccessor][selectGeneration.value]
+  var students = generationBySede.students;
+  var numberOfStudents = students.length;
+
+  displayTotalStudents.innerText = numberOfStudents;
+  displayTotalStudentsEnrolled.innerText = studentsReachedGeneralGoal(students,2100);
+  displayTotalStudentsEnrolledTech.innerText = studentsReachedGoal(students, 'tech', 1260);
+  displayTotalStudentsEnrolledHse.innerText = studentsReachedGoal(students, 'hse', 840);
 }
