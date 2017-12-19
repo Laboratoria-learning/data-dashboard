@@ -199,3 +199,9 @@ p { /* estilos para los párrafos de la primera fila de botones */
   font-size: 35px;
   padding-left: 430px;
 }
+
+.graph {
+  width: 65%;
+  height: 18em;
+  background: red;
+}
