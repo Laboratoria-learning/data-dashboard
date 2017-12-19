@@ -21,19 +21,16 @@ boton.addEventListener("click", showMenu);
    }
  }
 
-var sedeCdmx = ['2017-1','2017-2'];
-var sedeLima = ['2016-2','2017-1','2017-2'];
-var sedeAqp = ['2016-2','2017-1'];
-var sedeScl = ['2016-2','2017-1','2017-2'];
 var selectSedes = document.getElementById('sedes');
 var selectGeneration = document.getElementById('generation');
 
-selectSedes.addEventListener('change', getGeneration)
+selectSedes.addEventListener('change', getGeneration); //llamada al evento de select de Sedes para hacer dinámico el select de Generaciones
+selectSedes.addEventListener('change', studentsEnrollment);
+selectGeneration.addEventListener('change', studentsEnrollment);
 
 function getGeneration() {
   if(selectSedes.value != 0){
-    var generation = eval('sede'+ selectSedes.value);
-    // console.log(eval('sede'+ selectSedes.value));
+    var generation = Object.keys(data[selectSedes.value]);
     var numGeneration = generation.length;
     selectGeneration.length = numGeneration;
 
@@ -47,4 +44,56 @@ function getGeneration() {
     selectGeneration.options[0].text = '---';
   }
     selectGeneration.options[0].selected = true;
+}
+
+var displayTotalStudents = document.getElementsByClassName('numTotal')[0];
+var displayTotalStudentsEnrolled = document.getElementsByClassName('numTotal')[1];
+var displayTotalStudentsEnrolledTech = document.getElementsByClassName('numTotal')[2];
+var displayTotalStudentsEnrolledHse = document.getElementsByClassName('numTotal')[3];
+
+function studentsReachedGoal(students, scoreType, goal) {
+
+  var studentsScoresAverages = students.map(function (student) {
+
+    var sumOfSprintsScores = student.sprints.reduce( function(sum, sprint) {
+
+      return sum + sprint.score[scoreType];
+
+    }, 0)
+
+    return sumOfSprintsScores / student.sprints.length
+  })
+
+  return studentsScoresAverages.filter( function(average) {
+    return average >= goal;
+  }).length
+}
+
+function studentsReachedGeneralGoal(students, goal) {
+  var studentsScoresAverages = students.map(function (student) {
+
+    var sumOfSprintsScores = student.sprints.reduce( function(sum, sprint) {
+
+      return sum + sprint.score.tech + sprint.score.hse;
+
+    }, 0)
+
+    return sumOfSprintsScores / student.sprints.length
+  })
+
+  return studentsScoresAverages.filter( function(average) {
+    return average >= goal;
+  }).length
+}
+
+function studentsEnrollment(){
+  var sedeAccessor = selectSedes.value;
+  var generationBySede = data[sedeAccessor][selectGeneration.value]
+  var students = generationBySede.students;
+  var numberOfStudents = students.length;
+
+  displayTotalStudents.innerText = numberOfStudents;
+  displayTotalStudentsEnrolled.innerText = studentsReachedGeneralGoal(students,2100);
+  displayTotalStudentsEnrolledTech.innerText = studentsReachedGoal(students, 'tech', 1260);
+  displayTotalStudentsEnrolledHse.innerText = studentsReachedGoal(students, 'hse', 840);
 }

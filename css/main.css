@@ -145,7 +145,7 @@ div {
 }
 
 .meta-HSE{
-   border-radius: 5px;
+  border-radius: 5px;
   width: 300px;
   height: 400px;
   background-color:#00C4DA;
@@ -166,12 +166,6 @@ div {
 }
 
 .prom-teachs {
-  width: 600px;
-  height: 300px;
-  background-color: #1A9391;
-}
-
-.prom-teachs {
  background-color:#1A9391;
  border-radius: 5px;
  height: 300px;
@@ -189,18 +183,21 @@ div {
   font-size: 30px;
   text-align: center;
 }
+
 .fa-heartbeat,
 .fa-code,
 .fa-graduation-cap,
 .fa-female {
   padding-left: 90px;
 }
+
 .icons-teachs,
 .icons-jedi {
-      font-size: 35px;
-    padding-left: 430px;
+  font-size: 35px;
+  padding-left: 430px;
 }
 
-.icons-alumnas {
+.icons {
   font-size: 35px;
+  display: block;
 }
