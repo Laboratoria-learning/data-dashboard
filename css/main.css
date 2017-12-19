@@ -1,19 +1,218 @@
+/* Estilo página prncipal */
+body {
+  margin: 0 auto;
+  padding: 0;
+  background-image: url("../assets/images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#dashboard {
+  display: inline-block;
+  text-align: center;
+  background: white;
+  width: 30%;
+  height: auto;
+  margin-left: 35%;
+  margin-top: 40px;
+  border-radius: 10px;
+}
+
+#logo {
+  width: 60%;
+  height: 60%;
+  margin-top: 50px;
+}
+
+#user {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+}
+
+h1 {
+  font-family: 'Amaranth', sans-serif;
+  font-size: 35px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+input {
+  height: 25px;
+  border: 1px solid #A0CED4;
+  border-radius: 5px;
+  background-color: #D8E4E5;
+  margin-bottom: 10px;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
 button {
   font-family: 'Montserrat Alternates', sans-serif;
   font-size: 14px;
   background: #f7e094;
   border: 1px solid #F2BC07;
   border-radius: 5px;
-  margin-bottom: 20px;
+  margin: 20px;
   width: 80px;
   height: 30px;
 }
+
 button:hover{
   background: #F2BC07;
 }
 
+/* Estilo vista Home */
+.body-1 {
+  margin: 0 auto;
+  padding: 0;
+  background-image: url("../assets/images/gradient.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#home{
+  display: inline-block;
+  text-align: center;
+  background: #efefef;
+  width: 89%;
+  height: 1050px;
+  margin-left: 2%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border-radius: 10px;
+  padding: 3%;
+}
+
+.items {
+  display: inline-block;
+  font-family: 'Amaranth', sans-serif;
+  float: left;
+  width: 300px;
+  height: 300px;
+  background: #FFF;
+  margin: 18px 47px;
+  border-radius: 3px;
+  border: 3px solid #fdd132;
+}
+
+.items:hover {
+  border: 3px solid #9bd7df;
+}
+
+.items-uno {
+  display: inline-block;
+  font-family: 'Amaranth', sans-serif;
+  float: left;
+  width: 300px;
+  height: 300px;
+  background-image: url("../assets/images/blue.gif");
+  margin: 18px 50px;
+  border-radius: 3px;
+}
+
+.items-uno:hover {
+  background: #78c0c9;
+}
+
+.Usuario {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin-top: 8px;
+}
+
+h3 {
+  text-align:right;
+  margin: 20px 40px 0 0;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 8px;
+  font-weight: 400;
+}
+
+h1 {
+  text-align: center;
+  margin: 30px;
+  margin-bottom: 5px;
+  font-weight:400;
+}
+#location {
+  width: 280px;
+  height: auto;
+  margin: 10px 10px;
+}
+
+#students {
+  width: 180px;
+  height: 180px;
+  margin-top: 0;
+}
+
+#calendar {
+  width: 250px;
+  height: 200px;
+  margin-top: 0;
+}
+
+#logo-2 {
+  margin-top: 75px;
+  width: 280px;
+  height: 150px;
+}
+
+#chat {
+  margin: 0;
+  width: 200px;
+  height: auto;
+}
+
+#settings {
+  margin-top: 0;
+  width: 135px;
+  height: auto;
+}
+
+#newsweek {
+  width: 250px;
+  height: auto;
+  margin-top: 10px;
+}
+
+#worklab {
+  width: 180px;
+  height: auto;
+  margin-top: 0;
+}
+
+/* Estilos vista Cdmx-Chile-Arequipa-Lima */
+.charts {
+  display: inline-block;
+  font-family: 'Amaranth', sans-serif;
+  float: left;
+  width: 300px;
+  height: 300px;
+  background: #FFF;
+  margin: 18px 47px;
+  border-radius: 3px;
+  border: 3px solid #fdd132;
+}
+
+.charts:hover {
+  border: 3px solid #9bd7df;
+}
+
+.charts > h1 {
+  margin-top: 30%;
+}
+
+/* Estilos vista Coders laboratoria */
 input{
-  height: 15px;
+  height: 25px;
   width: 200px;
 }
 
@@ -22,7 +221,7 @@ input:focus{
 }
 
 h5{
-  margin: 0;
+  margin: 10px;
 }
 
 #search{
@@ -36,12 +235,7 @@ h5{
 
 #pics{
   float:right;
-  margin-top: -38px;
-}
-
-#logo{
-  height: 100px;
-  width: 500px;
+  margin-top: 10px;
 }
 
 #jess{
@@ -80,7 +274,7 @@ h5{
   width: 300px;
 }
 
-#logo{
+#logo-3{
   float: right;
   height: 300px;
   margin: -430px 400px 0 0;
@@ -89,7 +283,7 @@ h5{
 
 #stdt-selected{
   font-size: 30px;
-  margin:0;
+  margin:10px;
 }
 
 .photo{
