@@ -201,7 +201,23 @@ p { /* estilos para los párrafos de la primera fila de botones */
 }
 
 .graph {
-  width: 65%;
+  width: 60%;
   height: 18em;
   background: red;
+  display: inline-block;
+}
+
+.detailGraph {
+  width: 30%;
+  height: 18em;
+  display: inline-block;
+  vertical-align: 700%;
+}
+
+.detailGraph >div > p {
+  font-size: 20px;
+}
+
+.itemGraph {
+  display: block;
 }
