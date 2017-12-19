@@ -201,10 +201,10 @@ p { /* estilos para los párrafos de la primera fila de botones */
 }
 
 .graph {
-  width: 60%;
-  height: 18em;
-  background: red;
-  display: inline-block;
+  width: 53%;
+  /*height: 18em; */
+  /* background: red;
+  display: inline-block; */
 }
 
 .detailGraph {
