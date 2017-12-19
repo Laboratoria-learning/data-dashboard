@@ -75,5 +75,18 @@
 	background: #CCCCCC;
 }
 
+/*dashboard por sede*/
+
+#genSelected {
+	text-align: center;
+	height: 30px;
+}
+
+#genSelected span {
+	display: inline-block;
+	margin-top: 5px;
+	font-weight: bold;
+}
+
 
 

@@ -24,12 +24,14 @@
     <div class="sections">
       <!-- PRIMERA SECCION -->
       <section id="section-1" class="active" >
+
+
         <hr>
       <section id="kpis-section">
         <!-- Primera Hilera de Kpis -->
         <div class="kpis-container">
           <div class="kpi-bullet">
-              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon"><span>Primera Seccion</div>
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon">Primera Seccion</div>
               <div class="result">result</div>
           </div>
           <div class="kpi-bullet">
@@ -115,12 +117,13 @@
 
       <!-- SEGUNDA SECCION -->
       <section id="section-2" class="inactive">
+        <div id="genSelected"><span>Generacion Seleccionada</span></div>
         <hr>
-      <section id="kpis-section">
+        <section id="kpis-section">
         <!-- Primera Hilera de Kpis -->
         <div class="kpis-container">
           <div class="kpi-bullet">
-              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon"><span>Segunda Seccion</div>
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon">Segunda Seccion</div>
               <div class="result">result</div>
           </div>
           <div class="kpi-bullet">
@@ -200,8 +203,14 @@
               <div class="result">result</div>
           </div>
         </div> 
-      </section>
-      <hr id="end-kpis">
+        </section>
+        <hr id="end-kpis">  
+
+      <!-- Grafica de Pastel -->
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <div id="piechart-total-alumnas" style="width: 10px; height: 400px;"></div>
+
+        
       </section>
 
       <!-- TERCERA SECCION -->
@@ -211,7 +220,7 @@
         <!-- Primera Hilera de Kpis -->
         <div class="kpis-container">
           <div class="kpi-bullet">
-              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon"><span>Tercera Seccion</div>
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon">Tercera Seccion</div>
               <div class="result">result</div>
           </div>
           <div class="kpi-bullet">
@@ -302,7 +311,7 @@
         <!-- Primera Hilera de Kpis -->
         <div class="kpis-container">
           <div class="kpi-bullet">
-              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon"><span>Cuarta Seccion</div>
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon">Cuarta Seccion</div>
               <div class="result">result</div>
           </div>
           <div class="kpi-bullet">
@@ -393,7 +402,7 @@
         <!-- Primera Hilera de Kpis -->
         <div class="kpis-container">
           <div class="kpi-bullet">
-              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon"><span>Quinta Seccion</div>
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon">Quinta Seccion</div>
               <div class="result">result</div>
           </div>
           <div class="kpi-bullet">
@@ -478,6 +487,8 @@
       </section>
       
     </div>
+
+    
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->

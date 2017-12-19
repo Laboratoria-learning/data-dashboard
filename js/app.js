@@ -104,3 +104,100 @@ function selectOption(){
 		event.preventDefault();
 	}
 }
+
+// graficas de generacion especifica
+// grafica de pastel
+google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Estado', 'Alumnas'],
+          ['Inscritas',     11],
+          ['Dadas de Baja',      2],
+          ['Graduadas',  2]
+        ]);
+
+        var options = {
+          title: 'Total de Alumnas',
+          'is3D':true,
+          'width':500,
+  		  'height':400,
+  		  'pieSliceText':'percentage',
+  		  chartArea:{left:50,top:30,width:'60%',height:'75%'},
+  		  colors:['red','#004411','yellow'],
+  		  legend:{textStyle: {color: 'black', fontSize: 12}}
+
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart-total-alumnas'));
+
+        chart.draw(data, options);
+      }
+//grafica de barras 
+/*google.charts.load('current', {'packages':['corechart', 'bar']});
+      google.charts.setOnLoadCallback(drawStuff);
+
+      function drawStuff() {
+
+        var button = document.getElementById('change-chart');
+        var chartDiv = document.getElementById('chart_div');
+
+        var data = google.visualization.arrayToDataTable([
+          ['Sprint', 'HSE', 'TECH',"TOTAL"],
+          ['Sprint 1', 8000, 23.3, 50],
+          ['Sprint 2', 24000, 4.5,60],
+          ['Sprint 3', 30000, 14.3,70],
+  
+        ]);
+
+        var materialOptions = {
+          width: 900,
+          chart: {
+            title: 'Nearby galaxies',
+            subtitle: 'distance on the left, brightness on the right'
+          },
+          series: {
+            0: { axis: 'distance' }, // Bind series 0 to an axis named 'distance'.
+            1: { axis: 'brightness' } // Bind series 1 to an axis named 'brightness'.
+          },
+          axes: {
+            y: {
+              distance: {label: 'parsecs'}, // Left y-axis.
+              brightness: {side: 'right', label: 'apparent magnitude'} // Right y-axis.
+            }
+          }
+        };
+
+        var classicOptions = {
+          width: 900,
+          series: {
+            0: {targetAxisIndex: 0},
+            1: {targetAxisIndex: 1}
+          },
+          title: 'Nearby galaxies - distance on the left, brightness on the right',
+          vAxes: {
+            // Adds titles to each axis.
+            0: {title: 'parsecs'},
+            1: {title: 'apparent magnitude'}
+          }
+        };
+
+        function drawMaterialChart() {
+          var materialChart = new google.charts.Bar(chartDiv);
+          materialChart.draw(data, google.charts.Bar.convertOptions(materialOptions));
+          button.innerText = 'Change to Classic';
+          button.onclick = drawClassicChart;
+        }
+
+        function drawClassicChart() {
+          var classicChart = new google.visualization.ColumnChart(chartDiv);
+          classicChart.draw(data, classicOptions);
+          button.innerText = 'Change to Material';
+          button.onclick = drawMaterialChart;
+        }
+
+
+
+*/

@@ -1,4 +1,17 @@
 
+var sedes= Object.keys(data);
+
+var genAQP= (Object.keys(data.AQP));
+var genCDMX= (Object.keys(data.CDMX));
+var genLIM=(Object.keys(data.LIM));
+var genSCL=(Object.keys(data.SCL));
+
+console.log("Arequipa " + genAQP);
+console.log("CDMX " + genCDMX);
+console.log("Lima " + genLIM);
+console.log("Chile " + genSCL);
+
+
 var data = {
   'AQP': {
     '2016-2': {
@@ -5131,17 +5144,3 @@ var data = {
     }
   }
 };
-/*
-var sedes= Object.keys(data);
-
-var genAQP= (Object.keys(data.AQP));
-var genCDMX= (Object.keys(data.CDMX));
-var genLIM=(Object.keys(data.LIM));
-var genSCL=(Object.keys(data.SCL));
-
-console.log("Arequipa " + genAQP);
-console.log("CDMX " + genCDMX);
-console.log("Lima " + genLIM);
-console.log("Chile " + genSCL);
-
-*/
