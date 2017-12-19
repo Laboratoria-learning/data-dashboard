@@ -21,19 +21,16 @@ boton.addEventListener("click", showMenu);
    }
  }
 
-var sedeCdmx = ['2017-1','2017-2'];
-var sedeLima = ['2016-2','2017-1','2017-2'];
-var sedeAqp = ['2016-2','2017-1'];
-var sedeScl = ['2016-2','2017-1','2017-2'];
 var selectSedes = document.getElementById('sedes');
 var selectGeneration = document.getElementById('generation');
 
-selectSedes.addEventListener('change', getGeneration)
+selectSedes.addEventListener('change', getGeneration); //llamada al evento de select de Sedes para hacer dinámico el select de Generaciones
+selectSedes.addEventListener('change', studentsEnrollment);
+selectGeneration.addEventListener('change', studentsEnrollment);
 
 function getGeneration() {
   if(selectSedes.value != 0){
-    var generation = eval('sede'+ selectSedes.value);
-    // console.log(eval('sede'+ selectSedes.value));
+    var generation = Object.keys(data[selectSedes.value]);
     var numGeneration = generation.length;
     selectGeneration.length = numGeneration;
 
@@ -49,7 +46,10 @@ function getGeneration() {
     selectGeneration.options[0].selected = true;
 }
 
-var cdmxFirstGen = data['CDMX']['2017-1'].students.length;
-var cdmxSecondGen = data['CDMX']['2017-2'].students.length
+var numTotalStudents = document.getElementsByClassName('numTotal')[0];
 
-// for(var i = 0; cd  )
+function studentsEnrollment(){
+  var sedeAccessor = selectSedes.value.toUpperCase();
+  var numberOfStudents = data[sedeAccessor][selectGeneration.value].students.length;
+  numTotalStudents.innerText = numberOfStudents;
+}

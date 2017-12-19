@@ -128,10 +128,6 @@ p {
 
 .meta-ht {
   border-radius: 5px;
-<<<<<<< HEAD
-
-=======
->>>>>>> afdc29be30ff9b1d58de2b7e0bd32940328b4b6b
   width: 300px;
   height: 400px;
   background-color: #FC331C;
@@ -142,7 +138,7 @@ p {
 }
 
 .meta-HSE{
-   border-radius: 5px;
+  border-radius: 5px;
   width: 300px;
   height: 400px;
   background-color:#00C4DA;
@@ -163,15 +159,10 @@ p {
 }
 
 .prom-teachs {
-  width: 600px;
-  height: 300px;
   background-color: #1A9391;
-
-.prom-teachs{
- background-color:#1A9391;
- border-radius: 5px;
- height: 300px;
- width: 600px;
+  border-radius: 5px;
+  height: 300px;
+  width: 600px;
 }
 
 .prom-jedi {
@@ -180,23 +171,18 @@ p {
   width: 600px;
   height: 300px;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> afdc29be30ff9b1d58de2b7e0bd32940328b4b6b
 .icons {
   font-size: 30px;
   text-align: center;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> afdc29be30ff9b1d58de2b7e0bd32940328b4b6b
 .icons-teachs,
 .icons-jedi {
   font-size: 25px;
 }
 
-.icons-alumnas {
+.icons {
   font-size: 35px;
+  display: block;
 }
