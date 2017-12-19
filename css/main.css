@@ -11,36 +11,46 @@ button {
   border-color: inherit;
   margin-left: 200px;
 }
+
 nav {
   width: 60%;
-  margin-left: 20%;
 }
+
 span {
-  font-size:40px;
-  margin-left: 100px;
+  font-size: 40px;
+  margin: auto;
 }
 
-
 nav {
-  width: 60%;
-  margin-left: 20%;
+  width: 15%;
+  text-align: center;
+  background: #333333;
+  right: 45px;
+  color: #F7B617;
 }
 
 ul {
   list-style: none;
+  padding: 0;
 }
+
 li:hover {
-  background-color: lightgrey;
+  background-color: #F7B617;
 }
- a {
+
+a {
    text-decoration: none;
- }
- a:hover{
+   color: white;
+}
+
+a:hover{
   color: #fff;
 }
+
 div {
   display: inline-block;
 }
+
 h2 {
   color: #fff;
   margin: 0;
@@ -58,8 +68,6 @@ p {
   width: 100px;
 }
 
-
-
 #barra-sedes {
   height: 100px;
   background-color: #F7B617;
@@ -70,50 +78,65 @@ p {
   font-size: 20px;
   margin-left: 50px;
   margin-top: 25px;
+  width: 220px;
+}
+
+#generation {
+  border-radius: 8px;
+  font-size: 20px;
+  width: 150px;
+}
+
+#headboard{
+  /* width: 90% */
+  /* margin: 0 auto; */
+  text-align: center;
 }
 
 #headboard >span {
   margin: auto ;
 }
 
-
 .enabled-menu {
   display: block;
+  position: absolute;
 }
+
 .disabled-menu {
   display: none;
 }
+
 .logo {
   height: 100px;
   margin-left: 100px;
   margin-top: 50px;
 }
+
 .alumnas {
   background-color: #4643BB;
   border-radius: 5px;
   height: 400px;
   width: 300px;
-
 }
+
 .prom-general {
  border-radius: 5px;
   width: 300px;
   height: 400px;
   background-color: #52E000;
-
-
 }
+
 .meta-ht {
   border-radius: 5px;
-
   width: 300px;
   height: 400px;
   background-color: #FC331C;
-
 }
+
 .meta-ht > h2 {
   font-size: 20px;
 }
+
 .meta-HSE{
    border-radius: 5px;
   width: 300px;
@@ -126,22 +149,27 @@ p {
   width: 600px;
   height: 400px;
   background-color: #0EACBD;
-
 }
+
 .nsa {
   border-radius: 5px;
   width: 600px;
   height: 400px;
   background-color: #00B22C;
 }
+
+.prom-teachs {
+  width: 600px;
+  height: 300px;
+  background-color: #1A9391;
+
 .prom-teachs{
  background-color:#1A9391;
  border-radius: 5px;
  height: 300px;
-  width: 600px;
-
-
+ width: 600px;
 }
+
 .prom-jedi {
   background-color: #C7E000;
   border-radius: 5px;
@@ -159,5 +187,4 @@ p {
 
 .icons-alumnas {
   font-size: 35px;
-
 }
