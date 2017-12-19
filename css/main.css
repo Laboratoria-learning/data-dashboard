@@ -1,3 +1,112 @@
-/*
- * Estilos de tu proyecto
- */
+button {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 14px;
+  background: #f7e094;
+  border: 1px solid #F2BC07;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 80px;
+  height: 30px;
+}
+button:hover{
+  background: #F2BC07;
+}
+
+input{
+  height: 15px;
+  width: 200px;
+}
+
+input:focus{
+  outline: none;
+}
+
+h5{
+  margin: 0;
+}
+
+#search{
+  float:right;
+  margin-right: 200px;
+}
+
+#return{
+  float:left;
+}
+
+#pics{
+  float:right;
+  margin-top: -38px;
+}
+
+#logo{
+  height: 100px;
+  width: 500px;
+}
+
+#jess{
+  margin-left: 1200px;
+  margin-top: -15px;
+}
+
+#kar{
+  margin-left: 1100px;
+  margin-top: -40px;
+}
+
+#aide{
+  margin-left: 1020px;
+  margin-top: -10px;
+}
+
+#ari{
+  margin-left: 1020px;
+  margin-bottom: 40px;
+  margin-top: 15px;
+}
+
+#cris{
+  margin-left: 1100px;
+  margin-top: -50px;
+}
+
+#may{
+ margin-left: 1200px;
+ margin-top: -40px;
+}
+
+#ada{
+  height: 300px;
+  width: 300px;
+}
+
+#logo{
+  float: right;
+  height: 300px;
+  margin: -430px 400px 0 0;
+  width: 400px;
+}
+
+#stdt-selected{
+  font-size: 30px;
+  margin:0;
+}
+
+.photo{
+  border-radius: 50%;
+  height: 105px;
+  width: 105px;
+}
+
+.student{
+  float: left;
+  font-family: 'Amaranth', sans-serif;
+  margin-top: -500px;
+  margin-left: 200px;
+  text-align: center;
+}
+
+.info{
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 400;
+}
