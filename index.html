@@ -209,8 +209,35 @@
       <!-- Grafica de Pastel -->
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <div id="piechart-total-alumnas" style="width: 10px; height: 400px;"></div>
-
-        
+      <!-- Filtro de Sede -->  
+      <div class="select-filter">
+          <select name="promo" id="promo-filter"> <!--El elemento optgroup representa un grupo de opciones ( option ) temáticamente definido, que forma parte de un control select . Las opciones agrupadas pueden ser etiquetadas mediante el atributo label , que usarán los navegadores para mostrar como nombre del grupo.-->
+              <option value="" hidden>Selecciona una opción</option>
+              <optgroup label="Arequipa">
+                <option value="AQP" data-city="AQP">Arequipa Total</option>
+                <option value="AQP" data-year="2016-2">AQP 2016 - II</option>
+                <option value="AQP" data-year="2017-1">AQP 2017 - I</option>
+              </optgroup>
+              <optgroup label="Lima">
+                <option value="LIM" data-city="LIM">Lima Total</option>
+                <option value="LIM" data-year="2016-2">LIM 2016 - II</option>
+                <option value="LIM" data-year="2017-1">LIM 2017 - I</option>
+                <option value="LIM" data-year="2017-2">LIM 2017 - II</option>
+              </optgroup>
+              <optgroup label="México">
+                <option value="CDMX" data-city="CDMX">México Total</option>
+                <option value="CDMX" data-year="2017-1">CDMX 2017 - I</option>
+                <option value="CDMX" data-year="2017-2">CDMX 2017 - II</option>
+              </optgroup>
+              <optgroup label="Chile">
+                <option value="SCL" data-city="SCL">SCL Total</option>
+                <option value="SCL" data-year="2016-2">SCL 2016 - II</option>
+                <option value="SCL" data-year="2017-1">SCL 2017 - I</option>
+                <option value="SCL" data-year="2017-2">SCL 2017 - II</option>
+              </optgroup>
+            </select>
+        </div>
+            
       </section>
 
       <!-- TERCERA SECCION -->

@@ -201,3 +201,35 @@ google.charts.load('current', {'packages':['corechart']});
 
 
 */
+var select = document.getElementById('promo-filter');
+  select.addEventListener('change', promFilter);
+
+  function promFilter() {
+    
+    var city = select.value;
+	var generation = select.options[select.selectedIndex].dataset.year; 
+	var totalStudents = data[city][generation]['students'].length;
+	var arrayStudents = data[city][generation]['students'];
+	var ratings = data[city][generation]['ratings'];
+
+	// ----------------> Alumnas Dadas de Baja<----------------
+    var dropout = 0;
+    for (var i = 0; i < arrayStudents.length; i++) {
+      if (arrayStudents[i].active === false) {
+        dropout++;
+      }
+    } 
+    // Porcentaje de estudiantes que desertaron
+    var dropoutPercent = ((dropout/totalStudents)*100).toFixed(1) +"%";
+    console.log(dropoutPercent);
+
+
+}
+ 
+
+
+
+
+
+
+
