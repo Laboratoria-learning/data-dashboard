@@ -221,3 +221,28 @@ p { /* estilos para los párrafos de la primera fila de botones */
 .itemGraph {
   display: block;
 }
+
+
+
+/*Estilos profile.ht   */
+.code {
+  width: 100%;
+  height: 50%;
+  background-color: #F7B617;
+}
+.image {
+  width: 300px;
+  height: 300px;
+  background-image: url(../assets/images/Cristina-Canchola.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+ .name {
+   background-color: #00C4DA;
+   display:inline-block;
+      width: 300px;
+   height: 150px;
+
+ }
