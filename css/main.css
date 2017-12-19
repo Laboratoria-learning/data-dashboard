@@ -64,10 +64,16 @@
 }
 
 .active {
-	background: #CCCCCC;
+	display: initial;
 }
 
 .inactive {
 	display: none;
 }
+
+.highlighted {
+	background: #CCCCCC;
+}
+
+
 
