@@ -202,19 +202,16 @@ p { /* estilos para los párrafos de la primera fila de botones */
 
 .graph {
   width: 53%;
-  /*height: 18em; */
-  /* background: red;
-  display: inline-block; */
 }
 
 .detailGraph {
   width: 30%;
-  height: 18em;
+  height: 10em;
   display: inline-block;
   vertical-align: 700%;
 }
 
-.detailGraph >div > p {
+.detailGraph > div > p {
   font-size: 20px;
 }
 
@@ -222,7 +219,12 @@ p { /* estilos para los párrafos de la primera fila de botones */
   display: block;
 }
 
-
+.accumulated {
+  display: block;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
 
 /*Estilos profile.ht   */
 .code {
@@ -230,6 +232,7 @@ p { /* estilos para los párrafos de la primera fila de botones */
   height: 50%;
   background-color: #F7B617;
 }
+
 .image {
   width: 300px;
   height: 300px;
@@ -239,10 +242,10 @@ p { /* estilos para los párrafos de la primera fila de botones */
   background-repeat: no-repeat;
   border-radius: 50%;
 }
+
  .name {
    background-color: #00C4DA;
    display:inline-block;
-      width: 300px;
+   width: 300px;
    height: 150px;
-
  }

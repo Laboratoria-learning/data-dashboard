@@ -99,20 +99,20 @@ function studentsEnrollment(){
 }
 
 
-
-// Creando garficas
-
-google.charts.load('current', {packages: ['corechart']});
-google.charts.setOnLoadCallback(drawChart);
-
-function drawChart() {
-  var data = new google.visualization.DataTable();
-  data.addColumn('number', 'Sprint');
-  data.addColumn('number', 'Total de Alumnas');
-  addRows (
-  [
-  ["Sprint 1",] // aqui va la funcion o variable que contiene  la dta de nuemero de alumnas 
-  ]
-  )
-
-}
+// 
+// // Creando garficas
+//
+// google.charts.load('current', {packages: ['corechart']});
+// google.charts.setOnLoadCallback(drawChart);
+//
+// function drawChart() {
+//   var data = new google.visualization.DataTable();
+//   data.addColumn('number', 'Sprint');
+//   data.addColumn('number', 'Total de Alumnas');
+//   addRows (
+//   [
+//   ["Sprint 1",] // aqui va la funcion o variable que contiene  la dta de nuemero de alumnas
+//   ]
+//   )
+//
+// }
