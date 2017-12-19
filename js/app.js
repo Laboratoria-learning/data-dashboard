@@ -48,3 +48,8 @@ function getGeneration() {
   }
     selectGeneration.options[0].selected = true;
 }
+
+var cdmxFirstGen = data['CDMX']['2017-1'].students.length;
+var cdmxSecondGen = data['CDMX']['2017-2'].students.length
+
+// for(var i = 0; cd  )
