@@ -12,13 +12,13 @@ button {
   margin-left: 200px;
 }
 
-nav {
+/* nav {
   width: 60%;
-}
+} */
 
-span {
+span { /*estilo para el título del proyecto*/
   font-size: 40px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 nav {
@@ -49,27 +49,21 @@ a:hover{
 
 div {
   display: inline-block;
+  margin: 0.75em;
 }
 
-h2 {
+h2 { /* estilos para el título de la primera fila de botones */
   color: #fff;
-  margin: 0;
-  padding-left: 30px;
+  margin-top: 0.625em;
+  padding-left: 5%;
+  font-size: 1.25em;
 }
 
-i {
-  color: #fff;
-}
-
-p {
+p { /* estilos para los párrafos de la primera fila de botones */
   display: inline-block;
   color: #fff;
-  font-size: 30px;
-  width: 100px;
-}
-
-div {
-  margin: 10px;
+  font-size: 1.25em;
+  margin: 0;
 }
 
 #barra-sedes {
@@ -97,11 +91,21 @@ div {
   text-align: center;
 }
 
-#headboard >span {
-  margin: auto ;
-}
 #container {
-  padding: 50px;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.numTotal,
+.percent {
+  font-size: 4.25em;
+  margin: 0;
+  font-weight: bolder;
+}
+
+.totalStudents,
+.totalPercent {
+  display: block;
 }
 
 .enabled-menu {
@@ -122,74 +126,73 @@ div {
 .alumnas {
   background-color: #4643BB;
   border-radius: 5px;
-  height:400px;
-  width: 300px;
+  height:23.75em;
+  width: 22%;
 }
 
 .prom-general {
  border-radius: 5px;
-  width: 300px;
-  height: 400px;
+  width: 22%;
+  height: 23.75em;
   background-color: #52E000;
 }
 
 .meta-ht {
   border-radius: 5px;
-  width: 300px;
-  height: 400px;
+  width: 23%;
+  height: 23.75em;
   background-color: #FC331C;
-}
-
-.meta-ht > h2 {
-  font-size: 20px;
 }
 
 .meta-HSE{
   border-radius: 5px;
-  width: 300px;
-  height: 400px;
+  width: 22%;
+  height: 23.75em;
   background-color:#00C4DA;
 }
 
 .nps {
   border-radius: 5px;
-  width: 600px;
-  height: 400px;
+  width: 47%;
+  height: 23.75em;
   background-color: #0EACBD;
 }
 
 .nsa {
   border-radius: 5px;
-  width: 600px;
-  height: 400px;
+  width: 47%;
+  height: 23.75em;
   background-color: #00B22C;
 }
 
 .prom-teachs {
  background-color:#1A9391;
  border-radius: 5px;
- height: 300px;
- width: 600px;
+ height: 23.75em;
+ width: 47%;
 }
 
 .prom-jedi {
   background-color: #C7E000;
   border-radius: 5px;
-  height: 300px;
-  width: 600px;
+  height: 23.75em;
+  width: 47%;
 }
 
 .icons {
-  font-size: 30px;
   text-align: center;
+  color: #fff;
+  font-size: 7.8em;
+  display: block;
+  margin-bottom: 0.01em;
 }
 
-.fa-heartbeat,
+/* .fa-heartbeat,
 .fa-code,
 .fa-graduation-cap,
 .fa-female {
   padding-left: 90px;
-}
+} */
 
 .icons-teachs,
 .icons-jedi {
@@ -197,8 +200,25 @@ div {
   padding-left: 430px;
 }
 
-.icons {
-  font-size: 35px;
+.graph {
+  width: 60%;
+  height: 18em;
+  background: red;
+  display: inline-block;
+}
+
+.detailGraph {
+  width: 30%;
+  height: 18em;
+  display: inline-block;
+  vertical-align: 700%;
+}
+
+.detailGraph >div > p {
+  font-size: 20px;
+}
+
+.itemGraph {
   display: block;
 }
 
