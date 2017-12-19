@@ -64,8 +64,12 @@ i {
 p {
   display: inline-block;
   color: #fff;
-  font-size: 20px;
+  font-size: 30px;
   width: 100px;
+}
+
+div {
+  margin: 10px;
 }
 
 #barra-sedes {
@@ -96,6 +100,9 @@ p {
 #headboard >span {
   margin: auto ;
 }
+#container {
+  padding: 50px;
+}
 
 .enabled-menu {
   display: block;
@@ -115,7 +122,7 @@ p {
 .alumnas {
   background-color: #4643BB;
   border-radius: 5px;
-  height: 400px;
+  height:400px;
   width: 300px;
 }
 
@@ -159,17 +166,17 @@ p {
 }
 
 .prom-teachs {
-  background-color: #1A9391;
-  border-radius: 5px;
-  height: 300px;
-  width: 600px;
+ background-color:#1A9391;
+ border-radius: 5px;
+ height: 300px;
+ width: 600px;
 }
 
 .prom-jedi {
   background-color: #C7E000;
   border-radius: 5px;
-  width: 600px;
   height: 300px;
+  width: 600px;
 }
 
 .icons {
@@ -177,9 +184,17 @@ p {
   text-align: center;
 }
 
+.fa-heartbeat,
+.fa-code,
+.fa-graduation-cap,
+.fa-female {
+  padding-left: 90px;
+}
+
 .icons-teachs,
 .icons-jedi {
-  font-size: 25px;
+  font-size: 35px;
+  padding-left: 430px;
 }
 
 .icons {
