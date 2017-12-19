@@ -14,6 +14,7 @@
     <title>Data Dashboard</title>
     <link rel="stylesheet" href="css/main.css">
          <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900" rel="stylesheet">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
   </head>
   <body>
 
@@ -21,9 +22,11 @@
       <div id="barra-lateral">
            <img class="imagen-lab" src="assets/images/logo-lab.png" alt="logo-laboratoria">
             <img class="imagen-profile"src="assets/images/Jonh-Parra-imagen-profile.jfif" alt="foto de perfil">
+<div class="form">
 
-
-             <div>
+</div>
+           <!--SECCION FILTRO-->
+           <div>
                <select id="filtro-sedes" name="promo">
                  <option value="" hidden><a class="tab" data-tab-seleccionado = "tabOverview">DASHBOARD</a></option>
                  <optgroup label="Arequipa">
@@ -47,20 +50,18 @@
                           </select>
                         </div>
 
-
+<!-- SECCION BARRA DE NAVEGACIÓN-->
   <nav id="contenido-tab">
-<ul class="cont-tabs">
- <li>
-   <div class="barra"></div>
-   <a class="tab" data-tab-seleccionado = "tabOverview">DASHBOARD</a>
 
-  <ul class="sub-menu">
-    <li> <a>SEDE</a></li>
-    <li><a>SEDE</a></li>
-  </ul>
- </li>
+    <ul class="cont-tabs">
+     <li>
+        <div class="barra"></div>
+        <i class="fa fa-home fa-2x" aria-hidden="true"></i>
+        <a class="tab" data-tab-seleccionado = "tabOverview">DASHBOARD</a>
+     </li>
  <li>
    <div class="barra"></div>
+   <i class="fa fa-graduation-cap fa-2x" aria-hidden="true"></i>
    <a class="tab" data-tab-seleccionado = "tabStudents" >STUDENTS</a>
  </li>
  <li>
@@ -69,24 +70,18 @@
  </li>
  <li>
    <div class="barra"></div>
+   <i class="fa fa-code fa-2x" aria-hidden="true"></i>
     <a class="tab" data-tab-seleccionado = "tabTeachers">TEACHERS</a>
 </li>
-
 </ul>
 </nav>
       </div>
-
       <div>
         <img src="assets/images/logo-laboratoria.svg" alt="">
-
         </div>
-
       </div>
+  </header>
 
-
-
-
-                  </header>
                   <!-- +++++++++++++++++++CONTENIDOSS +++++++++++++++++++++++++++-->
                     <main>
 
