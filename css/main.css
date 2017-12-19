@@ -1,12 +1,86 @@
 * {
-	margin: 0;
-	padding: 0;
+	/*margin: 0;
+	padding: 0;*/
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
 }
 
-#logo-laboratoria {
-	width: 200px;
-	margin: auto;
+html {
+
 }
+
+nav {
+    width: 100%;
+}
+
+.logo {/*estilo de logo cabecera*/
+    background-image: url(../assets/images/logo-laboratoria.svg);
+    width: 250px;
+    height: 90px;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.general-container {/*estilo de menu gen-sede*/
+    display: flex;
+    padding: 1em;
+    justify-content: space-around;
+		font-size: 10px;
+}
+
+.info-container {/*estilo de menu gen-sede*/
+    width: 20%;
+    background-color: orange;
+    border-radius: 10px;
+    text-align: center;
+    height: 80px;
+
+}
+
+.profile-container {/*estilo de menu gen-sede*/
+		width: 20%;
+    background-color: #DCDCDC;
+    border-radius: 10px;
+    height: 80px;
+}
+
+.profile-pic{
+		width: 60px;
+		border-radius: 50%;
+		margin-left: 5%;
+		margin-top: 4%;
+}
+
+.profile-data{
+	text-align: left;
+	font-size: 17px;
+	display:inline-block;
+	margin-left: 5%;
+}
+
+
+#generacion{/*estilo de menu gen-sede*/
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+}
+
+#go{/*estilo de menu gen-sede*/
+    border: none;
+    width: 170%;
+    height: 25px;
+    border-radius: 1em;
+    font-weight: 800;
+    font-size: 20px;
+    margin-top: 1.5em;
+    margin-left: 120%;
+}
+
+#sede{/*estilo de menu gen-sede*/
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+}
+
 /*tamaño de icons de kpis*/
 .icon {
 	width:15px;
@@ -31,6 +105,7 @@
 }
 .result {
 	color:red;
+	font-size: 18px;
 }
 
 #kpis-section {
@@ -43,14 +118,14 @@
 }
 
 #end-kpis {
-	margin-top: 80px;
+	margin-top: 100px;
 }
 
 .tabs li {
 	display: inline-block;
 	width: 16%;
 	text-align: center;
-	height:20px;
+	height: 30px;
 }
 
 .tabs li a {
@@ -59,12 +134,13 @@
 }
 
 #menu {
-	background: #FFC107;
-	height: 20px;
+	background: orange;
+	height: 30px;
+	text-align: center;
 }
 
 .active {
-	display: initial;
+	/*display: initial;*/
 }
 
 .inactive {
@@ -72,7 +148,7 @@
 }
 
 .highlighted {
-	background: #CCCCCC;
+	background: #8e8e8e;
 }
 
 /*dashboard por sede*/
@@ -87,6 +163,3 @@
 	margin-top: 5px;
 	font-weight: bold;
 }
-
-
-
