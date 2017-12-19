@@ -210,7 +210,7 @@ var select = document.getElementById('promo-filter');
 	var generation = select.options[select.selectedIndex].dataset.year; 
 	var totalStudents = data[city][generation]['students'].length;
 	var arrayStudents = data[city][generation]['students'];
-	var ratings = data[city][generation]['ratings'];
+	//var ratings = data[city][generation]['ratings'];
 
 	// ----------------> Alumnas Dadas de Baja<----------------
     var dropout = 0;
@@ -221,11 +221,54 @@ var select = document.getElementById('promo-filter');
     } 
     // Porcentaje de estudiantes que desertaron
     var dropoutPercent = ((dropout/totalStudents)*100).toFixed(1) +"%";
-    console.log(dropoutPercent);
+
+    // #Alumnas inscritas a su contenedor
+    var enrolledStudents = document.getElementById('enrolled-students');
+    //enrolledStudents.textContent = totalStudents;
+    
+    // #Alumnas Dadas de Baja a su contenedor
+    var downStudents = document.getElementById('down-students');
+    //downStudents.textContent = dropout;
+
+    // %Porcentaje de Desercion a su contenedor
+    var downStudentsPercent = document.getElementById('down-students-percent');
+    //downStudentsPercent.textContent = dropoutPercent;
+
+    // ----------------> Alumnas arriba del 70% <----------------
+    var studentMeetTarget = 0;
+    var studentMeetTargetHse = 0;
+    var studentMeetTargetTech = 0;
+    console.log(studentMeetTarget,studentMeetTargetTech,studentMeetTargetHse);
 
 
+    for (var i = 0; i < totalStudents; i++) {
+      var scoreTech = 0;
+      var scoreHSE = 0;
+
+	      for (var j = 0; j < arrayStudents[i]['sprints'].length; j++) { //iterar sobre los sprints de cada estudiante
+	        scoreTech += arrayStudents[i]['sprints'][j]['score']['tech'];//sumar los resultados de todas las estudiantes
+	        scoreHSE += arrayStudents[i]['sprints'][j]['score']['hse'];
+	      }
+
+	      var averageTech = scoreTech / arrayStudents[i]['sprints'].length;
+	      var averageHSE = scoreHSE / arrayStudents[i]['sprints'].length;
+
+	      if (averageTech >= 1260 && averageHSE >= 840) { //Tenico: 1,800 HSE:1,200
+	        studentMeetTarget++;
+	        studentMeetTargetHse++;
+	        studentMeetTargetTech++;
+	      }else if(averageTech>= 1260) {
+	      	studentMeetTargetTech++;
+	      }else if(averageHSE >= 840){
+	      	studentMeetTargetHse++;
+	      }
+	    }
 }
- 
+
+
+
+
+ 	
 
 
 
