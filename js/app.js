@@ -54,7 +54,7 @@ function hideSections(){
 		thirdSection.className="inactive";
 		fourthSection.className="inactive";
 		fifthSection.className="active";
-		event.preventDefault();	
+		event.preventDefault();
 	}
 }
 
@@ -123,7 +123,7 @@ function genDashboard() {
       if (arrayStudents[i].active === false) {
         dropout++;
       }
-    } 
+    }
   // --------> Porcentaje de estudiantes que desertaron<------------
   var dropoutPercent = ((dropout/totalStudents)*100).toFixed(1) +"%";
 
@@ -199,15 +199,20 @@ var nps= (promotersPercent - detractorsPercent).toFixed(1) + '%';
     var satifactionResponses= (noCumple+cumple+supera);
     var satifactionPercent= (((cumple+supera)/satifactionResponses)*100).toFixed(1) +"%";
 
+<<<<<<< HEAD
+// ---------------->#Puntos Promedio por Sprint <----------------
+  var techPoints = 0;
+=======
 // ---------------->#Puntos Promedio Totales <----------------
   var techPoints = 0; 
+>>>>>>> dd8271e0437a32f486b51c8499f3c5d5dda22625
   var hsePoints= 0;
 
   for (var i = 0; i < totalStudents; i++) {
           for (var j = 0; j < arrayStudents[i]['sprints'].length; j++) { //iterar sobre los sprints de cada estudiante
             techPoints += arrayStudents[i]['sprints'][j]['score']['tech'];//sumar los resultados de todas las estudiantes de tecnico
             hsePoints += arrayStudents[i]['sprints'][j]['score']['hse'];//sumar los resultados de todas las estudiantes de hse
-          }      
+          }
   }
   var totalPointsAvg = ((techPoints+hsePoints)/totalStudents).toFixed(0);
   var techPointsAvg = (techPoints / totalStudents).toFixed(0);
@@ -272,12 +277,12 @@ var avgTechSprint4 = (totalTechSprint4/totalStudents).toFixed(0);
 
   // %Porcentaje de Desercion a su contenedor
     var downStudentsPercent = document.getElementById('down-students-percent');
-    downStudentsPercent.textContent = dropoutPercent;  
+    downStudentsPercent.textContent = dropoutPercent;
 
-  // #Alumnas arriba del 70 
+  // #Alumnas arriba del 70
     var  studentsAboveTotal = document.getElementById("students-above70-total");
     studentsAboveTotal.textContent = studentMeetTarget;
-  
+
   // #Alumnas arriba del 70 - hse
     var  studentsAboveHse= document.getElementById("students-above70-hse");
     studentsAboveHse.textContent = studentMeetTargetHse;
@@ -286,15 +291,15 @@ var avgTechSprint4 = (totalTechSprint4/totalStudents).toFixed(0);
     var  studentsAboveTech=document.getElementById("students-above70-tech");
     studentsAboveTech.textContent = studentMeetTargetTech;
 
-  // %Alumnas arriba del 70 
+  // %Alumnas arriba del 70
     var  studentsAboveTotalP= document.getElementById("students-above70-total-p");
     studentsAboveTotalP.textContent = studentMeetTargetPT;
 
-  // %Alumnas arriba del 70 
+  // %Alumnas arriba del 70
     var  studentsAboveHseP= document.getElementById("students-above70-hse-p");
     studentsAboveHseP.textContent = studentMeetTargetHsePT;
 
-  // %Alumnas arriba del 70 
+  // %Alumnas arriba del 70
     var  studentsAboveTecP= document.getElementById("students-above70-tech-p");
     studentsAboveTecP.textContent =  studentMeetTargetTechPT;
 
@@ -321,7 +326,7 @@ var avgTechSprint4 = (totalTechSprint4/totalStudents).toFixed(0);
 
 
 
-// --------------------------------> Graficas<-// -----------------------------------> 
+// --------------------------------> Graficas<-// ----------------------------------->
 
   // Grafica de Pastel
 google.charts.load('current', {'packages':['corechart']});
@@ -353,9 +358,24 @@ google.charts.load('current', {'packages':['corechart']});
         chart.draw(data, options);
       }
 
+<<<<<<< HEAD
+}
+//grafica de barras
+
+
+/*html
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <button id="change-chart">Change to Classic</button>
+        <br><br>
+        <div id="chart_div" style="width: 800px; height: 500px;"></div>
+  js
+
+google.charts.load('current', {'packages':['corechart', 'bar']});
+=======
 //grafica de barras 
 
       google.charts.load('current', {'packages':['corechart', 'bar']});
+>>>>>>> dd8271e0437a32f486b51c8499f3c5d5dda22625
       google.charts.setOnLoadCallback(drawStuff);
 
       function drawStuff() {
@@ -364,12 +384,20 @@ google.charts.load('current', {'packages':['corechart']});
         var chartDiv = document.getElementById('chart_div');
 
         var data = google.visualization.arrayToDataTable([
+<<<<<<< HEAD
+          ['Sprint', 'HSE', 'TECH',"TOTAL"],
+          ['Sprint 1', 8000, 23.3, 50],
+          ['Sprint 2', 24000, 4.5,60],
+          ['Sprint 3', 30000, 14.3,70],
+
+=======
           ['SPRINTS', 'HSE', 'TECH'],
           ['Sprint 1', avgHseSprint1 , avgTechSprint1],
           ['Sprint 2', avgHseSprint2, avgTechSprint2],
           ['Sprint 3', avgHseSprint3, avgTechSprint3],
           ['Sprint 4', avgHseSprint4, avgTechSprint4 ]
     
+>>>>>>> dd8271e0437a32f486b51c8499f3c5d5dda22625
         ]);
 
         /*var options = {
@@ -432,6 +460,9 @@ google.charts.load('current', {'packages':['corechart']});
           button.onclick = drawMaterialChart;
         }
 
+<<<<<<< HEAD
+*/
+=======
         drawMaterialChart();
     };
 
@@ -443,3 +474,4 @@ google.charts.load('current', {'packages':['corechart']});
 
 
 
+>>>>>>> dd8271e0437a32f486b51c8499f3c5d5dda22625

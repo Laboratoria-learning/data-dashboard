@@ -165,24 +165,23 @@ nav {
 }
 /*estilo a alumnas*/
 .image-container {
-
+	height: 300px;
   width: 18%;
   display: inline-block;
 	margin-top: 2%;
+	margin-bottom: 3%;
 	margin-left: 5%;
-  margin-bottom: 3%;
-	padding-left: 2%;
-	/*justify-content: space-around;*/
+	text-align: center;
+	font-size: 18px;
 }
 
 .image-container:active {
-  background: red;
+  background: orange;
   cursor: pointer;
   opacity: 1;
 }
 
 .image-container > span {
-
   bottom: 25px;
   color: white;
   right: 30px;
