@@ -132,7 +132,7 @@ function genDashboard() {
   var studentMeetTargetHse = 0;
   var studentMeetTargetTech = 0;
 
-    for (var i = 0; i < totalStudents; i++) {//68 alumnas
+    for (var i = 0; i < totalStudents; i++) {
         var scoreTech = 0; //se actualiza despues de revisar sprints de cada alumna
         var scoreHSE = 0;
 
@@ -200,33 +200,18 @@ var nps= (promotersPercent - detractorsPercent).toFixed(1) + '%';
     var satifactionPercent= (((cumple+supera)/satifactionResponses)*100).toFixed(1) +"%";
 
 // ---------------->#Puntos Promedio por Sprint <----------------
-  var totalPoints = 0;
-  var studentMeetTargetHse = 0;
-  var studentMeetTargetTech = 0;
+  var techPoints = 0; 
+  var hsePoints= 0;
 
-    for (var i = 0; i < totalStudents; i++) {//68 alumnas
-        var scoreTech = 0; //se actualiza despues de revisar sprints de cada alumna
-        var scoreHSE = 0;
-
+  for (var i = 0; i < totalStudents; i++) {
           for (var j = 0; j < arrayStudents[i]['sprints'].length; j++) { //iterar sobre los sprints de cada estudiante
-            scoreTech += arrayStudents[i]['sprints'][j]['score']['tech'];//sumar los resultados de todas las estudiantes de tecnico
-            scoreHSE += arrayStudents[i]['sprints'][j]['score']['hse'];//sumar los resultados de todas las estudiantes de hse
-          }
-
-
-          var averageTech = scoreTech / arrayStudents[i]['sprints'].length;
-          var averageHSE = scoreHSE / arrayStudents[i]['sprints'].length;
-
-          if(averageTech >= 1260 && averageHSE >= 840) { //Tenico: 1,800 HSE:1,200
-            studentMeetTarget++;
-            studentMeetTargetHse++;
-            studentMeetTargetTech++;
-          }else if(averageTech >= 1260) {
-            studentMeetTargetTech++;
-          }else if(averageHSE >= 840) {
-            studentMeetTargetHse++;
-          }
+            techPoints += arrayStudents[i]['sprints'][j]['score']['tech'];//sumar los resultados de todas las estudiantes de tecnico
+            hsePoints += arrayStudents[i]['sprints'][j]['score']['hse'];//sumar los resultados de todas las estudiantes de hse
+          }      
   }
+  var totalPointsAvg = ((techPoints+hsePoints)/totalStudents).toFixed(0);
+  var techPointsAvg = (techPoints / totalStudents).toFixed(0);;
+  var hsePointsAvg = (hsePoints / totalStudents).toFixed(0);;
 
   // --------> Meter datos a sus cajas de Kpis<------------
 
@@ -273,6 +258,20 @@ var nps= (promotersPercent - detractorsPercent).toFixed(1) + '%';
   // Porcentaje de Satisfaccion con el curso
     var  satisfactionContainer= document.getElementById("satisfaction-container");
     satisfactionContainer.textContent =  satifactionPercent;
+
+  // Puntos Promedio (Total)
+    var  totalPointsContainer= document.getElementById("total-points-avg");
+    totalPointsContainer.textContent =  totalPointsAvg;
+
+  // Puntos Promedio (HSE)
+    var  hsePointsContainer= document.getElementById("hse-points-avg");
+    hsePointsContainer.textContent =  hsePointsAvg;
+
+  // Puntos Promedio (TECH)
+    var  techPointsContainer= document.getElementById("tech-points-avg");
+    techPointsContainer.textContent =  techPointsAvg;
+
+
 
 
 // --------------------------------> Graficas<-// -----------------------------------> 
