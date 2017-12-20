@@ -52,45 +52,39 @@ console.log(inactivoPorcentaje);
 
  // Porcentaje de estudiantes que desertaron en su contenedor
    var dropoutPorcentaje = document.getElementById("dropout-porcentaje");
-   dropoutPorcentaje.textContent = counterInactivo;
+   dropoutPorcentaje.textContent = inactivoPorcentaje;
 
 
 /*------- ACHIEVEMENT (Meta de Estudiantes Tectico y HSE)----------------*/
-  var  metaStudent= 0;
-  var scoreTech = 0;
-  var scoreHSE = 0;
-  var totalActTech =0;
-  var totalActHSE =0;
+var  metaStudent= 0;
 
-  for (var i = 0; i < generacionEstudiantes; i++) {
-    console.log(activeStudents);
+var totalActTech =0;
+var totalActHSE =0;
 
-    if(activeStudents === true){
-      for (var j = 0; j < arrayEstudiantes[i]["sprints"].length; j++) {
-        scoreTech += arrayEstudiantes[i]["sprints"][j]["score"]["tech"];
-        scoreHSE += arrayEstudiantes[i]["sprints"][j]["score"]["hse"];
-        console.log(scoreHSE);
-      }
+for (var i = 0; i < generacionEstudiantes; i++) {
+ var scoreTech = 0;
+ var scoreHSE = 0;
+ var activeStudents = data[sede][generacion].students[i].active;
+   if(activeStudents === true){
+ console.log(activeStudents);
 
-      var promedioTech = scoreTech / arrayEstudiantes[i]["sprints"].length;
-      var promedioHSE = scoreHSE / arrayEstudiantes[i]["sprints"].length;
-       console.log(promedioTech);
-       console.log(promedioHSE);
+   for (var j = 0; j < arrayEstudiantes[i]["sprints"].length; j++) {
+     scoreTech += arrayEstudiantes[i]["sprints"][j]["score"]["tech"];
+     scoreHSE += arrayEstudiantes[i]["sprints"][j]["score"]["hse"];
+     console.log("puntaje HSE " + scoreHSE);
+     console.log("puntaje TE " + scoreTech);
+   }
 
-      totalActTech += promedioTech;
-      totalActHSE += promedioHSE;
+   var promedioTech = scoreTech / arrayEstudiantes[i]["sprints"].length;
+ var promedioHSE = scoreHSE / arrayEstudiantes[i]["sprints"].length;
+ console.log("promT " +promedioTech);
+ console.log("promHSE "+ promedioHSE);
 
-      console.log("El valor es de Tech: "+ promedioTech);
-      console.log("El valor es de HSE: "+ promedioHSE);
-
-    }
-    var promTotalActTech = totalActTech/ counterActivo;
-    var promTotalActTHSE = totalActHSE /counterActivo;
-
-    if (promTotalActTech >= 1260 && promTotalActTHSE >= 840) {
-      metaStudent++;
-    }
-    }
+ if (promedioTech >= 1260 && promedioHSE >= 840) {
+   metaStudent++;
+ }
+ }
+}
     console.log("El valor es de Tech: "+ totalActTech);
     console.log("El valor es de HSE: "+ totalActHSE);
 
@@ -143,18 +137,20 @@ var scoreHSE = 0;
 for (var l = 0; l <generacionEstudiantes; l++){
   var nombre = arrayEstudiantes[l].name;
   var foto = arrayEstudiantes[l].photo;
+  var infActiva = arrayEstudiantes[l].active;
 
   for (var j = 0; j < arrayEstudiantes[l]["sprints"].length; j++) {
     scoreTech += arrayEstudiantes[l]["sprints"][j]["score"]["tech"];
     scoreHSE += arrayEstudiantes[l]["sprints"][j]["score"]["hse"];
   }
 
-  var promedioTech = scoreTech / arrayEstudiantes[l]["sprints"].length;
-  var promedioHSE = scoreHSE / arrayEstudiantes[l]["sprints"].length;
-  pintarCoders (nombre, promedioTech, promedioHSE);
+  var promedioTech = ((scoreTech / arrayEstudiantes[l]["sprints"].length)*100)/1800;
+  var promedioHSE = ((scoreHSE / arrayEstudiantes[l]["sprints"].length)*100)/1200;
+
+  pintarCoders (nombre, promedioTech, promedioHSE, infActiva);
 }
 
-function pintarCoders (nombre, promedioTech, promedioHSE){
+function pintarCoders (nombre, promedioTech, promedioHSE, infActiva){
   var contCoders = document.getElementById("studentsTab");
 
 
@@ -166,6 +162,7 @@ function pintarCoders (nombre, promedioTech, promedioHSE){
   var imagen = document.createElement("img");
   var divCoders = document.createElement ("div");
   var divInfoCoders = document.createElement("div");
+  var pActiva = document.createElement("p");
 
 
 
@@ -173,13 +170,15 @@ function pintarCoders (nombre, promedioTech, promedioHSE){
   pNombre.classList.add("nombre");
   pPromTech.classList.add("tech");
   pPromHse.classList.add("hse");
+  pActiva.classList.add("active");
   imagen.src = foto;
   imagen.classList.add("foto");
   divCoders.classList.add("coders");
   divInfoCoders.classList.add("info-coders");
   pNombre.innerText = nombre;
-  pPromTech.innerText = "Promedio Técnico: " + promedioTech.toFixed(1);
-  pPromHse.innerText = "Promedio HSE: " + promedioHSE.toFixed(1);
+  pPromTech.innerText = "Porcentaje Técnico:  " + promedioTech.toFixed(1) + "%";
+  pPromHse.innerText = "Porcentaje HSE:  " + promedioHSE.toFixed(1)+ "%";
+  pActiva.innerText = "Alumna Inscrita:  " + infActiva;
 
 
   divContCoders.appendChild(divCoders);
@@ -188,8 +187,10 @@ function pintarCoders (nombre, promedioTech, promedioHSE){
   divInfoCoders.appendChild(pNombre);
   divInfoCoders.appendChild(pPromTech);
   divInfoCoders.appendChild(pPromHse);
+  divInfoCoders.appendChild(pActiva);
   studentsTab.appendChild(divContCoders);
 }
+
 
 
 
@@ -300,7 +301,7 @@ var dataTeacher = new google.visualization.DataTable();
       var optionsTeacher = {'title': 'Rating otorgado por las alumnas a sus junior y master teachers',
         'width': 500,
         'height': 300,
-        'colors':['#83d202','#004411'],
+        'colors':['#000000','#F7B617'],
         'is3D': true};
 
       var chartTeacher = new google.visualization.PieChart(document.getElementById("teacher-draw"));
@@ -319,7 +320,7 @@ var dataJedi = new google.visualization.DataTable();
      var optionsJedi = {'title': 'Rating otorgado por las alumnas a sus Jedi Master',
        'width': 500,
        'height': 300,
-       'colors':['#83d202','#004411'],
+       'colors':['#000000','#F7B617'],
        'is3D': true};
 
      var chartJedi = new google.visualization.PieChart(document.getElementById("jedi-draw"));
