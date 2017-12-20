@@ -199,13 +199,8 @@ var nps= (promotersPercent - detractorsPercent).toFixed(1) + '%';
     var satifactionResponses= (noCumple+cumple+supera);
     var satifactionPercent= (((cumple+supera)/satifactionResponses)*100).toFixed(1) +"%";
 
-<<<<<<< HEAD
-// ---------------->#Puntos Promedio por Sprint <----------------
-  var techPoints = 0;
-=======
 // ---------------->#Puntos Promedio Totales <----------------
-  var techPoints = 0; 
->>>>>>> dd8271e0437a32f486b51c8499f3c5d5dda22625
+  var techPoints = 0;
   var hsePoints= 0;
 
   for (var i = 0; i < totalStudents; i++) {
@@ -235,8 +230,8 @@ var totalTechSprint4 = 0;
   for (var i = 0; i < totalStudents; i++) {
           for (var j = 0; j < arrayStudents[i]['sprints'].length; j++) { //iterar sobre los sprints de cada estudiante
             var sprint=arrayStudents[i]['sprints'][j]['number']; //identificar el el sprint por number
-            
-            if(sprint===1) { 
+
+            if(sprint===1) {
               totalTechSprint1 += arrayStudents[i]['sprints'][j]['score']['tech'];
               totalHseSprint1  += arrayStudents[i]['sprints'][j]['score']['hse'];
             } else if (sprint===2) {
@@ -249,7 +244,7 @@ var totalTechSprint4 = 0;
               totalTechSprint4 += arrayStudents[i]['sprints'][j]['score']['tech'];
               totalHseSprint4  += arrayStudents[i]['sprints'][j]['score']['hse'];
             }
-          }      
+          }
   }
 // AVERAGES PER SPRINT
 
@@ -258,7 +253,7 @@ var avgHseSprint1 = (totalHseSprint1/totalStudents).toFixed(0);
 var avgHseSprint2 = (totalHseSprint2/totalStudents).toFixed(0);
 var avgHseSprint3 = (totalHseSprint3/totalStudents).toFixed(0);
 var avgHseSprint4 = (totalHseSprint4/totalStudents).toFixed(0);
-//TECH Sprints 
+//TECH Sprints
 var avgTechSprint1 = (totalTechSprint1/totalStudents).toFixed(0);
 var avgTechSprint2 = (totalTechSprint2/totalStudents).toFixed(0);
 var avgTechSprint3 = (totalTechSprint3/totalStudents).toFixed(0);
@@ -358,24 +353,9 @@ google.charts.load('current', {'packages':['corechart']});
         chart.draw(data, options);
       }
 
-<<<<<<< HEAD
-}
 //grafica de barras
 
-
-/*html
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-        <button id="change-chart">Change to Classic</button>
-        <br><br>
-        <div id="chart_div" style="width: 800px; height: 500px;"></div>
-  js
-
-google.charts.load('current', {'packages':['corechart', 'bar']});
-=======
-//grafica de barras 
-
       google.charts.load('current', {'packages':['corechart', 'bar']});
->>>>>>> dd8271e0437a32f486b51c8499f3c5d5dda22625
       google.charts.setOnLoadCallback(drawStuff);
 
       function drawStuff() {
@@ -384,20 +364,12 @@ google.charts.load('current', {'packages':['corechart', 'bar']});
         var chartDiv = document.getElementById('chart_div');
 
         var data = google.visualization.arrayToDataTable([
-<<<<<<< HEAD
-          ['Sprint', 'HSE', 'TECH',"TOTAL"],
-          ['Sprint 1', 8000, 23.3, 50],
-          ['Sprint 2', 24000, 4.5,60],
-          ['Sprint 3', 30000, 14.3,70],
-
-=======
           ['SPRINTS', 'HSE', 'TECH'],
           ['Sprint 1', avgHseSprint1 , avgTechSprint1],
           ['Sprint 2', avgHseSprint2, avgTechSprint2],
           ['Sprint 3', avgHseSprint3, avgTechSprint3],
           ['Sprint 4', avgHseSprint4, avgTechSprint4 ]
-    
->>>>>>> dd8271e0437a32f486b51c8499f3c5d5dda22625
+
         ]);
 
         /*var options = {
@@ -460,18 +432,7 @@ google.charts.load('current', {'packages':['corechart', 'bar']});
           button.onclick = drawMaterialChart;
         }
 
-<<<<<<< HEAD
-*/
-=======
         drawMaterialChart();
     };
 
 }
-
-
-
-
-
-
-
->>>>>>> dd8271e0437a32f486b51c8499f3c5d5dda22625
