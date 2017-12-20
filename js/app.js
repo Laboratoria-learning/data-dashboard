@@ -54,7 +54,7 @@ function hideSections(){
 		thirdSection.className="inactive";
 		fourthSection.className="inactive";
 		fifthSection.className="active";
-		event.preventDefault();	
+		event.preventDefault();
 	}
 }
 
@@ -123,7 +123,7 @@ function genDashboard() {
       if (arrayStudents[i].active === false) {
         dropout++;
       }
-    } 
+    }
   // --------> Porcentaje de estudiantes que desertaron<------------
   var dropoutPercent = ((dropout/totalStudents)*100).toFixed(1) +"%";
 
@@ -200,14 +200,14 @@ var nps= (promotersPercent - detractorsPercent).toFixed(1) + '%';
     var satifactionPercent= (((cumple+supera)/satifactionResponses)*100).toFixed(1) +"%";
 
 // ---------------->#Puntos Promedio por Sprint <----------------
-  var techPoints = 0; 
+  var techPoints = 0;
   var hsePoints= 0;
 
   for (var i = 0; i < totalStudents; i++) {
           for (var j = 0; j < arrayStudents[i]['sprints'].length; j++) { //iterar sobre los sprints de cada estudiante
             techPoints += arrayStudents[i]['sprints'][j]['score']['tech'];//sumar los resultados de todas las estudiantes de tecnico
             hsePoints += arrayStudents[i]['sprints'][j]['score']['hse'];//sumar los resultados de todas las estudiantes de hse
-          }      
+          }
   }
   var totalPointsAvg = ((techPoints+hsePoints)/totalStudents).toFixed(0);
   var techPointsAvg = (techPoints / totalStudents).toFixed(0);;
@@ -225,12 +225,12 @@ var nps= (promotersPercent - detractorsPercent).toFixed(1) + '%';
 
   // %Porcentaje de Desercion a su contenedor
     var downStudentsPercent = document.getElementById('down-students-percent');
-    downStudentsPercent.textContent = dropoutPercent;  
+    downStudentsPercent.textContent = dropoutPercent;
 
-  // #Alumnas arriba del 70 
+  // #Alumnas arriba del 70
     var  studentsAboveTotal = document.getElementById("students-above70-total");
     studentsAboveTotal.textContent = studentMeetTarget;
-  
+
   // #Alumnas arriba del 70 - hse
     var  studentsAboveHse= document.getElementById("students-above70-hse");
     studentsAboveHse.textContent = studentMeetTargetHse;
@@ -239,15 +239,15 @@ var nps= (promotersPercent - detractorsPercent).toFixed(1) + '%';
     var  studentsAboveTech=document.getElementById("students-above70-tech");
     studentsAboveTech.textContent = studentMeetTargetTech;
 
-  // %Alumnas arriba del 70 
+  // %Alumnas arriba del 70
     var  studentsAboveTotalP= document.getElementById("students-above70-total-p");
     studentsAboveTotalP.textContent = studentMeetTargetPT;
 
-  // %Alumnas arriba del 70 
+  // %Alumnas arriba del 70
     var  studentsAboveHseP= document.getElementById("students-above70-hse-p");
     studentsAboveHseP.textContent = studentMeetTargetHsePT;
 
-  // %Alumnas arriba del 70 
+  // %Alumnas arriba del 70
     var  studentsAboveTecP= document.getElementById("students-above70-tech-p");
     studentsAboveTecP.textContent =  studentMeetTargetTechPT;
 
@@ -274,7 +274,7 @@ var nps= (promotersPercent - detractorsPercent).toFixed(1) + '%';
 
 
 
-// --------------------------------> Graficas<-// -----------------------------------> 
+// --------------------------------> Graficas<-// ----------------------------------->
 
   // Grafica de Pastel
 google.charts.load('current', {'packages':['corechart']});
@@ -307,10 +307,10 @@ google.charts.load('current', {'packages':['corechart']});
       }
 
 }
-//grafica de barras 
+//grafica de barras
 
 
-/*html 
+/*html
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <button id="change-chart">Change to Classic</button>
         <br><br>
@@ -330,7 +330,7 @@ google.charts.load('current', {'packages':['corechart', 'bar']});
           ['Sprint 1', 8000, 23.3, 50],
           ['Sprint 2', 24000, 4.5,60],
           ['Sprint 3', 30000, 14.3,70],
-  
+
         ]);
 
         var materialOptions = {
@@ -380,10 +380,3 @@ google.charts.load('current', {'packages':['corechart', 'bar']});
         }
 
 */
-
-
-
-
-
-
-
