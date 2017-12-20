@@ -105,8 +105,102 @@ function selectOption(){
 	}
 }
 
-// graficas de generacion especifica
-// grafica de pastel
+var selectedGen = document.getElementById('generacion');
+
+selectedGen.addEventListener('change', genDashboard);
+
+function genDashboard() {
+  var city = selectedGen.value;
+  var year = selectedGen.options[selectedGen.selectedIndex].dataset.year;
+  var totalStudents = data[city][year]['students'].length;
+  var arrayStudents = data[city][year]['students'];
+
+  // ----------------> Alumnas Dadas de Baja<----------------
+  var dropout = 0;
+    for (var i = 0; i < arrayStudents.length; i++) {
+      if (arrayStudents[i].active === false) {
+        dropout++;
+      }
+    } 
+  // --------> Porcentaje de estudiantes que desertaron<------------
+  var dropoutPercent = ((dropout/totalStudents)*100).toFixed(1) +"%";
+
+  // ---------------->#Alumnas arriba del 70% <----------------
+  var studentMeetTarget = 0;
+  var studentMeetTargetHse = 0;
+  var studentMeetTargetTech = 0;
+
+    for (var i = 0; i < totalStudents; i++) {//68 alumnas
+        var scoreTech = 0; //se actualiza despues de revisar sprints de cada alumna
+        var scoreHSE = 0;
+
+          for (var j = 0; j < arrayStudents[i]['sprints'].length; j++) { //iterar sobre los sprints de cada estudiante
+            scoreTech += arrayStudents[i]['sprints'][j]['score']['tech'];//sumar los resultados de todas las estudiantes de tecnico
+            scoreHSE += arrayStudents[i]['sprints'][j]['score']['hse'];//sumar los resultados de todas las estudiantes de hse
+          }
+
+
+          var averageTech = scoreTech / arrayStudents[i]['sprints'].length;
+          var averageHSE = scoreHSE / arrayStudents[i]['sprints'].length;
+
+          if(averageTech >= 1260 && averageHSE >= 840) { //Tenico: 1,800 HSE:1,200
+            studentMeetTarget++;
+            studentMeetTargetHse++;
+            studentMeetTargetTech++;
+          }else if(averageTech >= 1260) {
+            studentMeetTargetTech++;
+          }else if(averageHSE >= 840) {
+            studentMeetTargetHse++;
+          }
+  }
+
+// ---------------->%Alumnas arriba del 70% <----------------
+var studentMeetTargetPT =((studentMeetTarget/totalStudents)*100).toFixed(1) +"%";
+var studentMeetTargetHsePT =((studentMeetTargetHse/totalStudents)*100).toFixed(1) +"%";
+var studentMeetTargetTechPT =((studentMeetTargetTech/totalStudents)*100).toFixed(1) +"%";
+
+
+  // --------> Meter datos a sus cajas de Kpis<------------
+
+  // #Alumnas inscritas a su contenedor
+    var enrolledStudents = document.getElementById('enrolled-students');
+    enrolledStudents.textContent = totalStudents;
+
+  // #Alumnas Dadas de Baja a su contenedor
+    var downStudents = document.getElementById('down-students');
+    downStudents.textContent = dropout;
+
+  // %Porcentaje de Desercion a su contenedor
+    var downStudentsPercent = document.getElementById('down-students-percent');
+    downStudentsPercent.textContent = dropoutPercent;  
+
+  // #Alumnas arriba del 70 
+    var  studentsAboveTotal = document.getElementById("students-above70-total");
+    studentsAboveTotal.textContent = studentMeetTarget;
+  
+  // #Alumnas arriba del 70 - hse
+    var  studentsAboveHse= document.getElementById("students-above70-hse");
+    studentsAboveHse.textContent = studentMeetTargetHse;
+
+  // #Alumnas arriba del 70 - tech
+    var  studentsAboveTech=document.getElementById("students-above70-tech");
+    studentsAboveTech.textContent = studentMeetTargetTech;
+
+  // %Alumnas arriba del 70 
+    var  studentsAboveTotalP= document.getElementById("students-above70-total-p");
+    studentsAboveTotalP.textContent = studentMeetTargetPT;
+
+  // %Alumnas arriba del 70 
+    var  studentsAboveHseP= document.getElementById("students-above70-hse-p");
+    studentsAboveHseP.textContent = studentMeetTargetHsePT;
+
+  // %Alumnas arriba del 70 
+    var  studentsAboveTecP= document.getElementById("students-above70-tech-p");
+    studentsAboveTecP.textContent =  studentMeetTargetTechPT;
+
+// --------------------------------> Graficas<-// -----------------------------------> 
+
+  // Grafica de Pastel
 google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
 
@@ -114,20 +208,20 @@ google.charts.load('current', {'packages':['corechart']});
 
         var data = google.visualization.arrayToDataTable([
           ['Estado', 'Alumnas'],
-          ['Inscritas',     11],
-          ['Dadas de Baja',      2],
-          ['Graduadas',  2]
+          ['Inscritas', totalStudents ],
+          ['Dadas de Baja', dropout],
+          ['Graduadas', studentMeetTarget]
         ]);
 
         var options = {
           title: 'Total de Alumnas',
           'is3D':true,
           'width':500,
-  		  'height':400,
-  		  'pieSliceText':'percentage',
-  		  chartArea:{left:50,top:30,width:'60%',height:'75%'},
-  		  colors:['red','#004411','yellow'],
-  		  legend:{textStyle: {color: 'black', fontSize: 12}}
+        'height':400,
+        'pieSliceText':'percentage',
+        chartArea:{left:50,top:30,width:'60%',height:'75%'},
+        colors:['red','#004411','yellow'],
+        legend:{textStyle: {color: 'black', fontSize: 12}}
 
         };
 
@@ -135,7 +229,6 @@ google.charts.load('current', {'packages':['corechart']});
 
         chart.draw(data, options);
       }
-
 
 //grafica de barras 
 
@@ -145,6 +238,7 @@ google.charts.load('current', {'packages':['corechart']});
         <button id="change-chart">Change to Classic</button>
         <br><br>
         <div id="chart_div" style="width: 800px; height: 500px;"></div>
+  js
 
 google.charts.load('current', {'packages':['corechart', 'bar']});
       google.charts.setOnLoadCallback(drawStuff);
@@ -209,74 +303,12 @@ google.charts.load('current', {'packages':['corechart', 'bar']});
         }
 
 */
-var select = document.getElementById('promo-filter');
-  select.addEventListener('change', promFilter);
-
-  function promFilter() {
-    
-    var city = select.value;
-	var generation = select.options[select.selectedIndex].dataset.year; 
-	var totalStudents = data[city][generation]['students'].length;
-	var arrayStudents = data[city][generation]['students'];
-	//var ratings = data[city][generation]['ratings'];
-
-	// ----------------> Alumnas Dadas de Baja<----------------
-    var dropout = 0;
-    for (var i = 0; i < arrayStudents.length; i++) {
-      if (arrayStudents[i].active === false) {
-        dropout++;
-      }
-    } 
-    // Porcentaje de estudiantes que desertaron
-    var dropoutPercent = ((dropout/totalStudents)*100).toFixed(1) +"%";
-
-    // #Alumnas inscritas a su contenedor
-    var enrolledStudents = document.getElementById('enrolled-students');
-    //enrolledStudents.textContent = totalStudents;
-    
-    // #Alumnas Dadas de Baja a su contenedor
-    var downStudents = document.getElementById('down-students');
-    //downStudents.textContent = dropout;
-
-    // %Porcentaje de Desercion a su contenedor
-    var downStudentsPercent = document.getElementById('down-students-percent');
-    //downStudentsPercent.textContent = dropoutPercent;
-
-    // ----------------> Alumnas arriba del 70% <----------------
-    var studentMeetTarget = 0;
-    var studentMeetTargetHse = 0;
-    var studentMeetTargetTech = 0;
-    console.log(studentMeetTarget,studentMeetTargetTech,studentMeetTargetHse);
 
 
-    for (var i = 0; i < totalStudents; i++) {
-      var scoreTech = 0;
-      var scoreHSE = 0;
 
-	      for (var j = 0; j < arrayStudents[i]['sprints'].length; j++) { //iterar sobre los sprints de cada estudiante
-	        scoreTech += arrayStudents[i]['sprints'][j]['score']['tech'];//sumar los resultados de todas las estudiantes
-	        scoreHSE += arrayStudents[i]['sprints'][j]['score']['hse'];
-	      }
 
-	      var averageTech = scoreTech / arrayStudents[i]['sprints'].length;
-	      var averageHSE = scoreHSE / arrayStudents[i]['sprints'].length;
 
-	      if (averageTech >= 1260 && averageHSE >= 840) { //Tenico: 1,800 HSE:1,200
-	        studentMeetTarget++;
-	        studentMeetTargetHse++;
-	        studentMeetTargetTech++;
-	      }else if(averageTech>= 1260) {
-	      	studentMeetTargetTech++;
-	      }else if(averageHSE >= 840){
-	      	studentMeetTargetHse++;
-	      }
-	    }
 }
-
-
- 	
-
-
 
 
 
