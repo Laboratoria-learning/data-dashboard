@@ -217,7 +217,7 @@ p { /* estilos para los párrafos de la primera fila de botones */
 }
 
 .detailGraph { /* estilos para el contenedor de datos de la gráfica de NPS y nivel de satisfacción por alumna */
-  width: 30%;
+  width: 35%;
   height: 10em;
   display: inline-block;
   vertical-align: 700%;
