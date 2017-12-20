@@ -192,6 +192,9 @@ nav {
 }
 
 /*grafica de barras*/
-#chart_div {
-	float: left;
+
+.chart-container{
+	height: 300px;
+  width: 30%;
+  display: inline-block;
 }
