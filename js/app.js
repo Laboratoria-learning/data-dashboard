@@ -28,6 +28,17 @@ selectSedes.addEventListener('change', getGeneration); //llamada al evento de se
 selectSedes.addEventListener('change', studentsEnrollment);
 selectGeneration.addEventListener('change', studentsEnrollment);
 
+selectSedes.addEventListener('change', percentage);
+selectGeneration.addEventListener('change', percentage);
+
+// var diHola = () => { console.log('hola') }
+// var diQuepex = () => { console.log('que pex') }
+// var diJajaja = () => { console.log('jajaja') }
+// var funnies = [diHola, diQuepex, diJajaja]
+// funnies.forEach(function (fun) {
+//   selectGeneration.addEventListener('change', fun)
+// })
+
 function getGeneration() {
   if(selectSedes.value != 0){
     var generation = Object.keys(data[selectSedes.value]);
@@ -69,6 +80,8 @@ function studentsReachedGoal(students, scoreType, goal) {
   }).length
 }
 
+// return studentsScoresAverages.filter(average => average >= goal).length // otra notación de fuction
+
 function studentsReachedGeneralGoal(students, goal) {
   var studentsScoresAverages = students.map(function (student) {
 
@@ -81,7 +94,7 @@ function studentsReachedGeneralGoal(students, goal) {
     return sumOfSprintsScores / student.sprints.length
   })
 
-  return studentsScoresAverages.filter( function(average) {
+  return studentsScoresAverages.filter(function (average) {
     return average >= goal;
   }).length
 }
@@ -90,16 +103,43 @@ function studentsEnrollment(){
   var sedeAccessor = selectSedes.value;
   var generationBySede = data[sedeAccessor][selectGeneration.value]
   var students = generationBySede.students;
-  var numberOfStudents = students.length;
+  var studentsActive = students.filter(function (student) {
+    return student.active;
+  })
+
+  var numberOfStudents = studentsActive.length;
 
   displayTotalStudents.innerText = numberOfStudents;
-  displayTotalStudentsEnrolled.innerText = studentsReachedGeneralGoal(students,2100);
-  displayTotalStudentsEnrolledTech.innerText = studentsReachedGoal(students, 'tech', 1260);
-  displayTotalStudentsEnrolledHse.innerText = studentsReachedGoal(students, 'hse', 840);
+  displayTotalStudentsEnrolled.innerText = studentsReachedGeneralGoal(studentsActive, 2100);
+  displayTotalStudentsEnrolledTech.innerText = studentsReachedGoal(studentsActive, 'tech', 1260);
+  displayTotalStudentsEnrolledHse.innerText = studentsReachedGoal(studentsActive, 'hse', 840);
 }
 
+function percentage(){
+  
+  var sedeAccessor = selectSedes.value;
+  var generationBySede = data[sedeAccessor][selectGeneration.value]
+  var students = generationBySede.students;
+  var totalEnrollment = students.length;
 
-// 
+  var studentsActive = document.getElementsByClassName('numTotal')[0].textContent;
+  var generalGoal = document.getElementsByClassName('numTotal')[1].textContent;
+  var techGoal = document.getElementsByClassName('numTotal')[2].textContent;
+  var hseGoal = document.getElementsByClassName('numTotal')[3].textContent;
+
+  var dropoutPercentage = document.getElementsByClassName('percent')[0];
+  var generalGoalPercentage = document.getElementsByClassName('percent')[2];
+  var techGoalPercentage = document.getElementsByClassName('percent')[4];
+  var hseGoalPercentage = document.getElementsByClassName('percent')[6];
+
+  dropoutPercentage.innerText = Math.round((studentsActive*100)/totalEnrollment);
+  generalGoalPercentage.innerText = Math.round((generalGoal*100)/totalEnrollment);
+  techGoalPercentage.innerText = Math.round((techGoal*100)/totalEnrollment);
+  hseGoalPercentage.innerText = Math.round((hseGoal*100)/totalEnrollment);
+
+}
+
+//
 // // Creando garficas
 //
 // google.charts.load('current', {packages: ['corechart']});

@@ -91,11 +91,17 @@ p { /* estilos para los párrafos de la primera fila de botones */
   margin: 0 auto;
 }
 
-.numTotal, /* estilos para los datos dinámicos de la primera hilera de botones */
-.percent {
+.numTotal { /* estilos para los datos dinámicos de la primera hilera de botones */
   font-size: 4.25em;
   margin: 0;
   font-weight: bolder;
+}
+
+.percent {
+  font-size: 3em;
+  margin: 0;
+  font-weight: bolder;
+  margin-top: 3%;
 }
 
 .totalStudents, /* estilos para los contenedores de datos dinámicos de la primera hilera de botones */
