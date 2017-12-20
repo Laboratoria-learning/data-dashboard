@@ -385,14 +385,9 @@ var dataJedi = new google.visualization.DataTable();
      var chartJedi = new google.visualization.PieChart(document.getElementById("jedi-draw"));
      chartJedi.draw(dataJedi, optionsJedi);
 
-
-
  }
  google.charts.setOnLoadCallback(drawChart);
 }
-
-
-
 
 
 
