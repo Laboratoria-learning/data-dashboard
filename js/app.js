@@ -105,6 +105,8 @@ function selectOption(){
 	}
 }
 
+// ----------------> Selector de Generacion <----------------
+
 var selectedGen = document.getElementById('generacion');
 
 selectedGen.addEventListener('change', genDashboard);
@@ -159,6 +161,72 @@ var studentMeetTargetPT =((studentMeetTarget/totalStudents)*100).toFixed(1) +"%"
 var studentMeetTargetHsePT =((studentMeetTargetHse/totalStudents)*100).toFixed(1) +"%";
 var studentMeetTargetTechPT =((studentMeetTargetTech/totalStudents)*100).toFixed(1) +"%";
 
+// ---------------->NPS <----------------
+
+var sprintRatings = data[city][year]['ratings'];
+var promoters =0;
+var passives=0;
+var detractors=0;
+
+
+
+for (i = 0; i < sprintRatings.length; i++) {
+      promoters += sprintRatings[i]['nps']['promoters']; //esto da el numero de promoters
+      passives += sprintRatings[i]['nps']['passive'] //esto da el numero de passives
+      detractors += sprintRatings[i]['nps']['detractors']; //esto da el numero de detractors
+}
+
+var totalAnswers=(promoters+detractors+passives);
+
+promotersPercent = ((promoters/totalAnswers)*100);
+passivesPercent =((passives/totalAnswers)*100);
+detractorsPercent =((detractors/totalAnswers)*100);
+
+
+var nps= (promotersPercent - detractorsPercent).toFixed(1) + '%';
+
+// ----------------> STUDENT SATISFACTION <----------------
+    var noCumple= 0;
+    var cumple = 0;
+    var supera = 0;
+
+    for (i = 0; i < sprintRatings.length;i++) {
+      noCumple += sprintRatings[i]['student']['no-cumple'];
+      cumple += sprintRatings[i]['student']['cumple'];
+      supera += sprintRatings[i]['student']['supera'];
+    }
+
+    var satifactionResponses= (noCumple+cumple+supera);
+    var satifactionPercent= (((cumple+supera)/satifactionResponses)*100).toFixed(1) +"%";
+
+// ---------------->#Puntos Promedio por Sprint <----------------
+  var totalPoints = 0;
+  var studentMeetTargetHse = 0;
+  var studentMeetTargetTech = 0;
+
+    for (var i = 0; i < totalStudents; i++) {//68 alumnas
+        var scoreTech = 0; //se actualiza despues de revisar sprints de cada alumna
+        var scoreHSE = 0;
+
+          for (var j = 0; j < arrayStudents[i]['sprints'].length; j++) { //iterar sobre los sprints de cada estudiante
+            scoreTech += arrayStudents[i]['sprints'][j]['score']['tech'];//sumar los resultados de todas las estudiantes de tecnico
+            scoreHSE += arrayStudents[i]['sprints'][j]['score']['hse'];//sumar los resultados de todas las estudiantes de hse
+          }
+
+
+          var averageTech = scoreTech / arrayStudents[i]['sprints'].length;
+          var averageHSE = scoreHSE / arrayStudents[i]['sprints'].length;
+
+          if(averageTech >= 1260 && averageHSE >= 840) { //Tenico: 1,800 HSE:1,200
+            studentMeetTarget++;
+            studentMeetTargetHse++;
+            studentMeetTargetTech++;
+          }else if(averageTech >= 1260) {
+            studentMeetTargetTech++;
+          }else if(averageHSE >= 840) {
+            studentMeetTargetHse++;
+          }
+  }
 
   // --------> Meter datos a sus cajas de Kpis<------------
 
@@ -198,6 +266,15 @@ var studentMeetTargetTechPT =((studentMeetTargetTech/totalStudents)*100).toFixed
     var  studentsAboveTecP= document.getElementById("students-above70-tech-p");
     studentsAboveTecP.textContent =  studentMeetTargetTechPT;
 
+  // NPS
+    var  npsContainer= document.getElementById("nps-container");
+    npsContainer.textContent =  nps;
+
+  // Porcentaje de Satisfaccion con el curso
+    var  satisfactionContainer= document.getElementById("satisfaction-container");
+    satisfactionContainer.textContent =  satifactionPercent;
+
+
 // --------------------------------> Graficas<-// -----------------------------------> 
 
   // Grafica de Pastel
@@ -230,6 +307,7 @@ google.charts.load('current', {'packages':['corechart']});
         chart.draw(data, options);
       }
 
+}
 //grafica de barras 
 
 
@@ -305,10 +383,6 @@ google.charts.load('current', {'packages':['corechart', 'bar']});
 */
 
 
-
-
-
-}
 
 
 
