@@ -2,7 +2,7 @@
  * Funcionalidad de tu producto
  */
 //Login de Dashboard
-function validate(){
+/*function validate(){
   var email = document.getElementById("e_mail").value;
   var password = document.getElementById("password").value;
 
@@ -12,10 +12,10 @@ function validate(){
     alert("Ingresa e-mail y contraseña correctos")
   }
   return false;
-}
+}*/
 
 window.addEventListener('load', function() {
-  // ----------------------> Funcionalidad Menú <-----------------------
+  //  Funcionalidad Menú
   var openAnimatedMenu = document.getElementById('open_animated_menu');
   var closeAnimatedMenu = document.getElementById('close_animated_menu');
 
@@ -29,7 +29,7 @@ window.addEventListener('load', function() {
     document.getElementById('animated_menu').style.width = '0';
   }
 
-  // ---------> Función para seleccionar sede y promoción, y generar datos <---------
+  //  Función para seleccionar sede y promoción, y generar datos
   var select = document.getElementById('promo_filter');
   select.addEventListener('change', promFilter);
 
@@ -40,7 +40,7 @@ window.addEventListener('load', function() {
     var dataRatings = data[city][prom]['ratings'];
     var arrayStudents = data[city][prom]['students'];
 
-    // ----------------> ENROLLMENT<----------------
+    //  ENROLLMENT
     // Recorremos el array de estudiantes y contamos a las que desertaron
     var dropout = 0;
     for (var i = 0; i < arrayStudents.length; i++) {
@@ -59,7 +59,7 @@ window.addEventListener('load', function() {
     var dropoutPorcentaje = document.getElementById('dropout_percent');
     dropoutPorcentaje.textContent = dropoutPercent;
 
-    // ----------------> ACHIEVEMENT <----------------
+    //  ACHIEVEMENT
     var studentMeetTarget = 0;
 
     for (var i = 0; i < totalStudents; i++) {
@@ -96,7 +96,7 @@ window.addEventListener('load', function() {
     var changeInfoTotal = document.getElementById('total_achievement');
     changeInfoTotal.textContent = '% OF TOTAL (' + totalStudents + ')';
 
-    // ----------------> TEACHER RATING <----------------
+    //  TEACHER RATING
     var sumTeacherRating = 0;
 
     for (var i = 0; i < dataRatings.length; i++) {
@@ -107,7 +107,7 @@ window.addEventListener('load', function() {
     var teacherRating = document.getElementById('teacher_rating');
     teacherRating.textContent = overallTeacherRating.toFixed(1);
 
-    // ----------------> NPS <----------------
+    //  NPS
     // Creando variables
     var npsProm = document.getElementById('promoters');
     var npsPass = document.getElementById('passive');
@@ -130,7 +130,7 @@ window.addEventListener('load', function() {
       nps.textContent = (promoters - detractors).toFixed(1);
     }
 
-    // ----------------> JEDI MASTER RATING  <----------------
+    //  JEDI MASTER RATING
     var jediRating = document.getElementById('jedi_rating');
     var jediMaster = 0;
 
@@ -144,7 +144,7 @@ window.addEventListener('load', function() {
       }
     }
 
-    // ----------------> STUDENT SATISFACTION <----------------
+    //  STUDENT SATISFACTION
     var studentSatisf = document.getElementById('student_satisf');
     var cumple = 0;
     var supera = 0;
@@ -156,7 +156,7 @@ window.addEventListener('load', function() {
       studentSatisf.textContent = (cumple + supera).toFixed(1);
     }
 
-    // ----------------> TECH SKILLS <----------------
+    //  TECH SKILLS
     var studentTechSkills = 0;
 
     for (var i = 0; i < totalStudents; i++) {
@@ -189,7 +189,7 @@ window.addEventListener('load', function() {
     var changeInfoTech = document.getElementById('change_info_tech');
     changeInfoTech.textContent = '% OF TOTAL (' + totalStudents + ')';
 
-    // ----------------> TECH SKILLS POR SPRINT <----------------
+    //  TECH SKILLS POR SPRINT
     var selectTech = document.getElementById('overall_tech');
     selectTech.addEventListener('change', techFilter);
 
@@ -217,7 +217,7 @@ window.addEventListener('load', function() {
     }
     selectTech.value = '';
 
-    // ----------------> LIFE SKILLS <----------------
+    //  LIFE SKILLS
     var studentLifeSkills = 0;
 
     for (var i = 0; i < totalStudents; i++) {
@@ -251,7 +251,7 @@ window.addEventListener('load', function() {
     var changeInfoLife = document.getElementById('change_info_life');
     changeInfoLife.textContent = '% OF TOTAL (' + totalStudents + ')';
 
-    // ----------------> LIFE SKILLS POR SPRINT <----------------
+    //  LIFE SKILLS POR SPRINT
     var selectLife = document.getElementById('overall_life');
     selectLife.addEventListener('change', lifeFilter);
 
@@ -279,8 +279,8 @@ window.addEventListener('load', function() {
     }
     selectLife.value = '';
 
-    // -----------------------------> CHARTS <--------------------------------
-    // ----------------> Jedi Chart <----------------
+    //  CHARTS
+    //  Jedi Chart
     function drawChart() {
       var data = new google.visualization.DataTable();
       data.addColumn('string', 'logro');
@@ -298,7 +298,7 @@ window.addEventListener('load', function() {
       var chart = new google.visualization.PieChart(document.getElementById('jedi_chart'));
       chart.draw(data, options);
 
-      // ----------------> Teacher Chart <----------------
+      //  Teacher Chart
       var data2 = new google.visualization.DataTable();
       data2.addColumn('string', 'logro');
       data2.addColumn('number', 'puntaje');
@@ -316,7 +316,7 @@ window.addEventListener('load', function() {
       var chart2 = new google.visualization.PieChart(document.getElementById('teacher_chart'));
       chart2.draw(data2, options2);
 
-      // ----------------> Student Satisfaction Chart <----------------
+      //  Student Satisfaction Chart
       var data3 = new google.visualization.DataTable();
       data3.addColumn('string', 'logro');
       data3.addColumn('number', 'puntaje');
@@ -328,13 +328,12 @@ window.addEventListener('load', function() {
       var options3 = {'title': 'Supera, Cumple o No Cumple LABORATORIA las expectativas de las alumnas',
         'width': 500,
         'height': 300,
-        'is3D': true
-      };
+        'is3D': true};
 
       var chart3 = new google.visualization.PieChart(document.getElementById('satisfaction_chart'));
       chart3.draw(data3, options3);
 
-      // ----------------> NPS Chart <----------------
+      //  NPS Chart
       var data4 = new google.visualization.DataTable();
       data4.addColumn('string', 'logro');
       data4.addColumn('number', 'puntaje');
@@ -352,7 +351,7 @@ window.addEventListener('load', function() {
       var chart4 = new google.visualization.PieChart(document.getElementById('nps_chart'));
       chart4.draw(data4, options4);
 
-      // ----------------> Enrollment Chart <----------------
+      //  Enrollment Chart
       var data5 = new google.visualization.DataTable();
       data5.addColumn('string', 'name');
       data5.addColumn('number', 'students');
@@ -369,7 +368,7 @@ window.addEventListener('load', function() {
       var chart5 = new google.visualization.PieChart(document.getElementById('enrollment_chart'));
       chart5.draw(data5, options5);
 
-      // ----------------> Achievement Chart <----------------
+      //  Achievement Chart
       var data6 = new google.visualization.DataTable();
       data6.addColumn('string', 'name');
       data6.addColumn('number', 'students');
