@@ -2,6 +2,9 @@
 // Puedes hacer uso de la base de datos a través de la variable `data`
 //console.log(data);
 
+
+//Función para gráficas de datos
+
 google.charts.load('current', {'packages':['annotationchart']});
 google.charts.setOnLoadCallback(drawChart);
 

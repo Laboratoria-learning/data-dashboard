@@ -68,7 +68,7 @@ button:hover{
 .body-1 {
   margin: 0 auto;
   padding: 0;
-  background-image: url("../assets/images/gradient.jpg");
+  background-image: url("../assets/images/background.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -127,12 +127,16 @@ button:hover{
 h3 {
   text-align:right;
   margin: 20px 40px 0 0;
+  color: #FFF;
+  font-size: 25px;
 }
 
 h2 {
   text-align: center;
-  margin-top: 8px;
+  margin-top: 5px;
   font-weight: 400;
+  color: #FFF;
+  font-size: 28px;
 }
 
 h1 {
@@ -189,7 +193,7 @@ h1 {
   margin-top: 0;
 }
 
-/* Estilos vista Cdmx-Chile-Arequipa-Lima */
+/* Estilos vista Data-html */
 .charts {
   display: inline-block;
   font-family: 'Amaranth', sans-serif;
@@ -208,6 +212,19 @@ h1 {
 
 .charts > h1 {
   margin-top: 30%;
+}
+
+a:link {
+  color:black;
+}
+a:visited {
+  color:black;
+}
+a:active {
+  color: black;
+}
+a:hover {
+  color: black;
 }
 
 /* Estilos vista Coders laboratoria */
@@ -303,4 +320,17 @@ h5{
 .info{
   font-family: 'Montserrat Alternates', sans-serif;
   font-weight: 400;
+}
+
+/*Estilo Select DOM */
+
+select {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 14px;
+  background: #f7e094;
+  border: 1px solid #F2BC07;
+  border-radius: 5px;
+  margin: 0 20px;
+  width: 150px;
+  height: 30px;
 }
