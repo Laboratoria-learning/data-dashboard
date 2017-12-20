@@ -191,3 +191,8 @@ nav {
 .image-container > img {
 	width: 90%;
 }
+
+/*grafica de barras*/
+#chart_div {
+	float: left;
+}
