@@ -49,7 +49,6 @@ console.log("El valor es de inactivas: "+count);
 
 
 
-
 /* ---------------------------------------------------------------
 -----Funcion de Tabuladores*/
    function mostrarOcultar(event) {

@@ -4,7 +4,7 @@ var data = {
       'students': [
         {
           'name': 'Donna Sloper',
-          'photo': 'http://dummyimage.com/162x148.png/ff4444/ffffff',
+          'photo': 'assets/images/dummy-1.JPG',
           'active': true,
           'sprints': [
             {
@@ -39,7 +39,7 @@ var data = {
         },
         {
           'name': 'Roana Menego',
-          'photo': 'http://dummyimage.com/102x187.png/dddddd/000000',
+          'photo': 'assets/images/dummy-1.JPG',
           'active': false,
           'sprints': [
             {
@@ -74,7 +74,7 @@ var data = {
         },
         {
           'name': 'Ofella Weakley',
-          'photo': 'http://dummyimage.com/190x155.png/dddddd/000000',
+          'photo': 'assets/images/dummy-1.JPG',
           'active': false,
           'sprints': [
             {
@@ -109,7 +109,7 @@ var data = {
         },
         {
           'name': 'Gretchen Gerhts',
-          'photo': 'http://dummyimage.com/147x166.png/5fa2dd/ffffff',
+          'photo': 'assets/images/dummy-1.JPG',
           'active': false,
           'sprints': [
             {
@@ -144,7 +144,7 @@ var data = {
         },
         {
           'name': 'Judy Meindl',
-          'photo': 'http://dummyimage.com/220x128.png/5fa2dd/ffffff',
+          'photo': 'assets/images/dummy-1.JPG',
           'active': true,
           'sprints': [
             {
@@ -179,7 +179,7 @@ var data = {
         },
         {
           'name': 'Jillene Porch',
-          'photo': 'http://dummyimage.com/132x125.png/5fa2dd/ffffff',
+          'photo': 'assets/images/dummy-1.JPG',
           'active': true,
           'sprints': [
             {
@@ -214,7 +214,7 @@ var data = {
         },
         {
           'name': 'Sydney Burlingham',
-          'photo': 'http://dummyimage.com/100x167.png/ff4444/ffffff',
+          'photo': 'assets/images/dummy-1.JPG',
           'active': true,
           'sprints': [
             {
@@ -249,7 +249,7 @@ var data = {
         },
         {
           'name': 'Alexi Gindghill',
-          'photo': 'http://dummyimage.com/113x215.png/ff4444/ffffff',
+          'photo': 'assets/images/dummy-1.JPG',
           'active': true,
           'sprints': [
             {
@@ -284,7 +284,7 @@ var data = {
         },
         {
           'name': 'Donna Fearnill',
-          'photo': 'http://dummyimage.com/221x239.png/ff4444/ffffff',
+          'photo': 'assets/images/dummy-1.JPG',
           'active': false,
           'sprints': [
             {
@@ -319,7 +319,7 @@ var data = {
         },
         {
           'name': 'Chiarra Dutton',
-          'photo': 'http://dummyimage.com/163x246.png/ff4444/ffffff',
+          'photo': 'assets/images/dummy-1.JPG',
           'active': true,
           'sprints': [
             {
@@ -354,7 +354,7 @@ var data = {
         },
         {
           'name': 'Drusilla Terron',
-          'photo': 'http://dummyimage.com/165x131.png/ff4444/ffffff',
+          'photo': 'assets/images/dummy-1.JPG',
           'active': false,
           'sprints': [
             {
