@@ -172,7 +172,7 @@ nav {
 	margin-bottom: 3%;
 	margin-left: 5%;
 	text-align: center;
-	/*justify-content: space-around;*/
+	font-size: 18px;
 }
 
 .image-container:active {
@@ -182,7 +182,6 @@ nav {
 }
 
 .image-container > span {
-
   bottom: 25px;
   color: white;
   right: 30px;
