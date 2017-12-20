@@ -28,8 +28,7 @@
     </section>
 
     <section id="barra-sedes">
-
-      <select id="sedes"  title="seleccion de sedes">
+      <select id="sedes"  title="seleccion de sedes"> <!--- select para escoger la sede  --->
        <option value="seleccion" hidden="">Selecciona una Sede</option>
        <option value="CDMX">Ciudad de México</option>
        <option value="LIM">Lima</option>
@@ -37,13 +36,12 @@
        <option value="SCL">Santiago de Chile</option>
       </select>
 
-      <select id="generation"  title="seleccion de generacion">
+      <select id="generation"  title="seleccion de generacion"> <!-- select dinámico para seleccionar la generación  -->
         <option value="---"></option>
       </select>
-
     </section>
 
-    <section id="container">
+    <section id="container"> <!-- inicio de la sección principal  -->
       <div class="alumnas" id="grafic-students">
         <h2>Alumnas</h2>
         <span class="icons"><i class="fa fa-female" aria-hidden="true"></i></span>
@@ -144,20 +142,25 @@
 
       <div class="prom-teachs">
          <h2>Promedio teachers</h2>
-         <span class="icons-teachs"><i class="fa fa-trophy fa-4x" aria-hidden="true"></i></span>
-         <p>0.0</p> <p>Calificación</p>
+         <div class="staffAverage">
+           <p class="numTotal">0.0</p>
+           <p class="displayAverage">Calificación</p>
+         </div>
+         <span class="icons-teachs"><i class="fa fa-trophy" aria-hidden="true"></i></span>
       </div>
 
       <div class="prom-jedi">
-         <h2>Promedio Jedi Masters</h2>
-         <span class="icons-jedi"><i class="fa fa-thumbs-up fa-4x" aria-hidden="true"></i></span>
-         <p>0.0</p> <p>Calificación</p>
+        <h2>Promedio Jedi Masters</h2>
+        <div class="staffAverage">
+          <p class="numTotal">0.0</p>
+          <p class="displayAverage">Calificación</p>
+        </div>
+         <span class="icons-jedi"><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
       </div>
 
-    </section>
-    <!-- Base de datos -->
-		<script src="./js/data.js"></script>
-		<!-- Aquí va tus archivos JS -->
-    <script src="./js/app.js"></script>
+    </section> <!-- inicio de la sección principal  -->
+
+		<script src="./js/data.js"></script> <!-- Base de datos -->
+    <script src="./js/app.js"></script> <!-- Aquí va tus archivos JS -->
   </body>
 </html>

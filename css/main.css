@@ -9,16 +9,11 @@ button {
   width: 40px;
   background-color: inherit;
   border-color: inherit;
-  margin-left: 200px;
 }
 
-/* nav {
-  width: 60%;
-} */
-
 span { /*estilo para el título del proyecto*/
-  font-size: 40px;
-  margin: 0 auto;
+  font-size: 1.9em;
+  margin: auto;
 }
 
 nav {
@@ -49,7 +44,7 @@ a:hover{
 
 div {
   display: inline-block;
-  margin: 0.75em;
+  margin: 0 0.75em;
 }
 
 h2 { /* estilos para el título de la primera fila de botones */
@@ -86,100 +81,117 @@ p { /* estilos para los párrafos de la primera fila de botones */
 }
 
 #headboard{
-  /* width: 90% */
-  /* margin: 0 auto; */
+  width: 85%;
+  margin: 0 auto;
   text-align: center;
 }
 
-#container {
+#container { /* estilos para el contenedor de la sección principal */
   width: 85%;
   margin: 0 auto;
 }
 
-.numTotal,
+.numTotal, /* estilos para los datos dinámicos de la primera hilera de botones */
 .percent {
   font-size: 4.25em;
   margin: 0;
   font-weight: bolder;
 }
 
-.totalStudents,
+.totalStudents, /* estilos para los contenedores de datos dinámicos de la primera hilera de botones */
 .totalPercent {
   display: block;
 }
 
-.enabled-menu {
+.enabled-menu { /* clase para no mostrar menú dinámico */
   display: block;
   position: absolute;
 }
 
-.disabled-menu {
+.disabled-menu { /* clase para mostrar menú dinámico*/
   display: none;
 }
 
-.logo {
+.logo { /* estilos para el logo del nav */
   height: 100px;
-  margin-left: 100px;
-  margin-top: 50px;
+  margin: auto;
+  margin: 0 25%;
 }
 
-.alumnas {
+.alumnas { /* estilos para el botón que muestra el total de alumnas activas*/
   background-color: #4643BB;
   border-radius: 5px;
   height:23.75em;
   width: 22%;
+  margin-top: 4%;
 }
 
-.prom-general {
+.prom-general { /* estilos para el botón que muestra el total de alumnas que alcazaron la meta general */
  border-radius: 5px;
   width: 22%;
   height: 23.75em;
   background-color: #52E000;
+  margin-top: 4%;
 }
 
-.meta-ht {
+.meta-ht { /* estilos para el botón que muestra el total de alumnas que alcazaron la meta tech */
   border-radius: 5px;
   width: 23%;
   height: 23.75em;
   background-color: #FC331C;
+  margin-top: 4%;
 }
 
-.meta-HSE{
+.meta-HSE{ /* estilos para el botón que muestra el total de alumnas que alcazaron la meta HSE */
   border-radius: 5px;
   width: 22%;
   height: 23.75em;
   background-color:#00C4DA;
+  margin-top: 4%;
 }
 
-.nps {
+.nps { /*estilos para el botón que muestra los datos dinámicos correspondientes al NPS*/
   border-radius: 5px;
   width: 47%;
   height: 23.75em;
   background-color: #0EACBD;
+  margin-top: 4%;
 }
 
-.nsa {
+.nsa { /* estilos para el botón que muestra los datos dinámicos correspondientes al nivel de satisfacción por alumna */
   border-radius: 5px;
   width: 47%;
   height: 23.75em;
   background-color: #00B22C;
+  margin-top: 4%;
 }
 
-.prom-teachs {
+.prom-teachs { /* estilos para el botón que muestra el promedio de calificación por teacher */
  background-color:#1A9391;
  border-radius: 5px;
- height: 23.75em;
+ height: 14em;
  width: 47%;
+ margin-top: 4%;
 }
 
-.prom-jedi {
+.prom-jedi { /* estilos para el botón que muestra el promedio de calificación por jedi master */
   background-color: #C7E000;
   border-radius: 5px;
-  height: 23.75em;
+  height: 14em;
   width: 47%;
+  margin-top: 4%;
 }
 
-.icons {
+.displayAverage {
+  display: block;
+}
+
+.staffAverage {
+  width: 50%;
+  text-align: center;
+}
+
+.icons { /* estilos para los iconos de la primera hilera de botones */
   text-align: center;
   color: #fff;
   font-size: 7.8em;
@@ -187,39 +199,33 @@ p { /* estilos para los párrafos de la primera fila de botones */
   margin-bottom: 0.01em;
 }
 
-/* .fa-heartbeat,
-.fa-code,
-.fa-graduation-cap,
-.fa-female {
-  padding-left: 90px;
-} */
-
 .icons-teachs,
 .icons-jedi {
-  font-size: 35px;
-  padding-left: 430px;
+  font-size: 7.8em;
+  color: white;
+  margin-left: 10%;
 }
 
-.graph {
+.graph { /* estilos para la gráfica muesta del NPS y nivel de satisfacción por alumna*/
   width: 53%;
 }
 
-.detailGraph {
+.detailGraph { /* estilos para el contenedor de datos de la gráfica de NPS y nivel de satisfacción por alumna */
   width: 30%;
   height: 10em;
   display: inline-block;
   vertical-align: 700%;
 }
 
-.detailGraph > div > p {
-  font-size: 20px;
+.detailGraph > div > p { /* estilos para el detalle de datos de la gráfica de NPS y nivel de satisfacción por alumna */
+  font-size: 1.25em;
 }
 
-.itemGraph {
+.itemGraph { /* estilos para el detalle de datos de la gráfica de NPS y nivel de satisfacción por alumna */
   display: block;
 }
 
-.accumulated {
+.accumulated { /* estilos para el acumulado de NPS y nivel de satisfacción por alumna */
   display: block;
   margin: 0;
   text-align: center;
