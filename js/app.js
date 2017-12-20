@@ -72,5 +72,5 @@ locationSelect.removeEventListener("click",addSelect);
 // Funcion para obtener el value y asignarlo a "app2.js"
 function showScreen() {
   var value = document.getElementById("slct-location").value;
-  window.location = "../views/screen-data.html?city="+value;
+  window.location = "../views/data.html?city="+value;
 }

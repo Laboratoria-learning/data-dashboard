@@ -1,5 +1,7 @@
-//obteniendo el value asigno a una variable
+// Realizando variables globales para un uso más práctico
+var locationContainer = document.body.children[0].children[1];
 
+//obteniendo el value asigno a una variable
 var urlParams = new URLSearchParams(window.location.search);
 var cityParam = urlParams.get('city');
 var city;
@@ -21,31 +23,40 @@ function getCity() {
     default:
   }
 
+locationContainer.addEventListener("click", printData)
+var students = city["2016-2"].students;
 
-
-var totalStudents = city["2016-2"].students;
+var totalStudents = city["2016-2"].students.length;
 var count = 0 ;
-
-  for (var i = 0; i < totalStudents.length; i++){
-    if (totalStudents[i].active == false) {
-      count++;
-
+  for (var i = 0; i < students.length; i++){
+    if (students[i].active == false) {
+    count++;
     }
-  }  console.log(count);
+}
 
-  for (var i = 0; i < totalStudents.length; i++){
-    var sprints = city["2016-2"].students[i].sprints;
-    console.log(sprints);
-  }
-
-  for (var i = 0; i < totalStudents.length; i++){
-    var tech = city["2016-2"].students[i].sprints[0];
-    console.log(tech);
-  }
+function printData() {
+  var printCount = document.createElement("p")
+      printCount.innerText=(count)
+      locationContainer.appendChild(printCount)
+  var printTotal = document.createElement("p")
+      printCount.innerText=(totalStudents)
+      locationContainer.appendChild(printCount)
 
 }
 
 
+
+for (var i = 0; i < students.length; i++){
+  var sprints = city["2016-2"].students[i].sprints;
+  console.log(sprints);
+}
+
+for (var i = 0; i < students.length; i++){
+  var tech = city["2016-2"].students[i].sprints[0];
+  console.log(tech);
+}
+
+}
 
 window.onload = getCity;
 
