@@ -138,7 +138,12 @@ for (var l = 0; l <generacionEstudiantes; l++){
   var nombre = arrayEstudiantes[l].name;
   var foto = arrayEstudiantes[l].photo;
   var infActiva = arrayEstudiantes[l].active;
-
+  var statusValue;
+  if(infActiva === true){
+    statusValue = "Activa";
+  } else{
+    statusValue = "Inactiva";
+  }
   for (var j = 0; j < arrayEstudiantes[l]["sprints"].length; j++) {
     scoreTech += arrayEstudiantes[l]["sprints"][j]["score"]["tech"];
     scoreHSE += arrayEstudiantes[l]["sprints"][j]["score"]["hse"];
@@ -155,40 +160,105 @@ function pintarCoders (nombre, promedioTech, promedioHSE, infActiva){
 
 
   //CODERS
-  var divContCoders= document.createElement("div");
-  var pNombre = document.createElement("p");
-  var pPromTech = document.createElement("p");
-  var pPromHse = document. createElement("p");
-  var imagen = document.createElement("img");
-  var divCoders = document.createElement ("div");
-  var divInfoCoders = document.createElement("div");
-  var pActiva = document.createElement("p");
+  var divContCoders = document.createElement("div");
+     var pNombre = document.createElement("p");
+     var pPromTech = document.createElement("p");
+     var pPromHse = document.createElement("p");
+     var imagen = document.createElement("img");
+     var profile = document.createElement("p");
+     var listSkills = document.createElement("ul");
+     var skill1 = document.createElement("li");
+     var skill2 = document.createElement("li");
+     var skill3 = document.createElement("li");
+     var status = document.createElement("p");
+     var divCoders = document.createElement("div");
+     var divInfoCoders = document.createElement("div");
 
+     divContCoders.classList.add("contenedor-coders");
+     pNombre.classList.add("nombre");
+     pPromTech.classList.add("tech");
+     pPromHse.classList.add("hse");
+     imagen.src = foto;
+     imagen.classList.add("foto");
+     profile.classList.add("profileSpec");
+     listSkills.classList.add("skillList");
+     skill1.classList.add("skill1");
+     skill1.classList.add("skill2");
+     skill1.classList.add("skill3");
+     status.classList.add("status");
+     divCoders.classList.add("coders");
+     divInfoCoders.classList.add("info-coders");
+     pNombre.innerText = nombre;
+     pPromTech.innerText = "Porcentaje Técnico:  " + promedioTech.toFixed(1) + "%";
+     pPromHse.innerText = "Porcentaje HSE:  " + promedioHSE.toFixed(1) + "%";
+     profile.innerText = "FrontEndDeveloper";
+     skill1.innerText = "JAVASCRIPT";
+     skill2.innerText = "API´s";
+     skill3.innerHTML = "JQUERY";
+     status.innerText = statusValue;
 
+     if (statusValue === "Activa") {
+       status.style.color = "Green";
+     } else {
+       status.style.color = "#666666";
+     }
 
-  divContCoders.classList.add("contenedor-coders");
-  pNombre.classList.add("nombre");
-  pPromTech.classList.add("tech");
-  pPromHse.classList.add("hse");
-  pActiva.classList.add("active");
-  imagen.src = foto;
-  imagen.classList.add("foto");
-  divCoders.classList.add("coders");
-  divInfoCoders.classList.add("info-coders");
-  pNombre.innerText = nombre;
-  pPromTech.innerText = "Porcentaje Técnico:  " + promedioTech.toFixed(1) + "%";
-  pPromHse.innerText = "Porcentaje HSE:  " + promedioHSE.toFixed(1)+ "%";
-  pActiva.innerText = "Alumna Inscrita:  " + infActiva;
+     var divContCoders = document.createElement("div");
+     var pNombre = document.createElement("p");
+     var pPromTech = document.createElement("p");
+     var pPromHse = document.createElement("p");
+     var imagen = document.createElement("img");
+     var profile = document.createElement("p");
+     var listSkills = document.createElement("ul");
+     var skill1 = document.createElement("li");
+     var skill2 = document.createElement("li");
+     var skill3 = document.createElement("li");
+     var status = document.createElement("p");
+     var divCoders = document.createElement("div");
+     var divInfoCoders = document.createElement("div");
 
+     divContCoders.classList.add("contenedor-coders");
+     pNombre.classList.add("nombre");
+     pPromTech.classList.add("tech");
+     pPromHse.classList.add("hse");
+     imagen.src = foto;
+     imagen.classList.add("foto");
+     profile.classList.add("profileSpec");
+     listSkills.classList.add("skillList");
+     skill1.classList.add("skill1");
+     skill1.classList.add("skill2");
+     skill1.classList.add("skill3");
+     status.classList.add("status");
+     divCoders.classList.add("coders");
+     divInfoCoders.classList.add("info-coders");
+     pNombre.innerText = nombre;
+     pPromTech.innerText = "Porcentaje Técnico:  " + promedioTech.toFixed(1) + "%";
+     pPromHse.innerText = "Porcentaje HSE:  " + promedioHSE.toFixed(1) + "%";
+     profile.innerText = "FrontEndDeveloper";
+     skill1.innerText = "JAVASCRIPT";
+     skill2.innerText = "API´s";
+     skill3.innerHTML = "JQUERY";
+     status.innerText = statusValue;
 
-  divContCoders.appendChild(divCoders);
-  divCoders.appendChild(imagen);
-  divCoders.appendChild(divInfoCoders);
-  divInfoCoders.appendChild(pNombre);
-  divInfoCoders.appendChild(pPromTech);
-  divInfoCoders.appendChild(pPromHse);
-  divInfoCoders.appendChild(pActiva);
-  studentsTab.appendChild(divContCoders);
+     if (statusValue === "Activa") {
+       status.style.color = "Green";
+     } else {
+       status.style.color = "lightGrey";
+     }
+listSkills.appendChild(skill1);
+     listSkills.appendChild(skill2);
+     listSkills.appendChild(skill3);
+
+     divContCoders.appendChild(divCoders);
+     divCoders.appendChild(imagen);
+     divCoders.appendChild(divInfoCoders);
+     divInfoCoders.appendChild(pNombre);
+     divInfoCoders.appendChild(pPromTech);
+     divInfoCoders.appendChild(pPromHse);
+     divInfoCoders.appendChild(profile);
+     divInfoCoders.appendChild(listSkills);
+     divInfoCoders.appendChild(status);
+     studentsTab.appendChild(divContCoders);
 }
 
 

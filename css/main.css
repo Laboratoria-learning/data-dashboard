@@ -2,137 +2,138 @@
  * Estilos de tu proyecto
  */
 
- * {
-   box-sizing: border-box; /*justas un elemento con box-sizing: border-box*/
-   margin: 0;
-   padding: 0;
+* {
+  box-sizing: border-box;
+  /*justas un elemento con box-sizing: border-box*/
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
-header{
+header {
   text-align: center;
 }
 
-header div img{
+header div img {
   width: 300px;
 }
+
 .imagen-profile {
   width: 40%;
   margin-top: 5px;
   border-radius: 50%;
-
 }
 
-.imagen-lab{
-  width:90%;
-  height:
-  background-color: #2B2B2B;
+.imagen-lab {
+  width: 90%;
+  height: background-color: #2B2B2B;
   margin-top: 5px;
-
 }
 
-#barra-lateral{
-  position:fixed;  /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
-	left: 0; /* Establecemos la barra en la izquierda */
-	/*z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+#barra-lateral {
+  position: fixed;
+  /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+  left: 0;
+  /* Establecemos la barra en la izquierda */
+  /*z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
   background-color: #2B2B2B;
   width: 250px;
   height: 100%;
 }
 
-
 /* boton de seleccion*/
-#filtro-sedes{
 
+#filtro-sedes {
   text-align: center;
   width: 150px;
-  float:left;
+  float: left;
   margin-top: 100px;
   margin-left: 80px;
+  border: 2px solid #F7B617;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /*Tabuladores*/
+
 /* Menu Over student teachers*/
+
 #contenido-tab {
   margin: 0px;
-padding: 0px;
-font-weight: 500;
-font-family: 'Montserrat', sans-serif;
-cursor: pointer;
-
+  padding: 0px;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
 }
-.cont-tabs{
+
+.cont-tabs {
   margin-top: 150px;
- list-style: none;
- display: block;
-
+  list-style: none;
+  display: block;
 }
-
 
 .cont-tabs li {
   width: 100%;
- height: 50px;
- border-bottom: 1px solid #323232 ;
- overflow: hidden;
-}
-.cont-tabs a {
-  position: relative;
- padding: 16px;
- padding-right: 25px;
- float: right;
- color: white;
- opacity: .5;
- font-size: 18px;
+  height: 50px;
+  border-bottom: 1px solid #323232;
+  overflow: hidden;
 }
 
-.fa-home,
-.fa-graduation-cap,
-.fa-pie-chart,
-.fa-code {
+.cont-tabs a {
+  position: relative;
+  padding: 16px;
+  padding-right: 25px;
+  float: right;
+  color: white;
+  opacity: .5;
+  font-size: 18px;
+}
+
+.fa-home, .fa-graduation-cap, .fa-pie-chart, .fa-code {
   color: #F7B617;
 }
 
-.fa-home{
-margin-left:-8%;
-margin-top: 4%;
+.fa-home {
+  margin-left: -8%;
+  margin-top: 4%;
 }
 
-.fa-graduation-cap{
+.fa-graduation-cap {
   margin-left: -15%;
   margin-top: 4%;
 }
 
-.fa-pie-chart{
+.fa-pie-chart {
   margin-left: 2%;
   margin-top: 4%;
 }
-.fa-code{
-  margin-left:-18%;
+
+.fa-code {
+  margin-left: -18%;
   margin-top: 4%;
 }
 
 .barra {
- position: absolute; /*se pone para que los p no se encimen*/
- height: 50px;
- width: 0px;
- background-color: #aaa;
- opacity: .1;
+  position: absolute;
+  /*se pone para que los p no se encimen*/
+  height: 50px;
+  width: 0px;
+  background-color: #aaa;
+  opacity: .1;
 }
 
 li:hover div.barra {
-width: 250px;
+  width: 250px;
 }
-
 
 /*--------------------CONTENIDOSS---------------*/
 
 /*--SECCION OVERVIEW (ESTILOS DE GRAFICA)*/
-#overviewTab,
-#studentsTab,
-#teachersTab {
+
+#overviewTab, #studentsTab, #teachersTab {
   overflow: auto;
   margin-left: 270px;
 }
-
 
 .graficasTotal {
   background-color: #fff;
@@ -150,11 +151,11 @@ width: 250px;
 .graficasTotal span {
   font-size: 1.5em;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
+  font-weight: 700;
   padding: 20px;
 }
 
-.graficasTotal .texTbox{
+.graficasTotal .texTbox {
   font-size: .8em;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
@@ -166,7 +167,7 @@ width: 250px;
 }
 
 .contenedor-grafica {
-  background-color: #fffd7c;
+  background-color:#FFFFFF;
   float: left;
   text-align: center;
   vertical-align: top;
@@ -178,7 +179,6 @@ width: 250px;
   margin-right: 1em;
 }
 
-
 .grafica {
   margin-top: 150px;
   margin-left: 50px;
@@ -189,36 +189,38 @@ width: 250px;
   padding-bottom: 0.8em;
 }
 
-
 .datoText {
   font-size: 3em;
   font-weight: 300;
-  border-bottom: 1px solid #ffff;
+  border-bottom: 2px solid #ffff;
   width: 2.7em;
   height: 1.2em;
 }
 
+#saludo{
+  color: white;
+  font-size: 16px;
+  font-weight: 500px;
+}
+
 #dropout-porcentaje {
-  color: red;
+  color: green;
 }
 
 #achievement-porcentaje {
-  color:red;
+  color: green;
 }
 
 #acumulativo-nps {
-  color:red;
+  color: green;
 }
-#promoters,
-#passive,
-#detractor {
-  color:red;
+
+#promoters, #passive, #detractor {
+  color: green;
   line-height: 1.5;
   margin-top: 15px;
   font-size: 1em;
   font-weight: 300;
-
-
 }
 
 .cajaTexto {
@@ -226,111 +228,125 @@ width: 250px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   padding: 20px;
-
-/*  font-size: .8em;
+  /*  font-size: .8em;
   padding-top: 1em;*/
 }
 
 .number-boxes {
   font-size: 3.5em;
   font-weight: 300;
-   border-bottom: 1px solid #ffffff;
- }
+  border-bottom: 1px solid #ffffff;
+}
 
+/* SECCION ALUMNAS */
 
- /* SECCION ALUMNAS */
- /*#studentsTab {
-   overflow: auto;
- }*/
+#studentsTab {
+  overflow: inherit;
+}
 
- .contenedor-coders{
-   float: right;
-   width: 700px;
-   margin-right: 150px;
- }
- .coders{
-   width: 600px;
-   margin: 20px 20px;
- }
- .info-coders{
- float: right;
- font-family: 'Montserrat', sans-serif;
- }
+.contenedor-coders {
+  float: right;
+  width: 850px;
+  margin-right: 150px;
+}
 
- .info-coders p {
-   text-align: right;
- }
+.coders {
+  width: 690px;
+  margin: 15px 10px 15px 15px;
+}
 
- .foto{
-   width: 150px;
-   height: 150px;
- }
+.skillList li {
+  float: right;
+  list-style: none;
+  width: 85px;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  border: solid 2px #999999;
+  background-color: #999999;
+}
 
- .nombre{
-   font-size: 30px;
-    margin-left: 200px;
-    text-align:justify;
-  }
+.status{
+  float: left;
+  font-weight: 500px;
+}
+.info-coders {
+  float: right;
+  font-family: 'Montserrat', sans-serif;
+  width: 500px;
+}
 
-  .tech {
-    font-size: 20px;
-    margin-top: 50px;
-  }
+.info-coders p {
+  text-align: right;
+}
 
+.foto {
+  width: 150px;
+  height: 150px;
+}
 
+.nombre {
+  font-size: 30px;
+  margin-left: 200px;
+  text-align: justify;
+}
 
+.tech {
+  font-size: 20px;
+  margin-top: 20px;
+}
 
-  /* SECCION TEACHERS */
+/* SECCION TEACHERS */
 
-  /*#teachersTab {
+/*#teachersTab {
     overflow: auto;
   }*/
 
-  .contenedor-teacher{
-    width: 900px;
-    margin-left: 100px;
-    margin-top: 100px;
-    font-family: 'Montserrat', sans-serif;
-  }
+.contenedor-teacher {
+  width: 900px;
+  margin-left: 100px;
+  margin-top: 100px;
+  font-family: 'Montserrat', sans-serif;
+}
 
-  .contenedor-teacher h2{
-    margin-left: 200px;
-  }
-  .contenedor-teacher div{
-    display:inline-block;
-    margin: 20px 20px;
-  }
+.contenedor-teacher h2 {
+  margin-left: 200px;
+}
 
-  .contenedor-teacher div img{
-    width: 200px;
-    height: 200px;
-  }
+.contenedor-teacher div {
+  display: inline-block;
+  margin: 20px 20px;
+}
 
-  .info{
-    float: right;
-    margin-bottom: 20px;
-  }
+.contenedor-teacher div img {
+  width: 200px;
+  height: 200px;
+}
+
+.info {
+  float: right;
+  margin-bottom: 20px;
+}
 
 #teachersTab h4 {
   font-size: 2em;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   padding: 20px;
-
 }
 
-  #teachersTab  hr{
-    width: 800px;
-    text-align: center;
-    margin-top: 40px;
-    margin: 0 auto;
-  }
+#teachersTab hr {
+  width: 800px;
+  text-align: center;
+  margin-top: 40px;
+  margin: 0 auto;
+}
 
-  #teachersTab  h4{
-    text-align: center;
-      margin-top: 50px;
-  }
+#teachersTab h4 {
+  text-align: center;
+  margin-top: 50px;
+}
 
-    .cajas-graficas-teacher{
-      margin-top: 80px;
-    }
+.cajas-graficas-teacher {
+  margin-top: 80px;
+}
