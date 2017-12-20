@@ -304,3 +304,15 @@ h5{
   font-family: 'Montserrat Alternates', sans-serif;
   font-weight: 400;
 }
+
+
+#slct-location {
+ font-family: 'Montserrat Alternates', sans-serif;
+ font-size: 14px;
+ background: #f7e094 ;
+ border: 1px solid #F2BC07 ;
+ border-radius: 5px;
+ margin: 0 20px;
+ width: 150px;
+ height: 30px;
+}
