@@ -172,11 +172,25 @@ p { /* estilos para los párrafos de la primera fila de botones */
   margin-top: 4%;
 }
 
+#staff {
+  width: 47%;
+  display: inline-block;
+  padding: auto;
+}
+
+#profileStudents {
+  width: 47%;
+  height: 28em;
+  float: right;
+  margin-top: 2em;
+  margin-right:2em;
+}
+
 .prom-teachs { /* estilos para el botón que muestra el promedio de calificación por teacher */
  background-color:#1A9391;
  border-radius: 5px;
  height: 14em;
- width: 47%;
+ width: 100%;
  margin-top: 4%;
 }
 
@@ -184,7 +198,7 @@ p { /* estilos para los párrafos de la primera fila de botones */
   background-color: #C7E000;
   border-radius: 5px;
   height: 14em;
-  width: 47%;
+  width: 100%;
   margin-top: 4%;
 }
 
@@ -236,6 +250,28 @@ p { /* estilos para los párrafos de la primera fila de botones */
   margin: 0;
   text-align: center;
   width: 100%;
+}
+
+#profileStudents > div {
+  width: 40%;
+  height: 4em;
+  background: #333333;
+  border-radius: 5px;
+  padding: auto;
+  text-align: center;
+  margin-top: 5em;
+  margin-left: 30%;
+  display: block;
+  padding-top: 5%;
+}
+
+#profileStudents > div > a {
+  color: whitesmoke;
+}
+
+.logo-2 {
+  width: 90%;
+  margin-top: 5em;
 }
 
 /*Estilos profile.ht   */

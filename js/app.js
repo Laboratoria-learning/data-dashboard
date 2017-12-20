@@ -1,7 +1,3 @@
-/*
- * Funcionalidad de tu producto
- */
-
 // Puedes hacer uso de la base de datos a través de la variable `data`
 // console.log(data);
 var boton = document.getElementById("btn");
@@ -30,14 +26,6 @@ selectGeneration.addEventListener('change', studentsEnrollment);
 
 selectSedes.addEventListener('change', percentage);
 selectGeneration.addEventListener('change', percentage);
-
-// var diHola = () => { console.log('hola') }
-// var diQuepex = () => { console.log('que pex') }
-// var diJajaja = () => { console.log('jajaja') }
-// var funnies = [diHola, diQuepex, diJajaja]
-// funnies.forEach(function (fun) {
-//   selectGeneration.addEventListener('change', fun)
-// })
 
 function getGeneration() {
   if(selectSedes.value != 0){
@@ -80,8 +68,6 @@ function studentsReachedGoal(students, scoreType, goal) {
   }).length
 }
 
-// return studentsScoresAverages.filter(average => average >= goal).length // otra notación de fuction
-
 function studentsReachedGeneralGoal(students, goal) {
   var studentsScoresAverages = students.map(function (student) {
 
@@ -116,7 +102,7 @@ function studentsEnrollment(){
 }
 
 function percentage(){
-  
+
   var sedeAccessor = selectSedes.value;
   var generationBySede = data[sedeAccessor][selectGeneration.value]
   var students = generationBySede.students;
