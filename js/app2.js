@@ -1,7 +1,9 @@
+//obteniendo el value asigno a una variable
+
 var urlParams = new URLSearchParams(window.location.search);
 var cityParam = urlParams.get('city');
 var city;
-
+//asignando datos dependiendo de la opción elegida antes
 function getCity() {
   switch (cityParam) {
     case '1':
@@ -19,25 +21,39 @@ function getCity() {
     default:
   }
 
-  var students = city["2016-2"].students;
-  var count = 0 ;
 
-  for (var i = 0; i < students.length; i++){
-    if (students[i].active) {
+
+var totalStudents = city["2016-2"].students;
+var count = 0 ;
+
+  for (var i = 0; i < totalStudents.length; i++){
+    if (totalStudents[i].active == false) {
       count++;
 
     }
+  }  console.log(count);
+
+  for (var i = 0; i < totalStudents.length; i++){
+    var sprints = city["2016-2"].students[i].sprints;
+    console.log(sprints);
   }
-  console.log(students);
-  console.log(count);
+
+  for (var i = 0; i < totalStudents.length; i++){
+    var tech = city["2016-2"].students[i].sprints[0];
+    console.log(tech);
+  }
 
 }
+
+
+
 window.onload = getCity;
 
 /*
+
+
 google.charts.load('current', {'packages':['annotationchart']});
 google.charts.setOnLoadCallback(drawChart);
-
 function drawChart (){
   var data = new google.visualization.DataTable();
   data.addColumn ('number','total de estudiantes')
