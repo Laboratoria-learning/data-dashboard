@@ -93,17 +93,21 @@ cursor: pointer;
 
 .fa-home{
 margin-left:-8%;
+margin-top: 4%;
 }
 
 .fa-graduation-cap{
   margin-left: -15%;
+  margin-top: 4%;
 }
 
 .fa-pie-chart{
   margin-left: 2%;
+  margin-top: 4%;
 }
 .fa-code{
-  margin-left:-15%;
+  margin-left:-18%;
+  margin-top: 4%;
 }
 
 .barra {
@@ -162,7 +166,7 @@ width: 250px;
 }
 
 .contenedor-grafica {
-  /*background-color: trans;*/
+  background-color: #fffd7c;
   float: left;
   text-align: center;
   vertical-align: top;
@@ -239,11 +243,10 @@ width: 250px;
    overflow: auto;
  }*/
 
-
  .contenedor-coders{
    float: right;
-   width: 800px;
-   margin-right: 200px;
+   width: 700px;
+   margin-right: 150px;
  }
  .coders{
    width: 600px;
@@ -251,6 +254,11 @@ width: 250px;
  }
  .info-coders{
  float: right;
+ font-family: 'Montserrat', sans-serif;
+ }
+
+ .info-coders p {
+   text-align: right;
  }
 
  .foto{
