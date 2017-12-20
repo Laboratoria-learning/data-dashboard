@@ -360,12 +360,14 @@ width: 500px;
   margin-bottom: 20px;
   font-size: 30px;
 }
+
 #teachersTab  hr{
   width: 800px;
   margin-top: 100px;
   margin-left: 300px;
   box-shadow: -2px 3px 11px 2px #a8a7a2;
 }
+
 #teachersTab  h4{
   text-align: center;
   margin-top: 80px;
@@ -373,6 +375,7 @@ width: 500px;
   color: #f7ad14;
 
 }
+
 .cajas-graficas-teacher{
   margin-top: 30px;
 }
