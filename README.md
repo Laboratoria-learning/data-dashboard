@@ -91,18 +91,3 @@ En la última pantalla tener enlaces a blog, medios sociales, la visión de labo
 1.- Gráficas generales para el overview.
 
 2.- Agregar sección de teachers, con un perfil igual al de las alumnas.
-
-### Sketch final
-
-1.- Primera pantalla
-
- ![Primera pantalla](assets/images/primera-pantalla.png)
-
-
-2.- Segunda pantalla
-
- ![Segunda Pantalla](assest/images/)
-
-3.-
-
-4.-
