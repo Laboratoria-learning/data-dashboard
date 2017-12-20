@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="../css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Amaranth:400,400i,700,700i|Montserrat+Alternates:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-    <title>Santiago de Chile 2da Generación</title>
+    <title>CDMX 1ra Generación</title>
   </head>
   <body class="body-1">
     <section id="home">
@@ -14,29 +14,43 @@
         <img class="Usuario" src="../assets/images/lucile.jpg" alt="user">
         <h2>Lucile</h2>
         </div>
-      <div class="charts">
-        <h1 id="infoSCL2"># Estudiantes</h1>
+      <div id="spfc-info" class="charts">
+        <h1>Estudiantes</h1>
+        <img src="../assets/images/student-1.jpg" alt="Student">
+        <p>0 Total de estudiantes <br> 0% Deserción </p>
       </div>
       <div class="charts">
         <h1>Tech</h1>
+        <img src="../assets/images/tech-1.jpg" alt="Tech">
+        <p>0 Alumnas que superan la meta <br> 0% del total </p>
       </div>
       <div class="charts">
         <h1>HSE</h1>
+        <img src="../assets/images/heart.jpg" alt="HSE">
+        <p>0 Alumnas que superan la meta <br> 0% del total </p>
       </div>
       <div class="charts">
-        <h1>Santiago de Chile <br> 2da Generación</h1>
+        <h1 class="titulo">CdMX <br> 1ra Generación</h1>
       </div>
       <div class="charts">
         <h1>NPS</h1>
+        <img src="../assets/images/nps.jpg" alt="NPS">
+        <p>Promoter 0% <br> Passive 0% <br> Detractors 0% </p>
       </div>
       <div class="charts">
-        <h1>Sprints</h1>
+        <h1>% Satifacción</h1>
+        <img src="../assets/images/sprint.jpg" alt="Sprint">
+        <p> Supera 0% <br>Cumple 0% <br> No cumple 0% </p>
       </div>
       <div class="charts">
-        <h1>Teachers</h1>
+        <h1>Promedio Teachers</h1>
+        <img src="../assets/images/teacher.jpg" alt="Teachers">
+        <p>0 Calificación</p>
       </div>
       <div class="charts">
-        <h1>Jedis</h1>
+        <h1>Promedio Jedi Masters</h1>
+        <img src="../assets/images/teachers.jpg" alt="Jedi">
+        <p>0 Calificación</p>
       </div>
     </section>
 
