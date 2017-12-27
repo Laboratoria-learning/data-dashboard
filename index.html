@@ -3,12 +3,378 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   </head>
   <body>
 
-		<!-- Base de datos -->
-		<script src="./js/data.js"></script>
-		<!-- Aquí va tus archivos JS -->
+    <!-- LOGO CABECERA -->
+    <nav>
+          <div class="logo"></div>
+    </nav>
+    <!-- MENU DE SEDES Y GENERACION -->
+    <section class="general-container">
+
+          <div class="info-container">
+              <h1>GENERACION</h1>
+              <div>
+                <select id="generacion">
+                  <option value="" hidden>Selecciona una opción</option>
+                  <optgroup label="Arequipa">
+                    <option value="AQP" data-year="2016-2">AQP 2016 - II</option>
+                    <option value="AQP" data-year="2017-1">AQP 2017 - I</option>
+                  </optgroup>
+                  <optgroup label="Lima">
+                    <option value="LIM" data-year="2016-2">LIM 2016 - II</option>
+                    <option value="LIM" data-year="2017-1">LIM 2017 - I</option>
+                    <option value="LIM" data-year="2017-2">LIM 2017 - II</option>
+                  </optgroup>
+                  <optgroup label="México">
+                    <option value="CDMX" data-year="2017-1">CDMX 2017 - I</option>
+                    <option value="CDMX" data-year="2017-2">CDMX 2017 - II</option>
+                  </optgroup>
+                  <optgroup label="Chile">
+                    <option value="SCL" data-year="2016-2">SCL 2016 - II</option>
+                    <option value="SCL" data-year="2017-1">SCL 2017 - I</option>
+                    <option value="SCL" data-year="2017-2">SCL 2017 - II</option>
+                  </optgroup>
+                </select>
+              </div>
+          </div>
+          <div class="profile-container">
+            <div>
+                <img src="assets/images/lucile.jpg" class="profile-pic" alt="UserPortrait">
+            <div class="profile-data">
+                Bienvenida<br>
+                Lucile Baratier<br>
+                Training Manager
+            </div>
+          </div>
+      </section>
+
+
+    <!-- Menu de navegacion -->
+    <div id="menu">
+      <ul class="tabs">
+        <li id="option-1" ><a href=""><span>Dashboard Global</span></a></li>
+        <li id="option-2" ><a href=""><span>Dashboard de Generacion</span></a></li>
+        <li id="option-3" ><a href=""><span>Estudiantes</span></a></li>
+        <li id="option-4" ><a href=""><span>Profesores</span></a></li>
+        <li id="option-5" ><a href=""><span>Extra</span></a></li>
+      </ul>
+    </div>
+    <!-- Secciones -->
+    <div class="sections">
+      <!-- PRIMERA SECCION -->
+      <section id="section-1" class="active" >
+      <hr>
+      <section id="kpis-section">
+        <!-- Primera Hilera de Kpis -->
+        <div class="kpis-container">
+          <div class="kpi-bullet">
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon">Primera Seccion</div>
+              <div class="result" >result</div>
+          </div>
+          <div class="kpi-bullet">
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon">Alumnas Dadas de Baja</div>
+              <div class="result">result</div>
+          </div>
+          <div class="kpi-bullet">
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon">% de Deserción</div>
+              <div class="result">result</div>
+          </div>
+        </div>
+        <!-- Segunda Hilera KPIS -->
+        <div class="kpis-container">
+          <div class="kpi-bullet">
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon"># Alumnas Arriba del 70% (Total)<br>
+              <span class="sub-kpi">Con criterio mínimo</span>
+              </div>
+              <div class="result">result</div>
+          </div>
+          <div class="kpi-bullet">
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon"># Alumnas Arriba del 70% (HSE)<br>
+              <span class="sub-kpi">Con criterio mínimo</span>
+              </div>
+              <div class="result">result</div>
+          </div>
+          <div class="kpi-bullet">
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon"># Alumnas Arriba del 70% (TECH)<br>
+              <span class="sub-kpi">Con criterio mínimo</span>
+              </div>
+              <div class="result">result</div>
+          </div>
+        </div>
+        <!-- Tercera Hilera KPIS -->
+        <div class="kpis-container">
+          <div class="kpi-bullet">
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon">% Alumnas Arriba del 70% (Total)<br>
+              <span class="sub-kpi">Con criterio mínimo</span>
+              </div>
+              <div class="result">result</div>
+          </div>
+          <div class="kpi-bullet">
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon">% Alumnas Arriba del 70% (HSE)<br>
+              <span class="sub-kpi">Con criterio mínimo</span>
+              </div>
+              <div class="result">result</div>
+          </div>
+          <div class="kpi-bullet">
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon">% Alumnas Arriba del 70% (TECH)<br>
+              <span class="sub-kpi">Con criterio mínimo</span>
+              </div>
+              <div class="result">result</div>
+          </div>
+        </div>
+        <!-- Cuarta Hilera KPIS -->
+        <div class="kpis-container">
+          <div class="kpi-bullet">
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon">Net Promoter Score (NPS)</div>
+              <div class="result">result</div>
+          </div>
+          <div class="kpi-bullet">
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon">% de Alumnas Satisfechas</div>
+              <div class="result">result</div>
+          </div>
+        </div>
+        <!-- Quinta Hilera KPIS -->
+        <div class="kpis-container">
+          <div class="kpi-bullet">
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon">Puntos Totales Promedio</div>
+              <div class="result">result</div>
+          </div>
+          <div class="kpi-bullet">
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon">Puntos HSE Promedio</div>
+              <div class="result">result</div>
+          </div>
+          <div class="kpi-bullet">
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon">Puntos TECH Promedio</div>
+              <div class="result">result</div>
+          </div>
+        </div>
+      </section>
+      <hr id="end-kpis">
+      </section>
+
+      <!-- SEGUNDA SECCION -->
+      <section id="section-2" class="inactive">
+        <div id="genSelected"><span>Generacion Seleccionada</span></div>
+        <hr>
+        <section id="kpis-section">
+        <!-- Primera Hilera de Kpis -->
+        <div class="kpis-container">
+          <div class="kpi-bullet">
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon">Alumnas Inscritas</div>
+              <div class="result" id="enrolled-students">result</div>
+          </div>
+          <div class="kpi-bullet">
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon">Alumnas Dadas de Baja</div>
+              <div class="result" id="down-students">result</div>
+          </div>
+          <div class="kpi-bullet">
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon">% de Deserción</div>
+              <div class="result" id="down-students-percent">result</div>
+          </div>
+        </div>
+        <!-- Segunda Hilera KPIS -->
+        <div class="kpis-container">
+          <div class="kpi-bullet">
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon"># Alumnas Arriba del 70% (Total)<br>
+              <span class="sub-kpi" >Con criterio mínimo</span>
+              </div>
+              <div class="result" id="students-above70-total">result</div>
+          </div>
+          <div class="kpi-bullet">
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon"># Alumnas Arriba del 70% (HSE)<br>
+              <span class="sub-kpi">Con criterio mínimo</span>
+              </div>
+              <div class="result" id="students-above70-hse">result</div>
+          </div>
+          <div class="kpi-bullet">
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon"># Alumnas Arriba del 70% (TECH)<br>
+              <span class="sub-kpi">Con criterio mínimo</span>
+              </div>
+              <div class="result" id="students-above70-tech">result</div>
+          </div>
+        </div>
+        <!-- Tercera Hilera KPIS -->
+        <div class="kpis-container">
+          <div class="kpi-bullet">
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon">% Alumnas Arriba del 70% (Total)<br>
+              <span class="sub-kpi">Con criterio mínimo</span>
+              </div>
+              <div class="result" id="students-above70-total-p">result</div>
+          </div>
+          <div class="kpi-bullet">
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon">% Alumnas Arriba del 70% (HSE)<br>
+              <span class="sub-kpi">Con criterio mínimo</span>
+              </div>
+              <div class="result" id="students-above70-hse-p">result</div>
+          </div>
+          <div class="kpi-bullet">
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon">% Alumnas Arriba del 70% (TECH)<br>
+              <span class="sub-kpi">Con criterio mínimo</span>
+              </div>
+              <div class="result" id="students-above70-tech-p">result</div>
+          </div>
+        </div>
+        <!-- Cuarta Hilera KPIS -->
+        <div class="kpis-container">
+          <div class="kpi-bullet">
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon">Net Promoter Score (NPS)</div>
+              <div class="result" id="nps-container">result</div>
+          </div>
+          <div class="kpi-bullet">
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon">% de Alumnas Satisfechas</div>
+              <div class="result" id="satisfaction-container">result</div>
+          </div>
+        </div>
+        <!-- Quinta Hilera KPIS -->
+        <div class="kpis-container">
+          <div class="kpi-bullet">
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon">Puntos Totales Promedio</div>
+              <div class="result" id="total-points-avg">result</div>
+          </div>
+          <div class="kpi-bullet">
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon">Puntos HSE Promedio</div>
+              <div class="result" id="hse-points-avg">result</div>
+          </div>
+          <div class="kpi-bullet">
+              <div><img src="assets/icons/avatar.svg" alt="icon-woman" class="icon">Puntos TECH Promedio</div>
+              <div class="result" id="tech-points-avg">result</div>
+          </div>
+        </div>
+        </section>
+        <hr id="end-kpis">
+
+      
+      <!-- Grafica de Pastel -->
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <div class= "chart-container" id="piechart-total-alumnas"></div>
+
+
+      <!-- Grafica de Barras -->
+
+
+          <div class= "chart-container" id="chart_div" ></div>
+
+      </section>
+
+      <!-- TERCERA SECCION ALUMNAS-->
+      <section id="section-3" class="inactive">
+        <div id="genSelected"><span>Generacion Seleccionada</span></div>
+        <hr>
+
+        <div class="image-container">
+          <span>DATA</span>
+          <img src= 'assets/images/alumna-1.png' alt='Una coder'/>
+          <div class="datos" id="name">Alumna 1</div>
+        </div>
+
+        <div class="image-container">
+          <span>DATA</span>
+          <img src='assets/images/alumna-2.png' alt='Una coder'/>
+          <div class="datos" id="name">Alumna 2</div>
+        </div>
+
+        <div class="image-container">
+          <span>DATA</span>
+          <img src='assets/images/alumna-3.png' alt='Una coder'/>
+          <div class="datos" id="name">Alumna 3</div>
+        </div>
+
+        <div class="image-container">
+          <span>DATA</span>
+          <img src='assets/images/alumna-4.png' alt='Una coder'/>
+          <div class="datos" id="name">Alumna 4</div>
+        </div>
+
+        <div class="image-container">
+          <span>DATA</span>
+          <img src='assets/images/alumna-5.png' alt='Una coder'/>
+          <div class="datos" id="name">Alumna 5</div>
+        </div>
+
+        <div class="image-container">
+          <span>DATA</span>
+          <img src='assets/images/alumna-1.png' alt='Una coder'/>
+          <div class="datos" id="name">Alumna 6</div>
+        </div>
+
+        <div class="image-container">
+          <span>DATA</span>
+          <img src='assets/images/alumna-2.png' alt='Una coder'/>
+          <div class="datos" id="name">Alumna 7</div>
+        </div>
+
+        <div class="image-container">
+          <span>DATA</span>
+          <img src='assets/images/alumna-3.png' alt='Una coder'/>
+          <div class="datos" id="name">Alumna 8</div>
+        </div>
+
+        <div class="image-container">
+          <span>DATA</span>
+          <img src='assets/images/alumna-4.png' alt='Una coder'/>
+          <div class="datos" id="name">Alumna 9</div>
+        </div>
+
+        <div class="image-container">
+          <span>DATA</span>
+          <img src='assets/images/alumna-5.png' alt='Una coder'/>
+          <div class="datos" id="name">Alumna 10</div>
+        </div>
+
+        <div class="image-container">
+          <span>DATA</span>
+          <img src='assets/images/alumna-1.png' alt='Una coder'/>
+          <div class="datos" id="name">Alumna 11</div>
+        </div>
+
+        <div class="image-container">
+          <span>DATA</span>
+          <img src='assets/images/alumna-2.png' alt='Una coder'/>
+          <div class="datos" id="name">Alumna 12</div>
+        </div>
+
+      </section>
+
+      <!-- CUARTA SECCION -->
+      <section id="section-4" class="inactive">
+
+        <div id="genSelected"><span>Sede Seleccionada</span></div>
+        <hr>
+
+        <div class="image-container">
+          <span>MAESTROS</span>
+          <img src= 'assets/images/master.png' alt='master'/>
+          <div class="datos" id="name">Master</div>
+          <div>Calificación 3.2</div>
+        </div>
+
+
+        <div class="image-container">
+          <span>JEDI</span>
+          <img src='assets/images/jedi.png' alt='jedi'/>
+          <div class="datos" id="name">Jedi</div>
+          <div>Calificación 4.8</div>
+        </div>
+
+
+      </section>
+
+      <!-- QUINTA SECCION -->
+      <section id="section-5" class="inactive">
+
+
+      </section>
+
+    </div>
+
+
+    <!-- Base de datos -->
+    <script src="./js/data.js"></script>
+    <!-- Aquí va tus archivos JS -->
     <script src="./js/app.js"></script>
   </body>
 </html>
