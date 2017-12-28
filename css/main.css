@@ -1,3 +1,142 @@
-/*
- * Estilos de tu proyecto
- */
+/* Estilos de tu proyecto */
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+/* styles for header */
+header{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+main {
+    width: 80%;
+    position: relative;
+    left: 10%;
+    background: #E1E5DE;
+    padding: 10px;
+}
+.principal {
+    width: 28%;
+    display: inline-block;
+    background: #fff;
+    padding: 10px;
+    margin: 10px;
+}
+
+
+figure {
+    display: inline-block;
+    width: 190px;
+    height: 40px;
+}
+
+.icon{
+    position: absolute;
+    top: 20px;
+    right:50px;
+    font-size: 40px;
+    color: #F1C40F;
+    
+}
+
+/* styles for nav */
+nav{
+    width: 80%;
+    text-align: center;
+    background: lightgray;
+    position: relative;
+    left: 10%;
+    padding: 10px;
+}
+
+nav select{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    outline: none;
+    width: 108px;
+    margin: 10px;
+    padding: 10px;
+    border: 0;
+    border-radius: 15px;
+}
+nav select option{
+    outline: none;
+    width: 100px;
+    padding: 10px;
+    margin: 10px;
+    border: 0;
+    border-radius: 15px;
+}
+
+nav ul{
+    list-style: none;  
+}
+
+nav ul li{
+    display: inline-block;
+    padding: 7px 7px 0 7px;
+    margin: 10px 10px 0 10px;
+}
+
+nav ul li:hover{
+    border-bottom: 7px solid #F1C40F;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-weight: 700;
+    color: #000;
+}
+.tech-skills  select , .life-skills select{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    outline: none;
+    width: 108px;
+    margin: 10px;
+    padding: 10px;
+    border: 0;
+    border-radius: 15px;
+}
+
+
+h3#current-student::after {
+  content: '';
+  display: block;
+  border-bottom: 4px solid #ffc107;
+  height: 4px;
+  width: 100px;
+}
+
+.student-dropout {
+  background-color: #ffc107;
+  color:red;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 10px;
+}
+.total-student-active{
+  color: blue;
+  font-size: 20px;
+  font-weight: 100px;
+
+}
+.student-data{
+cursor: pointer;
+}
+
+.square{
+    width: 200px;
+    height: 30px;
+    display: block;
+    text-align: center;
+    background: #fff;
+    color: #20F10F;
+    padding: 10px;
+    margin: 10px;
+}
+

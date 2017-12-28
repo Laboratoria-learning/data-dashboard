@@ -3,12 +3,159 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800" rel="stylesheet">
+    <link rel="icon" href="assets/icons/lab.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/icons/style.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <!--header-->
+    <header>
+      <figure>
+        <img src="assets/images/logo-laboratoria.svg" alt="logo">
+      </figure>
+      <div class="icon">
+        <span class="icon-menu"></span>
+      </div>
+    </header>
+    <!--section que contiene las dos barras de navegación-->
+    <section>
 
+      <nav>
+        <input value="LIM" type="radio" id="checked-lima" class="sede" name="seded" >Lima 
+        <select name="select-sede" id="select-lima" class="sede-lab">
+          <option value="" disabled selected>select</option>
+          <option value="2016-2">2016-II</option>
+          <option value="2017-1">2017-I</option>
+          <option value="2017-2">2017-II</option>
+        </select>
+        <input value="AQP" type="radio" id="checked-aqp" class="sede" name="seded" >Arequipa   
+        <select name="select-sede" id="select-aqp" class="sede-lab">
+           <option value="" disabled selected>select</option>
+          <option value="2016-2">2016-II</option>
+          <option value="2017-1">2017-I</option>
+        </select>
+        <input value="SCL" type="radio" id="checked-scl" class="sede" name="seded" >Santiago   
+        <select name="select-sede" id="select-scl" class="sede-lab">
+           <option value="" disabled selected>select</option>
+          <option value="2016-2">2016-II</option>
+          <option value="2017-1">2017-I</option>
+          <option value="2017-2">2017-II</option>
+        </select>
+        <input value="CDMX" type="radio" id="checked-cdmx" class="sede" name="seded" >Mexico
+        <select name="select-sede" id="select-cdm" class="sede-lab">
+          <option value="" disabled selected>select</option>
+          <option value="2017-1">2017-I</option>
+          <option value="2017-2">2017-II</option>
+        </select>
+        <ul>
+          <li><a href="#">OVERVIEW</a></li>
+          <li><a id="students" class="student-data">STUDENTS</a></li>
+          <li><a href="#">TEACHER</a></li>
+        </ul>
+      </nav>
+    </section>
+    <!--main-->
+    <main>
+      <section id="total">
+        <div>
+          <div id="container-total-student"><span></span><span id="sedeSelect"></span><span></span><span id="generSelect"></span><span></span><span></span><span></span><span></span></div>
+          <h3>ENROLLMENT</h3>
+          <div>
+            <h3 id = "current-student">120</h3>
+             <!--container-student-dropout-->
+                  
+            <h4># STUDENTS CURRENTLY ENROLLED</h4>
+          </div>
+          <div>
+            <h3 id = "percentage-dropout-student">20%</h3>
+            <h4>% DROPOUT</h4>
+            <ul id="container-student-dropout"><span></span><h4></h4></ul>  
+          </div>
+        </div>
+          <div class="principal">
+             <div class="colum">
+              <h4>105</h4>
+              <p># STUDENTS THAT MEET THE TARGET</p>
+            </div>
+            <div class="colum">
+              <h4>78% &Delta;</h4>
+              <p>% OF TOTAL(135)</p>
+          </div>
+        </div>
+        <div class="principal">
+          <h3>NET PROMOTER SCORE</h3>
+          <div class="colum">
+            <h4>78% &Delta;</h4>
+            <p>% CUMULATIVE NPS</p>
+          </div>
+          <div class="colum">
+            <p>60 %  Promoters</p>
+            <p>30 % Passive</p>
+            <p>10 % Detractors</p>
+          </div>
+        </div> 
+      </section>
+  <!-- Section Tech Skills-->
+        <section id="tech-skills" class="tech-skills">
+        <div>
+          <h3>TECH SKILLS</h3>
+          <select name="select-sprint" id="select-sprint">
+            <option value="" selected  disabled>Overall</option>
+            <option value="0">Sprint 1</option>
+            <option value="1">Sprint 2</option>
+            <option value="2">Sprint3</option>
+            <option value="3">Sprint 4</option>
+          </select>
+        </div> 
+        <div class="principal">
+            <h3>ACHIEVEMENT</h3>
+            <div class="colum">
+              <h4 id = "count-student-target">105</h4>
+              <p># STUDENTS THAT MEET THE TARGET</p>
+            </div>
+            <div class="colum">
+              <h4 id = "percentage-target-student">78% &Delta;</h4>
+              <p id="total-student-active">% OF TOTAL(135)</p>
+        </div>
+       
+      </section>
+
+  <!-- Section Life Skills-->
+        <section id="life-skills" class="life-skills">
+        <div>
+          <h3>LIFE SKILLS</h3>
+          <select name="select-sprint-hse" id="select-sprint-hse">
+            <option value="" selected  disabled>Hse</option>
+            <option value="0">Sprint 1</option>
+            <option value="1">Sprint 2</option>
+            <option value="2">Sprint3</option>
+            <option value="3">Sprint 4</option>
+          </select>
+        </div> 
+        <div class="principal">
+            <h3>ACHIEVEMENT</h3>
+            <div class="colum">
+              <h4 id = "student-target-hse">105</h4>
+              <p># STUDENTS THAT MEET THE TARGET</p>
+            </div>
+            <div class="colum">
+              <h4 id = "percentage-target-hse">78% &Delta;</h4>
+              <p id="total-hse-active">% OF TOTAL(135)</p>
+        </div>
+       
+      </section>
+ 
+      <section id="studentsData">
+        
+
+
+      </section>
+
+    </main>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
-		<!-- Aquí va tus archivos JS -->
+		<!-- Aquí va tus archivos JS --> 
     <script src="./js/app.js"></script>
   </body>
 </html>
