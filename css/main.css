@@ -1,3 +1,353 @@
-/*
- * Estilos de tu proyecto
- */
+body {
+ font-family: 'Montserrat', sans-serif;
+ margin: 0;
+ padding: 0;
+ width: 100%;
+}
+
+button {
+  width: 40px;
+  background-color: inherit;
+  border-color: inherit;
+}
+
+span { /*estilo para el título del proyecto*/
+  font-size: 1.9em;
+  margin: auto;
+}
+
+nav {
+  width: 15%;
+  text-align: center;
+  background: #333333;
+  right: 45px;
+  color: #F7B617;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li:hover {
+  background-color: #F7B617;
+}
+
+a {
+   text-decoration: none;
+   color: white;
+}
+
+a:hover{
+  color: #fff;
+}
+
+div {
+  display: inline-block;
+  margin: 0 0.75em;
+}
+
+h2 { /* estilos para el título de la primera fila de botones */
+  color: #fff;
+  margin-top: 0.625em;
+  padding-left: 5%;
+  font-size: 1.25em;
+}
+
+p { /* estilos para los párrafos de la primera fila de botones */
+  display: inline-block;
+  color: #fff;
+  font-size: 1.25em;
+  margin: 0;
+}
+
+#barra-sedes {
+  height: 100px;
+  background-color: #F7B617;
+}
+
+#sedes {
+  border-radius: 8px;
+  font-size: 20px;
+  margin-left: 50px;
+  margin-top: 25px;
+  width: 220px;
+}
+
+#generation {
+  border-radius: 8px;
+  font-size: 20px;
+  width: 150px;
+}
+
+#headboard{
+  width: 85%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#container { /* estilos para el contenedor de la sección principal */
+  width: 85%;
+  margin: 0 auto;
+}
+
+.numTotal { /* estilos para los datos dinámicos de la primera hilera de botones */
+  font-size: 4.25em;
+  margin: 0;
+  font-weight: bolder;
+}
+
+.percent {
+  font-size: 3em;
+  margin: 0;
+  font-weight: bolder;
+  margin-top: 3%;
+}
+
+.totalStudents, /* estilos para los contenedores de datos dinámicos de la primera hilera de botones */
+.totalPercent {
+  display: block;
+}
+
+.enabled-menu { /* clase para no mostrar menú dinámico */
+  display: block;
+  position: absolute;
+}
+
+.disabled-menu { /* clase para mostrar menú dinámico*/
+  display: none;
+}
+
+.logo { /* estilos para el logo del nav */
+  height: 100px;
+  margin: auto;
+  margin: 0 25%;
+}
+
+.alumnas { /* estilos para el botón que muestra el total de alumnas activas*/
+  background-color: #4643BB;
+  border-radius: 5px;
+  height:23.75em;
+  width: 20%;
+  margin-top: 4%;
+}
+
+.prom-general { /* estilos para el botón que muestra el total de alumnas que alcazaron la meta general */
+ border-radius: 5px;
+  width: 25%;
+  height: 23.75em;
+  background-color: #52E000;
+  margin-top: 4%;
+}
+
+.meta-ht { /* estilos para el botón que muestra el total de alumnas que alcazaron la meta tech */
+  border-radius: 5px;
+  width: 25%;
+  height: 23.75em;
+  background-color: #FC331C;
+  margin-top: 4%;
+}
+
+.meta-HSE{ /* estilos para el botón que muestra el total de alumnas que alcazaron la meta HSE */
+  border-radius: 5px;
+  width: 20%;
+  height: 23.75em;
+  background-color:#00C4DA;
+  margin-top: 4%;
+}
+
+.nps { /*estilos para el botón que muestra los datos dinámicos correspondientes al NPS*/
+  border-radius: 5px;
+  width: 47%;
+  height: 23.75em;
+  background-color: #0EACBD;
+  margin-top: 4%;
+}
+
+.nsa { /* estilos para el botón que muestra los datos dinámicos correspondientes al nivel de satisfacción por alumna */
+  border-radius: 5px;
+  width: 47%;
+  height: 23.75em;
+  background-color: #00B22C;
+  margin-top: 4%;
+}
+
+#staff {
+  width: 47%;
+  display: inline-block;
+  padding: auto;
+}
+
+#profileStudents {
+  width: 47%;
+  height: 28em;
+  float: right;
+  margin-top: 2em;
+  margin-right:2em;
+}
+
+.prom-teachs { /* estilos para el botón que muestra el promedio de calificación por teacher */
+ background-color:#1A9391;
+ border-radius: 5px;
+ height: 14em;
+ width: 100%;
+ margin-top: 4%;
+}
+
+.prom-jedi { /* estilos para el botón que muestra el promedio de calificación por jedi master */
+  background-color: #C7E000;
+  border-radius: 5px;
+  height: 14em;
+  width: 100%;
+  margin-top: 4%;
+}
+
+.displayAverage {
+  display: block;
+}
+
+.staffAverage {
+  width: 50%;
+  text-align: center;
+}
+
+.icons { /* estilos para los iconos de la primera hilera de botones */
+  text-align: center;
+  color: #fff;
+  font-size: 7.8em;
+  display: block;
+  margin-bottom: 0.01em;
+}
+
+.icons-teachs,
+.icons-jedi {
+  font-size: 7.8em;
+  color: white;
+  margin-left: 10%;
+}
+
+.graph { /* estilos para la gráfica muesta del NPS y nivel de satisfacción por alumna*/
+  width: 53%;
+}
+
+.detailGraph { /* estilos para el contenedor de datos de la gráfica de NPS y nivel de satisfacción por alumna */
+  width: 35%;
+  height: 10em;
+  display: inline-block;
+  vertical-align: 700%;
+}
+
+.detailGraph > div > p { /* estilos para el detalle de datos de la gráfica de NPS y nivel de satisfacción por alumna */
+  font-size: 1.25em;
+}
+
+.itemGraph { /* estilos para el detalle de datos de la gráfica de NPS y nivel de satisfacción por alumna */
+  display: block;
+}
+
+.accumulated { /* estilos para el acumulado de NPS y nivel de satisfacción por alumna */
+  display: block;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+#profileStudents > div {
+  width: 40%;
+  height: 4em;
+  background: #333333;
+  border-radius: 5px;
+  padding: auto;
+  text-align: center;
+  margin-top: 5em;
+  margin-left: 30%;
+  display: block;
+  padding-top: 5%;
+}
+
+#profileStudents > div > a {
+  color: whitesmoke;
+}
+
+.logo-2 {
+  width: 90%;
+  margin-top: 5em;
+}
+
+/*Estilos profile.html   */
+/*estilosprefil de las Alumnas  */
+body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+h1{
+  text-align: left;
+}
+
+h3 {
+  font-size: 40px;
+  margin: 0;
+}
+
+h4 {
+  margin: 0;
+}
+
+.image1{
+  width: 200px;
+  height: 200px;
+  border-radius: 5%;
+  padding: 10px;
+}
+
+.image{
+  background-color:#F7F7F7;
+  display: inline-block;
+  width:60%;
+  height: 400px;
+}
+
+.especialization {
+  background-color: #F7F7F7;
+  display: inline-block;
+  width:30%;
+  height: 400px;
+}
+
+.especialization > ul  {
+  text-align: left;
+  font-weight: bolder;
+  color: #605a5a;
+}
+
+.code {
+  width: 100%;
+  height: 100px;
+  background-color: #F7B617;
+}
+
+ .tech,
+ .life,
+ .english {
+   background-color:#F7B617 ;
+   color: #000;
+   display: inline-block;
+   margin: 5px;
+   height: 65px;
+   width: 120px;
+ }
+
+ .code-name,
+ .code-tech,
+ .code-life,
+ .code-english {
+   color: #424040;
+   font-size: 20px;
+ }
+
+ .code-profail {
+   font-weight: bolder;
+   color: #424040;
+}

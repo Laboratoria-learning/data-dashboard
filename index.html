@@ -2,13 +2,178 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'/>
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <title>Data Dashboard</title>
   </head>
   <body>
 
-		<!-- Base de datos -->
-		<script src="./js/data.js"></script>
-		<!-- Aquí va tus archivos JS -->
-    <script src="./js/app.js"></script>
+    <section id="headboard" >
+      <span>Data Dashboard</span>
+      <img class="logo" src="assets/images/logo-laboratoria.svg" alt="logo">
+      <button id="btn">
+        <hr>
+        <hr>
+        <hr>
+     </button>
+     <nav id="opcs-menu" class="disabled-menu">
+       <ul>
+         <li><a href="#">Mi perfil</a></li>
+         <li><a href="#">Configuración</a></li>
+         <li><a href="#">Salir</a></li>
+       </ul>
+     </nav>
+    </section>
+
+    <section id="barra-sedes">
+      <select id="sedes"  title="seleccion de sedes"> <!--- select para escoger la sede  --->
+       <option value="seleccion" hidden="">Selecciona una Sede</option>
+       <option value="CDMX">Ciudad de México</option>
+       <option value="LIM">Lima</option>
+       <option value="AQP">Arequipa</option>
+       <option value="SCL">Santiago de Chile</option>
+      </select>
+
+      <select id="generation"  title="seleccion de generacion"> <!-- select dinámico para seleccionar la generación  -->
+        <option value="---"></option>
+      </select>
+    </section>
+
+    <section id="container"> <!-- inicio de la sección principal  -->
+      <div class="alumnas" id="grafic-students">
+        <h2>Alumnas</h2>
+        <span class="icons"><i class="fa fa-female" aria-hidden="true"></i></span>
+        <div class="totalStudents">
+          <p class="numTotal">0</p>
+          <p>Alumnas<br>inscritas</p>
+        </div>
+        <div class="totalPercent">
+          <p class="percent">0</p>
+          <p class="percent">%</p>
+          <p>Deserción</p>
+        </div>
+      </div>
+
+      <div class="prom-general" id="grafic-promGen">
+        <h2>Meta promedio general</h2>
+        <span class="icons"><i class="fa fa-graduation-cap" aria-hidden="true"></i></span>
+        <div class="totalStudents">
+          <p class="numTotal">0</p>
+          <p>Alumnas que<br>superan meta</p>
+        </div>
+        <div class="totalPercent">
+          <p class="percent">0</p>
+          <p class="percent">%</p>
+          <p>del total</p>
+        </div>
+      </div>
+
+      <div class="meta-ht">
+        <h2>Meta habilidades técnicas</h2>
+        <span class="icons"><i class="fa fa-code" aria-hidden="true"></i></span>
+        <div class="totalStudents">
+          <p class="numTotal">0</p>
+          <p>Alumnas que<br>superan meta</p>
+        </div>
+        <div class="totalPercent">
+          <p class="percent">0</p>
+          <p class="percent">%</p>
+          <p>del total</p>
+        </div>
+      </div>
+
+      <div class="meta-HSE">
+        <h2>Meta HSE</h2>
+        <span class="icons"><i class="fa fa-heartbeat" aria-hidden="true"></i></span>
+        <div class="totalStudents">
+          <p class="numTotal">0</p>
+          <p>Alumnas que<br>superan meta</p>
+        </div>
+        <div class="totalPercent">
+          <p class="percent">0</p>
+          <p class="percent">%</p>
+          <p> del total</p>
+        </div>
+      </div>
+
+      <div class="nps">
+          <h2>Net Prometer Score (NPS)</h2>
+          <img class="graph" src="assets/images/grafica-muestra.png" alt="gráfica">
+          <div class="detailGraph">
+            <div class="itemGraph">
+              <p>Promoter</p>
+              <p>50%</p>
+            </div>
+            <div class="itemGraph">
+              <p>Passive</p>
+              <p>25%</p>
+            </div>
+            <div class="itemGraph">
+              <p>Detractors</p>
+              <p>25%</p>
+            </div>
+          </div>
+          <div class="accumulated">
+            <p>NPS</p>
+            <p>25%</p>
+          </div>
+      </div>
+
+      <div class="nsa">
+        <h2>Nivel de satisfacción de las alumnas</h2>
+        <img class="graph" src="assets/images/grafica-muestra.png" alt="gráfica">
+        <div class="detailGraph">
+          <div class="itemGraphNsa">
+            <p>Superar</p>
+            <p>50%</p>
+          </div>
+          <div class="detailGraphNsa">
+            <p>Cumple</p>
+            <p>25%</p>
+          </div>
+          <div class="detailGraphNsa">
+            <p>No-Cumple</p>
+            <p>25%</p>
+          </div>
+        </div>
+        <div class="accumulated">
+          <p>Acumulado</p>
+          <p>75%</p>
+        </div>
+      </div>
+
+      <section id="staff">
+        <div class="prom-teachs">
+           <h2>Promedio teachers</h2>
+           <div class="staffAverage">
+             <p class="numTotal">8.2</p>
+             <p class="displayAverage">Calificación</p>
+           </div>
+           <span class="icons-teachs"><i class="fa fa-trophy" aria-hidden="true"></i></span>
+        </div>
+
+        <div class="prom-jedi">
+          <h2>Promedio Jedi Masters</h2>
+          <div class="staffAverage">
+            <p class="numTotal">7.6</p>
+            <p class="displayAverage">Calificación</p>
+          </div>
+           <span class="icons-jedi"><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+        </div>
+      </section>
+
+      <section id="profileStudents"> <!-- sección para acceder al detalle de calificación por alumna -->
+        <div>
+          <a href="profile.html" target="blank_">Detalle de estudiantes</a>
+          <img class="logo-2" src="assets/images/logo-2.png" alt="logo">
+        </div>
+      </section><!-- fin de sección para acceder al detalle de calificación por alumna -->
+
+    </section> <!-- fin de la sección principal  -->
+
+		<script src="./js/data.js"></script> <!-- Base de datos -->
+    <script src="./js/app.js"></script> <!-- Aquí va tus archivos JS -->
   </body>
 </html>
