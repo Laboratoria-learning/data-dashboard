@@ -2,13 +2,188 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/icons/icomoon/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="
+    ./css/main.css">
     <title>Data Dashboard</title>
   </head>
   <body>
+    <!-- Barra lateral -->
+    <div id="sidebar">
+      <!-- Logo Laboratoria -->
+      <figure id="logo-laboratoria"><img src="assets/images/logo-laboratoria.svg" alt="Laboratoria"></figure>
+      <!-- Info de usuario -->
+      <div id="user">
+        <figure><img src="assets/images/profile-photo.png" alt="Profile photo"></figure>
+        <div id="user-info">
+          <h4>Alejandra Ramírez</h4>
+          <span>TM Laboratoria Lima</span>  
+        </div>
+      </div>
+      <!-- Opciones -->
+      <ul>
+        <li><a href="#"><span class="icon-plus-circle"></span>&ensp; Agregar alumna</a></li>
+        <li><a href="#"><span class="icon-minus-circle"></span>&ensp; Remover alumna</a></li>
+      </ul>
+    </div>
+    <!-- Encabezado -->
+    <header>
+      <h1>Dashboard</h1>
+      <nav id="nav-extra">
+        <ul>
+          <li><a href="#" class="icon-bell"></a></li>
+          <li><a href="#" class="icon-log-out"></a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Contenido principal -->
+    <main>
+      <div id="filter-section">
+        <select id="local" name="sede">
+          <option value="LIM">Lima</option>
+          <option value="AQP">Arequipa</option>
+          <option value="SCL">Santiago de Chile</option>
+          <option value="CDMX">Ciudad de México</option> 
+        </select> 
+        <select id="promo" name="promocion"> 
+          <option value="2017-2">2017-2</option>
+          <option value="2017-1">2017-1</option>
+          <option value="2016-2">2016-1</option>
+        </select> 
+        <select id="sprint" name="sprint"> 
+          <option value="2">Sprint 2</option>
+          <option value="1">Sprint 1</option> 
+        </select>
+      </div>
+      <!-- Pestañas de visualizacion -->
+      <div class="content">
+        <button class="menus" onclick="openPage(event, 'overview')" id="default">OVERVIEW</button>
+        <button class="menus" onclick="openPage(event, 'students')">STUDENTS</button>
+      </div>
+      <!-- Con -->
+      <section id="container">
+        <section id="overview" class="tabContent">
+          <div class="info-container single">
+            <pre class="icon-users"></pre>
+            <h4>ALUMNAS</h4>
+            <div class="info double">
+              <span id="current-students">6</span>
+              <h5># estudiantes inscritas</h5>
+            </div>
+            <div class="info double">
+              <span id="dropout">57%</span>
+              <h5>% de deserción</h5>
+            </div>
+          </div>
+          <div class="info-container single">
+            <pre class="icon-award"></pre>
+            <h4>RENDIMIENTO</h4>
+            <div class="info double">
+              <span id="overcome-avrg">3</span>
+              <h5>superan la meta de puntos</h5>
+            </div>
+            <div class="info double">
+              <span id="overcome-percent">50%</span>
+              <h5>del total de alumnas inscritas</h5>
+            </div>
+          </div>
+          <div class="info-container single">
+            <h4>PROGRESO POR SPRINT</h4>
+            <figure><img src="assets/images/bar-graph.png" alt=""></figure>
+          </div>
+          <div class="info-container double">
+            <div class="double">
+              <pre class="icon-file"></pre>
+              <h4>SUPERAN META</h4>
+              <h4>DE PUNTOS TECH</h4>
+              <div class="info double">
+                <span id="tech-target-avrg">4</span>
+                <h5>alumnas en promedio</h5>
+              </div>
+              <div class="info double">
+                <span id="tech-target-sprint">4</span>
+                <h5>alumnas en este sprint</h5>
+              </div>
+            </div>
+            <div class="double graphic">
+              <figure><img src="assets/images/circle-graphic.png" alt=""></figure>
+            </div>
+          </div>
+          <div class="info-container double">
+            <div class="double">
+              <pre class="icon-heart"></pre>
+              <h4>SUPERAN META</h4>
+              <h4>DE PUNTOS HSE</h4>
+              <div class="info double">
+                <span id="hse-target-avrg">3</span>
+                <h5>alumnas en promedio</h5>
+              </div>
+              <div class="info double">
+                <span id="hse-target-sprint">2</span>
+                <h5>alumnas en este sprint</h5>
+              </div>
+            </div>
+            <div class="graphic double">
+              <figure><img src="assets/images/circle-graphic.png" alt=""></figure>
+            </div>
+          </div>
+          <div class="info-container single">
+            <pre class="icon-thumbs-up"></pre>
+            <h4>EXPERIENCIA LABORATORIA</h4>
+            <div class="info triple">
+              <span id="satisfaction-percent">94%</span>
+              <h5>de alumnas satisfechas</h5>
+            </div>
+          </div>
+          <div class="info-container single">
+            <pre class="icon-github"></pre>
+            <h4>PUNTUACIÓN PROFESORES</h4>
+            <div class="info triple">
+              <span id="teachers-avrg">3.2</span>
+              <h5>puntos en promedio</h5>
+            </div>
+          </div>
+          <div class="info-container single">
+            <pre class="icon-star"></pre>
+            <h4>PUNTUACIÓN JEDI MASTERS</h4>
+            <div class="info triple">
+              <span id="jedi-avrg">4.7</span>
+              <h5>puntos en promedio</h5>
+            </div>
+          </div>
+          <div class="info-container triple">
+            <div class="double"><img src="assets/images/rectangular-graphic.png" alt=""></div>
+            <div class="double">
+              <pre class="icon-pie-chart"></pre>
+              <h4>NET PROMOTER SCORE</h4>
+              <div class="info triple">
+                <span id="nps">74.5%</span>
+                <h5>NPS promedio de todos los sprints</h5>
+                <p>Promoters &emsp;<span class="secondary" id="promoters">83%</span></p>
+                <p>Passive &emsp;<span class="secondary" id="passive">10%</span></p>                
+                <p>Detractors &emsp;<span class="secondary" id="detractors">8%</span></p>
+            </div>
+          </div>
+        </section>
+
+        <section id="students" class="tabContent">
+          <h3>Students</h3>
+          <p>La pagina del estudiante</p> 
+          <div id="piechart" style="width: 900px; height: 500px;"></div>
+        </section>
+
+        <section id="teachers"></section>
+        
+      </section>
+
+    </main>
 
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
     <script src="./js/app.js"></script>
+    <!-- Gráfico -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>    
   </body>
 </html>
