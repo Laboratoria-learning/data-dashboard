@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Data Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div class="enlace-student">
+      <a href="index.html"> <h4><strong>Vista Students</strong></h4></a>
+    </div>
+
+    <div class="view-overview">
+      <h1 class= "view-overview"> OVERVIEW </h1>
+    </div>
+
+
+    <nav>
+      <select name="navbar" id="navbar">
+        <option value="offices">Sedes</option>
+        <option value="aq-2016-2">Arequipa 2016-II</option>
+        <option value="aq-2017-1">Arequipa 2017-I</option>
+        <option value="cm-2017-1">Ciudad de México 2017-I</option>
+        <option value="cm-2017-2">Ciudad de México 2017-II</option>
+        <option value="lm-2016-2">Lima 2016-II</option>
+        <option value="lm-2017-1">Lima 2017-I</option>
+        <option value="lm-2017-2">Lima 2017-II</option>
+        <option value="ch-2016-2">Chile 2016-II</option>
+        <option value="ch-2017-1">Chile 2017-I</option>
+        <option value="ch-2017-2">Chile 2017-II</option>
+      </select>
+    </nav>
+    <!-- Contenido principal -->
+    <main>
+      <!-- Sección principal -->
+      <section id="principal-section" class="container">
+        <section class="section-1">
+          <div class="div-1">
+            <h2>enrollment</h2>
+            <div class="little-div-1">
+                <div id="total-students-container" class="mini-div-1">120</div>
+                <div># STUDENTS CURRENTLY ENROLLED</div>
+            </div>
+            <div class="little-div-2">
+              <div id="percent-no-students-container" class="red">20%</div>
+              <div>% DROPOUT</div>
+            </div>
+            <img src="assets/images/bar-graph.png" alt="Gráfico de columnas">
+          </div>
+          <div class="div-2">
+            <h2>achievement</h2>
+            <div class="little-div-3">
+              <div class="mini-div-1">105</div>
+              <div># STUDENTS THAT MEET THE TARGET</div>
+            </div>
+            <div class="little-div-4">
+              <div class="green">
+                <span>78%</span>
+                <i class="fa fa-caret-up" aria-hidden="true"></i>
+              </div>
+              <div>% OF TOTAL (135)</div>
+            </div>
+            <img src="assets/images/graph.png" alt="Gráfico de líneas">
+            </div>
+          <div class="div-3">
+            <h2>net promoter score</h2>
+            <div class="little-div-5">
+              <div class="green">
+                <span id="nps">78%</span>
+                <i class="fa fa-caret-up" aria-hidden="true"></i>
+              </div>
+              <div>% CUMULATIVE NPS</div>
+            </div>
+            <div class="little-div-6">
+              <ul>
+                <li id="promoters">60 % Promoters</li>
+                <li id="passive">30 % Passive</li>
+                <li id="detractors">10 % Detractors</li>
+              </ul>
+            </div>
+            <img src="assets/images/graph.png" alt="Gráfico de líneas">
+          </div>
+        </section>
+        <section class="section-2">
+          <h2>tech skills</h2>
+          <select class="" name="">
+            <option value="">overall (acumulative)</option>
+          </select>
+          <div class="div-4">
+            <div class="little-div-7">
+              <div class="mini-div-1">90</div>
+              <div># STUDENTS THAT MEET THE TARGET</div>
+            </div>
+            <div class="little-div-8">
+              <div class="green">62</div>
+              <div>% OF TOTAL (135)</div>
+            </div>
+          </div>
+          <img src="assets/images/rectangular-graphic.png" class="rectangular-graphic"alt="Gráfico de Columnas Rectangular">
+          <div class="little-div-9">
+            <img src="assets/images/circle-graphic.png" alt="Gráfico Circular">
+            <div class="color-container">
+              <div class="color-green"></div>
+              <div class="student"># STUDENTS THAT MEET THE TARGET</div>
+            </div>
+            <div class="color-container">
+              <div class="color-red"></div>
+              <div class="student"># STUDENTS THAT DON'T MEET THE TARGET</div>
+            </div>
+          </div>
+        </section>
+        <section class="section-3">
+          <h2>life skills</h2>
+          <select id="hse-select-element" name="hse-select-element">
+            <!-- Como el último sprint es el 4, por eso se empieza desde allí -->
+            <option value="">Sprint 4</option>
+            <option value="">Sprint 3</option>
+            <option value="">Sprint 2</option>
+            <option value="">Sprint 1</option>
+          </select>
+          <div class="div-5">
+            <div class="little-div-10">
+              <div class="mini-div-1">80</div>
+              <div># OVERALL CLASS AVERAGE</div>
+            </div>
+            <div class="little-div-11">
+              <div id="hse-number-of-students-container" class="green">62</div>
+              <div># OF STUDENTS THAT MEET THE TARGET</div>
+            </div>
+          </div>
+          <img src="assets/images/rectangular-graphic.png" class="rectangular-graphic" alt="Gráfico de Columnas Rectangular">
+          <div class="little-div-12">
+            <img src="assets/images/circle-graphic.png" alt="Gráfico Circular">
+            <div class="color-container">
+              <div class="color-green"></div>
+              <div class="student"># STUDENTS THAT MEET THE TARGET</div>
+            </div>
+            <div class="color-container">
+              <div class="color-red"></div>
+              <div class="student"># STUDENTS THAT DON'T MEET THE TARGET</div>
+            </div>
+          </div>
+        </section>
+        <section class="section-4">
+          <div class="div-6">
+            <h2>student satisfaction</h2>
+          <div class="little-div-13">
+            <div id="satisfied-students" class="big-number">140</div>
+            <div>% MEETING OR EXCEEDING EXPECTATIONS (CUMULATIVE)</div>
+          </div>
+            <img src="assets/images/graph.png" alt="Gráfico de líneas">
+          </div>
+          <div class="div-7">
+            <h2>teacher rating</h2>
+            <div class="little-div-14">
+              <div id="average-score-for-teachers" class="big-number">4.2</div>
+              <div>OVERALL TEACHER RATING<br>(CUMULATIVE)</div>
+            </div>
+            <img src="assets/images/graph.png" alt="Gráfico de líneas">
+          </div>
+          <div class="div-8">
+            <h2>jedi master rating</h2>
+            <div class="little-div-15">
+              <div class="fifty">
+                <span id="average-score-for-jedi">50</span>
+                <i class="fa fa-caret-up" aria-hidden="true"></i>
+              </div>
+              <div>OVERALL JEDI RATING (CUMULATIVE)</div>
+            </div>
+            <img src="assets/images/graph.png" alt="Gráfico de líneas">
+          </div>
+        </section>
+      </section>
+    </main>
+		<!-- Base de datos -->
+		<script src="./js/data.js"></script>
+		<!-- Aquí va tus archivos JS -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>

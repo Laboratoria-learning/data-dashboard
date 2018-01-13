@@ -25,6 +25,10 @@
 
     <div id="especialization">
         <h3>Especialización</h3>
+        <button type="button" id= "AQP" name="button">Arequipa</button>
+        <button type="button" id= "CDMX" name="button">Mexico</button>
+        <button type="button" id= "LIM" name="button">Lima</button>
+        <button type="button" id= "SCL" name="button">Chile</button>
         <button class = "desactive" class="active" id="javascript-button" type="button" name="button"> Javascript</button> <br>
         <button class = "desactive" class="active" id="uxdesign-button" type="button" name="button"> Ux Design</button> <br>
         <button id="front-end-designer-button"  type="button"  name="button"> Front end Designer</button> <br>
@@ -45,19 +49,19 @@
 
       <!-- Visualiza estudiantes -->
 
-      <div id="student">
+      <div class="student">
          <!--foto-->
-         <div id="photo">
+         <div class="photo">
              <img src="assets/images/photos/maria.jpg" alt="">
          </div>
          <div class="date">
             <!--datos de estudiante-->
-            <div id="date-student">
-              <div id="name" class ="big-letter">DIANA NAVARRO</div>
-              <div id="especialization-student">Fronted Developer</div>
+            <div class="date-student">
+              <div  class = "big-letter" class= "name" >DIANA NAVARRO</div>
+              <div class="especialization-student">Fronted Developer</div>
             </div>
             <!--evaluación técnica-->
-            <div id="tech-skills">
+            <div class="tech-skills">
               <div id="tech">
                 <label for="" class ="big-letter">95.6%</label>
                 <br>
@@ -65,15 +69,15 @@
               </div>
             </div>
             <!--evaluación habilidades blandas-->
-            <div id="life-skills">
-              <div id="life">
+            <div class="life-skills">
+              <div class="life">
                 <label for="" class ="big-letter">95.6%</label>
                 <br>
                 <label for="" class="little-letter">LIFE SKILLS</label>
               </div>
             </div>
             <!--evaluación ingles-->
-            <div id="english-skills">
+            <div class="english-skills">
                 <div id="english">
                     <label for="" class ="big-letter">INTERN</label>
                     <br>
@@ -83,10 +87,10 @@
             <br>
             <br>
             <!--descripción de habilidades técnicas-->
-            <div id="skills-details" class="little-letter">
-                <div id="skill-1">Javascript</div>
-                <div id="skill-2">APIs</div>
-                <div id="skill-3">JQuery</div>
+            <div class="skills-details" class="little-letter">
+                <div class="skill-1">Javascript</div>
+                <div class="skill-2">APIs</div>
+                <div class="skill-3">JQuery</div>
             </div>
             <br>
             <br>
@@ -104,6 +108,7 @@
   <script src="./js/data.js"></script>
   <!-- Aquí va tus archivos JS -->
   <script src="./js/app-1.js"></script>
+  <script src="./js/array-student-data.js"></script>
 
 </body>
 </html>
