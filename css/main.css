@@ -1,3 +1,270 @@
-/*
- * Estilos de tu proyecto
- */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+	background-color: #f7f7f7;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header{
+    width: 100%;
+    height: auto;
+    background-color:#fff;
+}
+
+.logo{
+    width:13%;
+    display: inline-block;
+    margin-left:43%;
+    margin-top:1%;
+}
+
+.menu {
+	width: 2em;
+	height: 2em;
+	padding-right: 5em;
+	padding-top: 2em;
+	float: right;
+}
+
+.fa-bars:before {
+	color: #505050;
+	font-size: 1.5em;
+}
+
+nav{
+    width:100%;
+    height:8em;
+    background-color:#e1e1e1;
+}
+
+.div-nav{
+    width:30em;
+    height:5em; 
+    position:relative;
+}
+.choose-sede-generation{
+    font-size:1.9em;
+    font-weight:700;
+    font-family: 'Montserrat', sans-serif;
+    margin-left:3em;
+    padding-top:1em;
+    background:#e1e1e1;
+    border:none;
+    width:10em;
+    height:2.8em;
+ 
+}
+
+.title{
+    position:absolute;
+    left:410px;
+    top:15px;
+    width: 500px;
+    text-align:center;
+}
+
+.title-gen{
+    position:absolute;
+    left:400px;
+    top:50px;
+    width:300px;
+    text-align:right;
+}
+
+.optgroupt{
+    font-size:0.5em;
+    margin-top:1em;
+    background:white;
+    cursor:pointer;
+}
+
+.divgeneration{
+    position:absolute;
+    left:1000px;
+    top:40px;
+    width:300px;
+    height:70px;
+}
+
+.generations{
+    position:absolute;
+    left:1000px;
+    top:40px;
+    font-size:0.5em;
+    margin-top:1em;
+    background:white;
+    cursor:pointer;
+}
+
+.menu-nav{
+    display:inline-block;
+    margin-left:3em; 
+    margin-top:1em;
+}
+.menu-nav a{
+
+    font-size:1.2em;
+    font-weight:700;
+    margin-left:2.4em;
+    color:#000;
+}
+
+.item-list{
+    text-decoration:none;
+    display:inline-block;
+    padding-bottom:0.3em;
+}
+
+.item-list:hover{
+    border-bottom: 3px solid #f7b617; 
+}
+
+.main{
+    width:100%;
+    height:auto;
+   
+}
+
+.main-content{
+    padding:3em 5.7em;
+}
+
+.boxes-top{
+    width:28%;
+    height:22.5em;
+    float:left; 
+    padding:1.3em;
+    background-color:#fff;
+    margin: 1em;
+}
+
+.boxes-top-content{
+    background-color: #f7f7f7;
+    width:8.3em;
+    height:4.2em;
+    padding:0.6em;
+    text-align:center;
+    float:left; 
+    margin:1.5em 0.3em;
+}
+
+.promoter-score{
+    font-size:0.8em;
+    list-style:none;
+    text-align:left;
+}
+
+.boxes-top-content p{
+    font-size:0.5em;
+    margin-top:0.5em;
+}
+
+.boxes-top-graphic{
+    clear:both;
+    width:20em;
+    height:11em;
+}
+
+.boxes-top-graphic img{
+    width:90%;
+}
+ /************medio**************/
+
+ .boxes-medium{
+    width:100%;
+    padding:1em 2.5em;
+    background-color:#fff;
+    clear:both;
+    margin: 10px 0 35px 0;
+ }
+
+.boxes-medium h4{
+    display:inline-block;
+}
+
+ .overall{
+     float:right;
+ }
+
+ .cajitas{
+     outline:1px solid black;
+ }
+
+ .boxes-center-skills{
+     clear:both;
+     height:6em;
+}
+.boxes-center{
+    background-color: #f7f7f7;
+    width:9.5em;
+    height:4em;
+    padding:0.6em;
+    text-align:center;
+    float:left; 
+    margin:1.5em 0.3em;
+}
+
+.boxes-center p{
+    font-size:0.6em;
+    margin-top:0.5em;
+}
+
+.box-graphics{
+    width:100%
+    height:4em;
+    clear:both;
+
+}
+.graphic-bar{
+    display:inline-block;
+    vertical-align:top;
+    width:61%;
+    height:21em;
+}
+
+.graphic-bar img{
+    width:70%;
+}
+
+.graphic-circle{
+    display:inline-block;
+    height:21em;
+    width:38%;
+}
+
+.graphic-circle img{
+    width:75%;
+    margin-top:0.5em;
+    margin-left:4em;
+}
+
+.leyend-graphics{
+    width:20em;
+    height:auto;
+    margin-left:5em;
+     margin-top:1em;
+   
+}
+
+.leyend-graphics p{
+    font-size:9px;
+    display:inline-block;
+  
+}
+
+/*******************/
+.listGenerationStyle{
+   // display:inline-block;
+    outline:1px solid red;
+    list-style:none;
+    margin-left: 1em;
+
+}
+
+.display-none{
+    display:none;
+}
