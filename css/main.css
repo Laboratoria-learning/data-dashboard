@@ -1,3 +1,216 @@
-/*
- * Estilos de tu proyecto
- */
+/* Style general */
+ 
+ * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+ }
+
+/* Style for Nav */
+
+.nav-principal {
+    display: block;
+    width: 17%;
+    height: 100vh;
+    float: left;
+    background-color: #f7b617;
+    padding: 17px;
+    filter: drop-shadow(2px 2px 5px #999);
+}
+
+.icon-list {
+    margin-top: 50px;
+}
+
+.icon-user {
+    padding: 10px;
+}
+
+.icon-user #ale-profile {
+    width: 40px;
+    border-radius: 150px;
+}
+
+.icon-user #user-name {
+    color: #333333;
+    margin-left: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.nav-principal ul {
+    list-style-type: none;
+    margin-right: 4px;
+    padding: 0;
+}
+
+.nav-principal li {
+    padding: 15px;
+    color: #333333;
+    font-size: 18px;
+}
+
+.nav-principal li i {
+    margin: 4px;
+    padding-right: 15px;
+}
+
+/* Style for header */
+
+header {
+    width: 83%;
+    margin-left: 17%;
+    background-color: #f7b617;
+    filter: drop-shadow(2px 2px 5px #999);
+    padding: 5px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+header section {
+    height: 100%
+}
+
+.name-student {
+    width: 56%;
+    padding: 0;
+    margin-top: 25px;
+    margin-left: 10px;
+}
+
+.name-student input {
+    width: 100%;
+    background: #fff;
+    padding: 7px;
+    border-radius: 10px;
+    color: #333333;
+    outline: none;
+}
+
+.name-student input::-webkit-input-placeholder {
+    color: #333333;
+}
+
+.img-logo {
+    width: 340px;
+    position: absolute;
+    margin-left: 47%;
+    margin-top: -35px;
+} 
+
+.img-logo #log-dash {
+    width: 180px;
+    height: 35px;
+    border-radius: 8px;
+    filter: drop-shadow(2px 2px 5px #999);
+}
+
+.img-logo .setting {
+    margin-left: 70%;
+    width: 100px;
+    margin-top: -30px;
+    font-size: 18px;
+}
+
+/* Style for First Section */
+
+.section {
+    width: 80%;
+    margin-left: 17%;
+    margin-bottom: 5%;
+    font-size: 15px;
+    font-weight: 700;
+    filter: drop-shadow(2px 2px 5px #999);
+}
+
+.container-sedes {
+    width: 15%;
+    display: inline-block;
+    background-color: #f7b617;
+    color: #333333;
+    font-weight: 700;
+    margin: 0px 50px;
+    border-radius: 5px;
+}
+
+.list-sedes {
+    width: 15%;
+    height: 40px;
+    display: inline-block;
+    background-color: #f7b617;
+    color: #333333;
+    font-weight: 700;
+    margin: 0px 20px;
+    border-radius: 5px;
+}
+
+.list-sedes {
+    list-style: none;
+}
+
+.list-sedes ul {
+    margin: 8px;
+    list-style: none;
+    height: 30px;
+}
+
+.menu-sedes {
+    width: 150px;
+    margin-left: 50px;
+    font-size: 20px;
+}
+
+.menu-generations{
+    margin-left: 95px;
+    width: 150%;
+    border-radius: 5px;
+    background: #f7b617;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+} 
+
+/* Style for Second Section */
+
+.container {
+    width: 26%;
+    display: inline-block;
+    border: 2px solid #000;
+    padding-right: 13px;
+    padding-left: 13px;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.container-paragraph {
+    display: inline-block;
+    margin-left: 35px;
+    padding: 0;
+    color: #333333;
+    font-size: 10px;    
+}
+
+.title {
+    display: inline-block;
+    margin-right: 20px;
+    margin-left: 40px;
+}
+
+/* Style for Third Section */
+
+
+.title-skills{
+    display: inline-block;
+    margin: 0;
+}
