@@ -4,287 +4,199 @@
     <meta charset="utf-8">
     <title>Data Dashboard</title>
     <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   </head>
+
   <body>
-    <header>
-      <img src="assets/images/logo-laboratoria.svg" alt="logo">
+    <header class="header">
+      <figure>
+
+        <img class="logo"src="assets/images/logo-laboratoria.svg" alt="logo Laboratoria">
+
+      </figure>
     </header>
+
     <nav class="navigator">
-       <ul>
+      <ul>
 
-        <li><p value="overview">OVERVIEW</p><hr class="sub"></li>
-        <li><p  value="teachers">TEACHERS</p><hr class="none"></li>
-        <li><p>STUDENTS</p><hr class="none"></li>
+        <li value="overview">OVERVIEW</li>
+        <li value="teachers">TEACHERS</li>
+        <li>STUDENTS</li>
 
-       </ul>
+      </ul>
     </nav>
 
-    <main>
-      <section id=filtros>
 
-       <div>
-          <select class="place-filter" name="Promoción">
-            <option>SEDE</option>
-            <option value="AQP">Arequipa</option>
-            <option value="LIM">Lima</option>
-            <option value="CDMX">Mexico</option>
-            <option value="SCL">Santiago de chile</option>
-          </select>
-          <select class="code-filter" name="Promoción">
-            <option>PROMOCIÓN</option>
-            <option value="2016-2">2016-2</option>
-            <option value="2017-1">2017-1</option>
-            <option value="2017-2">2017-2</option>
-            <option value="">seleccionar todos</option>
-          </select>
-          <select class="filtro" name="turno">
-            <option value="">TURNO</option>
-            <option value="">am</option>
-            <option value="">pm</option>
-            <option value="">seleccionar todos</option>
-          </select>
-          <select class="sprint-filter" name="sprint">
-            <option value="">SPRINT</option>
-            <option value="1">Sprint-1</option>
-            <option value="2">Sprint-2</option>
-            <option value="3">Sprint-3</option>
-            <option value="4">Sprint-4</option>
-            <option value="5">Sprint-5</option>
-            <option value="6">Sprint-6</option>
-            <option value="">seleccionar todos</option>
-          </select>
-        </div>
 
-      </section>
+ <section class="graphics-container">
 
-   <section id=content>
+   <section id="filters">
+      <div>
 
-        <div class="name-sprint">
-          <!--insertar sede Sede seleccionada-->
-          <p id=sede>SEDE LIMA</p>
-          <!--insertar sprint seleccionado-->
-          <p id=sprint>SPRINT N° 1 - PROGRAMACIÓN BASICA</p>
-        </div>
-        <!--Ingresar datos de data general-->
-        <div id=datos>
-          <!--Promedio general de notas-->
-          <div class="container-overview show">
+         <select class="place-filter" name="Promoción">
+           <option>SEDE</option>
+           <option value="AQP">Arequipa</option>
+           <option value="LIM">Lima</option>
+           <option value="CDMX">Mexico</option>
+           <option value="SCL">Santiago de chile</option>
+         </select>
 
-            <div class="hide-for-teachers show">
-              <div id=promedio-total>  <!--- -->
-                <span>
-                  <p>GLOBAL ACHIEVEMENT</p>
-                  <!--Insetar Promedio total en porcentaje-->
-                  <p>80%</p>
-                </span>
-                  <!--Insertar grafico promedio total de notas-->
-                <!--<img src="assets/images/circle-graphic.png" alt="grafico">-->
-                <!--Insertar datos numericos promedio total -->
-                <div id=chart_div></div>
-                <table>
-                  <tbody>
-                    <tr>
-                      <td></td>
-                      <td>%</td>
-                      <td>#</td>
-                    </tr>
-                  <tr>
-                    <td>Students that meet the target</td>
-                    <!--Insertar porcentaje de alumnas que supera la meta-->
-                    <td id= "percentaje-passed" class="percentage-passed">80</td>
-                    <!--Insertar numero de alumnas que supera la meta-->
-                    <td id="passed"class="students-passed">160</td>
-                  </tr>
-                  <tr>
-                    <td>Students that not meet the target</td>
-                    <!--Insertar porcentaje de alumnas que no paso el minimo-->
-                    <td id="percentaje-noPassed">20</td>
-                    <!--Insertar numero de alumnas que no paso el minimo-->
-                    <td id="noPassed">40</td>
-                  </tr>
-                  </tbody>
-                </table>
-              </div>
+         <select class="code-filter" name="Promoción">
+           <option>PROMOCIÓN</option>
+           <option value="2016-2">2016-2</option>
+           <option value="2017-1">2017-1</option>
+           <option value="2017-2">2017-2</option>
+           <option value="">seleccionar todos</option>
+         </select>
 
-              <div id=notas-hse>
-                <span>
-                  <p>HSE ACHIEVEMENT</p>
-                  <!--Promedio total en porcentaje-->
-                  <p>80%</p>
-                </span>
-                <!--Insertar grafico promedio de notas HSE-->
-                <img src="assets/images/circle-graphic.png" alt="grafico">
-                <!--Insertar datos numericos promedio notas HSE-->
-                <table>
-                  <tbody>
-                  <tr>
-                    <td>Students that meet the target</td>
-                    <!--Insertar porcentaje de alumnas que paso el minimo hse por sprint-->
-                    <td>90%</td>
-                    <!--Insertar numero de alumnas que paso el minimo hse por sprint-->
-                    <td>117</td>
-                  </tr>
-                  <tr>
-                    <td>Students that not meet the target</td>
-                    <!--Insertar porcentaje de alumnas que no paso el minimo hse por sprint-->
-                    <td>10%</td>
-                    <!--Insertar numero de alumnas que no paso el minimo hse por sprint-->
-                    <td>13</td>
-                  </tr>
-                  </tbody>
-                </table>
-              </div>
+         <select class="filtro" name="turno">
+           <option value="">TURNO</option>
+           <option value="">am</option>
+           <option value="">pm</option>
+           <option value="">seleccionar todos</option>
+         </select>
 
-              <div id=notas-tech>
-                  <span>
-                      <p> TECH ACHIEVEMENT </p>
-         <!--Promedio total en porcentaje-->
-                      <p>80%</p>
-                  </span>
-         <!--Insertar grafico promedio de notas TECH-->
-                  <img src="assets/images/circle-graphic.png" alt="grafico">
-                         <!--Insertar datos numericos promedio notas HSE-->
-                   <table>
-                       <tbody>
-                          <tr>
-                             <td>Students that meet the target</td>
-      <!--Insertar porcentaje de alumnas que paso el minimo tech por sprint-->
-                             <td>90%</td>
-      <!--Insertar numero de alumnas que paso el minimo tech por sprint-->
-                             <td>117</td>
-                         </tr>
-                         <tr>
-                             <td>Students that not meet the target</td>
-      <!--Insertar porcentaje de alumnas que no paso el minimo tech por sprint-->
-                              <td>10%</td>
-      <!--Insertar numero de alumnas que no paso el minimo tech por sprint-->
-                              <td>13</td>
-                         </tr>
-                       </tbody>
-                    </table>
+       </div>
+     </section>
 
-                     </div>
-    <div id=enrolled>
-      <span>
-        <p>ENROLLMENT</p>
-      </span>
-      <!--Insertar grafico estudiantes activas por sede-->
-      <img src="assets/images/bar-graph.png" alt="grafico">
-      <table>
-        <tbody>
-        <tr>
-          <!--Insetar total estudiantes activas-->
-          <td class="enrollment-students">145</td>
-          <!--Insertar porcentaje de desertoras-->
-          <td class="dropout">20%</td>
-        </tr>
-        <tr>
-          <td> # Estudents Enrolled </td>
-          <td> % Dropout </td>
-        </tr>
-      </tbody>
-      </table>
-    </div>
-    <div id=nps>
-      <span>
-        <p>NET PROMOTER SCORE</p>
-      </span>
-      <!--Insertar grafico nps por sede-->
-      <img src="assets/images/graph.png" alt="grafico">
-      <table>
-        <tbody>
-        <tr>
-          <!--Insertar  nps-->
-          <td class="nps"> 78% </td>
-          <!--Insertar % promotores-->
-          <td class="promoters"> 60% </td>
-          <td> Promoters </td>
-        </tr>
-        <tr>
-          <td>  NPS </td>
-          <!--Insertar % pasive-->
-          <td class="pasive"> 30% </td>
-          <td> Pasive </td>
-        </tr>
-        <tr>
-          <td></td>
-          <!--Insertar % detractors-->
-          <td class="detractors"> 30% </td>
-          <td>detractors</td>
-        </tr>
-      </tbody>
-      </table>
-    </div>
-    <div id=satisfaction>
-      <span>
-        <p>ESTUDENTS SATISFACTION</p>
-      </span>
-      <!--Insertar grafico estudiantes activas por sede-->
-      <img src="assets/images/graph.png" alt="grafico">
-      <table>
-        <tbody>
-        <tr>
-          <!--Insetar total estudiantes satisfechas-->
-          <td>140</td>
-        </tr>
-        <tr>
-          <td>MEETING OR EXCEEDING EXPECTACION</td>
-        </tr>
-      </tbody>
-      </table>
-    </div>
-            </div>
-  <div class="container-teachers show">
-  <div id=teacher>
-    <span>
-      <p>TEACHER RATINGS</p>
-    </span>
-    <!--Insertar grafico estudiantes activas por sede-->
-    <img src="assets/images/graph.png" alt="grafico">
-    <table>
-      <tbody>
-      <tr>
-        <!--Insetar el promedio de los profesores-->
-        <td class="teacher-ratings">4.2</td>
-      </tr>
-      <tr>
-        <td>OVERALL TEACHER RATING</td>
-      </tr>
-    </tbody>
-    </table>
-  </div>
-  <div id=jedi>
-      <span>
-        <p>JEDI MASTER RATINGS</p>
-      </span>
-      <!--Insertar grafico estudiantes activas por sede-->
-      <img src="assets/images/graph.png" alt="grafico">
-      <table>
-        <tbody>
-        <tr>
-          <!--Insetar promedio de los jedi-master-->
-          <td class="jedi-master-ratings">50</td>
-        </tr>
-        <tr>
-          <td>OVERALL JEDI RATING</td>
-        </tr>
-      </tbody>
-      </table>
-    </div>
-  </div>
-    </div>
+
+   <div class="global-data">
+
+     <div class="enrollment title-global">
+
+      <h3>ENROLLMENT</h3>
+      <p class="short-item"> <span class="enrollment-students">120</span> # Students enrolled  </p>
+      <p class="short-item"> <span class="dropout">20</span> % Dropout  </p>
+      <figure>
+        <img src="assets/images/bar-graph.png" alt="grafico">
+      </figure>
+
      </div>
 
-    </section>
+     <div class="global-achievement title-global">
 
-    </main>
+      <h3>ACHIEVEMENT</h3>
+      <p class="large-item">   Students that meet the target<span class="achievement"> # 105</span><span> %20</span></p>
+      <p class="large-item">   Students that not meet the target<span> # 105</span><span> %20</span></p>
+
+      <figure>
+        <img src="assets/images/circle-graphic.png" alt="grafico">
+      </figure>
+
+     </div>
+
+     <div class="net-promoter-score title-global">
+
+      <h3>NET PROMOTER SCORE</h3>
+      <p class="short-item"> <span class="nps">78</span>% Cumulative NPS  </p>
+      <p class="nps-item">
+         <span>Promoters</span><span class="promoters">60%</span>
+         <span>Pasive</span><span class="pasive">30%</span>
+         <span>Detractors</span><span class="detractors">10%</span>
+        </p>
+      <figure>
+        <img src="assets/images/graph.png" alt="grafico">
+      </figure>
+
+     </div>
+     </div>
+
+
+     <div class="container-ratings">
+       <div class="enrollment title-global">
+
+        <h3>TEACHER RATINGS</h3>
+        <p class="short-item"> <span class="teacher-ratings">4.1</span> </p>
+        <p class="short-item">Overal Teacher Rating</p>
+        <figure>
+          <img src="assets/images/bar-graph.png" alt="grafico">
+        </figure>
+
+       </div>
+
+       <div class="enrollment title-global">
+
+        <h3>JEDI MASTER RATINGS</h3>
+        <p class="short-item"> <span class="jedi-master-ratings">3.2</span>   </p>
+        <p class="short-item">Overall Jedi Rating </p>
+        <figure>
+          <img src="assets/images/bar-graph.png" alt="grafico">
+        </figure>
+
+       </div>
+
+       <div class="enrollment title-global">
+
+        <h3>STUDENT SATISFACTION</h3>
+        <p class="short-item"> <span class="students-satisfaction">140</span>   </p>
+        <p class="short-item">Meeting or exeeding expectation </p>
+        <figure>
+          <img src="assets/images/bar-graph.png" alt="grafico">
+        </figure>
+
+       </div>
+     </div>
+
+     <div class="sprint-data">
+          <div id="filters">
+
+        <select class="sprint-filter" name="sprint">
+          <option value="">SPRINT</option>
+          <option value="1">Sprint-1</option>
+          <option value="2">Sprint-2</option>
+          <option value="3">Sprint-3</option>
+          <option value="4">Sprint-4</option>
+          <option value="5">Sprint-5</option>
+          <option value="6">Sprint-6</option>
+          <option value="">seleccionar todos</option>
+        </select>
+
+
+        <h1>: "PROGRAMACIÓN BASICA"</h1>
+
+        </div>
+           <div class="sprint-achievement">
+
+             <div class="hse-achievement">
+
+              <h3>HSE ACHIEVEMENT</h3>
+              <p class="large-item">   Students that meet the target<span> # 105</span><span> %20</span></p>
+              <p class="large-item">   Students that not meet the target<span> # 105</span><span> %20</span></p>
+              <figure>
+                <img src="assets/images/bar-graph.png" alt="grafico">
+              </figure>
+
+             </div>
+
+             <div class="tech-achievement">
+
+              <h3>TECH ACHIEVEMENT</h3>
+              <p class="large-item">   Students that meet the target<span> # 105</span><span> %20</span></p>
+              <p class="large-item">   Students that not meet the target<span> # 105</span><span> %20</span></p>
+              <figure>
+                <img src="assets/images/bar-graph.png" alt="grafico">
+              </figure>
+
+             </div>
+
+           </div>
+
+      </div>
+     </div>
+
+
+ </section>
+
+
+
+
+
+
+
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
-		<!-- Aquí va tus archivos JS -->
-
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<!-- Aquí va tus archivos JS -->
     <script src="./js/app.js"></script>
-
   </body>
 </html>
