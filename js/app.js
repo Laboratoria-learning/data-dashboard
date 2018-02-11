@@ -1,3 +1,5 @@
+
+console.log(data);
 var selectSede = document.getElementById('select-sede');
 var selectGen = document.getElementById('select-generation');
 var SEDE = '';
@@ -7,10 +9,11 @@ SEDE = selectSede.value;
 GEN = selectGen.value;
 selectGen.addEventListener('change', generation);
 
+
 function generation(event) {
   SEDE = selectSede.value;
   GEN = selectGen.value;
-  students = data[SEDE][GEN].students;
+  var students = data[SEDE][GEN].students;
   var register = document.getElementById('register');
   register.textContent = students.length;
   var desertStudents = document.getElementById('desertStudents');
@@ -54,10 +57,52 @@ function generation(event) {
     return count;
   }
   
+     
+  function newFunction() {
+    if (arrAverage[k][0] >= 1260 && arrAverage[k][1] >= 840) {
+      count++;
+    }
+  }
+
   var achievePcent = document.getElementById('achievePcent');
   achievePcent.textContent = parseInt(achieveFunction() * 100 / (students.length + 1)) + '%';
+  //
+
+  function habilityHse() {
+
+    promedioHse = [];
+    contador = 0;
+    for (i = 0; i < students.length; i++) {
+      pointHse = 0;
+     
+      if (students[i].active === true) {
+        for (j = 0; j < students[i].sprints.length; j++) {
+          var hse = students[i].sprints[j].score.hse;
+          pointHse += hse;
+        }
       
-      
+        var genHse = pointHse / students[i].sprints.length;
+        promedioHse.push([genHse]);
+
+        if (genHse >= 840) 
+          contador++;        
+      }
+    }
+    return contador;
+  }
+
+
+  var hseTotal = document.getElementById('hseTotal');
+  var totalStudents = document.getElementById('totalStudents');
+  hseTotal.textContent = parseInt(habilityHse() * 100 / (students.length + 1)) + '%';
+  totalStudents.textContent = habilityHse();
+
+  //holis
+ 
+
+  // //holis
+
+
   // NPS
   var rating = data[SEDE][GEN].ratings;
   var npsPercent = document.getElementById('nps');
@@ -69,11 +114,11 @@ function generation(event) {
       
       satisfaction += nps;
     }
-    return parseInt(satisfaction / rating.length) + '%'
+    return parseInt(satisfaction / rating.length) + '%';
   };
     
-  var satPercent = document.getElementById('satPercent')
-  satPercent.textContent = satPrcnt()
+  var satPercent = document.getElementById('satPercent');
+  satPercent.textContent = satPrcnt();
   function satPrcnt() {
     var promoters = 0;
     var passive = 0;
@@ -84,7 +129,7 @@ function generation(event) {
       detractors += rating[i].nps.detractors;
     }
 
-    return parseInt(promoters / rating.length) + '% Promoters' + '\n' + parseInt(passive / rating.length) + '% Passive' + '\n' + parseInt(detractors/rating.length) + '% Detractor';
+    return parseInt(promoters / rating.length) + '% Promoters' + '\n' + parseInt(passive / rating.length) + '% Passive' + '\n' + parseInt(detractors / rating.length) + '% Detractor';
   }
 
   // Jedi
@@ -107,22 +152,30 @@ function generation(event) {
   totalPointsTeacher.textContent = totalTeacher;
   indiceSatisfaction += ((satisfaction.cumple + satisfaction.supera) / 2);
   percentSatisfaction.textContent = indiceSatisfaction + '%';
-  // debugger
-  students = data[SEDE][GEN].students;
-  // var totalPointHse = 0;
-  var totalPointHse = 0;
-  for (var y = 0; y < students.length; y++) {
-    var pointHse = students[y].sprints;
-    for (var p = 0; p < pointHse.length; p++) {
-      var Hse = pointHse[p].score;
-      totalPointHse += pointHse[p].score;
-      // totalPointHse = Hse
+};
+
+//funcion hse por sprints
+
+var optionSprintHse = document.getElementById('option-hse');
+optionSprintHse.addEventListener('change', function() {
+  var option = optionSprintHse.value;
+  
+  var students = data[SEDE][GEN].students;
+  contador = 0;
+  for (i = 0; i < students.length; i++) { 
+    if (students[i].active === true) {           
+      var hse = students[i].sprints[option -1].score.hse;                 
+      if (hse >= 840) 
+        contador++;       
     }
   }
-  console.log(pointHse);
-  console.log(Hse);
-};
-// };
+  var hseTotal = document.getElementById('hseTotal');
+  var totalStudents = document.getElementById('totalStudents');
+  hseTotal.textContent = parseInt(contador * 100 / (students.length + 1)) + '%';
+  totalStudents.textContent = contador;
+});
+  
+
 var submenu = document.getElementById('span');
 submenu.addEventListener('click', showMenu);
 
@@ -137,12 +190,3 @@ function showMenu() {
     listMenu.classList.add('hide');
   }
 }
-
-function newFunction() {
-{
-    if (arrAverage[k][0] >= 1260 && arrAverage[k][1] >= 840) {
-      count++;
-    }
-  }
-}
-
