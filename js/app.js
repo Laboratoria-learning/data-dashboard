@@ -31,10 +31,12 @@ var ZERO = 0;
 var campusDefault = centers[ZERO].key;
 var cohortDefault = centers[ZERO].cohortList[ZERO];
 
-// funcion que retorna todas las estudiantes :
+// funcion que retorna todas las estudiantes (array) :
 
 function getStudents(data, campus = campusDefault, cohort = cohortDefault) {
   return data[campus][cohort].students;
 }
 
 console.log(getStudents(data));
+
+// funcion que retorna los ratings(array):
