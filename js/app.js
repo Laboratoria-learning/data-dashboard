@@ -40,3 +40,6 @@ function getStudents(data, campus = campusDefault, cohort = cohortDefault) {
 console.log(getStudents(data));
 
 // funcion que retorna los ratings(array):
+function getRatings(data, campus, cohort) {
+  return data[campus][cohort].ratings;
+}

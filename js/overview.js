@@ -119,7 +119,7 @@ function achievement(data, campus = campusDefault, cohort = cohortDefault) {
   var objAchievement = {};
   
   var students = getStudents(data, campus, cohort);
-  
+
   var targetedStudents = getTargetedStudents(students);
   var totalStudents = getActiveStudents(students);
   var targetedStudentsPercent = getAchievementPercent(totalStudents, targetedStudents);
@@ -131,4 +131,54 @@ function achievement(data, campus = campusDefault, cohort = cohortDefault) {
 } 
 
 console.log(achievement(data));
+/* ---------------- Fin achievement---------------*/
+
+/* ----------------Net Promoter Score---------------*/
+
+// obteniendo un objeto con las propiedades: promoters , passive y detractors:
+
+function getProPasDet(ratings) {
+  var obj = {};
+  var promoters = 0, passive = 0, detractors = 0;
+  var totalSprints = ratings.length;
+
+  for (var i = 0; i < totalSprints; i++) {
+    var sprint = ratings[i];
+
+    promoters += sprint.nps.promoters;
+    passive += sprint.nps.passive;
+    detractors += sprint.nps.detractors;
+  }
+
+  obj.promotersPercent = (promoters / totalSprints).toFixed(2);
+  obj.passivePercent = (passive / totalSprints).toFixed(2);
+  obj.detractorsPercent = (detractors / totalSprints).toFixed(2);
+
+  return obj;
+}
+
+function getNps(data, campus = campusDefault, cohort = cohortDefault) {
+  var objNetPromoterScore = null;
+  var ratings = getRatings(data, campus, cohort);
+
+  objNetPromoterScore = getProPasDet(ratings);
+
+  return objNetPromoterScore;
+}
+
+function calcNetPromoterScore(promotersPercent, detractorsPercent) {
+  return promotersPercent - detractorsPercent;
+}
+
+function netPromoterScore(data, campus = campusDefault, cohort = cohortDefault) {
+  var objNetPromoterScore = getNps(data, campus, cohort);
+
+  objNetPromoterScore.nps = calcNetPromoterScore(objNetPromoterScore.promotersPercent, objNetPromoterScore.detractorsPercent);
+  
+  return objNetPromoterScore;
+}
+
+console.log(netPromoterScore(data));
+/* ----------------Fin Net Promoter Score---------------*/
+
 
