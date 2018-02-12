@@ -331,5 +331,26 @@ function studentSatisfaction(data, campus = campusDefault, cohort = cohortDefaul
 };
 
 console.log(studentSatisfaction(data));
+/* ----------------Fin Student Satisfaction---------------*/
 
+/* ----------------Teacher Rating---------------*/
 
+// funcion que retorna el puntaje del profesor en el ultimo sprint
+function getLastTeacherRating(ratings) {
+  var teacherRating = 0;
+  // ultimo sprint
+  var lastSprint = ratings.length - 1;
+
+  teacherRating = ratings[lastSprint].teacher;
+
+  return teacherRating.toFixed(2);
+};
+
+// funcion que retorna el puntaje del profesor de acuerdo a la sede
+function teacherRating(data, campus = campusDefault, cohort = cohortDefault) {
+  var ratings = getRatings(data, campus, cohort);
+
+  return getLastTeacherRating(ratings);
+};
+console.log(teacherRating(data));
+/* ----------------Fin Teacher Rating---------------*/
