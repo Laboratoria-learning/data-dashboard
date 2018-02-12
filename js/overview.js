@@ -236,7 +236,7 @@ function techSkills(data, campus = campusDefault, cohort = cohortDefault) {
 
   return objTechSkills;
 };
-console.log(techSkills(data))
+console.log(techSkills(data));
 /* ----------------Fin Tech Skills---------------*/
 
 /* ----------------Life Skills---------------*/
@@ -353,4 +353,27 @@ function teacherRating(data, campus = campusDefault, cohort = cohortDefault) {
   return getLastTeacherRating(ratings);
 };
 console.log(teacherRating(data));
+
 /* ----------------Fin Teacher Rating---------------*/
+
+/* ----------------Jedi Master Rating---------------*/
+
+// funcion que retorna el puntaje del Jedi master en el ultimo sprint
+function getLastJediMasterRating(ratings) {
+  var jediMasterRating = 0;
+  // ultimo sprint
+  var lastSprint = ratings.length - 1;
+
+  jediMasterRating = ratings[lastSprint].jedi;
+
+  return jediMasterRating.toFixed(2);
+};
+
+// funcion que retorna el puntaje del jedi master de acuerdo a la sede
+function jediMasterRating(data, campus = campusDefault, cohort = cohortDefault) {
+  var ratings = getRatings(data, campus, cohort);
+  
+  return getLastJediMasterRating(ratings);
+};
+console.log(jediMasterRating(data));
+/* ----------------Fin Jedi Master Rating---------------*/
