@@ -56,8 +56,8 @@ function generation(event) {
     }
     return count;
   }
-  
-     
+
+
   function newFunction() {
     if (arrAverage[k][0] >= 1260 && arrAverage[k][1] >= 840) {
       count++;
@@ -74,18 +74,18 @@ function generation(event) {
     contador = 0;
     for (i = 0; i < students.length; i++) {
       pointHse = 0;
-     
+
       if (students[i].active === true) {
         for (j = 0; j < students[i].sprints.length; j++) {
           var hse = students[i].sprints[j].score.hse;
           pointHse += hse;
         }
-      
+
         var genHse = pointHse / students[i].sprints.length;
         promedioHse.push([genHse]);
 
-        if (genHse >= 840) 
-          contador++;        
+        if (genHse >= 840)
+          contador++;
       }
     }
     return contador;
@@ -94,13 +94,34 @@ function generation(event) {
 
   var hseTotal = document.getElementById('hseTotal');
   var totalStudents = document.getElementById('totalStudents');
-  hseTotal.textContent = parseInt(habilityHse() * 100 / (students.length + 1)) + '%';
+  hseTotal.textContent = parseInt(habilityHse() * 100 / (students.length)) + '%';
   totalStudents.textContent = habilityHse();
 
-  //holis
- 
+  //  holis
+  function habilitiesTech() {
+    techAverage = [];
+    count = 0;
+    for (i = 0; i < students.length; i++) {
+      score = 0;
 
-  // //holis
+      if (students[i].active === true) {
+        for (j = 0; j < students[i].sprints.length; j++) {
+          var tech = students[i].sprints[j].score.tech;
+          score += tech;
+        }
+
+        var techAccum = score / students[i].sprints.length;
+        techAverage.push([techAccum]);
+
+        if (techAverage >= 1260)
+          count++;
+      }
+    }
+    return count;
+  }
+
+  document.getElementById('totalTech').textContent = parseInt(habilitiesTech() * 100 / (students.length)) + '%';
+  document.getElementById('techGoals').textContent = habilitiesTech();
 
 
   // NPS
@@ -111,12 +132,12 @@ function generation(event) {
     var satisfaction = 0;
     for (i = 0; i < rating.length; i++) {
       var nps = rating[i].nps.promoters - rating[i].nps.detractors;
-      
+
       satisfaction += nps;
     }
     return parseInt(satisfaction / rating.length) + '%';
   };
-    
+
   var satPercent = document.getElementById('satPercent');
   satPercent.textContent = satPrcnt();
   function satPrcnt() {
@@ -157,16 +178,16 @@ function generation(event) {
 //funcion hse por sprints
 
 var optionSprintHse = document.getElementById('option-hse');
-optionSprintHse.addEventListener('change', function() {
+optionSprintHse.addEventListener('change', function () {
   var option = optionSprintHse.value;
-  
+
   var students = data[SEDE][GEN].students;
   contador = 0;
-  for (i = 0; i < students.length; i++) { 
-    if (students[i].active === true) {           
-      var hse = students[i].sprints[option -1].score.hse;                 
-      if (hse >= 840) 
-        contador++;       
+  for (i = 0; i < students.length; i++) {
+    if (students[i].active === true) {
+      var hse = students[i].sprints[option - 1].score.hse;
+      if (hse >= 840)
+        contador++;
     }
   }
   var hseTotal = document.getElementById('hseTotal');
@@ -174,7 +195,7 @@ optionSprintHse.addEventListener('change', function() {
   hseTotal.textContent = parseInt(contador * 100 / (students.length + 1)) + '%';
   totalStudents.textContent = contador;
 });
-  
+
 
 var submenu = document.getElementById('span');
 submenu.addEventListener('click', showMenu);
