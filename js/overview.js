@@ -258,14 +258,14 @@ function getHseAverage(students) {
         var sprint = sprints[j];
 
         totalHse += sprint.score.hse;
-      }
+      };
 
       overallHse += Number((totalHse / totalSprints).toFixed(2));
       targetedStudents++;
-    }
-  }
+    };
+  };
   return (overallHse / targetedStudents).toFixed(2);
-}
+};
 // obteniendo el nuero de estudiante que pasó el mínimo
 function getHseTargetedStudents(students) {
   var targetedStudents = 0;
@@ -281,17 +281,17 @@ function getHseTargetedStudents(students) {
         var sprint = sprints[j];
 
         hseTotal += sprint.score.hse;
-      }
+      };
 
       var averageHse = hseTotal / sprints.length;
 
       if (averageHse > 840) {
         targetedStudents++;
-      }
-    }
-  }
+      };
+    };
+  };
   return targetedStudents;
-}
+};
 
 
 // creando objeto para la funcionalidad Tech Skills:
@@ -304,8 +304,32 @@ function lifeSkills(data, campus = campusDefault, cohort = cohortDefault) {
   objLifeSkills.targetedStudents = getHseTargetedStudents(students);
 
   return objLifeSkills;
-}
+};
 
-console.log(lifeSkills(data))
+console.log(lifeSkills(data));
+/* ----------------Fin Life Skills---------------*/
+
+/* ----------------Student Satisfaction---------------*/
+
+// funcion que retorna el nuero de stisfaccion :
+function getStudentSatisfaction(ratings) {
+  var studentSatisfaction = 0;
+  // ultimo sprint
+  var lastSprint = ratings.length - 1;
+
+  var studentRating = ratings[lastSprint].student;
+  studentSatisfaction = studentRating.cumple + studentRating.supera;
+
+  return studentSatisfaction.toFixed(2);
+};
+
+// funcion que retorna la satisfaccion de las estudiantes de acuerdo a la sede
+function studentSatisfaction(data, campus = campusDefault, cohort = cohortDefault) {
+  var ratings = getRatings(data, campus, cohort);
+  
+  return getStudentSatisfaction(ratings);
+};
+
+console.log(studentSatisfaction(data));
 
 
