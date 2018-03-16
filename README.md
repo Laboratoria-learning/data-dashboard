@@ -1,18 +1,15 @@
-# Data Dashboard
+# "Data Dashboard"
 
-* **Track:** _Common Core_
-* **Curso:** _Creando tu primer sitio web interactivo_
-* **Unidad:** _Producto final_
+Data Dashboard es una representación gráfica de los principales indicadores que permite ver el rendimiento de la alumna de laboratoria y a la vez intervienen en la consecución de los objetivos de Laboratoria, y que está orientada a la toma de decisiones para optimizar la estrategia de la empresa..
+
+![data-dashboard-Preview](https://user-images.githubusercontent.com/32303570/37528131-cd745f36-2901-11e8-9573-d45c6b26d6e7.png)
+
+## Desarrollado para 
+
+[Laboratoria](http://laboratoria.la)
 
 ## Objetivo
 Es crear un web interactiva, de complejidad media, que muestre los datos y el perfil de una estudiante de Laboratoria.
-
-## Pasos Adicionales
-
-* Se realizó el UX de la web
-* Se maquetado
-* Se programo su interacción con JavaScript
-* Se insertó gráficos estadísticos.
 
 ### Requerimientos
 
