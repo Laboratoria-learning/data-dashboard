@@ -1,4 +1,4 @@
-# "Data Dashboard"
+# Data Dashboard
 
 Data Dashboard es una representación gráfica de los principales indicadores que permite ver el rendimiento de la alumna de laboratoria y a la vez intervienen en la consecución de los objetivos de Laboratoria, y que está orientada a la toma de decisiones para optimizar la estrategia de la empresa..
 
