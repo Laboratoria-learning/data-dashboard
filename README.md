@@ -1,12 +1,19 @@
 ![logo](https://cdn-images-1.medium.com/max/945/1*3ebT5azEfTrKxANOE3BwyA.jpeg)
 # Data Dashboard
 
-### Hipotesis
-
 #### Problematica actual
 ##### Definicion, delimitacion y planeación
 
+Los integrantes del staff de Laboratoria dedican mucho de su tiempo en encontrar la data que necesitan para elaborar sus actividades debido a la forma en que su data se encuentra organizada o quiza por la falta de organizacion de la misma.
+En el siguiente documentos se analizara la  forma en que se manipula ,almacena y accede a la data dentro de Laboratoria y a su vez se planteara una manera efectiva para solucionar.
+  _Principalmente nos enfocaremos en encontrar y diseñar una herramienta para organizar la informacion relacionada con la interacción Staff-Alumnado para agilizar los procesos_
 
+
+**Lluvia de ideas**
+Los integrantes de este team (Navi, Lillys y Henie)por medio de una lluvia de ideas  llegamos a la conclucion de que la problematica que enfrentamos se puede resolver si implementados una base de datos automatizada que permita acceder a la informacion de manera sencilla, clara y facil de usar.
+
+### Hipotesis
+Si creamos un sitio web y una app que permita acceder a la data y a su vez la organice y permita nutrirla se maximizara el tiempo que se dedica a las actividades administrativas y a su ves permitira claridad en los resultados.
 
 ### Objetivos
 ###### En este proyecto se engloban dos objetivos principales:
