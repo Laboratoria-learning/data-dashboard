@@ -35,8 +35,29 @@ En Laboratoria, las Training Managers (TMs) hacen un gran trabajo al analizar la
 Las training manager pierden mucho tiempo buscando la informacion por que su herramienta de trabajo son distintos archvos en distintas ubicaciones y pierden mucho tiempo buscando y concatenando la informacion en cada uno de ellos.
 
 ### Data de la investigación
-Se realizaron distintas encuestas con preguntas abiertas a cada uno de los integrantes del equipo de Laboraria GDL de manera que pudieramos encontrar una relación de necesidades entre cada uno de ellos. A continuación los links de las entrevistas:
+Se realizó una encuesta con preguntas abiertas a cada uno de los integrantes del equipo de Laboraria GDL de manera que pudieramos encontrar una relación de necesidades entre cada uno de ellos. A continuación los links de las entrevistas:
 
-1. [Entrevista Meme](https://www.youtube.com/watch?v=UzTmTzBJutQ)
-2. [Entrevista Karla ](https://www.youtube.com/watch?v=ydkRl33TN0g)
-3. [Entrevista Inti ](https://www.youtube.com/watch?v=WfA5FjN4rFQ)
+###### Entrevista Meme
+
+<a href="https://www.youtube.com/watch?v=UzTmTzBJutQ" ><img src="https://i.ytimg.com/vi/UzTmTzBJutQ/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCK7unGori5ynhcVzIM45ElCQTcTA"
+alt="IMAGE ALT TEXT HERE" width="340" height="180" border="2" /></a>
+
+###### Entrevista Karla
+
+<a href="https://www.youtube.com/watch?v=ydkRl33TN0g&t=45s" ><img src="https://i.ytimg.com/vi/ydkRl33TN0g/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLD4-OFti8B2eOcdqOqZVGj3OYcJnA"
+alt="IMAGE ALT TEXT HERE" width="340" height="180" border="2" /></a>
+
+###### Entrevista Inti
+
+<a href="https://www.youtube.com/watch?v=WfA5FjN4rFQ&t=2s"><img src="https://i.ytimg.com/vi/WfA5FjN4rFQ/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCjVGS1B-byQJYxdZ6u7N7rloPyVA" alt="IMAGE ALT TEXT HERE" width="340" height="180" border="2" /></a>
+
+#### Analisis de los datos
+La necesidad general que se obtuvo de las entrevistas realizadas fue que la información se encuentra en distintas fuentes como archivos de excel y LMS.
+
+Las personas entrevistadas coicidieron en que la mayoria del tiempo que invertian en buscar los datos necesarios de cada alumna o informacion en general se perdía principalmente en consultar las distintas fuentes.
+
+Otro punto importante es que esta misma informacion se encuentra en distintas rutas de ubicación.
+
+Ademas la información principal que buscan es toda aquella relacionada con las estudiantes del bootcamp.
+
+### Resolución del problema
