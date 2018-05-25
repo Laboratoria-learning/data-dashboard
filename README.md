@@ -61,3 +61,20 @@ Otro punto importante es que esta misma informacion se encuentra en distintas ru
 Ademas la información principal que buscan es toda aquella relacionada con las estudiantes del bootcamp.
 
 ### Resolución del problema
+
+#### Lluvias de ideas
+La lluvia de ideas fue fisicamente en papel para poder discutir y crear la mejor versión de la estructura y representacion de nuestro sitio web.
+
+##### Pruebas
+![lluvia de ideas](assets/images/bs1.jpeg)
+![lluvia de ideas](assets/images/bs2.jpeg)
+![lluvia de ideas](assets/images/bs3.jpeg)
+![lluvia de ideas](assets/images/bs4.jpeg)
+
+#### Versiones anteriones al resultado
+![lluvia de ideas](assets/images/res1.jpeg)
+![lluvia de ideas](assets/images/res2.jpeg)
+![lluvia de ideas](assets/images/res3.jpeg)
+![lluvia de ideas](assets/images/res4.jpeg)
+
+### Sketching 
