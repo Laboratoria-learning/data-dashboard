@@ -23,3 +23,20 @@
 
 > Nota: No olvides que es una buena práctica describir tu proyecto en este
 > archivo `README.md` y también desplegar tu web a Github Pages :smiley:.
+
+# Desarrollo
+
+## Investgacion para el desarrollo del proyecto
+
+### Definición del problema
+En Laboratoria, las Training Managers (TMs) hacen un gran trabajo al analizar la mayor cantidad de datos posibles respecto al desempeño de las estudiantes para apoyarlas en su aprendizaje. Para revisar esta data, las TMs, normalmente, tienen que revisar muchos documentos de excel (Google Spreadsheets) que están localizados en distintas carpetas y ubicaciones. Muchas veces pierden tiempo localizando estos documentos y ejecutando fórmulas para obtener los datos que necesitan.
+
+### Hipotesis
+Las training manager pierden mucho tiempo buscando la informacion por que su herramienta de trabajo son distintos archvos en distintas ubicaciones y pierden mucho tiempo buscando y concatenando la informacion en cada uno de ellos.
+
+### Data de la investigación
+Se realizaron distintas encuestas con preguntas abiertas a cada uno de los integrantes del equipo de Laboraria GDL de manera que pudieramos encontrar una relación de necesidades entre cada uno de ellos. A continuación los links de las entrevistas:
+
+1. [Entrevista Meme](https://www.youtube.com/watch?v=UzTmTzBJutQ)
+2. [Entrevista Karla ](https://www.youtube.com/watch?v=ydkRl33TN0g)
+3. [Entrevista Inti ](https://www.youtube.com/watch?v=WfA5FjN4rFQ)
