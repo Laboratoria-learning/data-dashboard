@@ -16,7 +16,7 @@ Además, dado que Laboratoria tiene muchas generaciones, regularmente 2 generaci
 
 ---
 ## DESCRIPCIÓN:
-En este proyecto final nuestro objetivo es crear un dashboard, el cual permita monitorear a cada una de las coders inscritas en LABORATORIA en las diferentes sedes ubicadas en Lima, Guadalajara, CDMX, Santiago de Chile y Sao Paulo. 
+En este proyecto final nuestro objetivo es crear un dashboard, el cual permita monitorear a cada una de las coders inscritas en LABORATORIA de las diferentes sedes ubicadas en Lima, Guadalajara, CDMX, Santiago de Chile y Sao Paulo. 
 
 Decidimos nombrar a nuestro dashboard **ELLE**, el cual es un nombre femenino que se deriva del francés "elle" que significa "ella". También nos gustó que **ELLE** se pronuncia como la "L" en inglés, haciendo alusión a la L de **LABORATORIA**. En otras palabras, podemos decir que cada que digamos ELLE estamos diciendo: *"Ella de Laboratoria"*. 
 
@@ -26,7 +26,7 @@ Decidimos nombrar a nuestro dashboard **ELLE**, el cual es un nombre femenino qu
 ## INVESTIGACIÓN Y EMPATÍA
 
 ### ENTREVISTAS
-Se llegó al acuerdo de que todo el grupo (la primera generación de la sede de GDL) hiciera una lista de preguntas base para después entrevistar a las Training Managers de las diferentes sedes, las dos coaches y la psicóloga de la sede de Guadalajara, y de esa forma todas tendríamos la misma información y ya cada equipo se encargaría de dar su planteación del problema y la oferta de soluciones.
+Se llegó al acuerdo de que todo el grupo (la primera generación de la sede de GDL) hiciera una lista de preguntas base para después entrevistar a las Training Managers de las diferentes sedes, las dos coaches y la psicóloga de la sede de Guadalajara, y de esa forma todas tendríamos la misma información y ya cada equipo se encargaría de dar su planteamiento del problema y la oferta de soluciones.
 
 Las entrevistas realizadas en la sede de GDL fueron en vivo, por lo cual se pudieron grabar en vídeo. Lo contrario a las entrevistas para las Training Managers de las diferentes sedes, que colaboraron de forma escrita.
 
@@ -54,7 +54,7 @@ Gracias a las entrevistas pudimos localizar varios factores en común, como por 
 ## DEFINICIÓN
 
 ### HIPÓTESIS
-Aunque Excel y Google Forms han sido el común denominador para organizar y accesar a la información de las estudiantes de **Laboratoria**, no son la opción más óptima o más deseable de las usuarias debido a que el contenido no está almacenado en una misma fuente, sino que por el contrario se dividen en múltiples documentos, haciendo que el proceso del análisis de la data sea más tardado y por consecuencia más tedioso. Por eso al crear un Dashboard amigable que contenga toda la información en un sólo lugar para que que puedan monitorear a cada una de las coders inscritas en **LABORATORIA** va a  garantizar su uso y un feedback positivo.
+Aunque Excel y Google Forms han sido el común denominador para organizar y accesar a la información de las estudiantes de **Laboratoria**, no son la opción más óptima o más deseable de las usuarias debido a que el contenido no está almacenado en una misma fuente, sino que por el contrario se dividen en múltiples documentos, haciendo que el proceso del análisis de la data sea más tardado y por consecuencia más tedioso. Por eso al crear un Dashboard amigable que contenga toda la información en un sólo lugar para que puedan monitorear a cada una de las coders inscritas en **LABORATORIA** va a  garantizar su uso y un feedback positivo.
 
 ### PROBLEMA PRINCIPAL
 Las usuarias, principalmente las Training Managers coinciden en que aunque hasta ahora han podido desempeñar un seguimiento y buena organización de la data a través de Excel y Google Forms, el proceso de hacerlo no es el más factible ya que les consume mucho tiempo que podrían dedicar a otras responsabilidades. 
