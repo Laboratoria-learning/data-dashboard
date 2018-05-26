@@ -49,24 +49,14 @@ Aunque Excel y Google Forms han sido el común denominador para organizar y acce
 Las usuarias, principalmente las Training Managers coinciden en que aunque hasta ahora han podido desempeñar un seguimiento y buena organización de la data a través de Excel y Google Forms, el proceso de hacerlo no es el más factible ya que les consume mucho tiempo que podrían dedicar a otras responsabilidades. 
 
 ### LLUVIA DE IDEAS
-
-
-
-
-
-
-la cual les permita monitorear a cada una de las coders inscritas en **LABORATORIA** en cada una de las sedes  (Arequipa, Lima, Guadalajara, CDMX, Santiago de Chile y Sao Paulo).
-para esto se relizaron una serie de entrevistas.  
-
-
-
-## Descripcion:
-cada Training manager tendra un usuario y contrase;a lo cual permitira hacer el **Dashboard** mas personalizado.
-al ingresar podra seleccionar la sede
+#### DEFINICIÓN DEL PROBLEMA
+![Definición del Problema](assets/images/README/mindmap1.png)
 
 ---
 
 ## IDEACIÓN
+#### PROPUESTAS DE SOLUCIONES
+![Soluciones del Problema](assets/images/README/mindmap2.png)
 
 ---
 
@@ -82,3 +72,11 @@ al ingresar podra seleccionar la sede
 ![SKETCH](assets/images/README/SKETCH.png)
 
 ---
+la cual les permita monitorear a cada una de las coders inscritas en **LABORATORIA** en cada una de las sedes  (Arequipa, Lima, Guadalajara, CDMX, Santiago de Chile y Sao Paulo).
+para esto se relizaron una serie de entrevistas.  
+
+
+
+## Descripcion:
+cada Training manager tendra un usuario y contrase;a lo cual permitira hacer el **Dashboard** mas personalizado.
+al ingresar podra seleccionar la sede
