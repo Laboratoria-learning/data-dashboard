@@ -31,9 +31,9 @@ Las entrevistas realizadas en la sede de GDL fueron en vivo, por lo cual se pudi
 + [Entrevista a Valentina Smith - Training Manager](https://drive.google.com/file/d/1Xwq1qGKpPJXU144_uooemkn_Jq-kUYvu/view?usp=sharing)
 
 ### RESULTADOS DE ENTREVISTAS
-![alt text](assets/images/README/interviews1.jpeg)
+![Entrevistas GDL](assets/images/README/interviews1.jpeg)
 
-![alt text](assets/images/README/interviews2.jpeg)
+![Entrevistas TM](assets/images/README/interviews2.jpeg)
 
 ### DESCUBRIMIENTOS
 
@@ -43,11 +43,10 @@ Gracias a las entrevistas pudimos localizar varios factores en común, como por 
 ## DEFINICIÓN
 
 ### HIPÓTESIS
-Aunque Excel y Google Forms han sido el común denominador para organizar y accesar a la información de las estudiantes de **Laboratoria**, no son la opción más óptima o más deseable de los usuarios debido a que el contenido no está almacenado en una misma fuente, sino que por el contrario se dividen en múltiples documentos, haciendo que el proceso del análisis de la data sea más tardado y por consecuencia más tedioso. Por eso al crear un Dashboard amigable que contenga toda la información en un sólo lugar garanterizaría su uso y un feedback positivo.
+Aunque Excel y Google Forms han sido el común denominador para organizar y accesar a la información de las estudiantes de **Laboratoria**, no son la opción más óptima o más deseable de las usuarias debido a que el contenido no está almacenado en una misma fuente, sino que por el contrario se dividen en múltiples documentos, haciendo que el proceso del análisis de la data sea más tardado y por consecuencia más tedioso. Por eso al crear un Dashboard amigable que contenga toda la información en un sólo lugar para que que puedan monitorear a cada una de las coders inscritas en **LABORATORIA** va a  garanterizar su uso y un feedback positivo.
 
 
 
-Esto asegura que al nosotras crear una aplicación amigable y con toda la información en un **Dashboard** que esté dirigido principalmente a las **Training Managers**, el consumo va a ser totalmente favorable.
 
 
 la cual les permita monitorear a cada una de las coders inscritas en **LABORATORIA** en cada una de las sedes  (Arequipa, Lima, Guadalajara, CDMX, Santiago de Chile y Sao Paulo).
@@ -74,6 +73,8 @@ al ingresar podra seleccionar la sede
 ## SKETCHING Y PROTOTYPING 
 
 #### HISTORIA DE USUARIO
+![Griselle Fuentes](assets/images/README/GriselleFuentes.jpg)
+
 
 #### PROPUESTAS DE RESOLUCIONES
 
