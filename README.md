@@ -51,6 +51,9 @@ alt="IMAGE ALT TEXT HERE" width="340" height="180" border="2" /></a>
 
 <a href="https://www.youtube.com/watch?v=WfA5FjN4rFQ&t=2s"><img src="https://i.ytimg.com/vi/WfA5FjN4rFQ/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCjVGS1B-byQJYxdZ6u7N7rloPyVA" alt="IMAGE ALT TEXT HERE" width="340" height="180" border="2" /></a>
 
+###### Entrevistas training manager por sede
+[Entrevistas Training Manager](https://claseslaboratoria.slack.com/files/U9LTZ6RT7/FAW02ARNW/encuestas-tm-laboratoria.docx)
+
 #### Analisis de los datos
 La necesidad general que se obtuvo de las entrevistas realizadas fue que la información se encuentra en distintas fuentes como archivos de excel y LMS.
 
@@ -77,4 +80,8 @@ La lluvia de ideas fue fisicamente en papel para poder discutir y crear la mejor
 ![lluvia de ideas](assets/images/res3.jpeg)
 ![lluvia de ideas](assets/images/res4.jpeg)
 
-### Sketching 
+### Sketching
+#### Resolución de la problematica
+De acuerdo  a la las entrevistas que se les aplicaron a las training manager de las distintas cedes y a las mentoras de la cede de Laboraria, coinciden en que la mayoria de los datos que requieren para hacer un analisis general se encuentran en distintas fuentes y les genera una inversión de tiempo mucho mas amplia de la necesaria.
+Nuestra herramienta les permitirá acceder de manera rapida a un analisis general de la informacion de estudiantes, profesores y generalidades por cada una de las cedes y generación.
+A continuación el prototipo de la herramienta.
