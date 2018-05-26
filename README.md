@@ -99,10 +99,16 @@ Por último tenemos la página de **Notas Técnicas** aquí podremos medir por s
 
 
 #### SKETCH DEL FLUJO DE LA APLICACIÓN
-[PROTOTYPE WITH ANIMATION](https://xd.adobe.com/view/8a8096c7-7648-4e64-4ae3-ff358f4fa5a0-fcb1/?fullscreen&hints=off)
+[PROTOTIPO CON ANIMACIÓN](https://xd.adobe.com/view/8a8096c7-7648-4e64-4ae3-ff358f4fa5a0-fcb1/?fullscreen&hints=off)
+
+    INSTRUCCIONES Para ver el prototipo con animación de forma efectiva tienes que hacer lo siguiente:
+        * Dar click en LOGIN
+        * Dar click en GDL
+        * Dar click en MAIN
+
 
 ![SKETCH](assets/images/README/SKETCH.png)
 
-[PROTOTYPE WITH ANIMATION](https://xd.adobe.com/view/8a8096c7-7648-4e64-4ae3-ff358f4fa5a0-fcb1/?fullscreen&hints=off)
+
 
 ---
