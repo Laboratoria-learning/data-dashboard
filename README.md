@@ -1,3 +1,7 @@
+
+![Encabezado](assets/images/README/Elle.jpg)
+
+
 # **DATA DASHBOARD - ELLE**
 
 + **Alumnas** : Ada Ramírez y Orquídea Campos
@@ -105,6 +109,11 @@ Por último tenemos la página de **Notas Técnicas** aquí podremos medir por s
         * Dar click en LOGIN
         * Dar click en GDL
         * Dar click en MAIN
+
+**PALETA DE COLORES** UTILIZADA PARA EL DISEÑO DEL PROTOTIPO.
+
+![Paleta de Colores](assets/images/README/colorScheme.jpg)
+
 
 
 ![SKETCH](assets/images/README/SKETCH.png)
