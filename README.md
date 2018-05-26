@@ -32,10 +32,10 @@
 En Laboratoria, las Training Managers (TMs) hacen un gran trabajo al analizar la mayor cantidad de datos posibles respecto al desempeño de las estudiantes para apoyarlas en su aprendizaje. Para revisar esta data, las TMs, normalmente, tienen que revisar muchos documentos de excel (Google Spreadsheets) que están localizados en distintas carpetas y ubicaciones. Muchas veces pierden tiempo localizando estos documentos y ejecutando fórmulas para obtener los datos que necesitan.
 
 ### Hipotesis
-Las training manager pierden mucho tiempo buscando la informacion por que su herramienta de trabajo son distintos archvos en distintas ubicaciones y pierden mucho tiempo buscando y concatenando la informacion en cada uno de ellos.
+Las training manager invierten mucho tiempo buscando la informacion por que sus herramientas de trabajo se componen de distintos archivos localizados en diferentes ubicaciones y pierden mucho tiempo buscando y concatenando la informacion en cada uno de ellos.
 
 ### Data de la investigación
-Se realizó una encuesta con preguntas abiertas a cada uno de los integrantes del equipo de Laboraria GDL de manera que pudieramos encontrar una relación de necesidades entre cada uno de ellos. A continuación los links de las entrevistas:
+Se realizó una encuesta con preguntas abiertas a cada uno de los integrantes del equipo de Laboraria GDL asi como tambien a las TM´s de cada una de las sedes, de manera que pudieramos encontrar una relación de necesidades de cada uno de ellos. A continuación los links de las entrevistas:
 
 ###### Entrevista Meme
 
@@ -57,11 +57,11 @@ alt="IMAGE ALT TEXT HERE" width="340" height="180" border="2" /></a>
 #### Analisis de los datos
 La necesidad general que se obtuvo de las entrevistas realizadas fue que la información se encuentra en distintas fuentes como archivos de excel y LMS.
 
-Las personas entrevistadas coicidieron en que la mayoria del tiempo que invertian en buscar los datos necesarios de cada alumna o informacion en general se perdía principalmente en consultar las distintas fuentes.
+Las personas entrevistadas coicidieron en que la mayoria del tiempo que invertian en buscar los datos necesarios de cada alumna o informacion en general, se perdía principalmente en consultar las distintas fuentes.
 
 Otro punto importante es que esta misma informacion se encuentra en distintas rutas de ubicación.
 
-Ademas la información principal que buscan es toda aquella relacionada con las estudiantes del bootcamp.
+Además la información principal que buscan es toda aquella relacionada con las estudiantes del bootcamp.
 
 ### Resolución del problema
 
@@ -82,7 +82,7 @@ La lluvia de ideas fue fisicamente en papel para poder discutir y crear la mejor
 
 ### Sketching
 #### Resolución de la problematica
-De acuerdo  a la las entrevistas que se les aplicaron a las training manager de las distintas cedes y a las mentoras de la cede de Laboraria, coinciden en que la mayoria de los datos que requieren para hacer un analisis general se encuentran en distintas fuentes y les genera una inversión de tiempo mucho mas amplia de la necesaria.
+De acuerdo  a las entrevistas que se les aplicaron a las training manager de las distintas cedes y a las mentoras de la cede de Laboraria GDL, coinciden en que la mayoria de los datos que requieren para hacer un analisis general se encuentran en distintas fuentes y les genera una inversión de tiempo mucho mas amplia de la necesaria.
 
 Nuestra herramienta les permitirá acceder de manera rapida a un analisis general de la informacion de estudiantes, profesores y generalidades por cada una de las cedes y generación.
 
