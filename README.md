@@ -158,7 +158,21 @@ El proceso para las deserciones es complicado y externo, el proceso es confuso y
 *App y versión web **Se inicia con la versión caso 1 y posteriormente se implementarán las versiones necesarias para cubrir el total de los casos**
 ***
 ## Sketching y Prototyping
-
+![Sketch](assets/images/1.jpg)
+***
+![Sketch](assets/images/2.jpg)
+***
+![Sketch](assets/images/3.jpg)
+***
+![Sketch](assets/images/4.jpg)
+***
+![Sketch](assets/images/5.jpg)
+***
+![Sketch](assets/images/6.jpg)
+***
+![Sketch](assets/images/7.jpg)
+***
+![Sketch](assets/images/1.jpg)
 
 ### Flujo
 ![digrama de flujo](https://i.pinimg.com/originals/bb/48/50/bb48502996b4f8ecee052a4064cf9a6d.gif)
