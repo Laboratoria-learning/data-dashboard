@@ -43,7 +43,13 @@ Gracias a las entrevistas pudimos localizar varios factores en común, como por 
 ## DEFINICIÓN
 
 ### HIPÓTESIS
-Aunque Excel y Google Forms han sido el común denominador para organizar y accesar a la información de las estudiantes de **Laboratoria**, no son la opción más óptima o más deseable de las usuarias debido a que el contenido no está almacenado en una misma fuente, sino que por el contrario se dividen en múltiples documentos, haciendo que el proceso del análisis de la data sea más tardado y por consecuencia más tedioso. Por eso al crear un Dashboard amigable que contenga toda la información en un sólo lugar para que que puedan monitorear a cada una de las coders inscritas en **LABORATORIA** va a  garanterizar su uso y un feedback positivo.
+Aunque Excel y Google Forms han sido el común denominador para organizar y accesar a la información de las estudiantes de **Laboratoria**, no son la opción más óptima o más deseable de las usuarias debido a que el contenido no está almacenado en una misma fuente, sino que por el contrario se dividen en múltiples documentos, haciendo que el proceso del análisis de la data sea más tardado y por consecuencia más tedioso. Por eso al crear un Dashboard amigable que contenga toda la información en un sólo lugar para que que puedan monitorear a cada una de las coders inscritas en **LABORATORIA** va a  garantizar su uso y un feedback positivo.
+
+### PROBLEMA PRINCIPAL
+Las usuarias, principalmente las Training Managers coinciden en que aunque hasta ahora han podido desempeñar un seguimiento y buena organización de la data a través de Excel y Google Forms, el proceso de hacerlo no es el más factible ya que les consume mucho tiempo que podrían dedicar a otras responsabilidades. 
+
+### LLUVIA DE IDEAS
+
 
 
 
@@ -57,12 +63,6 @@ para esto se relizaron una serie de entrevistas.
 ## Descripcion:
 cada Training manager tendra un usuario y contrase;a lo cual permitira hacer el **Dashboard** mas personalizado.
 al ingresar podra seleccionar la sede
-
-
-### PROBLEMA PRINCIPAL
-
-### LLUVIA DE IDEAS
-
 
 ---
 
