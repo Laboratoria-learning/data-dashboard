@@ -67,6 +67,26 @@ Las usuarias, principalmente las Training Managers coinciden en que aunque hasta
 
 ## IDEACIÓN
 #### PROPUESTAS DE SOLUCIONES
+Se propone una aplicación amigable tipo **Dashboard** dirigido a las **Training Managers**, la cual les permita monitorear a cada una de las coders inscritas en **LABORATORIA**.
+Cada Training manager tendrá un usuario y contraseña que le permitirá hacer el **Dashboard** mas personalizado.
+Al ingresar podrá seleccionar la sede.
+En la primer página ELLE la saludará, le dará la hora, y le preguntará cuáles son los 3 objetivos principales de su día. También tendrá un botón de empezar el cuál llevará al usuario a otra página donde podrá observar de manera gráfica el número de estudiantes activas, estudiantes que desertaron, estudiantes que han cubierto la calificación mínima aprobatoria y promedio; la calificación del sprint que se está cursando, también podrá seleccionar sprints pasados.
+En esta página tambien puede accesar mediante un botón a los datos de **HSE** y **Notas Técnicas**
+La página de **HSE** nos muestra mediante graficas los puntos que se califican como son:
+    
+    * Asistencia.
+    * Comunicación.
+    * Manejo de estrés.
+    * Puntualidad.
+    * Trabajo en equipo.
+Del sprint que se esta trabajando así como la evolución a lo largo del bootcamp.
+Por último tenemos la página de **Notas Técnicas** aquí podremos medir por sprint el avance de nuestras coders en los siguientes puntos:
+    
+    * Quizzes.
+    * Requizzes.
+    * Retos.
+    * Productos.
+    
 ![Soluciones del Problema](assets/images/README/mindmap2.png)
 
 ---
