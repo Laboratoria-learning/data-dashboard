@@ -1,4 +1,7 @@
-# **DATA DASHBOARD**
+# **DATA DASHBOARD - ELLE**
+
++ **Alumnas** : Ada Ramírez y Orquídea Campos
++ **Unidad** : 4 DATA DASHBOARD
 
 
 El dashboard es una herramienta utilizada por profesores, training managers, directores y gerentes de Laboratoria para ver rápidamente qué está pasando en el salón de clases de Laboratoria. En el dashboard, los usuarios mencionados pueden ver rápidamente estadísticas y datos en tiempo real como:
@@ -10,6 +13,14 @@ El dashboard es una herramienta utilizada por profesores, training managers, dir
 + Promedio de notas técnicas
 
 Además, dado que Laboratoria tiene muchas generaciones, regularmente 2 generaciones por año (estas generaciones empezaron en el 2014), y que opera en 5 sedes (Guadalajara, Ciudad de México, Lima, Santiago de Chile y Sao Paulo), es posible que los usuarios quieran ver datos de sedes / generaciones anteriores para poder hacer comparaciones.
+
+---
+## DESCRIPCIÓN:
+En este proyecto final nuestro objetivo es crear un dashboard, el cual permita monitorear a cada una de las coders inscritas en LABORATORIA en las diferentes sedes ubicadas en Lima, Guadalajara, CDMX, Santiago de Chile y Sao Paulo. 
+
+Decidimos nombrar a nuestro dashboard **ELLE**, el cual es un nombre femenino que se deriva del francés "elle" que significa "ella". También nos gustó que **ELLE** se pronuncia como la "L" en inglés, haciendo alusión a la L de **LABORATORIA**. En otras palabras, podemos decir que cada que digamos ELLE estamos diciendo: *"Ella de Laboratoria"*. 
+
+**ELLE** tendrá un acceso exclusivo para personal de Laboratoria, por lo cual cada uno tendrá un nombre de usuario y una contraseña. Una vez dentro, ELLE mostrará un mapa que señalará las diferentes sedes existentes para que el usuario pueda dar un click a la sede de su preferencia. ELLE pretende solucionar los problemas detectados en las entrevistas realizadas, para así agilizar el sistema de evaluación.
 
 ---
 ## INVESTIGACIÓN Y EMPATÍA
@@ -66,17 +77,7 @@ Las usuarias, principalmente las Training Managers coinciden en que aunque hasta
 ![Griselle Fuentes](assets/images/README/GriselleFuentes.jpg)
 
 
-#### PROPUESTAS DE RESOLUCIONES
-
 #### SKETCH DEL FLUJO DE LA APLICACIÓN
 ![SKETCH](assets/images/README/SKETCH.png)
 
 ---
-la cual les permita monitorear a cada una de las coders inscritas en **LABORATORIA** en cada una de las sedes  (Arequipa, Lima, Guadalajara, CDMX, Santiago de Chile y Sao Paulo).
-para esto se relizaron una serie de entrevistas.  
-
-
-
-## Descripcion:
-cada Training manager tendra un usuario y contrase;a lo cual permitira hacer el **Dashboard** mas personalizado.
-al ingresar podra seleccionar la sede
