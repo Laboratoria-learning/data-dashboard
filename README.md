@@ -86,7 +86,7 @@ Por último tenemos la página de **Notas Técnicas** aquí podremos medir por s
     * Requizzes.
     * Retos.
     * Productos.
-    
+
 ![Soluciones del Problema](assets/images/README/mindmap2.png)
 
 ---
@@ -94,10 +94,15 @@ Por último tenemos la página de **Notas Técnicas** aquí podremos medir por s
 ## SKETCHING Y PROTOTYPING
 
 #### HISTORIA DE USUARIO
+
 ![Griselle Fuentes](assets/images/README/GriselleFuentes.jpg)
 
 
 #### SKETCH DEL FLUJO DE LA APLICACIÓN
+[PROTOTYPE WITH ANIMATION](https://xd.adobe.com/view/8a8096c7-7648-4e64-4ae3-ff358f4fa5a0-fcb1/?fullscreen&hints=off)
+
 ![SKETCH](assets/images/README/SKETCH.png)
+
+[PROTOTYPE WITH ANIMATION](https://xd.adobe.com/view/8a8096c7-7648-4e64-4ae3-ff358f4fa5a0-fcb1/?fullscreen&hints=off)
 
 ---
