@@ -83,5 +83,9 @@ La lluvia de ideas fue fisicamente en papel para poder discutir y crear la mejor
 ### Sketching
 #### Resolución de la problematica
 De acuerdo  a la las entrevistas que se les aplicaron a las training manager de las distintas cedes y a las mentoras de la cede de Laboraria, coinciden en que la mayoria de los datos que requieren para hacer un analisis general se encuentran en distintas fuentes y les genera una inversión de tiempo mucho mas amplia de la necesaria.
+
 Nuestra herramienta les permitirá acceder de manera rapida a un analisis general de la informacion de estudiantes, profesores y generalidades por cada una de las cedes y generación.
+
 A continuación el prototipo de la herramienta.
+
+https://marvelapp.com/374c7fj/screen/43329131
