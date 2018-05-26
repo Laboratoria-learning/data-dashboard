@@ -70,7 +70,7 @@ al ingresar podra seleccionar la sede
 
 ---
 
-## SKETCHING Y PROTOTYPING 
+## SKETCHING Y PROTOTYPING
 
 #### HISTORIA DE USUARIO
 ![Griselle Fuentes](assets/images/README/GriselleFuentes.jpg)
@@ -79,8 +79,6 @@ al ingresar podra seleccionar la sede
 #### PROPUESTAS DE RESOLUCIONES
 
 #### SKETCH DEL FLUJO DE LA APLICACIÓN
+![SKETCH](assets/images/README/SKETCH.png)
 
 ---
-
-
-
