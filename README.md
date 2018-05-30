@@ -103,7 +103,7 @@ Por último tenemos la página de **Notas Técnicas** aquí podremos medir por s
 
 
 #### SKETCH DEL FLUJO DE LA APLICACIÓN
-[PROTOTIPO CON ANIMACIÓN](https://xd.adobe.com/view/8a8096c7-7648-4e64-4ae3-ff358f4fa5a0-fcb1/?fullscreen&hints=off)
+[PROTOTIPO CON ANIMACIÓN](https://xd.adobe.com/view/f34a8b9a-fd1b-4a2f-44ac-2b61e87b5867-857b/?fullscreen&hints=off)
 
     INSTRUCCIONES Para ver el prototipo con animación de forma efectiva tienes que hacer lo siguiente:
         * Dar click en LOGIN
