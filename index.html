@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
-  </head>
-  <body>
+    <link rel="stylesheet" href="css/main.css">
+</head>
 
-		<!-- Base de datos -->
-		<script src="./js/data.js"></script>
-		<!-- Aquí va tus archivos JS -->
+<body>
+
+    <nav id='grOpcionBar'>
+        <div class="grProfile">
+            <img id="grImgProfile" src="assets/images/profile.jpg" alt="Profile">
+        </div>
+        <li><a href="#">LOCATION</a></li>
+        <li><a href="#">STUDENTS</a></li>
+        <li><a href="#">TEACHERS</a></li>
+        <li><a href="#">GENERAL INFORMATION</a></li>
+
+        <div class="grCalendar">
+            <iframe id="calendar" src="https://calendar.google.com/calendar/b/3/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;height=600&amp;wkst=2&amp;bgcolor=%2366ffff&amp;src=grm3o2k2n7qk5ldc1338arill8%40group.calendar.google.com&amp;color=%2342104A&amp;ctz=America%2FMexico_City"
+                width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        </div>
+    </nav>
+    <header id="grListSedeGen">
+        <img src="" alt="">
+        <!-- logo de laboratoria en el header -->
+
+    </header>
+
+    <!-- Base de datos -->
+    <script src="./js/data.js"></script>
+    <!-- Aquí va tus archivos JS -->
     <script src="./js/app.js"></script>
-  </body>
+</body>
+
 </html>

@@ -1,3 +1,58 @@
-/*
- * Estilos de tu proyecto
- */
+body {
+    display: block;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+li{
+    list-style: none;
+    border: 1px solid gray;
+    margin-top: 1em;
+    height: 1em;
+    width: 13em;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 2em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+a{
+    text-decoration: none;
+
+}
+
+#grOpcionBar {
+    height: 40em;
+    width: 20%;
+    background-color: rgb(246, 201, 85);
+    float: left;
+}
+
+#grListSedeGen {
+    height: 6em;
+    width: 80%;
+    background-color: white;
+    border-bottom: 2px solid rgb(246, 201, 85);
+    float: left;
+}
+
+#grProfile, #grImgProfile {
+    height: 8em;
+    height: 8em;
+    border-radius: 50%;
+    margin-left: 25%;
+    margin-top: 2em;
+}
+
+#calendar{
+height: 12em;
+width: 13em;
+margin-top: 2em;
+margin-left: 2em;
+border-radius: 5px;
+border: 1px solid gray;
+}
