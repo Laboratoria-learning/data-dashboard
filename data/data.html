@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <header>
+      <img src="../assets/images/logo2.png" id="logo2" alt="">
+      <nav>
+        <ul>
+          <li> <a href="../index.html" class="menu" >Inicio</a></li>
+          <li> <a href="http://www.laboratoria.la/" target="_blank" class="menu">Sobre Nosotros</a></li>
+          <li> <a href="http://empresas.laboratoria.la/" target="_blank" class="menu">Empresas</a></li>
+          <li> <a href="http://convocatoria.laboratoria.la/" target="_blank" class="menu">Postula</a></li>
+          <li> <a href="#" id="here">Data Dashboard</a></li>
+        </ul>
+     </nav>
+    </header>
+    <section class="container" id="container-form">
+        <img src="../assets/images/funders.jpg" alt="">
+        <form class="formulario" id="formulario-data">
+          <h2>Data Dashboard</h2>
+          <input id="formulario-input" type="text" name="usuario" placeholder="&#128187; Usuario">
+          <input class="formulario-password" type="password" name="contraseña" placeholder="&#128272; Password">
+          <input class="formulario-submit" id="button" type="button" name="" value="Ingresar">
+        </form>
+   </section>
+   <section class="filter" id="filter">
+      <div class="title">
+        <h3>DATA DASHBOARD</h3>
+
+      </div>
+      <div class="icons">
+        <i class="fas fa-chart-pie"></i>
+        <i class="far fa-chart-bar"></i>
+        <i class="fas fa-chart-area"></i>
+      </div>
+      <div class="title-two" id="title-two">
+        <h3>SEDES</h3>
+      </div>
+  <!--   <div class="sedes" id="arequipa">
+       <span>AREQUIPA</span>
+     </div>
+     <div class="sedes" id="chile">
+       <span>CHILE</span>
+     </div>
+     <div class="sedes" id="lima">
+       <span>LIMA</span>
+     </div>
+     <div class="sedes" id="mexico">
+       <span>CD.DE MEXICO</span>
+     </div>-->
+
+       <select class="select" id="select">
+          <option value="">---seleciona una opcion---</option>
+          <optgroup id="arequipa"label="AREQUIPA">
+             <option value="AQP" data-sede="AREQUIPA" data-generation="2016-2">Año: 2016 Generacion: 2</option>
+             <option value="AQP" data-sede="AREQUIPA" data-generation="2017-1">Año: 2017 Generacion: 1</option>
+          </optgroup>
+          <optgroup id="mexico"label="CD. DE MEXICO">
+             <option value="CDMX" data-sede="CD. DE MEXICO" data-generation="2017-1">Año: 2017 Generacion: 1</option>
+             <option value="CDMX" data-sede="CD. DE MEXICO" data-generation="2017-2">Año: 2017 Generacion: 2</option>
+          </optgroup>
+          <optgroup id="chile"label="CHILE">
+             <option value="SCL" data-sede="CHILE" data-generation="2016-2">Año: 2016 Generacion: 2</option>
+             <option value="SCL" data-sede="CHILE" data-generation="2017-1">Año: 2017 Generacion: 1</option>
+             <option value="SCL" data-sede="CHILE" data-generation="2017-2">Año: 2017 Generacion: 2</option>
+          </optgroup>
+          <optgroup id="lima"label="LIMA">
+             <option value="LIM" data-sede="LIMA" data-generation="2016-2">Año: 2016 Generacion: 2</option>
+             <option value="LIM" data-sede="LIMA" data-generation="2017-1">Año: 2017 Generacion: 1</option>
+             <option value="LIM" data-sede="LIMA" data-generation="2017-2">Año: 2017 Generacion: 2</option>
+          </optgroup>
+       </select>
+   </section>
+   <section>
+     <div class="container-students" id="container-students">
+
+     </div>
+   </section>
+
+   <!-- Base de datos -->
+   <script src="../js/data.js"></script>
+   <!-- Aquí va tus archivos JS -->
+   <script src="../js/app.js"></script>
+  </body>
+</html>
