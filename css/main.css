@@ -1,3 +1,76 @@
-/*
- * Estilos de tu proyecto
- */
+body {
+    display: block;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+li {
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 1em;
+    list-style: none;
+    margin: 1em 1em 0 1em;
+    padding: .5em 0;
+    text-align: center;
+    width: 13em;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* *********** HEADER *********** */
+#grListSedeGen {
+    background-color: white;
+    border-bottom: 2px solid rgb(255, 229, 33);
+    float: left;
+    height: 6em;
+    left: 20%;
+    position: relative;
+    width: 80%;
+}
+
+#grListSedeGen > img {
+    height: 6.3em;
+    left: 30%;
+    position: relative;
+    text-align: center;
+}
+
+/* *********** NAVEGADOR LATERAL *********** */
+#grOpcionBar {
+    background-color: rgb(255, 229, 33);
+    float: left;
+    height: 40em;
+    position: fixed;
+    width: 20%;
+}
+
+#grProfile, #grImgProfile {
+    border-radius: 50%;
+    height: 6.5em;
+    margin-left: 25%;
+    margin-top: 2em;
+}
+
+/* *********** AGENDA *********** */ 
+#calendar {
+    border-radius: 5px;
+    border: 1px solid gray;
+    height: 12em;
+    width: 13em;
+    margin: 2em 1em 0 1em;
+}
+
+/* *********** MAIN CONTAINER *********** */
+#grMainContainer {
+    background-color: white;
+    height: 32em;
+    left: 21%;
+    top: 7em;
+    position: relative;
+    width: 78%;
+}
