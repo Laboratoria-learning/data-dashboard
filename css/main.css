@@ -56,3 +56,15 @@ margin-left: 2em;
 border-radius: 5px;
 border: 1px solid gray;
 }
+
+
+.grLocationText{
+    height: 8em;
+    width: 13em;
+    background-color: white;
+    display: none;
+}
+
+.grContainerSedes:hover{
+    display: block;
+}
