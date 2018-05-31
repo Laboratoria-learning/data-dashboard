@@ -1,6 +1,7 @@
 body {
-    display: block;
     box-sizing: border-box;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
 }
 
@@ -18,42 +19,56 @@ li {
     width: 13em;
 }
 
+#gr-Opcion-Bar #li-user {
+    background-color: rgb(255, 229, 33);
+    border: none;
+}
+
 a {
     text-decoration: none;
 }
 
 /* *********** HEADER *********** */
-#grListSedeGen {
+#gr-List-Sede-Gen {
     background-color: white;
     border-bottom: 2px solid rgb(255, 229, 33);
     float: left;
     height: 6em;
     left: 20%;
-    position: relative;
+    /* position: relative; */
     width: 80%;
 }
 
-#grListSedeGen > img {
+#gr-List-Sede-Gen img {
     height: 6.3em;
-    left: 30%;
-    position: relative;
-    text-align: center;
+    margin-left: 35%;
+    /* position: relative; */
 }
 
 /* *********** NAVEGADOR LATERAL *********** */
-#grOpcionBar {
+#gr-Opcion-Bar {
     background-color: rgb(255, 229, 33);
     float: left;
     height: 40em;
-    position: fixed;
+    /* position: fixed; */
     width: 20%;
 }
 
-#grProfile, #grImgProfile {
+#gr-Profile, #gr-Img-Profile {
     border-radius: 50%;
     height: 6.5em;
     margin-left: 25%;
     margin-top: 2em;
+}
+
+#gr-Img-Profile {
+    margin-left: 4.5em;
+}
+
+#gr-Opcion-Bar > span {
+    float: right;
+    font-weight: bold;
+    margin: 3em .5em 0 0;
 }
 
 /* *********** AGENDA *********** */ 
@@ -66,11 +81,36 @@ a {
 }
 
 /* *********** MAIN CONTAINER *********** */
-#grMainContainer {
+#gr-Main-Container {
     background-color: white;
-    height: 32em;
+    height: 39.2em;
     left: 21%;
     top: 7em;
-    position: relative;
-    width: 78%;
+    /* position: relative; */
+    margin-left: 20.5%;
+    padding: 0;
+    width: 78.5%;
+}
+
+#gr-Header-Main-Container {
+    float: left;
+    /* box-sizing: content-box; */
+    /* display: inline-flex; */
+    margin-left: 1%;
+    margin-top: 1em;  
+    width: auto;
+}
+
+#gr-Header-Main-Container > span {
+    height: 100%;
+    font-size: 1.2em;
+    float: left;
+    padding: .3em .5em;
+    /* position: relative; */
+}
+
+#gr-Header-Main-Container > img {
+    height: 1.5em;
+    float: left;
+    padding: .5em 0;
 }
