@@ -5,6 +5,7 @@
 // console.log(data);
 
 
+
 //----SE MANDAR LLAMAR LOS ELEMENTOS QUE SE VAN A UTILIZAR----//
 var button = document.getElementById('button');
 var filter = document.getElementById('filter');
@@ -14,6 +15,7 @@ var containerStudents = document.getElementById('container-students');
 var containerForm = document.getElementById('container-form');
 var input = document.getElementById('formulario-input');
 var passw = document.getElementById('formulario-password');
+
 var containerActive = document.getElementById('container-actives');
 
 //----SE LE DA FUNFIONALIDA AL INGRESAR----Y VALIDACION AL FORMULARIO------//
@@ -82,6 +84,8 @@ select.addEventListener("change", optionSelect);
 
 
       //   }
+
+
 
 
 
