@@ -63,7 +63,7 @@ a:active {
 
 .container-back h1 {
   position: absolute;
-  top: 350px;
+  top: 150px;
   left: 11%;
   font-size: 30px;
   color: rgba(0,0,0,0.7);
@@ -71,9 +71,28 @@ a:active {
 
 .container-back p {
   position: absolute;
-  top: 400px;
+  top: 200px;
   left: 12.5%;
   color: rgba(0,0,0,0.7);
+}
+
+h1 {
+  top: 50px;
+}
+
+#important-values {
+  position: relative;
+  display: flex;
+  top: 170px;
+  margin-left: 7px;
+  text-align: justify;
+}
+#values-titles {
+  position: relative;
+  display: flex;
+  top: 180px;
+  margin-left: 250px;
+
 }
 
 /*ESTILOS PARA LA SEGUNDA PAGINA (FORMULARIO)*/
@@ -98,7 +117,7 @@ left: 100%;
 
 .formulario {
   margin-left: 8%;
-  width: 50%;
+  width: 100%;
   max-width: 500px;
   background:#DEDEDE;
   padding: 20px;
@@ -106,6 +125,7 @@ left: 100%;
   height: 100%;
   margin-top: 2%;
   border-radius: 9px;
+  display: block,
 }
 
 
@@ -217,4 +237,13 @@ input {
   border-radius: 20px;
   border: 1px solid rgba(0,0,0,0.3);
   text-align: center;
+}
+
+#values {
+  display: inline-flex;
+  border: none;
+  text-align: left;
+  margin-right: : 10px;
+  color: black;
+  font-size: 20px;
 }
