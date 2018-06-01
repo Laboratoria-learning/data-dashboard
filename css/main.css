@@ -202,10 +202,9 @@ input {
   width: 25%;
   bottom: 70px;
   height: 40px;
-  outline-style: double;
   border-style: none;
   background:#DEDEDE;
-  outline-color: #FFE521;
+  
 }
 
 #container-Total {
