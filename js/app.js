@@ -2,7 +2,7 @@
  * Funcionalidad de tu producto
  */
  // Puedes hacer uso de la base de datos a través de la variable `data`
- //console.log(data);
+ console.log(data);
 
 
 
@@ -12,12 +12,33 @@ var sectionGrafics = document.getElementById('filter');
 var select = document.getElementById('select');
 var containerStudents = document.getElementById('container-students');
 var containerForm = document.getElementById('container-form');
+var input = document.getElementById('formulario-input');
+var passw = document.getElementById('formulario-password');
 
 
-
-button.addEventListener("click", function(){
+/*button.addEventListener("click", function(){
   containerForm.style.display = "none";
   sectionGrafics.style.display = "block";
+
+});*/
+
+button.addEventListener("click", function(){
+if (passw.value =='LABORATORIA' && input.value =='estudiante'){
+    containerForm.style.display = "none";
+    sectionGrafics.style.display = "block";
+  }else if (passw.value =='LABORATORIA' && input.value =='coach'){
+    containerForm.style.display = "none";
+    sectionGrafics.style.display = "block";
+  }else if (passw.value =='LABORATORIA' && input.value =='personal developer coordinator'){
+    containerForm.style.display = "none";
+    sectionGrafics.style.display = "block";
+  }else if (passw.value =='LABORATORIA' && input.value =='training manager'){
+    containerForm.style.display = "none";
+    sectionGrafics.style.display = "block";
+  }else{
+    alert("Introduce tu usuario y contraseña correctos");
+
+  }
 
 });
 
@@ -36,17 +57,12 @@ select.addEventListener("change", optionSelect);
       console.log(totalStudents);
 
 
-    /*    var ratings = data[sede][generation]["ratings"];
-    console.log(ratings);*/
+       var ratings = data[sede][generation]["ratings"];
+    console.log(ratings);
 
-    /*var containerTotalStudents = document.createElement("div");
+    var containerTotalStudents = document.createElement("div");
     containerTotalStudents.setAttribute("id", "container-Total")
     containerStudents.appendChild(containerTotalStudents);
 
-    containerTotalStudents.innerHTML = sedeName +  " El total de estudiantes es de: " + totalStudents;*/
-
-
-
-
-
+    containerTotalStudents.innerHTML = sedeName +  " El total de estudiantes es de: " + totalStudents;
 };
