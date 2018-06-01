@@ -125,7 +125,7 @@ left: 100%;
   height: 100%;
   margin-top: 2%;
   border-radius: 9px;
-  display: block,
+  display: block;
 }
 
 
@@ -243,7 +243,7 @@ input {
   display: inline-flex;
   border: none;
   text-align: left;
-  margin-right: : 10px;
+  margin-right:  10px;
   color: black;
   font-size: 20px;
 }
