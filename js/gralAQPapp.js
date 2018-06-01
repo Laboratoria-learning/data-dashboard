@@ -4964,20 +4964,25 @@ var data = {
 // content.appendChild(text);
 
 
-var place = Object.keys(data);
-var generation = Object.keys(data.AQP.students); // ["2016-2", "2017-1"]
+// var place = Object.keys(data);
+// var generation = Object.keys(data.AQP[2016-2][students]); // ["2016-2", "2017-1"]
 // var students = Object.keys(data[AQP][2016-2][students]);
-console.log(generation);
+// console.log(generation);
 
-// function grActiveStudents(data) {
-//     var array = [];
-//     for (var i = 0; i < data[].length; i++) {
-//         data.push;
-//     }
-// return array;
-//     // console.log(array);
-// }
-// console.log(array);
+var place = 'AQP';
+var generation20162 = '2016-2';
+
+function grActiveStudentsGen20162(base) {
+    var carrStu = data[place][generation20162]['students'];
+    var activeStudents = [];
+    for (var i = 0; i < carrStu.length; i++) {
+        if (carrStu[i].active == true) {
+            activeStudents.push(carrStu[i].length);
+        }
+        return activeStudents;
+    }
+}
+grActiveStudentsGen20162(data);
 
 
 // console.log(Object.values(data.AQP));
