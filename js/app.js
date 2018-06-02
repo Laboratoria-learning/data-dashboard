@@ -20,20 +20,20 @@ var containerActive = document.getElementById('container-actives');
 
 button.addEventListener("click", function(){
 
-      if (passw.value =='LABORATORIA' && input.value =='estudiante'){
-            containerForm.style.display = "none";
-            sectionGrafics.style.display = "block";
-     }else if (passw.value =='LABORATORIA' && input.value =='coach'){
-            containerForm.style.display = "none";
-            sectionGrafics.style.display = "block";
-     }else if (passw.value =='LABORATORIA' && input.value =='personal developer coordinator'){
-            containerForm.style.display = "none";
-            sectionGrafics.style.display = "block";
-     }else if (passw.value =='LABORATORIA' && input.value =='training manager'){
-            containerForm.style.display = "none";
-            sectionGrafics.style.display = "block";
-     }else{
-            alert("Introduce tu usuario y contraseña correctos");
+  if (passw.value =='LABORATORIA' && input.value =='student'){
+     containerForm.style.display = "none";
+     sectionGrafics.style.display = "block";
+}else if (passw.value =='LABORATORIA' && input.value =='coach'){
+      containerForm.style.display = "none";
+      sectionGrafics.style.display = "block";
+}else if (passw.value =='LABORATORIA' && input.value =='coordinator'){
+      containerForm.style.display = "none";
+      sectionGrafics.style.display = "block";
+}else if (passw.value =='LABORATORIA' && input.value =='manager'){
+      containerForm.style.display = "none";
+      sectionGrafics.style.display = "block";
+}else{
+      alert("Introduce tu usuario y contraseña correctos");
     }
 });
 
@@ -41,54 +41,42 @@ button.addEventListener("click", function(){
 
 select.addEventListener("change", optionSelect);
 
-    function optionSelect() {
-            var sede = select.value;
-            var sedeName = select.options[select.selectedIndex].dataset.sede;
-               //console.log(sedeName);
-            var generation = select.options[select.selectedIndex].dataset.generation;
-               //console.log(generation);
-            var students = data[sede][generation]["students"];
-              //console.log(students);
+function optionSelect(e) {
+  var select = e.target
+  var sede = select.value;
+  var sedeName = select.options[select.selectedIndex].dataset.sede;
+         //console.log(sedeName);
+  var generation = select.options[select.selectedIndex].dataset.generation;
+         //console.log(generation);
+  var students = data[sede][generation]["students"];
+    //    console.log(students);
 
-        contActivas = 0;
-        contInactivas = 0;
+  contActivas = 0;
+  contInactivas = 0;
 
-     for (var i = 0; i < students.length; i++) {
-           if(students[i]["active"] == true){
-              contActivas ++;
-              var activas= students[i];
-              console.log(activas);
-           }else{
-              contInactivas ++;
-              //console.log(inactivas);
-      }
+ for (var i = 0; i < students.length; i++) {
+     if(students[i]["active"] == true){
+        contActivas ++;
+       console.log(contActivas);
+      //  console.log( students[i]["sprints"]);
+      }else{
+        contInactivas ++;
+      var inactivas= students[i];
+      console.log(inactivas["name"]);
+    }
 }
 
-//---SE CREA DIV DONDE SE ALMACENARAN LOS DATOS DE LAS ESTUDIANTES ACTIVAS E INACTIVAS---//
-      var containerTotalStudents = document.createElement("div");
-          containerTotalStudents.setAttribute("id", "container-Total")
-          containerStudents.appendChild(containerTotalStudents);
+  var totalStudents = contInactivas + contActivas;
+  containerStudents.innerHTML = "el total de alumnas de " + sede  +  generation + " es de: " + totalStudents;
 
-          containerTotalStudents.innerHTML = " El total de estudiantes activas es de: " + contActivas  + " El total de estudiantes inactivas es de: " + contInactivas;
+  var porcentajeActivas = contActivas *100/ totalStudents;
+  console.log(porcentajeActivas.toFixed() + "%" );
 
-
-
-      //  for (var i = 0; i < students.length; i++) {
-      //  console.log (students[i]["sprints"]);
-
-          //  for (var i = 0; i < sprints.length; i++) {
-          //  console.log (sprints[i]["score"]);
-          //  }
-
-
-      //   }
-
-
-
-
-
-
-
-
+  var porcentajeInactivas = contInactivas * 100/ totalStudents;
+  console.log(porcentajeInactivas.toFixed() + "%");
+//   var containerTotalStudents = document.createElement("div");
+//      containerTotalStudents.setAttribute("id", "container-Total")
+//      containerStudents.appendChild(containerTotalStudents);
+//      containerStudents.innerHTML = " El total de estudiantes activas es de: " + contActivas *100 / totalStudents;
 
 };

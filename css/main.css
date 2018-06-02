@@ -204,10 +204,10 @@ input {
   height: 40px;
   border-style: none;
   background:#DEDEDE;
-  
+
 }
 
-#container-Total {
+/*#container-Total {
   width: 25%;
   height: 300px;
   left: 3%;
@@ -216,4 +216,4 @@ input {
   border-radius: 20px;
   border: 1px solid rgba(0,0,0,0.3);
   text-align: center;
-}
+}*/
