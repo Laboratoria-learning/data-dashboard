@@ -8,11 +8,6 @@ form {
     margin-top: 50px;
 }
 
-form>p {
-    font-size: 15px;
-    text-align: center;
-}
-
 #login {
     display: block;
     border: solid 3px #D3D3D3;
@@ -39,29 +34,11 @@ input {
     padding: 5px 55px 5px 55px;
 }
 
-.login-btn {
-    background-color:#8f8d89;
-    border-radius: 10px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 14px;
-    height: 30px;
-    margin: 5px 0px 0px 5px;
-    outline: none;
-    text-align: center;
-    width: 100px;
-}
-
-.login-btn:hover {
-    background-color: #fce689;
-}
-
 #forgotten-password {
     font-family: 'Raleway', sans-serif;
     font-size: 12px;
     margin-left: 210px;
-    margin-top: 100px;
-
-    
+    margin-top: 100px; 
 
 }
 
