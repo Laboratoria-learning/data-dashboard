@@ -25,7 +25,6 @@ var cumplenMeta = document.getElementById('cumplen-meta');
 var superanMeta = document.getElementById('superan-meta');
 var satisfechas = document.getElementById('satisfechas');
 
-var containerActive = document.getElementById('container-actives');
 
 //----SE LE DA FUNCIONALIDAD AL INGRESAR----Y VALIDACION AL FORMULARIO------//
 
