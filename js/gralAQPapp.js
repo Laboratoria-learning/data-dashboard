@@ -4977,14 +4977,21 @@ grActiveStudentsGen20162(data);
 // estudiantes inactivas de AQP gen 2016-2
 
 function grInactiveStudentsGen20162(base) {
+    var totalStudents = [];
     var carrStu = data[place][generation20162].students;
     var inactiveStudents = [];
+
+    for (var i = 0; i < carrStu.length; i++) {
+        totalStudents.push(carrStu[i]);
+    }
+
     for (var i = 0; i < carrStu.length; i++) {
         if (carrStu[i].active == false) {
             inactiveStudents.push(carrStu[i]);
         }
     }
     return inactiveStudents;
+    return totalStudents;
 }
 grInactiveStudentsGen20162(data);
 

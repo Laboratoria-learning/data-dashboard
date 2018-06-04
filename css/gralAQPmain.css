@@ -143,3 +143,11 @@ a {
     font-size: 50px;
     text-align: center;
 }
+
+#percentage-of-inactive-students{
+    height: 6em;
+    width: 6em;
+    margin-left: 8em;
+    border: 5px solid #FF009E;
+    margin-bottom: 2em;
+}
