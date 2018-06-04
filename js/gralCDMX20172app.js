@@ -4959,8 +4959,8 @@ var data = {
     }
 };
 // estudiantes activas de AQP gen 2016-2
-var place = 'AQP';
-var generation20162 = '2016-2';
+var place = 'CDMX';
+var generation20162 = '2017-2';
 
 function grActiveStudentsGen20162(base) {
     var carrStu = data[place][generation20162].students;
@@ -5013,7 +5013,6 @@ function studentsListInactive(base){
             listOfStudents.push("<li>" + carrStu[i].name + "</li>");
         }
     }
-    console.log(listOfStudents);
 
     document.getElementById("name-list-of-inactive-students").innerHTML = listOfStudents;
 }
