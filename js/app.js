@@ -26,6 +26,7 @@ var superanMeta = document.getElementById('superan-meta');
 var satisfechas = document.getElementById('satisfechas');
 
 
+
 //----SE LE DA FUNCIONALIDAD AL INGRESAR----Y VALIDACION AL FORMULARIO------//
 
 button.addEventListener("click", function(){
@@ -71,6 +72,8 @@ function optionSelect(e) {
     if(students[i]["active"] == true){
       contActivas ++;
        var activas = contActivas;
+
+
 
 //----- FOR PARA QUE NOS DE EL PUNTAJE DE CADA UNA DE LAS ESTUDIANTES TANTO EN TECH COMO EL HSE---//
   scoreHSE=0;
@@ -122,21 +125,25 @@ var ratings = data[sede][generation]["ratings"];
 
 promJedi = 0;
 promTeacher = 0;
+jedi=[];
+teacher = [];
 
 for (var i = 0; i < ratings.length; i++) {
    promJedi += (ratings[i]["jedi"])/ratings.length;
   var totalJedi = promJedi.toFixed(1);
 
+  jedi.push(totalJedi);
+  console.log(jedi);
+
   promTeacher += (ratings[i]["teacher"])/ratings.length;
   var totalTeachers = promTeacher.toFixed(1);
+
+  teacher.push(totalTeachers);
+  console.log(teacher);
 
 
 containerJedis.textContent =  "El promedio de los Jedis es de : " + totalJedi;
 containerTeachers.textContent = "El promedio de los teachers es de : " + totalTeachers;
-
-
-
-
 
 
 }
@@ -162,6 +169,98 @@ superanMeta.textContent = "El porcentaje de estudiantes que superan la meta es d
 satisfechas.textContent = "El porcentaje de estudiantes satisfechas es del: " + satisfechasTotal.toFixed() + "%";
 
 }
+
+//-------ESTUDIANTES QUE CUMPLEN Y SUPERAN LA META---->
+
+/*google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Create the data table.
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+      data.addColumn('string', 'promediotyj')//nombre d la tabla
+      data.addColumn('number', 'promedio')// el promedio d teachers y jedis
+      data.addRows([
+          ['jedis', promJedi],
+          ['teacher', promTeacher]
+      ]);
+    ]);
+
+
+
+        var options = {
+          chart: {
+            title: 'Promedio t  y  j',
+            subtitle: 'Teachers, Jedis, y Sede: 2014-2017',
+          },
+          bars: 'horizontal' // Required for Material Bar Charts.
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('chart_div'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }*/
+
+         //-------ESTUDIANTES ACTIVAS E INACTIVAS---->
+      google.charts.load('current', {'packages':['corechart']});
+
+              //Set a callback to run when the Google Visualization API is loaded.
+              google.charts.setOnLoadCallback(drawChart);
+
+              // Callback that creates and populates a data table,
+              // instantiates the pie chart, passes in the data and
+              // draws it.
+              function drawChart() {
+
+              // Create the data table.
+              var data = new google.visualization.DataTable();
+              data.addColumn('string', 'Promedio');
+              data.addColumn('number', 'Slices');
+              data.addRows([
+                  ['Activas', contActivas],
+                  ['Inactivas', contInactivas],
+              ]);
+
+              var options = {
+              title: 'Promedio de activas e inactivas'
+          };
+
+          var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+
+          chart.draw(data, options);
+        }
+
+
+          //-------PROMEDIO DE TEACHERS Y JEDIS ---->
+     google.charts.load('current', {'packages':['corechart']});
+
+             //Set a callback to run when the Google Visualization API is loaded.
+             google.charts.setOnLoadCallback(draw);
+
+             // Callback that creates and populates a data table,
+             // instantiates the pie chart, passes in the data and
+             // draws it.
+             function draw() {
+
+             // Create the data table.
+             var data = new google.visualization.DataTable();
+             data.addColumn('string', 'Promedio');
+             data.addColumn('number', 'Slices');
+             data.addRows([
+                 ['Teachers', promTeacher],
+                 ['Jedis', promJedi],
+             ]);
+
+             var options = {
+             title: 'Promedio de teachers y jedis'
+         };
+
+
+         var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
+
+         chart.draw(data, options);
+       }
 
 
 };
