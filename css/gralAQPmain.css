@@ -36,14 +36,12 @@ a {
     float: left;
     height: 6em;
     left: 20%;
-    /* position: relative; */
     width: 80%;
 }
 
 #gr-List-Sede-Gen img {
     height: 6.3em;
     margin-left: 35%;
-    /* position: relative; */
 }
 
 /* *********** NAVEGADOR LATERAL *********** */
@@ -51,7 +49,6 @@ a {
     background-color: rgb(255, 229, 33);
     float: left;
     height: 40em;
-    /* position: fixed; */
     width: 20%;
 }
 
@@ -72,7 +69,7 @@ a {
     margin: 3em .5em 0 0;
 }
 
-/* *********** AGENDA *********** */ 
+/* *********** AGENDA *********** */
 #calendar {
     border-radius: 5px;
     border: 1px solid gray;
@@ -87,7 +84,6 @@ a {
     height: 39.2em;
     left: 21%;
     top: 7em;
-    /* position: relative; */
     margin-left: 20.5%;
     padding: 0;
     width: 78.5%;
@@ -95,10 +91,8 @@ a {
 
 #gr-Header-Main-Container {
     float: left;
-    /* box-sizing: content-box; */
-    /* display: inline-flex; */
     margin-left: 1%;
-    margin-top: 1em;  
+    margin-top: 1em;
     width: auto;
 }
 
@@ -107,7 +101,6 @@ a {
     font-size: 1.2em;
     float: left;
     padding: .3em .5em;
-    /* position: relative; */
 }
 
 #gr-Header-Main-Container > img {
@@ -126,4 +119,35 @@ a {
 
 .grContainerSedes:hover{
     display: block;
+}
+
+/* data seccion */
+.active-students,.inactive-students,.satisfied-students{
+    width: 100%;
+    height: auto;
+    border: 1px solid black;
+    float: left;
+}
+
+#number-of-active-students{
+    height: 6em;
+    width: 6em;
+    margin-left: 8em;
+    border: 5px solid #FF009E;
+    margin-bottom: 2em;
+
+}
+
+#paragraph-number-of-active-students{
+    margin-top: .35em;;
+    font-size: 50px;
+    text-align: center;
+}
+
+#percentage-of-inactive-students{
+    height: 6em;
+    width: 6em;
+    margin-left: 8em;
+    border: 5px solid #FF009E;
+    margin-bottom: 2em;
 }

@@ -4958,31 +4958,43 @@ var data = {
         }
     }
 };
-
-// var content = document.getElementById("content");
-// var text = document.createElement("p");
-// content.appendChild(text);
-
-
-// var place = Object.keys(data);
-// var generation = Object.keys(data.AQP[2016-2][students]); // ["2016-2", "2017-1"]
-// var students = Object.keys(data[AQP][2016-2][students]);
-// console.log(generation);
-
+// estudiantes activas de AQP gen 2016-2
 var place = 'AQP';
 var generation20162 = '2016-2';
-
-function grActiveStudentsGen20162(base) {
-    var carrStu = data[place][generation20162]['students'];
+ function grActiveStudentsGen20162(base) {
+    var carrStu = data[place][generation20162].students;
     var activeStudents = [];
     for (var i = 0; i < carrStu.length; i++) {
         if (carrStu[i].active == true) {
-            activeStudents.push(carrStu[i].length);
+            activeStudents.push(carrStu[i]);
         }
-        return activeStudents;
     }
+    document.getElementById("paragraph-number-of-active-students").innerHTML = activeStudents.length;
+    return activeStudents;
 }
+
 grActiveStudentsGen20162(data);
+// estudiantes inactivas de AQP gen 2016-2
 
+function grInactiveStudentsGen20162(base) {
+    var totalStudents = [];
+    var carrStu = data[place][generation20162].students;
+    var inactiveStudents = [];
 
-// console.log(Object.values(data.AQP));
+    for (var i = 0; i < carrStu.length; i++) {
+        totalStudents.push(carrStu[i]);
+    }
+
+    for (var i = 0; i < carrStu.length; i++) {
+        if (carrStu[i].active == false) {
+            inactiveStudents.push(carrStu[i]);
+        }
+    }
+    return inactiveStudents;
+    return totalStudents;
+}
+grInactiveStudentsGen20162(data);
+
+// total de estudiantes
+// var totalOfStudents = inactiveStudentsAQP20162 + activeStudentsAQP20162;
+// console.log()
