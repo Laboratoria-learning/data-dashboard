@@ -1,4 +1,4 @@
-// COACHES
+// PROMEDIOS DE LOS JEDIS Y LOS TEACHERS
 var data = {
     'AQP': {
       '2016-2': {
@@ -5132,46 +5132,73 @@ var data = {
     }
 };
 
-// var aqpGen16_2 = Object.keys(data.AQP["2016-2"]);
-var aqpGen16_2_ratings = Object.keys(data.AQP["2016-2"].ratings);
-// console.log(data.AQP["2016-2"].ratings);
-//console.log(aqpGen16_2);
-// console.log(aqpGen16_2_ratings);
-var cityAqp = Object.keys(data.AQP);
+// Switch para utilizar solo el array de la sede seleccionada
+var cityLocation = {};
+//switch(document.getElementById('input-city').value) {
+switch('AQP') {
+    case 'AQP':
+        cityLocation = data.AQP;
+        break;
+    case 'LIM':
+        cityLocation = data.LIM;
+        break;
+    case 'CDMX':
+        cityLocation = data.CDMX;
+        break;
+    case 'SCL':
+        cityLocation = data.SCL;
+        break;
+};
 
-function generation (array,year) {
+// Función para trabajar sobre el array interno de ratings de acuerdo a la generación y sede
+function ratings (array,year) {
+    var keysArray = Object.keys(array);
     var yearGeneration = [];
 
-    for ( var i = 0; i < array.length; i++) { 
-        if (array[i] == year) {
-        yearGeneration = data.AQP["2016-2"];
-        } else  {
-        yearGeneration = data.AQP["2017-1"];
-        }
+    for ( var i = 0; i < keysArray.length; i++) { 
+        if (keysArray[i] == year) {
+        yearGeneration = array[year].ratings;
+        }  
     } // for
     return yearGeneration;
 }; // function
 
-var generation = generation(cityAqp,"2017-1");
-console.log(generation);
+var outputRatings = ratings(cityLocation,"2017-1");
 
+// *************** AVERAGES ***********************
 
-function averageJedi(array,string) {
-    var jediPoints = {}; 
-    var prom = jediPoints.length;
+// Función promedio Jedi
+function averageJedi(array) {
+    var cont = [];
+    var sum = 0;
 
     for ( var i = 0; i < array.length; i++) { 
-        if (array[i] == string) {
-          array.pop();
-          jediPoints.push();
-        } 
-    } // for
-    console.log(jediPoints/prom);
-    return jediPoints/prom;
+            cont.push(array[i].jedi);
+        for (var j = cont[i]; j < cont.length; j++);{
+            sum += j;
+        }
+    }
+        //console.log(sum/array.length);
+        return sum/array.length;
 }; // function
 
-var averageJedi = averageJedi(generation,"jedi");
-console.log(averageJedi);
+var outputAverageJedi = averageJedi(outputRatings);
+console.log(outputAverageJedi);
 
-// Puedes hacer uso de la base de datos a través de la variable `data`
-//console.log(data);
+// Función promedio Teachers/Coachs
+function averageTeacher(array) {
+    var cont = [];
+    var sum = 0;
+
+    for ( var i = 0; i < array.length; i++) { 
+            cont.push(array[i].teacher);
+        for (var j = cont[i]; j < cont.length; j++);{
+            sum += j;
+        }
+    }
+        //console.log(sum/array.length);
+        return sum/array.length;
+}; // function
+
+var outputAverageTeacher = averageTeacher(outputRatings);
+console.log(outputAverageTeacher);
