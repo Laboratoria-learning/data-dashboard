@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Data Dashboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="../css/gralLIM20172main.css">
+</head>
+
+<body>
+    <!-- *********** NAVEGADOR LATERAL *********** -->
+    <nav id='gr-Opcion-Bar'>
+        <div class="gr-Profile">
+            <img id="gr-Img-Profile" src="../assets/images/profile.jpg" alt="User's Profile">
+        </div>
+        <li id="li-user"><a href="#"> USER </a></li>
+        <li><a href="#"> STUDENTS </a></li>
+        <li><a href="#"> COACHES </a></li>
+        <li><a href="#"> GENERAL INFORMATION </a></li>
+        <!-- *********** AGENDA *********** -->
+        <!-- <div class="gr-Calendar">
+                <iframe id="calendar" src="https://calendar.google.com/calendar/b/3/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;height=600&amp;wkst=2&amp;bgcolor=%2366ffff&amp;src=grm3o2k2n7qk5ldc1338arill8%40group.calendar.google.com&amp;color=%2342104A&amp;ctz=America%2FMexico_City"
+                    width="800" height="600" frameborder="0" scrolling="no"></iframe>
+            </div> -->
+        <span> LOG OUT </span>
+
+    </nav>
+    <!-- *********** HEADER *********** -->
+    <header id="gr-List-Sede-Gen">
+        <!-- logo de laboratoria en el header -->
+        <img src="../assets/images/BrandLabo/Laboratoria_Logo_RGB_01.png" alt="Laboratoria's Logo">
+    </header>
+
+    <!-- *********** MAIN CONTAINER *********** -->
+    <section id="gr-Main-Container">
+        <div id="gr-Header-Main-Container">
+            <span> SEDE LIMA </span>
+            <img src="../assets/images/Laboratoria_corchetes-30.png" alt="imagen flechas">
+            <span> GENERATION 2017-2</span>
+        </div>
+        <div class="active-students">
+            <h3>Active Students</h3>
+            <div id="number-of-active-students">
+                <p id="paragraph-number-of-active-students"></p>
+            </div>
+        </div>
+        <div class="inactive-students">
+            <h3>Inactive Students</h3>
+            <div class="container-inactive-students">
+                <div id="list-of-inactive-students">
+                    <h5>Name of the students</h5>
+                    <ul>
+                        <li id="name-list-of-inactive-students"></li>
+                    </ul>
+                </div>
+                <div id="percentage-of-inactive-students">
+                    <p id="paragraph-percentage-of-inactive-students"></p>
+                </div>
+            </div>
+        </div>
+        <div class="satisfied-students">
+            <h3>Satisfied Students</h3>
+            <div class="number-of-satisfied-students">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Base de datos -->
+    <script src="../js/data.js"></script>
+    <!-- Aquí va tus archivos JS -->
+    <script src="../js/gralLIMA20172app.js"></script>
+</body>
+
+</html>

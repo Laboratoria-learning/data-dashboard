@@ -4959,8 +4959,8 @@ var data = {
     }
 };
 // estudiantes activas de AQP gen 2016-2
-var place = 'AQP';
-var generation20162 = '2016-2';
+var place = 'SCL';
+var generation20162 = '2017-1';
 
 function grActiveStudentsGen20162(base) {
     var carrStu = data[place][generation20162].students;
