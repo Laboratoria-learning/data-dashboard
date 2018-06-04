@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="../assets/images/theL.ico"/>
+    <title>Dropout Students</title>
+    <link rel="stylesheet" href="../css/home.css"/>
+</head>
+<body>
+    
+    <!--The menu to show how many inactive students there are according to their location and generation-->
+    <section>
+        <select id="filter" onchange="showSemester()">
+            <option>Select an option</option>
+            <optgroup id="aqp" label="Arequipa">
+                <option value="2016-2" data-city="AQP" data-classyear="2016-2">2016-2</option>
+                <option value="2017-1" data-city="AQP" data-classyear="2017-1">2017-1</option>
+            </optgroup>
+            <optgroup id="cdmx" label="Mexico City">
+                <option value="2017-1" data-city="CDMX" data-classyear="2017-1">2017-1</option>
+                <option value="2017-2" data-city="CDMX" data-classyear="2017-2">2017-2</option>
+            </optgroup>
+            <optgroup id="lima" label="Lima">
+                <option value="2016-2" data-city="LIM" data-classyear="2016-2">2016-2</option>
+                <option value="2017-1" data-city="LIM" data-classyear="2017-1">2017-1</option>
+                <option value="2017-2" data-city="LIM" data-classyear="2017-2">2017-2</option>
+            </optgroup>
+            <optgroup id="santiago" label="Santiago">
+                <option value="2016-2" data-city="SCL" data-classyear="2016-2">2016-2</option>
+                <option value="2017-1" data-city="SCL" data-classyear="2017-1">2017-1</option>
+                <option value="2017-2" data-city="SCL" data-classyear="2017-2">2017-2</option>
+            </optgroup>
+        </select>
+    </section>
+    <section>
+        <p id="inactiveAQP162"></p>
+        <p id="inactiveAQP171"></p>
+        <p id="inactiveCDMX171"></p>
+        <p id="inactiveCDMX172"></p>
+        <p id="inactiveLIM162"></p>
+        <p id="inactiveLIM171"></p>
+        <p id="inactiveLIM172"></p>
+        <p id="inactiveSCL162"></p>
+        <p id="inactiveSCL171"></p>
+        <p id="inactiveSCL172"></p>
+    </section>
+    <section>
+        <p id="averageAQP162"></p>
+        <p id="averageAQP171"></p>
+        <p id="averageCDMX171"></p>
+        <p id="averageCDMX172"></p>
+        <p id="averageLIM162"></p>
+        <p id="averageLIM171"></p>
+        <p id="averageLIM172"></p>
+        <p id="averageSCL162"></p>
+        <p id="averageSCL171"></p>
+        <p id="averageSCL172"></p>
+    </section>
+    <script src="../js/data.js"></script>
+    <script src="../js/inactive.js"></script>
+</body>
+</html>
+
+
+
