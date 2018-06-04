@@ -4,31 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Active Students</title>
-    <link rel="stylesheet" href="../css/design/active-students.css"/>
+    <link rel="shortcut icon" href="../assets/images/theL.ico"/>
+    <title>Enrolled Students</title>
+    <link rel="stylesheet" href="../css/home.css"/>
 </head>
-<body onload="bodyOnLoad()">
-        <!--The menu to show how many active students are according to their location and generation-->
-        
-        <select id="filter" class="students-data" onchange="selectOption(this.value)">
+<body>
+    
+    <!--The menu to show how many active students are according to their location and generation-->
+    <section>
+        <select id="filter" onchange="showSemester()">
             <option>Select an option</option>
-            <!-- 
-            <option value="arequipa2" data-location="AQP" data-semester="2017-1">Arequipa - 2017-1</option>
-            <option value="arequipa1" data-location="AQP" data-semester="2016-2">Arequipa - 2016-2</option>
-            <option value="cdmx2" data-location="CDMX" data-semester="2017-2">Mexico City - 2017-2</option>
-            <option value="cdmx1" data-location="CDMX" data-semester="2017-1">Mexico City - 2017-1</option>
-            <option value="lima1" data-location="LIM" data-semester="2017-2">Lima - 2017-2</option>
-            <option value="lima2" data-location="LIM" data-semester="2017-1">Lima - 2017-1</option>
-            <option value="lima3" data-location="LIM" data-semester="2016-2">Lima - 2016-2</option>
-            <option value="chile1" data-location="SCL" data-semester="2017-2">Chile - 2017-2</option>
-            <option value="chile2" data-location="SCL" data-semester="2017-1">Chile - 2017-1</option>
-            <option value="chile3" data-location="SCL" data-semester="2016-2">Chile - 2016-2</option> 
-            -->  
+            <optgroup id="aqp" label="Arequipa">
+                <option value="2016-2" data-city="AQP" data-classyear="2016-2">2016-2</option>
+                <option value="2017-1" data-city="AQP" data-classyear="2017-1">2017-1</option>
+            </optgroup>
+            <optgroup id="cdmx" label="Mexico City">
+                <option value="2017-1" data-city="CDMX" data-classyear="2017-1">2017-1</option>
+                <option value="2017-2" data-city="CDMX" data-classyear="2017-2">2017-2</option>
+            </optgroup>
+            <optgroup id="lima" label="Lima">
+                <option value="2016-2" data-city="LIM" data-classyear="2016-2">2016-2</option>
+                <option value="2017-1" data-city="LIM" data-classyear="2017-1">2017-1</option>
+                <option value="2017-2" data-city="LIM" data-classyear="2017-2">2017-2</option>
+            </optgroup>
+            <optgroup id="santiago" label="Santiago">
+                <option value="2016-2" data-city="SCL" data-classyear="2016-2">2016-2</option>
+                <option value="2017-1" data-city="SCL" data-classyear="2017-1">2017-1</option>
+                <option value="2017-2" data-city="SCL" data-classyear="2017-2">2017-2</option>
+            </optgroup>
         </select>
-    
-        <p id="number"></p>
-    
+    </section>
+    <section>
+            <p id="activeAQP162"></p>
+            <p id="activeAQP171"></p>
+            <p id="activeCDMX171"></p>
+            <p id="activeCDMX172"></p>
+            <p id="activeLIM162"></p>
+            <p id="activeLIM171"></p>
+            <p id="activeLIM172"></p>
+            <p id="activeSCL162"></p>
+            <p id="activeSCL171"></p>
+            <p id="activeSCL172"></p>
+    </section>   
     <script src="../js/data.js"></script>
     <script src="../js/active.js"></script>
 </body>
 </html>
+
+
+

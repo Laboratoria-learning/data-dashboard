@@ -1,0 +1,64 @@
+/* HEADER DESIGN */
+#header {
+    background-color: #62615f;
+    position: fixed;
+    height: 80px;
+    left:0;
+    padding: 0;
+    top:0;
+    width: 100%;
+    z-index: 1;
+}
+
+
+li.nav-profile img {
+    border-radius: 50%;
+    display: inline-block;
+    width: 50px;
+}
+
+li.nav-profile .nav-profile-name {
+    display: inline-block;
+    font-family: 'Prompt', sans-serif;
+}
+
+#header .nav ul li {
+    float: right;
+    list-style-type: none;
+    position: relative;
+    right: 40px;
+}
+
+/* SIDEBAR MENU DESIGN */
+#sidebar-nav {
+    background: #8f8d89;
+    height: 100%;
+    margin: 0;
+    padding-right: 0;
+    position: fixed;
+    top: 80px;
+    width: 200px;
+    z-index: 1;
+}
+
+#sidebar-nav ul.menu {
+    list-style-type: none;
+}
+
+#sidebar-nav ul li{
+    margin-bottom: 50px;
+    text-align: justify;
+}
+
+#sidebar-nav ul li:hover {
+    background: #ffba00;
+    width: 100%;
+}
+
+#sidebar-nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Prompt', sans-serif;
+}
+
+
