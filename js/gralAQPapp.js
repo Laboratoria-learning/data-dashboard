@@ -4961,7 +4961,8 @@ var data = {
 // estudiantes activas de AQP gen 2016-2
 var place = 'AQP';
 var generation20162 = '2016-2';
- function grActiveStudentsGen20162(base) {
+
+function grActiveStudentsGen20162(base) {
     var carrStu = data[place][generation20162].students;
     var activeStudents = [];
     for (var i = 0; i < carrStu.length; i++) {
@@ -4973,7 +4974,7 @@ var generation20162 = '2016-2';
     return activeStudents;
 }
 
-grActiveStudentsGen20162(data);
+
 // estudiantes inactivas de AQP gen 2016-2
 
 function grInactiveStudentsGen20162(base) {
@@ -4981,20 +4982,64 @@ function grInactiveStudentsGen20162(base) {
     var carrStu = data[place][generation20162].students;
     var inactiveStudents = [];
 
+    // total de estudiantes
     for (var i = 0; i < carrStu.length; i++) {
         totalStudents.push(carrStu[i]);
     }
+    // return totalStudents;
 
     for (var i = 0; i < carrStu.length; i++) {
         if (carrStu[i].active == false) {
             inactiveStudents.push(carrStu[i]);
         }
     }
-    return inactiveStudents;
-    return totalStudents;
-}
-grInactiveStudentsGen20162(data);
+    // return inactiveStudents;
 
-// total de estudiantes
-// var totalOfStudents = inactiveStudentsAQP20162 + activeStudentsAQP20162;
-// console.log()
+
+    var percentageInactiveStudents = inactiveStudents.length / totalStudents.length  * 100;
+    var decimalPercentageInactiveStudents = percentageInactiveStudents.toFixed(2) + "%";
+    document.getElementById("paragraph-percentage-of-inactive-students").innerHTML = decimalPercentageInactiveStudents;
+}
+
+
+// lista de alumans que desertaron
+function studentsListInactive(base){
+    var carrStu = data[place][generation20162]['students'];
+    var listOfStudents = [];
+    //save the list of objects who are inactive
+
+    for (var i = 0; i < carrStu.length; i++) {
+        if (carrStu[i].active == false){
+            listOfStudents.push("<li>" + carrStu[i].name + "</li>");
+        }
+    }
+    console.log(listOfStudents);
+
+    document.getElementById("name-list-of-inactive-students").innerHTML = listOfStudents;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+grActiveStudentsGen20162(data);
+grInactiveStudentsGen20162(data);
+studentsListInactive(data);

@@ -3,11 +3,12 @@ body {
     display: block;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
+    color: black;
 }
 
 
 
-li {
+body > div> nav > li {
     background-color: white;
     border: 1px solid gray;
     border-radius: 10px;
@@ -19,6 +20,8 @@ li {
     text-align: center;
     width: 13em;
 }
+
+
 
 #gr-Opcion-Bar #li-user {
     background-color: rgb(255, 229, 33);
@@ -48,7 +51,7 @@ a {
 #gr-Opcion-Bar {
     background-color: rgb(255, 229, 33);
     float: left;
-    height: 40em;
+    height: 100%;
     width: 20%;
 }
 
@@ -127,6 +130,7 @@ a {
     height: auto;
     border: 1px solid black;
     float: left;
+    padding-left: 2em;
 }
 
 #number-of-active-students{
@@ -147,7 +151,26 @@ a {
 #percentage-of-inactive-students{
     height: 6em;
     width: 6em;
-    margin-left: 8em;
+    /* margin-left: 8em; */
     border: 5px solid #FF009E;
     margin-bottom: 2em;
+    float: left;
+}
+
+
+#paragraph-percentage-of-inactive-students{
+    margin-top: 1.2em;;
+    font-size: 25px;
+    text-align: center;
+}
+
+#list-of-inactive-students li{
+    width: 70%;
+    height: auto;
+    float: left;
+}
+.container-inactive-students{
+display: inline-block;
+width: 100%;
+padding-bottom: 2em;
 }
