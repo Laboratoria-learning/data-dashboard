@@ -1,18 +1,22 @@
 ![logo](https://cdn-images-1.medium.com/max/945/1*3ebT5azEfTrKxANOE3BwyA.jpeg)
 # Data Dashboard
-
 #### Problemática actual.
 ##### Definición, delimitación y planeación.
 
-Los integrantes del staff de Laboratoria dedican mucho de su tiempo en encontrar la data que necesitan para elaborar sus actividades, debido a la forma en que dicha data se encuentra organizada o quizá por la falta de organización de la misma.
+Las Training Managers y el equipo de formacion de Laboratoria dedican mucho de su tiempo en encontrar la data que necesitan para elaborar sus actividades, debido a la forma en que dicha data se encuentra organizada o quizá por la falta de organización de la misma.
 En el siguiente documento se analizará la  forma en que se manipula, almacena y accede a la data dentro de Laboratoria, y a su vez se planteará una solución más efectiva.
-  _Principalmente nos enfocaremos en encontrar y diseñar una herramienta para organizar la información relacionada con la interacción Staff-Alumnado para agilizar los procesos_
+ _En esta primera versión nos enfocaremos en encontrar y diseñar una herramienta para organizar la información relacionada con las necesidades de nuestras TM´s_
 
 
 **Lluvia de ideas**
 Los integrantes de este team (Navi, Lillys y Henie)por medio de una lluvia de ideas  llegamos a la conclución de que la problemática que enfrentamos se puede resolver si implementamos un módulo que sea parte del sitio de Laboratoria el cual nos permita manipular la data de manera sencilla, clara y fácil de usar.
+
 ### Hipótesis
 Si creamos un módulo que sea parte del sitio web de Laboratoria, que permita acceder a la data y a su vez la organice y permita nutrirla, se maximizará el tiempo que se dedique a las actividades administrativas y a su vez permitirá claridad en los resultados.
+
+### Propuesta de valor
+En nuestra Laboratoria Data Dashboard incluiremos un proceso que permita acceder a la data de acuerdo a su perfil en la instutucion(Estudiante,Coach,Personal Developer Coordinator y Training Manager).
+Ademas de mostrar la información que cada miembro del equipo de formación necesita incluiremos un apartado para que las estudiantes podamos acceder a nuestros resultados.
 
 ### Objetivos
 ###### En este proyecto se engloban dos objetivos principales:
@@ -25,19 +29,17 @@ Si creamos un módulo que sea parte del sitio web de Laboratoria, que permita ac
 
 
 ###### Segundo Objetivo
->De acuerdo al proyecto, el objetivo principal de data-Dashboard es realizar un sitio web en el cual se pueda encontrar y accesar de manera facil, agil y organizada la data de Laboratoria para de esta forma poder optimizar el tiempo de las TMs y miembros del staff en cada sede.
-Dentro de los datos que normalmente se requiere analizar encontramos:
+>De acuerdo al proyecto, el objetivo principal de data-Dashboard es realizar un sitio web en el cual se pueda encontrar y accesar de manera facil, agil y organizada la data de Laboratoria para de esta forma poder optimizar el tiempo de las TMs y miembros del equipo de formación en cada sede.
+En esta primera entrega dedicada a las TM´s encontramos que los datos que normalmente se requiere analizar son:
 
-1. El total de estudiantes presentes por sede y generación.
-2. El porcentaje de deserción de estudiantes.
-3. La cantidad de estudiantes que superan la meta de puntos en promedio de todos los sprints cursados. (La meta de puntos es 70%  del total de puntos en HSE y en tech.)
-4. El porcentaje que representa el dato anterior en relación al total de estudiantes.
-5. El Net Promoter Score (NPS) promedio de los sprints cursados.
-6. La cantidad y el porcentaje que representa el total de estudiantes que superan la meta de puntos técnicos en promedio y por sprint.
-7. La cantidad y el porcentaje que representa el total de estudiantes que superan la meta de puntos de HSE en promedio y por sprint.
-8. El porcentaje de estudiantes satisfechas con la experiencia de Laboratoria.
-9. La puntuación promedio de l@s profesores.
-10. La puntuación promedio de l@s jedi masters.
+1. Cantidad de estudiantes activas.
+2. Porcentaje de estudiantes no activas (las que desertaron) por sede y por generación (y quienes son)
+3. Cantidad y porcentaje de estudiantes exitosas (superan la meta del 70% y siguen activas), solo por generación.
+Lo mismo para HSE y para Técnico
+4. El % de estudiantes satisfechas (cumple + supera)
+5. La puntuació n promedio de l@s profesores.
+6. La puntuación promedio de l@s jedi masters.
+
 
 ***
 ### Investigación, análisis y empatía
@@ -51,7 +53,7 @@ Dentro de los datos que normalmente se requiere analizar encontramos:
   * _Yessenia Sanchez (Inti), GDL_
   * _Ameli Castillo (Meme), GDL_
   * _Levhita, GDL_
-* HSE:
+* Personal Developer Coordinator:
   * _Samantha Penilla, GDL_
 * Alumnas GDL
   * Miriam Pérez
@@ -66,7 +68,7 @@ Dentro de los datos que normalmente se requiere analizar encontramos:
 * [Entrevista Inti]()
 * [Entrevistas TMs foraneas]()
 
-Después de analizar la información recabada de estas entrevistas, encontramos que en la actualidad el método utilizado para accesar a la data que cada miembro del staff necesita se obtiene básicamente mediante encuestas y hojas excel que en su mayoría son generadas por ellos mismos o bien provienen de la base de datos de Laboratoria pero estas últimas sólo las recibe la TM de cada sede quien debe procesarla y unificarla para después compartir los datos que los coachs necesitan; este proceso es largo y tedioso debido a que todo viene en archivos separados y se debe empatar la información de cada alumna una por una.
+Después de analizar la información recabada de estas entrevistas, encontramos que en la actualidad el método utilizado para accesar a la data que cada miembro del eqipo de formación necesita se obtiene básicamente mediante encuestas y hojas excel que en su mayoría son generadas por ellos mismos o bien provienen de la base de datos de Laboratoria pero estas últimas sólo las recibe la TM de cada sede quien debe procesarla y unificarla para después compartir los datos que los coachs necesitan; este proceso es largo y tedioso debido a que todo viene en archivos separados y se debe empatar la información de cada alumna una por una.
 
 **"Dedico mucho tiempo solo a organizar la data recibida en las hojas excel y además se recibe en archivos pesados y separados que requieren un equipo de cómputo más potente para trabajar; además se debe organizar todo antes de compartir con los Coachs en nuevos excel y eso a su vez nos consume mucho tiempo..."
 (Karla Rejas,TM GDL)**
@@ -108,16 +110,37 @@ El proceso para las deserciones es complicado y externo, el proceso es confuso y
 
 ## Propuesta
 ### Pseudocódigo
-1. Generar una página de inicio principal con imágen de fondo, datos básicos del data Dashboard y un login que especifique el tipo de usuario(Tms, Coachs, HSE, Alumnas).
-2. Pintar el nombre de usuario y desplegar menú de opciones (sede, generación y especificaciones por tipo de usuario ya que dependiendo del perfil se definirá a que data necesita tener acceso).
-3. Caso "1" Usuario TMs:
+*  Generar una página de inicio principal con imágen de fondo, datos básicos de Laboratoria asi como su mision y Visión.
+* incluir en la parte superior de la pagina un menu que incluya los siguientes enlaces:
+  * Inicio
+  * Sobre Nosotros
+  * Empresas
+  * Postula
+  * Data Dashboard
+(Cada opcióndel menu enlaza a una nueva pagína)
+
+* En el menu, la opción Data Dashboard enlazara al log in.
+En la pagina log in se podra ingresar con 4 distintos usuarios:
+  * Training Manager
+  * Coach
+  * Personal Developer Coordinator
+  * Estudiante
+
+* Al ingresar se despliega un menú de opciones (sede, generación y especificaciones por tipo de usuario ya que dependiendo del perfil se definirá a que data necesita tener acceso).
+
+* Caso "1" Usuario TMs:
+
   * Menú:
     * Overview (Página Principal)
     * Sede
       * Generación
-        * Jedi (Despliega información y evaluaciones así como input para ingresar data - comentarios- retroalimentación- compromisos-mas)
-        * Profesores (Despliega información y evaluaciones así como input para ingresar data - comentarios- retroalimentación- compromisos-mas)
-        * Alumnos (Despliega perfil de ingreso- historia-trayecto-resultados-gráficas comparativas de evolución-botón de deserción que redirige a un "form" y este guarda la data ingresada para futuras estadísticas).
+        * Jedi
+        * Profesores
+        * Estudiantes
+          1. Cantidad de estudiantes activas.
+          2. Porcentaje de estudiantes no activas (las que desertaron) por sede y por generación (y quienes son)
+          3. Cantidad y porcentaje de estudiantes exitosas (superan la meta del 70% y siguen activas), solo por generación.
+          Lo mismo para HSE y para Técnico
         * NPS(El Net Promoter Score (NPS) promedio de los sprints cursados. El NPS se calcula en base a la encuesta que las estudiantes responden al respecto de la recomendación que darían de Laboratoria, bajo la siguiente fórmula:
 
 [Promoters] =  [Respuestas 9 o 10] / [Total respuestas] * 100
@@ -129,7 +152,9 @@ El proceso para las deserciones es complicado y externo, el proceso es confuso y
             * Individual(tema a tema con imputs para comentarios).
             * Generacional.
             * Deserción
-4. Caso "2" Coachs
+
+
+* Caso "2" Coachs
 * Menu: Sede - Generación.
     * Ingresar Data(comentarios-resultados-datos sobresalientes...).
     * Obtener Data.
@@ -141,14 +166,14 @@ El proceso para las deserciones es complicado y externo, el proceso es confuso y
         * Tema.
         * Extracurriculares.
 
-5. Caso "3" HSE:
+5. Caso "3" Personal Developer Coordinator:
     * Menú (Sede-Generación).
       * Asistencias.
       * Interacciones(Con opción de review y de ingresar data).
       * Aprovechamiento(Por tema-unidad-sprints).
       * Deserción(form).
 
-6. Caso "4" Alumnas:
+6. Caso "4" Estudiantes:
       * Menú:
         * Perfil (overview).
         * Skills.
