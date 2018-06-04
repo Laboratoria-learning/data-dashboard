@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Didact Gothic', sans-serif;
 }
 /*SECCION HEADER*/
 header {
@@ -71,8 +71,8 @@ a:active {
 
 .container-back p {
   position: absolute;
-  top: 200px;
-  left: 12.5%;
+  top: 400px;
+  left: 11.7%;
   color: rgba(0,0,0,0.7);
 }
 
@@ -224,10 +224,11 @@ input {
   height: 40px;
   border-style: none;
   background:#DEDEDE;
-  
+  outline: 0px;
+
 }
 
-#container-Total {
+/*#container-Total {
   width: 25%;
   height: 300px;
   left: 3%;
@@ -236,6 +237,15 @@ input {
   border-radius: 20px;
   border: 1px solid rgba(0,0,0,0.3);
   text-align: center;
+}*/
+
+#container-students div {
+/*  outline: 1px solid black;*/
+  width: 25%;
+
+  background:#DEDEDE;
+  margin: 15px;
+  font-size: 18px;
 }
 
 #values {
