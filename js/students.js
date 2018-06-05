@@ -4966,25 +4966,58 @@ var generation20162 = '2016-2';
 function SuccessfullStudentsHSE(base) {
     var route = data[place][generation20162]['students'];
     var activeStudents = []; //active students
-    var successfulStudentsHSE = [];
-    var successfulStudentsTECH = [];
+    var successfulStudentsHse = [];
 
     for (var i = 0; i < route.length; i++) {
             if (route[i].active == true) {
                 activeStudents.push(route[i]);
 
                 for (var j = 0; j < route[i].sprints.length; j++) {
-                    successfulStudentsHSE.push(route[i]['sprints'][j]['score']['hse']);
+                    successfulStudentsHse.push(route[i]['sprints'][j]['score']['hse']);
                 }
             }
         }
-
-
-    console.log(activeStudents);
-    console.log(successfulStudentsHSE);
+    console.log(activeStudents.length);
+    document.getElementById("paragraph-successful-of-active-students-hse").innerHTML = successfulStudentsHse.length;
+    console.log(successfulStudentsHSE.length);
     // document.getElementById("paragraph-number-of-active-students").innerHTML = activeStudents.length;
-    return successfulStudentsHSE;
-}
+    return successfulStudentsHSE.length;
+};
+SuccessfullStudentsHSE(data);
+
+// estudiantes con el 70% o mas de TECH
+function SuccessfullStudentsTECH(base) {
+    var route = data[place][generation20162]['students'];
+    var activeStudents = []; //active students
+    var successfulStudentsTech = [];
+
+    for (var i = 0; i < route.length; i++) {
+            if (route[i].active == true) {
+                activeStudents.push(route[i]);
+
+                for (var j = 0; j < route[i].sprints.length; j++) {
+                    successfulStudentsTech.push(route[i]['sprints'][j]['score']['tech']);
+                }
+            }
+        }
+    console.log(activeStudents.length);
+    document.getElementById("paragraph-successful-of-active-students-tech").innerHTML = successfulStudentsTech.length;
+    console.log(successfulStudentsTech.length);
+    // document.getElementById("paragraph-number-of-active-students").innerHTML = activeStudents.length;
+    return successfulStudentsTech.length;
+};
+SuccessfullStudentsTECH(data);
+
+
+// Dando click en el area de coaches se presentan los datos de las funciones Jedi y Teacher
+var sucessfullStudentsHSE = document.getElementById("area-students");
+
+sucessfullStudentsHSE.addEventListener("click",function(){
+  var containerCoaches = document.getElementById("gr-Little-Container");
+  containerCoaches.style.display = "inline-flex";
+});
+
+
 
 
 //
@@ -5038,4 +5071,3 @@ function SuccessfullStudentsHSE(base) {
 // }
 //
 //
-SuccessfullStudentsHSE(data)
