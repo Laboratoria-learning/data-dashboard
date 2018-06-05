@@ -5181,11 +5181,11 @@ function averageJedi(array) {
             sum += j;
         }
     }
-        //console.log(sum/array.length);
-        return sum/array.length;
+        //console.log(sum/array.length).toFixed(2);
+        return (sum/array.length).toFixed(2);
 }; // function
 
-var outputAverageJedi = averageJedi(outputRatings);
+var outputAverageJedi = averageJedi(outputRatings) + " %";
 document.getElementById("average-Jedi").innerHTML = outputAverageJedi;
 
 // Función promedio Teachers/Coachs
@@ -5199,9 +5199,17 @@ function averageTeacher(array) {
             sum += j;
         }
     }
-        //console.log(sum/array.length);
-        return Math.round(sum/array.length);
+        //console.log(sum/array.length).toFixed(2);
+        return Math.round(sum/array.length).toFixed(2);
 }; // function
 
-var outputAverageTeacher = averageTeacher(outputRatings);
+var outputAverageTeacher = averageTeacher(outputRatings) + " %";
 document.getElementById("average-Teacher").innerHTML = outputAverageTeacher;
+
+// Dando click en el area de coaches se presentan los datos de las funciones Jedi y Teacher
+var coaches = document.getElementById("area-coaches");
+
+coaches.addEventListener("click",function(){
+  var containerCoaches = document.getElementById("gr-Little-Container");
+  containerCoaches.style.display = "inline-flex";
+});
