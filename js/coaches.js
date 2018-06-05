@@ -5133,45 +5133,11 @@ var data = {
 };
 // VARIABLE PARA GUARDAR EL ARRARY DE LA SEDE SELECCIONADA
 var inputCity = document.getElementById("city").textContent;
-console.log(inputCity);
-
-var cityLocation = {};
-switch(inputCity) {
-    case 'AQP':
-        cityLocation = data.AQP;
-        break;
-    case 'LIM':
-        cityLocation = data.LIM;
-        break;
-    case 'CDMX':
-        cityLocation = data.CDMX;
-        break;
-    case 'SCL':
-        cityLocation = data.SCL;
-        break;
-};
 
 // VARIABLE PARA GUARDAR EL ARRAY DE LA GENERACIÓN SELECCIONADA SEGÚN LA SEDE
 var generation = document.getElementById("generation").textContent;
-console.log(generation);
 
-function ratings (array,year) {
-    var keysArray = Object.keys(array);
-    var yearGeneration = [];
-
-    for ( var i = 0; i < keysArray.length; i++) {
-        if (keysArray[i] == year) {
-        yearGeneration = array[year].ratings;
-        }
-    } // for
-    return yearGeneration;
-}; // function
-
-
-var outputRatings = ratings(cityLocation,generation);
 
 
 localStorage.setItem("generation", generation);
 localStorage.setItem("inputCity", inputCity);
-localStorage.setItem("cityLocation", cityLocation);
-localStorage.setItem("outputRatings", outputRatings);

@@ -5134,47 +5134,84 @@ var data = {
 
 var inputCity = localStorage.getItem('inputCity');
 var generation = localStorage.getItem('generation');
-var cityLocation = localStorage.getItem('cityLocation');
-var outputRatings = localStorage.getItem('outputRatings');
 
-console.log(outputRatings);
 document.getElementById("generationgr").innerHTML = generation;
 document.getElementById("citygr").innerHTML = inputCity;
 
+var cityLocation = {};
+switch(inputCity) {
+    case 'AQP':
+        cityLocation = data.AQP;
+        break;
+    case 'LIM':
+        cityLocation = data.LIM;
+        break;
+    case 'CDMX':
+        cityLocation = data.CDMX;
+        break;
+    case 'SCL':
+        cityLocation = data.SCL;
+        break;
+};
 
+function ratings (array,year) {
+    var keysArray = Object.keys(array);
+    var yearGeneration = [];
+
+    for ( var i = 0; i < keysArray.length; i++) {
+        if (keysArray[i] == year) {
+        yearGeneration = array[year].ratings;
+        }
+    } // for
+    return yearGeneration;
+}; // function
+
+var outputRatings = ratings(cityLocation,generation);
+console.log(generation);
+console.log(inputCity);
+console.log(cityLocation);
+console.log(ratings(cityLocation,generation));
 // *************** AVERAGES ***********************
 // Función promedio Jedi
 function averageJedi(array) {
-    var cont = [];
-    var sum = 0;
+   var cont = [];
+   var sum = 0;
 
-    for ( var i = 0; i < array.length; i++) {
-            cont.push(array[i].jedi);
-        for (var j = cont[i]; j < cont.length; j++);{
-            sum += j;
-        }
-    }
-        //console.log(sum/array.length);
-        return sum/array.length;
-}; // function
+   for ( var i = 0; i < array.length; i++) {
+           cont.push(array[i].jedi);
+       for (var j = cont[i]; j < cont.length; j++);{
+           sum += j;
+       }
+   }
+       //console.log(sum/array.length).toFixed(2);
+       return (sum/array.length).toFixed(2);
+};
 
-var outputAverageJedi = averageJedi(outputRatings);
+var outputAverageJedi = averageJedi(outputRatings) + " %";
 document.getElementById("average-Jedi").innerHTML = outputAverageJedi;
 
 // Función promedio Teachers/Coachs
 function averageTeacher(array) {
-    var cont = [];
-    var sum = 0;
+   var cont = [];
+   var sum = 0;
 
-    for ( var i = 0; i < array.length; i++) {
-            cont.push(array[i].teacher);
-        for (var j = cont[i]; j < cont.length; j++);{
-            sum += j;
-        }
-    }
-        //console.log(sum/array.length);
-        return Math.round(sum/array.length);
-}; // function
+   for ( var i = 0; i < array.length; i++) {
+           cont.push(array[i].teacher);
+       for (var j = cont[i]; j < cont.length; j++);{
+           sum += j;
+       }
+   }
+       //console.log(sum/array.length).toFixed(2);
+       return Math.round(sum/array.length).toFixed(2);
+};
 
-var outputAverageTeacher = averageTeacher(outputRatings);
+var outputAverageTeacher = averageTeacher(outputRatings) + " %";
 document.getElementById("average-Teacher").innerHTML = outputAverageTeacher;
+
+// Dando click en el area de coaches se presentan los datos de las funciones Jedi y Teacher
+// var coaches = document.getElementById("area-coaches");
+//
+// coaches.addEventListener("click",function(){
+//  var containerCoaches = document.getElementById("gr-Little-Container");
+//  containerCoaches.style.display = "inline-flex";
+// });
