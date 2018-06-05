@@ -4958,44 +4958,63 @@ var data = {
         }
     }
 };
+/*
+var place = localStorage.getItem('inputCity');
+var generation = localStorage.getItem('generation');
+*/
 
-var inputCity = document.getElementById("city").textContent;
+var place = "AQP";
+var generation = "2016-2";
 
-var cityLocation = {};
-switch(inputCity) {
-    case 'AQP':
-        cityLocation = data.AQP;
-        break;
-    case 'LIM':
-        cityLocation = data.LIM;
-        break;
-    case 'CDMX':
-        cityLocation = data.CDMX;
-        break;
-    case 'SCL':
-        cityLocation = data.SCL;
-        break;
+// Estudiantes con el 70% o mas de HSE
+function SuccessfullStudentsHse(base) {
+    var route = data[place][generation]['students'];
+    console.log(route);
+    var activeStudents = []; //active students
+    var successfulStudentsHse = [];
+
+    for (var i = 0; i < route.length; i++) {
+            if (route[i].active == true) {
+                activeStudents.push(route[i]);
+                var hse=0;
+                for (var j = 0; j < route[i].sprints.length; j++) {
+                    hse += route[i]['sprints'][j]['score']['hse']; 
+                }
+                if (hse >= ( 840 * route[i].sprints.length)) { // 840 pts es el 70% de hse 
+                    successfulStudentsHse.push(route[i]);
+                }
+            }
+        }
+    document.getElementById("paragraph-successful-of-active-students-hse").innerHTML = successfulStudentsHse.length;
+    console.log(successfulStudentsHse.length);
+    
+    var percentageSuccessFulStudentsHse = ((successfulStudentsHse.length / route.length)*100).toFixed(2) + " %";
+    document.getElementById("paragraph-percentage-successful-of-active-students-hse").innerHTML = percentageSuccessFulStudentsHse;
+    return successfulStudentsHse.length;
+}
+
+// Estudiantes con el 70% o mas de TECH
+function SuccessfullStudentsTech(base) {
+    var route = data[place][generation]['students'];
+    var activeStudents = []; //active students
+    var successfulStudentsTech = [];
+    var percentageSuccessFulStudentsTech = "";
+
+    for (var i = 0; i < route.length; i++) {
+            if (route[i].active == true) {
+                activeStudents.push(route[i]);
+
+                for (var j = 0; j < route[i].sprints.length; j++) {
+                    successfulStudentsTech.push(route[i]['sprints'][j]['score']['tech']);
+                }
+            }
+                
+        }
+    document.getElementById("paragraph-successful-of-active-students-tech").innerHTML = successfulStudentsTech.length;
+    //successfulStudentsTech
+    //console.log(successfulStudentsTech.length);
+    return successfulStudentsTech.length;
 };
 
- // VARIABLE PARA GUARDAR EL ARRAY DE LA GENERACIÓN SELECCIONADA SEGÚN LA SEDE
-var generation = document.getElementById("generation").textContent;
-
-function ratings (array,year) {
-    var keysArray = Object.keys(array);
-    var yearGeneration = [];
-
-    for ( var i = 0; i < keysArray.length; i++) {
-        if (keysArray[i] == year) {
-        yearGeneration = array[year].ratings;
-        }
-    } // for
-    return yearGeneration;
-}; // function
-
-var outputRatings = ratings(cityLocation,generation);
-
-
-
-// WARNING:
-localStorage.setItem("generation", generation);
-localStorage.setItem("inputCity", inputCity);
+SuccessfullStudentsHse(data);
+SuccessfullStudentsTech(data);
