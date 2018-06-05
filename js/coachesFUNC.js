@@ -5131,49 +5131,50 @@ var data = {
     }
   }
 };
-// VARIABLE PARA GUARDAR EL ARRARY DE LA SEDE SELECCIONADA
-var inputCity = document.getElementById("city").textContent;
-console.log(inputCity);
 
-var cityLocation = {};
-switch(inputCity) {
-    case 'AQP':
-        cityLocation = data.AQP;
-        break;
-    case 'LIM':
-        cityLocation = data.LIM;
-        break;
-    case 'CDMX':
-        cityLocation = data.CDMX;
-        break;
-    case 'SCL':
-        cityLocation = data.SCL;
-        break;
-};
+var inputCity = localStorage.getItem('inputCity');
+var generation = localStorage.getItem('generation');
+var cityLocation = localStorage.getItem('cityLocation');
+var outputRatings = localStorage.getItem('outputRatings');
 
-// VARIABLE PARA GUARDAR EL ARRAY DE LA GENERACIÓN SELECCIONADA SEGÚN LA SEDE
-var generation = document.getElementById("generation").textContent;
-console.log(generation);
+console.log(outputRatings);
+document.getElementById("generationgr").innerHTML = generation;
+document.getElementById("citygr").innerHTML = inputCity;
 
-function ratings (array,year) {
-    var keysArray = Object.keys(array);
-    var yearGeneration = [];
 
-    for ( var i = 0; i < keysArray.length; i++) {
-        if (keysArray[i] == year) {
-        yearGeneration = array[year].ratings;
+// *************** AVERAGES ***********************
+// Función promedio Jedi
+function averageJedi(array) {
+    var cont = [];
+    var sum = 0;
+
+    for ( var i = 0; i < array.length; i++) {
+            cont.push(array[i].jedi);
+        for (var j = cont[i]; j < cont.length; j++);{
+            sum += j;
         }
-    } // for
-    return yearGeneration;
+    }
+        //console.log(sum/array.length);
+        return sum/array.length;
 }; // function
 
+var outputAverageJedi = averageJedi(outputRatings);
+document.getElementById("average-Jedi").innerHTML = outputAverageJedi;
 
+// Función promedio Teachers/Coachs
+function averageTeacher(array) {
+    var cont = [];
+    var sum = 0;
 
-var outputRatings = ratings(cityLocation,generation);
+    for ( var i = 0; i < array.length; i++) {
+            cont.push(array[i].teacher);
+        for (var j = cont[i]; j < cont.length; j++);{
+            sum += j;
+        }
+    }
+        //console.log(sum/array.length);
+        return Math.round(sum/array.length);
+}; // function
 
-
-localStorage.setItem("generation", generation);
-localStorage.setItem("inputCity", inputCity);
-localStorage.setItem("cityLocation", cityLocation);
-localStorage.setItem("outputRatings", outputRatings);
-
+var outputAverageTeacher = averageTeacher(outputRatings);
+document.getElementById("average-Teacher").innerHTML = outputAverageTeacher;
