@@ -5167,10 +5167,7 @@ function ratings (array,year) {
 }; // function
 
 var outputRatings = ratings(cityLocation,generation);
-console.log(generation);
-console.log(inputCity);
-console.log(cityLocation);
-console.log(ratings(cityLocation,generation));
+
 // *************** AVERAGES ***********************
 // Función promedio Jedi
 function averageJedi(array) {
@@ -5208,10 +5205,27 @@ function averageTeacher(array) {
 var outputAverageTeacher = averageTeacher(outputRatings) + " %";
 document.getElementById("average-Teacher").innerHTML = outputAverageTeacher;
 
-// Dando click en el area de coaches se presentan los datos de las funciones Jedi y Teacher
-// var coaches = document.getElementById("area-coaches");
-//
-// coaches.addEventListener("click",function(){
-//  var containerCoaches = document.getElementById("gr-Little-Container");
-//  containerCoaches.style.display = "inline-flex";
-// });
+// chat function
+google.charts.load('current', {
+    'packages': ['corechart']
+});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+
+    var data = google.visualization.arrayToDataTable([
+        ['Task', 'Hours per Day'],
+        ['Work', 11]
+
+    ]);
+
+    var options = {
+        title: 'My Daily Activities'
+    };
+
+    var chart = new google.visualization.BarChart(document.getElementById('piechart'));
+
+    chart.draw(data, options);
+
+console.log()
+}

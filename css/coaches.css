@@ -141,16 +141,38 @@ a {
     width: auto;
 }
 
-#gr-Little-Container {
-    /* display: none; */
+#jedi-cont, #teacher-cont,#piechart {
+    border: 1px solid black;
+}
+
+#jedi-cont, #teacher-cont {
+    border: 1px solid black;
+
 }
 
 /* Esconder el Little Container */
 
-#gr-Little-Container > a {
-    height: 40px;
-    font-weight: bold;
-    text-align: center;
-    margin-left: 10em;
-    padding: 1em .5em;
+#jed,#tea{
+    height: 6em;
+    width: 6em;
+    margin-left: 8em;
+    border: 5px solid #FF009E;
+    margin-bottom: 2em;
+    display: block;
+}
+
+#seccontCont{
+    float: left;
+    width: 60%;
+    height: 25.8em;
+}
+
+#seccont{
+    width: 40%;
+    float: left;
+}
+
+#average-Jedi, #average-Teacher{
+    margin-top: .3em;
+    font-size: 22px;
 }
