@@ -154,3 +154,7 @@ a {
     margin-left: 10em;
     padding: 1em .5em;
 }
+#gr-Opcion-Bar #li-user {
+    background-color: rgb(255, 229, 33);
+    border: none;
+}

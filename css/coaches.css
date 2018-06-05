@@ -167,7 +167,7 @@ a {
 #gr-Main-Container #gr-Little-Container {
     /* display: none; */
     float: center;
-    padding-top: 3em;
+    /* padding-top: 3em; */
     width: 100%;
 }
 
@@ -181,7 +181,7 @@ a {
     width: auto;
 }
 
-#jedi-cont, #teacher-cont,#piechart {
+#jedi-cont, #teacher-cont,#chart_div {
     border: 1px solid black;
 }
 
@@ -189,8 +189,6 @@ a {
     border: 1px solid black;
 
 }
-
-/* Esconder el Little Container */
 
 #jed,#tea{
     height: 6em;
@@ -204,7 +202,7 @@ a {
 #seccontCont{
     float: left;
     width: 60%;
-    height: 25.8em;
+    height: 26em;
 }
 
 #seccont{
@@ -216,4 +214,14 @@ a {
     margin-top: .3em;
     font-size: 22px;
 
+}
+h1{
+    margin-top: 2em;
+    text-align: center;
+    /* border: 1px solid black; */
+    font-weight: bold;
+}
+#gr-Opcion-Bar #li-user {
+    background-color: rgb(255, 229, 33);
+    border: none;
 }

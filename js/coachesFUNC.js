@@ -5205,27 +5205,32 @@ function averageTeacher(array) {
 var outputAverageTeacher = averageTeacher(outputRatings) + " %";
 document.getElementById("average-Teacher").innerHTML = outputAverageTeacher;
 
-// chat function
-google.charts.load('current', {
-    'packages': ['corechart']
-});
+// chat function********************
+
+
+
+google.charts.load('current', {'packages':['corechart']});
+
 google.charts.setOnLoadCallback(drawChart);
 
-function drawChart() {
+var arrayChars = [
+    ['Jedis',Number(averageJedi(outputRatings))],
+    ['Teachers',Number(averageTeacher(outputRatings))]
+];
 
-    var data = google.visualization.arrayToDataTable([
-        ['Task', 'Hours per Day'],
-        ['Work', 11]
 
-    ]);
+function drawChart(array) {
 
-    var options = {
-        title: 'My Daily Activities'
-    };
+  // Create the data table.
+  var data = new google.visualization.DataTable();
+  data.addColumn('string', 'Topping');
+  data.addColumn('number', 'Averages');
+  data.addRows(arrayChars);
+console.log(arrayChars);
+  // Set chart options
+  var options = {'title':'Averages'};
 
-    var chart = new google.visualization.BarChart(document.getElementById('piechart'));
-
-    chart.draw(data, options);
-
-console.log()
+  // Instantiate and draw our chart, passing in some options.
+  var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+  chart.draw(data, options);
 }

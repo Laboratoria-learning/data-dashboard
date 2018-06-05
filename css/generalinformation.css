@@ -185,3 +185,59 @@ padding-bottom: 2em;
     font-size: 25px;
     text-align: center;
 }
+
+#gr-Main-Container #gr-Little-Container {
+    /* display: none; */
+    float: center;
+    /* padding-top: 3em; */
+    width: 100%;
+}
+
+#average-Jedi, #average-Teacher {
+    height: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0;
+    padding: 1em .5em;
+    width: auto;
+}
+
+#jedi-cont, #teacher-cont,#chart_div {
+    border: 1px solid black;
+}
+
+#jedi-cont, #teacher-cont {
+    border: 1px solid black;
+
+}
+
+#jed,#tea{
+    height: 6em;
+    width: 6em;
+    margin-left: 8em;
+    border: 5px solid #FF009E;
+    margin-bottom: 2em;
+    display: block;
+}
+
+#seccontCont{
+    float: left;
+    width: 60%;
+    height: 26em;
+}
+
+#seccont{
+    width: 40%;
+    float: left;
+}
+
+#average-Jedi, #average-Teacher{
+    margin-top: .3em;
+    font-size: 22px;
+}
+h1{
+    margin-top: 2em;
+    text-align: center;
+    /* border: 1px solid black; */
+    font-weight: bold;
+}
