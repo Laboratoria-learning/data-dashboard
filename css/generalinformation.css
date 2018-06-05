@@ -151,7 +151,7 @@ a {
     margin-bottom: 2em;
     float: left;
     margin-left: -13.5em;
-    margin-top: .8em;   
+    margin-top: .8em;
 }
 
 
@@ -178,4 +178,10 @@ padding-bottom: 2em;
     margin-left: 8em;
     border: 5px solid #FF009E;
     margin-bottom: 2em;
+}
+
+#paragraph-satisfied-of-inactive-students{
+    margin-top: 1.2em;;
+    font-size: 25px;
+    text-align: center;
 }
