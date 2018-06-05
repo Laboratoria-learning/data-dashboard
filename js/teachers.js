@@ -44,7 +44,7 @@ var sprintLim171 = data['LIM']['2017-1']['ratings'].length;
 var sprintLim172 = data['LIM']['2017-2']['ratings'].length;
     console.log(sprintLim172);
 
-//HOW MANY STUDENTS THERE ARE IN SANTIAGO EACH SEMESTER *THEY DON'T WORK AS THEY SHOULD
+//HOW MANY SPRINTS THERE ARE IN SANTIAGO EACH SEMESTER *THEY DON'T WORK AS THEY SHOULD
 var sprintStg162 = data['SCL']['2016-2']['ratings'].length;
     console.log(sprintStg162);
 var sprintStg171 = data['SCL']['2017-1']['ratings'].length;
@@ -52,7 +52,7 @@ var sprintStg171 = data['SCL']['2017-1']['ratings'].length;
 var sprintStg172 = data['SCL']['2017-2']['ratings'].length;
     console.log(sprintStg172);
 
-//LIST OF ALL THE OBJECTS (RATINGS) INSIDE THE PROPERTY RATINGS
+//LIST OF ALL THE OBJECTS (SPRINTS) INSIDE THE PROPERTY RATINGS
 //AREQUIPA 2016-2
 var totalSprAqp1 = data['AQP']['2016-2']['ratings'];
 console.log(totalSprAqp1);
@@ -226,21 +226,21 @@ var avgLim172 = avgLim3.toFixed(2);
 console.log(avgLim172);
 
 //------------------------------------------------------------------8
-//AVERAGE FOR THE TEACHERS IN SANTIAGO DE CHILE 2016-2
-var sumAvgStg1 = 0;
+//AVERAGE FOR THE TEACHERS IN SANTIAGO DE CHILE 2017-1
+var sumAvgStg2 = 0;
 
-for (var i = 0; i < sprintStg162; i++) {
-    var jAverageStg1 = (totalSprStg1[i]['teacher']);
+for (var i = 0; i < sprintStg171; i++) {
+    var jAverageStg2 = (totalSprStg2[i]['teacher']);
     // tAverageA1.Math.rounded(2);
-    sumAvgStg1 += jAverageStg1;
+    sumAvgStg2 += jAverageStg2;
     // console.log((totalStCdMx1[i]['teacher']))
 }
 
-var avgStg1 = sumAvgStg1 / sprintStg162;
-var avgStg162 = avgStg1.toFixed(2);
+var avgStg2 = sumAvgStg2/ sprintStg171;
+var avgStg171 = avgStg2.toFixed(2);
 
 // console.log(avgMx1);
-console.log(avgStg162);
+console.log(avgStg171);
 
 //------------------------------------------------------------------9
 //AVERAGE FOR THE TEACHERS IN SANTIAGO DE CHILE 2017-1
@@ -293,7 +293,7 @@ function showSemester(){
     }else if (smsLimaThree.selected){
         aTeacherLim3.innerHTML = avgLim172;
     }else if (smsSclOne.selected){
-        aTeacherStg1.innerHTML = avgStg162;
+        aTeacherStg1.innerHTML = avgStg171;
     }else if (smsSclTwo.selected){
         aTeacherStg2.innerHTML = avgStg171;
     } else {
