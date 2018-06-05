@@ -4959,6 +4959,8 @@ var data = {
     }
 };
 
+var inputCity = document.getElementById("city").textContent;
+
 var cityLocation = {};
 switch(inputCity) {
     case 'AQP':
@@ -4986,73 +4988,14 @@ function ratings (array,year) {
         if (keysArray[i] == year) {
         yearGeneration = array[year].ratings;
         }
+    } // for
+    return yearGeneration;
+}; // function
 
-    document.getElementById("paragraph-successful-of-active-students-hse").innerHTML = successfulStudentsHse.length;
-    console.log(successfulStudentsHse.length);
-    
-    var percentageSuccessFulStudentsHse = ((successfulStudentsHse.length / route.length)*100).toFixed(2) + " %";
-    document.getElementById("paragraph-percentage-successful-of-active-students-hse").innerHTML = percentageSuccessFulStudentsHse;
-    return successfulStudentsHse.length;
-};
+var outputRatings = ratings(cityLocation,generation);
 
-// Estudiantes con el 70% o más TECH
-function SuccessfullStudentsTech(base) {
-    var route = data[place][generation]['students'];
-    console.log(route);
-    var activeStudents = []; //active students
-    var successfulStudentsTech = [];
 
-    for (var i = 0; i < route.length; i++) {
-            if (route[i].active == true) {
-                activeStudents.push(route[i]);
-                var hse=0;
-                for (var j = 0; j < route[i].sprints.length; j++) {
-                    hse += route[i]['sprints'][j]['score']['tech']; 
-                }
-                if (hse >= ( 1260 * route[i].sprints.length)) { // 1260 pts es el 70% de tech 
-                    successfulStudentsTech.push(route[i]);
-                }
-            }
-        }
-    document.getElementById("paragraph-successful-of-active-students-tech").innerHTML = successfulStudentsTech.length;
-    console.log(successfulStudentsTech.length);
-    
-    var percentageSuccessFulStudentsTech = ((successfulStudentsTech.length / route.length)*100).toFixed(2) + " %";
-    document.getElementById("paragraph-percentage-successful-of-active-students-tech").innerHTML = percentageSuccessFulStudentsTech;
-    return successfulStudentsTech.length;
-};
 
-// Estudiantes con el 70% en TECH y HSE ---> alias las unicornio
-function SuccessfullStudents(base) {
-    var route = data[place][generation]['students'];
-    console.log(route);
-    var activeStudents = []; //active students
-    var successfulStudents = [];
-
-    for (var i = 0; i < route.length; i++) {
-            if (route[i].active == true) {
-                activeStudents.push(route[i]);
-                var hse = 0;
-                var tech = 0; 
-
-                for (var j = 0; j < route[i].sprints.length; j++) {
-                    hse += route[i]['sprints'][j]['score']['hse'];
-                    tech += route[i]['sprints'][j]['score']['tech'];  
-                }
-                if (hse >= 840 * route[i].sprints.length && tech >= 1260 * route[i].sprints.length) { // 840 pts es el 70% de tech y 1260 pts es el 70% de tech 
-                    successfulStudents.push(route[i]);
-                }
-            }
-        }
-    document.getElementById("paragraph-successful-of-active-students").innerHTML = successfulStudents.length;
-    console.log(successfulStudents.length);
-    
-    var percentageSuccessFulStudents = ((successfulStudents.length / route.length)*100).toFixed(2) + " %";
-    document.getElementById("paragraph-percentage-successful-of-active-students").innerHTML = percentageSuccessFulStudents;
-    return successfulStudents.length;
-};
-
-SuccessfullStudentsHse(data);
-SuccessfullStudentsTech(data);
-SuccessfullStudents(data);
-
+// WARNING:
+localStorage.setItem("generation", generation);
+localStorage.setItem("inputCity", inputCity);
