@@ -6,7 +6,7 @@ body {
     color: black;
 }
 
-body > nav > li {
+body>nav>li {
     background-color: white;
     border: 1px solid gray;
     border-radius: 10px;
@@ -126,10 +126,11 @@ a {
 /* data section */
 
 .successful-students, .inactive-students, .satisfied-students {
-    width: 100%;
+    width: 95%;
     height: auto;
     float: left;
     padding-left: 2em;
+    border: 1px solid black;
 }
 
 #number-of-successful-students, #number-of-successful-students-HSE, #number-of-successful-students-technical {
@@ -152,24 +153,31 @@ a {
 
 #paragraph-number-of-successful-students {
     margin-top: .35em;
-    ;
     font-size: 50px;
     text-align: center;
 }
 
 #paragraph-percentage-of-inactive-students {
     margin-top: 1.2em;
-    ;
     font-size: 25px;
     text-align: center;
 }
+
 #gr-Opcion-Bar #li-user {
     background-color: rgb(255, 229, 33);
     border: none;
 }
-h1{
-    margin-top: 5em;
+
+#title {
+    width: 100%;
+    margin: 0;
+    float: center;
+    display: block;
+}
+
+h1 {
+    width: 98%;
+    height: auto;
+    float: left;
     text-align: center;
-    /* border: 1px solid black; */
-    font-weight: bold;
 }
