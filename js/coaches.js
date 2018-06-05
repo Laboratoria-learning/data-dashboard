@@ -5134,8 +5134,7 @@ var data = {
 
 // Switch para utilizar solo el array de la sede seleccionada
 var cityLocation = {};
-//switch(document.getElementById('input-city').value) {
-switch('AQP') {
+switch(document.getElementById('input-city').value) {
     case 'AQP':
         cityLocation = data.AQP;
         break;
@@ -5155,10 +5154,10 @@ function ratings (array,year) {
     var keysArray = Object.keys(array);
     var yearGeneration = [];
 
-    for ( var i = 0; i < keysArray.length; i++) { 
+    for ( var i = 0; i < keysArray.length; i++) {
         if (keysArray[i] == year) {
         yearGeneration = array[year].ratings;
-        }  
+        }
     } // for
     return yearGeneration;
 }; // function
@@ -5172,7 +5171,7 @@ function averageJedi(array) {
     var cont = [];
     var sum = 0;
 
-    for ( var i = 0; i < array.length; i++) { 
+    for ( var i = 0; i < array.length; i++) {
             cont.push(array[i].jedi);
         for (var j = cont[i]; j < cont.length; j++);{
             sum += j;
@@ -5190,7 +5189,7 @@ function averageTeacher(array) {
     var cont = [];
     var sum = 0;
 
-    for ( var i = 0; i < array.length; i++) { 
+    for ( var i = 0; i < array.length; i++) {
             cont.push(array[i].teacher);
         for (var j = cont[i]; j < cont.length; j++);{
             sum += j;
