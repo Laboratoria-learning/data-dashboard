@@ -242,10 +242,10 @@ input {
 #container-students div {
 /*  outline: 1px solid black;*/
   width: 25%;
-
   background:#DEDEDE;
   margin: 15px;
   font-size: 18px;
+  font-style: oblique;
   text-align: justify;
 
 }

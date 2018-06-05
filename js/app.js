@@ -40,7 +40,7 @@ button.addEventListener("click", function(){
 }else if (passw.value =='LABORATORIA' && input.value =='coordinator'){
       containerForm.style.display = "none";
       sectionGrafics.style.display = "block";
-}else if (passw.value =='LABORATORIA' && input.value =='manager'){
+}else if (passw.value =='LABORATORIA' && input.value =='TM'){
       containerForm.style.display = "none";
       sectionGrafics.style.display = "block";
 }else{
