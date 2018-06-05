@@ -77,20 +77,20 @@ a:active {
 }
 
 h1 {
-  top: 50px;
+  top:100px;
 }
 
 #important-values {
   position: relative;
   display: flex;
-  top: 170px;
+  top: 100px;
   margin-left: 7px;
-  text-align: justify;
+  text-align justify;
 }
 #values-titles {
   position: relative;
   display: flex;
-  top: 180px;
+  top: 125px;
   margin-left: 250px;
 
 }
@@ -246,7 +246,10 @@ input {
   background:#DEDEDE;
   margin: 15px;
   font-size: 18px;
+  text-align: justify;
+
 }
+
 
 #values {
   display: inline-flex;
