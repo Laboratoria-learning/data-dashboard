@@ -4959,8 +4959,7 @@ var data = {
     }
 };
 
-var inputCity = document.getElementById("city").innerHTML;
-console.log(inputCity);
+var inputCity = document.getElementById("city").textContent;
 
 var cityLocation = {};
 switch(inputCity) {
@@ -4980,7 +4979,6 @@ switch(inputCity) {
 
  // VARIABLE PARA GUARDAR EL ARRAY DE LA GENERACIÓN SELECCIONADA SEGÚN LA SEDE
 var generation = document.getElementById("generation").textContent;
-console.log(generation);
 
 function ratings (array,year) {
     var keysArray = Object.keys(array);
@@ -4998,76 +4996,9 @@ var outputRatings = ratings(cityLocation,generation);
 
 
 
-// estudiantes activas de AQP gen 2016-2
-var place = cityLocation;
-var generation20162 = generation;
+// WARNING:
+localStorage.setItem("generation", generation);
+localStorage.setItem("inputCity", inputCity);
 
-function grActiveStudentsGen20162(base) {
-    var carrStu = data[place][generation20162].students;
-    var activeStudents = [];
-    for (var i = 0; i < carrStu.length; i++) {
-        if (carrStu[i].active == true) {
-            activeStudents.push(carrStu[i]);
-        }
-    }
-    document.getElementById("paragraph-number-of-active-students").innerHTML = activeStudents.length;
-    return activeStudents;
-}
-
-
-// estudiantes inactivas de AQP gen 2016-2
-
-function grInactiveStudentsGen20162(base) {
-    var totalStudents = [];
-    var carrStu = data[place][generation20162].students;
-    var inactiveStudents = [];
-
-    // total de estudiantes
-    for (var i = 0; i < carrStu.length; i++) {
-        totalStudents.push(carrStu[i]);
-    }
-    // return totalStudents;
-
-    for (var i = 0; i < carrStu.length; i++) {
-        if (carrStu[i].active == false) {
-            inactiveStudents.push(carrStu[i]);
-        }
-    }
-    // return inactiveStudents;
-
-
-    var percentageInactiveStudents = inactiveStudents.length / totalStudents.length  * 100;
-    var decimalPercentageInactiveStudents = percentageInactiveStudents.toFixed(2) + "%";
-    document.getElementById("paragraph-percentage-of-inactive-students").innerHTML = decimalPercentageInactiveStudents;
-}
-
-
-// lista de alumans que desertaron
-function studentsListInactive(base){
-    var carrStu = data[place][generation20162]['students'];
-    var listOfStudents = [];
-    //save the list of objects who are inactive
-
-    for (var i = 0; i < carrStu.length; i++) {
-        if (carrStu[i].active == false){
-            listOfStudents.push("<li>" + carrStu[i].name + "</li>");
-        }
-    }
-    console.log(listOfStudents);
-
-    document.getElementById("name-list-of-inactive-students").innerHTML = listOfStudents;
-}
-
-// satisfied students
-
-function satisfiedStudents (base){
-
-}
-
-
-
-
-
-grActiveStudentsGen20162(data);
-grInactiveStudentsGen20162(data);
-studentsListInactive(data);
+console.log(generation);
+console.log(inputCity);
