@@ -70,7 +70,7 @@ a {
     margin: 3em .5em 0 0;
 }
 
-/* *********** AGENDA *********** */ 
+/* *********** AGENDA *********** */
 #calendar {
     border-radius: 5px;
     border: 1px solid gray;
@@ -96,7 +96,7 @@ a {
     /* box-sizing: content-box; */
     /* display: inline-flex; */
     margin-left: 1%;
-    margin-top: 1em;  
+    margin-top: 1em;
     width: 97%;
 }
 
@@ -118,7 +118,7 @@ a {
     height: 8em;
     width: 13em;
     background-color: white;
-    display: none;
+    /* display: none; */
 }
 
 .grContainerSedes:hover{
@@ -126,7 +126,7 @@ a {
 }
 
 #gr-Main-Container #gr-Little-Container {
-    display: none;
+    /* display: none; */
     float: center;
     padding-top: 3em;
     width: 100%;
@@ -142,7 +142,7 @@ a {
 }
 
 #gr-Little-Container {
-    display: none;    
+    /* display: none; */
 }
 
 /* Esconder el Little Container */
