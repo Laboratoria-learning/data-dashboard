@@ -5168,6 +5168,7 @@ function ratings (array,year) {
 }; // function
 
 
+
 var outputRatings = ratings(cityLocation,generation);
 
 
@@ -5175,3 +5176,4 @@ localStorage.setItem("generation", generation);
 localStorage.setItem("inputCity", inputCity);
 localStorage.setItem("cityLocation", cityLocation);
 localStorage.setItem("outputRatings", outputRatings);
+

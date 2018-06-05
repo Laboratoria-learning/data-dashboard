@@ -126,7 +126,7 @@ a {
 }
 
 #gr-Main-Container #gr-Little-Container {
-    display: inline-flex;
+    display: none;
     float: center;
     padding-top: 3em;
     width: 100%;
@@ -140,6 +140,12 @@ a {
     padding: 1em .5em;
     width: auto;
 }
+
+#gr-Little-Container {
+    display: none;    
+}
+
+/* Esconder el Little Container */
 
 #gr-Little-Container > a {
     height: 40px;
