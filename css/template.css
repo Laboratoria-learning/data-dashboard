@@ -82,7 +82,7 @@ a {
 /* *********** MAIN CONTAINER *********** */
 #gr-Main-Container {
     background-color: white;
-    height: 39.2em;
+    /* height: 39.2em;*/
     left: 21%;
     top: 7em;
     /* position: relative; */
@@ -97,7 +97,7 @@ a {
     /* display: inline-flex; */
     margin-left: 1%;
     margin-top: 1em;  
-    width: auto;
+    width: 97%;
 }
 
 #gr-Header-Main-Container > span {
@@ -114,7 +114,6 @@ a {
     padding: .5em 0;
 }
 
-
 .grLocationText{
     height: 8em;
     width: 13em;
@@ -124,4 +123,28 @@ a {
 
 .grContainerSedes:hover{
     display: block;
+}
+
+#gr-Main-Container #gr-Little-Container {
+    display: inline-flex;
+    float: center;
+    padding-top: 3em;
+    width: 100%;
+}
+
+#average-Jedi, #average-Teacher {
+    height: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0;
+    padding: 1em .5em;
+    width: auto;
+}
+
+#gr-Little-Container > a {
+    height: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 10em;
+    padding: 1em .5em;
 }
