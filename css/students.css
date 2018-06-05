@@ -6,9 +6,7 @@ body {
     color: black;
 }
 
-
-
-body > nav > li {
+body>nav>li {
     background-color: white;
     border: 1px solid gray;
     border-radius: 10px;
@@ -21,8 +19,6 @@ body > nav > li {
     width: 13em;
 }
 
-
-
 #gr-Opcion-Bar #li-user {
     background-color: rgb(255, 229, 33);
     border: none;
@@ -33,6 +29,7 @@ a {
 }
 
 /* *********** HEADER *********** */
+
 #gr-List-Sede-Gen {
     background-color: white;
     border-bottom: 2px solid rgb(255, 229, 33);
@@ -48,10 +45,11 @@ a {
 }
 
 /* *********** NAVEGADOR LATERAL *********** */
+
 #gr-Opcion-Bar {
     background-color: rgb(255, 229, 33);
     float: left;
-    height: 85em;
+    height: 50em;
     width: 20%;
 }
 
@@ -66,13 +64,14 @@ a {
     margin-left: 4.5em;
 }
 
-#gr-Opcion-Bar > span {
+#gr-Opcion-Bar>span {
     float: right;
     font-weight: bold;
     margin: 3em .5em 0 0;
 }
 
 /* *********** AGENDA *********** */
+
 #calendar {
     border-radius: 5px;
     border: 1px solid gray;
@@ -82,6 +81,7 @@ a {
 }
 
 /* *********** MAIN CONTAINER *********** */
+
 #gr-Main-Container {
     background-color: white;
     height: 39.2em;
@@ -99,33 +99,33 @@ a {
     width: auto;
 }
 
-#gr-Header-Main-Container > span {
+#gr-Header-Main-Container>span {
     height: 100%;
     font-size: 1.2em;
     float: left;
     padding: .3em .5em;
 }
 
-#gr-Header-Main-Container > img {
+#gr-Header-Main-Container>img {
     height: 1.5em;
     float: left;
     padding: .5em 0;
 }
 
-
-.grLocationText{
+.grLocationText {
     height: 8em;
     width: 13em;
     background-color: white;
     display: none;
 }
 
-.grContainerSedes:hover{
+.grContainerSedes:hover {
     display: block;
 }
 
-/* data seccion */
-.active-students,.inactive-students,.satisfied-students{
+/* data section */
+
+.successful-students, .inactive-students, .satisfied-students {
     width: 100%;
     height: auto;
     border: 1px solid black;
@@ -133,54 +133,34 @@ a {
     padding-left: 2em;
 }
 
-#number-of-active-students{
+#number-of-successful-students, #number-of-successful-students-HSE, #number-of-successful-students-technical {
     height: 6em;
     width: 6em;
     margin-left: 8em;
     border: 5px solid #FF009E;
     margin-bottom: 2em;
-
+    float: left;
 }
 
-#paragraph-number-of-active-students{
-    margin-top: .35em;;
+#percentage-of-successful-students, #percentage-of-successful-students-HSE, #percentage-of-successful-students-technical {
+    height: 6em;
+    width: 6em;
+    margin-left: 20em;
+    border: 5px solid #FF009E;
+    margin-bottom: 2em;
+    float: left;
+}
+
+#paragraph-number-of-successful-students {
+    margin-top: .35em;
+    ;
     font-size: 50px;
     text-align: center;
 }
 
-#percentage-of-inactive-students{
-    height: 6em;
-    width: 6em;
-    /* margin-left: 8em; */
-    border: 5px solid #FF009E;
-    margin-bottom: 2em;
-    float: left;
-    margin-left: -13.5em;
-    margin-top: .8em;
-}
-
-
-#paragraph-percentage-of-inactive-students{
-    margin-top: 1.2em;;
+#paragraph-percentage-of-inactive-students {
+    margin-top: 1.2em;
+    ;
     font-size: 25px;
     text-align: center;
-}
-
-#list-of-inactive-students li{
-    width: 70%;
-    height: auto;
-    float: left;
-}
-.container-inactive-students{
-display: inline-block;
-width: 100%;
-padding-bottom: 2em;
-}
-
-.number-of-satisfied-students{
-    height: 6em;
-    width: 6em;
-    margin-left: 8em;
-    border: 5px solid #FF009E;
-    margin-bottom: 2em;
 }
