@@ -5027,13 +5027,25 @@ function studentsListInactive(base){
 // satisfied students
 
 function satisfiedStudents (base){
+    var cumple = [];
+    var sumCumple = 0;
+    var carrStu = data[place][generation20162]['ratings'];
 
+    for (var i = 0; i < carrStu.length; i++) {
+        cumple.push(carrStu[i].student.cumple);
+        for (var k = cumple[i]; k < cumple.length; k++); {
+            sumCumple += k;
+        }
+    }
+    document.getElementById('paragraph-satisfied-of-inactive-students').innerHTML = (sumCumple / cumple.length) + "%";
 }
 
 
 
 
 
+
+satisfiedStudents(data);
 grActiveStudentsGen20162(data);
 grInactiveStudentsGen20162(data);
 studentsListInactive(data);
