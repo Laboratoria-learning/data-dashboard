@@ -4959,12 +4959,12 @@ var data = {
     }
 };
 
-var place = 'AQP';
-var generation20162 = '2016-2';
+var place = localStorage.getItem('inputCity');
+var generation = localStorage.getItem('generation');
 
-// estudiantes con el 70% o mas de HSE
-function SuccessfullStudentsHSE(base) {
-    var route = data[place][generation20162]['students'];
+// Estudiantes con el 70% o mas de HSE
+function SuccessfullStudentsHse(base) {
+    var route = data[place][generation]['students'];
     var activeStudents = []; //active students
     var successfulStudentsHse = [];
 
@@ -4975,21 +4975,21 @@ function SuccessfullStudentsHSE(base) {
                 for (var j = 0; j < route[i].sprints.length; j++) {
                     successfulStudentsHse.push(route[i]['sprints'][j]['score']['hse']);
                 }
+                console.log(activeStudents);
+                console.log(successfulStudentsHse);
             }
         }
-    console.log(activeStudents.length);
     document.getElementById("paragraph-successful-of-active-students-hse").innerHTML = successfulStudentsHse.length;
-    console.log(successfulStudentsHSE.length);
-    // document.getElementById("paragraph-number-of-active-students").innerHTML = activeStudents.length;
-    return successfulStudentsHSE.length;
-};
-SuccessfullStudentsHSE(data);
+    console.log(successfulStudentsHse.length);
+    return successfulStudentsHse.length;
+}
 
-// estudiantes con el 70% o mas de TECH
-function SuccessfullStudentsTECH(base) {
-    var route = data[place][generation20162]['students'];
+// Estudiantes con el 70% o mas de TECH
+function SuccessfullStudentsTech(base) {
+    var route = data[place][generation]['students'];
     var activeStudents = []; //active students
     var successfulStudentsTech = [];
+    var percentageSuccessFulStudentsTech = "";
 
     for (var i = 0; i < route.length; i++) {
             if (route[i].active == true) {
@@ -4999,75 +4999,12 @@ function SuccessfullStudentsTECH(base) {
                     successfulStudentsTech.push(route[i]['sprints'][j]['score']['tech']);
                 }
             }
+                
         }
-    console.log(activeStudents.length);
     document.getElementById("paragraph-successful-of-active-students-tech").innerHTML = successfulStudentsTech.length;
     console.log(successfulStudentsTech.length);
-    // document.getElementById("paragraph-number-of-active-students").innerHTML = activeStudents.length;
     return successfulStudentsTech.length;
 };
-SuccessfullStudentsTECH(data);
 
-
-// Dando click en el area de coaches se presentan los datos de las funciones Jedi y Teacher
-var sucessfullStudentsHSE = document.getElementById("area-students");
-
-sucessfullStudentsHSE.addEventListener("click",function(){
-  var containerCoaches = document.getElementById("gr-Little-Container");
-  containerCoaches.style.display = "inline-flex";
-});
-
-
-
-
-//
-// // estudiantes inactivas de AQP gen 2016-2
-//
-// function grInactiveStudentsGen20162(base) {
-//     var totalStudents = [];
-//     var carrStu = data[place][generation20162].students;
-//     var inactiveStudents = [];
-//
-//     // total de estudiantes
-//     for (var i = 0; i < carrStu.length; i++) {
-//         totalStudents.push(carrStu[i]);
-//     }
-//     // return totalStudents;
-//
-//     for (var i = 0; i < carrStu.length; i++) {
-//         if (carrStu[i].active == false) {
-//             inactiveStudents.push(carrStu[i]);
-//         }
-//     }
-//     // return inactiveStudents;
-//
-//
-//     var percentageInactiveStudents = inactiveStudents.length / totalStudents.length  * 100;
-//     var decimalPercentageInactiveStudents = percentageInactiveStudents.toFixed(2) + "%";
-//     document.getElementById("paragraph-percentage-of-inactive-students").innerHTML = decimalPercentageInactiveStudents;
-// }
-//
-//
-// // lista de alumans que desertaron
-// function studentsListInactive(base){
-//     var carrStu = data[place][generation20162]['students'];
-//     var listOfStudents = [];
-//     //save the list of objects who are inactive
-//
-//     for (var i = 0; i < carrStu.length; i++) {
-//         if (carrStu[i].active == false){
-//             listOfStudents.push("<li>" + carrStu[i].name + "</li>");
-//         }
-//     }
-//     console.log(listOfStudents);
-//
-//     document.getElementById("name-list-of-inactive-students").innerHTML = listOfStudents;
-// }
-//
-// // satisfied students
-//
-// function satisfiedStudents (base){
-//
-// }
-//
-//
+SuccessfullStudentsHse(data);
+SuccessfullStudentsTech(data);
