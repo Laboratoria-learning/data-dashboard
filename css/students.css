@@ -6,7 +6,7 @@ body {
     color: black;
 }
 
-body>nav>li {
+body > nav > li {
     background-color: white;
     border: 1px solid gray;
     border-radius: 10px;
@@ -128,7 +128,6 @@ a {
 .successful-students, .inactive-students, .satisfied-students {
     width: 100%;
     height: auto;
-    border: 1px solid black;
     float: left;
     padding-left: 2em;
 }
