@@ -1,13 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700,800,900,900i|Pacifico|Yanone+Kaffeesatz:400,700');
+*{
+    box-sizing: border-box;
+  }
+
+body{
+    margin: 0;
+}
+img {
+    display: block;
+    max-width: 100%;
+  }
 /* HEADER DESIGN */
 #header {
-    background-color: #62615f;
-    position: fixed;
+    background-color:transparent;
+    position: absolute;
     height: 80px;
     left:0;
     padding: 0;
     top:0;
     width: 100%;
-    z-index: 1;
+    z-index: -1;
 }
 
 
@@ -19,7 +31,7 @@ li.nav-profile img {
 
 li.nav-profile .nav-profile-name {
     display: inline-block;
-    font-family: 'Prompt', sans-serif;
+    font-family: 'Pacifico', cursive;
 }
 
 #header .nav ul li {
@@ -31,14 +43,15 @@ li.nav-profile .nav-profile-name {
 
 /* SIDEBAR MENU DESIGN */
 #sidebar-nav {
-    background: #8f8d89;
+    background: transparent;
     height: 100%;
     margin: 0;
     padding-right: 0;
     position: fixed;
-    top: 80px;
+    top: 50px;
     width: 200px;
     z-index: 1;
+    cursor: pointer;
 }
 
 #sidebar-nav ul.menu {
@@ -58,7 +71,12 @@ li.nav-profile .nav-profile-name {
 #sidebar-nav ul li a{
     color: white;
     text-decoration: none;
-    font-family: 'Prompt', sans-serif;
+    font-family: 'Pacifico', cursive;
 }
 
-
+.Elle{
+    width: 100%;
+    position: relative;
+    top: -80px;
+    z-index: -1;
+}
