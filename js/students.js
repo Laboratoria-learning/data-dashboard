@@ -4958,92 +4958,84 @@ var data = {
         }
     }
 };
-// estudiantes activas de AQP gen 2016-2
-var place = 'SCL';
-var generation20162 = '2017-2';
 
-function grActiveStudentsGen20162(base) {
-    var carrStu = data[place][generation20162].students;
-    var activeStudents = [];
-    for (var i = 0; i < carrStu.length; i++) {
-        if (carrStu[i].active == true) {
-            activeStudents.push(carrStu[i]);
+var place = 'AQP';
+var generation20162 = '2016-2';
+
+// estudiantes con el 70% o mas de HSE
+function SuccessfullStudentsHSE(base) {
+    var route = data[place][generation20162]['students'];
+    var activeStudents = []; //active students
+    var successfulStudentsHSE = [];
+    var successfulStudentsTECH = [];
+
+    for (var i = 0; i < route.length; i++) {
+            if (route[i].active == true) {
+                activeStudents.push(route[i]);
+
+                for (var j = 0; j < route[i].sprints.length; j++) {
+                    successfulStudentsHSE.push(route[i]['sprints'][j]['score']['hse']);
+                }
+            }
         }
-    }
-    document.getElementById("paragraph-number-of-active-students").innerHTML = activeStudents.length;
-    return activeStudents;
+
+
+    console.log(activeStudents);
+    console.log(successfulStudentsHSE);
+    // document.getElementById("paragraph-number-of-active-students").innerHTML = activeStudents.length;
+    return successfulStudentsHSE;
 }
 
 
-// estudiantes inactivas de AQP gen 2016-2
-
-function grInactiveStudentsGen20162(base) {
-    var totalStudents = [];
-    var carrStu = data[place][generation20162].students;
-    var inactiveStudents = [];
-
-    // total de estudiantes
-    for (var i = 0; i < carrStu.length; i++) {
-        totalStudents.push(carrStu[i]);
-    }
-    // return totalStudents;
-
-    for (var i = 0; i < carrStu.length; i++) {
-        if (carrStu[i].active == false) {
-            inactiveStudents.push(carrStu[i]);
-        }
-    }
-    // return inactiveStudents;
-
-
-    var percentageInactiveStudents = inactiveStudents.length / totalStudents.length  * 100;
-    var decimalPercentageInactiveStudents = percentageInactiveStudents.toFixed(2) + "%";
-    document.getElementById("paragraph-percentage-of-inactive-students").innerHTML = decimalPercentageInactiveStudents;
-}
-
-
-// lista de alumans que desertaron
-function studentsListInactive(base){
-    var carrStu = data[place][generation20162]['students'];
-    var listOfStudents = [];
-    //save the list of objects who are inactive
-
-    for (var i = 0; i < carrStu.length; i++) {
-        if (carrStu[i].active == false){
-            listOfStudents.push("<li>" + carrStu[i].name + "</li>");
-        }
-    }
-    console.log(listOfStudents);
-
-    document.getElementById("name-list-of-inactive-students").innerHTML = listOfStudents;
-}
-
-// satisfied students
-
-function satisfiedStudents (base){
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-grActiveStudentsGen20162(data);
-grInactiveStudentsGen20162(data);
-studentsListInactive(data);
+//
+// // estudiantes inactivas de AQP gen 2016-2
+//
+// function grInactiveStudentsGen20162(base) {
+//     var totalStudents = [];
+//     var carrStu = data[place][generation20162].students;
+//     var inactiveStudents = [];
+//
+//     // total de estudiantes
+//     for (var i = 0; i < carrStu.length; i++) {
+//         totalStudents.push(carrStu[i]);
+//     }
+//     // return totalStudents;
+//
+//     for (var i = 0; i < carrStu.length; i++) {
+//         if (carrStu[i].active == false) {
+//             inactiveStudents.push(carrStu[i]);
+//         }
+//     }
+//     // return inactiveStudents;
+//
+//
+//     var percentageInactiveStudents = inactiveStudents.length / totalStudents.length  * 100;
+//     var decimalPercentageInactiveStudents = percentageInactiveStudents.toFixed(2) + "%";
+//     document.getElementById("paragraph-percentage-of-inactive-students").innerHTML = decimalPercentageInactiveStudents;
+// }
+//
+//
+// // lista de alumans que desertaron
+// function studentsListInactive(base){
+//     var carrStu = data[place][generation20162]['students'];
+//     var listOfStudents = [];
+//     //save the list of objects who are inactive
+//
+//     for (var i = 0; i < carrStu.length; i++) {
+//         if (carrStu[i].active == false){
+//             listOfStudents.push("<li>" + carrStu[i].name + "</li>");
+//         }
+//     }
+//     console.log(listOfStudents);
+//
+//     document.getElementById("name-list-of-inactive-students").innerHTML = listOfStudents;
+// }
+//
+// // satisfied students
+//
+// function satisfiedStudents (base){
+//
+// }
+//
+//
+SuccessfullStudentsHSE(data)

@@ -4959,48 +4959,19 @@ var data = {
     }
 };
 
-var inputCity = document.getElementById("city").innerHTML;
-console.log(inputCity);
+// localStorage.getItem('inputCity');
+// localStorage.getItem('generation');
 
-var cityLocation = {};
-switch(inputCity) {
-    case 'AQP':
-        cityLocation = data.AQP;
-        break;
-    case 'LIM':
-        cityLocation = data.LIM;
-        break;
-    case 'CDMX':
-        cityLocation = data.CDMX;
-        break;
-    case 'SCL':
-        cityLocation = data.SCL;
-        break;
-};
+var place = localStorage.getItem('inputCity');
+var generation20162 = localStorage.getItem('generation');
 
- // VARIABLE PARA GUARDAR EL ARRAY DE LA GENERACIÓN SELECCIONADA SEGÚN LA SEDE
-var generation = document.getElementById("generation").textContent;
-console.log(generation);
-
-function ratings (array,year) {
-    var keysArray = Object.keys(array);
-    var yearGeneration = [];
-
-    for ( var i = 0; i < keysArray.length; i++) {
-        if (keysArray[i] == year) {
-        yearGeneration = array[year].ratings;
-        }
-    } // for
-    return yearGeneration;
-}; // function
-
-var outputRatings = ratings(cityLocation,generation);
-
+document.getElementById("generationgr").innerHTML = generation20162;
+document.getElementById("citygr").innerHTML = place;
 
 
 // estudiantes activas de AQP gen 2016-2
-var place = cityLocation;
-var generation20162 = generation;
+
+
 
 function grActiveStudentsGen20162(base) {
     var carrStu = data[place][generation20162].students;
@@ -5053,8 +5024,6 @@ function studentsListInactive(base){
             listOfStudents.push("<li>" + carrStu[i].name + "</li>");
         }
     }
-    console.log(listOfStudents);
-
     document.getElementById("name-list-of-inactive-students").innerHTML = listOfStudents;
 }
 

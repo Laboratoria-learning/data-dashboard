@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title> Data Dashboard</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="../css/students.css">
+    <link rel="stylesheet" href="../css/generalinformation.css">
 </head>
 
 <body>
@@ -35,35 +35,34 @@
     <!-- *********** MAIN CONTAINER *********** -->
     <section id="gr-Main-Container">
         <div id="gr-Header-Main-Container">
-            <span> SEDE SCL </span>
+            <span id="citygr"></span>
             <img src="../assets/images/Laboratoria_corchetes-30.png" alt="imagen flechas">
-            <span> GENERATION 2017-2</span>
+            <span id="generationgr"></span>
         </div>
-        <div class="successful-students">
-            <h3>Successful Students</h3>
-            <div id="number-of-successful-students">
-                <p id="paragraph-successful-of-active-students"></p>
-            </div>
-            <div id="percentage-of-successful-students">
-                <p id="paragraph-percentage-successful-of-active-students"></p>
+        <div class="active-students">
+            <h3>Active Students</h3>
+            <div id="number-of-active-students">
+                <p id="paragraph-number-of-active-students"></p>
             </div>
         </div>
         <div class="inactive-students">
-            <h3>Successful Students: HSE</h3>
-            <div id="number-of-successful-students-HSE">
-                <p id="paragraph-successful-of-active-students"></p>
-            </div>
-            <div id="percentage-of-successful-students-HSE">
-                <p id="paragraph-percentage-successful-of-active-students"></p>
+            <h3>Inactive Students</h3>
+            <div class="container-inactive-students">
+                <div id="list-of-inactive-students">
+                    <h5>Name of the students</h5>
+                    <ul>
+                        <li id="name-list-of-inactive-students"></li>
+                    </ul>
+                </div>
+                <div id="percentage-of-inactive-students">
+                    <p id="paragraph-percentage-of-inactive-students"></p>
+                </div>
             </div>
         </div>
         <div class="satisfied-students">
-            <h3>Successful Students: Technical</h3>
-            <div id="number-of-successful-students-technical">
-                <p id="paragraph-successful-of-active-students"></p>
-            </div>
-            <div id="percentage-of-successful-students">
-                <p id="paragraph-percentage-successful-of-active-students"></p>
+            <h3>Satisfied Students</h3>
+            <div class="number-of-satisfied-students">
+
             </div>
         </div>
     </section>
@@ -71,7 +70,8 @@
     <!-- Base de datos -->
     <script src="../js/data.js"></script>
     <!-- Aquí va tus archivos JS -->
-    <script src="../js/students.js"></script>
+    <script src="../js/generalinformationFUNC.js"></script>
+    <!-- <script src="../js/generalinformation.js"></script> -->
 </body>
 
 </html>
