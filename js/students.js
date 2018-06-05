@@ -4958,29 +4958,38 @@ var data = {
         }
     }
 };
-
+/*
 var place = localStorage.getItem('inputCity');
 var generation = localStorage.getItem('generation');
+*/
+
+var place = "AQP";
+var generation = "2016-2";
 
 // Estudiantes con el 70% o mas de HSE
 function SuccessfullStudentsHse(base) {
     var route = data[place][generation]['students'];
+    console.log(route);
     var activeStudents = []; //active students
     var successfulStudentsHse = [];
 
     for (var i = 0; i < route.length; i++) {
             if (route[i].active == true) {
                 activeStudents.push(route[i]);
-
+                var hse=0;
                 for (var j = 0; j < route[i].sprints.length; j++) {
-                    successfulStudentsHse.push(route[i]['sprints'][j]['score']['hse']);
+                    hse += route[i]['sprints'][j]['score']['hse']; 
                 }
-                console.log(activeStudents);
-                console.log(successfulStudentsHse);
+                if (hse >= ( 840 * route[i].sprints.length)) { // 840 pts es el 70% de hse 
+                    successfulStudentsHse.push(route[i]);
+                }
             }
         }
     document.getElementById("paragraph-successful-of-active-students-hse").innerHTML = successfulStudentsHse.length;
     console.log(successfulStudentsHse.length);
+    
+    var percentageSuccessFulStudentsHse = ((successfulStudentsHse.length / route.length)*100).toFixed(2) + " %";
+    document.getElementById("paragraph-percentage-successful-of-active-students-hse").innerHTML = percentageSuccessFulStudentsHse;
     return successfulStudentsHse.length;
 }
 
@@ -5002,7 +5011,8 @@ function SuccessfullStudentsTech(base) {
                 
         }
     document.getElementById("paragraph-successful-of-active-students-tech").innerHTML = successfulStudentsTech.length;
-    console.log(successfulStudentsTech.length);
+    //successfulStudentsTech
+    //console.log(successfulStudentsTech.length);
     return successfulStudentsTech.length;
 };
 
