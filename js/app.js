@@ -167,7 +167,7 @@ superaTotal =0;
 cumplenMeta.textContent = "El porcentaje de estudiantes que cumplen la meta es del: " + totalCumple.toFixed() + "%";
 superanMeta.textContent = "El porcentaje de estudiantes que superan la meta es del: " + totalMeta.toFixed() + "%";
 satisfechas.textContent = "El porcentaje de estudiantes satisfechas es del: " + satisfechasTotal.toFixed() + "%";
-
+cumplenMeta.style= "text-align:center font-size:18px";
 }
 
 //-------ESTUDIANTES QUE CUMPLEN Y SUPERAN LA META---->
@@ -200,67 +200,72 @@ satisfechas.textContent = "El porcentaje de estudiantes satisfechas es del: " + 
 
         chart.draw(data, google.charts.Bar.convertOptions(options));
       }*/
+      //-------SECCION DE GRAFICAS---->
+        google.charts.load('current', {'packages':['corechart']});
 
-         //-------ESTUDIANTES ACTIVAS E INACTIVAS---->
-      google.charts.load('current', {'packages':['corechart']});
+                //Set a callback to run when the Google Visualization API is loaded.
+                google.charts.setOnLoadCallback(drawChart);
 
-              //Set a callback to run when the Google Visualization API is loaded.
-              google.charts.setOnLoadCallback(drawChart);
+                // Callback that creates and populates a data table,
+                // instantiates the pie chart, passes in the data and
+                // draws it.
+                function drawChart() {
 
-              // Callback that creates and populates a data table,
-              // instantiates the pie chart, passes in the data and
-              // draws it.
-              function drawChart() {
+                // Create the data table.
+                var data = new google.visualization.DataTable();
+                data.addColumn('string', 'Promedio');
+                data.addColumn('number', 'Slices');
+                data.addRows([
+                    ['Activas', contActivas],
+                    ['Inactivas', contInactivas],
+                ]);
 
-              // Create the data table.
-              var data = new google.visualization.DataTable();
-              data.addColumn('string', 'Promedio');
-              data.addColumn('number', 'Slices');
-              data.addRows([
-                  ['Activas', contActivas],
-                  ['Inactivas', contInactivas],
-              ]);
-
-              var options = {
-              title: 'Promedio de activas e inactivas'
-          };
-
-          var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+                var options = {
+                title: 'Promedio de activas e inactivas',
+                is3D:true,
 
 
-          chart.draw(data, options);
-        }
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
 
-          //-------PROMEDIO DE TEACHERS Y JEDIS ---->
-     google.charts.load('current', {'packages':['corechart']});
-
-             //Set a callback to run when the Google Visualization API is loaded.
-             google.charts.setOnLoadCallback(draw);
-
-             // Callback that creates and populates a data table,
-             // instantiates the pie chart, passes in the data and
-             // draws it.
-             function draw() {
-
-             // Create the data table.
-             var data = new google.visualization.DataTable();
-             data.addColumn('string', 'Promedio');
-             data.addColumn('number', 'Slices');
-             data.addRows([
-                 ['Teachers', promTeacher],
-                 ['Jedis', promJedi],
-             ]);
-
-             var options = {
-             title: 'Promedio de teachers y jedis'
-         };
+            chart.draw(data, options);
+          }
 
 
-         var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
+            //-------PROMEDIO DE TEACHERS Y JEDIS ---->
+       google.charts.load('current', {'packages':['corechart']});
 
-         chart.draw(data, options);
-       }
+               //Set a callback to run when the Google Visualization API is loaded.
+               google.charts.setOnLoadCallback(draw);
+
+               // Callback that creates and populates a data table,
+               // instantiates the pie chart, passes in the data and
+               // draws it.
+               function draw() {
+
+               // Create the data table.
+               var data = new google.visualization.DataTable()
 
 
-};
+               data.addColumn('string', 'Promedio');
+               data.addColumn('number', 'Promedio');
+               data.addRows([
+                   ['Teachers', promTeacher],
+                   ['Jedis', promJedi],
+               ]);
+
+               var options = {
+               title: 'Promedio de teachers y jedis',
+               is3D:true,
+           };
+
+
+           var chart = new google.visualization.ColumnChart(document.getElementById('piechart1'));
+
+           chart.draw(data, options);
+         }
+
+
+  };

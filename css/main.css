@@ -239,16 +239,21 @@ input {
   text-align: center;
 }*/
 
-#container-students div {
+#container-students {
 /*  outline: 1px solid black;*/
-  width: 25%;
-  background:#DEDEDE;
-  margin: 15px;
+  width: 75%;
+  margin: 25px;
   font-size: 18px;
   font-style: oblique;
-  text-align: justify;
-
+  text-align: center;
+  left: 25%;
 }
+.studen-información{
+  margin: 15px;
+  width: 80%;
+  text-align: center;
+}
+
 
 
 #values {
@@ -258,4 +263,10 @@ input {
   margin-right:  10px;
   color: black;
   font-size: 20px;
+}
+
+.pie{
+  display: inline-block;
+  width: 50%;
+
 }

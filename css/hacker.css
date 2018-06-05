@@ -1,7 +1,7 @@
 #filter{
   background: rgb(241,218,54);
   display: inline-block;
-  position: fixed;
+/*  position: fixed;*/
   width: 15%;
   text-align: center;
   padding: 17px;
@@ -44,4 +44,6 @@ span{
   width: 30%;
   height: 30%;
   text-align: justify;
+  margin: 5px;
+
 }
