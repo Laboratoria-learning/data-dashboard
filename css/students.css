@@ -167,3 +167,9 @@ a {
     background-color: rgb(255, 229, 33);
     border: none;
 }
+h1{
+    margin-top: 5em;
+    text-align: center;
+    /* border: 1px solid black; */
+    font-weight: bold;
+}
