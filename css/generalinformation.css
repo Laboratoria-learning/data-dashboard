@@ -6,8 +6,6 @@ body {
     color: black;
 }
 
-
-
 body > nav > li {
     background-color: white;
     border: 1px solid gray;
@@ -20,8 +18,6 @@ body > nav > li {
     text-align: center;
     width: 13em;
 }
-
-
 
 #gr-Opcion-Bar #li-user {
     background-color: rgb(255, 229, 33);
@@ -128,7 +124,6 @@ a {
 .active-students,.inactive-students,.satisfied-students{
     width: 100%;
     height: auto;
-    border: 1px solid black;
     float: left;
     padding-left: 2em;
 }

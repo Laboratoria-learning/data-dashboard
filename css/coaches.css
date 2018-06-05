@@ -3,9 +3,10 @@ body {
     display: block;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
+    color: black;
 }
 
-li {
+body > nav > li {
     background-color: white;
     border: 1px solid gray;
     border-radius: 10px;
@@ -18,7 +19,7 @@ li {
     width: 13em;
 }
 
-#gr-Option-Bar #li-user {
+#gr-Opcion-Bar #li-user {
     background-color: rgb(255, 229, 33);
     border: none;
 }
@@ -34,22 +35,19 @@ a {
     float: left;
     height: 6em;
     left: 20%;
-    /* position: relative; */
     width: 80%;
 }
 
 #gr-List-Sede-Gen img {
     height: 6.3em;
     margin-left: 35%;
-    /* position: relative; */
 }
 
 /* *********** NAVEGADOR LATERAL *********** */
 #gr-Opcion-Bar {
     background-color: rgb(255, 229, 33);
     float: left;
-    height: 40em;
-    /* position: fixed; */
+    height: 60em;
     width: 20%;
 }
 
@@ -64,7 +62,7 @@ a {
     margin-left: 4.5em;
 }
 
-#gr-Option-Bar > span {
+#gr-Opcion-Bar > span {
     float: right;
     font-weight: bold;
     margin: 3em .5em 0 0;
@@ -82,10 +80,51 @@ a {
 /* *********** MAIN CONTAINER *********** */
 #gr-Main-Container {
     background-color: white;
-    /* height: 39.2em;*/
+    height: 39.2em;
     left: 21%;
     top: 7em;
-    /* position: relative; */
+    margin-left: 20.5%;
+    padding: 0;
+    width: 78.5%;
+}
+
+#gr-Header-Main-Container {
+    float: left;
+    margin-left: 1%;
+    margin-top: 1em;
+    width: auto;
+}
+
+#gr-Header-Main-Container > span {
+    height: 100%;
+    font-size: 1.2em;
+    float: left;
+    padding: .3em .5em;
+}
+
+#gr-Header-Main-Container > img {
+    height: 1.5em;
+    float: left;
+    padding: .5em 0;
+}
+
+.grLocationText{
+    height: 8em;
+    width: 13em;
+    background-color: white;
+    display: none;
+}
+
+.grContainerSedes:hover{
+    display: block;
+}
+
+/* *********** LITTLE CONTAINER *********** */
+
+#gr-Main-Container {
+    background-color: white;
+    left: 21%;
+    top: 7em;
     margin-left: 20.5%;
     padding: 0;
     width: 78.5%;
@@ -133,6 +172,7 @@ a {
 }
 
 #average-Jedi, #average-Teacher {
+    border: 1px solid red;
     height: 2.5em;
     font-weight: bold;
     text-align: center;
@@ -175,4 +215,5 @@ a {
 #average-Jedi, #average-Teacher{
     margin-top: .3em;
     font-size: 22px;
+
 }

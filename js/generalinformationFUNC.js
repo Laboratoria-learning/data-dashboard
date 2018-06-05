@@ -4959,9 +4959,6 @@ var data = {
     }
 };
 
-// localStorage.getItem('inputCity');
-// localStorage.getItem('generation');
-
 var place = localStorage.getItem('inputCity');
 var generation20162 = localStorage.getItem('generation');
 
