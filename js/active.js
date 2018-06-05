@@ -50,9 +50,6 @@ var sumStudentsLIM = stLIM162 + stLIM171 + stLIM172
 var sumStudentsSCL = stSCL162 + stSCL171 + stSCL172 
 
 
-var arrayActive = []
-var arrayInactive = []
-
 //LIST OF ALL THE OBJECTS INSIDE THE PROPERTY STUDENTS
 
 //AREQUIPA 2016-2
