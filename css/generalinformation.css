@@ -122,10 +122,11 @@ a {
 
 /* data seccion */
 .active-students,.inactive-students,.satisfied-students{
-    width: 100%;
+    width: 95%;
     height: auto;
     float: left;
     padding-left: 2em;
+    border: 1px solid black;
 }
 
 #number-of-active-students{
