@@ -5186,15 +5186,7 @@ function averageJedi(array) {
 }; // function
 
 var outputAverageJedi = averageJedi(outputRatings);
-console.log(outputAverageJedi);
-
-var inputCoaches = document.getElementById("area-coaches");
-
-inputCoaches.addEventListener('click',function(){
-  var containerJedi = document.createElement("div");
-  var textJedi = document.createTextNode(outputAverageJedi);
-
-});
+document.getElementById("average-Jedi").innerHTML = outputAverageJedi;
 
 // Función promedio Teachers/Coachs
 function averageTeacher(array) {
@@ -5208,8 +5200,8 @@ function averageTeacher(array) {
         }
     }
         //console.log(sum/array.length);
-        return sum/array.length;
+        return Math.round(sum/array.length);
 }; // function
 
 var outputAverageTeacher = averageTeacher(outputRatings);
-console.log(outputAverageTeacher);
+document.getElementById("average-Teacher").innerHTML = outputAverageTeacher;
