@@ -4995,6 +4995,33 @@ function ratings (array,year) {
     return successfulStudentsHse.length;
 };
 
+// Estudiantes con el 70% o mas de HSE
+function SuccessfullStudentsHse(base) {
+    var route = data[place][generation]['students'];
+    console.log(route);
+    var activeStudents = []; //active students
+    var successfulStudentsHse = [];
+
+    for (var i = 0; i < route.length; i++) {
+            if (route[i].active == true) {
+                activeStudents.push(route[i]);
+                var hse=0;
+                for (var j = 0; j < route[i].sprints.length; j++) {
+                    hse += route[i]['sprints'][j]['score']['hse'];
+                }
+                if (hse >= ( 840 * route[i].sprints.length)) { // 840 pts es el 70% de hse
+                    successfulStudentsHse.push(route[i]);
+                }
+            }
+        }
+    document.getElementById("paragraph-successful-of-active-students-hse").innerHTML = successfulStudentsHse.length;
+    console.log(successfulStudentsHse.length);
+
+    var percentageSuccessFulStudentsHse = ((successfulStudentsHse.length / route.length)*100).toFixed(2) + " %";
+    document.getElementById("paragraph-percentage-successful-of-active-students-hse").innerHTML = percentageSuccessFulStudentsHse;
+    return successfulStudentsHse.length;
+};
+
 // Estudiantes con el 70% o más TECH
 function SuccessfullStudentsTech(base) {
     var route = data[place][generation]['students'];
@@ -5055,4 +5082,3 @@ function SuccessfullStudents(base) {
 SuccessfullStudentsHse(data);
 SuccessfullStudentsTech(data);
 SuccessfullStudents(data);
-
