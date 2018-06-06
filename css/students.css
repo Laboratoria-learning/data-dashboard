@@ -124,6 +124,9 @@ a {
 }
 
 /* data section */
+.successful-students{
+    margin-left: 4em;
+}
 
 .successful-students, .inactive-students, .satisfied-students {
     width: 10%%;
@@ -132,11 +135,12 @@ a {
     padding-left: .5em;
     padding-right: .5em;
     border: 1px solid black;
+
 }
 
 #number-of-successful-students, #number-of-successful-students-HSE, #number-of-successful-students-technical {
     height: 3em;
-    width: 6em;
+    width: 5em;
     margin-left: 1em;
     border: 5px solid #FF009E;
     margin-bottom: 2em;
@@ -146,7 +150,7 @@ a {
 
 #percentage-of-successful-students, #percentage-of-successful-students-HSE, #percentage-of-successful-students-technical {
     height: 3em;
-    width: 6em;
+    width: 5em;
     margin-left: 2em;
     border: 5px solid #FF009E;
     margin-bottom: 2em;
@@ -186,12 +190,27 @@ h1 {
     text-align: center;
 }
 
-h3{
+h4{
     width: 100%;
     text-align: center;
 }
 
 
 #chart_div{
-    height: 15em;
+    height: em;
+}
+#seccontCont{
+    margin-left: -2em;
+    height: 20em;
+    width: 60em;
+    background-color: none;
+}
+
+#container{
+    margin-left: 2em;
+    margin-top: 6em;
+}
+
+rect{
+    background-color: #56F89A;
 }

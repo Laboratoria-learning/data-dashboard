@@ -5226,9 +5226,11 @@ function drawChart(array) {
   data.addColumn('string', 'Topping');
   data.addColumn('number', 'Averages');
   data.addRows(arrayChars);
-console.log(arrayChars);
   // Set chart options
-  var options = {'title':'Averages'};
+  var options = {
+      'title':'Averages',
+      'colors': ['#56F89A']
+  };
 
   // Instantiate and draw our chart, passing in some options.
   var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
