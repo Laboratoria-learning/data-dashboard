@@ -4959,6 +4959,7 @@ var data = {
     }
 };
 
+
 var inputCity = document.getElementById("city").textContent;
 
 var cityLocation = {};

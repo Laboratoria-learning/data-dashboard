@@ -5205,7 +5205,7 @@ function averageTeacher(array) {
 var outputAverageTeacher = averageTeacher(outputRatings) + " %";
 document.getElementById("average-Teacher").innerHTML = outputAverageTeacher;
 
-// chat function********************
+// chart function********************
 
 
 

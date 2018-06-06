@@ -126,35 +126,39 @@ a {
 /* data section */
 
 .successful-students, .inactive-students, .satisfied-students {
-    width: 95%;
+    width: 10%%;
     height: auto;
     float: left;
-    padding-left: 2em;
+    padding-left: .5em;
+    padding-right: .5em;
     border: 1px solid black;
 }
 
 #number-of-successful-students, #number-of-successful-students-HSE, #number-of-successful-students-technical {
-    height: 6em;
+    height: 3em;
     width: 6em;
-    margin-left: 8em;
+    margin-left: 1em;
     border: 5px solid #FF009E;
     margin-bottom: 2em;
     float: left;
+    text-align: center;
 }
 
 #percentage-of-successful-students, #percentage-of-successful-students-HSE, #percentage-of-successful-students-technical {
-    height: 6em;
+    height: 3em;
     width: 6em;
-    margin-left: 20em;
+    margin-left: 2em;
     border: 5px solid #FF009E;
     margin-bottom: 2em;
     float: left;
+    text-align: center;
 }
 
 #paragraph-number-of-successful-students {
     margin-top: .35em;
     font-size: 50px;
     text-align: center;
+
 }
 
 #paragraph-percentage-of-inactive-students {
@@ -180,4 +184,14 @@ h1 {
     height: auto;
     float: left;
     text-align: center;
+}
+
+h3{
+    width: 100%;
+    text-align: center;
+}
+
+
+#chart_div{
+    height: 15em;
 }

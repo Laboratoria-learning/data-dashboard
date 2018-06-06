@@ -4962,11 +4962,42 @@ var data = {
 var place = localStorage.getItem('inputCity');
 var generation = localStorage.getItem('generation');
 
+document.getElementById("generationgr").innerHTML = generation;
+document.getElementById("citygr").innerHTML = place;
+
+var totalStudents = data[place][generation]['students'];
+
+
+
+
+// Estudiantes con el 70% o mas de HSE
+function SuccessfullStudentsHse(base) {
+    var route = data[place][generation]['students'];
+    var activeStudents = []; //active students
+    var successfulStudentsHse = [];
+
+    for (var i = 0; i < route.length; i++) {
+            if (route[i].active == true) {
+                activeStudents.push(route[i]);
+                var hse=0;
+                for (var j = 0; j < route[i].sprints.length; j++) {
+                    hse += route[i]['sprints'][j]['score']['hse'];
+                }
+                if (hse >= ( 840 * route[i].sprints.length)) { // 840 pts es el 70% de hse
+                    successfulStudentsHse.push(route[i]);
+                }
+            }
+        }
+    document.getElementById("paragraph-successful-of-active-students-hse").innerHTML = successfulStudentsHse.length;
+
+    var percentageSuccessFulStudentsHse = ((successfulStudentsHse.length / route.length)*100).toFixed(2) + " %";
+    document.getElementById("paragraph-percentage-successful-of-active-students-hse").innerHTML = percentageSuccessFulStudentsHse;
+    return successfulStudentsHse.length;
+};
 
 // Estudiantes con el 70% o más TECH
 function SuccessfullStudentsTech(base) {
     var route = data[place][generation]['students'];
-    console.log(route);
     var activeStudents = []; //active students
     var successfulStudentsTech = [];
 
@@ -4983,8 +5014,6 @@ function SuccessfullStudentsTech(base) {
             }
         }
     document.getElementById("paragraph-successful-of-active-students-tech").innerHTML = successfulStudentsTech.length;
-    console.log(successfulStudentsTech.length);
-
     var percentageSuccessFulStudentsTech = ((successfulStudentsTech.length / route.length)*100).toFixed(2) + " %";
     document.getElementById("paragraph-percentage-successful-of-active-students-tech").innerHTML = percentageSuccessFulStudentsTech;
     return successfulStudentsTech.length;
@@ -4993,7 +5022,6 @@ function SuccessfullStudentsTech(base) {
 // Estudiantes con el 70% en TECH y HSE ---> alias las unicornio
 function SuccessfullStudents(base) {
     var route = data[place][generation]['students'];
-    console.log(route);
     var activeStudents = []; //active students
     var successfulStudents = [];
 
@@ -5013,13 +5041,46 @@ function SuccessfullStudents(base) {
             }
         }
     document.getElementById("paragraph-successful-of-active-students").innerHTML = successfulStudents.length;
-    console.log(successfulStudents.length);
 
     var percentageSuccessFulStudents = ((successfulStudents.length / route.length)*100).toFixed(2) + " %";
     document.getElementById("paragraph-percentage-successful-of-active-students").innerHTML = percentageSuccessFulStudents;
     return successfulStudents.length;
 };
 
+
 SuccessfullStudentsHse(data);
 SuccessfullStudentsTech(data);
 SuccessfullStudents(data);
+
+console.log();
+
+// chart function********************
+
+
+
+google.charts.load('current', {'packages':['corechart']});
+
+google.charts.setOnLoadCallback(drawChart);
+
+var arrayChars = [
+    ['GRAL. S.S.',Number((SuccessfullStudents(data)/totalStudents.length)*100)],
+    ['HSE',Number((SuccessfullStudentsHse(data)/totalStudents.length)*100)],
+    ['TECH',Number((SuccessfullStudentsTech(data)/totalStudents.length)*100)]
+];
+console.log(arrayChars);
+
+function drawChart(array) {
+
+  // Create the data table.
+  var data = new google.visualization.DataTable();
+  data.addColumn('string', 'Topping');
+  data.addColumn('number', 'Averages');
+  data.addRows(arrayChars);
+
+  // Set chart options
+  var options = {'title':'Averages'};
+
+  // Instantiate and draw our chart, passing in some options.
+  var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+  chart.draw(data, options);
+}
