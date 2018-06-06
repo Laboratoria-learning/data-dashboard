@@ -6,7 +6,7 @@ body {
 }
 
 #gr-Option-Bar #li-user {
-    background-color: rgb(255, 229, 33);
+    background-color: #ffe521;
     border: none;
 }
 
@@ -14,6 +14,7 @@ body {
 #gr-List-Sede-Gen {
     background-color: white;
     border-bottom: 2px solid rgb(255, 229, 33);
+    border: none;
     float: left;
     height: 6em;
     left: 20%;
@@ -53,6 +54,7 @@ body {
 .titleLocation {
     color: white;
     background-color: #FF009E;
+    border-radius: 10px;
     font-size: 2em;
     margin: 0;
 }
@@ -65,6 +67,7 @@ body {
 .titleGen {
     color:white;
     background-color: #56F89A;
+    border-radius: 10px;
     font-size: 1.5em;
     margin:0;
 }
@@ -76,6 +79,12 @@ body {
 
 .li-decoration {
     color: #000000;
+    border-radius: 10px; 
     text-decoration: none;
     margin: 5px 0;
+}
+
+.li-decoration:hover {
+    background-color: #ffe521;
+    color: white;
 }

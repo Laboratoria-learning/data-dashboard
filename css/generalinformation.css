@@ -47,7 +47,7 @@ a {
 #gr-Opcion-Bar {
     background-color: rgb(255, 229, 33);
     float: left;
-    height: 60em;
+    height: 57.5em;
     width: 20%;
 }
 
@@ -109,27 +109,31 @@ a {
 }
 
 
-.grLocationText{
+.grLocationText {
     height: 8em;
     width: 13em;
     background-color: white;
     display: none;
 }
 
-.grContainerSedes:hover{
+.grContainerSedes:hover {
     display: block;
 }
 
 /* data seccion */
-.active-students,.inactive-students,.satisfied-students{
+.active-students,.inactive-students,.satisfied-students {
     width: 95%;
     height: auto;
     float: left;
     padding-left: 2em;
-    border: 1px solid black;
+    border-bottom: 1px solid rgb(255, 229, 33);
 }
 
-#number-of-active-students{
+.satisfied-students {
+    border-bottom: none;
+}
+
+#number-of-active-students {
     height: 6em;
     width: 6em;
     margin-left: 8em;
@@ -138,13 +142,13 @@ a {
 
 }
 
-#paragraph-number-of-active-students{
+#paragraph-number-of-active-students {
     margin-top: .35em;;
     font-size: 50px;
     text-align: center;
 }
 
-#percentage-of-inactive-students{
+#percentage-of-inactive-students {
     height: 6em;
     width: 6em;
     /* margin-left: 8em; */
@@ -156,24 +160,24 @@ a {
 }
 
 
-#paragraph-percentage-of-inactive-students{
+#paragraph-percentage-of-inactive-students {
     margin-top: 1.2em;;
     font-size: 25px;
     text-align: center;
 }
 
-#list-of-inactive-students li{
+#list-of-inactive-students li {
     width: 70%;
     height: auto;
     float: left;
 }
-.container-inactive-students{
+.container-inactive-students {
 display: inline-block;
 width: 100%;
 padding-bottom: 2em;
 }
 
-.number-of-satisfied-students{
+.number-of-satisfied-students {
     height: 6em;
     width: 6em;
     margin-left: 8em;
@@ -181,7 +185,7 @@ padding-bottom: 2em;
     margin-bottom: 2em;
 }
 
-#paragraph-satisfied-of-inactive-students{
+#paragraph-satisfied-of-inactive-students {
     margin-top: 1.2em;;
     font-size: 25px;
     text-align: center;
@@ -204,15 +208,15 @@ padding-bottom: 2em;
 }
 
 #jedi-cont, #teacher-cont,#chart_div {
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 
 #jedi-cont, #teacher-cont {
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 
 }
 
-#jed,#tea{
+#jed,#tea {
     height: 6em;
     width: 6em;
     margin-left: 8em;
@@ -221,24 +225,26 @@ padding-bottom: 2em;
     display: block;
 }
 
-#seccontCont{
+#seccontCont {
     float: left;
     width: 60%;
     height: 26em;
 }
 
-#seccont{
+#seccont {
     width: 40%;
     float: left;
 }
 
-#average-Jedi, #average-Teacher{
+#average-Jedi, #average-Teacher {
     margin-top: .3em;
     font-size: 22px;
 }
-h1{
-    margin-top: 2em;
-    text-align: center;
-    /* border: 1px solid black; */
-    font-weight: bold;
+
+h1 {  
+margin-top: 2em;
+text-align: center;
+/* border: 1px solid black; */
+font-weight: bold;
+width: 1027.170px;
 }
