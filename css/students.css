@@ -134,8 +134,6 @@ a {
     float: left;
     padding-left: .5em;
     padding-right: .5em;
-    border: 1px solid black;
-
 }
 
 #number-of-successful-students, #number-of-successful-students-HSE, #number-of-successful-students-technical {
@@ -184,29 +182,30 @@ a {
 }
 
 h1 {
+    margin-left: 7em;
     width: 98%;
     height: auto;
     float: left;
     text-align: center;
 }
 
-h4{
+h4 {
     width: 100%;
     text-align: center;
 }
 
-
-#chart_div{
+#chart_div {
     height: em;
 }
-#seccontCont{
+
+#seccontCont {
     margin-left: -2em;
     height: 20em;
     width: 60em;
     background-color: none;
 }
 
-#cont{
+#cont {
     margin-left: 2em;
     float: left;
 }

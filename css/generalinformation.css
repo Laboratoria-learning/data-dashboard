@@ -47,7 +47,7 @@ a {
 #gr-Opcion-Bar {
     background-color: rgb(255, 229, 33);
     float: left;
-    height: 57.5em;
+    height: auto;
     width: 20%;
 }
 
