@@ -110,13 +110,13 @@ for (var j = 0; j < students[i]["sprints"].length; j++) {
   var porcentajeInactivas = contInactivas * 100/ totalStudents;
   var totalInactivas = porcentajeInactivas.toFixed() + "%";
 
-  containerTotalStudents.textContent = sede + " " + generation + " " + " Total de estudiantes : " + totalStudents;
+  containerTotalStudents.textContent ="*"+" "+ sede + " " + generation + " " + " Total de estudiantes : " + totalStudents;
 
 
 
- containerActivas.textContent = "El porcentaje de estudiantes activas es del : " + totalActivas + " " +  " total : " + activas;
- containerInactivas.textContent = "El porcentaje de estudiantes inactivas es del : " + totalInactivas + " " + " total : " + inactivas;
- nameTotalInactivas.textContent = "Estudiantes que desertaron : " + nameInactivas;
+ containerActivas.textContent = "* El porcentaje de estudiantes activas es del : " + totalActivas + " " +  " total : " + activas;
+ containerInactivas.textContent = "* El porcentaje de estudiantes inactivas es del : " + totalInactivas + " " + " total : " + inactivas;
+ nameTotalInactivas.textContent = "* Estudiantes que desertaron : " + nameInactivas;
 
 
 //-----PROMEDIO JEDIS Y TEACHERS---->
@@ -142,8 +142,8 @@ for (var i = 0; i < ratings.length; i++) {
   console.log(teacher);
 
 
-containerJedis.textContent =  "El promedio de los Jedis es de : " + totalJedi;
-containerTeachers.textContent = "El promedio de los teachers es de : " + totalTeachers;
+containerJedis.textContent =  "* El promedio de los Jedis es de : " + totalJedi;
+containerTeachers.textContent = "* El promedio de los teachers es de : " + totalTeachers;
 
 
 }
@@ -164,9 +164,9 @@ superaTotal =0;
 
     var satisfechasTotal = totalCumple + totalMeta ;
 
-cumplenMeta.textContent = "El porcentaje de estudiantes que cumplen la meta es del: " + totalCumple.toFixed() + "%";
-superanMeta.textContent = "El porcentaje de estudiantes que superan la meta es del: " + totalMeta.toFixed() + "%";
-satisfechas.textContent = "El porcentaje de estudiantes satisfechas es del: " + satisfechasTotal.toFixed() + "%";
+cumplenMeta.textContent = "* El porcentaje de estudiantes que cumplen la meta es del: " + totalCumple.toFixed() + "%";
+superanMeta.textContent = "* El porcentaje de estudiantes que superan la meta es del: " + totalMeta.toFixed() + "%";
+satisfechas.textContent = "* El porcentaje de estudiantes satisfechas es del: " + satisfechasTotal.toFixed() + "%";
 cumplenMeta.style= "text-align:center font-size:18px";
 }
 
