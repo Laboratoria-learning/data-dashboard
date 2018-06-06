@@ -28,6 +28,7 @@ a {
 }
 
 /* *********** HEADER *********** */
+
 #gr-List-Sede-Gen {
     background-color: white;
     border-bottom: 2px solid rgb(255, 229, 33);
@@ -45,6 +46,7 @@ a {
 }
 
 /* *********** NAVEGADOR LATERAL *********** */
+
 #gr-Opcion-Bar {
     background-color: rgb(255, 229, 33);
     float: left;
@@ -64,13 +66,14 @@ a {
     margin-left: 4.5em;
 }
 
-#gr-Option-Bar > span {
+#gr-Option-Bar>span {
     float: right;
     font-weight: bold;
     margin: 3em .5em 0 0;
 }
 
 /* *********** AGENDA *********** */
+
 #calendar {
     border-radius: 5px;
     border: 1px solid gray;
@@ -80,6 +83,7 @@ a {
 }
 
 /* *********** MAIN CONTAINER *********** */
+
 #gr-Main-Container {
     background-color: white;
     height: 39.2em;
@@ -88,7 +92,8 @@ a {
     /* position: relative; */
     margin-left: 20.5%;
     padding: 0;
-    width: 78.5%;
+    width: 70.5%;
+
 }
 
 #gr-Header-Main-Container {
@@ -100,7 +105,7 @@ a {
     width: auto;
 }
 
-#gr-Header-Main-Container > span {
+#gr-Header-Main-Container>span {
     height: 100%;
     font-size: 1.2em;
     float: left;
@@ -108,25 +113,24 @@ a {
     /* position: relative; */
 }
 
-#gr-Header-Main-Container > img {
+#gr-Header-Main-Container>img {
     height: 1.5em;
     float: left;
     padding: .5em 0;
 }
 
-
-.grLocationText{
+.grLocationText {
     height: 8em;
     width: 13em;
     background-color: white;
     display: none;
 }
 
-.grContainerSedes:hover{
+.grContainerSedes:hover {
     display: block;
 }
 
-body section  #container #list-name li{
+body section #container #list-name li {
     border: none;
     cursor: auto;
     text-align: left;
@@ -134,22 +138,24 @@ body section  #container #list-name li{
     margin: 0;
 }
 
-#list-name{
-    width: 5%;
+#list-name {
+    width: 15%;
     padding: 0;
-
+    height: auto;
 }
-#buttons{
-    width: 5%;
-    margin-left: 80%;
+
+#buttons {
+    width: 8%;
+    margin-left: 95%;
     float: left;
 }
-#btn-all-list,#btn-active,#btn-inactive{
+
+#btn-all-list, #btn-active, #btn-inactive {
     width: 5em;
     height: 3em;
     /* display: block; */
     background-color: #56F89A;
-    border: 1px solid  #FF009E;
+    border: 1px solid #FF009E;
     border-radius: 3px;
     float: left;
     text-align: center;
@@ -157,12 +163,13 @@ body section  #container #list-name li{
     cursor: pointer;
 }
 
-body section #container{
+body section #container {
     height: 30em;
     padding-top: 10em;
+    width: 60%;
 }
 
-h3{
+h3 {
     margin-top: .5em;
     width: 20%;
     float: left;

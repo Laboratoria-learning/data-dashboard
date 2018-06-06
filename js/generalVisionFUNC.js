@@ -5007,11 +5007,11 @@ btnAllList.addEventListener('click',function StudentsList(base){
     for (var i = 0; i < carrStu.length; i++) {
         listOfStudents.push("<li>" + String(carrStu[i].name) + "</li>");
         for (var j = 0; j < carrStu[i].sprints.length; j++) {
-            listOfStudents.push("<li>" + String(carrStu[i]['sprints'][j]['score']['hse']) + "</li>");
+            listOfStudents.push("<li>" + " HSE:"  + String(carrStu[i]['sprints'][j]['score']['hse']) + "</li>");
+            listOfStudents.push("<li>" + " TECH:"  + String(carrStu[i]['sprints'][j]['score']['tech']) + "</li>");
         }
-
-
     }
+
     document.getElementById("list-name").innerHTML = listOfStudents;
 });
 
