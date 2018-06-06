@@ -5067,18 +5067,22 @@ var arrayChars = [
     ['HSE',Number((SuccessfullStudentsHse(data)/totalStudents.length)*100)],
     ['TECH',Number((SuccessfullStudentsTech(data)/totalStudents.length)*100)]
 ];
-console.log(arrayChars);
 
 function drawChart(array) {
 
   // Create the data table.
   var data = new google.visualization.DataTable();
-  data.addColumn('string', 'Topping');
-  data.addColumn('number', 'Averages');
+  data.addColumn('string', 'Topping',);
+  data.addColumn('number', 'Averages',);
   data.addRows(arrayChars);
 
+
   // Set chart options
-  var options = {'title':'Averages'};
+  var options = {
+      'title':'Averages',
+      'colors': ['#56F89A']
+        };
+
 
   // Instantiate and draw our chart, passing in some options.
   var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
