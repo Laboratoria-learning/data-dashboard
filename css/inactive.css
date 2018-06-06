@@ -1,5 +1,6 @@
 body {
     font-family: "Lato", sans-serif;
+    box-sizing: content-box;
 }
 /* ---------HEADER------------- */
 .container {
@@ -83,14 +84,27 @@ body {
 
 .average {
     background-color: #b6ddd8;
-    width: 100px;
+    width: 300px;
     height: 100px;
     position: relative;
     top: 500px;
-    left: 850px;
+    left: 1000px;
     color: white;
     font-family: 'Poppins', sans-serif;
     font-size: 80px;
+    text-align: center;
+}
+
+.who {
+    background-color: #b6ddd8;
+    width: 400px;
+    height: auto;
+    position: relative;
+    top: 388px;
+    left: 500px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -108,6 +122,7 @@ body {
 
 .main img {
     width: 100%;
+    height: 100vh;
     position: absolute;
     z-index: -1;
     background-repeat: no-repeat;

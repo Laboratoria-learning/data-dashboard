@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ELLE - LOGIN</title>
+  <!--GOOGLE FONTS-->
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/login.css" media="screen" />
+</head>
+
+<body>
+
+
+  <!--Box to Log In-->
+  <section class="user">
+    <div class="imgcontainer">
+      <img src="..//assets/images/profileheader.png" alt="Avatar" class="avatar">
+      <h1>AYANA</h1>
+    </div>
+
+
+    <div id="login">
+      <label for="uname"></label>
+      <form name="login" onsubmit="return validation()">
+        <input type="text" id="username" name="uname" placeholder="Username" value="">
+        <br>
+        <input type="password" id="password" name="pwd" placeholder="Password" value="">
+        <br>
+        <div class="container">
+          <button type="submit">
+            <a href="home.html" class="button">LOGIN</a>
+          </button>
+          <label class="label">
+            <input class="label" type="checkbox" checked="checked" name="remember">Remember me
+          </label>
+          <div class="container">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <span class="psw">
+              <a href="#">Forgot Password?</a>
+            </span>
+          </div>
+        </div>
+    </div>
+    </form>
+  </section>
+  <!-- Database -->
+  <script src="../js/data.js"></script>
+  <!-- JS FILES -->
+  <script src="../js/login.js"></script>
+</body>
+
+</html>

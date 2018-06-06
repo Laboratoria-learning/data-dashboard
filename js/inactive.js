@@ -314,8 +314,8 @@ console.log(inactiveSCL3);
 console.log(infoSCL3);
 
 //AVERAGE FOR INACTIVE STUDENTS IN CHILE 2017-2
-var avgSCL3 = (inactiveSCL3/stSCL172)*100;
-var avgStg172 = avgSCL3.toFixed(2);
+var avgSCL3 = (inactiveSCL3/stSCL172)*100
+var avgStg172 = avgSCL3.toFixed(2)
 console.log(avgStg172);
 
 //---------------------------------------------------------
@@ -362,43 +362,43 @@ var whoSCL172 = document.getElementById("whoSCL172");
 function showSemester(){
     if (smsAqpOne.selected){
         // inactiveAQP162.innerHTML = inactiveAQP1;
-        averageAQP162.innerHTML = avgAQP1;
-        whoAQP162.innerHTML = infoAQP1.join(" ");
+        averageAQP162.innerHTML = avgAQP1.toFixed(2);
+        whoAQP162.innerHTML = infoAQP1.join(" " + ",");
     }else if (smsAqpTwo.selected){
         // inactiveAQP171.innerHTML = inactiveAQP2;
-        averageAQP171.innerHTML = avgAQP2;
+        averageAQP171.innerHTML = avgAQP2.toFixed(2);
         whoAQP171.innerHTML = infoAQP2.join(" ");
     }else if (smsCdMxOne.selected){
         // inactiveCDMX171.innerHTML = inactiveCDMX1;
-        averageCDMX171.innerHTML = avgCDMX1;
+        averageCDMX171.innerHTML = avgCDMX1.toFixed(2);
         whoCDMX171.innerHTML = infoCDMX1.join(" ");
     }else if (smsCdMxTwo.selected){
         // inactiveCDMX172.innerHTML = inactiveCDMX2;
-        averageCDMX172.innerHTML = avgCDMX2;
+        averageCDMX172.innerHTML = avgCDMX2.toFixed(2);
         whoCDMX172.innerHTML = infoCDMX2.join(" ");
     }else if (smsLimaOne.selected){
         // inactiveLIM162.innerHTML = inactiveLIM1;
-        averageLIM162.innerHTML = avgLIM1;
+        averageLIM162.innerHTML = avgLIM1.toFixed(2);
         whoLIM162.innerHTML = infoLIM1.join(" ");
     }else if (smsLimaTwo.selected){
         // inactiveLIM171.innerHTML = inactiveLIM2;
-        averageLIM171.innerHTML = avgLIM2;
+        averageLIM171.innerHTML = avgLIM2.toFixed(2);
         whoLIM171.innerHTML = infoLIM2.join(" ");
     }else if (smsLimaThree.selected){
         // inactiveLIM172.innerHTML = inactiveLIM3;
-        averageLIM172.innerHTML = avgLIM3;
+        averageLIM172.innerHTML = avgLIM3.toFixed(2);
         whoLIM172.innerHTML = infoLIM3.join(" ");
     }else if (smsSclOne.selected){
         // inactiveSCL162.innerHTML = inactiveSCL1;
-        averageSCL162.innerHTML = avgSCL1;
+        averageSCL162.innerHTML = avgSCL1.toFixed(2);
         whoLIM162.innerHTML = infoSCL1.join(" ");
     }else if (smsSclTwo.selected){
         // inactiveSCL171.innerHTML = inactiveSCL2;
-        averageLIM171.innerHTML = avgSCL2;
+        averageLIM171.innerHTML = avgSCL2.toFixed(2);
         whoLIM171.innerHTML = infoSCL2.join(" ");
     } else {
         // inactiveSCL172.innerHTML = inactiveSCL3;
-        averageSCL172.innerHTML = avgSCL3;
+        averageSCL172.innerHTML = avgStg172.toFixed(2);
         whoLIM172.innerHTML = infoSCL3.join(" ");
     }
 };

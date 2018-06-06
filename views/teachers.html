@@ -7,9 +7,45 @@
     <link rel="shortcut icon" href="../assets/images/theL.ico"/>
     <title>Teachers Average</title>
     <link rel="stylesheet" href="../css/teachers.css"/>
+    <!--GOOGLE FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <!--FONTAWESOME-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
 </head>
 <body>
-    
+    <header>
+        <div class="container">
+            <p class="user">AYANA</p>
+        </div>
+    </header>
+
+    <!--SIDEBAR MENU-->
+    <div class="sidenav">
+        <ul class="menu">
+            <li class="sb-item">
+                <i class="fas fa-laptop"></i>
+                <a href="../views/home.html">HOME</a>
+            </li>
+            <li class="sb-item">
+                <i class="fas fa-feather"></i>
+                <a href="../views/main.html">MAIN</a>
+            </li>
+            <li class="sb-item">
+                <i class="fas fa-address-card"></i>
+                <a href="laboratorians.html">LABORATORIANS</a>
+            </li>
+        </ul>
+    </div>
+    <div class="title">
+        <h1>Jedis' Average</h1>
+    </div>
+    <!--FLOWERS BACKGROUND-->
+    <div class="main">
+        <img src="../assets/images/flowersteachers.jpg">
+    </div>
     <!--The menu to show how many inactive students there are according to their location and generation-->
     <section>
         <select id="filter" onchange="showSemester()">
@@ -34,7 +70,7 @@
             </optgroup>
         </select>
     </section>
-    <section>
+    <section class="average">
         <p id="aTeacherAqp162"></p>
         <p id="aTeacherAqp171"></p>
         <p id="aTeacherCdMx171"></p>
