@@ -3,6 +3,7 @@ body {
     display: block;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
+    color: black;
 }
 
 #gr-Option-Bar #li-user {
@@ -14,7 +15,6 @@ body {
 #gr-List-Sede-Gen {
     background-color: white;
     border-bottom: 2px solid rgb(255, 229, 33);
-    border: none;
     float: left;
     height: 6em;
     left: 20%;
