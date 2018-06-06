@@ -6,13 +6,6 @@
     <title> Data Dashboard</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="../css/template.css">
-
-    <script type="text/javascript">
-        function test() {
-            var Excel = new ActiveXObject("Excel.Application");
-            Excel.Workbook.Open("lista.xlsx");
-        }
-    </script>
 </head>
 
 <body>
@@ -44,6 +37,8 @@
             <span id="city">AQP</span>
             <img src="../assets/images/Laboratoria_corchetes-30.png" alt="imagen flechas">
             <span id="generation">2016-2</span>
+            <img src="../assets/images/Laboratoria_corchetes-30.png" alt="imagen flechas">
+            <span>STUDENTS</span>
         </div>
         <div id="bothcont">
             <div id="container">
@@ -63,9 +58,7 @@
             </div>
             <div id="excel">
                 <div id="asisten">
-
-                        <input type=button onClick="test();" value="Open File">
-
+                    <button type="button" name="button"><a href="lista.xlsx">Download List</a></button>
                 </div>
 
             </div>
