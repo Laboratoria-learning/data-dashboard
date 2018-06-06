@@ -313,9 +313,10 @@ for (var i=0; i<totalStSCL3.length; i++){
 console.log(inactiveSCL3);
 console.log(infoSCL3);
 
-//AVERAGE FOR INACTIVE STUDENTS IN CHILE 2017-1
+//AVERAGE FOR INACTIVE STUDENTS IN CHILE 2017-2
 var avgSCL3 = (inactiveSCL3/stSCL172)*100;
-console.log(avgSCL3);
+var avgStg172 = avgSCL3.toFixed(2);
+console.log(avgStg172);
 
 //---------------------------------------------------------
 //VARS TO CALL THE IDs FROM THE <P> INACTIVE

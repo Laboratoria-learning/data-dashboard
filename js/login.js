@@ -1,6 +1,3 @@
-//alert("hola"); //
-// *se usa un alert para comprobar enlace con js*//
-
 //validating the username and passwword//
 
  function validation() {

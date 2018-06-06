@@ -1,15 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="../assets/images/theL.ico"/>
+    <link rel="shortcut icon" href="../assets/images/theL.ico" />
     <title>Inactive Students</title>
-    <link rel="stylesheet" href="../css/home.css"/>
+    <link rel="stylesheet" href="../css/home.css" />
+    <!--GOOGLE FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <!--FONTAWESOME-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/inactive.css" />
 </head>
+
 <body>
-    
+    <header>
+        <div class="container">
+            <p class="user">AYANA</p>
+        </div>
+    </header>
+
+    <!--SIDEBAR MENU-->
+    <div class="sidenav">
+        <ul class="menu">
+            <li class="sb-item">
+                <i class="fas fa-laptop"></i>
+                <a href="../views/home.html">HOME</a>
+            </li>
+            <li class="sb-item">
+                <i class="fas fa-feather"></i>
+                <a href="../views/main.html">MAIN</a>
+            </li>
+            <li class="sb-item">
+                <i class="fas fa-address-card"></i>
+                <a href="laboratorians.html">LABORATORIANS</a>
+            </li>
+        </ul>
+    </div>
+    <div class="title">
+        <h1>Inactive Students</h1>
+    </div>
+    <!--FLOWERS BACKGROUND-->
+    <div class="main">
+        <img src="../assets/images/flowersinactive.jpg">
+    </div>
+
     <!--The menu to show how many inactive students there are according to their location and generation-->
     <section>
         <select id="filter" onchange="showSemester()">
@@ -46,19 +89,19 @@
         <p id="inactiveSCL171"></p>
         <p id="inactiveSCL172"></p>
     </section> -->
-    <section>
-        <p id="averageAQP162"></p>
-        <p id="averageAQP171"></p>
-        <p id="averageCDMX171"></p>
-        <p id="averageCDMX172"></p>
-        <p id="averageLIM162"></p>
-        <p id="averageLIM171"></p>
-        <p id="averageLIM172"></p>
-        <p id="averageSCL162"></p>
-        <p id="averageSCL171"></p>
-        <p id="averageSCL172"></p>
+    <section class="average">
+        <p id="averageAQP162">%</p>
+        <p id="averageAQP171">%</p>
+        <p id="averageCDMX171">%</p>
+        <p id="averageCDMX172">%</p>
+        <p id="averageLIM162">%</p>
+        <p id="averageLIM171">%</p>
+        <p id="averageLIM172">%</p>
+        <p id="averageSCL162">%</p>
+        <p id="averageSCL171">%</p>
+        <p id="averageSCL172">%</p>
     </section>
-    <section>
+    <section class="who">
         <p id="whoAQP162"></p>
         <p id="whoAQP171"></p>
         <p id="whoCDMX171"></p>
@@ -73,6 +116,7 @@
     <script src="../js/data.js"></script>
     <script src="../js/inactive.js"></script>
 </body>
+
 </html>
 
 

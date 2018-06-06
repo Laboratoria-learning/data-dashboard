@@ -1,0 +1,206 @@
+body {
+    font-family: "Lato", sans-serif;
+}
+/* ---------HEADER------------- */
+.container {
+    position: fixed;
+    background-color: #fad46e;
+    height: 50px;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+}
+
+.container .user{
+    font-size: 20px;
+    position: relative;
+    left: 1300px;
+    top:10px;
+}
+
+/* ----------------SIDEBAR------------- */
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 50px;
+    left: 0;
+    background-color:#86a9a5;
+    overflow-x: hidden;
+    padding-top: 10px;
+}
+
+.sidenav ul {
+    float: right;
+}
+
+.sidenav .menu .sb-item{
+    padding-right: 30px;
+    padding-left: 20px;
+    text-decoration: none;
+    text-align: left;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    color: #faf9f9;
+    display: block;
+    line-height: 2em;
+}
+
+.sidenav ul li:hover{
+    border: #b6ddd8;
+    background-color: #b6ddd8;
+}
+
+[class ^="fas-fa"]{
+    width: 20px;
+    height: 20px;
+}
+
+.sidenav a{
+    color:whitesmoke;
+}
+
+
+.sidenav a:hover {
+    color: #86a9a5;
+}
+
+/* OPTIONS FOR THE STATISTICS */
+.enrolled {
+    background-color: #8f8d89;
+    position: relative;
+    top: 50px;
+    width: 450px;
+    height: 350px;
+    left: 1100px;
+}
+
+.enrolled ul li{
+    list-style-type: none;
+
+}
+
+.enrolled ul li a{
+    color:white;
+    font-size: 35px;
+    font-family: 'Anton', sans-serif;
+    position: relative;
+    top:250px;
+
+}
+
+.dropout {
+    background-color: #86a9a5;
+    position: relative;
+    bottom:300px;
+    width: 350px;
+    height: 350px;
+    left: 750px;
+}
+.dropout ul li{
+    list-style-type: none;
+
+}
+
+.dropout ul li a{
+    color:white;
+    font-size: 35px;
+    font-family: 'Anton', sans-serif;
+    position: relative;
+    top:250px;
+
+}
+
+.successful {
+    background-color:#d7d2be;
+    position: relative;
+    bottom: 650px;
+    width: 500px;
+    height: 350px;
+    left:250px;
+}
+
+.successful ul li{
+    list-style-type: none;
+
+}
+
+.successful ul li a{
+    color:white;
+    font-size: 35px;
+    font-family: 'Anton', sans-serif;
+    position: relative;
+    top: 250px;
+
+}
+
+.jedis {
+    background-color:#fad46e;
+    position: relative;
+    bottom: 650px;
+    width: 350px;
+    height: 400px;
+    left:250px;
+}
+
+.jedis ul li{
+    list-style-type: none;
+
+}
+
+.jedis ul li a{
+    color:white;
+    font-size: 35px;
+    font-family: 'Anton', sans-serif;
+    position: relative;
+    top:300px;
+
+}
+
+.teachers{
+    background-color:#b6ddd8;
+    width: 450px;
+    height: 400px;
+    position: relative;
+    bottom: 1450px;
+    left: 600px;
+}
+
+.teachers ul li{
+    list-style-type: none;
+
+}
+
+.teachers ul li a{
+    color:white;
+    font-size: 35px;
+    font-family: 'Anton', sans-serif;
+    position: relative;
+    top: 300px;
+
+}
+
+.content{
+    background-color:#fdba13;
+    width: 500px;
+    height: 400px;
+    position: relative;
+    bottom:1050px;
+    left: 1050px;
+}
+
+.content ul li{
+    list-style-type: none;
+
+}
+
+.content ul li a{
+    color:white;
+    font-size: 35px;
+    font-family: 'Anton', sans-serif;
+    position: relative;
+    top: 300px;
+
+}

@@ -2,57 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,user scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="../assets/images/theL.ico"/>
     <title>HOME</title>
+    <!--GOOGLE FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <!--FONTAWESOME-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">  
     <link rel="stylesheet" href="../css/home.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
+
 </head>
 <body>
-            <!--HEADER-->
-    <div id="header">
-        <div class="header-nav">
-            <div class="nav">
-                <ul>
-                    <li class="nav-profile">
-                        <div class="nav-profile-image">
-                            <img src="../assets/images/profileheader.png" alt="profile image">
-                            <div class="nav-profile-name">AYANA
-                                <i class="fa fa-caret-down"></i>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+    <header>
+        <div class="container">
+            <p class="user">AYANA</p>
         </div>
+    </header>
+    
+
     <!--SIDEBAR MENU-->
-    <div id="sidebar-nav">
+    <div class="sidenav">
         <ul class="menu">
-            <li>
-                <a href="#">
-                    <i class="fas fa-laptop"></i> HOME 
-                </a>
+            <li class="sb-item">
+                <i class="fas fa-laptop"></i>
+                <a href="../views/home.html">HOME</a>
             </li>
-            <li>
-                <a href="locations.html">
-                    <i class="fas fa-feather"></i> MAIN
-                </a>
+            <li class="sb-item">
+                <i class="fas fa-feather"></i>
+                <a href="../views/main.html">MAIN</a>
             </li>
-            <li>
-                <a href="#">
-                    <i class="fas fa-address-card"></i> LABORATORIANS
-                </a>
+            <li class="sb-item">
+                <i class="fas fa-address-card"></i>
+                <a href="laboratorians.html">LABORATORIANS</a>
             </li>
         </ul>
     </div>
-    <div class="Elle">
-            <img src="../assets/images/README/Elle.jpg"width="1350" height="660" alt="Elle">
+
+    <!--FLOWERS BACKGROUND-->
+    <div class="main">
+        <img src="../assets/images/flowersmain.jpg">
     </div>
+    
+    <!-- TO DO LIST -->
+    <div class="app">
+            <input type="text" id="box" onfocus="this.value=''" value="What are your main goals?"/>
+            <br/>
+            <input type="button" value="Add item" onclick="addItem();"/>
+            <br/>
+            <br/>
+             <div id="list"></div>
+           </div>
+
+    <!--LINKING JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
     <!--LINKING JS FILES-->
     <script src="../js/data.js"></script>
-    <script src="../js/active.js"></script>
+    <script src="../js/home.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>

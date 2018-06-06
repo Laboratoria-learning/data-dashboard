@@ -1,3 +1,127 @@
+body {
+    font-family: "Lato", sans-serif;
+}
+/* ---------HEADER------------- */
+.container {
+    position: fixed;
+    background-color: #fad46e;
+    height: 50px;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+}
+
+.container .user{
+    font-size: 20px;
+    position: relative;
+    left: 1300px;
+    top:10px;
+}
+
+/* ----------------SIDEBAR------------- */
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 50px;
+    left: 0;
+    background-color:#86a9a5;
+    overflow-x: hidden;
+    padding-top: 10px;
+}
+
+.sidenav ul {
+    float: right;
+}
+
+.sidenav .menu .sb-item{
+    padding-right: 30px;
+    padding-left: 20px;
+    text-decoration: none;
+    text-align: left;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    color: #faf9f9;
+    display: block;
+    line-height: 2em;
+}
+
+.sidenav ul li:hover{
+    border: #b6ddd8;
+    background-color: #b6ddd8;
+}
+
+[class ^="fas-fa"]{
+    width: 20px;
+    height: 20px;
+}
+
+.sidenav a{
+    color:whitesmoke;
+}
+
+
+.sidenav a:hover {
+    color: #86a9a5;
+}
+
+/* MENU WITH DIFFERENT LOCATIONS AND SEMESTERS */
+
+#filter {
+    position: relative;
+    top: 400px;
+    left: 800px;
+    background-color: #fad46e;
+    width: 200px;
+    height: 50px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+
+.active-laboratorians {
+    background-color: #b6ddd8;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 500px;
+    left: 850px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 80px;
+    text-align: center;
+}
+
+/* THE TITLE */
+h1{
+    position: relative;
+    top:300px;
+    left: 400px;
+    font-size: 50px;
+    font-family: 'Pacifico', cursive;
+}
+
+
+
+
+/* -----FLOWERS IMAGE */
+
+.main img {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background-repeat: no-repeat;
+    top:0;
+    left: 0;
+    
+}
+
+
+
+
+
 
 
 /* color scheme

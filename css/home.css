@@ -1,82 +1,114 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700,800,900,900i|Pacifico|Yanone+Kaffeesatz:400,700');
-*{
-    box-sizing: border-box;
-  }
-
-body{
-    margin: 0;
+body {
+    font-family: "Lato", sans-serif;
 }
-img {
-    display: block;
-    max-width: 100%;
-  }
-/* HEADER DESIGN */
-#header {
-    background-color:transparent;
-    position: absolute;
-    height: 80px;
-    left:0;
-    padding: 0;
-    top:0;
-    width: 100%;
-    z-index: -1;
-}
-
-
-li.nav-profile img {
-    border-radius: 50%;
-    display: inline-block;
-    width: 50px;
-}
-
-li.nav-profile .nav-profile-name {
-    display: inline-block;
-    font-family: 'Pacifico', cursive;
-}
-
-#header .nav ul li {
-    float: right;
-    list-style-type: none;
-    position: relative;
-    right: 40px;
-}
-
-/* SIDEBAR MENU DESIGN */
-#sidebar-nav {
-    background: transparent;
-    height: 100%;
-    margin: 0;
-    padding-right: 0;
+/* ---------HEADER------------- */
+.container {
     position: fixed;
-    top: 50px;
-    width: 200px;
-    z-index: 1;
-    cursor: pointer;
-}
-
-#sidebar-nav ul.menu {
-    list-style-type: none;
-}
-
-#sidebar-nav ul li{
-    margin-bottom: 50px;
-    text-align: justify;
-}
-
-#sidebar-nav ul li:hover {
-    background: #ffba00;
+    background-color: #fad46e;
+    height: 50px;
     width: 100%;
+    top: 0;
+    left: 0;
+
 }
 
-#sidebar-nav ul li a{
-    color: white;
-    text-decoration: none;
-    font-family: 'Pacifico', cursive;
-}
-
-.Elle{
-    width: 100%;
+.container .user{
+    font-size: 20px;
     position: relative;
-    top: -80px;
-    z-index: -1;
+    left: 1300px;
+    top:10px;
 }
+
+/* ----------------SIDEBAR------------- */
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 50px;
+    left: 0;
+    background-color:#86a9a5;
+    overflow-x: hidden;
+    padding-top: 10px;
+}
+
+.sidenav ul {
+    float: right;
+}
+
+.sidenav .menu .sb-item{
+    padding-right: 30px;
+    padding-left: 20px;
+    text-decoration: none;
+    text-align: left;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    color: #faf9f9;
+    display: block;
+    line-height: 2em;
+}
+
+.sidenav ul li:hover{
+    border: #b6ddd8;
+    background-color: #b6ddd8;
+}
+
+[class ^="fas-fa"]{
+    width: 20px;
+    height: 20px;
+}
+
+.sidenav a{
+    color:whitesmoke;
+}
+
+
+.sidenav a:hover {
+    color: #86a9a5;
+}
+
+/* -----FLOWERS IMAGE */
+
+.main img {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background-repeat: no-repeat;
+}
+
+/* -------------TO DO LIST --------------- */
+
+  .app {
+    height:600px;
+    width: 350px; 
+    background-color:transparent;
+    position: relative;
+    left:600px;
+    top:500px;
+    padding:10px; 
+    margin:20px;
+  }
+  input[type="button"] {
+   background-color: white;
+   font-size: 13px;
+   color: #fdba13;
+   border: none;
+   border-radius: 20px;
+  }
+
+  #box{
+    width: 500px;
+    border: none;
+    height: 100px;
+    font-size: 40px;
+    text-align: center;
+    background-color: transparent;
+  }
+
+  #list div{
+    color:black;
+    font-size: 35px;
+    line-height: 40px;
+    width: 500px;
+  }
+  
