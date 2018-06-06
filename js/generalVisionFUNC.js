@@ -4959,33 +4959,90 @@ var data = {
     }
 };
 
-// var place = localStorage.getItem('inputCity');
-// var generation = localStorage.getItem('generation');
+var inputCity = document.getElementById("city").textContent;
 
-// document.getElementById("generationgr").innerHTML = generation20162;
-// document.getElementById("citygr").innerHTML = place;
+var cityLocation = {};
+switch(inputCity) {
+    case 'AQP':
+        cityLocation = data.AQP;
+        break;
+    case 'LIM':
+        cityLocation = data.LIM;
+        break;
+    case 'CDMX':
+        cityLocation = data.CDMX;
+        break;
+    case 'SCL':
+        cityLocation = data.SCL;
+        break;
+};
 
-var place = 'AQP';
-var generation = '2016-2';
+ // VARIABLE PARA GUARDAR EL ARRAY DE LA GENERACIÓN SELECCIONADA SEGÚN LA SEDE
+var generation = document.getElementById("generation").textContent;
+
+function ratings (array,year) {
+    var keysArray = Object.keys(array);
+    var yearGeneration = [];
+
+    for ( var i = 0; i < keysArray.length; i++) {
+        if (keysArray[i] == year) {
+        yearGeneration = array[year].ratings;
+        }
+    } // for
+    return yearGeneration;
+}; // function
+
+var outputRatings = ratings(cityLocation,generation);
+
+
+var place = inputCity;
+var generation = generation;
 
 var btnAllList = document.getElementById("btn-all-list");
-
+// LISTA DE ESTUDIANTES POR GENERACION
 btnAllList.addEventListener('click',function StudentsList(base){
     var carrStu = data[place][generation]['students'];
     var listOfStudents = [];
     //save the list of objects who are inactive
-
     for (var i = 0; i < carrStu.length; i++) {
+        listOfStudents.push("<li>" + String(carrStu[i].name) + "</li>");
+        for (var j = 0; j < carrStu[i].sprints.length; j++) {
+            listOfStudents.push("<li>" + String(carrStu[i]['sprints'][j]['score']['hse']) + "</li>");
+        }
 
-            listOfStudents.push("<li>" + carrStu[i].name + "</li>");
 
     }
-    document.getElementById("name-list-of-inactive-students").innerHTML = listOfStudents;
+    document.getElementById("list-name").innerHTML = listOfStudents;
 });
 
-StudentsList(data);
 
-console.log(StudentsList(data));
+
+
+// estudiantes inactivas de AQP gen 2016-2
+
+// function grInactiveStudentsGen20162(base) {
+//     var totalStudents = [];
+//     var carrStu = data[place][generation20162].students;
+//     var inactiveStudents = [];
+//
+//     // total de estudiantes
+//     for (var i = 0; i < carrStu.length; i++) {
+//         totalStudents.push(carrStu[i]);
+//     }
+//     // return totalStudents;
+//
+//     for (var i = 0; i < carrStu.length; i++) {
+//         if (carrStu[i].active == false) {
+//             inactiveStudents.push(carrStu[i]);
+//         }
+//     }
+//     // return inactiveStudents;
+//
+//
+//     var percentageInactiveStudents = inactiveStudents.length / totalStudents.length  * 100;
+//     var decimalPercentageInactiveStudents = percentageInactiveStudents.toFixed(2) + "%";
+//     document.getElementById("paragraph-percentage-of-inactive-students").innerHTML = decimalPercentageInactiveStudents;
+// }
 
 // Estudiantes con el 70% o mas de HSE
 function FullStudentsHse(base) {
@@ -5005,8 +5062,7 @@ function FullStudentsHse(base) {
                 }
             }
         }
-        console.log(successfulStudentsHse);
-    document.getElementById("paragraph-successful-of-active-students-hse").innerHTML = successfulStudentsHse.length;
+    // document.getElementById("paragraph-successful-of-active-students-hse").innerHTML = successfulStudentsHse.length;
 
     return successfulStudentsHse.length;
 };
@@ -5029,9 +5085,9 @@ function SuccessfullStudentsTech(base) {
                 }
             }
         }
-    document.getElementById("paragraph-successful-of-active-students-tech").innerHTML = successfulStudentsTech.length;
+    // document.getElementById("paragraph-successful-of-active-students-tech").innerHTML = successfulStudentsTech.length;
     var percentageSuccessFulStudentsTech = ((successfulStudentsTech.length / route.length)*100).toFixed(2) + " %";
-    document.getElementById("paragraph-percentage-successful-of-active-students-tech").innerHTML = percentageSuccessFulStudentsTech;
+    // document.getElementById("paragraph-percentage-successful-of-active-students-tech").innerHTML = percentageSuccessFulStudentsTech;
     return successfulStudentsTech.length;
 };
 
@@ -5056,14 +5112,14 @@ function SuccessfullStudents(base) {
                 }
             }
         }
-    document.getElementById("paragraph-successful-of-active-students").innerHTML = successfulStudents.length;
+    // document.getElementById("paragraph-successful-of-active-students").innerHTML = successfulStudents.length;
 
     var percentageSuccessFulStudents = ((successfulStudents.length / route.length)*100).toFixed(2) + " %";
-    document.getElementById("paragraph-percentage-successful-of-active-students").innerHTML = percentageSuccessFulStudents;
+    // document.getElementById("paragraph-percentage-successful-of-active-students").innerHTML = percentageSuccessFulStudents;
     return successfulStudents.length;
 };
 
 
-FullStudentsHse(data);
-FullStudentsTech(data);
-FullStudents(data);
+// FullStudentsHse(data);
+// FullStudentsTech(data);
+// FullStudents(data);
