@@ -4962,7 +4962,7 @@ var data = {
 var inputCity = document.getElementById("city").textContent;
 
 var cityLocation = {};
-switch(inputCity) {
+switch (inputCity) {
     case 'AQP':
         cityLocation = data.AQP;
         break;
@@ -4977,38 +4977,46 @@ switch(inputCity) {
         break;
 };
 
- // VARIABLE PARA GUARDAR EL ARRAY DE LA GENERACIÓN SELECCIONADA SEGÚN LA SEDE
+// VARIABLE PARA GUARDAR EL ARRAY DE LA GENERACIÓN SELECCIONADA SEGÚN LA SEDE
 var generation = document.getElementById("generation").textContent;
 
-function ratings (array,year) {
+function ratings(array, year) {
     var keysArray = Object.keys(array);
     var yearGeneration = [];
 
-    for ( var i = 0; i < keysArray.length; i++) {
+    for (var i = 0; i < keysArray.length; i++) {
         if (keysArray[i] == year) {
-        yearGeneration = array[year].ratings;
+            yearGeneration = array[year].ratings;
         }
     } // for
     return yearGeneration;
 }; // function
 
-var outputRatings = ratings(cityLocation,generation);
+var outputRatings = ratings(cityLocation, generation);
 
 
 var place = inputCity;
 var generation = generation;
 
 var btnAllList = document.getElementById("btn-all-list");
+var btnActive = document.getElementById("btn-active");
+var btnInactive = document.getElementById("btn-inactive");
+var btnClear = document.getElementById("btn-clear");
+
+
 // LISTA DE ESTUDIANTES POR GENERACION
-btnAllList.addEventListener('click',function StudentsList(base){
+btnAllList.addEventListener('click', function StudentsList(base) {
     var carrStu = data[place][generation]['students'];
     var listOfStudents = [];
+    var successfulStudentsTech = [];
+    var activeStudents = [];
+
     //save the list of objects who are inactive
     for (var i = 0; i < carrStu.length; i++) {
         listOfStudents.push("<li>" + String(carrStu[i].name) + "</li>");
         for (var j = 0; j < carrStu[i].sprints.length; j++) {
-            listOfStudents.push("<li>" + " HSE:"  + String(carrStu[i]['sprints'][j]['score']['hse']) + "</li>");
-            listOfStudents.push("<li>" + " TECH:"  + String(carrStu[i]['sprints'][j]['score']['tech']) + "</li>");
+            listOfStudents.push("<li>" + " HSE:" + String(carrStu[i]['sprints'][j]['score']['hse']) + "</li>");
+            listOfStudents.push("<li>" + " TECH:" + String(carrStu[i]['sprints'][j]['score']['tech']) + "</li>");
         }
     }
 
@@ -5016,110 +5024,44 @@ btnAllList.addEventListener('click',function StudentsList(base){
 });
 
 
+// active con HSE y TECH
+btnActive.addEventListener('click', function StudentsListActive(base) {
+    var carrStu = data[place][generation]['students'];
+    var listOfStudents = [];
 
-
-// estudiantes inactivas de AQP gen 2016-2
-
-// function grInactiveStudentsGen20162(base) {
-//     var totalStudents = [];
-//     var carrStu = data[place][generation20162].students;
-//     var inactiveStudents = [];
-//
-//     // total de estudiantes
-//     for (var i = 0; i < carrStu.length; i++) {
-//         totalStudents.push(carrStu[i]);
-//     }
-//     // return totalStudents;
-//
-//     for (var i = 0; i < carrStu.length; i++) {
-//         if (carrStu[i].active == false) {
-//             inactiveStudents.push(carrStu[i]);
-//         }
-//     }
-//     // return inactiveStudents;
-//
-//
-//     var percentageInactiveStudents = inactiveStudents.length / totalStudents.length  * 100;
-//     var decimalPercentageInactiveStudents = percentageInactiveStudents.toFixed(2) + "%";
-//     document.getElementById("paragraph-percentage-of-inactive-students").innerHTML = decimalPercentageInactiveStudents;
-// }
-
-// Estudiantes con el 70% o mas de HSE
-function FullStudentsHse(base) {
-    var route = data[place][generation]['students'];
-    var activeStudents = []; //active students
-    var successfulStudentsHse = [];
-
-    for (var i = 0; i < route.length; i++) {
-            if (route[i].active == true) {
-                activeStudents.push(route[i]);
-                var hse=0;
-                for (var j = 0; j < route[i].sprints.length; j++) {
-                    hse += route[i]['sprints'][j]['score']['hse'];
-                }
-                if (hse >= ( 840 * route[i].sprints.length)) { // 840 pts es el 70% de hse
-                    successfulStudentsHse.push(route[i]);
-                }
+    //save the list of objects who are inactive
+    for (var i = 0; i < carrStu.length; i++) {
+        if (carrStu[i].active == true) {
+            listOfStudents.push("<li>" + String(carrStu[i].name) + "</li>");
+            for (var j = 0; j < carrStu[i].sprints.length; j++) {
+                listOfStudents.push("<li>" + " HSE:" + String(carrStu[i]['sprints'][j]['score']['hse']) + "</li>");
+                listOfStudents.push("<li>" + " TECH:" + String(carrStu[i]['sprints'][j]['score']['tech']) + "</li>");
             }
         }
-    // document.getElementById("paragraph-successful-of-active-students-hse").innerHTML = successfulStudentsHse.length;
+    }
 
-    return successfulStudentsHse.length;
-};
+    document.getElementById("list-name").innerHTML = listOfStudents;
+});
+// inactive con HSE y TECH
+btnInactive.addEventListener('click', function StudentsListActive(base) {
+    var carrStu = data[place][generation]['students'];
+    var listOfStudents = [];
 
-// Estudiantes con el 70% o más TECH
-function SuccessfullStudentsTech(base) {
-    var route = data[place][generation]['students'];
-    var activeStudents = []; //active students
-    var successfulStudentsTech = [];
-
-    for (var i = 0; i < route.length; i++) {
-            if (route[i].active == true) {
-                activeStudents.push(route[i]);
-                var hse=0;
-                for (var j = 0; j < route[i].sprints.length; j++) {
-                    hse += route[i]['sprints'][j]['score']['tech'];
-                }
-                if (hse >= ( 1260 * route[i].sprints.length)) { // 1260 pts es el 70% de tech
-                    successfulStudentsTech.push(route[i]);
-                }
+    //save the list of objects who are inactive
+    for (var i = 0; i < carrStu.length; i++) {
+        if (carrStu[i].active == false) {
+            listOfStudents.push("<li>" + String(carrStu[i].name) + "</li>");
+            for (var j = 0; j < carrStu[i].sprints.length; j++) {
+                listOfStudents.push("<li>" + " HSE:" + String(carrStu[i]['sprints'][j]['score']['hse']) + "</li>");
+                listOfStudents.push("<li>" + " TECH:" + String(carrStu[i]['sprints'][j]['score']['tech']) + "</li>");
             }
         }
-    // document.getElementById("paragraph-successful-of-active-students-tech").innerHTML = successfulStudentsTech.length;
-    var percentageSuccessFulStudentsTech = ((successfulStudentsTech.length / route.length)*100).toFixed(2) + " %";
-    // document.getElementById("paragraph-percentage-successful-of-active-students-tech").innerHTML = percentageSuccessFulStudentsTech;
-    return successfulStudentsTech.length;
-};
+    }
 
-// Estudiantes con el 70% en TECH y HSE ---> alias las unicornio
-function SuccessfullStudents(base) {
-    var route = data[place][generation]['students'];
-    var activeStudents = []; //active students
-    var successfulStudents = [];
+    document.getElementById("list-name").innerHTML = listOfStudents;
 
-    for (var i = 0; i < route.length; i++) {
-            if (route[i].active == true) {
-                activeStudents.push(route[i]);
-                var hse = 0;
-                var tech = 0;
+});
 
-                for (var j = 0; j < route[i].sprints.length; j++) {
-                    hse += route[i]['sprints'][j]['score']['hse'];
-                    tech += route[i]['sprints'][j]['score']['tech'];
-                }
-                if (hse >= 840 * route[i].sprints.length && tech >= 1260 * route[i].sprints.length) { // 840 pts es el 70% de tech y 1260 pts es el 70% de tech
-                    successfulStudents.push(route[i]);
-                }
-            }
-        }
-    // document.getElementById("paragraph-successful-of-active-students").innerHTML = successfulStudents.length;
-
-    var percentageSuccessFulStudents = ((successfulStudents.length / route.length)*100).toFixed(2) + " %";
-    // document.getElementById("paragraph-percentage-successful-of-active-students").innerHTML = percentageSuccessFulStudents;
-    return successfulStudents.length;
-};
-
-
-// FullStudentsHse(data);
-// FullStudentsTech(data);
-// FullStudents(data);
+btnClear.addEventListener('click', function StudentsListActive(base) {
+location.reload(true);
+});
