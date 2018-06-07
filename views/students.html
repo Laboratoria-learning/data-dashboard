@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Data Dashboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="../css/students.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+
+<body>
+    <!-- *********** NAVEGADOR LATERAL *********** -->
+    <nav id='gr-Opcion-Bar'>
+        <div class="gr-Profile">
+            <img id="gr-Img-Profile" src="../assets/images/profile.jpg" alt="User's Profile">
+        </div>
+        <li id="li-user"><a href="#"> USER </a></li>
+        <li id="area-students"><a href="students.html"> STUDENTS </a></li>
+        <li id="area-coaches"><a href="coaches.html"> COACHES </a></li>
+        <li id="area-general"><a href="generalinformation.html"> GENERAL INFORMATION </a></li>
+        <!-- *********** AGENDA *********** -->
+        <div class="gr-Calendar">
+            <iframe id="calendar" src="https://calendar.google.com/calendar/b/3/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;height=600&amp;wkst=2&amp;bgcolor=%2366ffff&amp;src=grm3o2k2n7qk5ldc1338arill8%40group.calendar.google.com&amp;color=%2342104A&amp;ctz=America%2FMexico_City"
+                width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <span id="main-menu"> <a href="../index.html">MAIN MENU</a></span>
+
+    </nav>
+    <!-- *********** HEADER *********** -->
+    <header id="gr-List-Sede-Gen">
+        <!-- logo de laboratoria en el header -->
+        <img src="../assets/images/BrandLabo/Laboratoria_Logo_RGB_01.png" alt="Laboratoria's Logo">
+    </header>
+
+    <!-- *********** MAIN CONTAINER *********** -->
+    <section id="gr-Main-Container">
+        <div id="gr-Header-Main-Container">
+            <span id="citygr"></span>
+            <img src="../assets/images/Laboratoria_corchetes-30.png" alt="imagen flechas">
+            <span id="generationgr"></span>
+            <img src="../assets/images/Laboratoria_corchetes-30.png" alt="imagen flechas">
+            <span> STUDENTS </span>
+            <h1> Students </h1>
+        </div>
+        <div id="cont">
+            <div id="seccontCont">
+                <div id="chart_div" style="width:100%; height: 100%;">
+
+                </div>
+            </div>
+            <div class="successful-students">
+                <h4>Successful Students</h4>
+                <div id="number-of-successful-students">
+                    <p id="paragraph-successful-of-active-students"></p>
+                </div>
+                <div id="percentage-of-successful-students">
+                    <p id="paragraph-percentage-successful-of-active-students"></p>
+                </div>
+            </div>
+            <div class="inactive-students">
+                <h4>Successful Students: HSE</h4>
+                <div id="number-of-successful-students-HSE">
+                    <p id="paragraph-successful-of-active-students-hse"></p>
+                </div>
+                <div id="percentage-of-successful-students-HSE">
+                    <p id="paragraph-percentage-successful-of-active-students-hse"></p>
+                </div>
+            </div>
+            <div class="satisfied-students">
+                <h4>Successful Students: Technical</h4>
+                <div id="number-of-successful-students-technical">
+                    <p id="paragraph-successful-of-active-students-tech"></p>
+                </div>
+                <div id="percentage-of-successful-students">
+                    <p id="paragraph-percentage-successful-of-active-students-tech"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Base de datos -->
+    <script src="../js/data.js"></script>
+    <!-- Aquí va tus archivos JS -->
+    <script src="../js/studentsFUNC.js"></script>
+</body>
+
+</html>

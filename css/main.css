@@ -1,3 +1,90 @@
-/*
- * Estilos de tu proyecto
- */
+body {
+    box-sizing: border-box;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    color: black;
+}
+
+#gr-Option-Bar #li-user {
+    background-color: #ffe521;
+    border: none;
+}
+
+/* *********** HEADER *********** */
+#gr-List-Sede-Gen {
+    background-color: white;
+    border-bottom: 2px solid rgb(255, 229, 33);
+    float: left;
+    height: 6em;
+    left: 20%;
+    /* position: relative; */
+    width: 100%;
+}
+
+#gr-List-Sede-Gen img {
+    height: 6.3em;
+    margin-left: 35%;
+    /* position: relative; */
+}
+
+/* *********** MAIN CONTAINER *********** */
+#container {
+    height: 100%;
+    width: 100%;
+}
+
+#container-s1, #container-s2 {
+    /*display: inline-flex;*/
+    height: 100%;
+    padding-left: 5em;
+    width: 100%;
+}
+
+#cont-AQP,#cont-LIM, #cont-CDMX, #cont-SCL {
+    box-sizing: border-box;
+    height: 11.5em;
+    float: left;
+    list-style: none;
+    padding: 1em 5em;
+    text-align: center;
+    width: 38em;
+}
+
+.titleLocation {
+    color: white;
+    background-color: #FF009E;
+    border-radius: 10px;
+    font-size: 2em;
+    margin: 0;
+}
+
+.titleLocation:hover {
+    background-color: white;
+    color:#FF009E;
+}
+
+.titleGen {
+    color:white;
+    background-color: #56F89A;
+    border-radius: 10px;
+    font-size: 1.5em;
+    margin:0;
+}
+
+.titleGen:hover {
+    color: #56F89A;
+    background-color: white;
+}
+
+.li-decoration {
+    color: #000000;
+    border-radius: 10px; 
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.li-decoration:hover {
+    background-color: #ffe521;
+    color: white;
+}

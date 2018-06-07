@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Data Dashboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="../css/template.css">
+</head>
+
+<body>
+    <!-- *********** NAVEGADOR LATERAL *********** -->
+    <nav id='gr-Opcion-Bar'>
+        <div class="gr-Profile">
+            <img id="gr-Img-Profile" src="../assets/images/profile.jpg" alt="User's Profile">
+        </div>
+        <li id="li-user"><a href="#"> USER </a></li>
+        <li id="area-students"><a href="students.html"> STUDENTS </a></li>
+        <li id="area-coache"><a href="coaches.html"> COACHES </a></li>
+        <li id="area-general"><a href="generalinformation.html"> GENERAL INFORMATION </a></li>
+
+        <!-- *********** AGENDA *********** -->
+        <div class="gr-Calendar">
+                <iframe id="calendar" src="https://calendar.google.com/calendar/b/3/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;height=600&amp;wkst=2&amp;bgcolor=%2366ffff&amp;src=grm3o2k2n7qk5ldc1338arill8%40group.calendar.google.com&amp;color=%2342104A&amp;ctz=America%2FMexico_City"
+                    width="800" height="600" frameborder="0" scrolling="no"></iframe>
+            </div>
+            <span id="main-menu"> <a href="../index.html">MAIN MENU</a></span>
+    </nav>
+
+    <!-- *********** HEADER *********** -->
+    <header id="gr-List-Sede-Gen">
+        <!-- logo de laboratoria en el header -->
+        <img src="../assets/images/BrandLabo/Laboratoria_Logo_RGB_01.png" alt="Laboratoria's Logo">
+    </header>
+
+    <!-- *********** MAIN CONTAINER *********** -->
+    <section id="gr-Main-Container">
+        <div id="gr-Header-Main-Container">
+            <span id="city">LIM</span>
+            <img src="../assets/images/Laboratoria_corchetes-30.png" alt="imagen flechas">
+            <span id="generation">2016-2</span>
+            <img src="../assets/images/Laboratoria_corchetes-30.png" alt="imagen flechas">
+        </div>
+        <div id="bothcont">
+            <div id="container">
+                <h3>List of Students</h3>
+                <div id="list-name">
+
+                </div>
+                <div id="list-name-successful">
+
+                </div>
+            </div>
+            <div id="buttons">
+                <div id="btn-all-list">All Students</div>
+                <div id="btn-active">Active Students</div>
+                <div id="btn-inactive">Inactive Students</div>
+                <div id="btn-clear">Clear Content</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Base de datos -->
+    <script src="../js/data.js"></script>
+    <!-- Aquí va tus archivos JS -->
+    <script src="../js/coaches.js"></script>
+    <script src="../js/students.js"></script>
+    <script src="../js/generalinformation.js"></script>
+    <script src="../js/generalVisionFUNC.js"></script>
+
+</body>
+
+
+</html>

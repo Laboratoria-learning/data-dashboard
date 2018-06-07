@@ -1,14 +1,58 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Dashboard</title>
-  </head>
-  <body>
 
-		<!-- Base de datos -->
-		<script src="./js/data.js"></script>
-		<!-- Aquí va tus archivos JS -->
+<head>
+    <meta charset="utf-8">
+    <title> Data Dashboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- *********** HEADER *********** -->
+    <header id="gr-List-Sede-Gen">
+        <!-- logo de laboratoria en el header -->
+        <img src="./assets/images/BrandLabo/Laboratoria_Logo_RGB_01.png" alt="Laboratoria's Logo">
+    </header>
+    <!-- *********** MAIN CONTAINER *********** -->
+    <section id="container">
+        <div id="container-s1">
+            <div id="cont-AQP">
+                <h3 class="titleLocation"> AQP</h3>
+                <h5 class="titleGen">Generaciones</h5>
+                <li class="li-decoration"><a href="views/arequipa2016-2.html" id="AQP-2016-2"> 2016-2 </a></li>
+                <li class="li-decoration"><a href="views/arequipa2017-1.html" id="AQP-2017-1"> 2017-1 </a></li>
+            </div>
+            <div id="cont-LIM">
+                <h3 class="titleLocation"> LIM</h3>
+                <h5 class="titleGen">Generaciones</h5>
+                <li class="li-decoration"><a href="views/lima2016-2.html" id="LIM-2016-2"> 2016-2 </a></li>
+                <li class="li-decoration"><a href="views/lima2017-1.html" id="LIM-2017-1"> 2017-1 </a></li>
+                <li class="li-decoration"><a href="views/lima2017-2.html" id="LIM-2017-2"> 2017-2 </a></li>
+            </div>
+        </div>
+        <div id="container-s2">
+            <div id="cont-CDMX">
+                <h3 class="titleLocation"> CDMX</h3>
+                <h5 class="titleGen">Generaciones</h5>
+                <li class="li-decoration"><a href="views/cdmx2017-1.html" id="CDMX-2017-1"> 2017-1 </a></li>
+                <li class="li-decoration"><a href="views/cdmx2017-2.html" id="CDMX-2017-2"> 2017-2 </a></li>
+            </div>
+            <div id="cont-SCL">
+                <h3 class="titleLocation"> SCL</h3>
+                <h5 class="titleGen">Generaciones</h5>
+                <li class="li-decoration"><a href="views/scl2016-2.html"> 2016-2 </a></li>
+                <li class="li-decoration"><a href="views/scl2017-1.html"> 2017-1 </a></li>
+                <li class="li-decoration"><a href="views/scl2017-2.html"> 2017-2 </a></li>
+            </div>
+        </div>
+    </section>
+
+    <!-- Base de datos -->
+    <script src="./js/data.js"></script>
+    <!-- Aquí va tus archivos JS -->
     <script src="./js/app.js"></script>
-  </body>
+</body>
+
+
 </html>
