@@ -1,0 +1,111 @@
+html{
+    background: url(../assets/images/ElleLab.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+}
+
+#login {
+    display: block;
+    border: none;
+    padding: 15px;
+    border-radius: 25px;
+    height: 300px;
+    margin-left: 120px;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 400px;
+    bottom: 50px;
+    position: relative;
+    background-color: #fddc4f;
+    box-sizing: content-box;
+    font-family: 'Lato', sans-serif;
+}
+
+input {
+    font-size: 15px;
+    height: 40px;
+    text-align: center;
+    outline: none;
+    margin: 5px;
+    border: none;
+    border-radius: 20px;
+    width: 380px;
+    
+}
+
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 70px;
+    bottom: 10px;
+    color: #000000;
+    position: relative;
+    left: 215px;
+} 
+
+button{
+    background-color: #86a9a5;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 97%;
+    text-align: center;
+    position: relative;
+    
+ }
+ .button{
+    text-decoration: none;
+    font-size: 20px;
+    color:#fbfdfd;
+    font-family: 'Poppins', sans-serif;
+  }
+button:hover{
+    background-color: #b6ddd8;
+}   
+.cancelbtn{
+    width: auto;
+    padding: 10px;
+    background-color: #86a9a5;
+    color: white;
+    position: relative;
+    top: 10px;
+    font-family: 'Poppins', sans-serif;
+    }
+
+img.avatar{
+    width: 200x;
+    border-radius: 50%;
+    left: 240px;
+    top:60px;
+    position: relative;
+}
+.container{
+    padding: 10px;
+}
+span.psw{
+    float: right;
+    padding-top: 16px;
+}
+.psw a{
+    text-decoration: none;
+    color:#86a9a5;
+    font-size: 20px;
+    
+}
+.label{
+    width: 20%;
+    font-family: 'Poppins', sans-serif;
+    height: 30px; 
+    color:#86a9a5;
+}
+
+/* color scheme
+#fce689
+#fbeab6
+#d7d2be
+#b6ddd8
+#86a9a5
+#8f8d89
+*/

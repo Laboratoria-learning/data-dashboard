@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="../assets/images/theL.ico"/>
+    <title>Teachers Average</title>
+    <link rel="stylesheet" href="../css/teachers.css"/>
+    <!--GOOGLE FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <!--FONTAWESOME-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <p class="user">AYANA</p>
+        </div>
+    </header>
+
+    <!--SIDEBAR MENU-->
+    <div class="sidenav">
+        <ul class="menu">
+            <li class="sb-item">
+                <i class="fas fa-laptop"></i>
+                <a href="../views/home.html">HOME</a>
+            </li>
+            <li class="sb-item">
+                <i class="fas fa-feather"></i>
+                <a href="../views/main.html">MAIN</a>
+            </li>
+            <li class="sb-item">
+                <i class="fas fa-address-card"></i>
+                <a href="laboratorians.html">LABORATORIANS</a>
+            </li>
+        </ul>
+    </div>
+    <div class="title">
+        <h1>Jedis' Average</h1>
+    </div>
+    <!--FLOWERS BACKGROUND-->
+    <div class="main">
+        <img src="../assets/images/flowersteachers.jpg">
+    </div>
+    <!--The menu to show how many inactive students there are according to their location and generation-->
+    <section>
+        <select id="filter" onchange="showSemester()">
+            <option>Select an option</option>
+            <optgroup id="aqp" label="Arequipa">
+                <option value="2016-2" data-city="AQP" data-classyear="2016-2">2016-2</option>
+                <option value="2017-1" data-city="AQP" data-classyear="2017-1">2017-1</option>
+            </optgroup>
+            <optgroup id="cdmx" label="Mexico City">
+                <option value="2017-1" data-city="CDMX" data-classyear="2017-1">2017-1</option>
+                <option value="2017-2" data-city="CDMX" data-classyear="2017-2">2017-2</option>
+            </optgroup>
+            <optgroup id="lima" label="Lima">
+                <option value="2016-2" data-city="LIM" data-classyear="2016-2">2016-2</option>
+                <option value="2017-1" data-city="LIM" data-classyear="2017-1">2017-1</option>
+                <option value="2017-2" data-city="LIM" data-classyear="2017-2">2017-2</option>
+            </optgroup>
+            <optgroup id="santiago" label="Santiago">
+                <option value="2016-2" data-city="SCL" data-classyear="2016-2">2016-2</option>
+                <option value="2017-1" data-city="SCL" data-classyear="2017-1">2017-1</option>
+                <option value="2017-2" data-city="SCL" data-classyear="2017-2">2017-2</option>
+            </optgroup>
+        </select>
+    </section>
+    <section class="average">
+        <p id="aTeacherAqp162"></p>
+        <p id="aTeacherAqp171"></p>
+        <p id="aTeacherCdMx171"></p>
+        <p id="aTeacherCdMx172"></p>
+        <p id="aTeacherLim162"></p>
+        <p id="aTeacherLim171"></p>
+        <p id="aTeacherLim172"></p>
+        <p id="aTeacherScl162"></p>
+        <p id="aTeacherScl171"></p>
+        <p id="aTeacherScl172"></p>
+    </section>
+    <script src="../js/data.js"></script>
+    <script src="../js/teachers.js"></script>
+</body>
+</html>
