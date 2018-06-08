@@ -1,3 +1,277 @@
-/*
- * Estilos de tu proyecto
- */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Didact Gothic', sans-serif;
+}
+/*SECCION HEADER*/
+header {
+  height: 100px;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 40px;
+  overflow: auto;
+  position: relative;
+  bottom: 30px;
+}
+
+li {
+  width: 125px;
+  display: inline-block;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  margin-left: 660%;
+  position: relative;
+  padding: 5px;
+  width: 100%;
+  background: #FFE521;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+a:active {
+  transform: scale(0.95);
+}
+
+#inicio {
+  color: #ffffff;
+}
+
+.logo {
+  position: relative;
+  top: 20px;
+  left: 180px;
+  width: 20%;
+}
+
+.container-back img {
+  width: 100%;
+  height: 88%;
+  position: absolute;
+}
+
+.container-back h1 {
+  position: absolute;
+  top: 150px;
+  left: 11%;
+  font-size: 30px;
+  color: rgba(0,0,0,0.7);
+}
+
+.container-back p {
+  position: absolute;
+  top: 400px;
+  left: 11.7%;
+  color: rgba(0,0,0,0.7);
+}
+
+h1 {
+  top:100px;
+}
+
+#important-values {
+  position: relative;
+  display: flex;
+  top: 100px;
+  margin-left: 7px;
+  text-align justify;
+}
+#values-titles {
+  position: relative;
+  display: flex;
+  top: 125px;
+  margin-left: 250px;
+
+}
+
+/*ESTILOS PARA LA SEGUNDA PAGINA (FORMULARIO)*/
+.menu {
+left: 100%;
+}
+
+#here {
+  color: #ffffff;
+}
+
+.container{
+  display: flex;
+}
+
+#logo2 {
+  position: relative;
+  top: 30px;
+  left: 310px;
+  width: 20%;
+}
+
+.formulario {
+  margin-left: 8%;
+  width: 100%;
+  max-width: 500px;
+  background:#DEDEDE;
+  padding: 20px;
+  /*outline: 1px solid rgba(0,0,0,0.3);*/
+  height: 100%;
+  margin-top: 2%;
+  border-radius: 9px;
+  display: block;
+}
+
+
+.container img {
+  margin-left: 5%;
+  width: 50%;
+  margin-top: 2%;
+  height: 30%;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgba(0,0,0,0.5);
+}
+
+input {
+  display: block;
+  padding: 10px;
+  width: 100%;
+  margin: 30px 0 ;
+  font-size: 20px;
+  outline: 1px solid rgba(0,0,0,0.3);
+}
+
+#button {
+  background: #FFE521;
+  border: none;
+  opacity: 0.8;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-bottom: 0;
+  outline: none;
+}
+
+#button:hover {
+  opacity: 1;
+}
+
+#button:active {
+  transform: scale(0.95);
+}
+
+/*ESTILOS SECCION GRAFICAS*/
+
+.filter {
+  display: none;
+  margin-top: 1%;
+  position: relative;
+}
+
+.icons {
+  position: relative;
+  left: 3%;
+  font-size: 80px;
+  color: rgba(0,0,0,0.3);
+  width: 25%;
+  display: inline-block;
+  bottom: 20px;
+}
+
+.icons i {
+  margin: 4px;
+  width: 27%;
+}
+
+.title {
+  position: relative;
+  width: 30%;
+  top: 50px;
+  left: 30%;
+}
+
+.title h3 {
+  font-size: 40px;
+  color: rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+.title-two{
+  left: 68%;
+  position: relative;
+  width: 25%;
+  bottom: 90px;
+}
+
+.title-two h3 {
+  font-size: 25px;
+  text-align: center;
+}
+
+.select {
+  left: 68%;
+  position: relative;
+  width: 25%;
+  bottom: 70px;
+  height: 40px;
+  border-style: none;
+  background:#DEDEDE;
+  outline: 0px;
+
+}
+
+/*#container-Total {
+  width: 25%;
+  height: 300px;
+  left: 3%;
+  position: relative;
+  background:#DEDEDE;
+  border-radius: 20px;
+  border: 1px solid rgba(0,0,0,0.3);
+  text-align: center;
+}*/
+
+#container-students {
+/*  outline: 1px solid black;*/
+  width: 60%;
+  margin: 25px;
+  font-size: 22px;
+  font-style: oblique;
+  text-align: center;
+  left: 25%;
+}
+.studen-información{
+  margin: 15px;
+  width: 80%;
+  text-align: center;
+}
+
+hr{
+  border: 4px solid white;
+  display: none;
+}
+
+#values {
+  display: inline-flex;
+  border: none;
+  text-align: left;
+  margin-right:  10px;
+  color: black;
+  font-size: 20px;
+}
+
+.pie{
+  display: inline-block;
+  width: 50%;
+
+}

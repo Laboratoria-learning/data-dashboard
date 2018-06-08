@@ -1,0 +1,49 @@
+#filter{
+  background: rgb(241,218,54);
+  display: inline-block;
+/*  position: fixed;*/
+  width: 15%;
+  text-align: center;
+  padding: 17px;
+
+
+}
+
+label{
+  display: flex;
+
+}
+span{
+  border: 1px solid black;
+  width: 2em;
+
+}
+
+#logolab{
+  display: inline-block;
+  width: 20%;
+  height: 15%;
+  right: 0;
+}
+#laboratorians{
+  display: inline-block;
+  margin-left: 300px;
+  width: 100%
+
+}
+
+#picture{
+  height: 30%;
+  width: 30%;
+  background-color:rgb(241,218,54);
+  text-align: center;
+}
+#student-resolts{
+  background-color: rgb(241,218,54);
+  position: relative;
+  width: 30%;
+  height: 30%;
+  text-align: justify;
+  margin: 5px;
+
+}
