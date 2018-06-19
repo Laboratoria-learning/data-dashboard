@@ -1,3 +1,313 @@
 /*
  * Estilos de tu proyecto
  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  background-color: #F0EFEF;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.logo {
+  height: 77px;
+  /* text-align: center; */
+  width: 207px;
+  position: relative;
+  left: 42%;
+  margin-top: 5px;
+}
+
+.header-container {
+  background-color: #ffffff;
+  height: 80px;
+}
+
+/*desde cá es menú desplegable*/
+
+.icon-bars {
+  color: #F8C341;
+  text-align: center;
+  font-size: 23pt;
+  position: relative;
+  float: right;
+  bottom: 62px;
+  right: 7%;
+}
+
+.icon-bars:hover {
+  cursor: pointer;
+}
+
+
+.hide {
+  display: none;
+}
+
+.show {
+  float: right;
+  display: block;
+  background-color: #FDE6BF;
+  width: 320px;
+  height: auto;
+  position: absolute;
+  line-height: 76px;
+  list-style: none;
+  right: 20px;
+  z-index: 999;
+}
+
+.show li {
+  padding: 15px;
+  padding-right: 77px
+}
+
+.show li:hover {
+  /*background-color: pink;*/
+  background-color: #f8c341;
+  cursor: pointer;
+}
+
+.name {
+  text-align: right;
+  padding-right: 9px;
+  padding-bottom: 20px;
+}
+
+.student {
+  width: 89px;
+  height: 78px;
+  /* margin-right: 54px; */
+  margin-top: 6px;
+  float: left;
+}
+
+select {
+  outline: none;
+  border: none;
+  width: 302px;
+  padding: 2px;
+  font-size: 22px;
+}
+
+.select-left {
+  width: 303px;
+  margin-right: 75px;
+}
+
+.form {
+  padding-top: 20px;
+  padding-left: 50px;
+}
+
+section {
+  padding-left: 38px;
+  padding-top: 10px;
+}
+
+.menu-global {
+  display: inline-block;
+}
+
+.global {
+  margin-left: 24px;
+  margin-top: 44px;
+  margin-bottom: 10px;
+  font-size: 20pt;
+  font-weight: 600;
+}
+
+.menu-global {
+  padding-left: 25px;
+  padding: 10px;
+  background-color: #f8c341;
+  border-radius: 11px;
+  margin-left: 20px;
+  transition: 0.2s;
+}
+
+.menu-global:hover {
+  cursor: pointer;
+  color: white;
+}
+
+article {
+  width: 373px;
+  height: 400px;
+  padding: 20px;
+  display: inline-block;
+  background-color: #FFFFFF;
+  margin: 36px;
+  box-shadow: 5px 5px 5px #f8c341;
+  border-radius: 6px;
+}
+
+.squares {
+  width: 161px;
+  height: 87px;
+  display: inline-block;
+  padding: 10px;
+  float: left;
+  margin-bottom: 8px;
+  margin-right: 5px;
+  margin-top: 8px;
+  background-color: #F7F7F7;
+}
+
+span {
+  font-size: 24px;
+  font-weight: 900;
+}
+.left {
+  position: relative;
+  bottom: 28px;
+}
+
+.medium {
+  position: relative;
+  bottom: 29px;
+}
+
+.tech-habilities {
+  position: relative;
+  bottom: 43px;
+  width: 1275px;
+  height: 600px;
+}
+
+.social-habilities {
+  position: relative;
+  bottom: 24px;
+  height: 600px;
+  width: 1275px;
+}
+
+.div-left {
+  width: 369px;
+  height: 355px;
+  background-color: palegoldenrod;
+  padding: 20px;
+  display: inline-block;
+  margin: 36px;
+  box-shadow: 5px 5px 5px #f8c341;
+}
+
+.div-center {
+  width: 369px;
+  height: 355px;
+  background-color: palegoldenrod;
+  padding: 20px;
+  display: inline-block;
+  margin: 36px;
+  box-shadow: 5px 5px 5px #f8c341;
+}
+
+.div-right {
+  width: 369px;
+  height: 355px;
+  background-color: palegoldenrod;
+  padding: 20px;
+  display: inline-block;
+  margin: 36px;
+  box-shadow: 5px 5px 5px #f8c341;
+}
+
+main {
+  display: inline-block;
+  margin-bottom: 35px;
+}
+
+p {
+  font-size: 10pt;
+}
+
+.promoters {
+  list-style: none;
+  font-size: 10pt;
+}
+
+.first-graphic {
+  margin-top: 103px;
+  right: 53px;
+  position: absolute;
+}
+
+.second-graphic {
+  margin-top: 80px;
+  margin-left: 36px;
+}
+
+.cuarter-graphic {
+  margin-top: 80px;
+  width: 700px;
+  height: 400px;
+  position: absolute;
+  left: 34px;
+}
+
+.third-graphic {
+  width: 314px;
+  height: 175px;
+  margin-top: 51px;
+}
+
+.circle-graphic {
+  margin-left: 550px;
+  margin-top: 156px;
+}
+
+main {
+  display: inline-block;
+}
+
+.photos-girls img {
+  width: 200px;
+  margin: 0px;
+  height: 200px;
+  float: left;
+}
+
+.photos-girls div {
+  background-color: #f2d185;
+  padding: 20px;
+  margin: 21px;
+  margin-right: 107px;
+  float: right;
+  display: block;
+  width: 656px;
+}
+
+.photos-girls div div {
+  width: 109px;
+  height: 84px;
+  background-color: #fde6bf;
+  padding: 17px;
+  float: right;
+  margin: 24px;
+  margin-top: 0px;
+}
+
+.photos-girls span {
+  padding: 10px;
+  float: right;
+  font-size: 25px;
+  padding-right: 84px;
+  padding-top: 9px;
+  padding-left: 66px;
+}
+
+aside {
+width: 63px;
+height: 90px;
+padding: 46px;
+font-size: 19px;
+}

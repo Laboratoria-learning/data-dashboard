@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Dashboard</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="fonts/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header-container">
+    <figure>
+      <img class="logo" src="assets/images/logo-laboratoria.svg" alt="logo de laboratoria">
+    </figure>
+    <!-- <div> -->
+    <span id="span" class="icon-bars"></span>
+    <ul class="hide list item-list">
+      <li class="name"> <img class="student" src="assets/images/student.jpg" alt="estudiante">Longui Valverde</li>
+      <li>Add student</li>
+      <li>Remove student</li>
+      <li>Add sprint</li>
+    </ul>
+    <!-- </div> -->
+  </header>
+  <section>
+    <!-- <form> -->
+    <div class="form">
+    </div>
+    <select class="select-left" id="select-sede">
+              <option value="0">Selecciona una sede </option>
+              <option class="lugar" value ="AQP"> Arequipa</option>
+              <option class="lugar" value ="CDMX"> Ciudad de México</option>
+              <option class="lugar" value ="LIM"> Lima</option>
+              <option class="lugar" value ="SCL"> Santiago de Chile</option>
+        </select>
+    <select class="select-left" id="select-generation">
+              <option value="0">Selecciona una promoción </option>
+              <option class="sedePromo" value ="2016-2"> 2016-II</option>
+              <option class="sedePromo" value ="2017-1"> 2017-I</option>
+              <option class="sedePromo" value ="2017-2"> 2017-II</option>
+        </select>
+    <!-- </form> -->
+    </div>
+  </section>
+  <nav>
+    <ul class="global">
+      <!-- <li class="menu-global">GENERAL</li>
+        <li id="boton"class="menu-global">STUDENTS</li> -->
+
+
+      <a class="menu-global" href="index.html">GENERAL</a>
+      <li id="boton" class="menu-global">STUDENTS</li>
+    </ul>
+  </nav>
+
+
+
+  <main>
+    <aside>
+      <h1>SPECIALIZATION:</h1>
+      <label for="">Javascript</label>
+      <input type="checkbox">
+      <label for="">UX Designer </label>
+      <input type="checkbox">
+      <label for="">Front end Developer</label>
+      <input type="checkbox">
+    </aside>
+
+    <!-- este contenedor almacena las imágenes de las alumnas creadas desde el dom -->
+    <div id="content-students-img" class="photos-girls">
+    </div>
+  </main>
+  <script type="text/javascript" src="js/data.js"></script>
+  <script type="text/javascript" src="js/images.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+</body>
+
+</html>

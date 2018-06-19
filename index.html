@@ -1,14 +1,179 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Dashboard</title>
-  </head>
-  <body>
 
-		<!-- Base de datos -->
-		<script src="./js/data.js"></script>
-		<!-- Aquí va tus archivos JS -->
-    <script src="./js/app.js"></script>
+<head>
+  <meta charset="utf-8">
+  <title>Data Dashboard</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="fonts/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header-container">
+    <figure>
+      <img class="logo" src="assets/images/logo-laboratoria.svg" alt="logo de laboratoria">
+    </figure>
+    <!-- <div> -->
+    <span id="span" class="icon-bars"></span>
+    <ul class="hide list item-list">
+      <li class="name"> <img class="student" src="assets/images/student.jpg" alt="estudiante">Longui Valverde</li>
+      <li>Add student</li>
+      <li>Remove student</li>
+      <li>Add sprint</li>
+    </ul>
+    <!-- </div> -->
+  </header>
+  <section>
+    <!-- <form> -->
+    <div class="form">
+    </div>
+    <select class="select-left" id="select-sede">
+              <option value="0">Selecciona una sede </option>
+              <option class="lugar" value ="AQP"> Arequipa</option>
+              <option class="lugar" value ="CDMX"> Ciudad de México</option>
+              <option class="lugar" value ="LIM"> Lima</option>
+              <option class="lugar" value ="SCL"> Santiago de Chile</option>
+        </select>
+    <select class="select-left" id="select-generation">
+              <option value="0">Selecciona una promoción </option>
+              <option class="sedePromo" value ="2016-2"> 2016-II</option>
+              <option class="sedePromo" value ="2017-1"> 2017-I</option>
+              <option class="sedePromo" value ="2017-2"> 2017-II</option>
+        </select>
+    <!-- </form> -->
+    </div>
+  </section>
+  <nav>
+    <ul class="global">
+      <li class="menu-global">GENERAL</li>
+      <a class="menu-global" href="students-pictures.html">STUDENTS</a>
+      <!-- <a class="menu-global" href="students-pictures.html">GENERAL</a> -->
+      <!-- <li class="menu-global">STUDENTS</li> -->
+    </ul>
+  </nav>
+  <article class="left">
+    <h2>INSCRIPCION</h2>
+    <div class="squares">
+      <span id="register"></span>
+      <p>N° ESTUDIANTES INSCRITAS</p>
+    </div>
+    <div class="squares">
+      <span id="desertStudents"></span>
+      <p>DESERTARON</p>
+      <img class="first-graphic" src="assets/images/bar-graph.png" alt="desertoras">
+    </div>
+  </article>
+  <article class="medium">
+    <h2>LOGROS</h2>
+    <div class="squares">
+      <span id="achieve"></span>
+      <p>N° ESTUDIANTES QUE CUMPLIERON
+        <br> EL OBJETIVO</p>
+      <img class="second-graphic" src="assets/images/graph.png" alt="dream-goles">
+    </div>
+    <div class="squares">
+      <span id="achievePcent"></span>
+      <p>PORCENTAJE DEL TOTAL ( )</p>
+    </div>
+  </article>
+  <article>
+    <h2>NET PROMOTER SCORE (NPS)</h2>
+    <div class="squares">
+      <span id="nps"></span>
+      <p>PORCENTAJE ACUMULATIVO NPS</p>
+      <img class="third-graphic" src="assets/images/rectangular-graphic.png" alt="nts">
+    </div>
+    <div class="squares">
+      <pre id="satPercent">
+        % Promoters
+        % Passive
+        % Detractors</pre>
+    </div>
+  </article>
+  <!-- <article class="tech-habilities"> -->
+  <article class="tech-habilities">
+    <h2>HABILIDADES TECNICAS</h2>
+    <!-- <form> -->
+    <div class="form">
+      <select>
+        <option value=""> Puntaje General</option>
+          <optgroup label="COMMON CORE">
+            <option value=""> Sprint 1</option>
+            <option value=""> Sprint 2</option>
+            <option value=""> Sprint 3</option>
+            <option value=""> Sprint 4</option>
+      </select>
+    </div>
+    <!-- </form> -->
+    <div class="squares">
+        <span id="techGoals"></span>
+      <p>N° ESTUDIANTES QUE CUMPLIERON <br> CON EL OBJETIVO</p>
+    </div>
+    <div class="squares">
+        <span id="totalTech"></span>
+      <p> Porcentaje promedio general</p>
+    </div>
+    <img class="cuarter-graphic" src="assets/images/rectangular-graphic.png" alt="nts">
+    <img class="circle-graphic" src="assets/images/circle-graphic.png" alt="nts">
+  </article>
+  <article class="social-habilities">
+    <h2>HABILIDADES SOCIALES</h2>
+    <!-- <form> -->
+    <div class="form">
+      <select id="option-hse">
+        <option value=""> Puntaje General</option>
+        <optgroup label="HSE">
+        <option value="1" class="option"> Sprint 1</option>
+        <option value="2" class="option"> Sprint 2</option>
+        <option value="3" class="option"> Sprint 3</option>
+        <option value="4" class="option"> Sprint 4</option>
+      </select >
+                  </div>
+              <!-- </form> -->
+              <div class="squares">
+                  <span id="hseTotal"></span>
+                    <p>N° PROMEDIO GENERAL <br> DE LA CLASE </p>
+              </div>
+              <div class="squares">
+                <span id="totalStudents"></span>
+                   <p>N° ESTUDIANTES QUE CUMPLIERON <br> CON EL OBJETIVO</p>
+              </div>
+              <img class="cuarter-graphic" src="assets/images/rectangular-graphic.png" alt="second nts">
+             <img class="circle-graphic" src="assets/images/circle-graphic.png" alt="nts">
+        </article>
+        <main>
+              <div class="div-left">
+                    <h2>INDICE DE SATISFACCION</h2>
+                    <div class="squares">
+                      <span id="percentSatisfaction"> </span>
+                         <p>ESTUDIANTES SATISFECHAS</p>
+                         <img class="second-graphic" src="assets/images/graph.png" alt="grafico">
+                    </div>
+              </div>
+              <div class="div-center">
+                    <h2>EVALUACION DEL PROFESOR</h2>
+                    <div class="squares">
+                      <span id="totalPointsTeacher"></span>
+                         <p>CALIFICACION GENERAL</p>
+                         <img class="second-graphic" src="assets/images/graph.png" alt="grafico">
+                    </div>
+              </div>
+              <div class="div-right">
+                    <h2>EVALUACION JEDI MASTER</h2>
+                    <div  class="squares">
+                      <span id="totalPointsJedi" ></span>
+                         <p>CALIFICACION GENERAL</p>
+                         <img class="second-graphic" src="assets/images/graph.png" alt="grafico">
+                    </div>
+              </div>
+        </main>
+        <div id="container-img">
+        </div>
+        <!-- </main> -->
+        <!-- Base de datos -->
+        <script src="./js/data.js"></script>
+        <!-- Aquí va tus archivos JS -->
+    <script src="js/app.js"></script>
   </body>
 </html>
