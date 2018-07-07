@@ -1,3 +1,253 @@
-/*
- * Estilos de tu proyecto
- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f7f7f7;
+  font-family: 'Lato', sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  background-color: #fff;
+}
+
+header .logo {
+  margin: auto;
+  width: 250px;
+}
+
+.content-header {
+  background-color: #e1e1e1;
+  padding-left: 33px;
+}
+.selection {
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 20px 0;
+  outline: none;
+  text-transform: uppercase;
+}
+
+.container {
+  margin: auto;
+  max-width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.row {
+  margin: 0 -10px;
+}
+
+.container::after, .container::before, .row::before, .row::after {
+  display: table;
+  content: '';
+}
+
+.container::after, .row::after {
+  clear: both;
+}
+
+.col {
+  float: left;
+  padding: 0 10px;
+  width: 33.333333333333333%;
+  /* width: 50%; */
+}
+
+.content {
+  padding: 20px 0;
+}
+
+.box {
+  background-color: #fff;
+  min-height: 250px;
+}
+#students-deserted {
+  color: red;
+}
+.cajita {
+  background-color: #e1e1e1;
+  float: left;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 23px;
+  height: 80px;
+  padding: 10px;
+  text-align: center;
+  width: 140px;
+}
+
+.description {
+  color: #939393;
+  font-size: 10px;
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+
+.section {
+  background-color: #fff;
+  margin: 50px 0;
+  overflow: auto;
+}
+
+h1 {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px 0 0 20px;
+  text-transform: uppercase;
+}
+h2 {
+  border-bottom: 2px solid #f7b617;
+  width: 200px;
+}
+
+.box-tabs {
+  font-weight: bold;
+  overflow: auto;
+  text-transform: uppercase;
+}
+
+.tab {
+  float: left;
+  cursor: pointer;
+  margin-right: 20px;
+  height: 48px;
+  padding-top: 14px;
+  text-align: center;
+  width: 100px;
+}
+
+.tab.active {
+  border-bottom: 4px solid #f7b617;
+}
+
+.content {
+  display: none;
+}
+
+.content.active {
+  display: block;
+.box-tabs {
+  overflow: auto;
+}
+
+.tab {
+  float: left;
+  cursor: pointer;
+  margin-left: 5px;
+  height: 48px;
+  width: 100px;
+}
+
+.tab.active {
+  border-bottom: 4px solid #f7b617;
+}
+
+/*ESTILOS PARA SECCIÓN STUDENTS*/
+.students-tab {
+  position: relative;
+  background-color: red;
+}
+
+div#specialization.specialization {
+	width: 400px;
+  position: absolute;
+  top: 100px;
+  margin-left: 70px;
+  padding: 20px;
+  border: none;
+	border-radius: 5px;
+	background-color: white;
+}
+
+.students-tab .specialization h3 {
+  margin-left: 10px;
+}
+
+.students-tab .specialization label {
+  margin-top: 10px;
+	margin-left: 10px;
+  display: block;
+}
+
+.students-tab .search-box input {
+  width: 58%;
+  height: 40px;
+  position: absolute;
+  top: 100px;
+  right: 70px;
+  padding: 5px;
+  border: none;
+  box-shadow: 3px 3px #E1E1E1;
+	border-radius: 5px;
+}
+
+.students-tab .search-box span .fa-search {
+  position: absolute;
+  top: 110px;
+  right: 830px;
+	font-size: 18px;
+  color: #E1E1E1;
+  z-index: 20;
+}
+
+.students-tab .students-profile {
+  width: 58%;
+  height: 220px;;
+  position: absolute;
+  top: 150px;
+  right: 70px;
+  margin-top: 22px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 3px 3px #E1E1E1;
+	border-radius: 5px;
+}
+
+.students-tab .students-profile .full-name {
+  width: 30%;
+  display: inline-block;
+  position: absolute;
+  left: 200px;
+}
+
+.students-tab .students-profile .students-skills {
+  width: 30%;
+  display: inline-block;
+  position: absolute;
+  right: 40px;
+}
+
+.students-tab .students-profile .students-skills .skills {
+  display: inline-block;
+  width: 70px;
+  margin: 3px;
+  padding: 5px;
+  background-color: #E1E1E1;
+  font-size: 10px;
+  text-align: center;
+  line-height: 22px;
+}
+
+.students-tab .students-profile .students-skills .skills p:first-child {
+  font-size: 15px;
+}
+
+.students-tab .students-profile>p {
+  position: absolute;
+  right: 40px;
+  bottom: 20px;
+}
+
+#studentsP {
+  background-color: red;
+}

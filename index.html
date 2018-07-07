@@ -3,8 +3,154 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <!-- Iconos -->
+    <script src="https://use.fontawesome.com/5317c4f18c.js"></script>
+    <!-- Archivo CSS vinculado -->
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <header>
+     <figure class="logo">
+       <img src="assets/images/logo-laboratoria.svg" alt="">
+     </figure>
+   </header>
+   <!-- Seleccionar sede -->
+   <div class="content-header">
+     <select id="selection" class="selection">
+
+       <option value="LIM-2016-2">Lima 2016 - II</option>
+       <option value="LIM-2017-1">Lima 2017 - I</option>
+       <option value="LIM-2017-2" selected="true">Lima 2017 - II</option>
+
+       <option value="AQP-2016-2">Arequipa 2016 - II</option>
+       <option value="AQP-2017-1">Arequipa 2017 - I</option>
+
+       <option value="CDMX-2017-1">Ciudad de Mexico 2017 - I</option>
+       <option value="CDMX-2017-2">Ciudad de Mexico 2017 - II</option>
+
+       <option value="SCL-2016-2">Santiago de Chile 2016 - II</option>
+       <option value="SCL-2017-1">Santiago de Chile 2017 - I</option>
+       <option value="SCL-2017-2">Santiago de Chile 2017 - II</option>
+
+     </select>
+
+     <div class="box-tabs">
+       <div class="tab" data-content="0">Overview</div>
+       <div class="tab" data-content="1">Students</div>
+       <div class="tab" data-content="2">Teacher</div>
+     </div>
+   </div>
+
+   <section id="contenido-sede">
+     <div class="container">
+       <div class="box-contents">
+         <div class="content">
+           <div class="row">
+             <div class="col">
+               <div class="box">
+                 <h1>Enrollment</h1>
+                 <div id="students-inscribed" class="cajita">#</div>
+                 <div id="students-deserted" class="cajita">%</div>
+               </div>
+             </div>
+             <div class="col">
+               <div class="box">
+                 <h1>Achievement</h1>
+                 <div id="students-approved" class="cajita">#</div>
+                 <div id="total-approved" class="cajita">%</div>
+               </div>
+             </div>
+             <div class="col">
+               <div class="box">
+                 <h1>Net Promoter Score</h1>
+                 <div id="average" class="cajita">%</div>
+                 <div id="average" class="cajita description">60% Promoters <br> 30% Passive <br> 10% Detractors</div>
+               </div>
+             </div>
+           </div>
+           <div class="section tech">
+             <h1>Tech</h1>
+             <div id="approved-tech" class="cajita">#</div>
+             <div id="average-tech" class="cajita">%</div>
+           </div>
+           <div class="section hse">
+             <h1>Hse</h1>
+             <div id="approved-hse" class="cajita">#</div>
+             <div id="average-hse" class="cajita">%</div>
+           </div>
+           <div class="row">
+             <div class="col">
+               <div class="box">
+                 <h1>Student satisfaction</h1>
+                 <div id="average-satisfied" class="cajita">#</div>
+               </div>
+             </div>
+             <div class="col">
+               <div class="box">
+                 <h1>Teacher rating</h1>
+                 <div id="scores-teacher"  class="cajita number">#</div>
+               </div>
+             </div>
+             <div class="col">
+               <div class="box">
+                 <h1>Jedi master rating</h1>
+                 <div id="scores-jedi" class="cajita porcentaje">%</div>
+               </div>
+             </div>
+           </div>
+         </div>
+         <div class="content">
+           <!-- Pestaña Students -->
+           <section class="students-tab" id="studentsTab">
+             <!-- Filtro de alumnas por especialización -->
+             <div class="specialization" id="specialization">
+               <h3>Especialidad:</h3>
+               <form>
+                 <label><input type="checkbox" id="javascript">Javascript</label>
+                 <label><input type="checkbox" id="uxDesign">UX Design</label>
+                 <label><input type="checkbox" id="frontEnd">Front end Designer</label>
+               </form>
+             </div>
+
+             <!-- Buscador de alumnas -->
+             <div class="search-box">
+               <span><i class="fa fa-search" aria-hidden="true"></i></span>
+               <form>
+                 <input type="search" name="search">
+               </form>
+             </div>
+
+             <!-- Contenedor de datos de alumnas -->
+             <div class="students-profile" id="studentsProfile">
+               <div id="profilePic">
+
+               </div>
+               <!-- Contenedor de habilidades y promedios -->
+               <div class="students-skills" id="studentsSkills">
+                 <div class="skills">
+                   <p><strong>%</strong></p>
+                   <p>Tech Skills</p>
+                 </div>
+                 <div class="skills">
+                   <p><strong>%</strong></p>
+                   <p>HSE</p>
+                 </div>
+                 <div class="skills">
+                   <p><strong>INTERM</strong></p>
+                   <p>English Skills</p>
+                 </div>
+               </div>
+               <p><a href="#">Ver Perfil <i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
+             </div>
+           </section>
+
+         </div>
+         <div class="content" id="teachers">
+           <p>Prueba</p>
+         </div>
+       </div>
+     </div>
+   </section>
 
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
