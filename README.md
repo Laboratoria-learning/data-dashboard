@@ -1,25 +1,34 @@
 # Data Dashboard
 
-* **Track:** _Common Core_
-* **Curso:** _Creando tu primer sitio web interactivo_
-* **Unidad:** _Producto final_
+* **OBJETIVO**
+Construir una herramienta Web, donde se pueda analizar la mayor cantidad de datos posibles respecto al desempeño de las estudiantes de Laboratoria.
 
-***
+* **PROBLEMATICA**
+Las TMs de Laboratoria no cuentan con una herramienta para revisar los documentos de excel (Google Spreadsheets) que están localizados en diferentes carpetas  y ubicaciones.
+Esto ocasiona algunos problemas como:
+-Pérdida de tiempo en localizar la información.
+-Ejecutar fórmulas para obtener datos importantes.
 
-## Flujo de trabajo
+* **REQUERIMIENTOS DEL USUARIO**
+- Total de estudiantes presentes por sede y generación.
+- Porcentaje de deserción de estudiantes.
+- Cantidad de estudiantes que superan la meta de puntos en promedio de todos los  sprints.
+- Porcentaje que representa el dato anterior en relación al total de estudiantes.
+- El Net Promoter Score (NPS) promedio de los sprints cursados.
+- Cantidad/Porcentaje que representa el total de estudiantes que superan la meta de puntos técnicos y por sprint.
+- Cantidad/Porcentaje que representa el total de estudiantes que superan la meta de puntos de HSE  y por sprint.
+- Puntuación promedio de l@s profesores.
+- Puntuación promedio de l@s jedi masters.
+- Representación gráfica de los datos.
 
-1. Debes realizar un [**fork**](https://gist.github.com/ivandevp/1de47ae69a5e139a6622d78c882e1f74)
-   de este repositorio.
+* **ALCANCE**
+- Se desarrolló una herramienta Web, que facilitará el manejo de la información de las estudiantes y egresadas de Laboratoria.
+- La herramienta cuenta con los puntos siguientes:
+- Amigable
+- De fácil manejo
 
-2. Luego deberás **clonar** tu fork en tu máquina. Recuerda que el comando a usar
-   es `git clone` y su estructura normalmente se ve así:
+* **A continuación se muestra la navegación de la página**
 
-   ```bash
-   git clone https://github.com/<nombre-de-usuario>/freelancer.git
-   ```
+![dashboard Laboratoria](./assets/images/navegacion-1.gif)
 
-3. Cuando hayas terminado tu producto, envía un Pull Request a este repositorio
-   (puedes solicitar apoyo de tus profes para este paso).
-
-> Nota: No olvides que es una buena práctica describir tu proyecto en este
-> archivo `README.md` y también desplegar tu web a Github Pages :smiley:.
+![dashboard Laboratoria](./assets/images/navegacion-2.gif)
