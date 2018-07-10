@@ -1,3 +1,140 @@
-/*
- * Estilos de tu proyecto
- */
+
+.contst {
+width: 700px;
+height: 160px;
+position: absolute;
+top: 40px;
+left: 80px;
+}
+#studentname{
+	font-size: 25px;
+	margin-top:10px;
+	position: relative;
+	margin-left: 220px;
+}
+#studentpic{
+	position: absolute;
+}
+
+.box{
+
+	background-color: rgb(238, 204, 10);
+	width: 350px;
+	height: 140px;
+	position: absolute;
+	left:180px;	
+	border-radius: 5px;
+	margin-top: 20px;
+}
+p{
+	font-size: 20px;
+}
+.sprint1 {
+width: 155px;
+height: 90px;
+left: 53px;
+border-radius: 5px;
+position: absolute;
+}
+
+.sprint2 {
+position: absolute;
+margin-left: 400px;
+border-radius: 5px;
+}
+
+
+.contst2 {
+  width: 700px;
+	height: 160px;
+	position: absolute;
+	top: 250px;
+	left: 80px;
+
+}
+	
+.contst3 {
+	width: 700px;
+	height: 160px;
+	position: absolute;
+	top: 480px;
+	left: 80px;
+
+}
+.contst4 {
+  width: 700px;
+	height: 160px;
+	position: relative;
+	left: 700px;
+	margin-top:20px;
+	top: 40px;
+}
+	
+.contst5 {
+	width: 700px;
+	height: 160px;
+	position: absolute;
+	left: 700px;
+	padding:60px;
+	top: 200px;
+
+}
+.contst6 {
+	width: 700px;
+	height: 160px;
+	position: absolute;
+	left: 700px;
+	padding: 60px;
+	top: 450px;
+}
+img{
+	width: 20%;
+	height: 70%;
+
+}
+.box2{
+	background-color: rgb(238, 204, 10);
+	width: 350px;
+	height: 140px;
+	position: absolute;
+	left:180px;	
+	border-radius: 5px;
+	margin-top: 10px;
+}
+.box3{
+	background-color: rgb(238, 204, 10);
+	width: 350px;
+	height: 140px;
+	position: absolute;
+	left:200px;	
+	border-radius: 5px;
+	margin-top: 20px;
+}
+.box4{
+	background-color: rgb(238, 204, 10);
+	width: 350px;
+	height: 140px;
+	position: absolute;
+	left:250px;	
+	border-radius: 5px;
+	margin-top: 20px;
+}
+.box5{
+	background-color: rgb(238, 204, 10);
+	width: 350px;
+	height: 140px;
+	position: absolute;
+	left:250px;	
+	border-radius: 5px;
+	margin-top: 20px;
+}
+.box6{
+	background-color: rgb(238, 204, 10);
+	width: 350px;
+	height: 140px;
+	position: absolute;
+	left:250px;	
+	border-radius: 5px;
+	margin-top: 20px;
+
+}
