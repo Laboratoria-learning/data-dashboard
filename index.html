@@ -3,12 +3,137 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Chart.bundle.min.js">
   </head>
   <body>
-
+    <header>
+      <nav class="navbar" role="navigation"><i class="fa fa-bars" aria-hidden="true"></i>Menu</nav>
+      <figure>
+        <img class="logo" src="assets/images/logo-laboratoria.svg" alt="Logo">
+      </figure>
+      <ul class="menu">
+          <li class="general-menu"><i class="fa fa-home" aria-hidden="true"><span class="li-menu center">Start</span></i></li>
+          <li class="general-menu"><i class="fa fa-graduation-cap" aria-hidden="true"><span class="li-menu center">Students</span></i></li>
+          <li class="general-menu"><i class="fa fa-address-card-o" aria-hidden="true"><span class="li-menu center">Teachers</span></i></li>
+          <li class="general-menu"><i class="fa fa-calendar" aria-hidden="true"><span class="li-menu center">Calendary</span></i></li>
+          <li class="general-menu"><i class="fa fa-bar-chart" aria-hidden="true"><span class="li-menu center">Reports</span></i></li>
+          <li class="general-menu"><i class="fa fa-sign-out" aria-hidden="true"><span class="li-menu center">Log uot</span></i></li>
+        </ul>
+    </header>
+    <section class="student container">
+      <div class="new-student">
+        <p>Add Student<i class="fa fa-plus right" aria-hidden="true"></i></p>
+      </div>
+      <form class="filter inline">
+        <span class="sede">Lima: </span>
+        <select class="generacion" name="">
+          <option value="">Generation</option>
+          <option value="LIM_2016-2">2016 - II</option>
+          <option value="LIM_2017-1">2017 - I</option>
+          <option value="LIM_2017-2">2017 - II</option>
+        </select>
+        <span class="sede">Arequipa: </span>
+        <select class="generacion" name="">
+          <option value="">Generation</option>
+          <option value="AQP_2016-2">2016 - II</option>
+          <option value="AQP_2017-1">2017 - I</option>
+        </select>
+        <span class="sede">Santiago de Chile: </span>
+        <select class="generacion" name="">
+          <option value="">Generation</option>
+          <option value="SCL_2016-2">2016 - II</option>
+          <option value="SCL_2017-1">2017 - I</option>
+          <option value="SCL_2017-2">2017 - II</option>
+        </select>
+        <span class="sede">Ciudad de Mexico: </span>
+        <select class="generacion" name="">
+          <option value="">Gerenation</option>
+          <option value="CDMX_2017-1">2017 - I</option>
+          <option value="CDMX_2017-2">2017 - II</option>
+        </select>
+        <span class="sede">Guadalajara: </span>
+        <select class="generacion" name="">
+          <option value="">Gerenation</option>
+          <option value="first-15">2015 - I</option>
+          <option value="second-15">2015 - II</option>
+          <option value="first-16">2016 - I</option>
+          <option value="second-16">2016 - II</option>
+          <option value="first-17">2017 - I</option>
+          <option value="second-17">2017 - II</option>
+        </select>
+      </form>
+  </section>
+  <section class="reports container">
+    <form class="filter-report">
+      <span class="">Lima: </span>
+      <select class="generacion" name="">
+        <option value="">Generation</option>
+        <option value="LIM_2016-2">2016 - II</option>
+        <option value="LIM_2017-1">2017 - I</option>
+        <option value="LIM_2017-2">2017 - II</option>
+      </select>
+      <span class="">Arequipa: </span>
+      <select class="generacion" name="">
+        <option value="">Generation</option>
+        <option value="AQP_2016-2">2016 - II</option>
+        <option value="AQP_2017-1">2017 - I</option>
+      </select>
+      <span class="">Santiago de Chile: </span>
+      <select class="generacion" name="">
+        <option value="">Generation</option>
+        <option value="SCL_2016-2">2016 - II</option>
+        <option value="SCL_2017-1">2017 - I</option>
+        <option value="SCL_2017-2">2017 - II</option>
+      </select>
+      <span class="">Ciudad de Mexico: </span>
+      <select class="generacion" name="">
+        <option value="">Gerenation</option>
+        <option value="CDMX_2017-1">2017 - I</option>
+        <option value="CDMX_2017-2">2017 - II</option>
+      </select>
+      <span class="">Guadalajara: </span>
+      <select class="generacion" name="">
+        <option value="">Gerenation</option>
+        <option value="first-15">2015 - I</option>
+        <option value="second-15">2015 - II</option>
+        <option value="first-16">2016 - I</option>
+        <option value="second-16">2016 - II</option>
+        <option value="first-17">2017 - I</option>
+        <option value="second-17">2017 - II</option>
+      </select>
+      </form>
+    </section>
+    <div id="coders-container" class="sub-container right"></div>
+    <div id="reports-container">
+    </div>
+    <div class="col-md-6" id="contenedor_barras">
+      <div id="chart"></div>
+    </div>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
     <script src="./js/app.js"></script>
+
+    <script type="text/javascript" src="./js/jquery-2.0.2.js"></script>
+    <script type="text/javascript" src="./js/globalize.min.js"></script>
+    <script type="text/javascript" src="./js/dx.all.js"></script>
+    <script type="text/javascript" src="./js/chart.js"></script>
+
+    <script type="text/javascript">
+     $(function () {
+        $("#chart").dxChart({
+        dataSource: dataNCiudad, 
+        series: {
+            argumentField: "ciudad",
+            valueField: "students",
+            name: "Alumnas",
+            type: "bar",
+            color: '#ffaa66'
+        }
+      });
+    });
+    </script>
   </body>
 </html>

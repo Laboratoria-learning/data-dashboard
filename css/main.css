@@ -1,3 +1,184 @@
-/*
- * Estilos de tu proyecto
- */
+ * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ }
+
+ body {
+   background-color: #f7f7f7;
+ }
+
+ .navbar {
+   margin: 0 10px 30px;
+   float: left;
+ }
+
+.logo, .navbar {
+  width: 20%;
+}
+
+.logo {
+  margin: 0 15%;
+  position: absolute;
+  vertical-align: middle;
+}
+
+.center {
+  text-align: center;
+}
+
+.menu {
+  width: 25%;
+  height: 100%;
+}
+
+.list {
+  width: 25%;
+  height: 100%;
+  margin-top: 20px;
+}
+
+.container {
+  width: 75%;
+  margin: 0 5%;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.filter {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.new-student {
+  width: 100%;
+  font-size: 40px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-color: #f7b617;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.new-student p {
+  width: 85%;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.new-student i {
+  width: 15%;
+  font-size: 40px;
+  text-align: center;
+}
+
+span, input, i, p {
+  display: inline-block;
+}
+
+.filter {
+  width: 20%;
+  padding: 10px;
+}
+
+.sub-container {
+  width: 80%;
+  border-radius: 10px;
+  overflow: auto;
+  padding: 10px;
+}
+
+.student-inf {
+    background-color: #fff;
+    margin: 4px;
+    width: 32%;
+    border-radius: 10px;
+    padding: 10px;
+    float: left;
+}
+
+.student-inf  p{
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+}
+
+.student-img {
+    width: 120px;
+    height: 170px;
+}
+
+.student-det {
+    float: right;
+    width: 40%;
+    height: 170px;
+}
+
+.student-det .student-tech, .student-det .student-hse{
+  font-size: 0.8em;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 15px;
+  background-color: #f7b617;
+  color: white;
+}
+
+.student-tech span, .student-hse span{
+  font-size: 2em;
+}
+
+.fa, .li-menu {
+  padding: 10px;
+  height: 30px;
+  left: 50px;
+}
+
+.general-menu {
+  list-style: none;
+  padding: 10px;
+}
+
+.sede {
+  padding: 5px;
+}
+
+.generacion {
+  border: none;
+  background-color: inherit;
+  border-style: none;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.canvas-reports {
+  width:25%;
+}
+
+.chart {
+  width: '100px';
+  height: '50px';
+}
+
+.filter-report {
+  width: 100%;
+  background-color: #fff;
+}
+
+.reports {
+  background-color: #f7b617;
+}
+/* .list {
+  display: none;
+} */
