@@ -3,12 +3,202 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   </head>
+
   <body>
+    <header class="header">
+      <figure>
+
+        <img class="logo"src="assets/images/logo-laboratoria.svg" alt="logo Laboratoria">
+
+      </figure>
+    </header>
+
+    <nav class="navigator">
+      <ul>
+
+        <li value="overview">OVERVIEW</li>
+        <li value="teachers">TEACHERS</li>
+        <li>STUDENTS</li>
+
+      </ul>
+    </nav>
+
+
+
+ <section class="graphics-container">
+
+   <section id="filters">
+      <div>
+
+         <select class="place-filter" name="Promoción">
+           <option>SEDE</option>
+           <option value="AQP">Arequipa</option>
+           <option value="LIM">Lima</option>
+           <option value="CDMX">Mexico</option>
+           <option value="SCL">Santiago de chile</option>
+         </select>
+
+         <select class="code-filter" name="Promoción">
+           <option>PROMOCIÓN</option>
+           <option value="2016-2">2016-2</option>
+           <option value="2017-1">2017-1</option>
+           <option value="2017-2">2017-2</option>
+           <option value="">seleccionar todos</option>
+         </select>
+
+         <select class="filtro" name="turno">
+           <option value="">TURNO</option>
+           <option value="">am</option>
+           <option value="">pm</option>
+           <option value="">seleccionar todos</option>
+         </select>
+
+       </div>
+     </section>
+
+
+   <div class="global-data">
+
+     <div class="enrollment title-global">
+
+      <h3>ENROLLMENT</h3>
+      <p class="short-item"> <span class="enrollment-students">120</span> # Students enrolled  </p>
+      <p class="short-item"> <span class="dropout">20</span> % Dropout  </p>
+      <figure>
+        <img src="assets/images/bar-graph.png" alt="grafico">
+      </figure>
+
+     </div>
+
+     <div class="global-achievement title-global">
+
+      <h3>ACHIEVEMENT</h3>
+      <p class="large-item">   Students that meet the target<span class="achievement"> # 105</span><span> %20</span></p>
+      <p class="large-item">   Students that not meet the target<span> # 105</span><span> %20</span></p>
+
+      <figure>
+        <img src="assets/images/circle-graphic.png" alt="grafico">
+      </figure>
+
+     </div>
+
+     <div class="net-promoter-score title-global">
+
+      <h3>NET PROMOTER SCORE</h3>
+      <p class="short-item"> <span class="nps">78</span>% Cumulative NPS  </p>
+      <p class="nps-item">
+         <span>Promoters</span><span class="promoters">60%</span>
+         <span>Pasive</span><span class="pasive">30%</span>
+         <span>Detractors</span><span class="detractors">10%</span>
+        </p>
+      <figure>
+        <img src="assets/images/graph.png" alt="grafico">
+      </figure>
+
+     </div>
+     </div>
+
+
+     <div class="container-ratings">
+       <div class="enrollment title-global">
+
+        <h3>TEACHER RATINGS</h3>
+        <p class="short-item"> <span class="teacher-ratings">4.1</span> </p>
+        <p class="short-item">Overal Teacher Rating</p>
+        <figure>
+          <img src="assets/images/bar-graph.png" alt="grafico">
+        </figure>
+
+       </div>
+
+       <div class="enrollment title-global">
+
+        <h3>JEDI MASTER RATINGS</h3>
+        <p class="short-item"> <span class="jedi-master-ratings">3.2</span>   </p>
+        <p class="short-item">Overall Jedi Rating </p>
+        <figure>
+          <img src="assets/images/bar-graph.png" alt="grafico">
+        </figure>
+
+       </div>
+
+       <div class="enrollment title-global">
+
+        <h3>STUDENT SATISFACTION</h3>
+        <p class="short-item"> <span class="students-satisfaction">140</span>   </p>
+        <p class="short-item">Meeting or exeeding expectation </p>
+        <figure>
+          <img src="assets/images/bar-graph.png" alt="grafico">
+        </figure>
+
+       </div>
+     </div>
+
+     <div class="sprint-data">
+          <div id="filters">
+
+        <select class="sprint-filter" name="sprint">
+          <option value="">SPRINT</option>
+          <option value="1">Sprint-1</option>
+          <option value="2">Sprint-2</option>
+          <option value="3">Sprint-3</option>
+          <option value="4">Sprint-4</option>
+          <option value="5">Sprint-5</option>
+          <option value="6">Sprint-6</option>
+          <option value="">seleccionar todos</option>
+        </select>
+
+
+        <h1>: "PROGRAMACIÓN BASICA"</h1>
+
+        </div>
+           <div class="sprint-achievement">
+
+             <div class="hse-achievement">
+
+              <h3>HSE ACHIEVEMENT</h3>
+              <p class="large-item">   Students that meet the target<span> # 105</span><span> %20</span></p>
+              <p class="large-item">   Students that not meet the target<span> # 105</span><span> %20</span></p>
+              <figure>
+                <img src="assets/images/bar-graph.png" alt="grafico">
+              </figure>
+
+             </div>
+
+             <div class="tech-achievement">
+
+              <h3>TECH ACHIEVEMENT</h3>
+              <p class="large-item">   Students that meet the target<span> # 105</span><span> %20</span></p>
+              <p class="large-item">   Students that not meet the target<span> # 105</span><span> %20</span></p>
+              <figure>
+                <img src="assets/images/bar-graph.png" alt="grafico">
+              </figure>
+
+             </div>
+
+           </div>
+
+      </div>
+     </div>
+
+
+ </section>
+
+
+
+
+
+
 
 		<!-- Base de datos -->
-		<script src="./js/data.js"></script>
+		<script src="js/data.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 		<!-- Aquí va tus archivos JS -->
-    <script src="./js/app.js"></script>
+    <script src="js/app.js"></script>
+    <script src='js/overview.js'></script>
+    <script src='js/students.js'></script>
   </body>
 </html>

@@ -1,3 +1,156 @@
-/*
- * Estilos de tu proyecto
- */
+*{
+  font-family: 'Noto Sans', sans-serif;
+}
+ /* Estilos al body*/
+ body {
+  margin: 0 auto;
+}
+
+/* Estilos al header*/
+header {
+  height: 80px;
+}
+
+header img {
+  height: 60px;
+  margin: 10px auto;
+  transform: translateX(170%);
+  width: 300px;
+}
+/* Estilos al nav*/
+nav ul {
+  background-color: #e1e1e1;
+  height: 90px;
+  margin: 0;
+}
+
+nav ul li {
+  box-sizing: border-box;
+  color: #2b2b2b;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  height: 10px;
+  margin-right: 20px;
+  padding-top: 5px;
+  text-align: center;
+  transform: translateY(50%);
+  width: 125px;
+}
+
+nav ul li p {
+  margin-bottom: 0;
+}
+
+/* clases para las pestañas OVERVIEW y TEACHERS */
+.sub {
+  background-color:#ffc107;
+  border: none;
+  height: 5px;
+
+  }
+
+.none {
+  background-color: #e1e1e1;
+  border: none;
+  height: 5px;
+}
+/* Estilos al main*/
+main {
+  margin-top: 0;
+  background-color: #f7f7f7;
+}
+
+/* Estilos a los filtros*/
+#filtros {
+  background-color: #e1e1e1;
+  display: inline-block;
+  height: 50px;
+  margin-bottom: 0;
+  width: 100%;
+  }
+
+#filtros select {
+  background-color: #e1e1e1;
+  border: 1px solid #ffc107 ;
+  color: #2b2b2b;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 50px;
+  transform: translateY(50%);
+}
+
+/* Estilos al contenedor de datos*/
+
+#content {
+  background-color: #f7f7f7;
+  height: 2000px;
+  margin-top: 0;
+}
+
+#content img  {
+  display: block;
+  margin-left: 60px;
+}
+
+#content table  {
+  color: #2b2b2b;
+  display: block;
+  font-family: sans-serif;
+  margin-left: 50px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+#content table td {
+  background-color: #e1e1e0;
+  font-size: 15px;
+}
+
+.name-sprint{
+  color: #2b2b2b;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 0;
+  padding-left:50px;
+}
+
+#datos span p {
+  color: #2b2b2b;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#promedio-total, #enrolled, #teacher {
+  margin-left: 50px;
+}
+
+#promedio-total, #notas-hse, #notas-tech, #enrolled, #nps, #satisfaction, #teacher, #jedi {
+  border-radius: 20px;
+  background: white;
+  display: inline-block;
+  height: 400px;
+  margin-top: 30px;
+  margin-right: 40px;
+  text-align: left;
+  width: 380px;
+}
+
+
+#promedio-total span{
+  display:block;
+}
+
+/*estilos para eventos */
+.show{
+  display: block;
+}
+
+.hide{
+  display: none;
+}
