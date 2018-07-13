@@ -1,0 +1,12 @@
+.card{
+    width: 80%;
+    background-color: white;
+    min-height: 100px;
+    -webkit-box-shadow: -1px 4px 6px 0px rgba(140,135,140,1);
+    -moz-box-shadow: -1px 4px 6px 0px rgba(140,135,140,1);
+    box-shadow: -1px 4px 6px 0px rgba(140,135,140,1);
+}
+
+.card:nth-child(n+2){
+    margin-top: 30px;
+}

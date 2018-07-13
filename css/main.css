@@ -1,3 +1,14 @@
-/*
- * Estilos de tu proyecto
- */
+@import url("_card.css");
+@import url("_flex.css");
+@import url("_fonts.css");
+@import url("_top.css");
+@import url("_container.css");
+
+
+body{
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(233, 232, 232);
+    font-family: 'Roboto', sans-serif;
+}

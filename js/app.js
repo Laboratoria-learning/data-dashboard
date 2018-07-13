@@ -1,6 +1,61 @@
-/*
- * Funcionalidad de tu producto
- */
+//section qtdAlunas ;grafico, inscritas:begin 
+var ctx = document.getElementById("myChart").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["S1", "S2", "S3", "S4"],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+//section grafico, inscritas:end
 
-// Puedes hacer uso de la base de datos a través de la variable `data`
-console.log(data);
+
+
+
+
+
+
+
+
+function totalAlunas(obj){
+    var array = [];
+    var propriedades = Object.keys(obj);
+    for(var i = 0; i < data.length; i++){
+        if( obj === true){-
+           
+            console.log(data.AQP[2016-2]);
+        }
+        }
+    }
+totalAlunas(array);
+
+
