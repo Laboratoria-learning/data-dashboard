@@ -3,13 +3,60 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   </head>
   <body>
-    <h1>Primeiro grafico</h1>
-    
-    <div id="piechart" style="width: 900px; height: 500px;"></div>
+    <div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="menu-container">
+        <ul class="menu clearfix">
+          <li><a href="#">AQP</a>
+            <ul class="sub-menu clearfix">
+              <li><a href="#">2016-2</a></li>
+              <li><a href="#">2017-1</a></li>
+            </ul>
+          </li>
+          <li><a href="#">CDMX</a>
+            <ul class="sub-menu clearfix">
+              <li><a href="#">2017-1</a></li>
+              <li><a href="#">2017-2</a></li>
+            </ul>
+          </li>
+          <li><a href="#">LIM</a>
+            <ul class="sub-menu clearfix">
+              <li><a href="#">2016-2</a></li>
+              <li><a href="#">2017-1</a></li>
+              <li><a href="#">2017-2</a></li>
+            </ul>
+          </li>
+          <li><a href="#">SCL</a>
+            <ul class="sub-menu clearfix">
+              <li><a href="#">2016-2</a></li>
+              <li><a href="#">2017-1</a></li>
+              <li><a href="#">2017-2</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
+  <div class="row">
+    <div class="col">
+      <h1>add texto</h1>
+    </div>
+    <div class="col">
+      <h1>add texto</h1>
+    </div>
+    <div class="col">
+    <div id="piechart"></div>
+    </div>
+  </div>
+</div>
 		<script src="./js/data.js"></script>
     <script src="./js/app.js"></script>
   </body>
