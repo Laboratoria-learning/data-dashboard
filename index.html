@@ -2,10 +2,124 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css">
     <title>Data Dashboard</title>
   </head>
-  <body>
 
+  <body>
+    <main class="global"><!-- essa linha aqui vai abraçar todo mundo -->
+      
+      <!-- section top:begin -->
+      <section class="top flex colunm start">
+          <img src=./assets/images/logo-laboratoria.svg>
+
+          <nav>
+          <select id="drop-menu" class="drop-menu">
+              <option class="drop-item">SEDES</option>
+              <option class="drop-item" >LIMA</option>
+              <option class="drop-item" >AREQUIPA</option>
+              <option class="drop-item" >SANTIAGO DE CHILE</option>
+              <option class="drop-item" >CIDADE DO MÉXICO</option>
+          </select>
+          </nav>
+
+            <!-- button students -->
+      </section>
+      <!-- section top:end -->
+
+      <section class="container font-roboto flex colunm center"><!-- essa section vai abraçar todas as sections de grafico:begin -->
+
+      <!-- section qtdAlunas:begin -->
+      <section class="card flex row aroud">
+        <div class="teste">
+          <h1>Números de alunas presentes</h1>
+          <span>120</span>
+          <p>#Quantidades por sedes</p>
+          <canvas id="myChart" width="400" height="400"></canvas>
+        </div>
+
+        <div class="desistentes">
+          <h1>Percentual de desistentes</h1>
+          <span>20%</span>
+          <canvas id="myDoughnutChart" width="400" height="400"></canvas>     
+        </div>
+      </section>
+      <!-- section qtdAlunas:end -->
+
+
+
+      <!-- section metaTotal:begin -->
+      <section class="card">
+        <div class="qtdMetaTotal">
+          <!-- aqui vai o grafico -->
+        </div>
+          
+        <div class="percentualTotal">
+          <!-- aqui vai o grafico -->        
+        </div>
+      </section>
+      <!-- section metaTotal:end -->
+
+
+
+      <!-- section metaTech:begin -->
+      <section class="card">
+        <!-- inserir um button , para abrir unidades e sprints -->
+
+        <div class="qtdMetaTech">
+          <!-- aqui vai o grafico -->
+        </div>
+          
+        <div class="percentualMetaTech">
+          <!-- aqui vai o grafico -->        
+        </div>
+      </section>
+      <!-- section metaTech:end -->
+      
+
+      <!-- section metaHse:begin -->
+      <section class="card">
+          <!-- inserir um button , para abrir unidades e sprints -->
+  
+        <div class="qtdMetaHse">
+            <!-- aqui vai o grafico -->
+        </div>
+            
+        <div class="percentualMetaHse">
+            <!-- aqui vai o grafico -->        
+        </div>
+      </section>
+      <!-- section metaHse:end -->
+
+
+      <!-- section pesquisas:begin -->
+      <section class="card">
+
+        <div class="nps">
+           <!-- aqui vai o grafico -->
+        </div>
+          
+        <div class="satisfacaoAlunas">
+           <!-- aqui vai o grafico -->
+        </div>
+
+        <div class="mediasProfessores">
+           <!-- aqui vai o grafico -->
+        </div>
+
+        <div class="mediaJedi">
+           <!-- aqui vai o grafico -->
+        </div>
+      </section>
+      <!-- section pesquisas:end -->
+
+      </section><!-- esse linha aqui vai abraçar todas as sections de grafico: end -->
+
+    </main>
+
+    <!-- graficos -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
