@@ -96,8 +96,7 @@ var myChart = new Chart(ctx, {
     }
 });
 //section grafico, inscritas:end
-<<<<<<< HEAD
-=======
+
 
 // section grafico, qtdAlunas:begin, desistentes
 function totalStudents(sede, turma){
@@ -135,4 +134,4 @@ var sclQTotal = parseInt(sclTotal16two) + parseInt(sclTotal17one) + parseInt(scl
 var sclDesist = parseInt((sclAtivasTotal*100)/sclQTotal);
 console.log(sclDesist);
 // document.querySelector('.totalDesistentes').innerHTML = aqpDesist16;
->>>>>>> master
+
