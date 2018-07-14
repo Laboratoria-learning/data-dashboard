@@ -12,3 +12,8 @@ body{
     background-color: rgb(233, 232, 232);
     font-family: 'Roboto', sans-serif;
 }
+
+.top .btn{
+    height: 50px;
+    width: 30px;
+}
