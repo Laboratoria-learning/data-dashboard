@@ -72,62 +72,50 @@ function totalGeralAtivas(){
 }
 
 
-// // Função do grafico alunas ativas por sede e geração
-// graficoAlunasExedemMetas();
-// function graficoAlunasExedemMetas(){
-//     let dados = alunasExedemMetas();
-//     let ctx = document.getElementsByClassName("charts").getContext("2d");
-//     let labels = dados.map(item => item.sede + ' (' + item.geracao + ')' );
-//     let quantidade = dados.map(item => item.quantidade);
-//     let colors = dados.map(item => item.cor);
-//     let myBarChart = new Chart(ctx, {
-//         type: 'bar',
-//         data: {
-//             labels: labels,
-//             datasets: [
-//                 {data: quantidade, label: 'Quantidade de alunas que exederam as metas',  borderWidth: 1, backgroundColor: colors}
-//             ]
-//         }
-//     });
-// }
-//
-//
-// // Função que retorna total de alunas ativas por sede e geração
-// function alunasExedemMetas(){
-//     const grafico3 = [];
-//     for (sede in data){
-//         for (geracao in data[sede]){
-//             let item = {};
-//             item['sede'] = sede;
-//             item['geracao'] = geracao;
-//             item['quantidade'] = data[sede][geracao].students.sprints.score.filter(alunas=> alunas.tech>1260 && alunas.hse>840).length;
-//             item['cor'] = '#' + (Math.random().toString(16) + '0000000').slice(2, 8);
-//             grafico3.push(item);
-//         }
-//     }
-//     return grafico3;
-// }
+// Função do grafico alunas ativas por sede e geração
+graficoAlunasExedemMetas();
+function graficoAlunasExedemMetas(){
+    let dados = alunasExedemMetas();
+    let ctx = document.getElementById("charts").getContext("2d");
+    let labels = dados.map(item => item.sede + ' (' + item.geracao + ')' );
+    let quantidade = dados.map(item => item.quantidade);
+    let colors = dados.map(item => item.cor);
+    let myBarChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [
+                {data: quantidade, label: 'Quantidade de alunas que exederam as metas',  borderWidth: 1, backgroundColor: colors}
+            ]
+        }
+    });
+}
 
-// function metas(){
-//     for (sede in data){
-//         for (geracao in data[sede]){
-//             for(students in data[sede][geracao]){
-//
-//               //var caminhoSprints = data[sede][geracao][students];
-//               console.log(students);
-//               //return caminhoSprints;
-//
-//             }
-//         }
-//     }
-//
-//
-// }
 
+// Função que retorna total de alunas ativas por sede e geração
+function alunasExedemMetas(){
+    const grafico3 = [];
+    var bla = metas();
+    var contador = 0;
+    for (sede in data){
+        for (geracao in data[sede]){
+            let item = {};
+            item['sede'] = sede;
+            item['geracao'] = geracao;
+            item['quantidade'] = bla[contador].length;
+            item['cor'] = '#' + (Math.random().toString(16) + '0000000').slice(2, 8);
+            grafico3.push(item);
+            contador++;
+        }
+    }
+    return grafico3;
+}
+
+// Função que retorna o total de alunas que excederam ambas as metas em pelo menos 1 sprint
 function metas(){
     var qAlunasExederamPontos = [];
     var exedeuPontos = false;
-    var teste = [];
+    var alunasExederam = [];
     for (sede in data){
         for (geracao in data[sede]){
           var estudantes = data[sede][geracao].students;
@@ -145,15 +133,9 @@ function metas(){
             }
             exedeuPontos = false;
           }
-          teste.push(qAlunasExederamPontos);
+          alunasExederam.push(qAlunasExederamPontos);
           qAlunasExederamPontos = [];
         }
     }
-console.log(teste);
+return alunasExederam;
 }
-
-
-
-
-metas();
-// console.log();
