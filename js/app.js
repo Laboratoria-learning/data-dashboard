@@ -55,6 +55,10 @@ function alunasAtivasSedeGeracao(){
             item['geracao'] = geracao;
             item['quantidade'] = data[sede][geracao].students.filter(alunas=>alunas.active).length;
             item['quantidadeInativas']= data[sede][geracao].students.filter(alunas=> !alunas.active).length;
+            item['mediaTechSprint']= data[sede][geracao].students.filter(alunas => {
+                if (alunas.sprints)
+                    return alunas.sprints.filter(media => media.score.tech > 1260);
+            }).length;
             item['cor'] = '#40' + (Math.random().toString(16) + '0000000').slice(2, 8); 
             grafico1.push(item);
         }
@@ -70,5 +74,6 @@ function totalGeralAtivas(){
         return prev + element.quantidade;        
     },0);
 }
+
 
 
