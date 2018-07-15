@@ -59,19 +59,29 @@ function carregaEstudantes() {
   for(turma in data[sede]){
     for(i in data[sede][turma]["students"]){
       var img = document.createElement("img");
-      var p = document.createElement("p");
       img.src = data[sede]['2017-1']["students"][i]["photo"];
       var name = data[sede]['2017-1']["students"][i]["name"];
-      var habTec = data[sede]['2017-1']["students"][i]["sprints"][i]["score"]["tech"];
-      var habHSE = data[sede]['2017-1']["students"][i]["sprints"][i]["score"]["hse"];
-
       listaEstudantes.appendChild(img);
-      listaEstudantes.appendChild(p);
-
       listaEstudantes.innerHTML += "<p><b>Nome: </b>" + name + "</p>";
-      listaEstudantes.innerHTML += "<p><b>Habilidades tech: </b>" + habTec + "</p>";
-      listaEstudantes.innerHTML += "<p><b>Habilidades HSE: </b>" + habHSE + "</p>";
+      var hse = [];
+      var tech = [];
+      for(var y = 0; y < (data[sede]['2017-1']["students"][i]["sprints"]).length; y++){
+        hse.push(data[sede]['2017-1']["students"][i]["sprints"][y]["score"]["hse"]);
+        tech.push(data[sede]['2017-1']["students"][i]["sprints"][y]["score"]["tech"]);
+        var complementoSprint = tech.length;
+      }
+      var sumTech = tech.reduce( function( acum, num ) {
+        return acum + num;
+      }, 0 );
+      var sumHse = hse.reduce( function( acum, num ) {
+        return acum + num;
+      }, 0 );
+
+      var media = function media(valor, complementoSprint){
+        return valor / complementoSprint;
+      }
+      listaEstudantes.innerHTML += "<p><b>Média Hab. Tech: </b>" + parseInt(media(sumTech, complementoSprint)) + "</p>";
+      listaEstudantes.innerHTML += "<p><b>Média Hab. HSE: </b>" + parseInt(media(sumHse, complementoSprint)) + "</p>";
     }
   }
 };
-// console.log(data[sede]['2017-1']["students"][i]["sprints"][i]["score"]["tech"]);
