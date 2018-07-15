@@ -14,6 +14,7 @@
       <section class="top flex row aroud">
           <img src=./assets/images/logo-laboratoria.svg>
 
+
       <section class="btn">
             <select id="sede" onchange="onSelectSede()">
               <option value="none">SEDES LABORATÓRIA</option>
@@ -36,22 +37,21 @@
       <section class="container font-roboto flex colunm center"><!-- essa section vai abraçar todas as sections de grafico:begin -->
 
       <!-- section qtdAlunas:begin -->
-      <section class="card flex row aroud">
+      <section class="card flex row center">
         <div class="ativas">
           <h1>Números de alunas presentes</h1>
+          <p>Total geral</p>
           <span class="totalAtivas"></span>
-          <p>#Quantidades por sedes</p>
-
-          <canvas id="chart" width="700" height="400"></canvas>
+          <canvas id="chart" width="600" height="400"></canvas>
         </div>
 
-        <!-- <div class="desistentes">
+        <div class="desistentes">
           <h1>Percentual de desistentes</h1>
           <span class="totalDesistentes"></span>
-          <canvas id="myDoughnutChart" width="400" height="400"></canvas>
-        </div> -->
+          <canvas id="myDoughnutChart" width="200" height="200"></canvas>
+        </div>
       </section>
-      <!-- section qtdAlunas:end -->
+      
 
 
 

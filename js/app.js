@@ -6,17 +6,43 @@ function graficoAlunasAtivas(){
     let labels = dados.map(item => item.sede + ' (' + item.geracao + ')' ); 
     let quantidade = dados.map(item => item.quantidade);
     let colors = dados.map(item => item.cor);
-    debugger
     let myBarChart = new Chart(ctx, {
         type: 'bar',
         data: {
             labels: labels,
             datasets: [
-                {data: quantidade, label: 'Quantidade',  borderWidth: 1, backgroundColor: colors}
+                {data: quantidade, label: 'Alunas presentes pela sede e geração. ',  borderWidth: 1, backgroundColor: colors}
             ]
         }
     });
 }
+
+/// Função do grafico % de desistentes 
+graficoAlunasInativas();
+function graficoAlunasInativas(){
+    let dados = alunasAtivasSedeGeracao();
+    let ctx = document.getElementById("myDoughnutChart").getContext("2d");
+    
+    let inativas = dados.map(item => item.quantidadeInativas).reduce ( (prev, item)=> prev + item, 0);
+    let ativas = dados.map(item => item.quantidade).reduce( (prev, item) => prev + item, 0 );
+    let totalGeral =  inativas + ativas;
+    let percentualAtivas = Math.round((ativas * 100) / totalGeral);
+    let percentualInativas = Math.round((inativas  * 100) / totalGeral);
+    document.querySelector(".totalDesistentes").innerHTML = percentualInativas;
+    let dataset = [percentualAtivas, percentualInativas];
+    let labels = ["Ativas", "Inativas"];
+
+     let myBarChart = new Chart(ctx, {
+         type: 'doughnut',
+         data: {
+             labels: labels,
+             datasets: [
+                 {data: dataset, label: labels,  borderWidth: 1, backgroundColor: ['#5032CD32', '#FF0000']}
+             ]
+         }
+     });
+}
+
 
 // Função que retorna total de alunas ativas por sede e geração
 function alunasAtivasSedeGeracao(){
@@ -28,48 +54,21 @@ function alunasAtivasSedeGeracao(){
             item['sede'] = sede;
             item['geracao'] = geracao;
             item['quantidade'] = data[sede][geracao].students.filter(alunas=>alunas.active).length;
-            item['cor'] = '#' + (Math.random().toString(16) + '0000000').slice(2, 8); 
+            item['quantidadeInativas']= data[sede][geracao].students.filter(alunas=> !alunas.active).length;
+            item['cor'] = '#40' + (Math.random().toString(16) + '0000000').slice(2, 8); 
             grafico1.push(item);
         }
     }
     return grafico1;
 }
 
-
-// section grafico, qtdAlunas:begin, desistentes
-function totalStudents(sede, turma){
-  var verifTotal = data[sede][turma]["students"].length;
-  return verifTotal;
+// Função que soma o total de todas as sedes e turmas
+document.querySelector(".totalAtivas").innerHTML = totalGeralAtivas();
+function totalGeralAtivas(){
+    let alunas = alunasAtivasSedeGeracao();
+    return alunas.reduce(function(prev,element){
+        return prev + element.quantidade;        
+    },0);
 }
 
-// conjunto de var com quantidade total de alunas de AQP por geração e total que resulta nas alunas desistentes
-var aqpTotal16 = totalStudents(aqp, aqp16two);
-var aqpTotal17one = totalStudents(aqp, aqp17one);
-var aqpQTotal = parseInt(aqpTotal16) + parseInt(aqpTotal17one);
-var aqpDesist = (aqpAtivasTotal*100)/aqpQTotal;
-console.log(aqpDesist);
-
-// conjunto de var com quantidade total de alunas de CDMX por geração e total que resulta nas alunas desistentes
-var cdmxTotal17one = totalStudents(cdmx, cdmx17one);
-var cdmxTotal17two = totalStudents(cdmx, cdmx17two);
-var cdmxQTotal = parseInt(cdmxTotal17one) + parseInt(cdmxTotal17two);
-var cdmxDesist = parseInt((cdmxAtivasTotal*100)/cdmxQTotal);
-console.log(cdmxDesist);
-
-// conjunto de var com quantidade total de alunas de LIM por geração e total que resulta nas alunas desistentes
-var limTotal16two = totalStudents(lim, lim16two);
-var limTotal17one = totalStudents(lim, lim17one);
-var limTotal17two = totalStudents(lim, lim17two);
-var limQTotal = parseInt(limTotal16two) + parseInt(limTotal17one) + parseInt(limTotal17two);
-var limDesist = parseInt((limAtivasTotal*100)/limQTotal);
-console.log(limDesist);
-
-// conjunto de var com quantidade total de alunas de SCL por geração e total que resulta nas alunas desistentes
-var sclTotal16two = totalStudents(scl, scl16two);
-var sclTotal17one = totalStudents(scl, scl17one);
-var sclTotal17two = totalStudents(scl, scl17two);
-var sclQTotal = parseInt(sclTotal16two) + parseInt(sclTotal17one) + parseInt(sclTotal17two);
-var sclDesist = parseInt((sclAtivasTotal*100)/sclQTotal);
-console.log(sclDesist);
-// document.querySelector('.totalDesistentes').innerHTML = aqpDesist16;
 
