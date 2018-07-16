@@ -29,6 +29,7 @@
          <button>Filtrar</button> 
 
           <a href="#"> ESTUDANTES </a>  <!-- button students -->
+
       </section>
 
       </section>  
@@ -38,6 +39,7 @@
 
       <!-- section qtdAlunas:begin -->
       <section class="card flex row center">
+
         <div class="ativas">
           <h1>Números de alunas presentes</h1>
           <p>Total geral</p>
@@ -54,43 +56,50 @@
       
 
       <!-- section metaTotal:begin -->
-      <section class="card">
+      <section class="card flex row center">
         <div class="qtdMetaTotal">
-         
+          <canvas id="charts" width="600" height="400"></canvas>
+          <!-- aqui vai o grafico -->
         </div>
 
         <div class="percentualTotal">
-          <!-- aqui vai o grafico -->
+          <h1>Alunas que exederam ambas as metas em pelo menos um sprint</h1>
+          <span class="totalExederam"></span>
+          <canvas id="myDoughnutCharts" width="200" height="200"></canvas>
         </div>
       </section>
       <!-- section metaTotal:end -->
 
 
       <!-- section metaTech:begin -->
-      <section class="card">
-        <div class="qtdMediaTech">
-            <span class="mediaSedeGeracao"></span>
-            <canvas id="mediaTech" width="600" height="400"></canvas>
+      <section class="card flex row center">
+        <!-- inserir um button , para abrir unidades e sprints -->
+
+        <div class="qtdMetaTech">
+          <canvas id="chartTech" width="600" height="400"></canvas>
         </div>
 
-        <div class="totalExcedeMeta">
-            <span class="totalExcedeMeta"></span>
-          <canvas id="excedeTech" width="200" height="200"></canvas>
+        <div class="percentualMetaTech">
+          <h1>Alunas que exederam a meta Tech em pelo menos um sprint</h1>
+          <span class="totalExederamTech"></span>
+          <canvas id="myDoughnutTech" width="200" height="200"></canvas>
         </div>
       </section>
       <!-- section metaTech:end -->
 
 
       <!-- section metaHse:begin -->
-      <section class="card">
+      <section class="card flex row center">
           <!-- inserir um button , para abrir unidades e sprints -->
 
         <div class="qtdMetaHse">
-            <!-- aqui vai o grafico -->
+            <canvas id="chartHse" width="600" height="400"></canvas>
         </div>
 
         <div class="percentualMetaHse">
-            <!-- aqui vai o grafico -->
+          <h1>Alunas que exederam a meta HSE em pelo menos um sprint</h1>
+          <span class="totalExederamHse"></span>
+          <canvas id="myDoughnutHse" width="200" height="200"></canvas>
         </div>
       </section>
       <!-- section metaHse:end -->
