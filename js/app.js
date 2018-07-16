@@ -3,7 +3,7 @@ graficoAlunasAtivas();
 function graficoAlunasAtivas(){
     let dados = alunasAtivasSedeGeracao();
     let ctx = document.getElementById("chart").getContext("2d");
-    let labels = dados.map(item => item.sede + ' (' + item.geracao + ')' ); 
+    let labels = dados.map(item => item.sede + ' (' + item.geracao + ')' );
 
     let quantidade = dados.map(item => item.quantidade);
     let colors = dados.map(item => item.cor);
@@ -18,9 +18,7 @@ function graficoAlunasAtivas(){
     });
 }
 
-
 // Função do grafico % de desistentes
-
 graficoAlunasInativas();
 function graficoAlunasInativas(){
     let dados = alunasAtivasSedeGeracao();
@@ -48,8 +46,6 @@ function graficoAlunasInativas(){
      });
 }
 
-
-
 // Função que retorna total de alunas ativas por sede e geração
 function alunasAtivasSedeGeracao(){
     const grafico1 = [
@@ -67,17 +63,6 @@ function alunasAtivasSedeGeracao(){
     }
     return grafico1;
 }
-
-// Função que soma o total de todas as sedes e turmas
-document.querySelector(".totalAtivas").innerHTML = totalGeralAtivas();
-function totalGeralAtivas(){
-    let alunas = alunasAtivasSedeGeracao();
-    return alunas.reduce(function(prev,element){
-        return prev + element.quantidade;
-    },0);
-}
-
-
 
 // Função do gráfico do total de alunas que excederam ambas as metas em pelo menos 1 sprint
 graficoAlunasExedemMetas();
@@ -97,7 +82,6 @@ function graficoAlunasExedemMetas(){
         }
     });
 }
-
 
 // Função que retorna os dados para o gráfico do total de alunas que excederam ambas as metas em pelo menos 1 sprint
 function alunasExedemMetas(){
@@ -147,7 +131,6 @@ function metas(){
 return alunasExederam;
 }
 
-
 // Função que retorna o total de alunas;
 function totalDeAlunas(){
   let dados = alunasAtivasSedeGeracao();
@@ -169,12 +152,14 @@ function totalAlunaGeracao(){
     return alunasPorGeracao;
 }
 
+//outra coisa
 var qAlunasExederam = metas();
 var alunasPorGeracao = totalAlunaGeracao();
 var alunasTotal = totalDeAlunas();
 var exederamTech = metasTECH();
 var exederamHse = metasHSE();
 
+// soma array
 function somaArrays(arr) {
   var sumArray = 0;
   for (i = 0; i < arr.length; i++){
@@ -208,8 +193,6 @@ function graficoPorcentoMetas(){
      });
 }
 
-
-
 // Função do gráfico do total de alunas que excederam a meta TECH em pelo menos 1 sprint
 graficoExedemTECH();
 function graficoExedemTECH(){
@@ -228,7 +211,6 @@ function graficoExedemTECH(){
         }
     });
 }
-
 
 // Função que retorna os dados para o gráfico do total de alunas que excederam ambas as metas em pelo menos 1 sprint
 function alunasExedemTECH(){
@@ -277,7 +259,6 @@ function metasTECH(){
 return qExederamTECH;
 }
 
-
 // Função do grafico % de alunas que exederam a meta TECH do sprint
 graficoPorcentoMetaTech();
 function graficoPorcentoMetaTech(){
@@ -303,8 +284,6 @@ function graficoPorcentoMetaTech(){
      });
 }
 
-
-
 // Função do gráfico do total de alunas que excederam a meta HSE em pelo menos 1 sprint
 graficoExedemHSE();
 function graficoExedemHSE(){
@@ -323,7 +302,6 @@ function graficoExedemHSE(){
         }
     });
 }
-
 
 // Função que retorna os dados para o gráfico do total de alunas que excederam ambas as metas em pelo menos 1 sprint
 function alunasExedemHSE(){
@@ -397,7 +375,7 @@ function graficoPorcentoMetaHse(){
      });
 }
 
-  // AAA função 
+  // AAA função
 function alunasAtivasSedeGeracao(){
     const graficos = [
     ];
@@ -412,20 +390,97 @@ function alunasAtivasSedeGeracao(){
                 if (alunas.sprints)
                     return alunas.sprints.filter(media => media.score.tech > 1260);
             }).length;
-            item['cor'] = '#40' + (Math.random().toString(16) + '0000000').slice(2, 8); 
+            item['cor'] = '#40' + (Math.random().toString(16) + '0000000').slice(2, 8);
             graficos.push(item);
         }
     }
     return graficos;
 }
 
-// Função que soma o total de todas as sedes e turmas
-document.querySelector(".totalAtivasTodasSedes").innerHTML = totalGeralAtivas();
-function totalGeralAtivas(){
-    let alunas = alunasAtivasSedeGeracao();
-    return alunas.reduce(function(prev,element){
-        return prev + element.quantidade;        
-    },0);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Função do grafico NPS
+graficoPorcentoMetaHse();
+function graficoNps(){
+    let dados = dadosNps();
+    let ctx = document.getElementById("myDoughnutHse").getContext("2d");
+    let totalGeral =  totalDeAlunas();
+    let totalExederam = somaArrays(exederamHse);
+    let totalNaoExederam = totalGeral - totalExederam;
+    let percentualExederam = Math.round((totalExederam * 100) / totalGeral);
+    let percentualNaoExederam = Math.round((totalNaoExederam * 100) / totalGeral);
+    document.querySelector(".totalExederamHse").innerHTML = percentualExederam + "%";
+    let dataset = [percentualExederam, percentualNaoExederam];
+    let labels = ["Exederam", "Não exederam"];
+
+     let myBarChart = new Chart(ctx, {
+         type: 'doughnut',
+         data: {
+             labels: labels,
+             datasets: [
+                 {data: dataset, label: labels,  borderWidth: 1, backgroundColor: ['#5032CD32', '#FF0000']}
+             ]
+         }
+     });
+}
+
+// Função que retorna os dados para o gráfico do NPS
+function dadosNps(){
+    const grafico5 = [];
+    for (sede in data){
+        for (geracao in data[sede]){
+            let item = {};
+            item['sede'] = sede;
+            item['geracao'] = geracao;
+            item['quantidadePromoters'] = data[sede][geracao].ratings.map(nPromoters=>nPromoters.nps.promoters);
+            item['quantidadeDetractors'] = data[sede][geracao].ratings.map(nDetractors=>nDetractors.nps.detractors);
+            console.log(item);
+            item['cor'] = '#' + (Math.random().toString(16) + '0000000').slice(2, 8);
+            grafico6.push(item);
+        }
+    }
+    return grafico5;
 }
 
 
+// // Função que retorna o total de alunas que excederam a meta de HSE em pelo menos 1 sprint
+// function metasHSE(){
+//     // var alunasExederamPontos = [];
+//     // var exedeuPontos = false;
+//     // var qExederamHSE = [];
+//     for (sede in data){
+//         for (geracao in data[sede]){
+//           var classificacoes = data[sede][geracao].ratings;
+//           for(classificacao in classificacoes){
+//             var npss = classificacoes[classificacao].nps;
+//             for (nps in npss){
+//               var promoters = npss[nps].promoters;
+//               var detractors = npss[nps].detractors;
+//               if (hse > 840){
+//                 exedeuPontos = true;
+//               }
+//             }
+//             if (exedeuPontos){
+//                 alunasExederamPontos.push(estudantes[estudante]);
+//             }
+//             exedeuPontos = false;
+//           }
+//           qExederamHSE.push(parseInt(alunasExederamPontos.length));
+//           alunasExederamPontos = [];
+//         }
+//     }
+// return qExederamHSE;
+// }
