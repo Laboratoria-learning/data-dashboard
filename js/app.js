@@ -22,7 +22,6 @@ graficoAlunasInativas();
 function graficoAlunasInativas(){
     let dados = alunasAtivasSedeGeracao();
     let ctx = document.getElementById("myDoughnutChart").getContext("2d");
-
     let inativas = dados.map(item => item.quantidadeInativas).reduce ( (prev, item)=> prev + item, 0);
     let ativas = dados.map(item => item.quantidade).reduce( (prev, item) => prev + item, 0 );
     let totalGeral =  inativas + ativas;
@@ -72,7 +71,8 @@ function totalGeralAtivas(){
 }
 
 
-// Função do grafico alunas ativas por sede e geração
+
+// Função do gráfico do total de alunas que excederam ambas as metas em pelo menos 1 sprint
 graficoAlunasExedemMetas();
 function graficoAlunasExedemMetas(){
     let dados = alunasExedemMetas();
@@ -92,17 +92,17 @@ function graficoAlunasExedemMetas(){
 }
 
 
-// Função que retorna total de alunas ativas por sede e geração
+// Função que retorna os dados para o gráfico do total de alunas que excederam ambas as metas em pelo menos 1 sprint
 function alunasExedemMetas(){
     const grafico3 = [];
-    var bla = metas();
+    var qAlunasExederam = metas();
     var contador = 0;
     for (sede in data){
         for (geracao in data[sede]){
             let item = {};
             item['sede'] = sede;
             item['geracao'] = geracao;
-            item['quantidade'] = bla[contador].length;
+            item['quantidade'] = qAlunasExederam[contador];
             item['cor'] = '#' + (Math.random().toString(16) + '0000000').slice(2, 8);
             grafico3.push(item);
             contador++;
@@ -133,9 +133,47 @@ function metas(){
             }
             exedeuPontos = false;
           }
-          alunasExederam.push(qAlunasExederamPontos);
+          alunasExederam.push(parseInt(qAlunasExederamPontos.length));
           qAlunasExederamPontos = [];
         }
     }
 return alunasExederam;
 }
+
+
+var qAlunasExederam = metas();
+var alunasPorGeracao = totalAlunaGeracao();
+// Função que retorna o total de alunas;
+function totalDeAlunas(){
+  let dados = alunasAtivasSedeGeracao();
+  let inativas = dados.map(item => item.quantidadeInativas).reduce ( (prev, item)=> prev + item, 0);
+  let ativas = dados.map(item => item.quantidade).reduce( (prev, item) => prev + item, 0 );
+  let totalGeral =  inativas + ativas;
+  return totalGeral;
+}
+
+// Função que retorna o total de alunas por geração;
+function totalAlunaGeracao(){
+    var alunasPorGeracao = [];
+    for (sede in data){
+        for (geracao in data[sede]){
+          var estudantes = data[sede][geracao].students;
+          alunasPorGeracao.push(parseInt(estudantes.length));
+        }
+    }
+    return alunasPorGeracao;
+}
+
+// Função que retorna a porcentagem de alunas que exederam as metas do sprint
+function porcentagemMetas(){
+    // var alunasPorGeracao = [];
+    // for (sede in data){
+    //     for (geracao in data[sede]){
+    //       var estudantes = data[sede][geracao].students;
+    //       alunasPorGeracao.push(parseInt(estudantes.length));
+    //     }
+    // }
+    // return alunasPorGeracao;
+}
+
+console.log(metas());
