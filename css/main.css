@@ -4,7 +4,7 @@
   flex-direction: column;
   flex-wrap: wrap;
 } */
-.col{
+/* .col{
   border: 1px solid black;
 }
 #piechart{
@@ -66,9 +66,9 @@ body,
 
 .sub-menu li:hover {
   /* background: #555; */
-}
+/* }
 
 .sub-menu .sub-menu {
   top: 0;
   left: 100%;
-}
+} */
