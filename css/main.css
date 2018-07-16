@@ -1,3 +1,74 @@
 /*
- * Estilos de tu proyecto
- */
+.container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+} */
+/* .col{
+  border: 1px solid black;
+}
+#piechart{
+  width: 550px;
+  height: 300px;
+}
+body,
+.menu,
+.sub-menu {
+  margin: 0;
+  padding: 0;
+}
+.clearfix:after{
+  content: '.';
+  display: block;
+  clear: both;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+.menu,
+.sub-menu {
+  list-style: none;
+  background: #fff;
+}
+.sub-menu {
+  background: #ffff00;
+}
+.menu a {
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  color: #000;
+  font-family: sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.menu li {
+  position: relative;
+}
+.menu > li {
+  float: left;
+}
+.menu > li:hover {
+  background: #ffff00;
+}
+.menu li:hover > .sub-menu {
+  display: block;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  min-width: 150px;
+}
+
+.sub-menu li:hover {
+  /* background: #555; */
+/* }
+
+.sub-menu .sub-menu {
+  top: 0;
+  left: 100%;
+} */
