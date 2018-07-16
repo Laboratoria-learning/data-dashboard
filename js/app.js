@@ -17,7 +17,7 @@ function graficoAlunasAtivas(){
     });
 }
 
-/// Função do grafico % de desistentes
+// Função do grafico % de desistentes
 graficoAlunasInativas();
 function graficoAlunasInativas(){
     let dados = alunasAtivasSedeGeracao();
@@ -79,7 +79,6 @@ function graficoAlunasExedemMetas(){
     let ctx = document.getElementById("charts").getContext("2d");
     let labels = dados.map(item => item.sede + ' (' + item.geracao + ')' );
     let quantidade = dados.map(item => item.quantidade);
-    // let porcentagem = dados.map(item => item.porcentagem);
     let colors = dados.map(item => item.cor);
     let myBarChart = new Chart(ctx, {
         type: 'bar',
@@ -88,9 +87,6 @@ function graficoAlunasExedemMetas(){
             datasets: [
                 {data: quantidade, label: 'Quantidade de alunas que exederam as metas',  borderWidth: 1, backgroundColor: colors}
             ]
-            // datasets: [
-            //     {data: porcentagem, label: 'Representação em porcentagem',  borderWidth: 1, backgroundColor: colors}
-            // ]
         }
     });
 }
@@ -100,7 +96,6 @@ function graficoAlunasExedemMetas(){
 function alunasExedemMetas(){
     const grafico3 = [];
     var qAlunasExederam = metas();
-    // var porcentagemAlunas = porcentagemMetas();
     var contador = 0;
     for (sede in data){
         for (geracao in data[sede]){
@@ -108,7 +103,6 @@ function alunasExedemMetas(){
             item['sede'] = sede;
             item['geracao'] = geracao;
             item['quantidade'] = qAlunasExederam[contador];
-            // item['porcentagem'] = porcentagemAlunas[contador];
             item['cor'] = '#' + (Math.random().toString(16) + '0000000').slice(2, 8);
             grafico3.push(item);
             contador++;
@@ -147,8 +141,6 @@ return alunasExederam;
 }
 
 
-var qAlunasExederam = metas();
-var alunasPorGeracao = totalAlunaGeracao();
 // Função que retorna o total de alunas;
 function totalDeAlunas(){
   let dados = alunasAtivasSedeGeracao();
@@ -170,90 +162,139 @@ function totalAlunaGeracao(){
     return alunasPorGeracao;
 }
 
-// Função que retorna a porcentagem de alunas que exederam as metas do sprint
 var qAlunasExederam = metas();
 var alunasPorGeracao = totalAlunaGeracao();
+var alunasTotal = totalDeAlunas();
+var exederamTech = metasTECH();
+var exederamHse = metasHSE();
 
-function porcentagemMetas(){
-    var porcentoAlunasExederam = [];
-    for (i= 0; i < qAlunasExederam.length; i++){
-        var calculo = qAlunasExederam[i]*100/alunasPorGeracao[i];
-        porcentoAlunasExederam.push(Math.round(calculo));
-    }
-    return porcentoAlunasExederam;
+function somaArrays(arr) {
+  var sumArray = 0;
+  for (i = 0; i < arr.length; i++){
+      sumArray += arr[i];
+  }
+  return sumArray;
+}
+
+// Função do grafico % de alunas que exederam as metas do sprint
+graficoPorcentoMetas();
+function graficoPorcentoMetas(){
+    let dados = alunasExedemMetas();
+    let ctx = document.getElementById("myDoughnutCharts").getContext("2d");
+    let totalGeral =  totalDeAlunas();
+    let totalExederam = somaArrays(qAlunasExederam);
+    let totalNaoExederam = totalGeral - totalExederam;
+    let percentualExederam = Math.round((totalExederam * 100) / totalGeral);
+    let percentualNaoExederam = Math.round((totalNaoExederam * 100) / totalGeral);
+    document.querySelector(".totalExederam").innerHTML = percentualExederam + "%";
+    let dataset = [percentualExederam, percentualNaoExederam];
+    let labels = ["Exederam", "Não exederam"];
+
+     let myBarChart = new Chart(ctx, {
+         type: 'doughnut',
+         data: {
+             labels: labels,
+             datasets: [
+                 {data: dataset, label: labels,  borderWidth: 1, backgroundColor: ['#5032CD32', '#FF0000']}
+             ]
+         }
+     });
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Função do gráfico do total de alunas que excederam a meta TECH em pelo menos 1 sprint
+graficoExedemTECH();
+function graficoExedemTECH(){
+    let dados = alunasExedemTECH();
+    let ctx = document.getElementById("chartTech").getContext("2d");
+    let labels = dados.map(item => item.sede + ' (' + item.geracao + ')' );
+    let quantidade = dados.map(item => item.quantidade);
+    let colors = dados.map(item => item.cor);
+    let myBarChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [
+                {data: quantidade, label: 'Quantidade de alunas que exederam as metas TECH em pelo menos um sprint',  borderWidth: 1, backgroundColor: colors}
+            ]
+        }
+    });
+}
+
+
+// Função que retorna os dados para o gráfico do total de alunas que excederam ambas as metas em pelo menos 1 sprint
+function alunasExedemTECH(){
+    const grafico6 = [];
+    var qExederamTECH = metasTECH();
+    var contador = 0;
+    for (sede in data){
+        for (geracao in data[sede]){
+            let item = {};
+            item['sede'] = sede;
+            item['geracao'] = geracao;
+            item['quantidade'] = qExederamTECH[contador];
+            item['cor'] = '#' + (Math.random().toString(16) + '0000000').slice(2, 8);
+            grafico6.push(item);
+            contador++;
+        }
+    }
+    return grafico6;
+}
+
+// Função que retorna o total de alunas que excederam a meta de HSE em pelo menos 1 sprint
+function metasTECH(){
+    var alunasExederamPontos = [];
+    var exedeuPontos = false;
+    var qExederamTECH = [];
+    for (sede in data){
+        for (geracao in data[sede]){
+          var estudantes = data[sede][geracao].students;
+          for(estudante in estudantes){
+            var sprints = estudantes[estudante].sprints;
+            for (sprint in sprints){
+              var tech = sprints[sprint].score.tech;
+              if (tech > 1260){
+                exedeuPontos = true;
+              }
+            }
+            if (exedeuPontos){
+                alunasExederamPontos.push(estudantes[estudante]);
+            }
+            exedeuPontos = false;
+          }
+          qExederamTECH.push(parseInt(alunasExederamPontos.length));
+          alunasExederamPontos = [];
+        }
+    }
+return qExederamTECH;
+}
+
+
+// Função do grafico % de alunas que exederam a meta TECH do sprint
+graficoPorcentoMetaTech();
+function graficoPorcentoMetaTech(){
+    let dados = alunasExedemTECH();
+    let ctx = document.getElementById("myDoughnutTech").getContext("2d");
+    let totalGeral =  totalDeAlunas();
+    let totalExederam = somaArrays(exederamTech);
+    let totalNaoExederam = totalGeral - totalExederam;
+    let percentualExederam = Math.round((totalExederam * 100) / totalGeral);
+    let percentualNaoExederam = Math.round((totalNaoExederam * 100) / totalGeral);
+    document.querySelector(".totalExederamTech").innerHTML = percentualExederam + "%";
+    let dataset = [percentualExederam, percentualNaoExederam];
+    let labels = ["Exederam", "Não exederam"];
+
+     let myBarChart = new Chart(ctx, {
+         type: 'doughnut',
+         data: {
+             labels: labels,
+             datasets: [
+                 {data: dataset, label: labels,  borderWidth: 1, backgroundColor: ['#5032CD32', '#FF0000']}
+             ]
+         }
+     });
+}
 
 
 
@@ -324,15 +365,27 @@ function metasHSE(){
 return qExederamHSE;
 }
 
-// Função que retorna a porcentagem de alunas que exederam a meta HSE do sprint
-var alunasExederam = metasHSE();
-var alunasPorGeracao = totalAlunaGeracao();
+// Função do grafico % de alunas que exederam a meta HSE do sprint
+graficoPorcentoMetaHse();
+function graficoPorcentoMetaHse(){
+    let dados = alunasExedemHSE();
+    let ctx = document.getElementById("myDoughnutHse").getContext("2d");
+    let totalGeral =  totalDeAlunas();
+    let totalExederam = somaArrays(exederamHse);
+    let totalNaoExederam = totalGeral - totalExederam;
+    let percentualExederam = Math.round((totalExederam * 100) / totalGeral);
+    let percentualNaoExederam = Math.round((totalNaoExederam * 100) / totalGeral);
+    document.querySelector(".totalExederamHse").innerHTML = percentualExederam + "%";
+    let dataset = [percentualExederam, percentualNaoExederam];
+    let labels = ["Exederam", "Não exederam"];
 
-function porcentagemHSE(){
-    var porcentoExederamHSE = [];
-    for (i= 0; i < alunasExederam.length; i++){
-        var calculo = alunasExederam[i]*100/alunasPorGeracao[i];
-        porcentoExederamHSE.push(Math.round(calculo));
-    }
-    return porcentoExederamHSE;
+     let myBarChart = new Chart(ctx, {
+         type: 'doughnut',
+         data: {
+             labels: labels,
+             datasets: [
+                 {data: dataset, label: labels,  borderWidth: 1, backgroundColor: ['#5032CD32', '#FF0000']}
+             ]
+         }
+     });
 }
