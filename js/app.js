@@ -37,7 +37,7 @@ function graficoAlunasInativas(){
          data: {
              labels: labels,
              datasets: [
-                 {data: dataset, label: labels,  borderWidth: 1, backgroundColor: ['#5032CD32', '#FF0000']}
+                 {data: dataset, label: labels,  borderWidth: 1, backgroundC0olor: ['#5032CD32', '#FF0000']}
              ]
          }
      });
@@ -55,12 +55,10 @@ function alunasAtivasSedeGeracao(){
             item['geracao'] = geracao;
             item['quantidade'] = data[sede][geracao].students.filter(alunas=>alunas.active).length;
             item['quantidadeInativas']= data[sede][geracao].students.filter(alunas=> !alunas.tech).length;
-            item['totalScore']= data[sede][geracao].students.filter(alunas => alunas.score.tech).length;
             item['excedeTech']= data[sede][geracao].students.filter(alunas => {
                 if (alunas.sprints)
                     return alunas.sprints.filter(media => media.score.tech > 1260);
             }).length;
-            console.log(excedeTech);
             item['cor'] = '#40' + (Math.random().toString(16) + '0000000').slice(2, 8); 
             graficos.push(item);
         }
@@ -78,49 +76,11 @@ function totalGeralAtivas(){
 }
 
 
-////////////////////////////////////////////////////////////////////////////
-//Função do grafico meta de pontos técnicos em média e sprint.
-/*graficoMediaTech();
-function graficoMediaTech(){
-    let dados = alunasAtivasSedeGeracao();
-    let ctx = document.getElementById("tech").getContext("2d");
-    let labels = dados.map(item => item.sede + ' (' + item.geracao + ')' ); 
-    let mediaTechSprint = dados.map(item => item.mediaTechSprint);
-    let colors = dados.map(item => item.cor);
-    let myBarChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: labels,
-            datasets: [
-                {data: mediaTechSprint, label: 'Alunas na média por sede e gerção',  borderWidth: 1, backgroundColor: colors}
-            ]
-        }
-    });
-}
+// nsp
+/*
+[Promoters] = [Respostas 9 ou 10] / [Total respostas] * 100
+[Passive] = [Respostas 7 a 8] / [Total Respostas] * 100
+[Detractors] = [Respostas entre 1 e 6] / [Total Respostas] * 100
+
+[NPS] = [Promoters] - [Detractors]
 */
-
-//Função do grafico de alunas excedem a meta tech
-graficoExcedemTech();
-function graficoExcedemTech(){
-    let dados = alunasAtivasSedeGeracao();
-    let ctx = document.getElementById("tech").getContext("2d");
-    
-    let inativas = dados.map(item => item.quantidadeInativas).reduce ( (prev, item)=> prev + item, 0);
-    let ativas = dados.map(item => item.quantidade).reduce( (prev, item) => prev + item, 0 );
-    let totalGeral =  inativas + ativas;
-    let percentualAtivas = Math.round((ativas * 100) / totalGeral);
-    let percentualInativas = Math.round((inativas  * 100) / totalGeral);
-    document.querySelector(".totalDesistentes").innerHTML = percentualInativas;
-    let dataset = [percentualAtivas, percentualInativas];
-    let labels = ["Ativas", "Inativas"];
-
-     let myBarChart = new Chart(ctx, {
-         type: 'doughnut',
-         data: {
-             labels: labels,
-             datasets: [
-                 {data: dataset, label: labels,  borderWidth: 1, backgroundColor: ['#5032CD32', '#FF0000']}
-             ]
-         }
-     });
-}
