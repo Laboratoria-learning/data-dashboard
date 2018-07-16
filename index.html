@@ -11,43 +11,49 @@
     <main class="global"><!-- essa linha aqui vai abraçar todo mundo -->
 
       <!-- section top:begin -->
-      <section class="top flex colunm start">
+      <section class="top flex row aroud">
           <img src=./assets/images/logo-laboratoria.svg>
 
-          <nav>
-          <select id="drop-menu">
+
+      <section class="btn">
+            <select id="sede" onchange="onSelectSede()">
               <option value="none">SEDES LABORATÓRIA</option>
               <option value="AQP">AREQUIPA</option>
               <option value="CDMX">CIDADE DO MÉXICO</option>
               <option value="LIM">LIMA</option>
               <option value="SCL">SANTIAGO DO CHILE</option>
-          </select>
-          </nav>
+           </select>
 
-          <button> <a href="#"> ESTUDANTES </a> </button>    <!-- button students -->
+           <select id="turma" onchange="select()"></select>
+
+         <button>Filtrar</button> 
+
+          <a href="#"> ESTUDANTES </a>  <!-- button students -->
+
       </section>
+
+      </section>  
       <!-- section top:end -->
 
       <section class="container font-roboto flex colunm center"><!-- essa section vai abraçar todas as sections de grafico:begin -->
 
       <!-- section qtdAlunas:begin -->
       <section class="card flex row center">
-              <div class="ativas">
-                <h1>Números de alunas presentes</h1>
-                <p>Total geral</p>
-                <span class="totalAtivas"></span>
-                <canvas id="chart" width="600" height="400"></canvas>
-              </div>
 
-              <div class="desistentes">
-                <h1>Percentual de desistentes</h1>
-                <span class="totalDesistentes"></span>
-                <canvas id="myDoughnutChart" width="200" height="200"></canvas>
-              </div>
-            </section>
-      <!-- section qtdAlunas:end -->
+        <div class="ativas">
+          <h1>Números de alunas presentes</h1>
+          <p>Total geral</p>
+          <span class="totalAtivasTodasSedes"></span>
+          <canvas id="chart" width="600" height="400"></canvas>
+        </div>
 
-
+        <div class="desistentes">
+          <h1>Percentual de desistentes</h1>
+          <span class="totalDesistentes"></span>
+          <canvas id="myDoughnutChart" width="200" height="200"></canvas>
+        </div>
+      </section>
+      
 
       <!-- section metaTotal:begin -->
       <section class="card flex row center">
@@ -63,7 +69,6 @@
         </div>
       </section>
       <!-- section metaTotal:end -->
-
 
 
       <!-- section metaTech:begin -->
@@ -102,10 +107,11 @@
 
       <!-- section pesquisas:begin -->
       <section class="card">
-
+      <section>
         <div class="nps">
            <!-- aqui vai o grafico -->
         </div>
+      </section>
 
         <div class="satisfacaoAlunas">
            <!-- aqui vai o grafico -->
