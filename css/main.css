@@ -7,9 +7,9 @@
 .col{
   border: 1px solid black;
 }
-#piechart{
-  width: 550px;
-  height: 300px;
+.grafico{
+  width: 700px;
+  height: 400px;
 }
 body,
 .menu,
