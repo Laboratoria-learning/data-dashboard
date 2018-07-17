@@ -521,7 +521,6 @@ function mediaDetractors(){
 // Função do grafico % de satisfação das alunas da Laboratória - Item 8
 graficoSatisLaboratoria();
 function graficoSatisLaboratoria(){
-    // let dados = XX();
     let ctx = document.getElementById("myDoughnutSatisLaboratoria").getContext("2d");
     let superada =  mediaSuperada();
     let atendida = mediaAtendida();
@@ -604,4 +603,63 @@ function somaArrays(arr) {
     return sumArray;
   }
   
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// card 6
+
+// Função do grafico da pontuação média das Professoras - Item 9
+graficoProfessoras();
+function graficoProfessoras(){
+    let dados = dadosGraficoProf();
+    let ctx = document.getElementById("chartProf").getContext("2d");
+    let labels = dados.map(item => item.sede + ' (' + item.geracao + ')' );
+    let quantidade = dados.map(item => item.quantidade);
+    let geracao = dados.map(item => item.geracao);
+    let colors = dados.map(item => item.cor);
+    let mediaTotal = (somaArrays(mediaProfessores())/geracao).toFixed(1);
+    document.querySelector(".mediaProf").innerHTML = mediaTotal;
+    let myBarChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [
+                {data: quantidade, label: 'Pontuação média dos Professores', borderWidth: 1, backgroundColor: colors}
+            ]
+        }
+     });
+}
+
+// Função que retorna os dados para o gráfico da pontuação média das Professoras
+function dadosGraficoProf(){
+    const grafico9 = [];
+    var contador = 0;
+    for (sede in data){
+        for (geracao in data[sede]){
+            let item = {};
+            item['sede'] = sede;
+            item['geracao'] = geracao;
+            item['quantidade'] = mediaProfessores()[contador];
+            item['cor'] = '#' + (Math.random().toString(16) + '0000000').slice(2, 8);
+            grafico9.push(item);
+            contador++
+        }
+    }
+    return grafico9;
+
+}
+
+// Função que calcula a média das notas dos Professores por geração
+function mediaProfessores(){
+    var mProfessores = [];
+    for (sede in data){
+        for (geracao in data[sede]){
+            var arrayProfessores = data[sede][geracao].ratings.map(nProfessores=>nProfessores.teacher);
+            for (i = 0; i< arrayProfessores.length; i++ ){
+                var mediaP = (somaArrays(arrayProfessores)/arrayProfessores.length).toFixed(1);
+                mProfessores.push(mediaP);
+            }
+        }
+    }
+    return mProfessores;
+}
 
