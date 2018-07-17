@@ -29,6 +29,7 @@ function graficoAlunasAtivas(){
     });
 }
 
+
 // Função do grafico: % de desistentes
 graficoAlunasInativas();
 function graficoAlunasInativas(){
@@ -191,7 +192,6 @@ var alunasPorGeracao = totalAlunaGeracao(); // total de alunas por gerção
 var alunasTotal = totalDeAlunas(); // total por sede e geração retorna 261
 var exederamTech = metasTECH(); //quem exedeu a meta tech
 var exederamHse = metasHSE(); // quem exedeu a meta  HSE
-
 
 // Função do grafico % de alunas que exederam as metas do sprint
 graficoPorcentoMetas();
@@ -425,7 +425,7 @@ function graficoPorcentoMetaHse(){
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-// AAA função 
+  // AAA função
 function alunasAtivasSedeGeracao(){
     const graficos = [
     ];
@@ -446,20 +446,154 @@ function alunasAtivasSedeGeracao(){
     return graficos;
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Função do grafico NPS - Os números representam porcentagens - Item 5
+graficoNps();
+function graficoNps(){
+    let dados = dadosNps();
+    let ctx = document.getElementById("chartNps").getContext("2d");
+    let labels = dados.map(item => item.sede + ' (' + item.geracao + ')' );
+    let quantidade = dados.map(item => item.quantidadeNps);
+    let colors = dados.map(item => item.cor);
+    let myBarChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [
+                {data: quantidade, label: 'NPS em porcentagem',  borderWidth: 1, backgroundColor: colors}
+            ]
+        }
+     });
+}
+
+// Função que retorna os dados para o gráfico do NPS
+function dadosNps(){
+    const grafico5 = [];
+    var contador = 0;
+    for (sede in data){
+        for (geracao in data[sede]){
+            let item = {};
+            item['sede'] = sede;
+            item['geracao'] = geracao;
+            item['quantidadePromoters'] = mediaPromoters();
+            item['quantidadeDetractors'] = mediaDetractors();
+            item['quantidadeNps'] = item.quantidadePromoters[contador] - item.quantidadeDetractors[contador];
+            item['cor'] = '#' + (Math.random().toString(16) + '0000000').slice(2, 8);
+            grafico5.push(item);
+            contador++
+        }
+    }
+    return grafico5;
+
+}
+
+// Função que calcula a média de Promoters por geração
+function mediaPromoters(){
+    var mPromoters = [];
+    for (sede in data){
+        for (geracao in data[sede]){
+            var arrayPromoters = data[sede][geracao].ratings.map(nPromoters=>nPromoters.nps.promoters);
+            for (i = 0; i< arrayPromoters.length; i++ ){
+                var mediaP = Math.round(somaArrays(arrayPromoters)/arrayPromoters.length);
+                mPromoters.push(mediaP);
+            }
+        }
+    }
+    return mPromoters;
+}
+
+// Função que calcula a média de Detractors por geração
+function mediaDetractors(){
+    var mDetractors = [];
+    for (sede in data){
+        for (geracao in data[sede]){
+            var arrayDetractors = data[sede][geracao].ratings.map(nDetractors=>nDetractors.nps.detractors);
+            for (i = 0; i< arrayDetractors.length; i++ ){
+                var mediaD = Math.round(somaArrays(arrayDetractors)/arrayDetractors.length);
+                mDetractors.push(mediaD);
+            }
+        }
+    }
+    return mDetractors;
+}
 
 
+// Função do grafico % de satisfação das alunas da Laboratória - Item 8
+graficoSatisLaboratoria();
+function graficoSatisLaboratoria(){
+    // let dados = XX();
+    let ctx = document.getElementById("myDoughnutSatisLaboratoria").getContext("2d");
+    let superada =  mediaSuperada();
+    let atendida = mediaAtendida();
+    let NaoAtendida = mediaNaoAtendida();
+    document.querySelector(".totalAtendida").innerHTML = atendida + "%";
+    let dataset = [superada, atendida, NaoAtendida];
+    let labels = ["Expectativa superada", "Expectativa atendida", "Expectativa não atendida"];
 
+     let myBarChart = new Chart(ctx, {
+         type: 'doughnut',
+         data: {
+             labels: labels,
+             datasets: [
+                 {data: dataset, label: labels,  borderWidth: 1, backgroundColor: ['#5032CD32', '#FF0000', '#5032CD23']}
+             ]
+         }
+     });
+}
 
+// Função que calcula a média de Expectativa Superada
+function mediaSuperada(){
+    var mSupera = [];
+    for (sede in data){
+        for (geracao in data[sede]){
+            var arraySupera = data[sede][geracao].ratings.map(porGeracao=>porGeracao.student.supera);
+            for (i = 0; i< arraySupera.length; i++ ){
+                var mediaPorGeracao = Math.round(somaArrays(arraySupera)/arraySupera.length);
+                mSupera.push(mediaPorGeracao);
+            }
 
+        }
+    }
+    var mediaSupera = Math.round(somaArrays(mSupera)/mSupera.length);
+    // mSupera.length representa a quantidade de gerações
+    return mediaSupera;
+}
 
+// Função que calcula a média de Expectativa Atendida
+function mediaAtendida(){
+    var mAtendida = [];
+    for (sede in data){
+        for (geracao in data[sede]){
+            var arrayAtendida = data[sede][geracao].ratings.map(porGeracao=>porGeracao.student.cumple);
+            for (i = 0; i< arrayAtendida.length; i++ ){
+                var mediaPorGeracao = Math.round(somaArrays(arrayAtendida)/arrayAtendida.length);
+                mAtendida.push(mediaPorGeracao);
+            }
 
+        }
+    }
+    var mediaCumple = Math.round(somaArrays(mAtendida)/mAtendida.length);
+    // mAtendida.length representa a quantidade de gerações
+    return mediaCumple;
+}
 
+// Função que calcula a média de Expectativa Não Atendida
+function mediaNaoAtendida(){
+    var mNaoAtendida = [];
+    for (sede in data){
+        for (geracao in data[sede]){
+            var arrayNaoAtendida = data[sede][geracao].ratings.map(porGeracao=>porGeracao.student["no-cumple"]);
+            for (i = 0; i< arrayNaoAtendida.length; i++ ){
+                var mediaPorGeracao = Math.round(somaArrays(arrayNaoAtendida)/arrayNaoAtendida.length);
+                mNaoAtendida.push(mediaPorGeracao);
+            }
 
-
-
-
-
-
+        }
+    }
+    var mediaNoCumple = Math.round(somaArrays(mNaoAtendida)/mNaoAtendida.length);
+    // mAtendida.length representa a quantidade de gerações
+    return mediaNoCumple;
+}
 
 //soma array
 function somaArrays(arr) {
@@ -470,3 +604,4 @@ function somaArrays(arr) {
     return sumArray;
   }
   
+
