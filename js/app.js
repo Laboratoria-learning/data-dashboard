@@ -159,15 +159,6 @@ var alunasTotal = totalDeAlunas();
 var exederamTech = metasTECH();
 var exederamHse = metasHSE();
 
-// soma array
-function somaArrays(arr) {
-  var sumArray = 0;
-  for (i = 0; i < arr.length; i++){
-      sumArray += arr[i];
-  }
-  return sumArray;
-}
-
 // Função do grafico % de alunas que exederam as metas do sprint
 graficoPorcentoMetas();
 function graficoPorcentoMetas(){
@@ -557,6 +548,14 @@ function mediaNaoAtendida(){
     return mediaNoCumple;
 }
 
+// soma array
+function somaArrays(arr) {
+  var sumArray = 0;
+  for (i = 0; i < arr.length; i++){
+      sumArray += arr[i];
+  }
+  return sumArray;
+}
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// card 6
 
 // Função do grafico da pontuação média das Professoras - Item 9
@@ -568,8 +567,9 @@ function graficoProfessoras(){
     let quantidade = dados.map(item => item.quantidade);
     let geracao = dados.map(item => item.geracao);
     let colors = dados.map(item => item.cor);
-    let mediaTotal = (somaArrays(mediaProfessores())/geracao).toFixed(1);
-    document.querySelector(".mediaProf").innerHTML = mediaTotal;
+    let mediaTotal = parseInt(somaArrays(mediaProfessores()));
+    console.log(mediaTotal);
+    document.getElementsByClassName(".mediaProf").innerHTML = mediaTotal;
     let myBarChart = new Chart(ctx, {
         type: 'bar',
         data: {
@@ -600,6 +600,8 @@ function dadosGraficoProf(){
 
 }
 
+console.log(parseInt(somaArrays(mediaProfessores())));
+
 // Função que calcula a média das notas dos Professores por geração
 function mediaProfessores(){
     var mProfessores = [];
@@ -613,4 +615,61 @@ function mediaProfessores(){
         }
     }
     return mProfessores;
+}
+
+
+// Função do grafico da pontuação média dos Jedis - Item 10
+graficoJedis();
+function graficoJedis(){
+    let dados = dadosGraficoJedis();
+    let ctx = document.getElementById("chartJedis").getContext("2d");
+    let labels = dados.map(item => item.sede + ' (' + item.geracao + ')' );
+    let quantidade = dados.map(item => item.quantidade);
+    let geracao = dados.map(item => item.geracao);
+    let colors = dados.map(item => item.cor);
+    let mediaTotal = parseInt(somaArrays(mediaJedis()));
+    document.getElementsByClassName(".mediaJedis").innerHTML = mediaTotal;
+    let myBarChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [
+                {data: quantidade, label: 'Pontuação média dos Jedis', borderWidth: 1, backgroundColor: colors}
+            ]
+        }
+     });
+}
+
+// Função que retorna os dados para o gráfico da pontuação média das Jedis
+function dadosGraficoJedis(){
+    const grafico10 = [];
+    var contador = 0;
+    for (sede in data){
+        for (geracao in data[sede]){
+            let item = {};
+            item['sede'] = sede;
+            item['geracao'] = geracao;
+            item['quantidade'] = mediaJedis()[contador];
+            item['cor'] = '#' + (Math.random().toString(16) + '0000000').slice(2, 8);
+            grafico10.push(item);
+            contador++
+        }
+    }
+    return grafico10;
+
+}
+
+// Função que calcula a média das notas dos Jedis por geração
+function mediaJedis(){
+    var mJedis = [];
+    for (sede in data){
+        for (geracao in data[sede]){
+            var arrayJedis = data[sede][geracao].ratings.map(nJedis=>nJedis.jedi);
+            for (i = 0; i< arrayJedis.length; i++ ){
+                var mediaJ = (somaArrays(arrayJedis)/arrayJedis.length).toFixed(1);
+                mJedis.push(mediaJ);
+            }
+        }
+    }
+    return mJedis;
 }
