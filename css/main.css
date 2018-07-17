@@ -55,7 +55,7 @@ li.dropdown {
   flex-direction: column;
   flex-wrap: wrap;
 } */
-.col{
+/* .col{
   border: 1px solid black;
 }
 .grafico{
@@ -117,9 +117,67 @@ body,
 
 .sub-menu li:hover {
   /* background: #555; */
-}
+/* }
 
 .sub-menu .sub-menu {
   top: 0;
   left: 100%;
+} */
+
+/*/////////////////////////////////////////*/
+
+#header {
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#header h1 {
+  position: relative;
+  left: 160px;
+  top: 17px;
+  color: #ffcc00;
+  text-transform: uppercase;
+  font-size: 25px;
+  height: 60px;
+  text-align: center;
+}
+
+#header i {
+  color: #ffcc00;
+}
+
+#header p {
+  color: #fff;
+}
+
+.profile {
+  line-height: 0px;
+  position: relative;
+  top: 10px;
+  left: 300px;
+}
+
+.vanessa {
+  font-size: 11px;
+}
+
+.manager {
+  font-size: 9px;
+  position: relative;
+  left: 35px;
+}
+
+.fa-user-circle {
+  font-size: 35px;
+  position: relative;
+  left: 
+}
+
+.fa-sign-out-alt {
+  font-size: 10px;
+  position: relative;
+  bottom: 10px;
+  left: 75px;
 }
