@@ -1,21 +1,19 @@
-var sede = "";
-var turma = "";
 $(document).ready(function(){
-  $(".sede").mouseover(function(){
-        sede = $(this).text();
-        console.log(sede);
-    });
-    $(".turma").click(function(){
-        turma = $(this).text();
-        console.log(turma);
-    });
-});
+  var sede = "";
+  var turma = "";
+  var valorSede = "LIM";
 
+   $(".sede").mouseover(function(){
+    sede = $(this).text();
+    $(".turma").click(function(){
+      turma = $(this).text();
+      document.getElementById('sede').innerHTML = "<p> " + sede + "</p>";
+      document.getElementById('turma').innerHTML = "<p> " + turma + "</p>";
 
 
 var actives = [];
-for(var i = 0; i < data.AQP["2016-2"].students.length; i++){
-  actives.push(data.AQP["2016-2"].students[i].active);
+for(var i = 0; i < data[sede][turma].students.length; i++){
+  actives.push(data[sede][turma].students[i].active);
 }
 var countedActives = actives.reduce(function (allActives, active) {
   if (active in allActives) {
@@ -46,9 +44,9 @@ var countedActives = actives.reduce(function (allActives, active) {
 //Pontuação media das professoras e Jedi
 var teacher = [];
 var jedi = [];
-for(var i = 0; i < data.AQP["2016-2"].ratings.length; i++){
-  teacher.push(data.AQP["2016-2"].ratings[i].teacher);
-  jedi.push(data.AQP["2016-2"].ratings[i].jedi);
+for(var i = 0; i < data[sede][turma].ratings.length; i++){
+  teacher.push(data[sede][turma].ratings[i].teacher);
+  jedi.push(data[sede][turma].ratings[i].jedi);
   var complementoSprint = teacher.length;
 }
 
@@ -67,8 +65,8 @@ listaRatings.innerHTML += "<p><b>Média dos professoras: </b></p>" + media(sumTe
 listaRatings.innerHTML += "<p><b>Média dos mestres Jedi: </b></p>" + media(sumJedi, complementoSprint) + "</p>";
 
 var arraySatisfeita = [];
-for(var i = 0; i < data.AQP["2016-2"].ratings.length; i++){
-  arraySatisfeita.push(data.AQP["2016-2"].ratings[i].student);
+for(var i = 0; i < data[sede][turma].ratings.length; i++){
+  arraySatisfeita.push(data[sede][turma].ratings[i].student);
   const naoSatisfeita = arraySatisfeita.map(naoSat => (naoSat['no-cumple']));
   const satisfeita = arraySatisfeita.map(sat => (sat['cumple']));
   const superSatisfeita = arraySatisfeita.map(superSat => (superSat['supera']));
@@ -91,3 +89,6 @@ for(var i = 0; i < data.AQP["2016-2"].ratings.length; i++){
     chart.draw(data, google.charts.Bar.convertOptions(options));
   }
  }
+});
+});
+});
