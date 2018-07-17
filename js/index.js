@@ -1,11 +1,22 @@
-google.charts.load('current', {'packages':['corechart']});
-google.charts.setOnLoadCallback(drawChart);
+var sede = "";
+var turma = "";
+$(document).ready(function(){
+  $(".sede").mouseover(function(){
+        sede = $(this).text();
+        console.log(sede);
+    });
+    $(".turma").click(function(){
+        turma = $(this).text();
+        console.log(turma);
+    });
+});
+
+
 
 var actives = [];
 for(var i = 0; i < data.AQP["2016-2"].students.length; i++){
   actives.push(data.AQP["2016-2"].students[i].active);
 }
-console.log(actives);
 var countedActives = actives.reduce(function (allActives, active) {
   if (active in allActives) {
     allActives[active]++;
@@ -15,7 +26,8 @@ var countedActives = actives.reduce(function (allActives, active) {
   }
   return allActives;
   }, {});
-
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
   function drawChart() {
   var data = google.visualization.arrayToDataTable([
     ['Task', 'Hours per Day'],
@@ -31,7 +43,7 @@ var countedActives = actives.reduce(function (allActives, active) {
   chart.draw(data, options);
 }
 
-//Pontuação media das professoras
+//Pontuação media das professoras e Jedi
 var teacher = [];
 var jedi = [];
 for(var i = 0; i < data.AQP["2016-2"].ratings.length; i++){

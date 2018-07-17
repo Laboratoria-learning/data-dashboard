@@ -3,64 +3,67 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
 
+    <link rel="stylesheet" href="css/main.css">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
-    <div class="container">
-  <!-- <div class="row">
-    <div class="col">
-      <div class="menu-container">
-        <ul class="menu clearfix">
-          <li><a href="#">AQP</a>
-            <ul class="sub-menu clearfix">
-              <li><a href="#">2016-2</a></li>
-              <li><a href="#">2017-1</a></li>
-            </ul>
+    <header>
+      <nav>
+        <ul>
+          <li class="dropdown">
+           <a class="dropbtn  sede">AQP</a>
+            <div class="dropdown-content">
+              <a href="#" class="turma">2016-2</a>
+              <a href="#" class="turma">2017-1</a>
+            </div>
           </li>
-          <li><a href="#">CDMX</a>
-            <ul class="sub-menu clearfix">
-              <li><a href="#">2017-1</a></li>
-              <li><a href="#">2017-2</a></li>
-            </ul>
+          <li class="dropdown">
+           <a class="dropbtn  sede">CDMX</a>
+            <div class="dropdown-content">
+              <a href="#" class="turma">2017-1</a>
+              <a href="#" class="turma">2017-2</a>
+            </div>
           </li>
-          <li><a href="#">LIM</a>
-            <ul class="sub-menu clearfix">
-              <li><a href="#">2016-2</a></li>
-              <li><a href="#">2017-1</a></li>
-              <li><a href="#">2017-2</a></li>
-            </ul>
+          <li class="dropdown">
+            <a class="dropbtn">LIM</a>
+            <div class="dropdown-content">
+              <a href="#">2016-2</a>
+              <a href="#">2017-1</a>
+              <a href="#">2017-2</a>
+            </div>
           </li>
-          <li><a href="#">SCL</a>
-            <ul class="sub-menu clearfix">
-              <li><a href="#">2016-2</a></li>
-              <li><a href="#">2017-1</a></li>
-              <li><a href="#">2017-2</a></li>
-            </ul>
+          <li class="dropdown">
+            <a class="dropbtn">SCL</a>
+            <div class="dropdown-content">
+              <a href="#">2016-2</a>
+              <a href="#">2017-1</a>
+              <a href="#">2017-2</a>
+            </div>
           </li>
         </ul>
-      </div>
-    </div>
-  </div>-->
+      </nav>
+    </header>
 
-  <div class="row">
-      <div class="col">
-      <div id="piechart" class="grafico"></div>
+    <main>
+      <div class="row">
+        <div class="col">
+        <div id="piechart" class="grafico"></div>
+        </div>
+        <div class="col">
+        <div id="ratings"></div>
+        </div>
       </div>
-      <div class="col">
-      <div id="ratings"></div>
+      <div class="row">
+        <div class="col" class="grafico">
+          <div id="satisfacao" class="grafico"></div>
+        </div>
+        <div class="col">
+        <div id=""></div>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col" class="grafico">
-        <div id="satisfacao" class="grafico"></div>
-      </div>
-      <div class="col">
-      <div id=""></div>
-      </div>
-    </div>
+    </main>
 		<script src="./js/data.js"></script>
     <script src="./js/index.js"></script>
   </body>

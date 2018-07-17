@@ -1,5 +1,5 @@
 //exibir Estudantes
-var dropMenu = document.getElementById("drop-menu");
+var dropMenu = document.getElementById("menu");
 dropMenu.addEventListener("change", carregaEstudantes); //change é um evento
 
 window.onload = carregaMenu();
@@ -26,8 +26,10 @@ function carregaEstudantes() {
       var img = document.createElement("img");
       img.src = data[sede]['2017-1']["students"][i]["photo"];
       var name = data[sede]['2017-1']["students"][i]["name"];
+      var active = data[sede]['2017-1']["students"][i]["active"];
       listaEstudantes.appendChild(img);
       listaEstudantes.innerHTML += "<p><b>Nome: </b>" + name + "</p>";
+      listaEstudantes.innerHTML += "<p><b>Ativa: </b>" + active + "</p>";
       var hse = [];
       var tech = [];
       for(var y = 0; y < (data[sede]['2017-1']["students"][i]["sprints"]).length; y++){
@@ -35,7 +37,6 @@ function carregaEstudantes() {
         tech.push(data[sede]['2017-1']["students"][i]["sprints"][y]["score"]["tech"]);
         var complementoSprint = tech.length;
       }
-      console.log(complementoSprint);
       var sumTech = tech.reduce( function( acum, num ) {
         return acum + num;
       }, 0 );
