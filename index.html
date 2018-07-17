@@ -3,19 +3,19 @@
   <head>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css">
     <title>Data Dashboard</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css">
+    <link rel="icon" href="./favicon.png">
   </head>
 
   <body>
-    <main class="global"><!-- essa linha aqui vai abraçar todo mundo -->
+    <main class="global font-montserrat"><!-- essa linha aqui vai abraçar todo mundo -->
 
       <!-- section top:begin -->
       <section class="top flex row aroud">
-          <img src=./assets/images/logo-laboratoria.svg>
-
-
-      <section class="btn">
+          <img src=./assets/images/logo-labo.png>
+          
+      <section class="btn flex row center ">
             <select id="sede" onchange="onSelectSede()">
               <option value="none">SEDES LABORATÓRIA</option>
               <option value="AQP">AREQUIPA</option>
@@ -24,11 +24,11 @@
               <option value="SCL">SANTIAGO DO CHILE</option>
            </select>
 
-           <select id="turma" onchange="select()"></select>
+           <select id="turma" onchange="select()">
+            <option value="none">GERAÇÕES</option>
+           </select>
 
          <button>Filtrar</button> 
-
-          <a href="#"> ESTUDANTES </a>  <!-- button students -->
 
       </section>
 
@@ -37,82 +37,98 @@
 
       <section class="container font-roboto flex colunm center"><!-- essa section vai abraçar todas as sections de grafico:begin -->
 
-      <!-- section qtdAlunas:begin -->
-      <section class="card flex row center">
 
-        <div class="ativas">
+
+
+      <!-- section qtdAlunas:begin -->
+      <section class="card flex row aroud">
+        <div class="ativas ">
           <h1>Números de alunas presentes</h1>
-          <p>Total geral</p>
           <span class="totalAtivasTodasSedes"></span>
-          <canvas id="chart" width="600" height="400"></canvas>
+          <p>#Total geral ativas</p>
+          <canvas id="chart" width="700" height="400"></canvas>
         </div>
 
         <div class="desistentes">
           <h1>Percentual de desistentes</h1>
           <span class="totalDesistentes"></span>
-          <canvas id="myDoughnutChart" width="200" height="200"></canvas>
+          <canvas id="myDoughnutChart" style="position: relative; height:300px; width:300px"></canvas>
         </div>
       </section>
-      
+      <!-- section qtdAlunas:end -->
+
 
       <!-- section metaTotal:begin -->
-      <section class="card flex row center">
-        <div class="qtdMetaTotal">
-          <canvas id="charts" width="600" height="400"></canvas>
-          <!-- aqui vai o grafico -->
-        </div>
-
+      <section class="card flex row aroud">
         <div class="percentualTotal">
-          <h1>Alunas que exederam ambas as metas em pelo menos um sprint</h1>
+          <h1>Percentual exederam ambas as metas</h1>
           <span class="totalExederam"></span>
-          <canvas id="myDoughnutCharts" width="200" height="200"></canvas>
+          <p>#Em pelo menos um sprint</p>
+          <canvas id="myDoughnutCharts" style="position: relative; height:300px; width:300px" ></canvas>
+        </div>
+     
+      
+        <div class="qtdMetaTotal">
+          <h1>Números de alunas execederam meta</h1>
+          <span class="qtdTotal"></span>
+          <p>#Total geral</p>
+          <canvas id="charts" width="700" height="400"></canvas>
         </div>
       </section>
       <!-- section metaTotal:end -->
 
 
       <!-- section metaTech:begin -->
-      <section class="card flex row center">
-        <!-- inserir um button , para abrir unidades e sprints -->
-
+      <section class="card flex row aroud">
         <div class="qtdMetaTech">
-          <canvas id="chartTech" width="600" height="400"></canvas>
+          <h1>Número de alunas que execederam a meta TECH</h1>
+          <span class="qtdTotalSedeGeracao"></span>
+          <p>#Total geral</p>
+          <canvas id="chartTech" width="700" height="400"></canvas>
         </div>
 
         <div class="percentualMetaTech">
-          <h1>Alunas que exederam a meta Tech em pelo menos um sprint</h1>
+          <h1>Percentual que exederam a meta Tech </h1>
           <span class="totalExederamTech"></span>
-          <canvas id="myDoughnutTech" width="200" height="200"></canvas>
+          <p>#Em pelo menos um sprint</p>
+          <canvas id="myDoughnutTech" style="position: relative; height:300px; width:300px"></canvas>
         </div>
       </section>
       <!-- section metaTech:end -->
 
 
-      <!-- section metaHse:begin -->
-      <section class="card flex row center">
-          <!-- inserir um button , para abrir unidades e sprints -->
 
-        <div class="qtdMetaHse">
-            <canvas id="chartHse" width="600" height="400"></canvas>
+      <!-- section metaHse:begin -->
+      <section class="card flex row aroud">
+        <div class="percentualMetaHse">
+          <h1>Percentual que exederam a meta HSE</h1>
+          <span class="totalExederamHse"></span>
+          <p>#Em pelo menos um sprint</p>
+          <canvas id="myDoughnutHse" style="position: relative; height:300px; width:300px"></canvas>
         </div>
 
-        <div class="percentualMetaHse">
-          <h1>Alunas que exederam a meta HSE em pelo menos um sprint</h1>
-          <span class="totalExederamHse"></span>
-          <canvas id="myDoughnutHse" width="200" height="200"></canvas>
+        <div class="qtdMetaHse">
+          <h1>Número de alunas que execederam a meta HSE</h1>
+          <spam class="totalHseSedeGeracao"></spam>
+          <p>#Total geral</p>
+          <canvas id="chartHse" width="700" height="400"></canvas>
         </div>
       </section>
       <!-- section metaHse:end -->
 
 
+
+
+
+
+
+
       <!-- section pesquisas:begin -->
-      <section class="card">
-      <section>
+      <section class="card"> 
         <div class="nps">
            <!-- aqui vai o grafico -->
         </div>
-      </section>
-
+     
         <div class="satisfacaoAlunas">
            <!-- aqui vai o grafico -->
         </div>
@@ -135,7 +151,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
-		<!-- Aquí va tus archivos JS -->
+		<!-- Arquivo JS -->
     <script src="./js/app.js"></script>
   </body>
 </html>

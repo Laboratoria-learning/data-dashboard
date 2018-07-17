@@ -20,3 +20,24 @@ function createSelectTurmaOptions(turmas){
 }
 */
 
+// AAA função 
+/*function alunasAtivasSedeGeracao(){
+    const graficos = [
+    ];
+    for (sede in data){
+        for (geracao in data[sede]){
+            let item = {};
+            item['sede'] = sede;
+            item['geracao'] = geracao;
+            item['quantidade'] = data[sede][geracao].students.filter(alunas=>alunas.active).length;
+            item['quantidadeInativas']= data[sede][geracao].students.filter(alunas=> !alunas.tech).length;
+            item['excedeTech']= data[sede][geracao].students.filter(alunas => {
+                if (alunas.sprints)
+                    return alunas.sprints.filter(media => media.score.tech > 1260);
+            }).length;
+            graficos.push(item);
+        }
+    }
+    return graficos;
+}
+*/

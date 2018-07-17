@@ -10,3 +10,94 @@
 .card:nth-child(n+2){
     margin-top: 30px;
 }
+
+/*
+ * card 1 , section qtdAlunas:begin
+*/
+/*
+#chart{
+    margin-top: 30px;
+}
+.card .ativas h1{
+    font-size: 26px;
+    margin-left: 170px;    
+}
+.ativas .totalAtivasTodasSedes{
+    margin-left: 285px;
+    color:rgb(71, 182, 144);
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.ativas p{
+    margin-left: 290px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#myDoughnutChart{
+    height: 480px !important;
+    width: 280px !important;
+    margin-left: 40px;
+}
+
+.card .totalDesistentes{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgba(227, 57, 57);
+}
+
+.card .desistentes h1{
+    margin-right: 30px;
+    margin-left: 20px;
+    font-size: 26px;
+}
+*/
+
+/*
+ * card 2 , section metaTotal:begin
+*/
+
+/*#myDoughnutCharts {
+    height: 480px !important;
+    width: 280px !important;
+    margin-left: 30px;
+}
+
+.card .percentualTotal h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.card .totalExederam{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgba(227, 57, 57);
+}
+
+.percentualTotal p{
+    margin-left: 100px;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+
+#charts{
+    margin-top: 190px;
+    margin-right: 20px;
+}
+*/
+

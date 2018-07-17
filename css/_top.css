@@ -1,5 +1,30 @@
 .top img{
     height: 100px;
-    width: 200px;
+    width: 340px;
     margin-left: 15px;
+    padding-top: 10px;
+}
+
+.top .btn select{
+    height: 30px;
+    width: auto;
+    background-color: rgb(255, 229, 33);
+    border: none;
+    border-radius: 10PX;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.top .btn button{
+    background-color: rgb(255, 229, 33);
+    border: none;
+    border-radius: 10PX;
+    font-size: 12px;
+    margin-left: 10px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+.top{
+    background-color: rgb(71, 182, 144);
 }
