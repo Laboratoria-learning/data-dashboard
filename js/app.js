@@ -82,8 +82,6 @@ function totalGeralAtivas(){
     },0);
 }
 
-
-
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////// Card 2: section metaTotal
 // Função do gráfico: do total de alunas que excederam ambas as metas em pelo menos 1 sprint
@@ -219,8 +217,9 @@ function graficoPorcentoMetas(){
          }
      });
 }
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////// Card 3: section metaTech
 // Função do gráfico do total de alunas que excederam a meta TECH em pelo menos 1 sprint
 graficoExedemTECH();
 function graficoExedemTECH(){
@@ -323,6 +322,7 @@ function graficoPorcentoMetaTech(){
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////// Card 4: section metaHse
 // Função do gráfico do total de alunas que excederam a meta HSE em pelo menos 1 sprint
 graficoExedemHSE();
 function graficoExedemHSE(){
@@ -423,6 +423,7 @@ function graficoPorcentoMetaHse(){
          }
      });
 }
+///////////////////////////////////////////////////////////////////////////////////////////////////
 
 // AAA função 
 function alunasAtivasSedeGeracao(){
@@ -444,6 +445,21 @@ function alunasAtivasSedeGeracao(){
     }
     return graficos;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //soma array
 function somaArrays(arr) {
