@@ -409,78 +409,76 @@ function alunasAtivasSedeGeracao(){
 
 
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-
-// Função do grafico NPS
-graficoPorcentoMetaHse();
+// Função do grafico NPS - Os números represemtam porcemtagens
+graficoNps();
 function graficoNps(){
     let dados = dadosNps();
-    let ctx = document.getElementById("myDoughnutHse").getContext("2d");
-    let totalGeral =  totalDeAlunas();
-    let totalExederam = somaArrays(exederamHse);
-    let totalNaoExederam = totalGeral - totalExederam;
-    let percentualExederam = Math.round((totalExederam * 100) / totalGeral);
-    let percentualNaoExederam = Math.round((totalNaoExederam * 100) / totalGeral);
-    document.querySelector(".totalExederamHse").innerHTML = percentualExederam + "%";
-    let dataset = [percentualExederam, percentualNaoExederam];
-    let labels = ["Exederam", "Não exederam"];
-
-     let myBarChart = new Chart(ctx, {
-         type: 'doughnut',
-         data: {
-             labels: labels,
-             datasets: [
-                 {data: dataset, label: labels,  borderWidth: 1, backgroundColor: ['#5032CD32', '#FF0000']}
-             ]
-         }
+    let ctx = document.getElementById("chartNps").getContext("2d");
+    let labels = dados.map(item => item.sede + ' (' + item.geracao + ')' );
+    let quantidade = dados.map(item => item.quantidadeNps);
+    let colors = dados.map(item => item.cor);
+    let myBarChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [
+                {data: quantidade, label: 'NPS em porcentagem',  borderWidth: 1, backgroundColor: colors}
+            ]
+        }
      });
 }
 
 // Função que retorna os dados para o gráfico do NPS
 function dadosNps(){
     const grafico5 = [];
+    var contador = 0;
     for (sede in data){
         for (geracao in data[sede]){
             let item = {};
             item['sede'] = sede;
             item['geracao'] = geracao;
-            item['quantidadePromoters'] = data[sede][geracao].ratings.map(nPromoters=>nPromoters.nps.promoters);
-            item['quantidadeDetractors'] = data[sede][geracao].ratings.map(nDetractors=>nDetractors.nps.detractors);
-            console.log(item);
+            item['quantidadePromoters'] = mediaPromoters();
+            item['quantidadeDetractors'] = mediaDetractors();
+            item['quantidadeNps'] = item.quantidadePromoters[contador] - item.quantidadeDetractors[contador];
             item['cor'] = '#' + (Math.random().toString(16) + '0000000').slice(2, 8);
-            grafico6.push(item);
+            grafico5.push(item);
+            contador++
         }
     }
     return grafico5;
+
 }
 
+// Função que calcula a média de Promoters por geração
+function mediaPromoters(){
+    var mPromoters = [];
+    for (sede in data){
+        for (geracao in data[sede]){
+            var arrayPromoters = data[sede][geracao].ratings.map(nPromoters=>nPromoters.nps.promoters);
+            for (i = 0; i< arrayPromoters.length; i++ ){
+                var mediaP = Math.round(somaArrays(arrayPromoters)/arrayPromoters.length);
+                mPromoters.push(mediaP);
+            }
+        }
+    }
+    return mPromoters;
+}
 
-// // Função que retorna o total de alunas que excederam a meta de HSE em pelo menos 1 sprint
-// function metasHSE(){
-//     // var alunasExederamPontos = [];
-//     // var exedeuPontos = false;
-//     // var qExederamHSE = [];
-//     for (sede in data){
-//         for (geracao in data[sede]){
-//           var classificacoes = data[sede][geracao].ratings;
-//           for(classificacao in classificacoes){
-//             var npss = classificacoes[classificacao].nps;
-//             for (nps in npss){
-//               var promoters = npss[nps].promoters;
-//               var detractors = npss[nps].detractors;
-//               if (hse > 840){
-//                 exedeuPontos = true;
-//               }
-//             }
-//             if (exedeuPontos){
-//                 alunasExederamPontos.push(estudantes[estudante]);
-//             }
-//             exedeuPontos = false;
-//           }
-//           qExederamHSE.push(parseInt(alunasExederamPontos.length));
-//           alunasExederamPontos = [];
-//         }
-//     }
-// return qExederamHSE;
-// }
+// Função que calcula a média de Detractors por geração
+function mediaDetractors(){
+    var mDetractors = [];
+    for (sede in data){
+        for (geracao in data[sede]){
+            var arrayDetractors = data[sede][geracao].ratings.map(nDetractors=>nDetractors.nps.detractors);
+            for (i = 0; i< arrayDetractors.length; i++ ){
+                var mediaD = Math.round(somaArrays(arrayDetractors)/arrayDetractors.length);
+                mDetractors.push(mediaD);
+            }
+        }
+    }
+    return mDetractors;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
