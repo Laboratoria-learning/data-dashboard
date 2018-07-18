@@ -1,4 +1,17 @@
 $(document).ready(function() {
+  //Mostrar e esconder as divs
+  document.getElementById("MostrarEstudantes").addEventListener("click", function(){
+    var estudante = document.getElementById("estudante");
+    var geral = document.getElementById("geral");
+    if(estudante.style.display == "none"){
+        estudante.style.display = "block";
+        geral.style.display = "none";
+    }else{
+      estudante.style.display = "none";
+      geral.style.display = "block";
+    }
+  });
+
   var sede = "";
   var turma = "";
   $(".sede").mouseover(function() {
@@ -42,52 +55,6 @@ $(document).ready(function() {
         chart.draw(data, options);
       }
 
-      //Pontuação media das professoras e Jedi
-      var teacher = [];
-      var jedi = [];
-      for (var i = 0; i < data[sede][turma].ratings.length; i++) {
-        teacher.push(data[sede][turma].ratings[i].teacher);
-        jedi.push(data[sede][turma].ratings[i].jedi);
-        var complementoSprint = teacher.length;
-      }
-      var sumTeacher = teacher.reduce(function(acum, num) {
-        return acum + num;
-      }, 0);
-      var sumJedi = jedi.reduce(function(acum, num) {
-        return acum + num;
-      }, 0);
-      var media = function media(valor, complemento) {
-        return valor / complemento;
-      }
-      var mediaTeacher = parseInt(media(sumTeacher, complementoSprint));
-      var mediaJedi = parseInt(media(sumJedi, complementoSprint));
-      console.log(mediaTeacher);
-      console.log(mediaJedi);
-
-      google.charts.load('current', {'packages':['bar']});
-      google.charts.setOnLoadCallback(drawChart1);
-      function drawChart1() {
-        var data = google.visualization.arrayToDataTable([
-         ['Element', 'Média por turma', { role: 'style' }, { role: 'annotation' } ],
-         ['Média Teacher', mediaTeacher, '#ff00ff', 'Cu' ],
-         ['Média Jedi', mediaJedi, 'silver', 'Ag' ]
-      ]);
-
-        var options = {
-          chart: {
-            title: 'Média Teacher & Jedi',
-          }
-        };
-        var chart = new google.charts.Bar(document.getElementById('ratings'));
-        chart.draw(data, google.charts.Bar.convertOptions(options));
-      }
-
-
-      // var listaRatings = document.getElementById("ratings");
-      // listaRatings.innerHTML = "";
-      // listaRatings.innerHTML += "<h2>Média dos professores: " + parseInt(media(sumTeacher, complementoSprint)) + "</h2>";
-      // listaRatings.innerHTML += "<h2>Média dos mestres Jedi: " + parseInt(media(sumJedi, complementoSprint)) + "</h2>";
-
       //Alunas satisfeita
       var naoSatisfeita = [];
       var satisfeita = [];
@@ -107,18 +74,21 @@ $(document).ready(function() {
         var sumSuperSatisfeita = superSatisfeita.reduce(function(acum, num) {
           return acum + num;
         }, 0);
+        var media = function media(valor, complemento) {
+          return valor / complemento;
+        }
         var mediaNaoSatisfeita = media(sumNaoSatisfeita, complementosatisfeita);
         var mediaSatisfeita = media(sumSatisfeita, complementosatisfeita);
         var mediaSuperSatisfeita = media(sumSuperSatisfeita, complementosatisfeita);
 
         google.charts.load('current', {'packages':['corechart']});
-        google.charts.setOnLoadCallback(drawChart2);
-        function drawChart2() {
+        google.charts.setOnLoadCallback(drawChart1);
+        function drawChart1() {
           var data = google.visualization.arrayToDataTable([
       ['Task', 'Hours per Day'],
-      ['NaoSatisfeita',   sumNaoSatisfeita],
+      ['Não satisfeita',   sumNaoSatisfeita],
       ['Satisfeita',  sumSatisfeita],
-      ['SuperSatisfeita',  sumSuperSatisfeita]
+      ['Super satisfeita',  sumSuperSatisfeita]
      ]);
       var options = {
         title: 'Situação das alunas',
@@ -129,6 +99,49 @@ $(document).ready(function() {
       chart.draw(data, options);
     }
 
+      //Pontuação media das professoras e Jedi
+      var teacher = [];
+      var jedi = [];
+      for (var i = 0; i < data[sede][turma].ratings.length; i++) {
+        teacher.push(data[sede][turma].ratings[i].teacher);
+        jedi.push(data[sede][turma].ratings[i].jedi);
+        var complementoSprint = teacher.length;
+      }
+      var sumTeacher = teacher.reduce(function(acum, num) {
+        return acum + num;
+      }, 0);
+      var sumJedi = jedi.reduce(function(acum, num) {
+        return acum + num;
+      }, 0);
+      var dados = document.getElementById("dados");
+      dados.innerHTML = "";
+      dados.innerHTML += "<h2>Net Promoter Score (NPS): " + parseInt(media(sumTeacher, complementoSprint)) + "</h2>";
+      dados.innerHTML += "<h2>Net Promoter Score (NPS): " + parseInt(media(sumJedi, complementoSprint)) + "</h2>";
+
+      //Media NPS
+      var Promoters = [];
+      var Passive = [];
+      var Detractors = [];
+      for (var i = 0; i < data[sede][turma].ratings.length; i++) {
+        Promoters.push(data[sede][turma].ratings[i].nps.promoters);
+        Detractors.push(data[sede][turma].ratings[i].nps.detractors);
+      }
+        var complementoPromoters = Promoters.length;
+        var sumPromoters = Promoters.reduce(function(acum, num) {
+          return acum + num;
+        }, 0);
+        var sumDetractors = Detractors.reduce(function(acum, num) {
+          return acum + num;
+        }, 0);
+        var media = function media(valor, complemento) {
+          return valor / complemento;
+        }
+        var mediaPromoters = media(sumPromoters, complementoPromoters);
+        var mediaDetractors = media(sumDetractors, complementoPromoters);
+        function subtraction(valor1, valor2) {
+          return valor1 - valor2;
+        };
+        dados.innerHTML += "<h2>Net Promoter Score (NPS): " + parseInt(subtraction(mediaPromoters, mediaDetractors)) + "</h2>";
 
         //Dados dos estudantes
         var listaEstudantes = document.getElementById("foto-Estudantes");
@@ -159,19 +172,22 @@ $(document).ready(function() {
           }
           listaEstudantes.innerHTML += "<p><b>Média Hab. Tech: </b>" + parseInt(media(sumTech, complementoSprint)) + "</p>";
           listaEstudantes.innerHTML += "<p><b>Média Hab. HSE: </b>" + parseInt(media(sumHse, complementoSprint)) + "</p>";
-        }
-        //Mostrar e esconder as divs
-        document.getElementById("MostrarEstudantes").addEventListener("click", function(){
-          var estudante = document.getElementById("estudante");
-          var geral = document.getElementById("geral");
-          if(estudante.style.display == "none"){
-              estudante.style.display = "block";
-              geral.style.display = "none";
-          }else{
-            estudante.style.display = "none";
-            geral.style.display = "block";
           }
-        });
+        //   var x = 0;
+        //   var y = 0;
+        //   var hse2 = "";
+        //   const mediaTec = parseInt(media(sumTech, complementoSprint));
+        //   for(var i = 0; i < (data[sede][turma]["students"]).length; i++){
+        //    hse2 = mediaTec;
+        //    console.log(hse2);
+        //   if(hse2[i] >= 700){
+        //     x =  x + 1;
+        //     console.log("maior" + hse2[i]);
+        //   }else{
+        //     y = y + 1;
+        //     console.log("menor" + hse2[i]);
+        //   }
+        // }
     });
   });
 });

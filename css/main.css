@@ -4,31 +4,40 @@ body{
 }
 main{
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.linha{
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 .grafico{
-  width: 600px;
+  width: 420px;
   height: 400px;
-  margin: 15px;
+  margin: 5px;
 }
-
 #estudante{
   display: none;
-  margin: 40px;
+  margin: 100px;
 }
 h1{
   text-align: center;
   font-size: 30px;
   color: #3333cc;
 }
+h2{
+  background-color: #fff;
+  padding: 20px;
+}
 img{
   width: 200px;
   height: 200px;
+  margin-top: 20px;
   border-radius: 30%;
 }
-
 ul {
     list-style-type: none;
     margin: 0;
@@ -84,7 +93,7 @@ li.dropdown {
   justify-content: space-around;
 }
 
-#header h1 {
+/* #header h1 {
   position: relative;
   left: 160px;
   top: 17px;
@@ -94,15 +103,6 @@ li.dropdown {
   height: 60px;
   text-align: center;
 }
-
-#header i {
-  color: #ffcc00;
-}
-
-#header p {
-  color: #fff;
-}
-
 .profile {
   line-height: 0px;
   position: relative;
@@ -118,17 +118,36 @@ li.dropdown {
   font-size: 9px;
   position: relative;
   left: 35px;
+}*/
+#header p {
+  color: #fff;
+  float: left;
+  margin-left: 10px;
 }
-
+#header i {
+  color: #ffcc00;
+  float: left;
+}
+#header h1{
+  color: #ffcc00;
+}
+#MostrarEstudantes{
+  background-color: #ffcc00;
+  color: #fff;
+  width: 100px;
+  height: 40px;
+  border-radius: 30%;
+  border: 1px solid #fff;
+}
 .fa-user-circle {
   font-size: 35px;
   position: relative;
-  left:
+  top: 10px;
 }
 
-.fa-sign-out-alt {
+/* .fa-sign-out-alt {
   font-size: 10px;
   position: relative;
   bottom: 10px;
   left: 75px;
-}
+} */
