@@ -745,7 +745,6 @@ function dadosGraficoJedis(){
             item['sede'] = sede;
             item['geracao'] = geracao;
             item['quantidade'] = mediaJedis()[contador];
-            item['cor'] = '#' + (Math.random().toString(16) + '0000000').slice(2, 8);
             grafico10.push(item);
             contador++
         }

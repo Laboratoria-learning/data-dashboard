@@ -49,7 +49,7 @@
 #myDoughnutChart{
     height: 480px !important;
     width: 280px !important;
-    margin-left: 30px;
+    margin-left: 60px;
 }
 
 .card .totalDesistentes{
@@ -168,7 +168,7 @@
 #myDoughnutTech{
     height: 480px !important;
     width: 280px !important;
-    margin-right: 25px;
+    margin-right: 65px;
 }
 
 .card .totalExederamTech{
@@ -203,7 +203,7 @@
 */
 
 #myDoughnutHse{
-    margin-left: 40px;
+    margin-left: 60px;
     margin-top: 40px;
 }
 
@@ -267,7 +267,7 @@
 */
 
 #chartNps{
-    margin-top: 130px;
+    margin-top: 180px;
 }
 .card .nps h1{
     display: flex;
@@ -297,7 +297,7 @@
 .card .satisfacaoAlunas h1{
     margin-right: 40px;
     margin-left: 20px;
-    font-size: 19px;
+    font-size: 18.8px;
     margin-top: 45px;
 }
 
@@ -352,5 +352,5 @@
 }
 
 .container i{
-    border-radius: 5px;
+    margin-left: 5px;
 }
