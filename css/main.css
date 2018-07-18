@@ -21,7 +21,13 @@ main{
 }
 #estudante{
   display: none;
-  margin: 100px;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+#foto-Estudantes{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 h1{
   text-align: center;

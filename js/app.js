@@ -19,6 +19,7 @@ $(document).ready(function() {
     $(".turma").click(function() {
       turma = $(this).text();
       document.getElementById('titulo').innerHTML = "<h1> " + sede + " - " + turma + "</h1>";
+
       //Status das alunas
       var actives = [];
       for (var i = 0; i < data[sede][turma].students.length; i++) {
@@ -115,8 +116,8 @@ $(document).ready(function() {
       }, 0);
       var dados = document.getElementById("dados");
       dados.innerHTML = "";
-      dados.innerHTML += "<h2>Net Promoter Score (NPS): " + parseInt(media(sumTeacher, complementoSprint)) + "</h2>";
-      dados.innerHTML += "<h2>Net Promoter Score (NPS): " + parseInt(media(sumJedi, complementoSprint)) + "</h2>";
+      dados.innerHTML += "<h2>Média teacher: " + parseInt(media(sumTeacher, complementoSprint)) + "</h2>";
+      dados.innerHTML += "<h2>Média jedi:: " + parseInt(media(sumJedi, complementoSprint)) + "</h2>";
 
       //Media NPS
       var Promoters = [];
@@ -146,14 +147,15 @@ $(document).ready(function() {
         //Dados dos estudantes
         var listaEstudantes = document.getElementById("foto-Estudantes");
         listaEstudantes.innerHTML = "";
+        listaEstudantes.innerHTML += "<h1>Estudantes</h1>";
         for(i in data[sede][turma]["students"]){
           var img = document.createElement("img");
           img.src = data[sede][turma]["students"][i]["photo"];
           var name = data[sede][turma]["students"][i]["name"];
           var active = data[sede][turma]["students"][i]["active"];
           listaEstudantes.appendChild(img);
-          listaEstudantes.innerHTML += "<p><b>Nome: </b>" + name + "</p>";
-          listaEstudantes.innerHTML += "<p><b>Status: </b>" + active + "</p>";
+          listaEstudantes.innerHTML += "<div><b>Nome: </b>" + name + "</div>";
+          listaEstudantes.innerHTML += "<div><b>Status: </b>" + active + "</div>";
           var hse = [];
           var tech = [];
           for(var y = 0; y < (data[sede][turma]["students"][i]["sprints"]).length; y++){
@@ -170,8 +172,8 @@ $(document).ready(function() {
           var media = function media(valor, complemento){
             return valor / complemento;
           }
-          listaEstudantes.innerHTML += "<p><b>Média Hab. Tech: </b>" + parseInt(media(sumTech, complementoSprint)) + "</p>";
-          listaEstudantes.innerHTML += "<p><b>Média Hab. HSE: </b>" + parseInt(media(sumHse, complementoSprint)) + "</p>";
+          listaEstudantes.innerHTML += "<div><b>Média Hab. Tech: </b>" + parseInt(media(sumTech, complementoSprint)) + "</div>";
+          listaEstudantes.innerHTML += "<div><b>Média Hab. HSE: </b>" + parseInt(media(sumHse, complementoSprint)) + "</div>";
           }
         //   var x = 0;
         //   var y = 0;
