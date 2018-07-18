@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Page Alunas</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/appAlunas.css" />
+    <link rel="icon" href="./faviconAlu.png">
+</head>
+
+<body class="bodyAlunas">
+    <section class="topAlunas">
+        <img src=./assets/images/logo-labo.png>
+
+        <div class="bnt">
+        <select id="sede" onchange="onSelectSede()">
+            <option value="none">SEDES LABORATÓRIA</option>
+            <option value="AQP">AREQUIPA</option>
+            <option value="CDMX">CIDADE DO MÉXICO</option>
+            <option value="LIM">LIMA</option>
+            <option value="SCL">SANTIAGO DO CHILE</option>
+        </select>
+                
+        <select id="turma" onchange="createSelectTurmaOptions(turmas)">
+             <option value="none">GERAÇÕES</option>
+        </select>
+            
+        <button onchange="alunasAtivasSedeGeracao()">Filtrar</button> 
+        </div>
+    </section>
+
+    <section id="formAlunas">
+
+    </section>
+
+
+
+
+    <!-- Base de dados -->
+    <script src="./js/data.js"></script>
+    <!-- Arquivo js -->
+    <script src="./js/app2.js"></script>
+</body>
+
+</html>

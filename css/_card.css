@@ -49,7 +49,7 @@
 #myDoughnutChart{
     height: 480px !important;
     width: 280px !important;
-    margin-left: 30px;
+    margin-left: 60px;
 }
 
 .card .totalDesistentes{
@@ -162,13 +162,12 @@
     font-weight: bold;
     font-size: 15px;
     margin-top: 30px;
-
 }
 
 #myDoughnutTech{
     height: 480px !important;
     width: 280px !important;
-    margin-right: 25px;
+    margin-right: 65px;
 }
 
 .card .totalExederamTech{
@@ -197,13 +196,12 @@
     margin-right: 40px;
 }
 
-
 /*
  * card 4 , section metaHse
 */
 
 #myDoughnutHse{
-    margin-left: 40px;
+    margin-left: 60px;
     margin-top: 40px;
 }
 
@@ -267,8 +265,9 @@
 */
 
 #chartNps{
-    margin-top: 130px;
+    margin-top: 180px;
 }
+
 .card .nps h1{
     display: flex;
     justify-content: center;
@@ -306,7 +305,7 @@
 .card .satisfacaoAlunas h1{
     margin-right: 40px;
     margin-left: 20px;
-    font-size: 19px;
+    font-size: 18.8px;
     margin-top: 45px;
 }
 
@@ -322,6 +321,7 @@
 .pesquisas{
    display: flex;
 }
+
 .cardProfessores{
     padding: 10px;
     margin: 20px;
@@ -331,7 +331,7 @@
     min-height: 100px;
     -webkit-box-shadow: -1px 4px 6px 0px rgba(140,135,140,1);
     -moz-box-shadow: -1px 4px 6px 0px rgba(140,135,140,1);
-    box-shadow: -1px 4px 6px 0px rgba(140,135,140,1);
+    box-shadow: -1px 4px 6px 0px rgba(140,135,140,1); 
 }
 
 .mediasProfessores h1{
@@ -380,4 +380,7 @@
 
 .container i{
     border-radius: 5px;
+
+.container i{
+    margin-left: 5px;
 }

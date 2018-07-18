@@ -4,7 +4,7 @@ graficoAlunasAtivas();
 function graficoAlunasAtivas(){
     let dados = alunasAtivasSedeGeracao();
     let ctx = document.getElementById("chart").getContext("2d");
-    let labels = dados.map(item => item.sede + ' (' + item.geracao + ')' );
+    let labels = dados.map(item => item.sede + ' (' + item.geracao + ')' ); 
     let quantidade = dados.map(item => item.quantidade);
     let colors = [
         'rgb(59, 0, 48, 0.9)',
@@ -42,7 +42,6 @@ function graficoAlunasInativas(){
     document.querySelector(".totalDesistentes").innerHTML = percentualInativas + '%';
     let dataset = [percentualAtivas, percentualInativas];
     let labels = ["Ativas", "Inativas"];
-
      let myBarChart = new Chart(ctx, {
          type: 'doughnut',
          data: {
@@ -56,7 +55,7 @@ function graficoAlunasInativas(){
      });
 }
 
-// Função que esta percorrendo o obj, e executando grafico 1 e 2
+// Função que esta percorrendo o obj, e executando grafico 1 e 2 
 function alunasAtivasSedeGeracao(){
     const grafico1 = [
     ];
@@ -78,12 +77,11 @@ document.querySelector(".totalAtivasTodasSedes").innerHTML = totalGeralAtivas() 
 function totalGeralAtivas(){
     let alunas = alunasAtivasSedeGeracao();
     return alunas.reduce(function(prev,element){
-        return prev + element.quantidade;
+        return prev + element.quantidade;        
     },0);
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////// Card 2: section metaTotal
+// Card 2: section metaTotal
 // Função do gráfico: do total de alunas que excederam ambas as metas em pelo menos 1 sprint
 graficoAlunasExedemMetas();
 function graficoAlunasExedemMetas(){
@@ -185,13 +183,12 @@ function totalAlunaGeracao(){
     return alunasPorGeracao;
 }
 
-//outra coisa
+//determinação de vars
 var qAlunasExederam = metas(); // QUEM EXEDEU AMBAS AS METAS
 var alunasPorGeracao = totalAlunaGeracao(); // total de alunas por gerção
 var alunasTotal = totalDeAlunas(); // total por sede e geração retorna 261
 var exederamTech = metasTECH(); //quem exedeu a meta tech
 var exederamHse = metasHSE(); // quem exedeu a meta  HSE
-
 
 // Função do grafico % de alunas que exederam as metas do sprint
 graficoPorcentoMetas();
@@ -218,8 +215,7 @@ function graficoPorcentoMetas(){
      });
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////// Card 3: section metaTech
+// Card 3: section metaTech
 // Função do gráfico do total de alunas que excederam a meta TECH em pelo menos 1 sprint
 graficoExedemTECH();
 function graficoExedemTECH(){
@@ -324,8 +320,7 @@ function graficoPorcentoMetaTech(){
      });
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////// Card 4: section metaHse
+// Card 4: section metaHse
 // Função do gráfico do total de alunas que excederam a meta HSE em pelo menos 1 sprint
 graficoExedemHSE();
 function graficoExedemHSE(){
@@ -430,8 +425,8 @@ function graficoPorcentoMetaHse(){
      });
 }
 
-///////////// Card 5: section pesquisas Laboratória
-  // AAA função
+// Card 5: section pesquisas Laboratória
+// AAA função
 function alunasAtivasSedeGeracao(){
     const graficos = [
     ];
@@ -563,13 +558,13 @@ function graficoSatisLaboratoria(){
     document.querySelector(".totalAtendida").innerHTML = atendida + "%";
     let dataset = [superada, NaoAtendida, atendida];
     let labels = ["Expectativa superada","Expectativa não atendida", "Expectativa atendida"];
-
      let myBarChart = new Chart(ctx, {
          type: 'doughnut',
          data: {
              labels: labels,
              datasets: [
                  {data: dataset, label: labels,  borderWidth: 1, backgroundColor: ['rgba(71, 182, 144, 0.9)', 'rgb(227, 57, 57, 0.9)','rgb(255, 229, 33)']}
+
              ]
          }
      });
@@ -585,7 +580,6 @@ function mediaSuperada(){
                 var mediaPorGeracao = Math.round(somaArrays(arraySupera)/arraySupera.length);
                 mSupera.push(mediaPorGeracao);
             }
-
         }
     }
     var mediaSupera = Math.round(somaArrays(mSupera)/mSupera.length);
@@ -603,7 +597,6 @@ function mediaAtendida(){
                 var mediaPorGeracao = Math.round(somaArrays(arrayAtendida)/arrayAtendida.length);
                 mAtendida.push(mediaPorGeracao);
             }
-
         }
     }
     var mediaCumple = Math.round(somaArrays(mAtendida)/mAtendida.length);
@@ -621,7 +614,6 @@ function mediaNaoAtendida(){
                 var mediaPorGeracao = Math.round(somaArrays(arrayNaoAtendida)/arrayNaoAtendida.length);
                 mNaoAtendida.push(mediaPorGeracao);
             }
-
         }
     }
     var mediaNoCumple = Math.round(somaArrays(mNaoAtendida)/mNaoAtendida.length);
@@ -629,7 +621,7 @@ function mediaNaoAtendida(){
     return mediaNoCumple;
 }
 
-///////////// Card 6: section pesquisas mentores
+// Card 6: section pesquisas mentores
 // Função do grafico da pontuação média das Professoras - Item 9
 graficoProfessoras();
 function graficoProfessoras(){
@@ -748,7 +740,6 @@ function dadosGraficoJedis(){
             item['sede'] = sede;
             item['geracao'] = geracao;
             item['quantidade'] = mediaJedis()[contador];
-            item['cor'] = '#' + (Math.random().toString(16) + '0000000').slice(2, 8);
             grafico10.push(item);
             contador++
         }
@@ -791,8 +782,6 @@ function somaArrays(arr) {
     return sumArray;
   }
 
-///////////////////////////////////////////////////
-
   var cardsDisable = [];
 
   //função habilita os cards
@@ -801,9 +790,9 @@ function somaArrays(arr) {
     cardsDisable.map((card) =>{
         document.querySelector('#'+card).setAttribute('style', "display:flex");
     });
-   }
+   } 
 
-   //função desabilita os cards
+   //função desabilita os cards 
   function disableCard(idCard) {
     event.preventDefault();
     cardsDisable.push(idCard);
