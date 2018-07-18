@@ -3,15 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
-    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
     <header id="header">
-      <button type="button" name="button"><a href="Estudantes.html">Estudantes</a></button>
+      <button type="button" id="MostrarEstudantes">Estudantes</a></button>
       <!-- <a href="#"><i class="fas fa-bars"></i></a> -->
       <h1>< Laboratoria ></h1>
       <p>Vanessa Pinheiro</p>
@@ -22,14 +20,14 @@
     <nav>
       <ul class="menu clearfix">
         <li class="dropdown">
-        <a class="dropbtn sede">AQP</a>
+          <a class="dropbtn sede">AQP</a>
           <div class="dropdown-content">
           <a href="#" class="turma">2016-2</a>
           <a href="#" class="turma">2017-1</a>
-        </div>
+          </div>
         </li>
         <li class="dropdown">
-         <a class="dropbtn sede">CDMX</a>
+          <a class="dropbtn sede">CDMX</a>
           <div class="dropdown-content">
             <a href="#" class="turma">2017-1</a>
             <a href="#" class="turma">2017-2</a>
@@ -53,35 +51,21 @@
         </li>
       </ul>
     </nav>
-    <main>
-      <div class="row">
-        <div class="col" id="sede">
+    <section id="titulo">
 
-        </div>
-        <div class="col" id="turma">
-
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col">
-        <div id="piechart" class="grafico"></div>
-        </div>
-        <div class="col">
-        <div id="ratings"></div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col" class="grafico">
-          <div id="satisfacao" class="grafico"></div>
-        </div>
-        <div class="col">
-              <h1>Estudantes</h1>
-            <div id="foto-Estudantes"></div>
-
-            </div>
-      </div>
+    </section>
+    <main id="geral">
+      <div id="piechart" class="grafico"></div>
+      <div id="satisfacao" class="grafico"></div>
+      <div id="ratings" class="grafico"></div>
     </main>
+    <section id="estudante">
+      <div>
+        <h1>Estudantes</h1>
+        <div id="foto-Estudantes"></div>
+      </div>
+    </section>
+    <script src="js/jquery-3.3.1.min.js"></script>
 		<script src="./js/data.js"></script>
     <script src="./js/app.js"></script>
   </body>
