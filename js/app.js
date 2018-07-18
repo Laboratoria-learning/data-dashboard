@@ -23,12 +23,11 @@ function graficoAlunasAtivas(){
         data: {
             labels: labels,
             datasets: [
-                {data: quantidade, label: 'Alunas presentes pela sede e geração. ',  borderWidth: 1, backgroundColor: colors}
+                {data: quantidade,label: 'Alunas presentes pela sede e geração. ',  borderWidth: 1, backgroundColor: colors}
             ]
         }
     });
 }
-
 
 // Função do grafico: % de desistentes
 graficoAlunasInativas();
@@ -116,7 +115,6 @@ function graficoAlunasExedemMetas(){
 }
 
 // Função que retorna os dados para o gráfico do total de alunas que excederam ambas as metas em pelo menos 1 sprint
-//Função que esta percorrendo o obj, e executando grafico 3 e 4
 function alunasExedemMetas(){
     const grafico3 = [];
     var qAlunasExederam = metas();
@@ -135,7 +133,6 @@ function alunasExedemMetas(){
 }
 
 // Função que retorna o total de alunas que excederam ambas as metas em pelo menos 1 sprint
-// Função que soma o total de todas as sedes e turmas
 function metas(){
     var qAlunasExederamPontos = [];
     var exedeuPontos = false;
@@ -162,6 +159,16 @@ function metas(){
         }
     }
 return alunasExederam;
+}
+
+
+/////teste total por sede e geração de hse e tech//////////////////////////////////////////////////
+document.querySelector(".qtdTotal").innerHTML = parseInt(metas()) + " Alunas";
+function totalGeral(){
+    let alunas = metas();
+    return alunas.reduce(function(prev,element){
+        return prev + element.quantidade;        
+    },0);
 }
 
 // Função que retorna o total de alunas;
@@ -213,7 +220,7 @@ function graficoPorcentoMetas(){
          data: {
              labels: labels,
              datasets: [
-                 {data: dataset, label: labels,  borderWidth: 1, backgroundColor: ['rgba(71, 182, 144, 0.9)', 'rgb(227, 57, 57, 0.9)']}
+                 {data: dataset, label: labels,  borderWidth: 1, backgroundColor: ['rgb(227, 57, 57, 0.9)','rgba(71, 182, 144, 0.9)']}
              ]
          }
      });
@@ -297,6 +304,17 @@ function metasTECH(){
 return qExederamTECH;
 }
 
+/////teste total por sede e geração de tech//////////////////////////////////////////////////
+document.querySelector(".qtdTotalSedeGeracao").innerHTML = parseInt(metasTECH()) + " Alunas";
+function totalGeralTec(){
+    let alunas = metasTECH();
+    return alunas.reduce(function(prev,element){
+        return prev + element.quantidade;        
+    },0);
+}
+
+
+
 // Função do grafico % de alunas que exederam a meta TECH do sprint
 graficoPorcentoMetaTech();
 function graficoPorcentoMetaTech(){
@@ -309,14 +327,14 @@ function graficoPorcentoMetaTech(){
     let percentualNaoExederam = Math.round((totalNaoExederam * 100) / totalGeral);
     document.querySelector(".totalExederamTech").innerHTML = percentualExederam + "%";
     let dataset = [percentualExederam, percentualNaoExederam];
-    let labels = ["Exederam", "Não exederam"];
+    let labels = ["Não exederam","Exederam"];
 
      let myBarChart = new Chart(ctx, {
          type: 'doughnut',
          data: {
              labels: labels,
              datasets: [
-                 {data: dataset, label: labels,  borderWidth: 1, backgroundColor: ['rgba(71, 182, 144, 0.9)', 'rgb(227, 57, 57, 0.9)']}
+                 {data: dataset, label: labels,  borderWidth: 1, backgroundColor: ['rgb(227, 57, 57, 0.9)','rgba(71, 182, 144, 0.9)']}
              ]
          }
      });
@@ -400,6 +418,19 @@ function metasHSE(){
 return qExederamHSE;
 }
 
+/////teste total por sede e geração de hse e tech//////////////////////////////////////////////////
+document.querySelector(".totalHseSedeGeracao").innerHTML = parseInt(metasHSE()) + " Alunas";
+function totalGeralHse(){
+    let alunas = metasHSE();
+    return alunas.reduce(function(prev,element){
+        return prev + element.quantidade;        
+    },0);
+}
+
+
+
+
+
 // Função do grafico % de alunas que exederam a meta HSE do sprint
 graficoPorcentoMetaHse();
 function graficoPorcentoMetaHse(){
@@ -419,13 +450,13 @@ function graficoPorcentoMetaHse(){
          data: {
              labels: labels,
              datasets: [
-                 {data: dataset, label: labels,  borderWidth: 1, backgroundColor: ['rgba(71, 182, 144, 0.9)', 'rgb(227, 57, 57, 0.9)']}
+                 {data: dataset, label: labels,  borderWidth: 1, backgroundColor: ['rgb(227, 57, 57, 0.9)','rgba(71, 182, 144, 0.9)']}
              ]
          }
      });
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-
+///////////// Card 5: section pesquisas Laboratória
   // AAA função
 function alunasAtivasSedeGeracao(){
     const graficos = [
@@ -447,7 +478,6 @@ function alunasAtivasSedeGeracao(){
     return graficos;
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Função do grafico NPS - Os números representam porcentagens - Item 5
 graficoNps();
 function graficoNps(){
@@ -455,7 +485,18 @@ function graficoNps(){
     let ctx = document.getElementById("chartNps").getContext("2d");
     let labels = dados.map(item => item.sede + ' (' + item.geracao + ')' );
     let quantidade = dados.map(item => item.quantidadeNps);
-    let colors = dados.map(item => item.cor);
+    let colors = [
+        'rgb(59, 0, 48, 0.9)',
+        'rgb(59, 0, 48, 0.9)',
+        'rgb(245, 58, 51, 0.9)',
+        'rgb(245, 58, 51, 0.9)',
+        'rgb(255, 145, 48,0.9)',
+        'rgb(255, 145, 48,0.9)',
+        'rgb(255, 145, 48,0.9)',
+        'rgb(204, 108, 187, 0.9)',
+        'rgb(204, 108, 187, 0.9)',
+        'rgb(204, 108, 187, 0.9)'
+    ]
     let myBarChart = new Chart(ctx, {
         type: 'bar',
         data: {
@@ -479,7 +520,6 @@ function dadosNps(){
             item['quantidadePromoters'] = mediaPromoters();
             item['quantidadeDetractors'] = mediaDetractors();
             item['quantidadeNps'] = item.quantidadePromoters[contador] - item.quantidadeDetractors[contador];
-            item['cor'] = '#' + (Math.random().toString(16) + '0000000').slice(2, 8);
             grafico5.push(item);
             contador++
         }
@@ -518,7 +558,6 @@ function mediaDetractors(){
     return mDetractors;
 }
 
-
 // Função do grafico % de satisfação das alunas da Laboratória - Item 8
 graficoSatisLaboratoria();
 function graficoSatisLaboratoria(){
@@ -528,14 +567,14 @@ function graficoSatisLaboratoria(){
     let NaoAtendida = mediaNaoAtendida();
     document.querySelector(".totalAtendida").innerHTML = atendida + "%";
     let dataset = [superada, atendida, NaoAtendida];
-    let labels = ["Expectativa superada", "Expectativa atendida", "Expectativa não atendida"];
+    let labels = ["Expectativa superada","Expectativa não atendida", "Expectativa atendida"];
 
      let myBarChart = new Chart(ctx, {
          type: 'doughnut',
          data: {
              labels: labels,
              datasets: [
-                 {data: dataset, label: labels,  borderWidth: 1, backgroundColor: ['#5032CD32', '#FF0000', '#5032CD23']}
+                 {data: dataset, label: labels,  borderWidth: 1, backgroundColor: ['rgba(71, 182, 144, 0.9)', 'rgb(227, 57, 57, 0.9)','rgb(252, 228, 35)']}
              ]
          }
      });
@@ -595,17 +634,8 @@ function mediaNaoAtendida(){
     return mediaNoCumple;
 }
 
-// soma array
-function somaArrays(arr) {
-  var sumArray = 0;
-  for (i = 0; i < arr.length; i++){
-      sumArray += arr[i];
-  }
-  return sumArray;
-}
-
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// card 6
-
+///////////// Card 6: section pesquisas mentores
 // Função do grafico da pontuação média das Professoras - Item 9
 graficoProfessoras();
 function graficoProfessoras(){
@@ -614,16 +644,26 @@ function graficoProfessoras(){
     let labels = dados.map(item => item.sede + ' (' + item.geracao + ')' );
     let quantidade = dados.map(item => item.quantidade);
     let geracao = dados.map(item => item.geracao);
-    let colors = dados.map(item => item.cor);
+    let colors =  [
+        'rgb(59, 0, 48, 0.9)',
+        'rgb(59, 0, 48, 0.9)',
+        'rgb(245, 58, 51, 0.9)',
+        'rgb(245, 58, 51, 0.9)',
+        'rgb(255, 145, 48,0.9)',
+        'rgb(255, 145, 48,0.9)',
+        'rgb(255, 145, 48,0.9)',
+        'rgb(204, 108, 187, 0.9)',
+        'rgb(204, 108, 187, 0.9)',
+        'rgb(204, 108, 187, 0.9)'
+    ]
     let mediaTotal = parseInt(somaArrays(mediaProfessores()));
-    console.log(mediaTotal);
     document.getElementsByClassName(".mediaProf").innerHTML = mediaTotal;
     let myBarChart = new Chart(ctx, {
         type: 'bar',
         data: {
             labels: labels,
             datasets: [
-                {data: quantidade, label: 'Pontuação média dos Professores', borderWidth: 1, backgroundColor: colors}
+                {data: quantidade, label: 'Por sede e geração', borderWidth: 1, backgroundColor: colors}
             ]
         }
      });
@@ -646,8 +686,6 @@ function dadosGraficoProf(){
     return grafico9;
 
 }
-
-console.log(parseInt(somaArrays(mediaProfessores())));
 
 // Função que calcula a média das notas dos Professores por geração
 function mediaProfessores(){
@@ -672,7 +710,18 @@ function graficoJedis(){
     let labels = dados.map(item => item.sede + ' (' + item.geracao + ')' );
     let quantidade = dados.map(item => item.quantidade);
     let geracao = dados.map(item => item.geracao);
-    let colors = dados.map(item => item.cor);
+    let colors = [
+        'rgb(59, 0, 48, 0.9)',
+        'rgb(59, 0, 48, 0.9)',
+        'rgb(245, 58, 51, 0.9)',
+        'rgb(245, 58, 51, 0.9)',
+        'rgb(255, 145, 48,0.9)',
+        'rgb(255, 145, 48,0.9)',
+        'rgb(255, 145, 48,0.9)',
+        'rgb(204, 108, 187, 0.9)',
+        'rgb(204, 108, 187, 0.9)',
+        'rgb(204, 108, 187, 0.9)'
+    ]
     let mediaTotal = parseInt(somaArrays(mediaJedis()));
     document.getElementsByClassName(".mediaJedis").innerHTML = mediaTotal;
     let myBarChart = new Chart(ctx, {
@@ -680,7 +729,7 @@ function graficoJedis(){
         data: {
             labels: labels,
             datasets: [
-                {data: quantidade, label: 'Pontuação média dos Jedis', borderWidth: 1, backgroundColor: colors}
+                {data: quantidade, label: 'Por sede e geração', borderWidth: 1, backgroundColor: colors}
             ]
         }
      });
@@ -720,3 +769,35 @@ function mediaJedis(){
     return mJedis;
 }
 
+// soma array
+function somaArrays(arr) {
+    var sumArray = 0;
+    for (i = 0; i < arr.length; i++){
+        sumArray += arr[i];
+    }
+    return sumArray;
+  }
+
+///////////////////////////////////////////////////
+
+  var cardsDisable = [];
+
+  //função habilita os cards
+  function enableAllCards() {
+    event.preventDefault();
+    cardsDisable.map((card) =>{
+        document.querySelector('#'+card).setAttribute('style', "display:flex");
+    });
+   } 
+
+   //função desabilita os cards 
+  function disableCard(idCard) {
+    event.preventDefault();
+    cardsDisable.push(idCard);
+    document.querySelector('#'+idCard).setAttribute('style', "display:none");
+   }
+  
+
+
+
+  
