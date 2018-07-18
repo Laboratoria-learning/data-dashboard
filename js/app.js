@@ -42,7 +42,6 @@ function graficoAlunasInativas(){
     document.querySelector(".totalDesistentes").innerHTML = percentualInativas + '%';
     let dataset = [percentualAtivas, percentualInativas];
     let labels = ["Ativas", "Inativas"];
-
      let myBarChart = new Chart(ctx, {
          type: 'doughnut',
          data: {
@@ -82,8 +81,7 @@ function totalGeralAtivas(){
     },0);
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////// Card 2: section metaTotal
+// Card 2: section metaTotal
 // Função do gráfico: do total de alunas que excederam ambas as metas em pelo menos 1 sprint
 graficoAlunasExedemMetas();
 function graficoAlunasExedemMetas(){
@@ -161,15 +159,8 @@ function metas(){
 return alunasExederam;
 }
 
-
-/////teste total por sede e geração de hse e tech//////////////////////////////////////////////////
-document.querySelector(".qtdTotal").innerHTML = parseInt(metas()) + " Alunas";
-function totalGeral(){
-    let alunas = metas();
-    return alunas.reduce(function(prev,element){
-        return prev + element.quantidade;        
-    },0);
-}
+//total por sede e geração de hse e tech
+document.querySelector(".qtdTotal").innerHTML = parseInt(somaArrays(metas())) + " Alunas";
 
 // Função que retorna o total de alunas;
 function totalDeAlunas(){
@@ -179,7 +170,6 @@ function totalDeAlunas(){
   let totalGeral =  inativas + ativas;
   return totalGeral;
 }
-
 
 // Função que retorna o total de alunas por geração;
 function totalAlunaGeracao(){
@@ -193,13 +183,12 @@ function totalAlunaGeracao(){
     return alunasPorGeracao;
 }
 
-//outra coisa
-var qAlunasExederam = metas(); // QUEM EXEDEU AMBAS AS METAS 
+//determinação de vars
+var qAlunasExederam = metas(); // QUEM EXEDEU AMBAS AS METAS
 var alunasPorGeracao = totalAlunaGeracao(); // total de alunas por gerção
 var alunasTotal = totalDeAlunas(); // total por sede e geração retorna 261
 var exederamTech = metasTECH(); //quem exedeu a meta tech
 var exederamHse = metasHSE(); // quem exedeu a meta  HSE
-
 
 // Função do grafico % de alunas que exederam as metas do sprint
 graficoPorcentoMetas();
@@ -226,8 +215,7 @@ function graficoPorcentoMetas(){
      });
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////// Card 3: section metaTech
+// Card 3: section metaTech
 // Função do gráfico do total de alunas que excederam a meta TECH em pelo menos 1 sprint
 graficoExedemTECH();
 function graficoExedemTECH(){
@@ -304,16 +292,8 @@ function metasTECH(){
 return qExederamTECH;
 }
 
-/////teste total por sede e geração de tech//////////////////////////////////////////////////
-document.querySelector(".qtdTotalSedeGeracao").innerHTML = parseInt(metasTECH()) + " Alunas";
-function totalGeralTec(){
-    let alunas = metasTECH();
-    return alunas.reduce(function(prev,element){
-        return prev + element.quantidade;        
-    },0);
-}
-
-
+// total por sede e geração de tech
+document.querySelector(".qtdTotalSedeGeracao").innerHTML = parseInt(somaArrays(metasTECH())) + " Alunas";
 
 // Função do grafico % de alunas que exederam a meta TECH do sprint
 graficoPorcentoMetaTech();
@@ -340,8 +320,7 @@ function graficoPorcentoMetaTech(){
      });
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////// Card 4: section metaHse
+// Card 4: section metaHse
 // Função do gráfico do total de alunas que excederam a meta HSE em pelo menos 1 sprint
 graficoExedemHSE();
 function graficoExedemHSE(){
@@ -418,18 +397,8 @@ function metasHSE(){
 return qExederamHSE;
 }
 
-/////teste total por sede e geração de hse e tech//////////////////////////////////////////////////
-document.querySelector(".totalHseSedeGeracao").innerHTML = parseInt(metasHSE()) + " Alunas";
-function totalGeralHse(){
-    let alunas = metasHSE();
-    return alunas.reduce(function(prev,element){
-        return prev + element.quantidade;        
-    },0);
-}
-
-
-
-
+// total por sede e geração de hse
+document.querySelector(".totalHseSedeGeracao").innerHTML = parseInt(somaArrays(metasHSE())) + " Alunas";
 
 // Função do grafico % de alunas que exederam a meta HSE do sprint
 graficoPorcentoMetaHse();
@@ -455,9 +424,9 @@ function graficoPorcentoMetaHse(){
          }
      });
 }
-///////////////////////////////////////////////////////////////////////////////////////////////////
-///////////// Card 5: section pesquisas Laboratória
-  // AAA função
+
+// Card 5: section pesquisas Laboratória
+// AAA função
 function alunasAtivasSedeGeracao(){
     const graficos = [
     ];
@@ -484,8 +453,8 @@ function graficoNps(){
     let dados = dadosNps();
     let ctx = document.getElementById("chartNps").getContext("2d");
     let labels = dados.map(item => item.sede + ' (' + item.geracao + ')' );
-    let quantidade = dados.map(item => item.quantidadeNps);
-    let colors = [
+    let quantidade = dados.map(item => item.quantidade);
+    let colors =  [
         'rgb(59, 0, 48, 0.9)',
         'rgb(59, 0, 48, 0.9)',
         'rgb(245, 58, 51, 0.9)',
@@ -511,15 +480,14 @@ function graficoNps(){
 // Função que retorna os dados para o gráfico do NPS
 function dadosNps(){
     const grafico5 = [];
+    var valoresNps = calculoNps();
     var contador = 0;
     for (sede in data){
-        for (geracao in data[sede]){
+      for (geracao in data[sede]){
             let item = {};
             item['sede'] = sede;
             item['geracao'] = geracao;
-            item['quantidadePromoters'] = mediaPromoters();
-            item['quantidadeDetractors'] = mediaDetractors();
-            item['quantidadeNps'] = item.quantidadePromoters[contador] - item.quantidadeDetractors[contador];
+            item['quantidade'] = valoresNps[contador];
             grafico5.push(item);
             contador++
         }
@@ -527,6 +495,21 @@ function dadosNps(){
     return grafico5;
 
 }
+
+// Função que calcula o NPS por geração
+function calculoNps(){
+    var arrayNps = [];
+    var promotersArray = mediaPromoters();
+    var detractorsArray = mediaDetractors();
+    for (i = 0; i < promotersArray.length; i++){
+      var nps = promotersArray[i] - detractorsArray[i];
+      arrayNps.push(nps);
+    }
+    return arrayNps;
+}
+
+// total do NPS da Laboratória
+document.querySelector(".totalNps").innerHTML = "O NPS da Laboratória é " + parseInt(mediaNps()) + "%";
 
 // Função que calcula a média de Promoters por geração
 function mediaPromoters(){
@@ -558,6 +541,13 @@ function mediaDetractors(){
     return mDetractors;
 }
 
+// Função que calcula a média do NPS da Laboratória
+function mediaNps(){
+    var arrNps = calculoNps();
+    var mediaN = Math.round(somaArrays(arrNps)/arrNps.length);
+    return mediaN;
+}
+
 // Função do grafico % de satisfação das alunas da Laboratória - Item 8
 graficoSatisLaboratoria();
 function graficoSatisLaboratoria(){
@@ -566,15 +556,15 @@ function graficoSatisLaboratoria(){
     let atendida = mediaAtendida();
     let NaoAtendida = mediaNaoAtendida();
     document.querySelector(".totalAtendida").innerHTML = atendida + "%";
-    let dataset = [superada, atendida, NaoAtendida];
+    let dataset = [superada, NaoAtendida, atendida];
     let labels = ["Expectativa superada","Expectativa não atendida", "Expectativa atendida"];
-
      let myBarChart = new Chart(ctx, {
          type: 'doughnut',
          data: {
              labels: labels,
              datasets: [
-                 {data: dataset, label: labels,  borderWidth: 1, backgroundColor: ['rgba(71, 182, 144, 0.9)', 'rgb(227, 57, 57, 0.9)','rgb(252, 228, 35)']}
+                 {data: dataset, label: labels,  borderWidth: 1, backgroundColor: ['rgba(71, 182, 144, 0.9)', 'rgb(227, 57, 57, 0.9)','rgb(255, 229, 33)']}
+
              ]
          }
      });
@@ -590,7 +580,6 @@ function mediaSuperada(){
                 var mediaPorGeracao = Math.round(somaArrays(arraySupera)/arraySupera.length);
                 mSupera.push(mediaPorGeracao);
             }
-
         }
     }
     var mediaSupera = Math.round(somaArrays(mSupera)/mSupera.length);
@@ -608,7 +597,6 @@ function mediaAtendida(){
                 var mediaPorGeracao = Math.round(somaArrays(arrayAtendida)/arrayAtendida.length);
                 mAtendida.push(mediaPorGeracao);
             }
-
         }
     }
     var mediaCumple = Math.round(somaArrays(mAtendida)/mAtendida.length);
@@ -626,7 +614,6 @@ function mediaNaoAtendida(){
                 var mediaPorGeracao = Math.round(somaArrays(arrayNaoAtendida)/arrayNaoAtendida.length);
                 mNaoAtendida.push(mediaPorGeracao);
             }
-
         }
     }
     var mediaNoCumple = Math.round(somaArrays(mNaoAtendida)/mNaoAtendida.length);
@@ -634,8 +621,7 @@ function mediaNaoAtendida(){
     return mediaNoCumple;
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// card 6
-///////////// Card 6: section pesquisas mentores
+// Card 6: section pesquisas mentores
 // Função do grafico da pontuação média das Professoras - Item 9
 graficoProfessoras();
 function graficoProfessoras(){
@@ -656,8 +642,6 @@ function graficoProfessoras(){
         'rgb(204, 108, 187, 0.9)',
         'rgb(204, 108, 187, 0.9)'
     ]
-    let mediaTotal = parseInt(somaArrays(mediaProfessores()));
-    document.getElementsByClassName(".mediaProf").innerHTML = mediaTotal;
     let myBarChart = new Chart(ctx, {
         type: 'bar',
         data: {
@@ -672,13 +656,14 @@ function graficoProfessoras(){
 // Função que retorna os dados para o gráfico da pontuação média das Professoras
 function dadosGraficoProf(){
     const grafico9 = [];
+    var profMedia = mediaProfessores();
     var contador = 0;
     for (sede in data){
         for (geracao in data[sede]){
             let item = {};
             item['sede'] = sede;
             item['geracao'] = geracao;
-            item['quantidade'] = mediaProfessores()[contador];
+            item['quantidade'] = profMedia[contador];
             grafico9.push(item);
             contador++
         }
@@ -694,13 +679,23 @@ function mediaProfessores(){
         for (geracao in data[sede]){
             var arrayProfessores = data[sede][geracao].ratings.map(nProfessores=>nProfessores.teacher);
             for (i = 0; i< arrayProfessores.length; i++ ){
-                var mediaP = (somaArrays(arrayProfessores)/arrayProfessores.length).toFixed(1);
+                var mediaP = Number((somaArrays(arrayProfessores)/arrayProfessores.length).toFixed(1));
                 mProfessores.push(mediaP);
             }
         }
     }
     return mProfessores;
 }
+
+ // Função que calcula a média dos Professores no geral da Laboratória
+ function mediaProfLaboratoria(){
+     var arrProf = mediaProfessores();
+     var mediaP = (somaArrays(arrProf)/arrProf.length).toFixed(2);
+     return mediaP;
+ }
+
+ // Nota média dos professores da Laboratória
+ document.querySelector(".totalProf").innerHTML = "A nota média é " + parseInt(mediaProfLaboratoria());
 
 // Função do grafico da pontuação média dos Jedis - Item 10
 graficoJedis();
@@ -760,13 +755,23 @@ function mediaJedis(){
         for (geracao in data[sede]){
             var arrayJedis = data[sede][geracao].ratings.map(nJedis=>nJedis.jedi);
             for (i = 0; i< arrayJedis.length; i++ ){
-                var mediaJ = (somaArrays(arrayJedis)/arrayJedis.length).toFixed(1);
+                var mediaJ = Number((somaArrays(arrayJedis)/arrayJedis.length).toFixed(1));
                 mJedis.push(mediaJ);
             }
         }
     }
     return mJedis;
 }
+
+// Função que calcula a média dos Jedis no geral da Laboratória
+function mediaJedisLaboratoria(){
+    var arrJedis = mediaJedis();
+    var mediaJ = (somaArrays(arrJedis)/arrJedis.length).toFixed(2);
+    return mediaJ;
+}
+
+// Nota média dos professores da Laboratória
+document.querySelector(".totalJedis").innerHTML = "A nota média é " + parseInt(mediaJedisLaboratoria());
 
 // soma array
 function somaArrays(arr) {
@@ -776,8 +781,6 @@ function somaArrays(arr) {
     }
     return sumArray;
   }
-
-///////////////////////////////////////////////////
 
   var cardsDisable = [];
 
@@ -795,8 +798,3 @@ function somaArrays(arr) {
     cardsDisable.push(idCard);
     document.querySelector('#'+idCard).setAttribute('style', "display:none");
    }
-  
-
-
-
-  

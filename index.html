@@ -21,7 +21,6 @@
               <div class="habilitarBnt">
                   <button class="btn" onclick="enableAllCards()"><i class="far fa-eye"></i></i></button>
               </div>
-            
               <div class="Alunas">
                 <button class="btn" onclick="window.location.href='appAlunas.html';">Alunas</button>
               </div>
@@ -65,7 +64,7 @@
           <p>#Que exederam em pelo menos um sprint.</p>
           <canvas id="myDoughnutCharts" class="graficoPercentual" style="position: relative; height:300px; width:300px" ></canvas>
         </div>
-     
+
         <div class="qtdMetaTotal">
           <h1>Números de alunas execederam HSE e TECH</h1>
           <span class="qtdTotal"></span>
@@ -123,9 +122,10 @@
         <div>
               <button class="btnOne" onClick="disableCard('pesquisasLabo')"><i class="far fa-eye-slash"></i></button>
         </div>
-        
+
         <div class="nps">
           <h1>(NPS)Net Promoter Score por sede e geração</h1>
+          <span class="totalNps"></span>
           <canvas id="chartNps" width="700" height="400"></canvas>
         </div>
 
@@ -148,6 +148,7 @@
 
         <div class="mediasProfessores">
           <h1>Pontuação média dos Professores</h1>
+          <span class="totalProf"></span>
           <canvas id="chartProf" width="500" height="400"></canvas>
         </div>
       </section>
@@ -158,10 +159,10 @@
           </div>
         <div class="mediaJedi">
           <h1>Pontuação média dos Jedis</h1>
+          <span class="totalJedis"></span>
           <canvas id="chartJedis" width="500" height="400"></canvas>
         </div>
       </section>
-      
     </section>
 
     </section><!-- esse linha aqui vai abraçar todas as sections de grafico: end -->
