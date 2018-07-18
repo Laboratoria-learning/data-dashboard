@@ -1,6 +1,53 @@
+body{
+    background-color:#d5d5c3;
+    color:#404040;
+    justify-content: center;
+}
+.glyphicon, .glyphicon-ok, .glyphicon-arrow-right{
+    color:#0077b3;
+}
+
+
+
+h3{
+    color: white;
+    text-shadow: 3px 3px 6px #000000;
+    font-size: 1.0em;
+
+}
+h4{
+    font-size:1.0em;
+}
+p{
+    font-size:1.0em;
+}
+.groove{
+    border-style: groove;
+    padding-top:30px;
+    padding-bottom:30px;
+    margin:30px 30px;
+}
+
+@media screen and (min-width: 700px) {
+   .groove{
+    margin:auto;
+}
+    h3{
+        font-size: 3.66em;
+    }
+    p, h4{
+    font-size:1.5em;
+}
+
+}
+
+
 .grafico{
   width: 700px;
   height: 400px;
+}
+.estudantes{
+    border: 1px solid #000;
 }
 ul {
     list-style-type: none;
