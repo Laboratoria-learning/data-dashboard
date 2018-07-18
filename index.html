@@ -3,12 +3,75 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
   </head>
   <body>
+    <header id="header">
+      <button type="button" id="MostrarEstudantes">Estudantes</a></button>
+      <!-- <a href="#"><i class="fas fa-bars"></i></a> -->
+      <h1>< Laboratoria ></h1>
+      <!-- <p>Vanessa Pinheiro</p>
+      <p>Manager BR</p> -->
+      <!-- <a href="#"><i class="fas fa-sign-out-alt"></i></a> -->
+      <div class="menu-profile">
+        <i class="fas fa-user-circle"></i>
+        <p>Vanessa Pinheiro</p>
+      </div>
+    </header>
+    <nav>
+      <ul class="menu clearfix">
+        <li class="dropdown">
+          <a class="dropbtn sede">AQP</a>
+          <div class="dropdown-content">
+          <a href="#" class="turma">2016-2</a>
+          <a href="#" class="turma">2017-1</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a class="dropbtn sede">CDMX</a>
+          <div class="dropdown-content">
+            <a href="#" class="turma">2017-1</a>
+            <a href="#" class="turma">2017-2</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a class="dropbtn sede">LIM</a>
+          <div class="dropdown-content">
+            <a href="#" class="turma">2016-2</a>
+            <a href="#" class="turma">2017-1</a>
+            <a href="#" class="turma">2017-2</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a class="dropbtn sede">SCL</a>
+          <div class="dropdown-content">
+            <a href="#" class="turma">2016-2</a>
+            <a href="#" class="turma">2017-1</a>
+            <a href="#" class="turma">2017-2</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <section id="titulo">
+    </section>
+    <main id="geral">
+      <section class="linha">
+        <div id="piechart" class="grafico"></div>
+        <div id="satisfacao" class="grafico"></div>
+        <div id="dados"></div>
+      </section>
+      <section class="linha">
 
-		<!-- Base de datos -->
+      </section>
+    </main>
+    <section id="estudante">
+        <div id="foto-Estudantes"></div>
+    </section>
+    <script src="js/jquery-3.3.1.min.js"></script>
 		<script src="./js/data.js"></script>
-		<!-- Aquí va tus archivos JS -->
     <script src="./js/app.js"></script>
   </body>
 </html>
