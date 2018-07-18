@@ -6,12 +6,17 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
   </head>
   <body>
     <header id="header">
       <button type="button" id="MostrarEstudantes">Estudantes</a></button>
+      <!-- <a href="#"><i class="fas fa-bars"></i></a> -->
       <h1>< Laboratoria ></h1>
-      <div>
+      <!-- <p>Vanessa Pinheiro</p>
+      <p>Manager BR</p> -->
+      <!-- <a href="#"><i class="fas fa-sign-out-alt"></i></a> -->
+      <div class="menu-profile">
         <i class="fas fa-user-circle"></i>
         <p>Vanessa Pinheiro</p>
       </div>
@@ -54,20 +59,16 @@
     </section>
     <main id="geral">
       <section class="linha">
+        <div id="piechart" class="grafico"></div>
         <div id="satisfacao" class="grafico"></div>
-        <div id="jedi" class="grafico"></div>
-        <div id="teacher" class="grafico"></div>
+        <div id="dados"></div>
       </section>
       <section class="linha">
-        <div id="piechart" class="grafico"></div>
-        <div class="graficoDados">
-          <div id="nps" class="grafico"></div>
-          <div id="dadosNps"></div>
-        </div>
+
       </section>
     </main>
     <section id="estudante">
-      <div id="foto-Estudantes"></div>
+        <div id="foto-Estudantes"></div>
     </section>
     <script src="js/jquery-3.3.1.min.js"></script>
 		<script src="./js/data.js"></script>
