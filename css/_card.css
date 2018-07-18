@@ -1,3 +1,6 @@
+.container{
+    margin-bottom: 100px;
+}
 .card{
     width: 80%;
     background-color: white;
@@ -9,4 +12,372 @@
 
 .card:nth-child(n+2){
     margin-top: 30px;
+}
+
+.card .graficoPercentual{
+    height: 480px !important;
+    width: 280px !important;
+}
+
+/*
+ * card 1 , section qtdAlunas
+*/
+#chart{
+    margin-top: 30px;
+}
+.card .ativas h1{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-top: 30px;
+}
+.ativas .totalAtivasTodasSedes{
+    display: flex;
+    justify-content: center;
+    color:rgb(71, 182, 144);
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.ativas p{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#myDoughnutChart{
+    height: 480px !important;
+    width: 280px !important;
+    margin-left: 30px;
+}
+
+.card .totalDesistentes{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgba(227, 57, 57);
+}
+
+.card .desistentes h1{
+    margin-right: 30px;
+    margin-left: 20px;
+    font-size: 25px;
+    margin-top: 30px;
+}
+
+
+/*
+ * card 2 , section metaTotal
+*/
+
+#myDoughnutCharts{
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.card .percentualTotal h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.card .totalExederam{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgba(227, 57, 57);
+}
+
+.percentualTotal p{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+#charts{
+    margin-top:70px;
+}
+
+.qtdMetaTotal h1{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    margin-top: 30px;
+}
+
+.card .qtdTotal{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(71, 182, 144);
+}
+.qtdMetaTotal p{
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+/*
+ * card 3 , section metaTech
+*/
+
+#chartTech{
+    margin-top: 50px;
+}
+.card .qtdMetaTech h1{
+    display: flex;
+    justify-content: center;
+    font-size: 23px;
+    margin-top: 30px;
+}
+
+.qtdMetaTech .qtdTotalSedeGeracao{
+    display: flex;
+    justify-content: center;
+    color:rgb(71, 182, 144);
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.qtdMetaTech p{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 30px;
+
+}
+
+#myDoughnutTech{
+    height: 480px !important;
+    width: 280px !important;
+    margin-right: 25px;
+}
+
+.card .totalExederamTech{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgba(227, 57, 57);
+}
+
+.card .percentualMetaTech h1{
+    margin-right: 40px;
+    margin-left: 20px;
+    font-size: 23px;
+    margin-top: 30px;
+}
+
+.percentualMetaTech p{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 12px;
+    margin-right: 40px;
+}
+
+
+/*
+ * card 4 , section metaHse
+*/
+
+#myDoughnutHse{
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.card .percentualMetaHse h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.card .totalExederamHse{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgba(227, 57, 57);
+}
+
+.percentualMetaHse p{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 12px;
+    margin-left: 30px;
+}
+
+#chartHse{
+    margin-top:70px;
+}
+
+.qtdMetaHse h1{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    margin-top: 30px;
+}
+
+.card .totalHseSedeGeracao{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(71, 182, 144);
+}
+.qtdMetaHse p{
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+/*
+ * card 5 , pesquisas Laboratória
+*/
+
+#chartNps{
+    margin-top: 130px;
+}
+.card .nps h1{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    margin-top: 39px;
+}
+
+.card .totalNps{
+    display: flex;
+    justify-content: center;
+    color: rgb(71, 182, 144);
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+#myDoughnutSatisLaboratoria{
+    height: 480px !important;
+    width: 280px !important;
+    margin-left: 50px;
+    margin-right: 10px;
+}
+
+.card .totalAtendida{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(255, 229, 33);
+}
+
+.card .satisfacaoAlunas h1{
+    margin-right: 40px;
+    margin-left: 20px;
+    font-size: 19px;
+    margin-top: 45px;
+}
+
+.satisfacaoAlunas p{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 12px;
+    margin-right: 20px;
+    margin-top: 40px;
+}
+
+.pesquisas{
+   display: flex;
+}
+.cardProfessores{
+    padding: 10px;
+    margin: 20px;
+    margin-top: 30px;
+    width: 80%;
+    background-color: white;
+    min-height: 100px;
+    -webkit-box-shadow: -1px 4px 6px 0px rgba(140,135,140,1);
+    -moz-box-shadow: -1px 4px 6px 0px rgba(140,135,140,1);
+    box-shadow: -1px 4px 6px 0px rgba(140,135,140,1);
+}
+
+.mediasProfessores h1{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.mediasProfessores .totalProf{
+    display: flex;
+    justify-content: center;
+    color: rgb(71, 182, 144);
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.cardJedi{
+    padding: 10px;
+    margin: 20px;
+    margin-top: 30px;
+    width: 80%;
+    background-color: white;
+    min-height: 100px;
+    -webkit-box-shadow: -1px 4px 6px 0px rgba(140,135,140,1);
+    -moz-box-shadow: -1px 4px 6px 0px rgba(140,135,140,1);
+    box-shadow: -1px 4px 6px 0px rgba(140,135,140,1);
+}
+
+.cardJedi h1{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.cardJedi .totalJedis{
+    display: flex;
+    justify-content: center;
+    color: rgb(71, 182, 144);
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.container i{
+    border-radius: 5px;
 }
