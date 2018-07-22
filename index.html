@@ -2,13 +2,191 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Dashboard</title>
+    <title>Data</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
   </head>
   <body>
-
+    <nav>
+        <img src="assets/images/logo-laboratoria.svg" alt="" id="logo">
+        <i class="fa fa-bars" aria-hidden="true" id="bars"></i>
+    </nav>
+    <main>
+      <div class="bar-navigation">
+          <div class="container-select">
+              <p id="title-selector">LIMA 2017 - II</p>
+              <div class="container-combo-box">
+                  <select name="" id="combo-box" title="seleccionar">
+                      <option value="" disabled="disabled">Lima</option>
+                      <option value="" disabled="disabled">________________</option>
+                      <option value="lim2016II">2016-II</option>
+                      <option value="lim2017I">2017-I</option>
+                      <option value="lim2017II">2017-II</option>
+                      <option value="" disabled="disabled">Arequipa</option>
+                      <option value="" disabled="disabled">________________</option>
+                      <option value="are2016II">2016-II</option>
+                      <option value="are2017I">2017-I</option>
+                      <option value="" disabled="disabled">Santiago de Chile</option>
+                      <option value="" disabled="disabled">________________</option>
+                      <option value="chi2016II">2016-II</option>
+                      <option value="chi2017I">2017-I</option>
+                      <option value="chi2017II">2017-II</option>
+                      <option value="" disabled="disabled">Ciudad de Mexico</option>
+                      <option value="" disabled="disabled">________________</option>
+                      <option value="mex2017I">2017-I</option>
+                      <option value="mex2017II" selected>2017-II</option>
+                    </select>
+              </div>
+            </div>
+            <div class="container-tab">
+              <ul>
+                <li data-tab-selection="overview" class="tab hover">OVERVIEW</li>
+                <li data-tab-selection="students" class="tab">STUDENTS</li>
+              </ul>
+            </div>
+      </div>
+        <div class="container">
+          <div id="container-overview">
+              <section class="data-part-one container-big">
+                  <div id="enrollment" class="square">
+                    <p>ENROLLMENT</p>
+                    <p id="student-currently" class="graphic-data"></p>
+                    <p id="dropout"  class="graphic-data red"></p>
+                    <div id="grafy-enrollment" class="container-grafy"></div>
+                  </div>
+                  <div id="achievement" class="square">
+                    <p>ACHIEVEMENT</p>
+                    <p id="student-target"  class="graphic-data"></p>
+                    <p id="total"  class="graphic-data"></p>
+                  </div>
+                  <div id="promoter-score" class="square">
+                    <p>NET PROMOTER SCORE</p>
+                    <p id="cumulative-nps" class="graphic-data"></p>
+                    <p id="percentage"  class="graphic-data"></p>
+                    <div id="grafy-promoter" class="container-grafy"></div>
+                  </div>
+                </section>
+                <section class="data-part-two container-big">
+                  <div class="skill">
+                    <div>
+                      <p class="inline-block">TECH SKILL</p>
+                      <select name="" id="combo-box-tech" class="selector">
+                        <option value="sprint1">Sprint 1:Create an interactive site</option>
+                        <option value="sprint2">Sprint 2:Create an interactive site</option>
+                        <option value="sprint3">Sprint 3:Create an interactive site</option>
+                        <option value="sprint4">Sprint 4:Create an interactive site</option>
+                      </select>
+                    </div>
+                    <div>
+                      <p id="student-currently-skill"  class="graphic-data"></p>
+                      <p id="total-skill"  class="graphic-data"></p>
+                    </div>
+                    <div id="grafy-tech" class="container-select-grafy"></div>
+                  </div>
+                </section>
+                <section class="data-part-three container-big">
+                  <div class="skill">
+                      <div>
+                          <p class="inline-block">LIFE SKILL</p>
+                          <select name="" id="combo-box-hse" class="selector">
+                              <option value="sprintHSE1">Sprint 1:Create an interactive site</option>
+                              <option value="sprintHSE2">Sprint 2:Create an interactive site</option>
+                              <option value="sprintHSE3">Sprint 3:Create an interactive site</option>
+                              <option value="sprintHSE4">Sprint 4:Create an interactive site</option>
+                          </select>
+                        </div>
+                        <div>
+                          <p id="overall-class"  class="graphic-data"></p>
+                          <p id="student-target-overall"  class="graphic-data"></p>
+                        </div>
+                        <div id="grafy-hse" class="container-select-grafy"></div>
+                  </div>
+                </section>
+                <section class="data-part-four container-big">
+                  <div class="square">
+                    <p>STUDENT SATISFACTION</p>
+                    <p class="graphic-data" id="student-satisfaction"></p>
+                  </div>
+                  <div class="square">
+                    <p>TEACHER RATING</p>
+                    <p class="graphic-data" id="teacher-rating"></p>
+                    <div id= "grafy-teacher" class="container-grafy"></div>
+                  </div>
+                  <div class="square">
+                    <p>JEDI MASTER RATING</p>
+                    <p class="graphic-data" id="jedi-master-rating"></p>
+                    <div id= "grafy-jedi" class="container-grafy"></div>
+                  </div>
+                </section>
+          </div>
+          <div id="container-students">
+            <!-- <p>HOLA ESTUDIANTES</p> -->
+            <section id="section">
+                <div class=" wrap container1" id="container">
+                    <h2>ESPELIZATION:</h2>
+                    <form id="formulario">
+                      <div class="checkbox">
+                        <input type="checkbox" value="Javascript" id="input">
+                        <label for="javascript">Javascrript</label><br>
+                        <input type="checkbox" value="UX Designer" id="input">
+                        <label for="uxdesigner">UX Designer</label><br>
+                        <input type="checkbox" value="Frontend Designer" id="input">
+                        <label for="frontend">Frontend Designer</label><br>
+                      </div>
+                    </form>
+                </div>
+                <input id="first" type="text" name="search" value="" placeholder="Buscar aqui....">
+                <div class="img-container" id="img-container">
+                  <img src="assets/images/lab.png" alt="laboratoria">
+                  <h1>DIANA NAVARRO</h1>
+                  <br>
+                  <p id="front">Frontend Developer</p>
+                  <br>
+                  <span>JAVASCRIPT</span>
+                  <span>APIs</span>
+                  <span>JQUERY</span>
+                  <br>
+                  <div class="porcentage-box" id="porcentage-box">
+                   <div id="porcentage">
+                     <span>95.6%</span>
+                     <br>
+                     <span>TECH SKILLS</span>
+                   </div>
+                   <div id="porcentage">
+                     <span>95.6%</span>
+                     <br>
+                     <span>LIFE SKILLS</span>
+                   </div>
+                   <div id="porcentage">
+                     <span>INTERM</span>
+                     <br>
+                     <span>ENGLISH SKILLS</span>
+                  </div>
+                 </div>
+                 <div class="remove">
+                  <span>REMOVE STUDENT</span>
+                 </div>
+                 <span id="perfil">Ver perfil</span>
+                </div>
+              </section>
+          </div>
+        </div>
+    </main>
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
     <script src="./js/app.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {packages: ['corechart']});
+      google.charts.load('current', {'packages':['bar']});
+   </script>
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> ebf7e8536b47d68bf6a708a1dbe834afe5ab27d7
+   </script>
   </body>
 </html>
